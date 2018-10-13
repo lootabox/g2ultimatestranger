@@ -1,0 +1,9 @@
+
+
+	Bug Fixes
+
+
+	Bug Fixes, Minor Improvements, Misc Changes
+
+Fixed XP award for pickpocketing Valentino, Salandril, Cavalorn, Dobar, Engor, Franco and Francis.
+Fixed XP award for recruiting Lares and Lester.
