@@ -72,7 +72,8 @@ func void DIA_Addon_Cavalorn_PICKPOCKET_DoIt()
 		
 		B_GiveInvItems (self, other, ItRw_Arrow, 44);
 		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GivePlayerXP (XP_Ambient);
+		B_GiveThiefXP();
+		//B_GivePlayerXP (XP_Ambient);
 		Info_ClearChoices (DIA_Addon_Cavalorn_PICKPOCKET);
 	}
 	else

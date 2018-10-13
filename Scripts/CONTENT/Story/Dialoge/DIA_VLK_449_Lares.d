@@ -2461,6 +2461,7 @@ FUNC VOID DIA_Lares_KnowWhereEnemy_Yes ()
 	
 	Lares_IsOnBoard	 = LOG_SUCCESS;
 	crewmember_Count = (Crewmember_Count +1);
+	B_GivePlayerXP(XP_Crewmember_Success);
 	
 	if (MIS_ReadyforChapter6 == TRUE)
 		{

@@ -461,7 +461,8 @@ func void DIA_Engor_PICKPOCKET_DoIt()
 	{
 		B_GiveInvItems (self, other, ItWr_Map_Oldworld, 1);
 		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GivePlayerXP (XP_Ambient);
+		B_GiveThiefXP();
+		//B_GivePlayerXP (XP_Ambient);
 		Info_ClearChoices (DIA_Engor_PICKPOCKET);
 	}
 	else

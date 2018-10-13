@@ -259,7 +259,8 @@ func void DIA_Dobar_PICKPOCKET_DoIt()
 	{
 		B_GiveInvItems (self, other, ItMI_Nugget, 1);
 		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GivePlayerXP (XP_Ambient);
+		B_GiveThiefXP();
+		//B_GivePlayerXP (XP_Ambient);
 		Info_ClearChoices (DIA_Dobar_PICKPOCKET);
 	}
 	else

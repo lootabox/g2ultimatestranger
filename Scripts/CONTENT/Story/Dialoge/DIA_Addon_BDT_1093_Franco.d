@@ -60,7 +60,8 @@ func void DIA_Franco_PICKPOCKET_DoIt()
 	if (other.attribute[ATR_DEXTERITY] >= 60)
 	{
 		B_GiveInvItems (self, other, ItAm_Addon_Franco, 1);
-		B_GivePlayerXP (XP_Ambient);
+		B_GiveThiefXP();
+		//B_GivePlayerXP (XP_Ambient);
 		Info_ClearChoices (DIA_Franco_PICKPOCKET);
 		
 		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;

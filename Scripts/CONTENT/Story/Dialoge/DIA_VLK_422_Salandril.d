@@ -66,7 +66,8 @@ func void DIA_Salandril_PICKPOCKET_DoIt()
 		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
 		
 		DIA_Salandril_PICKPOCKET_perm = TRUE;
-		B_GivePlayerXP (XP_Ambient);
+		B_GiveThiefXP();
+		//B_GivePlayerXP (XP_Ambient);
 		Info_ClearChoices (DIA_Salandril_PICKPOCKET);
 	}
 	else

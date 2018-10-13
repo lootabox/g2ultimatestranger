@@ -301,7 +301,8 @@ func void DIA_Francis_PICKPOCKET_DoIt()
 	{
 		B_GiveInvItems (self,other , ITKE_Greg_ADDON_MIS, 1);
 		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GivePlayerXP (XP_Ambient);
+		B_GiveThiefXP();
+		//B_GivePlayerXP (XP_Ambient);
 		Info_ClearChoices (DIA_Francis_PICKPOCKET);
 	}
 	else

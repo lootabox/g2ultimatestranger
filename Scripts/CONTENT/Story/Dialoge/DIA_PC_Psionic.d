@@ -645,6 +645,7 @@ FUNC VOID DIA_Lester_KnowWhereEnemy_Yes ()
 	self.flags 		 = NPC_FLAG_IMMORTAL;
 	Lester_IsOnBoard	 = LOG_SUCCESS;
 	crewmember_Count = (Crewmember_Count +1);
+	B_GivePlayerXP(XP_Crewmember_Success);
 	
 	if (MIS_ReadyforChapter6 == TRUE)
 		{
