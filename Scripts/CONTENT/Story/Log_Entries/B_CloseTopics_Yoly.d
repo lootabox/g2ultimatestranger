@@ -1,5 +1,5 @@
 // ***************************************************
-//  	B_CloseTopics_Yoly ()	(verschiebt Topics in den zugehörigen Log-Ordner bei FAILED oder SUCCESS)	
+//  	B_CloseTopics_Yoly ()	(verschiebt Topics in den zugehÃ¶rigen Log-Ordner bei FAILED oder SUCCESS)	
 // ***************************************************
 func void B_CloseTopics_Yoly ()	
 {	
@@ -48,43 +48,6 @@ func void B_CloseTopics_Yoly ()
 	//Nach Addonworld
 	B_CloseTopic	(TOPIC_Addon_VatrasAbloesung, 0, VatrasCanLeaveTown_Kap3, 4);		
 	
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-               			
-               			
-               			
-               					
-               		
-     
-     
-     
-     
-     
-     
-
-
-
-
 //Gothic 2
 
 	B_CloseTopic	(TOPIC_Bronkoeingeschuechtert, MIS_Sekob_Bronko_eingeschuechtert, 0, 6);	
@@ -123,6 +86,7 @@ func void B_CloseTopics_Yoly ()
 	B_CloseTopic	(TOPIC_URSHAK, 0, URSHAK_SUCKED, 6);	
 	
 	// Kapitel 4
+	B_CloseTopic	(TOPIC_KervoLurkers,MIS_Kervo_KillLurker,0,4);	
 	B_CloseTopic	(TOPIC_DRACHENJAGD, 0, MIS_AllDragonsDead, 5);	
 	B_CloseTopic	(TOPIC_LobartsOrKProblem, 0, TOPIC_END_LobartsOrKProblem, 6);	
 	B_CloseTopic	(TOPIC_SylvioKillIceGolem, MIS_DJG_Sylvio_KillIceGolem, TOPIC_END_SylvioKillIceGolem, 6);	

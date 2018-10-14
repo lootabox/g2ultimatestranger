@@ -165,6 +165,7 @@ INSTANCE Gil_Values(C_GILVALUES)
 	FIGHT_RANGE_G			[GIL_GOBBO_SKELETON] = FIGHT_RANGE_G			[GIL_GOBBO];
 	
 	BLOOD_EMITTER			[GIL_GOBBO_SKELETON] = "BFX_Skeleton";		
+	BLOOD_TEXTURE			[GIL_GOBBO_SKELETON] = "BQM_Skeleton.tga";
 	
 	
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -198,6 +199,7 @@ INSTANCE Gil_Values(C_GILVALUES)
 	FIGHT_RANGE_G			[GIL_SUMMONED_GOBBO_SKELETON] = FIGHT_RANGE_G			[GIL_GOBBO];
 	
 	BLOOD_EMITTER			[GIL_SUMMONED_GOBBO_SKELETON] = "BFX_Skeleton";		
+	BLOOD_TEXTURE			[GIL_SUMMONED_GOBBO_SKELETON] = "BQM_Skeleton.tga";
 
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -511,6 +513,7 @@ INSTANCE Gil_Values(C_GILVALUES)
                                                                     
 	// Bluteffekte by KaiRo                                        
 	BLOOD_EMITTER			[GIL_SKELETON] = "BFX_Skeleton";    
+	BLOOD_TEXTURE			[GIL_SKELETON] = "BQM_Skeleton.tga";
 	
 	
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -545,6 +548,7 @@ INSTANCE Gil_Values(C_GILVALUES)
                                                                                             
 	// Bluteffekte by KaiRo                                        
 	BLOOD_EMITTER			[GIL_SUMMONED_SKELETON] = "BFX_Skeleton";
+	BLOOD_TEXTURE			[GIL_SUMMONED_SKELETON] = "BQM_Skeleton.tga";
 	
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // SKELETON MAGE (MH: Werte erstmal von Demon geklaut)
@@ -576,6 +580,7 @@ INSTANCE Gil_Values(C_GILVALUES)
 
 	//Blut
 	BLOOD_EMITTER			[GIL_SKELETON_MAGE] = "BFX_Skeleton";  
+	BLOOD_TEXTURE			[GIL_SKELETON_MAGE] = "BQM_Skeleton.tga";
 	
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -734,6 +739,9 @@ INSTANCE Gil_Values(C_GILVALUES)
 	FIGHT_RANGE_BASE		[GIL_SHADOWBEAST_SKELETON] = FIGHT_RANGE_BASE		[GIL_SHADOWBEAST];
 	FIGHT_RANGE_FIST		[GIL_SHADOWBEAST_SKELETON] = FIGHT_RANGE_FIST		[GIL_SHADOWBEAST];
 	FIGHT_RANGE_G			[GIL_SHADOWBEAST_SKELETON] = FIGHT_RANGE_G			[GIL_SHADOWBEAST];
+
+	BLOOD_EMITTER			[GIL_SHADOWBEAST_SKELETON] = "BFX_Skeleton";		
+	BLOOD_TEXTURE			[GIL_SHADOWBEAST_SKELETON] = "BQM_Skeleton.tga";
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // HARPIE (MH: Werte erstmal vom Demon geklaut)
@@ -1306,7 +1314,7 @@ INSTANCE Gil_Values(C_GILVALUES)
 	FIGHT_RANGE_G			[GIL_STONEGUARDIAN] = FIGHT_RANGE_G			[GIL_HUMAN]; 
 	
 	BLOOD_EMITTER			[GIL_STONEGUARDIAN] = "BFX_Golem";
-	BLOOD_TEXTURE			[GIL_STONEGUARDIAN] = "BQM_Golem.tga";
+	BLOOD_TEXTURE			[GIL_STONEGUARDIAN] = "BQM_StoneGuardian.tga";
 	BLOOD_FLOW				[GIL_STONEGUARDIAN] = 0;
 	BLOOD_AMOUNT			[GIL_STONEGUARDIAN] = 5;
 	BLOOD_MAX_DISTANCE		[GIL_STONEGUARDIAN] = 60; 

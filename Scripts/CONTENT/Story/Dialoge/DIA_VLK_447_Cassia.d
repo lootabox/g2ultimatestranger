@@ -170,7 +170,7 @@ FUNC VOID DIA_Cassia_News_Info()
 	DG_gefunden = TRUE;
 };
 //////////////////////////////////////////////////////////////////////
-//	Info Erz‰hle mir mehr 
+//	Info Erz√§hle mir mehr 
 ///////////////////////////////////////////////////////////////////////
 INSTANCE DIA_Cassia_mehr   (C_INFO)
 {
@@ -498,8 +498,8 @@ FUNC INT DIA_Cassia_BevorLernen_Condition()
 {	
 	if (Join_Thiefs == TRUE)
 	&& (Npc_KnowsInfo (other,DIA_Cassia_Lernen))
-	&& ((Cassia_TeachPickpocket == FALSE)
-	|| (Cassia_TeachDEX == FALSE))
+	&& ((Cassia_TeachPickpocket == FALSE && !Npc_GetTalentSkill(other,NPC_TALENT_PICKPOCKET))
+	|| Cassia_TeachDEX == FALSE)
 	{
 		return TRUE;
 	};
@@ -521,7 +521,7 @@ FUNC VOID DIA_Cassia_BevorLernen_Info()
 		Info_ClearChoices (DIA_Cassia_BevorLernen);
 		Info_AddChoice 	  (DIA_Cassia_BevorLernen,"Maybe later ...(BACK)",DIA_Cassia_BevorLernen_Spaeter);
 		
-		if (Cassia_TeachPickpocket == FALSE)
+		if (Cassia_TeachPickpocket == FALSE && !Npc_GetTalentSkill(other,NPC_TALENT_PICKPOCKET))
 		{
 			Info_AddChoice 	  (DIA_Cassia_BevorLernen,"I want to learn about picking pockets (pay 100 gold).",DIA_Cassia_BevorLernen_Pickpocket);
 		};
@@ -633,7 +633,7 @@ INSTANCE DIA_Cassia_Pickpocket   (C_INFO)
 	condition   = DIA_Cassia_Pickpocket_Condition;
 	information = DIA_Cassia_Pickpocket_Info;
 	permanent   = TRUE;
-	description = "Show me how to pick pockets. (10 LP)";
+	description = B_BuildLearnString("Show me how to pick pockets", B_GetLearnCostTalent(other,NPC_TALENT_PICKPOCKET,1));
 };
 
 FUNC INT DIA_Cassia_Pickpocket_Condition()
@@ -742,7 +742,7 @@ INSTANCE DIA_Cassia_Blutkelche   (C_INFO)
 FUNC INT DIA_Cassia_Blutkelche_Condition()
 {	
 	if (MIS_CassiaRing == LOG_SUCCESS)
-	&& (MIS_CassiaKelche != LOG_RUNNING)
+	&& (MIS_CassiaKelche < LOG_RUNNING)
 	{
 		return TRUE;
 	};

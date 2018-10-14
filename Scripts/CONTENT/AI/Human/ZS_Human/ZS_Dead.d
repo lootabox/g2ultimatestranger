@@ -1,8 +1,8 @@
 // *****************************************
 // ZS_Dead
 // -------
-// wird auch nach jedem Load Game ausgeführt
-// wird auch vom Spieler ausgeführt
+// wird auch nach jedem Load Game ausgefÃ¼hrt
+// wird auch vom Spieler ausgefÃ¼hrt
 // *****************************************
 
 func void ZS_Dead ()
@@ -47,6 +47,34 @@ func void ZS_Dead ()
 	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(DiegoOW))
 	{
 		Diego_IsDead = TRUE;
+	};
+	if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Skip))
+	{
+		if(MIS_ADDON_SkipsGrog == LOG_Running)
+		{
+			MIS_ADDON_SkipsGrog = LOG_OBSOLETE;
+		};
+	};
+	if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Brandon))
+	{
+		if(MIS_Brandon_BringHering == LOG_Running)
+		{
+			MIS_Brandon_BringHering = LOG_OBSOLETE;
+		};
+	};
+	if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Kervo))
+	{
+		if(MIS_Kervo_KillLurker == LOG_Running)
+		{
+			MIS_Kervo_KillLurker = LOG_FAILED;
+		};
+	};
+	if(self.guild == GIL_GOBBO || self.guild == GIL_GOBBO_SKELETON || self.guild == GIL_SUMMONED_GOBBO_SKELETON || self.guild == GIL_SUMMONED_SKELETON)
+	{
+		Npc_RemoveInvItems(self,ItMw_1h_Bau_Mace,Npc_HasItems(self,ItMw_1h_Bau_Mace));
+		Npc_RemoveInvItems(self,ItMw_1h_MISC_Sword,Npc_HasItems(self,ItMw_1h_MISC_Sword));
+		Npc_RemoveInvItems(self,ItMw_1h_Misc_Axe,Npc_HasItems(self,ItMw_1h_Misc_Axe));
+		Npc_RemoveInvItems(self,ItMw_2H_Sword_M_01,Npc_HasItems(self,ItMw_2H_Sword_M_01));
 	};
 	
 	if (Npc_IsPlayer(other))
@@ -97,7 +125,7 @@ func void ZS_Dead ()
 		};
 	};
 		
-		//------Addon Garaz Minecrawler Höhle------egal wer tötet----
+		//------Addon Garaz Minecrawler HÃ¶hle------egal wer tÃ¶tet----
 		if  Hlp_GetInstanceID (self) == Hlp_GetInstanceID (Goldminecrawler)
 		{
 			Minecrawler_Killed = (Minecrawler_Killed + 1);
@@ -111,18 +139,20 @@ func void ZS_Dead ()
 			};
 		};
 		
-	// ------ weil sonst Händler bevor man zum ersten Mal TRADE gewählt hat nix haben ------
+	// ------ weil sonst HÃ¤ndler bevor man zum ersten Mal TRADE gewÃ¤hlt hat nix haben ------
 	B_GiveTradeInv(self);//Joly:	STEHEN LASSEN!!!!!!!!!!!!!!!
 
-	// ------ Monster-Inventory abhängig vom Spieler-Talent ------
+	// ------ Monster-Inventory abhÃ¤ngig vom Spieler-Talent ------
 	B_GiveDeathInv(self);
 	B_ClearRuneInv(self); //klaue alle runen!!
+	B_ClearSmithInv(self);
+	B_ClearAlchemyInv(self);
 	
 	// ------ PetzCounter meiner Home-Location runtersetzen ------
 	B_DeletePetzCrime (self); //hat bei CRIME_NONE (oder keiner Home-Location) keine Auswirkungen
 	self.aivar[AIV_NpcSawPlayerCommit] = CRIME_NONE;
 	
-	// ------ Equippte Waffen können nicht genommen werden! ------
+	// ------ Equippte Waffen kÃ¶nnen nicht genommen werden! ------
 	AI_UnequipWeapons (self);
 	
 	self.aivar[AIV_TAPOSITION] = FALSE;

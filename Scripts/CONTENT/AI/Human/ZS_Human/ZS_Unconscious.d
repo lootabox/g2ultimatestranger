@@ -1,7 +1,7 @@
 // ********************************
 // ZS_Unconscious
 // --------------
-// wird auch vom Spieler ausgeführt
+// wird auch vom Spieler ausgefÃ¼hrt
 // ********************************
 
 func void ZS_Unconscious ()
@@ -39,7 +39,7 @@ func void ZS_Unconscious ()
 	if (self.guild < GIL_SEPERATOR_HUM)
 	&& (Npc_IsPlayer(other))								
 	{
-		self.aivar[AIV_DefeatedByPlayer] = TRUE; //wird nur hier gesetzt, nie verändert!
+		self.aivar[AIV_DefeatedByPlayer] = TRUE; //wird nur hier gesetzt, nie verÃ¤ndert!
 		self.aivar[AIV_LastFightAgainstPlayer] = FIGHT_LOST;
 		
 		if (self.aivar[AIV_LastPlayerAR] == AR_NONE)
@@ -67,9 +67,11 @@ func void ZS_Unconscious ()
 		};
 	};
 	
-	// ------ weil sonst Händler bevor man zum ersten Mal TRADE gewählt hat nix haben ------
+	// ------ weil sonst HÃ¤ndler bevor man zum ersten Mal TRADE gewÃ¤hlt hat nix haben ------
 	B_GiveTradeInv(self);//Joly:	STEHEN LASSEN VOR ->(self.aivar[AIV_VictoryXPGiven] = TRUE)!!!!!!!!!!!!!!!
 	B_ClearRuneInv(self);//Hoshi, damit der Player keine Runen findet!
+	B_ClearSmithInv(self);
+	B_ClearAlchemyInv(self);
 
 	// ------ XP ------
 	if ( Npc_IsPlayer(other) || (other.aivar[AIV_PARTYMEMBER]==TRUE) )
@@ -80,7 +82,7 @@ func void ZS_Unconscious ()
 		self.aivar[AIV_VictoryXPGiven] = TRUE;
 	};
 			
-	// ------ Equippte Waffen können nicht genommen werden! ------
+	// ------ Equippte Waffen kÃ¶nnen nicht genommen werden! ------
 	AI_UnequipWeapons (self);
 	
 	// ----- STORY ------

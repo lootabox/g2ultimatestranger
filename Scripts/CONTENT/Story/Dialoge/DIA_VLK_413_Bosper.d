@@ -537,7 +537,7 @@ instance DIA_Bosper_TeachFUR (C_INFO)
 	condition	= DIA_Bosper_TeachFUR_Condition;
 	information = DIA_Bosper_TeachFUR_Info;
 	permanent   = TRUE;
-	description = "Teach me how to skin animals! (5 LP)";
+	description = B_BuildLearnString("Teach me how to skin animals", B_GetLearnCostTalent(other,NPC_TALENT_TAKEANIMALTROPHY,TROPHY_Fur));
 };
 func int DIA_Bosper_TeachFUR_Condition ()
 {	
@@ -612,7 +612,7 @@ func void DIA_Bosper_Trade_Info ()
 };
 
 // **************************************************************
-// 						Von Bogen gehört
+// 						Von Bogen gehÃ¶rt
 // **************************************************************
 instance DIA_Bosper_BogenRunning (C_INFO)
 {

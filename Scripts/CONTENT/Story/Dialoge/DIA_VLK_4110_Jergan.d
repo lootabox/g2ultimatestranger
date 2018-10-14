@@ -227,7 +227,7 @@ INSTANCE DIA_Jergan_Teach   (C_INFO)
 	condition   = DIA_Jergan_Teach_Condition;
 	information = DIA_Jergan_Teach_Info;
 	permanent   = TRUE;
-	description = "(Learn to remove claws)";
+	description = B_BuildLearnString("Show me how to pull claws", B_GetLearnCostTalent(other,NPC_TALENT_TAKEANIMALTROPHY,TROPHY_Claws));
 };
 FUNC INT DIA_Jergan_Teach_Condition()
 {	
@@ -279,7 +279,7 @@ FUNC VOID DIA_Jergan_Diego_Info()
 	AI_Output (self, other,"DIA_Jergan_Diego_13_04");//A path leads through the rocks to the right. That's where they went.
 };
 ///////////////////////////////////////////////////////////////////////
-//	Rudelführer getötet
+//	RudelfÃ¼hrer getÃ¶tet
 ///////////////////////////////////////////////////////////////////////
 
 INSTANCE DIA_Jergan_Leader   (C_INFO)

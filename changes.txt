@@ -1,9 +1,20 @@
 
+	Bug Fixes and Minor Improvements
 
-	Bug Fixes
+Added correct dialogue text with LP cost for learning various skills. (NPCs: Bosper, Bill, Cassia, Jesper, Jergan, Ramirez)
+Added a new colored texture for when Stone Guardians get hit and leave pebbles on the ground.
 
+Changed black ore effect to end on using transformation spell. (from MiniMod Balance).
+Changed blacksmith and alchemist to not drop steel blanks or lab water bottles.
+Changed two dialogue options with Ramirez to only be available after he sees the thieves' signal.
+Changed Kervo's quest to cancel in chapter 4, causing Kervo and Geppert to die instead of disappearing.
+Changed skeletal monsters to not be able to bleed.
 
-	Bug Fixes, Minor Improvements, Misc Changes
-
+Fixed Brandon and Skip quests to cancel if they are killed.
+Fixed Kervo's quest fails if he is killed.
+Fixed the need to pay Cassia for learning to pickpocket if it’s already learned.
+Fixed the inability to get the blood chalice quest from Cassia, if NH was accused of theft.
+Fixed Cassias quests to become obsolete if the paladins take care of the guild.
 Fixed XP award for pickpocketing Valentino, Salandril, Cavalorn, Dobar, Engor, Franco and Francis.
 Fixed XP award for recruiting Lares and Lester.
+Fixed all Goblins and Skeletons from creating additional weapons in their inventory.

@@ -247,7 +247,7 @@ INSTANCE DIA_Ramirez_Teach   (C_INFO)
 	condition   = DIA_Ramirez_Teach_Condition;
 	information = DIA_Ramirez_Teach_Info;
 	permanent   = TRUE;
-	description = "Teach me how to pick a lock!";
+	description = B_BuildLearnString("Teach me how to pick a lock", B_GetLearnCostTalent(other,NPC_TALENT_PICKLOCK,1));
 };
 
 FUNC INT DIA_Ramirez_Teach_Condition()
@@ -290,7 +290,8 @@ INSTANCE DIA_Ramirez_Viertel   (C_INFO)
 };
 FUNC INT DIA_Ramirez_Viertel_Condition()
 {
-	if (Knows_SecretSign == TRUE) 
+	//if (Knows_SecretSign == TRUE) 
+	if(Npc_KnowsInfo(other,DIA_Ramirez_Zeichen))
 	{
 		return TRUE;
 	};
@@ -318,7 +319,8 @@ INSTANCE DIA_Ramirez_Sextant   (C_INFO)
 
 FUNC INT DIA_Ramirez_Sextant_Condition()
 {
-	if (Knows_SecretSign == TRUE)
+	//if (Knows_SecretSign == TRUE)
+	if (Npc_KnowsInfo(other,DIA_Ramirez_Zeichen))
 	&& (MIS_CassiaRing == LOG_SUCCESS)
 	&& (Kapitel >= 2)
 	{

@@ -30,7 +30,7 @@ INSTANCE DIA_Addon_Merdarion_ADW_PICKPOCKET (C_INFO)
 	condition	= DIA_Addon_Merdarion_ADW_PICKPOCKET_Condition;
 	information	= DIA_Addon_Merdarion_ADW_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(Es w‰re einfach seine Spruchrolle zu stehlen)";
+	description = "(Es w√§re einfach seine Spruchrolle zu stehlen)";
 };                       
 
 FUNC INT DIA_Addon_Merdarion_ADW_PICKPOCKET_Condition()
@@ -269,7 +269,7 @@ func void DIA_Addon_Merdarion_ActivateTeleports_Info ()
 	
 	if (DIA_Addon_Merdarion_ActivateTeleports_OneTime == FALSE)
 	{
-		AI_Output	(self, other, "DIA_Addon_Merdarion_ActivateTeleports_06_03"); //Was it difficult.
+		AI_Output	(self, other, "DIA_Addon_Merdarion_ActivateTeleports_06_03"); //Was it difficult?
 		AI_Output	(other, self, "DIA_Addon_Merdarion_ActivateTeleports_15_04"); //Depends on how you look at it. I could use a bit of support.
 		AI_Output	(self, other, "DIA_Addon_Merdarion_ActivateTeleports_06_05"); //I can give you some gold, would that help?
 		AI_Output	(other, self, "DIA_Addon_Merdarion_ActivateTeleports_15_06"); //It couldn't hurt.

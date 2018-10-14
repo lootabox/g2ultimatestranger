@@ -212,7 +212,7 @@ INSTANCE DIA_Jesper_Schleichen   (C_INFO)
 	condition   = DIA_Jesper_Schleichen_Condition;
 	information = DIA_Jesper_Schleichen_Info;
 	permanent   = TRUE;
-	description = "Teach me the art of stealth.";
+	description = B_BuildLearnString("Teach me the art of stealth", B_GetLearnCostTalent(other,NPC_TALENT_SNEAK,1));
 };
 FUNC INT DIA_Jesper_Schleichen_Condition()
 {	
@@ -234,7 +234,7 @@ FUNC VOID DIA_Jesper_Schleichen_Info()
 	};
 };
 //////////////////////////////////////////////////////////////////////
-//	Info Freunde getötet
+//	Info Freunde getÃ¶tet
 ///////////////////////////////////////////////////////////////////////
 INSTANCE DIA_Jesper_Killer   (C_INFO)
 {
@@ -312,7 +312,7 @@ FUNC VOID DIA_Jesper_Bogen_Info()
 	Wld_InsertNpc (Giant_Rat, "NW_CITY_KANAL_ROOM_01_03");
 };
 //////////////////////////////////////////////////////////////////////
-//	Info Tür
+//	Info TÃ¼r
 ///////////////////////////////////////////////////////////////////////
 INSTANCE DIA_Jesper_Tuer   (C_INFO)
 {

@@ -15,7 +15,7 @@ const int SPL_Cost_TrfLurker		= 10;
 const int SPL_Cost_TrfShadowbeast	= 10;
 const int SPL_Cost_TrfDragonSnapper	= 10;
 
-// ------ Instanz für alle Transform-Sprüche ------
+// ------ Instanz fÃ¼r alle Transform-SprÃ¼che ------
 INSTANCE Spell_Transform (C_Spell_Proto)
 {
 	time_per_mana			= 0;
@@ -39,6 +39,10 @@ func int Spell_Logic_TrfSheep (var int manaInvested)
 	{
 		return SPL_SENDSTOP;
 	};
+	if(Npc_IsPlayer(self))
+	{
+		Wld_StopEffect("SLOW_MOTION");
+	};
 	Npc_SetActiveSpellInfo(self, Sheep);
 	return SPL_SENDCAST;
 };
@@ -58,6 +62,10 @@ func int Spell_Logic_TrfScavenger (var int manaInvested)
 	{
 		return SPL_SENDSTOP;
 	};
+	if(Npc_IsPlayer(self))
+	{
+		Wld_StopEffect("SLOW_MOTION");
+	};
 	Npc_SetActiveSpellInfo(self, Scavenger);
 	return SPL_SENDCAST;
 };
@@ -76,6 +84,10 @@ func int Spell_Logic_TrfGiantRat (var int manaInvested)
 	else
 	{
 		return SPL_SENDSTOP;
+	};
+	if(Npc_IsPlayer(self))
+	{
+		Wld_StopEffect("SLOW_MOTION");
 	};
 	Npc_SetActiveSpellInfo(self, Giant_Rat);
 	return SPL_SENDCAST;
@@ -97,6 +109,10 @@ func int Spell_Logic_TrfGiantBug (var int manaInvested)
 	{
 		return SPL_SENDSTOP;
 	};
+	if(Npc_IsPlayer(self))
+	{
+		Wld_StopEffect("SLOW_MOTION");
+	};
 	Npc_SetActiveSpellInfo(self, Giant_Bug);
 	return SPL_SENDCAST;
 };
@@ -115,6 +131,10 @@ func int Spell_Logic_TrfWolf (var int manaInvested)
 	else
 	{
 		return SPL_SENDSTOP;
+	};
+	if(Npc_IsPlayer(self))
+	{
+		Wld_StopEffect("SLOW_MOTION");
 	};
 	Npc_SetActiveSpellInfo(self, Wolf);
 	return SPL_SENDCAST;
@@ -135,6 +155,10 @@ func int Spell_Logic_TrfWaran (var int manaInvested)
 	{
 		return SPL_SENDSTOP;
 	};
+	if(Npc_IsPlayer(self))
+	{
+		Wld_StopEffect("SLOW_MOTION");
+	};
 	Npc_SetActiveSpellInfo(self, Waran);
 	return SPL_SENDCAST;
 };
@@ -153,6 +177,10 @@ func int Spell_Logic_TrfSnapper (var int manaInvested)
 	else
 	{
 		return SPL_SENDSTOP;
+	};
+	if(Npc_IsPlayer(self))
+	{
+		Wld_StopEffect("SLOW_MOTION");
 	};
 	Npc_SetActiveSpellInfo(self, Snapper);
 	return SPL_SENDCAST;
@@ -173,6 +201,10 @@ func int Spell_Logic_TrfWarg (var int manaInvested)
 	{
 		return SPL_SENDSTOP;
 	};
+	if(Npc_IsPlayer(self))
+	{
+		Wld_StopEffect("SLOW_MOTION");
+	};
 	Npc_SetActiveSpellInfo(self, Warg);
 	return SPL_SENDCAST;
 };
@@ -191,6 +223,10 @@ func int Spell_Logic_TrfFireWaran (var int manaInvested)
 	else
 	{
 		return SPL_SENDSTOP;
+	};
+	if(Npc_IsPlayer(self))
+	{
+		Wld_StopEffect("SLOW_MOTION");
 	};
 	Npc_SetActiveSpellInfo(self, FireWaran);
 	return SPL_SENDCAST;
@@ -211,6 +247,10 @@ func int Spell_Logic_TrfLurker (var int manaInvested)
 	{
 		return SPL_SENDSTOP;
 	};
+	if(Npc_IsPlayer(self))
+	{
+		Wld_StopEffect("SLOW_MOTION");
+	};
 	Npc_SetActiveSpellInfo(self, Lurker);
 	return SPL_SENDCAST;
 };
@@ -230,6 +270,10 @@ func int Spell_Logic_TrfShadowbeast (var int manaInvested)
 	{
 		return SPL_SENDSTOP;
 	};
+	if(Npc_IsPlayer(self))
+	{
+		Wld_StopEffect("SLOW_MOTION");
+	};
 	Npc_SetActiveSpellInfo(self, Shadowbeast);
 	return SPL_SENDCAST;
 };
@@ -248,6 +292,10 @@ func int Spell_Logic_TrfDragonSnapper (var int manaInvested)
 	else
 	{
 		return SPL_SENDSTOP;
+	};
+	if(Npc_IsPlayer(self))
+	{
+		Wld_StopEffect("SLOW_MOTION");
 	};
 	Npc_SetActiveSpellInfo(self, DragonSnapper);
 	return SPL_SENDCAST;
