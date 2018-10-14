@@ -85,7 +85,7 @@ INSTANCE DIA_Bartok_Hallo (C_INFO)
 	condition	= DIA_Bartok_Hallo_Condition;
 	information	= DIA_Bartok_Hallo_Info;
 	permanent	= FALSE;
-	description = "What's up?";
+	description = "How's it going?";
 };                       
 FUNC INT DIA_Bartok_Hallo_Condition()
 {
@@ -587,7 +587,7 @@ INSTANCE DIA_Bartok_PERM (C_INFO)
 	condition	= DIA_Bartok_PERM_Condition;
 	information	= DIA_Bartok_PERM_Info;
 	permanent	= TRUE;
-	description = "Everything all right?";
+	description = "Okay?";
 };                       
 FUNC INT DIA_Bartok_PERM_Condition()
 {
