@@ -569,6 +569,7 @@ func void DIA_Gorax_KILLPEDRO_Info ()
 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_04"); //I have an assignment for you from the highest authorities. You are not a member of the Brotherhood of the Fire, and therefore the only one here who can settle this matter for us.
 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_05"); //But I must warn you. If I give you this assignment, you'll be bound to fulfill it, too. Once you know what it's about, you'll have no choice. Do you understand?
 	
+	Npc_ExchangeRoutine(self,"Start");
 	Info_ClearChoices	(DIA_Gorax_KILLPEDRO);
 	Info_AddChoice	(DIA_Gorax_KILLPEDRO, "Forget it. That's too risky for me.", DIA_Gorax_KILLPEDRO_nein );
 	Info_AddChoice	(DIA_Gorax_KILLPEDRO, "Tell me what you want.", DIA_Gorax_KILLPEDRO_ja );

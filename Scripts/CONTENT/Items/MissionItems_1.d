@@ -1338,7 +1338,7 @@ INSTANCE ITAR_PAL_SKEL (C_Item)
 	visual 					=	"ItAr_Pal_H.3ds";
 	visual_change 			=	"Armor_Pal_Skeleton.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 
 	description				=	name;
 

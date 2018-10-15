@@ -247,7 +247,7 @@ INSTANCE DIA_Ramirez_Teach   (C_INFO)
 	condition   = DIA_Ramirez_Teach_Condition;
 	information = DIA_Ramirez_Teach_Info;
 	permanent   = TRUE;
-	description = B_BuildLearnString("Teach me how to pick a lock", B_GetLearnCostTalent(other,NPC_TALENT_PICKLOCK,1));
+	description = B_BuildLearnString("Show me how to pick a lock", B_GetLearnCostTalent(other,NPC_TALENT_PICKLOCK,1));
 };
 
 FUNC INT DIA_Ramirez_Teach_Condition()

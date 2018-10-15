@@ -811,8 +811,8 @@ const string PRINT_Addon_RuneGiven			= "Beliar grants you another spell";
 // *************************************************************
 
 // ------ B_BuildLearnString ------
-const string PRINT_Kosten					= ". Cost:";
-const string PRINT_LP						= " LP";
+const string PRINT_Kosten					= ". (Cost: ";
+const string PRINT_LP						= " LP)";
 
 // ------ Zu wenig LP /	techerMAX überschritten	------
 const string PRINT_NotEnoughLP				= "Not enough Learning Points!";

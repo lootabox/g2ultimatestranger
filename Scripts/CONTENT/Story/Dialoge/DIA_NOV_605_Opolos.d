@@ -568,7 +568,7 @@ FUNC VOID DIA_Opolos_Kap3_PERM_Info()
 	Info_AddChoice (DIA_Opolos_Kap3_PERM,"There are dragons in the Valley of Mines.",DIA_Opolos_Kap3_PERM_DRAGONS);
 	Info_AddChoice (DIA_Opolos_Kap3_PERM,"Strangers in black robes roam the countryside.",DIA_Opolos_Kap3_PERM_DMT);
 	
-	if (MIS_NOVIZENCHASE == LOG_RUNNING)
+	if (MIS_NOVIZENCHASE == LOG_RUNNING || MIS_NOVIZENCHASE == LOG_SUCCESS)
 	{
 		Info_AddChoice (DIA_Opolos_Kap3_PERM,"Pedro betrayed us.",DIA_Opolos_Kap3_PERM_PEDRO);
 	};

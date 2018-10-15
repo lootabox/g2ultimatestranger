@@ -274,7 +274,7 @@ INSTANCE DIA_Addon_Scatty_teach   (C_INFO)
 	condition   = DIA_Addon_Scatty_teach_Condition;
 	information = DIA_Addon_Scatty_teach_Info;
 	permanent   = TRUE;
-	description = "Learn to dig gold (Cost: 1 LP/10 percent)";
+	description = B_BuildLearnString("Tell me more about gold mining", 1);
 };
 FUNC INT DIA_Addon_Scatty_teach_Condition()
 {	

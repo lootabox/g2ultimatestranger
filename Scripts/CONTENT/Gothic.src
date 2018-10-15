@@ -58,6 +58,10 @@ STORY\Log_Entries\B_Checklog.d
 STORY\B_Story\B_GivePlayerXP.d
 STORY\B_Content\B_SCUsesRake.d
 
+STORY\B_GiveTradeInv\B_ClearRuneInv.d
+STORY\B_GiveTradeInv\B_ClearSmithInv.d
+STORY\B_GiveTradeInv\B_ClearAlchemyInv.d
+STORY\B_GiveTradeInv\B_ClearJunkTradeInv.d
 
 STORY\B_Story\B_KillNpc.d
 STORY\B_Story\B_RemoveNpc.d
@@ -238,8 +242,6 @@ STORY\NPC\Monster\*.d
 STORY\NPC\Orc\*.d
 
 STORY\B_Story\B_ClearDeadTrader.d
-STORY\B_GiveTradeInv\B_ClearRuneInv.d
-STORY\B_GiveTradeInv\B_ClearJunkTradeInv.d
 STORY\B_GiveTradeInv\B_GiveTradeInv_*.d
 STORY\B_GiveTradeInv\B_GiveTradeInv.d
 

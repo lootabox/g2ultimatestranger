@@ -1,20 +1,40 @@
 
-	Bug Fixes and Minor Improvements
 
+	Notable Changes
+
+Changed Kervo's quest to cancel in chapter 4, causing Kervo and Geppert to be killed by a Lurker instead of them disappearing.
+Changed Buster to give reduced gold for each Shadowbeast Horn, but still way more then regular merchants.
+
+
+	Bug Fixes, Glitch Workarounds and Minor Improvements
+
+Added option to tell Opolos about Pedro's betrayal also after the chase quest is completed.
 Added a new colored texture for when Stone Guardians get hit and leave pebbles on the ground.
 
-Changed black ore effect to end on using transformation spell. (from MiniMod Balance).
+Changed black ore effect to end on using transformation spell.
 Changed blacksmith and alchemist to not drop steel blanks or lab water bottles.
 Changed two dialogue options with Ramirez to only be available after he sees the thieves' signal.
-Changed Kervo's quest to cancel in chapter 4, causing Kervo and Geppert to die instead of disappearing.
 Changed skeletal monsters to not be able to bleed.
+Changed Swamp Golem blood from red to green.
+Changed Girion not to count towards max ship crew, as there is no way to dismiss him and his joining can anyway be avoided.
+Changed Buster to buy Shadowbeast Horns, even if NH does not know how to remove them.
+Changed Gorax to wait for NH, if mercenary, at church gate to offer the task to kill Pedro.
+Changed Esteban's bodyguards go running to meet Fisk.
 
 Fixed Brandon and Skip quests to cancel if they are killed.
 Fixed Kervo's quest fails if he is killed.
-Fixed dialogue text for Bartok, Bosper, Bill, Cassia, Jesper, Jergan, Ramirez.
-Fixed the need to pay Cassia for learning to pickpocket if it’s already learned.
+Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Hyglas, Jesper, Jergan, Karras, Lares, Parlan, Pyrokar, Ramirez, Raoul, Scatty.
 Fixed the inability to get the blood chalice quest from Cassia, if NH was accused of theft.
 Fixed Cassias quests to become obsolete if the paladins take care of the guild.
 Fixed XP award for pickpocketing Valentino, Salandril, Cavalorn, Dobar, Engor, Franco and Francis.
 Fixed XP award for recruiting Lares and Lester.
 Fixed all Goblins and Skeletons from creating additional weapons in their inventory.
+Fixed Mario being able to be recruited to a full ship crew.
+Fixed few addon armor material to metal from leather.
+Fixed possibility of looting magic runes from frozen corpses.
+Fixed Esteban turning to his guards when they were already dead.
+
+Removed option to pay Cassia for learning to pickpocket if it’s already learned.
+Removed option to ask Pedro about life in the monastery if NH is magician.
+Removed ability to get back Shadowbeast Horns from Buster.
+Removed ability to get back Almanac of the Possessed from Vatras.

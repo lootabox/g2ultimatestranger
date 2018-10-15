@@ -520,6 +520,7 @@ func void DIA_Vatras_DI_DementorObsessionBook_Info ()
 		AI_Output			(self, other, "DIA_Vatras_DI_DementorObsessionBook_05_02"); //Do you have more of them? Bring me all that you can find.
 	};
 	B_GiveInvItems (other, self, ITWR_DementorObsessionBook_MIS,1);
+	Npc_RemoveInvItems(self,ITWR_DementorObsessionBook_MIS,1);
 	B_GivePlayerXP (XP_Ambient);
 };
 	

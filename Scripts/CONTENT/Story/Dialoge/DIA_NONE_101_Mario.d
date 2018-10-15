@@ -284,6 +284,7 @@ FUNC INT DIA_None_101_Mario_NeedGoodMen_Condition()
 {
 	if (Npc_KnowsInfo (other,DIA_None_101_Mario_YouNeedMe))
 	&& (Mario_IsOnBoard == FALSE)
+	&& (crewmember_count < Max_Crew)
 	{
 		return TRUE;
 	};	

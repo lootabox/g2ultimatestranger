@@ -86,7 +86,6 @@ func void B_CloseTopics_Yoly ()
 	B_CloseTopic	(TOPIC_URSHAK, 0, URSHAK_SUCKED, 6);	
 	
 	// Kapitel 4
-	B_CloseTopic	(TOPIC_KervoLurkers,MIS_Kervo_KillLurker,0,4);	
 	B_CloseTopic	(TOPIC_DRACHENJAGD, 0, MIS_AllDragonsDead, 5);	
 	B_CloseTopic	(TOPIC_LobartsOrKProblem, 0, TOPIC_END_LobartsOrKProblem, 6);	
 	B_CloseTopic	(TOPIC_SylvioKillIceGolem, MIS_DJG_Sylvio_KillIceGolem, TOPIC_END_SylvioKillIceGolem, 6);	

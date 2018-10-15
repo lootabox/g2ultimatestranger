@@ -326,7 +326,7 @@ instance DIA_Karras_CIRCLE4		(C_INFO)
 	condition	 = 	DIA_Karras_CIRCLE4_Condition;
 	information	 = 	DIA_Karras_CIRCLE4_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"I want to learn the fourth Circle of Magic.";
+	description	 = 	B_BuildLearnString("I want to learn the fourth Circle of Magic", B_GetLearnCostTalent(other,NPC_TALENT_MAGE,4));
 };
 func int DIA_Karras_CIRCLE4_Condition ()
 {	
@@ -362,7 +362,7 @@ instance DIA_Karras_CIRCLE5		(C_INFO)
 	condition	 = 	DIA_Karras_CIRCLE5_Condition;
 	information	 = 	DIA_Karras_CIRCLE5_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"I want to learn the fifth Circle of Magic.";
+	description	 = 	B_BuildLearnString("I want to learn the fifth Circle of Magic", B_GetLearnCostTalent(other,NPC_TALENT_MAGE,5));
 };
 func int DIA_Karras_CIRCLE5_Condition ()
 {	

@@ -276,10 +276,20 @@ FUNC VOID DIA_Addon_Esteban_Auftrag_Info()
 		AI_Output (self, other, "DIA_Addon_Esteban_Auftrag_07_03");//Who is it? Tell me his name so my guards can wring his neck...
 		AI_Output (other, self, "DIA_Addon_Esteban_Auftrag_15_04");//The trader Fisk is behind it. At the moment, he's sitting in the bar unsuspecting and drinking...
 		AI_Output (self, other, "DIA_Addon_Esteban_Auftrag_07_05");//HA! Well done, kid. My guards will take care of him.
-		
-		AI_TurnToNpc (self, Wache_01);
-		AI_Output (self, other, "DIA_Addon_Esteban_Auftrag_07_06");//You heard him, boys. Go get Fisk.
-		AI_TurnToNpc (self, other);
+
+		if(!Npc_IsDead(Wache_01) || !Npc_IsDead(Wache_02))
+		{
+			if(!Npc_IsDead(Wache_01))
+			{
+				AI_TurnToNPC(self,Wache_01);
+			}
+			else
+			{
+				AI_TurnToNPC(self,Wache_02);
+			};
+			AI_Output (self, other, "DIA_Addon_Esteban_Auftrag_07_06");//You heard him, boys. Go get Fisk.
+			AI_TurnToNpc (self, other);
+		};
 		
 		Bodyguard_Killer = TRUE;
 	}

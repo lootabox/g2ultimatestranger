@@ -170,8 +170,7 @@ instance DIA_Hyglas_TALENT_FIREBOLT		(C_INFO)
 	condition	 = 	DIA_Hyglas_TALENT_FIREBOLT_Condition;
 	information	 = 	DIA_Hyglas_TALENT_FIREBOLT_Info;
 	permanent 	 =  TRUE; 
-	description	 = 	"Teach me to create the FIRE ARROW rune.";
-
+	description	 = 	B_BuildLearnString("Teach me to create the FIRE ARROW rune", B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_Firebolt));
 };
 func int DIA_Hyglas_TALENT_FIREBOLT_Condition ()
 {	

@@ -265,18 +265,23 @@ FUNC VOID DIA_Addon_Edgor_Start_Info()
 	Info_ClearChoices (DIA_Addon_Edgor_TrainStart);
 	Info_AddChoice    (DIA_Addon_Edgor_TrainStart,DIALOG_BACK,DIA_Addon_Edgor_TrainStart_BACK);
 	
-	
+	var string concatText;
 	if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFSting] == FALSE)
 	{ 
-		Info_AddChoice    (DIA_Addon_Edgor_TrainStart, "Extract bloodfly stingers (Cost: 1 LP, 100 gold)",DIA_Addon_Edgor_TrainStart_Sting);
+		concatText = ConcatStrings("How do I get the stingers from the bloodflies? (Cost: ", IntToString(B_GetLearnCostTalent(other,NPC_TALENT_TAKEANIMALTROPHY,TROPHY_BFSting)));
+		concatText = ConcatStrings(concatText, " LP, 100 gold)");
+		Info_AddChoice    (DIA_Addon_Edgor_TrainStart, concatText, DIA_Addon_Edgor_TrainStart_Sting);
 	};
 	if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFWing] == FALSE)
 	{ 
-		Info_AddChoice 	  (DIA_Addon_Edgor_TrainStart, "Pull bloodfly wings (Cost: 1 LP, 100 gold)",DIA_Addon_Edgor_TrainStart_Wing);
+		concatText = ConcatStrings("How do I get the wings? (Cost: ", IntToString(B_GetLearnCostTalent(other,NPC_TALENT_TAKEANIMALTROPHY,TROPHY_BFWing)));
+		concatText = ConcatStrings(concatText, " LP, 100 gold)");
+		Info_AddChoice 	  (DIA_Addon_Edgor_TrainStart, concatText, DIA_Addon_Edgor_TrainStart_Wing);
 	};
 	if (Knows_Bloodfly == FALSE)
 	{
-		Info_AddChoice 	  (DIA_Addon_Edgor_TrainStart,"Remove secretion from stinger (Cost: 1 LP, 100 gold)",DIA_Addon_Edgor_TrainStart_GIFT);
+		concatText = "How do I remove the secretion from the bloodflies? (Cost: 1 LP, 100 gold)";
+		Info_AddChoice 	  (DIA_Addon_Edgor_TrainStart, concatText, DIA_Addon_Edgor_TrainStart_GIFT);
 	};
 };	
 FUNC VOID DIA_Addon_Edgor_TrainStart_BACK()
@@ -322,7 +327,7 @@ FUNC VOID DIA_Addon_Edgor_TrainStart_GIFT()
 	{
 		if (other.lp >= 1)
 		{
-			AI_Output (other, self, "DIA_Addon_Edgor_TrainStart_GIFT_15_00");//How do I remove the secretion from the bloodflies.
+			AI_Output (other, self, "DIA_Addon_Edgor_TrainStart_GIFT_15_00");//How do I remove the secretion from the bloodflies?
 			AI_Output (self, other, "DIA_Addon_Edgor_TrainStart_GIFT_06_01");//Cut open the upper layer of the stinger lengthwise - then the healing secretion will flow right out.
 			AI_Output (self, other, "DIA_Addon_Edgor_TrainStart_GIFT_06_02");//That way it's completely safe to suck out a stinger - or use it for some potions.
 			

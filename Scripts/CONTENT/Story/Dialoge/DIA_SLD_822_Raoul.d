@@ -444,7 +444,7 @@ instance DIA_Raoul_TrophyFur		(C_INFO)
 	information	 = 	DIA_Raoul_TrophyFur_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"First tell me how to get the hide off the troll.";
+	description	 = 	B_BuildLearnString("First tell me how to get the hide off the troll", B_GetLearnCostTalent(other,NPC_TALENT_TAKEANIMALTROPHY,TROPHY_Fur));
 };
 
 func int DIA_Raoul_TrophyFur_Condition ()

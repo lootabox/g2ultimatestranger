@@ -88,7 +88,7 @@ FUNC VOID DIA_Lares_DI_Training_Info()
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 	{
-		Info_AddChoice		(DIA_Lares_DI_Training, "Learn to sneak"	,DIA_Lares_DI_Training_SNEAK);
+		Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString("Learn to sneak", B_GetLearnCostTalent(other,NPC_TALENT_SNEAK,1))	,DIA_Lares_DI_Training_SNEAK);
 	};
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX1			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Lares_DI_Training_DEX_1);
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX5			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Lares_DI_Training_DEX_5);
@@ -107,7 +107,7 @@ FUNC VOID DIA_Lares_DI_Training_1H_1 ()
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 	{
-		Info_AddChoice		(DIA_Lares_DI_Training, "Learn to sneak"	,DIA_Lares_DI_Training_SNEAK);
+		Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString("Learn to sneak", B_GetLearnCostTalent(other,NPC_TALENT_SNEAK,1))	,DIA_Lares_DI_Training_SNEAK);
 	};
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX1			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Lares_DI_Training_DEX_1);
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX5			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Lares_DI_Training_DEX_5);
@@ -126,7 +126,7 @@ FUNC VOID DIA_Lares_DI_Training_1H_5 ()
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 	{
-		Info_AddChoice		(DIA_Lares_DI_Training, "Learn to sneak"	,DIA_Lares_DI_Training_SNEAK);
+		Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString("Learn to sneak", B_GetLearnCostTalent(other,NPC_TALENT_SNEAK,1))	,DIA_Lares_DI_Training_SNEAK);
 	};
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX1			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Lares_DI_Training_DEX_1);
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX5			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Lares_DI_Training_DEX_5);
@@ -151,7 +151,7 @@ func void DIA_Lares_DI_Training_DEX_1 ()
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 	{
-		Info_AddChoice		(DIA_Lares_DI_Training, "Learn to sneak"	,DIA_Lares_DI_Training_SNEAK);
+		Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString("Learn to sneak", B_GetLearnCostTalent(other,NPC_TALENT_SNEAK,1))	,DIA_Lares_DI_Training_SNEAK);
 	};
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX1			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Lares_DI_Training_DEX_1);
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX5			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Lares_DI_Training_DEX_5);
@@ -175,7 +175,7 @@ func void DIA_Lares_DI_Training_DEX_5 ()
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 	{
-		Info_AddChoice		(DIA_Lares_DI_Training, "Learn to sneak"	,DIA_Lares_DI_Training_SNEAK);
+		Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString("Learn to sneak", B_GetLearnCostTalent(other,NPC_TALENT_SNEAK,1))	,DIA_Lares_DI_Training_SNEAK);
 	};
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX1			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Lares_DI_Training_DEX_1);
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX5			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Lares_DI_Training_DEX_5);
@@ -196,7 +196,7 @@ func void DIA_Lares_DI_Training_SNEAK ()
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 	{
-		Info_AddChoice		(DIA_Lares_DI_Training, "Learn to sneak"	,DIA_Lares_DI_Training_SNEAK);
+		Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString("Learn to sneak", B_GetLearnCostTalent(other,NPC_TALENT_SNEAK,1))	,DIA_Lares_DI_Training_SNEAK);
 	};
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX1			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Lares_DI_Training_DEX_1);
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX5			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Lares_DI_Training_DEX_5);

@@ -48,6 +48,8 @@ FUNC VOID Rtn_Start_1081 ()
 };
 FUNC VOID Rtn_Ambush_1081 ()
 {
- 	TA_Stand_Guarding (00,00,00,00,"BL_INN_OUTSIDE_01");
-	TA_Stand_Guarding (00,00,00,00,"BL_INN_OUTSIDE_01");
+ 	//TA_Stand_Guarding (00,00,00,00,"BL_INN_OUTSIDE_01");
+	//TA_Stand_Guarding (00,00,00,00,"BL_INN_OUTSIDE_01");
+	TA_RunToWP(0,0,0,0,"BL_INN_OUTSIDE_01");
+	TA_RunToWP(0,0,0,0,"BL_INN_OUTSIDE_01");
 };

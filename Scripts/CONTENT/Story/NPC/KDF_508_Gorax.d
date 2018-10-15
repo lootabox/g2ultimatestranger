@@ -41,3 +41,9 @@ FUNC VOID Rtn_Start_508 ()
 	TA_Stand_Guarding	(08,00,23,00,"NW_MONASTERY_WINEMAKER_01");
 	TA_Sleep			(23,00,08,00,"NW_MONASTERY_MAGE02_BED_01");
 };
+
+FUNC VOID Rtn_Wait_508 ()
+{
+	TA_Stand_Guarding(08,00,23,00,"NW_MONASTERY_PLACE_05");
+	TA_Stand_Guarding(23,00,08,00,"NW_MONASTERY_PLACE_05");
+};

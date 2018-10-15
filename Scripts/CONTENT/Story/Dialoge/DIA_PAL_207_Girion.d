@@ -301,7 +301,7 @@ func void DIA_Girion_CATCHPLAYERSTOLENSHIP_ship ()
 	
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine	(self,"Ship");
-	crewmember_Count = (Crewmember_Count +1);
+	//crewmember_Count = (Crewmember_Count +1);
 	Girion_IsOnBoard = LOG_SUCCESS;
 };
 

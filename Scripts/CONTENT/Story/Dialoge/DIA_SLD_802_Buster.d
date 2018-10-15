@@ -735,7 +735,7 @@ func void DIA_Buster_BringTrophyShadowbeast_Info ()
 		MIS_Buster_KillShadowbeasts_DJG = LOG_SUCCESS; //Joly: Feierabend ab Kapitel 5!!!!!!!
 		B_GivePlayerXP (XP_Ambient);
 	}
-	else if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_ShadowHorn] == FALSE)
+	else if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_ShadowHorn] == FALSE) && !Npc_HasItems(other, ItAt_ShadowHorn)
 	{
 		AI_Output			(other, self, "DIA_Buster_ANIMALTROPHYSHADOWBEAST_15_03"); //How do you gut a shadowbeast?
 		AI_Output			(self, other, "DIA_Buster_ANIMALTROPHYSHADOWBEAST_13_04"); //You don't know that? Oh man, I'd have expected more of you.
@@ -754,14 +754,14 @@ func void DIA_Buster_BringTrophyShadowbeast_Info ()
 	
 		BusterTrophyShadowbeastCount = Npc_HasItems(other, ItAt_ShadowHorn);
 		XP_BringBusterTrophyShadowbeast = 	(30 * XP_PER_VICTORY);			
-		BustersBusterTrophyShadowbeastOffer = Value_ShadowHorn + Buster_Bonus; //Joly: Wert ohne Handelmultiplier!!!!!!!!!!!!!
+		BustersBusterTrophyShadowbeastOffer = Value_ShadowHorn/2 + Buster_Bonus; //Joly: Wert ohne Handelmultiplier!!!!!!!!!!!!!
 		
-	
 		if (BusterTrophyShadowbeastCount == 1)
 			{
 				AI_Output		(other, self, "DIA_Buster_BringTrophyShadowbeast_15_05"); //I've got a shadowbeast horn for you.
 				B_GivePlayerXP (XP_BringBusterTrophyShadowbeast);
 				B_GiveInvItems (other, self, ItAt_ShadowHorn,1);
+				Npc_RemoveInvItem(self,ItAt_ShadowHorn);
 				BusterTrophyShadowbeastCounter = BusterTrophyShadowbeastCounter + 1;
 			}
 			else
@@ -769,6 +769,7 @@ func void DIA_Buster_BringTrophyShadowbeast_Info ()
 				AI_Output		(other, self, "DIA_Buster_BringTrophyShadowbeast_15_06"); //I've got some more shadowbeast horns for your merchant.
 	
 				B_GiveInvItems (other, self, ItAt_ShadowHorn,  BusterTrophyShadowbeastCount);
+				Npc_RemoveInvItems(self,ItAt_ShadowHorn,BusterTrophyShadowbeastCount);
 	
 				XP_BringBusterTrophyShadowbeasts = (BusterTrophyShadowbeastCount * XP_BringBusterTrophyShadowbeast);
 				BusterTrophyShadowbeastCounter = (BusterTrophyShadowbeastCounter + BusterTrophyShadowbeastCount); 

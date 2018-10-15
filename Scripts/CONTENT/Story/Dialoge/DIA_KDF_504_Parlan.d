@@ -895,7 +895,7 @@ instance DIA_Parlan_CIRCLE1		(C_INFO)
 	condition	 = 	DIA_Parlan_CIRCLE1_Condition;
 	information	 = 	DIA_Parlan_CIRCLE1_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Teach me the first Circle of Magic.";
+	description	 = 	B_BuildLearnString("Teach me the first Circle of Magic", B_GetLearnCostTalent(other,NPC_TALENT_MAGE,1));
 };
 func int DIA_Parlan_CIRCLE1_Condition ()
 {	
@@ -927,7 +927,7 @@ instance DIA_Parlan_CIRCLE2		(C_INFO)
 	condition	 = 	DIA_Parlan_CIRCLE2_Condition;
 	information	 = 	DIA_Parlan_CIRCLE2_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Teach me the second Circle of Magic.";
+	description	 = 	B_BuildLearnString("Teach me the second Circle of Magic", B_GetLearnCostTalent(other,NPC_TALENT_MAGE,2));
 };
 func int DIA_Parlan_CIRCLE2_Condition ()
 {	
@@ -966,7 +966,7 @@ instance DIA_Parlan_CIRCLE3		(C_INFO)
 	condition	 = 	DIA_Parlan_CIRCLE3_Condition;
 	information	 = 	DIA_Parlan_CIRCLE3_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Teach me the third Circle of Magic.";
+	description	 = 	B_BuildLearnString("Teach me the third Circle of Magic", B_GetLearnCostTalent(other,NPC_TALENT_MAGE,3));
 };
 func int DIA_Parlan_CIRCLE3_Condition ()
 {	

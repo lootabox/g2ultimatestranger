@@ -11,6 +11,8 @@ func void B_KillNpc (var int npcInstance)
 		&& (!Npc_IsDead (npc))
 		{	
 			npc.flags = 0;
+
+			B_ClearRuneInv(npc);
 			
 			CreateInvItem		(npc, ItMi_OldCoin);		// Mission-Item, das verhindert, daﬂ die Toten entfernt werden
 			

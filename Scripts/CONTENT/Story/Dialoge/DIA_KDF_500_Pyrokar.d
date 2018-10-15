@@ -738,7 +738,7 @@ instance DIA_Pyrokar_TEACH		(C_INFO)
 	condition	 = 	DIA_Pyrokar_TEACH_Condition;
 	information	 = 	DIA_Pyrokar_TEACH_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Teach me the last Circle of Magic.";
+	description	 = 	B_BuildLearnString("Teach me the last Circle of Magic", B_GetLearnCostTalent(other,NPC_TALENT_MAGE,6));
 };
 func int DIA_Pyrokar_TEACH_Condition ()
 {	
@@ -1093,7 +1093,10 @@ func void DIA_Pyrokar_GIVEINNOSEYE_Info ()
 	AI_Output			(self, other, "DIA_Pyrokar_GIVEINNOSEYE_11_02"); //I am afraid that I have to disappoint you. We have fallen victim to a treacherous plot of the enemy.
 	AI_Output			(self, other, "DIA_Pyrokar_GIVEINNOSEYE_11_03"); //The Eye of Innos has been violently taken from these sacred walls.
 
-	
+	if((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
+	{
+		B_StartOtherRoutine(Gorax,"Wait");
+	};
 	if (hero.guild == GIL_KDF)
 	{
 		Info_AddChoice	(DIA_Pyrokar_GIVEINNOSEYE, "Who could be so impudent, Master?", DIA_Pyrokar_GIVEINNOSEYE_wer );

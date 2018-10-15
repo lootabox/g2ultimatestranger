@@ -153,7 +153,7 @@ INSTANCE ITAR_Thorus_Addon (C_Item)
 	visual 					=	"ItAr_Thorus_ADDON.3ds";
 	visual_change 			=	"Armor_Thorus_ADDON.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 
 	description				=	"Armor for Raven's guard";
 
@@ -195,7 +195,7 @@ INSTANCE ITAR_Raven_Addon (C_Item)
 	visual 					=	"ItAr_Raven_ADDON.3ds";
 	visual_change 			=	"Armor_Raven_ADDON.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 
 	description				=	name;
 
