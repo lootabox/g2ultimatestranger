@@ -19,7 +19,7 @@ INSTANCE PIR_1301_Addon_Skip_NW (Npc_Default)
 	EquipItem (self, ItRw_sld_bow); 
 	
 	// ------ Inventory ------
-	// Händler
+	B_CreateAmbientInv (self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Pirat01, BodyTex_N, ITAR_PIR_L_Addon);

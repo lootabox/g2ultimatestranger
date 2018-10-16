@@ -19,6 +19,7 @@ INSTANCE PIR_1361_Addon_PIRAT (Npc_Default)
 	EquipItem (self, ItMw_Addon_PIR2hAxe);  
 	
 	// ------ Inventory ------
+	B_CreateAmbientInv (self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_ToughBart01, BodyTex_N, ITAR_PIR_L_Addon);	  

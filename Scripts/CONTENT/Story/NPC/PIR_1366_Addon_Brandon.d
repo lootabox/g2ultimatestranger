@@ -21,6 +21,7 @@ INSTANCE PIR_1366_Addon_Brandon (Npc_Default)
 	EquipItem (self, ItMw_Addon_PIR1hAxe);
 	
 	// ------ Inventory ------
+	B_CreateAmbientInv (self);
 	CreateInvItems (self, itpo_Health_03, 1);
 		
 	// ------ visuals ------																			

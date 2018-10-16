@@ -571,8 +571,7 @@ FUNC INT DIA_Garond_Silvestro_Condition()
 {
 	if (MIS_ScoutMine == LOG_RUNNING)
 	&& (Kapitel == 2)
-	&& (Silvestro_Ore == TRUE)
-	
+	&& ((Silvestro_Ore == TRUE) || Npc_IsDead(PC_ThiefOW))
 	{
 		return TRUE;
 	};
@@ -581,7 +580,14 @@ FUNC VOID DIA_Garond_Silvestro_Info()
 {		
 	AI_Output (other,self ,"DIA_Garond_Silvestro_15_00"); //About Silvestro's mining site ...
 	AI_Output (self ,other,"DIA_Garond_Silvestro_10_01"); //Did you go see him? Did you talk to him?
-	AI_Output (other,self ,"DIA_Garond_Silvestro_15_02"); //Everyone's dead there. They were surprised by minecrawlers.
+	if(!Npc_HasItems(PAL_Leiche1,ItWr_Silvestro_MIS) || Npc_KnowsInfo(other,DIA_DiegoOw_Mine))
+	{
+		AI_Output (other,self ,"DIA_Garond_Silvestro_15_02"); //Everyone's dead there. They were surprised by minecrawlers.
+	}
+	else
+	{
+		AI_Output (other,self ,"DIA_Neoras_Rezept_15_04"); //I haven't found him yet.
+	};
 	AI_Output (self ,other,"DIA_Garond_Silvestro_10_03"); //What about the ore? Do you know how much they have mined?
 	AI_Output (other,self ,"DIA_Garond_Silvestro_15_04"); //They managed to secure a few chests first. They're in a cave - along the path from the castle to the mining site.
 	AI_Output (self ,other,"DIA_Garond_Silvestro_10_05"); //Damn! Those were a lot of good men - may Innos have mercy on their souls.

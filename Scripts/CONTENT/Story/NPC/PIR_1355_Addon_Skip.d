@@ -22,6 +22,7 @@ INSTANCE PIR_1355_Addon_Skip (Npc_Default)
 	EquipItem (self, ItRw_sld_bow); 
 	
 	// ------ Inventory ------
+	B_CreateAmbientInv (self);
 	CreateInvItems (self, itpo_Health_03, 2);
 		
 	// ------ visuals ------																			

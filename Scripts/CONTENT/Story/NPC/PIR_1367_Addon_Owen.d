@@ -18,7 +18,7 @@ INSTANCE PIR_1367_Addon_Owen (Npc_Default)
 	EquipItem (self, ItMw_Addon_PIR1hAxe);
 	
 	// ------ Inventory ------
-	
+	B_CreateAmbientInv (self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal16, BodyTex_N, ITAR_PIR_L_Addon);	  

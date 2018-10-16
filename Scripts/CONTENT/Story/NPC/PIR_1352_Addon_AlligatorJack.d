@@ -21,6 +21,7 @@ INSTANCE PIR_1352_Addon_AlligatorJack (Npc_Default)
 	EquipItem (self, ItMw_Piratensaebel);
 		
 	// ------ Inventory ------
+	B_CreateAmbientInv (self);
 	CreateInvItems (self, itpo_Health_02, 4);
 		
 	// ------ visuals ------																			

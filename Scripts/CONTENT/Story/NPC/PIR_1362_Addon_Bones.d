@@ -18,7 +18,7 @@ INSTANCE PIR_1362_Addon_Bones (Npc_Default)
 	EquipItem (self, ItMw_Addon_PIR2hAxe);
 	
 	// ------ Inventory ------
-	
+	B_CreateAmbientInv (self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_NormalBart10, BodyTex_N, ITAR_PIR_M_Addon);	  

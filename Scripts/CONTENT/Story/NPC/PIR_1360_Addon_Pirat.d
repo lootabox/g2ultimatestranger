@@ -18,7 +18,7 @@ INSTANCE PIR_1360_Addon_PIRAT (Npc_Default)
 	EquipItem (self, ItMw_1h_Vlk_Dagger);
 	
 	// ------ Inventory ------
-	
+	B_CreateAmbientInv (self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_L_Ratford, BodyTex_L, ITAR_PIR_L_Addon);	  

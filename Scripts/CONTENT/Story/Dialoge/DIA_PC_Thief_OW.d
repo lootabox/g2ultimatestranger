@@ -258,13 +258,13 @@ FUNC VOID DIA_DiegoOw_Teach_info ()
 };
 func void DIA_DiegoOw_TEACH_BACK()
 {
-	if (other.attribute[ATR_DEXTERITY] > Diego_MerkeDEX)
-	{
-		AI_Output (self, other, "DIA_Addon_DiegoOw_Teach_11_02"); //You have gained a little dexterity already.
-	};
 	if (other.attribute[ATR_STRENGTH] > Diego_MerkeSTR)
 	{
 		AI_Output (self, other, "DIA_Addon_DiegoOw_Teach_11_03"); //(appraisingly) Good. Your strength has increased.
+	};
+	if (other.attribute[ATR_DEXTERITY] > Diego_MerkeDEX)
+	{
+		AI_Output (self, other, "DIA_Addon_DiegoOw_Teach_11_02"); //You have gained a little dexterity already.
 	};
 	
 	Info_ClearChoices (DIA_DiegoOw_TEACH);

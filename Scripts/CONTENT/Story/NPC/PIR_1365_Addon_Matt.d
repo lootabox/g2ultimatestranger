@@ -21,7 +21,7 @@ INSTANCE PIR_1365_Addon_Matt (Npc_Default)
 	EquipItem (self, ItMw_Addon_PIR2hAxe);
 	
 	// ------ Inventory ------
-	
+	B_CreateAmbientInv (self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Normal14, BodyTex_N, ITAR_PIR_L_Addon);	  

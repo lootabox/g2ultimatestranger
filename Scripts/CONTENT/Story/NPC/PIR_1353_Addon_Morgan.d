@@ -19,7 +19,7 @@ INSTANCE PIR_1353_Addon_Morgan (Npc_Default)
 	
 	
 	// ------ Inventory ------
-	// Händler
+	B_CreateAmbientInv (self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_L_Tough_Santino, BodyTex_L, ITAR_PIR_M_Addon);	  

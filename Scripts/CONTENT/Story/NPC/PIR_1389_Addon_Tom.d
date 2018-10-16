@@ -18,8 +18,7 @@ instance PIR_1389_Addon_Tom (Npc_Default)
 	EquipItem (self, ItMw_ElBastardo);
 	
 	// ------ Inventory ------
-
-	B_CreateAmbientInv (self); 
+	B_CreateAmbientInv (self);
 	
 	// ------ visuals ------																		
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FIGHTER", Face_N_Normal19, BodyTex_N, ITAR_PIR_L_Addon);	

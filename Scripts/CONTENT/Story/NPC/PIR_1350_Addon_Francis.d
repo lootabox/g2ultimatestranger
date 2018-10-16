@@ -18,6 +18,7 @@ INSTANCE PIR_1350_Addon_Francis (Npc_Default)
 	EquipItem (self, ItMw_Schwert1);  
 	
 	// ------ Inventory ------
+	B_CreateAmbientInv (self);
 	CreateInvItems (self ,ITKE_Greg_ADDON_MIS,1);
 		
 	// ------ visuals ------																			

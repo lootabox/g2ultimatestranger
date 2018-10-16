@@ -306,7 +306,7 @@ instance DIA_Igaraz_ADD		(C_INFO)
 };
 func int DIA_Igaraz_ADD_Condition ()
 {	
-	if (Npc_GetDistToWP (self, "NW_TAVERNE_TROLLAREA_05") <= 3500) 
+	if ((Npc_GetDistToWP (self, "NW_TAVERNE_TROLLAREA_05") <= 3500) || (Npc_GetDistToWP (self, "NW_TROLLAREA_PATH_66") <= 3500))
 	&& (MIS_GOLEM == LOG_RUNNING) 
 	&& (Npc_IsDead (Magic_Golem) == FALSE)
 	&& (Npc_KnowsInfo (other,DIA_Igaraz_Stein) == FALSE)

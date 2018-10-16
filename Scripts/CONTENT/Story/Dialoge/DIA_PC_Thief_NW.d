@@ -501,6 +501,7 @@ FUNC VOID DIA_DiegoNW_CanYouTeach_Info()
 // ************************************************************
 
 //-----------------------
+var int DiegoNW_Merke_STR;
 var int DiegoNW_Merke_DEX;
 //-------------------------
 
@@ -528,15 +529,22 @@ FUNC VOID DIA_DiegoNW_Teach_Info()
 	AI_Output (self ,other,"DIA_DiegoNW_Teach_11_01"); //I can teach you to become more dexterous.
 	
 	DiegoNW_Merke_Dex = other.attribute[ATR_DEXTERITY];
+	DiegoNW_Merke_Str = other.attribute[ATR_STRENGTH];
 	
 	Info_ClearChoices	(DIA_DiegoNW_Teach);
 	Info_AddChoice		(DIA_DiegoNW_Teach, DIALOG_BACK, DIA_DiegoNW_Teach_BACK);
 	Info_AddChoice		(DIA_DiegoNW_Teach, B_BuildLearnString(PRINT_LearnDEX1, B_GetLearnCostAttribute(other, ATR_DEXTERITY))	,DIA_DiegoNW_TeachDEX_1);
 	Info_AddChoice		(DIA_DiegoNW_Teach, B_BuildLearnString(PRINT_LearnDEX5, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)	,DIA_DiegoNW_TeachDEX_5);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnSTR1, B_GetLearnCostAttribute(other, ATR_STRENGTH)),DIA_DiegoNW_TeachSTR_1);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnSTR5, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)	,DIA_DiegoNW_TeachSTR_5);
 };
 
 func void DIA_DiegoNW_Teach_BACK()
 {
+	if (DiegoNW_Merke_STR < other.attribute[ATR_STRENGTH])
+	{
+		AI_Output (self, other, "DIA_Addon_DiegoOw_Teach_11_03"); //(appraisingly) Good. Your strength has increased.
+	};
 	if (DiegoNW_Merke_DEX < other.attribute[ATR_DEXTERITY])
 	{
 		AI_Output (self, other, "DIA_DiegoNW_Teach_BACK_11_00"); //You've become more dexterous already. Keep it up!
@@ -553,6 +561,8 @@ func void DIA_DiegoNW_TeachDEX_1()
 	Info_AddChoice		(DIA_DiegoNW_Teach, DIALOG_BACK, DIA_DiegoNW_Teach_BACK);
 	Info_AddChoice		(DIA_DiegoNW_Teach, B_BuildLearnString(PRINT_LearnDEX1, B_GetLearnCostAttribute(other, ATR_DEXTERITY))	,DIA_DiegoNW_TeachDEX_1);
 	Info_AddChoice		(DIA_DiegoNW_Teach, B_BuildLearnString(PRINT_LearnDEX5, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)	,DIA_DiegoNW_TeachDEX_5);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnSTR1, B_GetLearnCostAttribute(other, ATR_STRENGTH)),DIA_DiegoNW_TeachSTR_1);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnSTR5, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)	,DIA_DiegoNW_TeachSTR_5);
 };
 
 // ------ 5 Geschick ------
@@ -564,6 +574,30 @@ func void DIA_DiegoNW_TeachDEX_5()
 	Info_AddChoice		(DIA_DiegoNW_Teach, DIALOG_BACK, DIA_DiegoNW_Teach_BACK);
 	Info_AddChoice		(DIA_DiegoNW_Teach, B_BuildLearnString(PRINT_LearnDEX1, B_GetLearnCostAttribute(other, ATR_DEXTERITY))	,DIA_DiegoNW_TeachDEX_1);
 	Info_AddChoice		(DIA_DiegoNW_Teach, B_BuildLearnString(PRINT_LearnDEX5, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)	,DIA_DiegoNW_TeachDEX_5);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnSTR1, B_GetLearnCostAttribute(other, ATR_STRENGTH)),DIA_DiegoNW_TeachSTR_1);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnSTR5, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)	,DIA_DiegoNW_TeachSTR_5);
+};
+func void DIA_DiegoNW_TeachSTR_1()
+{
+	B_TeachAttributePoints (self, other, ATR_STRENGTH, 1, T_MED);
+	
+	Info_ClearChoices   (DIA_DiegoNW_TEACH);
+	Info_AddChoice 		(DIA_DiegoNW_TEACH, DIALOG_BACK, DIA_DiegoNW_TEACH_BACK);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnDEX1, B_GetLearnCostAttribute(other, ATR_DEXTERITY)),DIA_DiegoNW_TeachDEX_1);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnDEX5, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)	,DIA_DiegoNW_TeachDEX_5);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnSTR1, B_GetLearnCostAttribute(other, ATR_STRENGTH)),DIA_DiegoNW_TeachSTR_1);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnSTR5, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)	,DIA_DiegoNW_TeachSTR_5);
+};
+func void DIA_DiegoNW_TeachSTR_5()
+{
+	B_TeachAttributePoints (self, other, ATR_STRENGTH, 5, T_MED);
+	
+	Info_ClearChoices   (DIA_DiegoNW_TEACH);
+	Info_AddChoice 		(DIA_DiegoNW_TEACH, DIALOG_BACK, DIA_DiegoNW_TEACH_BACK);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnDEX1, B_GetLearnCostAttribute(other, ATR_DEXTERITY)),DIA_DiegoNW_TeachDEX_1);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnDEX5, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)	,DIA_DiegoNW_TeachDEX_5);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnSTR1, B_GetLearnCostAttribute(other, ATR_STRENGTH)),DIA_DiegoNW_TeachSTR_1);
+	Info_AddChoice		(DIA_DiegoNW_TEACH, B_BuildLearnString(PRINT_LearnSTR5, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)	,DIA_DiegoNW_TeachSTR_5);
 };
 
 //######################################

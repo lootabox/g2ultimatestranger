@@ -9,7 +9,9 @@ Changed Buster to give reduced gold for each Shadowbeast Horn, but still way mor
 	Bug Fixes, Glitch Workarounds and Minor Improvements
 
 Added option to tell Opolos about Pedro's betrayal also after the chase quest is completed.
+Added option to ask Igaraz about the living rock, even after moving north from the tavern.
 Added a new colored texture for when Stone Guardians get hit and leave pebbles on the ground.
+Added possibility of telling Garond about Silvestro's mining site even if Diego has died.
 
 Changed black ore effect to end on using transformation spell.
 Changed blacksmith and alchemist to not drop steel blanks or lab water bottles.
@@ -20,6 +22,8 @@ Changed Girion not to count towards max ship crew, as there is no way to dismiss
 Changed Buster to buy Shadowbeast Horns, even if NH does not know how to remove them.
 Changed Gorax to wait for NH, if mercenary, at church gate to offer the task to kill Pedro.
 Changed Esteban's bodyguards go running to meet Fisk.
+Changed all living pirates to generate ambient inventory.
+Changed Diego to be able to teach strength in Khorinis.
 
 Fixed Brandon and Skip quests to cancel if they are killed.
 Fixed Kervo's quest fails if he is killed.

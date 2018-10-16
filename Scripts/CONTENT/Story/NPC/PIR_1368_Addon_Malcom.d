@@ -19,7 +19,7 @@ INSTANCE PIR_1368_Addon_Malcom (Npc_Default)
 	CreateInvItems (self, ItWr_TwoHStonePlate3_Addon, 1);	//Joly: dring lassen, wird abgefragt!							
 
 	// ------ Inventory ------
-	
+	B_CreateAmbientInv (self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Normal_Sly, BodyTex_N, ITAR_PIR_L_Addon);	  
