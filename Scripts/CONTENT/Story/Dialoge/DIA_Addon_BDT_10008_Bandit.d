@@ -71,6 +71,8 @@ FUNC INT DIA_Addon_10008_Bandit_Hi_Condition()
 	if (Npc_GetDistToNpc(other, Skinner) <= 600)
 	&& (!Npc_IsDead(Skinner))
 	&& (Skinner.aivar[AIV_TalkedToPlayer] == FALSE)
+	&& !Npc_IsInState(Skinner,ZS_Attack)
+	&& !Npc_KnowsInfo(other,DIA_Addon_Skinner_Hi)
 	{
 		return TRUE;
 	};

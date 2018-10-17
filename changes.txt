@@ -1,44 +1,53 @@
 
 
-	Notable Changes
+	Quest Changes
 
 Changed Kervo's quest to cancel in chapter 4, causing Kervo and Geppert to be killed by a Lurker instead of them disappearing.
 Changed Buster to give reduced gold for each Shadowbeast Horn, but still way more then regular merchants.
 
 
-	Bug Fixes, Glitch Workarounds and Minor Improvements
+	NPC Improvements and Changes
 
-Added option to tell Opolos about Pedro's betrayal also after the chase quest is completed.
-Added option to ask Igaraz about the living rock, even after moving north from the tavern.
-Added a new colored texture for when Stone Guardians get hit and leave pebbles on the ground.
-Added possibility of telling Garond about Silvestro's mining site even if Diego has died.
-
-Changed black ore effect to end on using transformation spell.
-Changed blacksmith and alchemist to not drop steel blanks or lab water bottles.
-Changed two dialogue options with Ramirez to only be available after he sees the thieves' signal.
-Changed skeletal monsters to not be able to bleed.
-Changed Swamp Golem blood from red to green.
-Changed Girion not to count towards max ship crew, as there is no way to dismiss him and his joining can anyway be avoided.
-Changed Buster to buy Shadowbeast Horns, even if NH does not know how to remove them.
-Changed Gorax to wait for NH, if mercenary, at church gate to offer the task to kill Pedro.
-Changed Esteban's bodyguards go running to meet Fisk.
-Changed all living pirates to generate ambient inventory.
-Changed Diego to be able to teach strength in Khorinis.
-
-Fixed Brandon and Skip quests to cancel if they are killed.
-Fixed Kervo's quest fails if he is killed.
 Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Hyglas, Jesper, Jergan, Karras, Lares, Parlan, Pyrokar, Ramirez, Raoul, Scatty.
-Fixed the inability to get the blood chalice quest from Cassia, if NH was accused of theft.
-Fixed Cassias quests to become obsolete if the paladins take care of the guild.
 Fixed XP award for pickpocketing Valentino, Salandril, Cavalorn, Dobar, Engor, Franco and Francis.
 Fixed XP award for recruiting Lares and Lester.
-Fixed all Goblins and Skeletons from creating additional weapons in their inventory.
-Fixed Mario being able to be recruited to a full ship crew.
-Fixed few addon armor material to metal from leather.
-Fixed possibility of looting magic runes from frozen corpses.
-Fixed Esteban turning to his guards when they were already dead.
 
-Removed option to pay Cassia for learning to pickpocket if it’s already learned.
-Removed option to ask Pedro about life in the monastery if NH is magician.
-Removed ability to get back Shadowbeast Horns from Buster.
-Removed ability to get back Almanac of the Possessed from Vatras.
+Changed all living pirates to generate ambient inventories.
+
+Angar has same weapon everywhere as in the Valley of Mines.
+Bandit 10008 warns NH not to wake up Skinner only if he has not already done so.
+Brandon quest cancels if he is killed.
+Buster buys Shadowbeast Horns, even if NH does not know how to remove them.
+Buster does not drop Shadowbeast Horns given to him.
+Cassia can give the Blood Chalice quest, even if NH was a wanted thief.
+Cassia cannot be paid for learning to pickpocket if it’s already learned.
+Cassias quests become obsolete if the paladins take care of the guild.
+Diego can teach strength in Khorinis.
+Diego cannot be led to Pedrakhan.
+Dragomir immediately equips his crossbow after receiving it.
+Esteban does not turn to his guards if they are dead.
+Esteban's bodyguards go running to meet Fisk.
+Garond can be told about Silvestro's mining site even if Diego has died.
+Girion does not count towards max ship crew.
+Gorax waits for NH at church gate to offer him the task to kill Pedro.
+Igaraz can be asked about the living rock, even after moving north from the tavern.
+Kervo's quest fails if he is killed.
+Mario cannot be recruited to a full ship crew.
+Opolos can be told about Pedro's betrayal also after the chase quest is completed.
+Pedro cannot be asked about life in the monastery if NH is magician.
+Ramirez shows two dialogue options only after he sees the thieves' signal.
+Skip quest cancels if he is killed.
+Vatras does not sell Almanacs of the Possessed given to him.
+
+
+	Random Improvements, Exploit Prevention and Bug Fixes
+
+Black Ore effect ends on using transformation scrolls.
+Changed few addon armor material to metal from leather.
+Goblins and Skeletons do not create additional weapons in their inventory.
+Magic Runes are removed from frozen corpses.
+Skeletal monsters do not bleed.
+Steel Blanks and Lab Water Bottles cannot be looted from anyone.
+Stone Guardians leave properly colored pebbles on ground when hit.
+Swamp Golem bleeds green.
+

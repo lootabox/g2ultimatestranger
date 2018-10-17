@@ -677,6 +677,11 @@ FUNC VOID DIA_Addon_ThiefOW_TooFar_Info()
 	{
 		AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_29"); //If we continue in this direction, we'll only end up at the orc barrier again.
 		AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_30"); //Let's go to the pass!
+	}
+	else if (C_DiegoTooFar(1000) == LOC_ROCK)
+	{
+		AI_Output(self,other,"DIA_Addon_Diego_TooFar_11_09"); //If we keep walking up the mountain, we're sure to meet a dragon.
+		AI_Output(self,other,"DIA_Addon_Diego_TooFar_11_08"); //Let's not go in there.
 	};
 
 	Diego_TooFarComment = TRUE;
