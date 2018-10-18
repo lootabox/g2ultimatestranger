@@ -44,14 +44,13 @@
 	const int MENU_SLIDER_YPLUS			= 0;
 	
 	const int MENU_CHOICE_DX			= 2000;
-	const int MENU_CHOICE_DY			= 350;	
+	const int MENU_CHOICE_DY			= 350;
 	const int MENU_CHOICE_YPLUS			= 120;
 	
-	const int MENU_TITLE_Y				= 1200;
-	const int MENU_START_Y				= 2400;
-	const int MENU_START_SOUND_Y		= 1800;
-	const int MENU_BACK_Y				= 6500;	
-	const int MENU_DY					= 650;
+	const int MENU_TITLE_Y				= 600;
+	const int MENU_START_Y				= 1400;
+	const int MENU_BACK_Y				= 7100;
+	const int MENU_DY					= 550;
 	
 	const int MENU_INFO_X				= 300;
 	const int MENU_INFO_Y				= 7780;

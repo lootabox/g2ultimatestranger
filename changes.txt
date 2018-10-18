@@ -1,4 +1,16 @@
 
+	Menu Changes
+
+Menu options are more clearly categorized:
+Game: Gameplay settings.
+Audio: Music, speech and sound effect settings.
+Video: Graphics card, resolution, color adjustment and video settings.
+Visual: View distance, details and user interface settings.
+Effect: Toggle visual effects on/off.
+
+Settings have been moved around to proper categories and following new settings are available:
+Ambient subtitles, Blood detail, Inventory columns, Item effects, Lock scrambling, Mouse smoothing, Play intro, Turning speed, Video scaling, Weapon trails, Window animations.
+
 
 	Quest Changes
 

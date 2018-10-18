@@ -17,28 +17,31 @@ INSTANCE MENU_OPT_AUDIO(C_MENU_DEF)
 	items[5]		= "MENUITEM_AUDIO_MUSIC";
 	items[6]		= "MENUITEM_AUDIO_MUSIC_CHOICE";
 
-	items[7]		= "MENUITEM_AUDIO_PROVIDER";
-	items[8]		= "MENUITEM_AUDIO_PROVIDER_CHOICE";
+	items[7]		= "MENUITEM_AUDIO_SUB_TITLES";
+	items[8]		= "MENUITEM_AUDIO_SUB_TITLES_CHOICE";
 
-	items[9]		= "MENUITEM_AUDIO_SPEEKER";
-	items[10]		= "MENUITEM_AUDIO_SPEEKER_CHOICE";
+	items[9]		= "MENUITEM_AUDIO_SUB_TITLES2";
+	items[10]		= "MENUITEM_AUDIO_SUB_TITLES2_CHOICE";
 
-	items[11]		= "MENUITEM_AUDIO_REVERB";
-	items[12]		= "MENUITEM_AUDIO_REVERB_CHOICE";
+	items[11]		= "MENUITEM_AUDIO_PROVIDER";
+	items[12]		= "MENUITEM_AUDIO_PROVIDER_CHOICE";
 
-	items[13]		= "MENUITEM_AUDIO_REVERB_SPEECH";
-	items[14]		= "MENUITEM_AUDIO_REVERB_SPEECH_CHOICE";
+	items[13]		= "MENUITEM_AUDIO_SPEEKER";
+	items[14]		= "MENUITEM_AUDIO_SPEEKER_CHOICE";
 
-	items[15]		= "MENUITEM_AUDIO_SAMPLERATE";
-	items[16]		= "MENUITEM_AUDIO_SAMPLERATE_CHOICE";
+	items[15]		= "MENUITEM_AUDIO_REVERB";
+	items[16]		= "MENUITEM_AUDIO_REVERB_CHOICE";
 
-	items[17]		= "MENUITEM_AUDIO_BACK";
+	items[17]		= "MENUITEM_AUDIO_REVERB_SPEECH";
+	items[18]		= "MENUITEM_AUDIO_REVERB_SPEECH_CHOICE";
+
+	items[19]		= "MENUITEM_AUDIO_SAMPLERATE";
+	items[20]		= "MENUITEM_AUDIO_SAMPLERATE_CHOICE";
+
+	items[21]		= "MENUITEM_AUDIO_BACK";
 
 	flags = flags | MENU_SHOW_INFO;
 };
-
-const int MENU_SOUND_DY = 550;
-
 
 INSTANCE MENUITEM_AUDIO_HEADLINE(C_MENU_ITEM_DEF)
 {
@@ -62,10 +65,10 @@ INSTANCE MENUITEM_AUDIO_SFXVOL(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Sfx volume";
-	text[1]		= "Sound effects and speech volume"; // Kommentar
+	text[1]		= "Select effect and speech volume."; // Kommentar
 
 	// Position und Dimension
-	posx		= 1000;		posy		= MENU_START_SOUND_Y + MENU_SOUND_DY*0;
+	posx		= 1000;		posy		= MENU_START_Y + MENU_DY*0;
 	dimx		= 3400;		dimy		= 750;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;
@@ -79,7 +82,7 @@ INSTANCE MENUITEM_AUDIO_SFXVOL_SLIDER(C_MENU_ITEM_DEF)
 	backPic		= MENU_SLIDER_BACK_PIC;
 	type		= MENU_ITEM_SLIDER;
 	// Position und Dimension
-	posx		= 4300;		posy		= MENU_START_SOUND_Y + MENU_SOUND_DY*0;
+	posx		= 4500;		posy		= MENU_START_Y + MENU_DY*0;
 	dimx = MENU_SLIDER_DX; dimy	= MENU_SLIDER_DY;
 	// Aktionen
 	onChgSetOption													= "soundVolume";
@@ -98,10 +101,10 @@ INSTANCE MENUITEM_AUDIO_MUSICVOL(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Music volume";
-	text[1]		= "Background music volume"; // Kommentar
+	text[1]		= "Select background music volume."; // Kommentar
 
 	// Position und Dimension
-	posx		= 1000;		posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*1;
+	posx		= 1000;		posy		=	MENU_START_Y + MENU_DY*1;
 	dimx		= 3400;		dimy		=	750;
 	// Aktionen
 	onSelAction[0]  =	SEL_ACTION_UNDEF;
@@ -114,7 +117,7 @@ INSTANCE MENUITEM_AUDIO_MUSICVOL_SLIDER(C_MENU_ITEM_DEF)
 	backPic		= MENU_SLIDER_BACK_PIC;
 	type		= MENU_ITEM_SLIDER;
 	// Position und Dimension
-	posx		= 4300;		posy		= 	MENU_START_SOUND_Y + MENU_SOUND_DY*1;
+	posx		= 4500;		posy		= 	MENU_START_Y + MENU_DY*1;
 	dimx = MENU_SLIDER_DX; dimy	= MENU_SLIDER_DY;
 	// Aktionen
 	onChgSetOption													= "musicVolume";
@@ -137,7 +140,7 @@ instance MENUITEM_AUDIO_MUSIC(C_MENU_ITEM_DEF)
 	text[1]		= "Toggle background music on/off."; // Kommentar
 
 	// Position und Dimension
-	posx		=	1000;	posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*2;
+	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*2;
 	dimx		=	3000;	dimy		=	750;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;
@@ -153,7 +156,7 @@ INSTANCE MENUITEM_AUDIO_MUSIC_CHOICE(C_MENU_ITEM_DEF)
 	text[0]		=   "off|on";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension
-	posx		= 4300;		posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*2 + MENU_CHOICE_YPLUS;
+	posx		= 4500;		posy		=	MENU_START_Y + MENU_DY*2 + MENU_CHOICE_YPLUS;
 	dimx = MENU_SLIDER_DX;dimy = MENU_CHOICE_DY;
 	// Aktionen
 	onChgSetOption													= "musicEnabled";
@@ -164,24 +167,79 @@ INSTANCE MENUITEM_AUDIO_MUSIC_CHOICE(C_MENU_ITEM_DEF)
 };
 
 
-
-
 //
-// Provider
+// Subtitles
 //
 
 
 
+instance MENUITEM_AUDIO_SUB_TITLES(C_MENU_ITEM_DEF)
+{
+	backpic = MENU_ITEM_BACK_PIC;
+	text[0] = "Subtitles";
+	text[1] = "Toggle dialog subtitles on/off.";
+	posx = 1000;
+	posy = MENU_START_Y + (MENU_DY * 3);
+	dimx = 4000;
+	dimy = 750;
+	onselaction[0] = SEL_ACTION_UNDEF;
+	flags = flags | IT_EFFECTS_NEXT;
+};
+
+instance MENUITEM_AUDIO_SUB_TITLES_CHOICE(C_MENU_ITEM_DEF)
+{
+	backpic = MENU_CHOICE_BACK_PIC;
+	type = MENU_ITEM_CHOICEBOX;
+	text[0] = "off|on";
+	fontname = MENU_FONT_SMALL;
+	posx = 4500;
+	posy = (MENU_START_Y + (MENU_DY * 3)) + MENU_CHOICE_YPLUS;
+	dimx = MENU_SLIDER_DX;
+	dimy = MENU_CHOICE_DY;
+	onchgsetoption = "subTitles";
+	onchgsetoptionsection = "GAME";
+	flags = flags & ~IT_SELECTABLE;
+	flags = flags | IT_TXT_CENTER;
+};
+
+instance MENUITEM_AUDIO_SUB_TITLES2(C_MENU_ITEM_DEF)
+{
+	backpic = MENU_ITEM_BACK_PIC;
+	text[0] = "Ambient subtitles";
+	text[1] = "Toggle subtitles outside dialogs on/off.";
+	posx = 1000;
+	posy = MENU_START_Y + (MENU_DY * 4);
+	dimx = 4000;
+	dimy = 750;
+	onselaction[0] = SEL_ACTION_UNDEF;
+	flags = flags | IT_EFFECTS_NEXT;
+};
+
+instance MENUITEM_AUDIO_SUB_TITLES2_CHOICE(C_MENU_ITEM_DEF)
+{
+	backpic = MENU_CHOICE_BACK_PIC;
+	type = MENU_ITEM_CHOICEBOX;
+	text[0] = "off|on";
+	fontname = MENU_FONT_SMALL;
+	posx = 4500;
+	posy = (MENU_START_Y + (MENU_DY * 4)) + MENU_CHOICE_YPLUS;
+	dimx = MENU_SLIDER_DX;
+	dimy = MENU_CHOICE_DY;
+	onchgsetoption = "subTitlesNoise";
+	onchgsetoptionsection = "GAME";
+	flags = flags & ~IT_SELECTABLE;
+	flags = flags | IT_TXT_CENTER;
+};
 
 instance MENUITEM_AUDIO_PROVIDER(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Sound provider";
-	text[1]		= "You need to restart to make changes take effect."; // Kommentar
+	text[1]		= "Select sound provider, restart required."; // Kommentar
 
 	// Position und Dimension
-	posx		=	1000;	posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*3;
-	dimx		=	3000;	dimy		=	750;
+	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*5;
+	dimx		=	3400;	dimy		=	750;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;
 	// Weitere Einstellungen
@@ -195,7 +253,7 @@ instance MENUITEM_AUDIO_PROVIDER_CHOICE(C_MENU_ITEM_DEF)
 	text[0]		=   "1|2|3|4|5";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension
-	posx		= 4300;		posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*3 + MENU_CHOICE_YPLUS;
+	posx		= 4500;		posy		=	MENU_START_Y + MENU_DY*5 + MENU_CHOICE_YPLUS;
 	dimx 		= 3000;		dimy = MENU_CHOICE_DY;
 	// Aktionen
 	onChgSetOption													= "soundProviderIndex";
@@ -210,10 +268,10 @@ instance MENUITEM_AUDIO_SPEEKER(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Speakers";
-	text[1]		= ""; // Kommentar
+	text[1]		= "Select speaker configuration."; // Kommentar
 
 	// Position und Dimension
-	posx		=	1000;	posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*4;
+	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*6;
 	dimx		=	3000;	dimy		=	750;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;
@@ -229,7 +287,7 @@ instance MENUITEM_AUDIO_SPEEKER_CHOICE(C_MENU_ITEM_DEF)
 	text[0]		=   "2 speakers|headphones|surround|4 speakers|5.1 speakers|7.1 speakers";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension
-	posx		= 4300;		posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*4 + MENU_CHOICE_YPLUS;
+	posx		= 4500;		posy		=	MENU_START_Y + MENU_DY*6 + MENU_CHOICE_YPLUS;
 	dimx 		= 3000;		dimy = MENU_CHOICE_DY;
 	// Aktionen
 	onChgSetOption													= "soundSpeakerIndex";
@@ -243,10 +301,10 @@ instance MENUITEM_AUDIO_REVERB(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Env. reverb";
-	text[1]		= "Environmental reverb effects in caves, etc."; // Kommentar
+	text[1]		= "Toggle environmental reverb on/off, requires restart."; // Kommentar
 
 	// Position und Dimension
-	posx		=	1000;	posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*5;
+	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*7;
 	dimx		=	3000;	dimy		=	750;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;
@@ -261,7 +319,7 @@ instance MENUITEM_AUDIO_REVERB_CHOICE(C_MENU_ITEM_DEF)
 	text[0]		=   "off|on";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension
-	posx		= 4300;		posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*5 + MENU_CHOICE_YPLUS;
+	posx		= 4500;		posy		=	MENU_START_Y + MENU_DY*7 + MENU_CHOICE_YPLUS;
 	dimx = MENU_CHOICE_DX;dimy = MENU_CHOICE_DY;
 	// Aktionen
 	onChgSetOption												= "soundUseReverb";
@@ -276,10 +334,10 @@ instance MENUITEM_AUDIO_REVERB_SPEECH(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Speech reverb";
-	text[1]		= "Reverb effect on speech.";
+	text[1]		= "Select reverb effect on speech.";
 
 	// Position und Dimension
-	posx		=	1000;	posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*6;
+	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*8;
 	dimx		=	3000;	dimy		=	750;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;
@@ -294,8 +352,8 @@ instance MENUITEM_AUDIO_REVERB_SPEECH_CHOICE(C_MENU_ITEM_DEF)
 	text[0]		=   "none|medium|full";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension
-	posx		= 4300;		posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*6 + MENU_CHOICE_YPLUS;
-	dimx 		= MENU_SLIDER_DX;		dimy = MENU_CHOICE_DY;
+	posx		= 4500;		posy		=	MENU_START_Y + MENU_DY*8 + MENU_CHOICE_YPLUS;
+	dimx 		= MENU_CHOICE_DX;		dimy = MENU_CHOICE_DY;
 	// Aktionen
 	onChgSetOption													= "useSpeechReverbLevel";
 	onChgSetOptionSection 											= "GAME";
@@ -310,10 +368,10 @@ instance MENUITEM_AUDIO_SAMPLERATE(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Sample rate";
-	text[1]		= "you need to restart to make changes take effect."; // Kommentar
+	text[1]		= "Select sound sampling rate, requires restart."; // Kommentar
 
 	// Position und Dimension
-	posx		=	1000;	posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*7;
+	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*9;
 	dimx		=	3000;	dimy		=	750;
 	// Aktionen
 	onSelAction[0]  = SEL_ACTION_UNDEF;
@@ -329,7 +387,7 @@ instance MENUITEM_AUDIO_SAMPLERATE_CHOICE(C_MENU_ITEM_DEF)
 	text[0]		=   "22 khz|44 khz";
 	fontName	= 	MENU_FONT_SMALL;
 	// Position und Dimension
-	posx		= 4300;		posy		=	MENU_START_SOUND_Y + MENU_SOUND_DY*7 + MENU_CHOICE_YPLUS;
+	posx		= 4500;		posy		=	MENU_START_Y + MENU_DY*9 + MENU_CHOICE_YPLUS;
 	dimx = MENU_CHOICE_DX;dimy = MENU_CHOICE_DY;
 	// Aktionen
 	onChgSetOption													= "soundSampleRateIndex";
@@ -345,7 +403,7 @@ INSTANCE MENUITEM_AUDIO_BACK(C_MENU_ITEM_DEF)
 	text[0]		=	"BACK";
 	// Position und Dimension
 	posx		=	1000;		posy		=	MENU_BACK_Y;
-	dimx		=	6192;		dimy		=	MENU_SOUND_DY;
+	dimx		=	6192;		dimy		=	MENU_DY;
 	// Aktionen
 	onSelAction[0]	= 	SEL_ACTION_BACK;
 
