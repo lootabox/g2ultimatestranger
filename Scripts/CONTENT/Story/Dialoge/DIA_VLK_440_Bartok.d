@@ -571,6 +571,7 @@ FUNC VOID DIA_Bartok_Angekommen_Info()
 	AI_Output (self ,other,"DIA_Bartok_Angekommen_04_04"); //You can sell the skins to Bosper.
 	
 	Bartok_Ende = TRUE;
+	B_GivePlayerXP(XP_Bartok_Deal);
 	AI_StopProcessInfos (self);
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine (self, "START");

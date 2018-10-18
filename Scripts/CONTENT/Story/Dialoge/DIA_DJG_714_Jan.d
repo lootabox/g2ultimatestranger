@@ -613,11 +613,12 @@ func void DIA_Jan_DJG_ARMOR_M_Info ()
 {	
 	AI_Output	(other,self ,"DIA_Jan_DJG_ARMOR_M_15_00"); //I want to buy the armor.
 	
-	if (Npc_HasItems (other,itmi_Gold) >= 12000)
+	if (Npc_HasItems (other,itmi_Gold) >= VALUE_ITAR_DJG_M)
 	{
 		AI_Output 	(self ,other,"DIA_Jan_DJG_ARMOR_M_10_01"); //You can see that it's worth every gold piece.
 		
-		B_GiveInvItems (other,self,ItMi_Gold,12000);
+		B_GiveInvItems (other,self,ItMi_Gold,VALUE_ITAR_DJG_M);
+		Npc_RemoveInvItems(self,ItMi_Gold,VALUE_ITAR_DJG_M);
 		CreateInvItems (self,ITAR_DJG_M,1);
 		B_GiveInvItems (self,other,ITAR_DJG_M,1);
 		

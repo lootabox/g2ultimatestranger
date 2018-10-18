@@ -165,24 +165,7 @@ FUNC INT PC_Goldhacken_Addon_Hour_Condition ()
 };
 var int GoldCounter;
 FUNC VOID PC_Goldhacken_Addon_Hour_Info()
-{
-
-	//---------- Learning by doing  10 PKT---------
-	Learn_by_doing = (Learn_by_doing +1);
-	
-	if (Learn_by_doing == 10)
-	{
-		B_Upgrade_Hero_HackChance (2);
-	}
-	else if (Learn_by_doing == 15)
-	{
-		B_Upgrade_Hero_HackChance (3);
-	}	
-	else if (Learn_by_doing == 20)
-	{
-		B_Upgrade_Hero_HackChance (5);
-	};
-	
+{	
 	//----- EIGENTLICHES HACKEN -------------
 	var int CurrentChance;
 	CurrentChance = Hlp_Random (100);
@@ -194,8 +177,24 @@ FUNC VOID PC_Goldhacken_Addon_Hour_Info()
 	{
 		if (CurrentChance <= Hero_HackChance)
 		{
-			//----Gold verteilen-----------------------
 			
+			//---------- Learning by doing  10 PKT---------
+			Learn_by_doing = (Learn_by_doing +1);
+			
+			if (Learn_by_doing == 10)
+			{
+				B_Upgrade_Hero_HackChance (2);
+			}
+			else if (Learn_by_doing == 15)
+			{
+				B_Upgrade_Hero_HackChance (3);
+			}	
+			else if (Learn_by_doing == 20)
+			{
+				B_Upgrade_Hero_HackChance (5);
+			};
+
+			//----Gold verteilen-----------------------
 			if (GoldCounter >= 20)
 			&& (MultiNugget >= 8)
 			{

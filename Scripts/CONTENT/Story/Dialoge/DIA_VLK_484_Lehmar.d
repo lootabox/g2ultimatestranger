@@ -35,7 +35,10 @@ instance DIA_Lehmar_ENTSCHULDIGUNG		(C_INFO)
 
 func int DIA_Lehmar_ENTSCHULDIGUNG_Condition ()
 {
-	return TRUE;
+	if(self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_NONE)
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Lehmar_ENTSCHULDIGUNG_Info ()
@@ -63,8 +66,9 @@ var int DIA_Lehmar_GELDLEIHEN_noPerm;
 //----------------------------------------
 func int DIA_Lehmar_GELDLEIHEN_Condition ()
 {
-	if 	((Npc_KnowsInfo(other, DIA_Lehmar_ENTSCHULDIGUNG))
-	&&  (DIA_Lehmar_GELDLEIHEN_noPerm == FALSE))
+	if ((Npc_KnowsInfo(other, DIA_Lehmar_ENTSCHULDIGUNG))
+	&& (DIA_Lehmar_GELDLEIHEN_noPerm == FALSE))
+	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_NONE)
 	{
 		return TRUE;
 	};
@@ -214,6 +218,10 @@ func void DIA_Lehmar_GELDEINTREIBEN_kannstmich ()
 	AI_StopProcessInfos (self);		
 	
 	B_Attack (self, other, AR_NONE, 1);
+	if(Hlp_IsValidNpc(Meldor) && !C_NpcIsDown(Meldor))
+	{
+		B_Attack(Meldor,other,AR_NONE,1);
+	};
 };
 
 func void DIA_Lehmar_GELDEINTREIBEN_schuldenzahlen ()
@@ -255,6 +263,10 @@ func void DIA_Lehmar_GELDEINTREIBEN_schuldenzahlen ()
 		AI_StopProcessInfos (self);		
 		
 		B_Attack (self, other, AR_NONE, 1);
+		if(Hlp_IsValidNpc(Meldor) && !C_NpcIsDown(Meldor))
+		{
+			B_Attack(Meldor,other,AR_NONE,1);
+		};
 	};
 };
 ///////////////////////////////////////////////////////////////////////
@@ -365,7 +377,7 @@ func void DIA_Lehmar_NOCHMALGELD_Info ()
 // ************************************************************
 // 			  				PICK POCKET
 // ************************************************************
-
+var int Lehmar_StealBook_Day;
 INSTANCE DIA_Lehmar_PICKPOCKET (C_INFO)
 {
 	npc			= VLK_484_Lehmar;
@@ -402,6 +414,7 @@ func void DIA_Lehmar_PICKPOCKET_DoIt()
 		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
 		B_GiveThiefXP ();
 		Info_ClearChoices (DIA_Lehmar_PICKPOCKET);
+		Lehmar_StealBook_Day = Wld_GetDay();
 	}
 	else
 	{
@@ -434,6 +447,7 @@ FUNC INT DIA_Lehmar_BuchWeg_Condition()
 {
 	if (self.aivar[AIV_DefeatedByPlayer] == FALSE)
 	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == TRUE)
+	&& (Lehmar_StealBook_Day < Wld_GetDay())
 	{
 		return TRUE;
 	};

@@ -274,6 +274,7 @@ FUNC VOID DIA_Nagur_Success_Info()
 	AI_Output (other, self, "DIA_Nagur_Success_15_00");//I brought the package.
 	AI_Output (self, other, "DIA_Nagur_Success_08_01");//Well done. I'll see to it that I sell it. Come back tomorrow.
 	
+	B_GivePlayerXP(XP_NagurOnlyGaveMoney);
 	B_LogEntry (TOPIC_Nagur,   "Nagur has got the delivery. He'll pay me my gold tomorrow.");
 	
 	AI_StopProcessInfos (self);
@@ -441,6 +442,7 @@ FUNC VOID DIA_Nagur_Sign_Info()
 	AI_PlayAni (other,"T_YES");
 	AI_Output (self, other, "DIA_Nagur_Sign_08_00");//So you did it. Now you know who my employers are.
 	AI_Output (self, other, "DIA_Nagur_Sign_08_01");//Stick to what Cassia tells you - we don't care who you are otherwise - you're one of us, and that's all that counts.
+	B_GivePlayerXP(XP_NagurGotThief);
 	AI_StopProcessInfos (self);
 };
 ///////////////////////////////////////////////////////////////////////

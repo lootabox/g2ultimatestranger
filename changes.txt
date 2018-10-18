@@ -11,6 +11,8 @@ Effect: Toggle visual effects on/off.
 Settings have been moved around to proper categories and following new settings are available:
 Ambient subtitles, Blood detail, Inventory columns, Item effects, Lock scrambling, Mouse smoothing, Play intro, Turning speed, Video scaling, Weapon trails, Window animations.
 
+Default menu option when not ingame is load game instead of new game.
+
 
 	Quest Changes
 
@@ -28,6 +30,7 @@ Changed all living pirates to generate ambient inventories.
 
 Angar has same weapon everywhere as in the Valley of Mines.
 Bandit 10008 warns NH not to wake up Skinner only if he has not already done so.
+Bartok now grants previously omitted XP bonus for finishing the hunt with him.
 Brandon quest cancels if he is killed.
 Buster buys Shadowbeast Horns, even if NH does not know how to remove them.
 Buster does not drop Shadowbeast Horns given to him.
@@ -43,12 +46,18 @@ Garond can be told about Silvestro's mining site even if Diego has died.
 Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
 Igaraz can be asked about the living rock, even after moving north from the tavern.
+Jan does not drop the gold used to buy the Medium Dragon Hunter's Armor.
 Kervo's quest fails if he is killed.
+Lehmar does not lend money to NH if he attacked him, unless Oblivion is cast on him.
+Lehmar does not immediately notice the theft of his ledger.
 Mario cannot be recruited to a full ship crew.
+Meldor helps Lehmar if he decides to attack the NH.
+Nagur now grants previously omitted XP bonus for showing thieves' signal and returning Baltram's shipment.
 Opolos can be told about Pedro's betrayal also after the chase quest is completed.
 Pedro cannot be asked about life in the monastery if NH is magician.
 Ramirez shows two dialogue options only after he sees the thieves' signal.
 Skip quest cancels if he is killed.
+Thekla now grants previously omitted XP bonus for defeating Bullco.
 Vatras does not sell Almanacs of the Possessed given to him.
 
 
@@ -57,6 +66,7 @@ Vatras does not sell Almanacs of the Possessed given to him.
 Black Ore effect ends on using transformation scrolls.
 Changed few addon armor material to metal from leather.
 Goblins and Skeletons do not create additional weapons in their inventory.
+Gold mining skill does not improve by mining empty veins.
 Magic Runes are removed from frozen corpses.
 Skeletal monsters do not bleed.
 Steel Blanks and Lab Water Bottles cannot be looted from anyone.

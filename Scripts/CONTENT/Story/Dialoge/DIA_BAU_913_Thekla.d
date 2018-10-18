@@ -310,6 +310,7 @@ func void DIA_Thekla_AfterFight_Info ()
 	{
 		AI_Output (self, other, "DIA_Thekla_AfterFight_17_00"); //You really let Bullco have it, honey.
 		AI_Output (self, other, "DIA_Thekla_AfterFight_17_01"); //Must have been an exhausting job to thrash that fat swine.
+		B_GivePlayerXP(XP_Thekla_BlameSylvio);
 	}
 	else //Sylvio oder Bullco gewonnen
 	{
