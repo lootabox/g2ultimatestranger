@@ -2520,6 +2520,7 @@ func int DIA_Vatras_KnowWhereEnemy_Condition ()
 		return TRUE;
 	};
 };
+var int SCToldVatrasHeKnowWhereEnemy;
 func void DIA_Vatras_KnowWhereEnemy_Info ()
 {
 	AI_Output			(other, self, "DIA_Vatras_KnowWhereEnemy_15_00"); //I know where our enemy is located.
@@ -2527,10 +2528,13 @@ func void DIA_Vatras_KnowWhereEnemy_Info ()
 	AI_Output			(other, self, "DIA_Vatras_KnowWhereEnemy_15_02"); //You want to accompany me?
 	AI_Output			(self, other, "DIA_Vatras_KnowWhereEnemy_05_03"); //I have thought long about this and have never been so sure of my business, my friend.
 		
-	Log_CreateTopic (TOPIC_Crew, LOG_MISSION);                                                                                        	                    	
-	Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING); 	                                                                                  	                    	
-	B_LogEntry (TOPIC_Crew,"Surprisingly, Vatras has offered to accompany me on my journey. A man of his skill and experience could be very valuable to me.");	
-		
+	if(SCToldVatrasHeKnowWhereEnemy == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Crew, LOG_MISSION);                                                                                        	                    	
+		Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING); 	                                                                                  	                    	
+		B_LogEntry (TOPIC_Crew,"Surprisingly, Vatras has offered to accompany me on my journey. A man of his skill and experience could be very valuable to me.");	
+		SCToldVatrasHeKnowWhereEnemy = TRUE;
+	};
 	if (crewmember_count >= Max_Crew)
 	{
 		AI_Output			(other,self , "DIA_Vatras_KnowWhereEnemy_15_04"); //I've got too many on my list already. I'm afraid there will be no more room for you.

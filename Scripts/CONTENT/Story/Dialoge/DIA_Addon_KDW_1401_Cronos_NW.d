@@ -138,13 +138,11 @@ func void DIA_Addon_Cronos_NW_Trade_Info ()
 	if (DIA_Addon_Cronos_NW_Trade_OneTime==FALSE)
 	{
 		AI_Output	(self, other, "DIA_Addon_Cronos_NW_Trade_04_01"); //Why not? If I remember correctly, we've already done business.
-		
 		DIA_Addon_Cronos_NW_Trade_OneTime = TRUE;
+		Log_CreateTopic (Topic_OutTrader,LOG_NOTE);
+		B_LogEntry (Topic_OutTrader, LogText_Addon_CronosTrade);
 	};
 
 	AI_Output	(self, other, "DIA_Addon_Cronos_NW_Trade_04_02"); //Tell me what you need.
-
-	Log_CreateTopic (Topic_OutTrader,LOG_NOTE);
-	B_LogEntry (Topic_OutTrader, LogText_Addon_CronosTrade);
 
 };

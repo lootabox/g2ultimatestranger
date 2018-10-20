@@ -287,11 +287,13 @@ FUNC VOID DIA_Alrik_WannaFight_Info()
 			AI_Output (self ,other,"DIA_Alrik_WannaFight_09_03"); //I had to sell my sword a few days ago.
 			AI_Output (self ,other,"DIA_Alrik_WannaFight_09_04"); //With that baby, I'm unbeatable! If you get it back for me, I'll take you on again!
 			
-			Alrik_VomSchwertErzaehlt = TRUE;
-			
-			Log_CreateTopic (TOPIC_AlrikSchwert,LOG_MISSION);
-			Log_SetTopicStatus (TOPIC_AlrikSchwert,LOG_RUNNING);
-			B_LogEntry (TOPIC_AlrikSchwert,"Alrik sold his sword to the merchant Jora. He'll only fight me if I bring it back to him.");
+			if (MIS_Alrik_Sword < LOG_RUNNING) {
+				MIS_Alrik_Sword = LOG_RUNNING;
+				Alrik_VomSchwertErzaehlt = TRUE;
+				Log_CreateTopic (TOPIC_AlrikSchwert,LOG_MISSION);
+				Log_SetTopicStatus (TOPIC_AlrikSchwert,LOG_RUNNING);
+				B_LogEntry (TOPIC_AlrikSchwert,"Alrik sold his sword to the merchant Jora. He'll only fight me if I bring it back to him.");
+			};
 		};
 	}
 	
@@ -588,8 +590,6 @@ FUNC VOID DIA_Alrik_WerSchwert_Info()
 	AI_Output (self ,other,"DIA_Alrik_WerSchwert_09_02"); //The guy's called Jora. The torches and the bit of meat that he gave me are long used up.
 	AI_Output (other,self ,"DIA_Alrik_WerSchwert_15_03"); //He isn't likely to give me the sword for nothing ...
 	AI_Output (self ,other,"DIA_Alrik_WerSchwert_09_04"); //It's an old sword. He won't want much for it. Just think of the money as an extra stake for the fight. (grins)
-		
-	MIS_Alrik_Sword = LOG_RUNNING;
 };
 
 // **************************************
@@ -721,10 +721,12 @@ FUNC VOID DIA_Alrik_Ausbilden_Info()
 			AI_Output (self ,other,"DIA_Alrik_Ausbilden_09_03"); //As long as you have the necessary experience - sure.
 		};
 		
-		
 		Alrik_Teach1H = TRUE;
-		Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
-		B_LogEntry (Topic_CityTeacher,"Alrik can train me to fight with one-handed weapons. He hangs round behind the storehouse in the harbor district.");
+		if(DIA_Kardif_Lernen_permanent == FALSE)
+		{
+			Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
+			B_LogEntry (Topic_CityTeacher,"Alrik can train me to fight with one-handed weapons. He hangs round behind the storehouse in the harbor district.");
+		};
 	};
 };
 

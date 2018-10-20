@@ -112,9 +112,12 @@ func void DIA_Mil_310_Stadtwache_FirstWarn_Info()
 			AI_Output (self, other,"DIA_Mil_310_Stadtwache_FirstWarn_07_10"); //As ragged as you look, you're sure to cause nothing but trouble here!
 			AI_Output (self, other,"DIA_Mil_310_Stadtwache_FirstWarn_07_11"); //We've got enough rabble in the city. We have no use for people without money.
 			
-			Log_CreateTopic (TOPIC_City,LOG_MISSION);
-			Log_SetTopicStatus (TOPIC_City,LOG_RUNNING);
-			B_LogEntry (TOPIC_City,"For the gate guards to let me into the city, I have to look like I've got money. Either that, or I must find another way.");
+			if(self.aivar[AIV_Guardpassage_Status] == GP_NONE)
+			{
+				Log_CreateTopic (TOPIC_City,LOG_MISSION);
+				Log_SetTopicStatus (TOPIC_City,LOG_RUNNING);
+				B_LogEntry (TOPIC_City,"For the gate guards to let me into the city, I have to look like I've got money. Either that, or I must find another way.");
+			};
 		}
  	 	 
  		// ------ als Bauer ------		

@@ -106,7 +106,7 @@ instance DIA_Gaan_WASMACHSTDU		(C_INFO)
 func int DIA_Gaan_WASMACHSTDU_Condition ()
 {
 	if (Npc_KnowsInfo(other, DIA_Gaan_HALLO))
-	&& (self.aivar[AIV_TalkedToPlayer] == FALSE)
+	//&& (self.aivar[AIV_TalkedToPlayer] == FALSE)
 	&& (RangerMeetingRunning != LOG_SUCCESS)
 	{
 		return TRUE;
@@ -387,9 +387,11 @@ func int DIA_Gaan_MONSTERTOT_Condition ()
 {
 	if 	((Npc_IsDead(Gaans_Snapper))== TRUE) 
 	&& 	(RangerMeetingRunning != LOG_RUNNING)
-			{
-					return TRUE;
-			};
+	&& 	(MIS_Gaan_Snapper != LOG_SUCCESS)
+	&& 	(Npc_GetDistToWP(self,"NW_FARM3_GAAN") < 2000)
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Gaan_MONSTERTOT_Info ()
@@ -399,12 +401,12 @@ func void DIA_Gaan_MONSTERTOT_Info ()
 	
 
 	if (MIS_Gaan_Deal == LOG_RUNNING)
-		{
-			AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_02");	//Here's the money I promised you.
+	{
+		AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_02");	//Here's the money I promised you.
 
-			CreateInvItems (self, ItMi_Gold, 30);									
-			B_GiveInvItems (self, other, ItMi_Gold, 30);					
-		};
+		CreateInvItems (self, ItMi_Gold, 30);									
+		B_GiveInvItems (self, other, ItMi_Gold, 30);					
+	};
 	
 	MIS_Gaan_Snapper = LOG_SUCCESS;
 	B_GivePlayerXP (XP_Gaan_WaldSnapper);
@@ -428,7 +430,10 @@ INSTANCE DIA_Gaan_AskTeacher (C_INFO)
 
 FUNC INT DIA_Gaan_AskTeacher_Condition()
 {
-	return TRUE;
+	if(Npc_KnowsInfo(other,DIA_Gaan_WASMACHSTDU))
+	{
+		return TRUE;
+	};
 };
 
 FUNC VOID DIA_Gaan_AskTeacher_Info()
@@ -456,15 +461,12 @@ INSTANCE DIA_Gaan_PayTeacher (C_INFO)
 	description = "Here. 100 gold coins for your expertise on gutting animals. ";
 };                       
 
-var int DIA_Gaan_PayTeacher_noPerm;
-
 FUNC INT DIA_Gaan_PayTeacher_Condition()
 {
-	if 	(Npc_KnowsInfo (other, DIA_Gaan_AskTeacher))
-		&& (DIA_Gaan_PayTeacher_noPerm == FALSE)
-			{
-				return TRUE;
-			};
+	if 	(Npc_KnowsInfo(other, DIA_Gaan_AskTeacher) && Gaan_TeachPlayer == FALSE)
+	{
+		return TRUE;
+	};
 };
 
 FUNC VOID DIA_Gaan_PayTeacher_Info()
@@ -475,7 +477,6 @@ FUNC VOID DIA_Gaan_PayTeacher_Info()
 	{
 		AI_Output(self,other,"DIA_Gaan_PayTeacher_03_01"); //Thanks. Now you're talking.
 		Gaan_TeachPlayer = TRUE;
-		DIA_Gaan_PayTeacher_noPerm = TRUE;
 	}
 	else	
 	{
@@ -500,9 +501,9 @@ instance DIA_Gaan_TEACHHUNTING		(C_INFO)
 func int DIA_Gaan_TEACHHUNTING_Condition ()
 {
 	if (Gaan_TeachPlayer == TRUE)
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Gaan_TEACHHUNTING_Info ()
@@ -544,7 +545,7 @@ func void DIA_Gaan_TEACHHUNTING_Info ()
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DrgSnapperHorn] == FALSE)
 			&& (MIS_Gaan_Snapper == LOG_SUCCESS)
 			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Daragon snapper horn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DrgSnapperHorn)),  DIA_Gaan_TEACHHUNTING_DrgSnapperHorn);
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Dragon snapper horn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DrgSnapperHorn)),  DIA_Gaan_TEACHHUNTING_DrgSnapperHorn);
 			};
 		}
 		else
@@ -570,7 +571,6 @@ func void DIA_Gaan_TEACHHUNTING_Claws()
 		};
 
 		Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
-		Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
 		
 };
 
@@ -586,7 +586,6 @@ func void DIA_Gaan_TEACHHUNTING_Teeth()
 		};
 
 	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
-	Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
 };
 
 // ------ Fell abziehen ------
@@ -599,7 +598,6 @@ func void DIA_Gaan_TEACHHUNTING_Fur()
 		};
 
 	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
-	Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
 };
 
 // ------ Blutfliegenstachel ------
@@ -613,7 +611,6 @@ func void DIA_Gaan_TEACHHUNTING_BFSting()
 		};
 
 	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
-	Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
 };
 // ------ Blutfliegenflügel ------
 func void DIA_Gaan_TEACHHUNTING_BFWing ()
@@ -626,23 +623,23 @@ func void DIA_Gaan_TEACHHUNTING_BFWing ()
 		};
 
 	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
-	Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
 };
 // ------ DrgSnapperHorn ------
 func void DIA_Gaan_TEACHHUNTING_DrgSnapperHorn()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_DrgSnapperHorn))
 		{
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_DrgSnapperHorn_03_00"); //Now that this slightly oversized snapper is dead, I can show you how to remove its horn.
+			if(MIS_Gaan_Snapper == LOG_SUCCESS)
+			{
+				AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_DrgSnapperHorn_03_00"); //Now that this slightly oversized snapper is dead, I can show you how to remove its horn.
+			};
 			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_DrgSnapperHorn_03_01"); //You push your knife deep into the animal's forehead and carefully lever the thing upwards.
 			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_DrgSnapperHorn_03_02"); //If it won't come loose from the skull, you work on it with a second knife from the other side.
-	
-			
-			CreateInvItems (Gaans_Snapper, ItAt_DrgSnapperHorn, 1); //falls der Snapper ihm gerade vor den Füssen liegt!!
+
+			CreateInvItems (Gaans_Snapper, ItAt_DrgSnapperHorn, 2); //falls der Snapper ihm gerade vor den Füssen liegt!!
 		};
 
 	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
-	Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
 };
 
 
@@ -662,7 +659,10 @@ instance DIA_Gaan_JAGD		(C_INFO)
 
 func int DIA_Gaan_JAGD_Condition ()
 {
-	return TRUE;
+	if(Npc_KnowsInfo(other,DIA_Gaan_WASMACHSTDU))
+	{
+		return TRUE;
+	};
 };
 
 func void B_WasMachtJagd ()
@@ -674,25 +674,45 @@ func void DIA_Gaan_JAGD_Info ()
 {
 	B_WasMachtJagd ();
 
-	if ((Npc_IsDead(Gaans_Snapper))== FALSE)
+	if (MIS_Gaan_Snapper != LOG_SUCCESS && Kapitel < 3)
+	{
+		AI_Output			(self, other, "DIA_Gaan_JAGD_03_01"); //The last animal I could bring down was a large rat. Not very encouraging, and bad for business.
+		AI_Output			(self, other, "DIA_Gaan_JAGD_03_02"); //For several days now, some kind of snorting beast has been roaming the area.
+		AI_Output			(self, other, "DIA_Gaan_JAGD_03_03"); //It not only kills everything that moves, it also interferes with my work.
+		if(Npc_IsDead(Gaans_Snapper))
 		{
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_01"); //The last animal I could bring down was a large rat. Not very encouraging, and bad for business.
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_02"); //For several days now, some kind of snorting beast has been roaming the area.
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_03"); //It not only kills everything that moves, it also interferes with my work.
+			AI_Output			(other, self, "DIA_Lobart_VINOTOT_15_01"); //He's dead.
+			AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_01"); //Then I can finally hunt freely again.
+
+			if (MIS_Gaan_Deal == LOG_RUNNING)
+			{
+				AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_02");	//Here's the money I promised you.
+				CreateInvItems (self, ItMi_Gold, 30);
+				B_GiveInvItems (self, other, ItMi_Gold, 30);
+			};
+
+			MIS_Gaan_Snapper = LOG_SUCCESS;
+			B_GivePlayerXP (XP_Gaan_WaldSnapper);
+			AI_StopProcessInfos(self);
+			Npc_ExchangeRoutine(self,"Start");
+		}
+		else if (MIS_Gaan_Snapper != LOG_Running)
+		{
 			Log_CreateTopic (TOPIC_GaanSchnaubi, LOG_MISSION);
 			Log_SetTopicStatus(TOPIC_GaanSchnaubi, LOG_RUNNING);
 			B_LogEntry (TOPIC_GaanSchnaubi,"That snorting creature's causing trouble for the hunter Gaan. Unless I defeat the beast, he can't go hunting any more."); 
 			MIS_Gaan_Snapper = LOG_RUNNING;
-		}
-	else if (Kapitel >= 3)
-		{
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_04"); //It's getting crazier out here. Meanwhile, dozens of these snorting animals have come out of the pass.
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_05"); //Under these circumstances, hunting is getting harder and harder up here.
-		}
-	else
-		{
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_06"); //I can't complain.
 		};
+	}
+	else if (Kapitel >= 3)
+	{
+		AI_Output			(self, other, "DIA_Gaan_JAGD_03_04"); //It's getting crazier out here. Meanwhile, dozens of these snorting animals have come out of the pass.
+		AI_Output			(self, other, "DIA_Gaan_JAGD_03_05"); //Under these circumstances, hunting is getting harder and harder up here.
+	}
+	else
+	{
+		AI_Output			(self, other, "DIA_Gaan_JAGD_03_06"); //I can't complain.
+	};
 };
 
 

@@ -48,10 +48,12 @@ func void DIA_Randolph_SchwereLuft_Info ()
 	AI_Output (self, other, "DIA_Randolph_SchwereLuft_06_01"); //Hmm ... as soon as anyone says anything wrong around here, the dance starts ... so watch your step, or there'll be a slaughter.
 	AI_Output (other, self, "DIA_Randolph_SchwereLuft_15_02"); //Will you join the fight?
 	AI_Output (self, other, "DIA_Randolph_SchwereLuft_06_03"); //I'm not going to just stand here when the ruckus starts. But I'm not going to push it either.
-	Akils_SLDStillthere = TRUE;
-	Log_CreateTopic (TOPIC_AkilsSLDStillthere, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_AkilsSLDStillthere, LOG_RUNNING);
-	B_LogEntry (TOPIC_AkilsSLDStillthere,"Akil's farm is threatened by mercenaries."); 
+	if (Akils_SLDStillthere == FALSE) {
+		Log_CreateTopic (TOPIC_AkilsSLDStillthere, LOG_MISSION);
+		Log_SetTopicStatus(TOPIC_AkilsSLDStillthere, LOG_RUNNING);
+		B_LogEntry (TOPIC_AkilsSLDStillthere,"Akil's farm is threatened by mercenaries.");
+		Akils_SLDStillthere = TRUE;
+	};
 	B_NpcClearObsessionByDMT (self);
 };
 ///////////////////////////////////////////////////////////////////////
@@ -433,45 +435,45 @@ var int DIA_Randolph_PERM_GotMoney;
 
 func void DIA_Randolph_PERM_Info ()
 {
+	AI_Output			(other, self, "DIA_Randolph_PERM_15_00"); //Are you crazy?
 	if (hero.guild == GIL_KDF)
-		{
-			B_NpcObsessedByDMT (self);
-		}
+	{
+		B_NpcObsessedByDMT (self);
+	}
 	else
+	{
+		if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
+		&& (MIS_HealRandolph != LOG_SUCCESS)
 		{
-			AI_Output			(other, self, "DIA_Randolph_PERM_15_00"); //Are you crazy?
-
-			if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
-			&& (MIS_HealRandolph != LOG_SUCCESS)
-				{
-					if (DIA_Sagitta_HEALRANDOLPH_GotOne == FALSE)
-					&& (DIA_Sagitta_HEALRANDOLPH_KnowsPrice == TRUE)
-					&& (DIA_Randolph_PERM_GotMoney == FALSE)
-					{
-						AI_Output			(other, self, "DIA_Randolph_PERM_15_01"); //You send me off without a coin and don't bother telling me that the stuff is this expensive?
-						AI_Output			(other, self, "DIA_Randolph_PERM_15_02"); //Sagitta wants 300 gold coins from me.
-						AI_Output			(self, other, "DIA_Randolph_PERM_06_03"); //I can't give you more than 150 gold coins. Please. You've got to help me. Please.
-						CreateInvItems (self, ItMi_Gold, 150);									
-						B_GiveInvItems (self, other, ItMi_Gold, 150);					
-						DIA_Randolph_PERM_GotMoney = TRUE;
-					}
-					else
-					{
-						AI_Output			(self, other, "DIA_Randolph_PERM_06_04"); //Really down-and-out. Ever since I stopped drinking, the deprivation is killing me. I really need help.
-						AI_Output			(self, other, "DIA_Randolph_PERM_06_05"); //There is a remedy that should help.
-						AI_Output			(self, other, "DIA_Randolph_PERM_06_06"); //Sagitta, the old herb witch, used to prepare it for me. But I don't think I can make it there any more with all those orcs around.
-					};
-					Log_CreateTopic (TOPIC_HealRandolph, LOG_MISSION);
-					Log_SetTopicStatus(TOPIC_HealRandolph, LOG_RUNNING);
-					B_LogEntry (TOPIC_HealRandolph,"Randolph's supposedly given up drinking and has sent me to see Sagitta the herb witch and get her to give me something for his withdrawal symptoms."); 
-
-					MIS_HealRandolph = LOG_RUNNING;
-				}
+			if (DIA_Sagitta_HEALRANDOLPH_GotOne == FALSE)
+			&& (DIA_Sagitta_HEALRANDOLPH_KnowsPrice == TRUE)
+			&& (DIA_Randolph_PERM_GotMoney == FALSE)
+			{
+				AI_Output			(other, self, "DIA_Randolph_PERM_15_01"); //You send me off without a coin and don't bother telling me that the stuff is this expensive?
+				AI_Output			(other, self, "DIA_Randolph_PERM_15_02"); //Sagitta wants 300 gold coins from me.
+				AI_Output			(self, other, "DIA_Randolph_PERM_06_03"); //I can't give you more than 150 gold coins. Please. You've got to help me. Please.
+				CreateInvItems (self, ItMi_Gold, 150);									
+				B_GiveInvItems (self, other, ItMi_Gold, 150);					
+				DIA_Randolph_PERM_GotMoney = TRUE;
+			}
 			else
-				{
-					AI_Output			(self, other, "DIA_Randolph_PERM_06_07"); //I'm still a bit wobbly on my legs, but apart from that I'm better.
-				};	
+			{
+				AI_Output			(self, other, "DIA_Randolph_PERM_06_04"); //Really down-and-out. Ever since I stopped drinking, the deprivation is killing me. I really need help.
+				AI_Output			(self, other, "DIA_Randolph_PERM_06_05"); //There is a remedy that should help.
+				AI_Output			(self, other, "DIA_Randolph_PERM_06_06"); //Sagitta, the old herb witch, used to prepare it for me. But I don't think I can make it there any more with all those orcs around.
+			};
+			if (MIS_HealRandolph < LOG_RUNNING) {
+				Log_CreateTopic (TOPIC_HealRandolph, LOG_MISSION);
+				Log_SetTopicStatus(TOPIC_HealRandolph, LOG_RUNNING);
+				B_LogEntry (TOPIC_HealRandolph,"Randolph's supposedly given up drinking and has sent me to see Sagitta the herb witch and get her to give me something for his withdrawal symptoms."); 
+				MIS_HealRandolph = LOG_RUNNING;
+			};
+		}
+		else
+		{
+			AI_Output			(self, other, "DIA_Randolph_PERM_06_07"); //I'm still a bit wobbly on my legs, but apart from that I'm better.
 		};	
+	};	
 };
 
 ///////////////////////////////////////////////////////////////////////

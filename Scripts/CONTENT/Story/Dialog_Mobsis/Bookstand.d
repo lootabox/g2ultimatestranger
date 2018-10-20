@@ -94,68 +94,68 @@ FUNC VOID Use_FINALDRAGONEQUIPMENT_S1()		//Buchständer in der geheimen Bibliothe
 			
 		if  (hero.guild == GIL_KDF)
 		{	
-			PlayerGetsAmulettOfDeath = TRUE;
-			PLAYER_TALENT_RUNES[SPL_MasterOfDisaster] = TRUE; 
-			B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Holy Missile': 1 holy water, no spell scroll");
-			
-			
-						
-						Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
-						Doc_PrintLine	( nDocID,  1, "");
-						Doc_PrintLines	( nDocID,  1, "... I followed the instructions and simply poured Innos' holy water over a blank runestone on a rune table. The runestone was destroyed. I suspect this spell really is accessible only to the One."); 
-						Doc_PrintLines	( nDocID,  1, "I have left the holy aura of Innos in the protection of the monastery. The abbot will take care of it until the One reveals himself."	);
-						Doc_PrintLines	( nDocID,  1, "The Tears of Innos may have a vital part to play in the fight ahead. But it's too dangerous to keep them where all can see. I'd better leave them here in the library."	);
-						Doc_Show		( nDocID );
-						
-						
+			Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
+			Doc_PrintLine	( nDocID,  1, "");
+			Doc_PrintLines	( nDocID,  1, "... I followed the instructions and simply poured Innos' holy water over a blank runestone on a rune table. The runestone was destroyed. I suspect this spell really is accessible only to the One."); 
+			Doc_PrintLines	( nDocID,  1, "I have left the holy aura of Innos in the protection of the monastery. The abbot will take care of it until the One reveals himself."	);
+			Doc_PrintLines	( nDocID,  1, "The Tears of Innos may have a vital part to play in the fight ahead. But it's too dangerous to keep them where all can see. I'd better leave them here in the library."	);
+			Doc_Show		( nDocID );
+
+			if (FinalDragonEquipment_Once == FALSE)
+			{
+				PlayerGetsAmulettOfDeath = TRUE;
+				PLAYER_TALENT_RUNES[SPL_MasterOfDisaster] = TRUE;
+				PrintScreen	(PRINT_LearnRunes, -1, -1, FONT_Screen, 2);
+				B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Holy Missile': 1 holy water, no spell scroll");
+			};
 		}
 		else if (hero.guild == GIL_PAL)
 		{
-			PAL_KnowsAbout_FINAL_BLESSING = TRUE;
-			PLAYER_TALENT_RUNES[SPL_PalTeleportSecret] 		= TRUE; 		
-			PrintScreen	(PRINT_LearnPalTeleportSecret, -1, -1, FONT_Screen, 2);
-			
-			Log_CreateTopic (TOPIC_TalentRunes,LOG_NOTE);
-			B_LogEntry (TOPIC_TalentRunes,"To create a rune I need certain ingredients for each one. Using those ingredients and a blank runestone I can create the desired rune at a rune table.");
-			B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Secret teleport': 1 holy water");
-			
-			
-		
-						
-						Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
-						Doc_PrintLine	( nDocID,  1, "");
-						Doc_PrintLines	( nDocID,  1, "You have to create a teleportation rune to reach the secret place. For that you need a blank runestone and a small bottle of holy water. You can use the rune to teleport into the room."); 
-						Doc_PrintLine	( nDocID,  1, "");
-						Doc_PrintLines	( nDocID,  1, "I am now reasonably certain that the Tears of Innos are what the paladins of old used in the long forgotten ritual Consecration of the Sword. That means I should be able to use the little bottle I found to give additional strength to a consecrated weapon."	);
-						Doc_PrintLine	( nDocID,  1, "");
-						Doc_Show		( nDocID );
+			Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
+			Doc_PrintLine	( nDocID,  1, "");
+			Doc_PrintLines	( nDocID,  1, "You have to create a teleportation rune to reach the secret place. For that you need a blank runestone and a small bottle of holy water. You can use the rune to teleport into the room."); 
+			Doc_PrintLine	( nDocID,  1, "");
+			Doc_PrintLines	( nDocID,  1, "I am now reasonably certain that the Tears of Innos are what the paladins of old used in the long forgotten ritual Consecration of the Sword. That means I should be able to use the little bottle I found to give additional strength to a consecrated weapon."	);
+			Doc_PrintLine	( nDocID,  1, "");
+			Doc_Show		( nDocID );
+
+			if (FinalDragonEquipment_Once == FALSE)
+			{
+				PAL_KnowsAbout_FINAL_BLESSING = TRUE;
+				PLAYER_TALENT_RUNES[SPL_PalTeleportSecret] 		= TRUE; 		
+				PrintScreen	(PRINT_LearnPalTeleportSecret, -1, -1, FONT_Screen, 2);
+				Log_CreateTopic (TOPIC_TalentRunes,LOG_NOTE);
+				B_LogEntry (TOPIC_TalentRunes,"To create a rune I need certain ingredients for each one. Using those ingredients and a blank runestone I can create the desired rune at a rune table.");
+				B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Secret teleport': 1 holy water");
+			};
 		}
 		else
 		{
-			PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] 	= TRUE;	
-			PLAYER_TALENT_SMITH[WEAPON_2H_Special_04] 	= TRUE;	
-			
-			PrintScreen			(PRINT_LearnSmith, -1, -1, FONT_Screen, 2);
-			Npc_SetTalentSkill 	(self, NPC_TALENT_SMITH, 1);
-			Log_CreateTopic (TOPIC_TalentSmith,LOG_NOTE);
-			B_LogEntry (TOPIC_TalentSmith,"To forge a weapon, first of all I need a piece of raw steel. This I must heat in the fire of a smithy until it glows red-hot and then shape it on an anvil. Special weapons often require the use of certain substances that give them special characteristics.");
-			B_LogEntry (TOPIC_TalentSmith,"If I add 4 units of ore and 5 of dragon blood, I can forge an ORE DRAGON SLAYER.");
-			B_LogEntry (TOPIC_TalentSmith,"If I add 5 units of ore and 5 of dragon blood, I can forge a LARGE ORE DRAGON SLAYER.");
-			PlayerGetsFinalDJGArmor = TRUE;
-		
-						
-						Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
-						Doc_PrintLine	( nDocID,  1, "");
-						Doc_PrintLines	( nDocID,  1, "From: Weapons of the dragon lord."); 
-						Doc_PrintLines	( nDocID,  1, "To make an armor of dragon scales as hard as possible, the scales may be coated with the ore mined in the valley on the isle of Karynis."					);
-						Doc_PrintLine	( nDocID,  1, "");
-						Doc_PrintLines	( nDocID,  1, "To make a blade worthy of a dragon lord, the blade should be steeped in dragon blood. Even 5 phials of the blood can give the steel unequalled sharpness and strength."					);
-						Doc_PrintLine	( nDocID,  1, "");
-						Doc_PrintLines	( nDocID,  1, "Note: 'Karynis' probably refers to what is now known as Khorinis.");
-						Doc_Show		( nDocID );
+			Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
+			Doc_PrintLine	( nDocID,  1, "");
+			Doc_PrintLines	( nDocID,  1, "From: Weapons of the dragon lord."); 
+			Doc_PrintLines	( nDocID,  1, "To make an armor of dragon scales as hard as possible, the scales may be coated with the ore mined in the valley on the isle of Karynis."					);
+			Doc_PrintLine	( nDocID,  1, "");
+			Doc_PrintLines	( nDocID,  1, "To make a blade worthy of a dragon lord, the blade should be steeped in dragon blood. Even 5 phials of the blood can give the steel unequalled sharpness and strength."					);
+			Doc_PrintLine	( nDocID,  1, "");
+			Doc_PrintLines	( nDocID,  1, "Note: 'Karynis' probably refers to what is now known as Khorinis.");
+			Doc_Show		( nDocID );
+
+			if (FinalDragonEquipment_Once == FALSE)
+			{
+				PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] 	= TRUE;	
+				PLAYER_TALENT_SMITH[WEAPON_2H_Special_04] 	= TRUE;	
+				PrintScreen			(PRINT_LearnSmith, -1, -1, FONT_Screen, 2);
+				Npc_SetTalentSkill 	(self, NPC_TALENT_SMITH, 1);
+				Log_CreateTopic (TOPIC_TalentSmith,LOG_NOTE);
+				B_LogEntry (TOPIC_TalentSmith,"To forge a weapon, first of all I need a piece of raw steel. This I must heat in the fire of a smithy until it glows red-hot and then shape it on an anvil. Special weapons often require the use of certain substances that give them special characteristics.");
+				B_LogEntry (TOPIC_TalentSmith,"If I add 4 units of ore and 5 of dragon blood, I can forge an ORE DRAGON SLAYER.");
+				B_LogEntry (TOPIC_TalentSmith,"If I add 5 units of ore and 5 of dragon blood, I can forge a LARGE ORE DRAGON SLAYER.");
+				PlayerGetsFinalDJGArmor = TRUE;
+			};
 		};
 		
-		if FinalDragonEquipment_Once == FALSE
+		if (FinalDragonEquipment_Once == FALSE)
 		{
 			B_GivePlayerXP (XP_FinalDragonEquipment);
 			FinalDragonEquipment_Once = TRUE;

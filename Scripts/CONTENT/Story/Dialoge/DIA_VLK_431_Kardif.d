@@ -452,17 +452,28 @@ func void DIA_Kardif_Lernen_Info ()
 		
 		Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
 		
-		
-		B_LogEntry (Topic_CityTeacher,"Carl, the smith in the harbor district, can help me become stronger.");
-		B_LogEntry (Topic_CityTeacher,"Lares can help me improve my dexterity.");
-		B_LogEntry (Topic_CityTeacher,"Alrik can train me to fight with one-handed weapons. He hangs round behind the storehouse in the harbor district.");
-		B_LogEntry (Topic_CityTeacher,"Ignaz can show me some recipes for brewing potions. He lives in the harbor district.");
-	
-		Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
-		B_LogEntry (Topic_CityTrader,"Brahim draws and sells maps near the harbor.");
-		
-		
-	DIA_Kardif_Lernen_permanent = TRUE;
+		if(!Npc_KnowsInfo(other,DIA_Carl_Lernen))
+		{
+			B_LogEntry (Topic_CityTeacher,"Carl, the smith in the harbor district, can help me become stronger.");
+		};
+		if(Lares_TeachDEX == FALSE)
+		{
+			B_LogEntry (Topic_CityTeacher,"Lares can help me improve my dexterity.");
+		};
+		if(Alrik_Teach1H == FALSE)
+		{
+			B_LogEntry (Topic_CityTeacher,"Alrik can train me to fight with one-handed weapons. He hangs round behind the storehouse in the harbor district.");
+		};
+		if(Ignaz_TeachAlchemy == FALSE)
+		{
+			B_LogEntry (Topic_CityTeacher,"Ignaz can show me some recipes for brewing potions. He lives in the harbor district.");
+		};
+		if(!Npc_KnowsInfo(other,DIA_Brahim_GREET))
+		{	
+			Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
+			B_LogEntry (Topic_CityTrader,"Brahim draws and sells maps near the harbor.");
+		};
+		DIA_Kardif_Lernen_permanent = TRUE;
 	}
 	else 
 	{

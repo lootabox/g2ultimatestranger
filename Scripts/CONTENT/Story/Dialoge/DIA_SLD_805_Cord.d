@@ -100,6 +100,7 @@ FUNC VOID DIA_Cord_Hallo_Info()
 // 			  					WannaJoin
 // ************************************************************
 var int Cord_SchonmalGefragt;
+var int DIA_Cord_WannaJoin_Once;
 // ------------------------------------------------------------
 INSTANCE DIA_Cord_WannaJoin   (C_INFO)
 {
@@ -175,9 +176,13 @@ FUNC VOID DIA_Cord_WannaJoin_Info()
 		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_13"); //Each mercenary needs to be able to rely on his comrades. All our lives depend on that.
 		B_Cord_BeBetter ();
 		
-		Log_CreateTopic (TOPIC_CordProve,LOG_MISSION);
-		Log_SetTopicStatus (TOPIC_CordProve,LOG_RUNNING); 
-		B_LogEntry (TOPIC_CordProve,"Cord will give me his vote once I've learned to fight better."); 
+		if(DIA_Cord_WannaJoin_Once == FALSE)
+		{
+			Log_CreateTopic (TOPIC_CordProve,LOG_MISSION);
+			Log_SetTopicStatus (TOPIC_CordProve,LOG_RUNNING); 
+			B_LogEntry (TOPIC_CordProve,"Cord will give me his vote once I've learned to fight better."); 	
+			DIA_Cord_WannaJoin_Once = TRUE;
+		};
 	};
 };
 

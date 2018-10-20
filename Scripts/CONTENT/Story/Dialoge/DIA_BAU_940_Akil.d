@@ -62,9 +62,12 @@ func void DIA_Akil_Hallo_Info ()
 	AI_Output  (other, self, "DIA_Akil_Hallo_15_02"); //Are you sure?
 	AI_Output  (self, other, "DIA_Akil_Hallo_13_03"); //eh ... yeah, yeah ... everything's fine. You ... eh ... I ... I can't talk to you now.
 	
-	Log_CreateTopic (TOPIC_AkilsSLDStillthere, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_AkilsSLDStillthere, LOG_RUNNING);
-	B_LogEntry (TOPIC_AkilsSLDStillthere,"Akil's farm is threatened by mercenaries."); 
+	if (Akils_SLDStillthere == FALSE) {
+		Log_CreateTopic (TOPIC_AkilsSLDStillthere, LOG_MISSION);
+		Log_SetTopicStatus(TOPIC_AkilsSLDStillthere, LOG_RUNNING);
+		B_LogEntry (TOPIC_AkilsSLDStillthere,"Akil's farm is threatened by mercenaries.");
+		Akils_SLDStillthere = TRUE;
+	};
 
 	Akils_SLDStillthere = TRUE;
 	AI_StopProcessInfos (self);

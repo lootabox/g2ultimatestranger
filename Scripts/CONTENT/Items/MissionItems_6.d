@@ -236,6 +236,7 @@ INSTANCE ItWr_LastDoorToUndeadDrgDI_MIS	(C_Item)
 	scemeName			=	"MAP";
 	description			= 	name;
 };
+var int Read_LastDoorToUndeadDrgDI_MIS;
 func void Use_ItWr_LastDoorToUndeadDrgDI_MIS ()
 {   
 		var int nDocID;
@@ -261,7 +262,11 @@ func void Use_ItWr_LastDoorToUndeadDrgDI_MIS ()
 				
 					Doc_Show		( nDocID );
 	
-	B_LogEntry (TOPIC_HallenVonIrdorath,"The black magician's scroll contained the words KHADOSH EMEM KADAR. It sounds like some kind of magic formula, but what is it used for - and what is the Eye of Power?"); 
+	if(Read_LastDoorToUndeadDrgDI_MIS == FALSE)
+	{
+		B_LogEntry (TOPIC_HallenVonIrdorath,"The black magician's scroll contained the words KHADOSH EMEM KADAR. It sounds like some kind of magic formula, but what is it used for - and what is the Eye of Power?"); 
+		Read_LastDoorToUndeadDrgDI_MIS = TRUE;
+	};
 };
 //**********************************************************************************
 //	Schlüssel zur Truhe in der Kammer des OberDementors.
@@ -354,37 +359,42 @@ INSTANCE ItWr_Diary_BlackNovice_MIS (C_ITEM)
 	on_state[0]				=	Use_Diary_BlackNovice;
 };
 
-	FUNC VOID Use_Diary_BlackNovice()
-	{   
-		var int nDocID;
-		nDocID = 	Doc_Create		()			  ;								// DocManager 
-					Doc_SetPages	( nDocID,  2 );                         //wieviel Pages
+var int Use_Diary_BlackNovice_Once;
+FUNC VOID Use_Diary_BlackNovice()
+{   
+	var int nDocID;
+	nDocID = 	Doc_Create		()			  ;								// DocManager 
+				Doc_SetPages	( nDocID,  2 );                         //wieviel Pages
 
-					Doc_SetPage 	( nDocID,  0, "BOOK_RED_L.tga"  , 0 	); 		// VARIATIONEN: BOOK_BROWN_L.tga , BOOK_MAGE_L.tga , BOOK_RED_L.tga
-					Doc_SetPage 	( nDocID,  1, "BOOK_RED_R.tga" 	, 0		); 		// VARIATIONEN: BOOK_BROWN_R.tga , BOOK_MAGE_R.tga , BOOK_RED_R.tga
-					
-					//1.Seite
+				Doc_SetPage 	( nDocID,  0, "BOOK_RED_L.tga"  , 0 	); 		// VARIATIONEN: BOOK_BROWN_L.tga , BOOK_MAGE_L.tga , BOOK_RED_L.tga
+				Doc_SetPage 	( nDocID,  1, "BOOK_RED_R.tga" 	, 0		); 		// VARIATIONEN: BOOK_BROWN_R.tga , BOOK_MAGE_R.tga , BOOK_RED_R.tga
+				
+				//1.Seite
 
- 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels 					
-					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline	   			); 	// -1 -> all pages 
-					Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages 
-					Doc_PrintLine	( nDocID,  0, ""					);										
-					Doc_PrintLines	( nDocID,  0, "I've been waiting to be called up for 36 days now. I'm beginning to doubt they'll take me on. But I've done all they asked me to. I've fetched and carried for them like some old housemaid."					);
-					//Absatz
-					Doc_PrintLines	( nDocID,  0, "The key master instructed me to seal the bars. I still haven't gotten around to it. If things go on this way, anyone might just stroll in through the gate.");
-					Doc_PrintLines	( nDocID,  0, "It's a shame I can't remember the combinations.");
+				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels 					
+				Doc_SetFont 	( nDocID,  0, FONT_BookHeadline	   			); 	// -1 -> all pages 
+				Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages 
+				Doc_PrintLine	( nDocID,  0, ""					);										
+				Doc_PrintLines	( nDocID,  0, "I've been waiting to be called up for 36 days now. I'm beginning to doubt they'll take me on. But I've done all they asked me to. I've fetched and carried for them like some old housemaid."					);
+				//Absatz
+				Doc_PrintLines	( nDocID,  0, "The key master instructed me to seal the bars. I still haven't gotten around to it. If things go on this way, anyone might just stroll in through the gate.");
+				Doc_PrintLines	( nDocID,  0, "It's a shame I can't remember the combinations.");
 
-					//2.Seite
-					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
-					Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 	// -1 -> all pages 
-					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "I'd have sneaked into the great Hall ages ago. I can hardly wait to see the Master. I wonder if they'll let me see him once I'm one of them."	);
-					Doc_PrintLine	( nDocID,  1, ""					);
-					//Absatz
-					Doc_PrintLines	( nDocID,  1, "I tried my luck yesterday. But I failed the two lever chambers before I could even press the three switches in the west wing in the right order. That dog locked the chambers! Tomorrow I'm going to try and get the key off him ...");
-					Doc_Show		( nDocID );
+				//2.Seite
+				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
+				Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 	// -1 -> all pages 
+				Doc_PrintLine	( nDocID,  1, ""					);
+				Doc_PrintLines	( nDocID,  1, "I'd have sneaked into the great Hall ages ago. I can hardly wait to see the Master. I wonder if they'll let me see him once I'm one of them."	);
+				Doc_PrintLine	( nDocID,  1, ""					);
+				//Absatz
+				Doc_PrintLines	( nDocID,  1, "I tried my luck yesterday. But I failed the two lever chambers before I could even press the three switches in the west wing in the right order. That dog locked the chambers! Tomorrow I'm going to try and get the key off him ...");
+				Doc_Show		( nDocID );
 
-	B_LogEntry (TOPIC_HallenVonIrdorath,"The diary of the novice black magician talks about lever chambers, key masters, switch combinations and other things. I should keep that in the back of my mind, it could be useful later."); 
+	if(Use_Diary_BlackNovice_Once == FALSE)
+	{
+		B_LogEntry (TOPIC_HallenVonIrdorath,"The diary of the novice black magician talks about lever chambers, key masters, switch combinations and other things. I should keep that in the back of my mind, it could be useful later."); 
+		Use_Diary_BlackNovice_Once = TRUE;
+	};
 };
 
 //**********************************************************************************

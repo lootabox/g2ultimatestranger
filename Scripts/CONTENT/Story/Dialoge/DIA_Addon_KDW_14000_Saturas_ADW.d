@@ -151,9 +151,12 @@ func void DIA_Addon_Saturas_ADWStart_missingPeople ()
 	AI_Output			(other, self, "DIA_Addon_Saturas_ADWStart_missingPeople_15_00"); //Have you found a trace of the missing people?
 	AI_Output			(self, other, "DIA_Addon_Saturas_ADWStart_missingPeople_14_01"); //Only yesterday we found the body of a fisherman. He was lying under one of the ruins to the east.
 	AI_Output			(self, other, "DIA_Addon_Saturas_ADWStart_missingPeople_14_02"); //It looks as though the fisherman was from Khorinis. You should look into this.
-	Saturas_AboutWilliam = TRUE;
 
-	B_LogEntry (TOPIC_Addon_MissingPeople,LogText_Addon_WilliamLeiche); 
+	Saturas_AboutWilliam = TRUE;
+	if(!Npc_KnowsInfo(other,DIA_Addon_Riordian_WhatToFind))
+	{
+		B_LogEntry (TOPIC_Addon_MissingPeople,LogText_Addon_WilliamLeiche); 
+	};
 };
 func void DIA_Addon_Saturas_ADWStart_wastun ()
 {

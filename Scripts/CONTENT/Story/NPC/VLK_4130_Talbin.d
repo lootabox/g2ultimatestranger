@@ -16,7 +16,7 @@ instance VLK_4130_Talbin (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Bau_Mace);
+	EquipItem			(self, ItMw_1H_Sword_L_03);
 	EquipItem			(self, ItRW_SLD_Bow);
 	
 	// ------ Inventory ------

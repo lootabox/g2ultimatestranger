@@ -16,17 +16,15 @@ Default menu option when not ingame is load game instead of new game.
 
 	Quest Changes
 
-Changed Kervo's quest to cancel in chapter 4, causing Kervo and Geppert to be killed by a Lurker instead of them disappearing.
 Changed Buster to give reduced gold for each Shadowbeast Horn, but still way more then regular merchants.
 
 
-	NPC Improvements and Changes
+	Ported fixes and improvements
 
-Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Hyglas, Jesper, Jergan, Karras, Lares, Parlan, Pyrokar, Ramirez, Raoul, Scatty.
+NPCs:
+Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Lobart, Karras, Lares, Parlan, Pyrokar, Ramirez, Raoul, Saturas, Scatty.
 Fixed XP award for pickpocketing Valentino, Salandril, Cavalorn, Dobar, Engor, Franco and Francis.
 Fixed XP award for recruiting Lares and Lester.
-
-Changed all living pirates to generate ambient inventories.
 
 Angar has same weapon everywhere as in the Valley of Mines.
 Bandit 10008 warns NH not to wake up Skinner only if he has not already done so.
@@ -36,40 +34,85 @@ Buster buys Shadowbeast Horns, even if NH does not know how to remove them.
 Buster does not drop Shadowbeast Horns given to him.
 Cassia can give the Blood Chalice quest, even if NH was a wanted thief.
 Cassia cannot be paid for learning to pickpocket if it’s already learned.
-Cassias quests become obsolete if the paladins take care of the guild.
+Cassias quests become obsolete if the paladins kill her.
 Diego can teach strength in Khorinis.
 Diego cannot be led to Pedrakhan.
 Dragomir immediately equips his crossbow after receiving it.
 Esteban does not turn to his guards if they are dead.
 Esteban's bodyguards go running to meet Fisk.
+Gaan wields a Wolf Blade instead of a branch.
+Gaan won't know about the death of the Snorting Dragon Snapper unless he is close to its location.
+Gaan's dialog option for asking who he is cannot glitch up and become unavailable.
+Gaan can only be asked about hunting training once NH learns he is a hunter.
+Gaan dialog does not create unnecessary BACK options when learning hunting talents.
 Garond can be told about Silvestro's mining site even if Diego has died.
 Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
 Igaraz can be asked about the living rock, even after moving north from the tavern.
-Jan does not drop the gold used to buy the Medium Dragon Hunter's Armor.
+Jan cannot drop the gold used to buy the Medium Dragon Hunter's Armor.
 Kervo's quest fails if he is killed.
+Kervo's quest cancels in chapter 4, causing Kerov and Geppert to be killed by a Lurker instead of them disappearing.
 Lehmar does not lend money to NH if he attacked him, unless Oblivion is cast on him.
 Lehmar does not immediately notice the theft of his ledger.
+Lehmar attacking the NH causes Meldor to also attack the player.
 Mario cannot be recruited to a full ship crew.
-Meldor helps Lehmar if he decides to attack the NH.
 Nagur now grants previously omitted XP bonus for showing thieves' signal and returning Baltram's shipment.
 Opolos can be told about Pedro's betrayal also after the chase quest is completed.
 Pedro cannot be asked about life in the monastery if NH is magician.
 Ramirez shows two dialogue options only after he sees the thieves' signal.
+Riordian mentions William in the initial dialogue instead of the dialogue about the west.
 Skip quest cancels if he is killed.
+Talbin wields a Wolf Blade instead of a branch.
 Thekla now grants previously omitted XP bonus for defeating Bullco.
-Vatras does not sell Almanacs of the Possessed given to him.
+Vatras does not sell Almanacs of the Possessed given to him
 
+Following actions no longer create extra journal updates:
+* Reading Cornelius' Diary, Xardas' Letter, Lucia's farewell letter, almanac in the secret library, Black Magician's Scroll, novice black magician's Diary, "Pure mana" and "Pure health".
+* Akil, Alvares, Kati and Randolph talked to while mercenaries threaten the farm.
+* Alric asked to duel when he does not have his sword.
+* Alrik, Karl, Lares, Brahim, Ignaz and Kardif talked about who can teach and sell things.
+* Angar, Bennet, Diego, Gorn, Lee, Milten and Vatras told where the enemy is hiding.
+* Bones asked to give bandit armor before receiving permission from Greg.
+* Bones, Morgan and Henry talked to about who can teach what.
+* Cipher told that the swamp dragon is dead.
+* City Guard 310 talked to when NH was not allowed through the gate.
+* Cord talked about joining mercenaries.
+* Cronos asked whether he can sell equipment to NH.
+* Gaan asked "How is the hunt?"
+* Jorgen asked to become captain
+* Lares asked what he knows about missing people.
+* Lee talked to about joining mercenaries before talking to Onar.
+* Lobart asked about clothing price after already offering cheapest price.
+* Malak talked to about returning to Bengars farm.
+* Mortis asked to help NH become stronger.
+* Randolph requesting to bring him a remedy from Sagitta.
+* Riordian and Saturas talked about William.
+* Riordian asked about temple locations.
+* Rod asked for his vote to join mercenaries.
+* Rod betting gold against player being able to lift his sword.
+* Saturas talked to about activating portal before receiving letter from Vatras.
 
-	Random Improvements, Exploit Prevention and Bug Fixes
-
+Random:
 Black Ore effect ends on using transformation scrolls.
 Changed few addon armor material to metal from leather.
 Goblins and Skeletons do not create additional weapons in their inventory.
 Gold mining skill does not improve by mining empty veins.
 Magic Runes are removed from frozen corpses.
+Pirates generate ambient inventories.
 Skeletal monsters do not bleed.
+Snorting Dragon Snapper will have 2 horns instead of 1 if Gaan teaches the player that trophy skill after killing it.
 Steel Blanks and Lab Water Bottles cannot be looted from anyone.
 Stone Guardians leave properly colored pebbles on ground when hit.
 Swamp Golem bleeds green.
 
+
+	Sources
+
+User PowerGamer@worldofgothic.com
+	Original G2 NotR scripts with English dialogue and a lot of bug fixes. The original
+
+User Korianous@worldofgothic.com
+	English menu and other system script files.
+
+User Dimus@worldofplayers.ru
+	Insane metric ton of bug fixes and improvements. He has credits numerous other mods and users, but it's difficult to tell who/what should be credited for what changes due to poor documentation and language barrier. Due to Russian origin all changes had to be manually ported and are documented above in "Ported fixes and improvements".

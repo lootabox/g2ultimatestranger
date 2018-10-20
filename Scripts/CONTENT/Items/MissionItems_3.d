@@ -235,8 +235,11 @@ INSTANCE ItWr_CorneliusTagebuch_Mis (C_ITEM)
 
 	FUNC VOID UseCorneliusTagebuch()
 	{   
-		Cornelius_IsLiar = TRUE;
-		B_LogEntry (TOPIC_RESCUEBENNET,"The diary is the evidence I need to prove Bennet's innocence.");	
+		if(Cornelius_IsLiar == FALSE)
+		{
+			Cornelius_IsLiar = TRUE;
+			B_LogEntry (TOPIC_RESCUEBENNET,"The diary is the evidence I need to prove Bennet's innocence.");	
+		};
 		
 		var int nDocID;
 		

@@ -68,15 +68,20 @@ func int DIA_Angar_NW_KnowWhereEnemy_Condition ()
 		return TRUE;
 	};
 };
+var int SCToldAngarHeKnowWhereEnemy;
 func void DIA_Angar_NW_KnowWhereEnemy_Info ()
 {
 	AI_Output			(other, self, "DIA_Angar_NW_KnowWhereEnemy_15_00"); //I'm going to leave Khorinis. Would you like to join me?
 	AI_Output			(self, other, "DIA_Angar_NW_KnowWhereEnemy_04_01"); //The farther I get from the Valley of Mines, the better. When do we go?
-		
-	Log_CreateTopic (TOPIC_Crew, LOG_MISSION);                                                                                        	
-	Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING); 	                                                                                  	
-	B_LogEntry (TOPIC_Crew,"Angar's grateful for every mile he can put between himself and the Valley of Mines. He's offered to come with me on my journey.");  
 	
+	if(SCToldAngarHeKnowWhereEnemy == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Crew, LOG_MISSION);                                                                                        	
+		Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING); 	                                                                                  	
+		B_LogEntry (TOPIC_Crew,"Angar's grateful for every mile he can put between himself and the Valley of Mines. He's offered to come with me on my journey.");  
+		SCToldAngarHeKnowWhereEnemy = TRUE;
+	};
+
 	if (crewmember_count >= Max_Crew)
 	{
 		AI_Output			(other,self , "DIA_Angar_NW_KnowWhereEnemy_15_02"); //Right now, I've got enough people to man the ship. Maybe I'll get back to you later.

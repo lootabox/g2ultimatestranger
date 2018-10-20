@@ -74,6 +74,15 @@ func void DIA_Addon_Riordian_WhatToFind_Info ()
 	AI_Output	(self, other, "DIA_Addon_Riordian_WhatToFind_10_02"); //As far as we can judge from here, the bandits have taken refuge there.
 	AI_Output	(self, other, "DIA_Addon_Riordian_WhatToFind_10_03"); //If I were you, I wouldn't go down there. They have set up many outposts and guards.
 	AI_Output	(self, other, "DIA_Addon_Riordian_WhatToFind_10_04"); //You had better avoid the swamp until you have more experience, or find a way to go around the bandits.
+	if (Npc_HasItems (VLK_4304_Addon_William,ITWr_Addon_William_01))
+	{
+		AI_Output			(self, other, "DIA_Addon_Riordian_Gegend_west_10_03"); //To the east, not far from here, we found the body of a fisherman.
+		AI_Output			(self, other, "DIA_Addon_Riordian_Gegend_west_10_04"); //You should take a look at it.
+		if(Saturas_AboutWilliam == FALSE)
+		{
+			B_LogEntry (TOPIC_Addon_MissingPeople,LogText_Addon_WilliamLeiche);
+		};
+	};
 	AI_Output	(self, other, "DIA_Addon_Riordian_WhatToFind_10_05"); //In the west we have discovered some pirates.
 	AI_Output	(self, other, "DIA_Addon_Riordian_WhatToFind_10_06"); //I'm not sure, but I believe they have also discovered us.
 	AI_Output	(self, other, "DIA_Addon_Riordian_WhatToFind_10_07"); //They don't seem too perturbed by our presence, though.
@@ -167,21 +176,11 @@ func void DIA_Addon_Riordian_Gegend_ost ()
 	AI_Output			(self, other, "DIA_Addon_Riordian_Gegend_ost_10_02"); //Not only are the bandits lurking there, but also extremely dangerous animals.
 	AI_Output			(self, other, "DIA_Addon_Riordian_Gegend_ost_10_03"); //You should be careful.
 };
-var int DIA_Addon_Riordian_Gegend_west_OneTime;
 func void DIA_Addon_Riordian_Gegend_west ()
 {
 	AI_Output			(other, self, "DIA_Addon_Riordian_Gegend_west_15_00"); //Were you ever in the west?
 	AI_Output			(self, other, "DIA_Addon_Riordian_Gegend_west_10_01"); //No. But the coast must be there somewhere.
 	AI_Output			(self, other, "DIA_Addon_Riordian_Gegend_west_10_02"); //That's probably where the pirates have their camp.
-
-	if (DIA_Addon_Riordian_Gegend_west_OneTime == FALSE)
-	&& (Npc_HasItems (VLK_4304_Addon_William,ITWr_Addon_William_01))
-	{
-		AI_Output			(self, other, "DIA_Addon_Riordian_Gegend_west_10_03"); //To the east, not far from here, we found the body of a fisherman.
-		AI_Output			(self, other, "DIA_Addon_Riordian_Gegend_west_10_04"); //You should take a look at it.
-		B_LogEntry (TOPIC_Addon_MissingPeople,LogText_Addon_WilliamLeiche); 
-		DIA_Addon_Riordian_Gegend_west_OneTime = TRUE;
-	};
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -245,22 +244,21 @@ func void B_WhreAreHousesOfRulers ()
 	if (B_WhreAreHousesOfRulersOneTime == FALSE)
 	{
 		AI_Output	(self, other, "DIA_Addon_Riordian_WhereAreHouses_10_04"); //If these houses are still standing, then you will recognize them from their method of construction.
-		B_WhreAreHousesOfRulersOneTime = TRUE;
 	};
 
 	AI_Output	(self, other, "DIA_Addon_Riordian_WhereAreHouses_10_05"); //They are elevated. A steep stairway leads to the entrance covered by high columns.
 
 	if (B_WhreAreHousesOfRulersOneTime == FALSE)
 	{
+		B_WhreAreHousesOfRulersOneTime = TRUE;
 		AI_Output	(self, other, "DIA_Addon_Riordian_WhereAreHouses_10_06"); //I hope that helps you.
+		Log_CreateTopic (TOPIC_Addon_HousesOfRulers, LOG_MISSION);
+		Log_SetTopicStatus(TOPIC_Addon_HousesOfRulers, LOG_RUNNING);
+		B_LogEntry (TOPIC_Addon_HousesOfRulers,"The mansion of the scholars is a large library. It must be somewhere in the north."); 
+		Log_AddEntry (TOPIC_Addon_HousesOfRulers,"The mansion of the warriors was a fortress surrounded by cliffs in the east."); 
+		Log_AddEntry (TOPIC_Addon_HousesOfRulers,"The priests and guardians of the dead had their quarters close to each other. I should be able to find them in the southwest."); 
+		Log_AddEntry (TOPIC_Addon_HousesOfRulers,"The healers had their house of convalescence in the southeast."); 
 	};
-
-	Log_CreateTopic (TOPIC_Addon_HousesOfRulers, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_Addon_HousesOfRulers, LOG_RUNNING);
-	B_LogEntry (TOPIC_Addon_HousesOfRulers,"The mansion of the scholars is a large library. It must be somewhere in the north."); 
-	Log_AddEntry (TOPIC_Addon_HousesOfRulers,"The mansion of the warriors was a fortress surrounded by cliffs in the east."); 
-	Log_AddEntry (TOPIC_Addon_HousesOfRulers,"The priests and guardians of the dead had their quarters close to each other. I should be able to find them in the southwest."); 
-	Log_AddEntry (TOPIC_Addon_HousesOfRulers,"The healers had their house of convalescence in the southeast."); 
 };
 
 func void DIA_Addon_Riordian_WhereAreHouses_Info ()

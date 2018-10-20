@@ -163,13 +163,13 @@ func void DIA_Mortis_CanTeach_Info ()
 	{
 		AI_Output (self, other, "DIA_Mortis_CanTeach_13_01"); //Got it. If you've got enough experience, I can help you with your training.
 		Mortis_TeachSTR = TRUE;
+		Log_CreateTopic (Topic_CityTeacher, LOG_NOTE);
+		B_LogEntry (Topic_CityTeacher, "Mortis, the city guardsman, can help me train my strength.");
 	}
 	else 
 	{
 		AI_Output (self, other, "DIA_Mortis_CanTeach_13_02"); //Of course you do. But so long as you aren't one of us or a paladin, I won't help you.
 	};
-	Log_CreateTopic (Topic_CityTeacher, LOG_NOTE);
-	B_LogEntry (Topic_CityTeacher, "Mortis, the city guardsman, can help me train my strength.");
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info TEACH

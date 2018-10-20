@@ -533,10 +533,13 @@ INSTANCE ItWr_LuciasLoveLetter_Addon		(C_Item)
 func void Use_LuciasLoveLetter_Addon ()
 {   
  
-	Log_CreateTopic (TOPIC_Addon_Lucia, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_Addon_Lucia, LOG_RUNNING);
-	B_LogEntry (TOPIC_Addon_Lucia,"Lucia wrote a farewell letter to Elvrich. That should interest him."); 
-	MIS_LuciasLetter = LOG_RUNNING;
+	if(MIS_LuciasLetter == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Addon_Lucia, LOG_MISSION);
+		Log_SetTopicStatus(TOPIC_Addon_Lucia, LOG_RUNNING);
+		B_LogEntry (TOPIC_Addon_Lucia,"Lucia wrote a farewell letter to Elvrich. That should interest him."); 
+		MIS_LuciasLetter = LOG_RUNNING;
+	};
 	var int nDocID;
 		
 			nDocID = 	Doc_Create		()			  ;							// DocManager 

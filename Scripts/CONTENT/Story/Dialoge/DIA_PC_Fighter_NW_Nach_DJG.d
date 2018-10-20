@@ -70,6 +70,7 @@ func int DIA_GornNW_nach_DJG_KnowWhereEnemy_Condition ()
 		return TRUE;
 	};
 };
+var int SCToldGornHeKnowWhereEnemy;
 func void DIA_GornNW_nach_DJG_KnowWhereEnemy_Info ()
 {
 	AI_Output			(other, self, "DIA_GornNW_nach_DJG_KnowWhereEnemy_15_00"); //I could use you and your axe.
@@ -77,10 +78,13 @@ func void DIA_GornNW_nach_DJG_KnowWhereEnemy_Info ()
 	AI_Output			(other, self, "DIA_GornNW_nach_DJG_KnowWhereEnemy_15_02"); //Would you sail to an island with me and kick some enemy butt?
 	AI_Output			(self, other, "DIA_GornNW_nach_DJG_KnowWhereEnemy_12_03"); //(laughs) Sure. Right away. Just tell me what to do.
 	
-	Log_CreateTopic (TOPIC_Crew, LOG_MISSION);   
-	Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING); 
-	B_LogEntry (TOPIC_Crew,"Gorn was all for it when I told him about the island. If I need an axe, I should take him along.");
-		
+	if(SCToldGornHeKnowWhereEnemy == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Crew, LOG_MISSION);   
+		Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING); 
+		B_LogEntry (TOPIC_Crew,"Gorn was all for it when I told him about the island. If I need an axe, I should take him along.");
+		SCToldGornHeKnowWhereEnemy = TRUE;
+	};
 	if (crewmember_count >= Max_Crew)
 	{
 		AI_Output			(other,self , "DIA_GornNW_nach_DJG_KnowWhereEnemy_15_04"); //At the moment, my crew is already complete, but I'll think about taking you on board, too.

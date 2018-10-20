@@ -249,6 +249,7 @@ func int DIA_Lobart_BuyClothes_Condition ()
 	};
 };
 
+var int DIA_Lobart_BuyClothes_Once;
 func void DIA_Lobart_BuyClothes_Info ()
 {
 	Wert_LobartsRuestung = 80; //initialisieren
@@ -289,13 +290,17 @@ func void DIA_Lobart_BuyClothes_Info ()
 	// ------------------------------
 	// ------ Wert der Rüstung ------
 	// ------------------------------
-		B_Say_Gold (self, other, Wert_LobartsRuestung);
-		
-		if (Wert_LobartsRuestung == 30) 
+	B_Say_Gold (self, other, Wert_LobartsRuestung);
+	
+	if (Wert_LobartsRuestung == 30) 
+	{
+		AI_Output (self, other, "DIA_Lobart_GOLD_05_06"); //It's not going to get any cheaper.
+		if(DIA_Lobart_BuyClothes_Once == FALSE)
 		{
-			AI_Output (self, other, "DIA_Lobart_GOLD_05_06"); //It's not going to get any cheaper.
 			B_LogEntry (TOPIC_Kleidung,"But he won't sell them to me for less than 30 gold pieces.");
+			DIA_Lobart_BuyClothes_Once = TRUE;
 		};
+	};
 
 	Info_ClearChoices	(DIA_Lobart_BuyClothes);
 	Info_AddChoice		(DIA_Lobart_BuyClothes, "That's still too expensive.", DIA_Lobart_BuyClothes_NotYet );
@@ -992,7 +997,7 @@ func void DIA_Lobart_VINOTOT_Info ()
 
 	if (Npc_IsDead(Vino))	
 	{
-		AI_Output			(other, self, "DIA_Lobart_VINOTOT_15_01"); //He is dead.
+		AI_Output			(other, self, "DIA_Lobart_VINOTOT_15_01"); //He's dead.
 	}
 	else
 	{

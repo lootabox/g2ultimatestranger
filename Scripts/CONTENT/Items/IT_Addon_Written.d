@@ -70,7 +70,7 @@ func void Use_Heilrezept_04 ()
 		
 		if Npc_IsPlayer (self)
 		{
-			if (PLAYER_TALENT_ALCHEMY[POTION_Health_03] == TRUE)
+			if (PLAYER_TALENT_ALCHEMY[POTION_Health_03] == TRUE && PLAYER_TALENT_ALCHEMY[POTION_Health_04] == FALSE)
 			{
 				PLAYER_TALENT_ALCHEMY[POTION_Health_04] = TRUE;
 				Snd_Play ("LevelUP");
@@ -128,7 +128,7 @@ func void Use_Manarezept_04 ()
 		
 		if Npc_IsPlayer (self)
 		{
-			if (PLAYER_TALENT_ALCHEMY[POTION_Mana_03] == TRUE)
+			if (PLAYER_TALENT_ALCHEMY[POTION_Mana_03] == TRUE && PLAYER_TALENT_ALCHEMY[POTION_Mana_04] == FALSE)
 			{
 				PLAYER_TALENT_ALCHEMY[POTION_Mana_04] = TRUE;
 				Snd_Play ("LevelUP");

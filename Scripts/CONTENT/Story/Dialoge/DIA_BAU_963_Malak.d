@@ -503,12 +503,16 @@ func int DIA_Malak_BACKTOBENGAR_Condition ()
 		};
 };
 
+var int DIA_Malak_BACKTOBENGAR_Once;
 func void DIA_Malak_BACKTOBENGAR_Info ()
 {
 	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_15_00"); //Bengar needs you. He wants you to come back to his farm.
 	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_08_01"); //I'm not crazy. As long as we have to live defenseless on the farm, I'm not budging an inch from here!
-	
-	B_LogEntry (TOPIC_BengarALLEIN,"Malak won't return to Bengar's farm while it's unprotected."); 
+	if(DIA_Malak_BACKTOBENGAR_Once == FALSE)
+	{
+		B_LogEntry (TOPIC_BengarALLEIN,"Malak won't return to Bengar's farm while it's unprotected."); 
+		DIA_Malak_BACKTOBENGAR_Once = TRUE;
+	};
 
 	if (MIS_BengarsHelpingSLD == LOG_SUCCESS)
 	{

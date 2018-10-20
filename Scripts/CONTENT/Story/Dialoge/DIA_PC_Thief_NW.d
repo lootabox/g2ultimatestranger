@@ -628,6 +628,7 @@ func int DIA_DiegoNW_KnowWhereEnemy_Condition ()
 	};
 };
 
+var int SCToldDiegoHeKnowWhereEnemy;
 func void DIA_DiegoNW_KnowWhereEnemy_Info ()
 {
 	AI_Output			(other, self, "DIA_DiegoNW_KnowWhereEnemy_15_00"); //I'm going to leave Khorinis.
@@ -635,10 +636,13 @@ func void DIA_DiegoNW_KnowWhereEnemy_Info ()
 	AI_Output			(self, other, "DIA_DiegoNW_KnowWhereEnemy_11_02"); //I could instruct you in archery, lock picking, and dexterity.
 	AI_Output			(self, other, "DIA_DiegoNW_KnowWhereEnemy_11_03"); //Also, I'm sure you can use a decent thief.
 	
-	Log_CreateTopic (TOPIC_Crew, LOG_MISSION);   	
-	Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING);
-	B_LogEntry (TOPIC_Crew,"Of course, Diego wants to come along. The way he sees it, the sooner he leaves Khorinis, the better. He could show me how to become more dexterous, and train me to be a good archer. He can also teach me how to pick locks.");	
-		
+	if(SCToldDiegoHeKnowWhereEnemy == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Crew, LOG_MISSION);   	
+		Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING);
+		B_LogEntry (TOPIC_Crew,"Of course, Diego wants to come along. The way he sees it, the sooner he leaves Khorinis, the better. He could show me how to become more dexterous, and train me to be a good archer. He can also teach me how to pick locks.");	
+		SCToldDiegoHeKnowWhereEnemy = TRUE;
+	};
 	if (crewmember_count >= Max_Crew)
 	{
 		AI_Output			(other,self , "DIA_DiegoNW_KnowWhereEnemy_15_04"); //I'll think about it. At the moment, my crew is already complete.

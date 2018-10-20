@@ -218,6 +218,7 @@ FUNC VOID DIA_Rod_WannaJoin_Info()
 		
 		AI_Output (self, other, "DIA_Rod_WannaJoin_06_06"); //As far as I'm concerned, you're in.
 		B_LogEntry (TOPIC_SLDRespekt,"I'll get Rod's vote if I want to join the mercenaries.");
+		DIA_Rod_WannaJoin.permanent = FALSE;
 	}
 	else
 	{
@@ -368,6 +369,7 @@ FUNC INT DIA_Rod_Wette_Condition()
 	};
 };
  
+var int Rod_Gold;
 FUNC VOID DIA_Rod_Wette_Info()
 {	
 	AI_Output (other, self, "DIA_Rod_Wette_15_00"); //I bet I can handle your sword!
@@ -378,7 +380,11 @@ FUNC VOID DIA_Rod_Wette_Info()
 	Info_AddChoice (DIA_Rod_Wette, "No.", DIA_Rod_Wette_No);
 	Info_AddChoice (DIA_Rod_Wette, "Sure.", DIA_Rod_Wette_Yes);
 	
-	B_LogEntry (Topic_RodWette,"Rod's wagering 30 pieces of gold that I can't hold up his sword.");
+	if(Rod_Gold == FALSE)
+	{
+		B_LogEntry (Topic_RodWette,"Rod's wagering 30 pieces of gold that I can't hold up his sword.");
+		Rod_Gold = TRUE;
+	};
 };
 
 func void DIA_Rod_Wette_No()

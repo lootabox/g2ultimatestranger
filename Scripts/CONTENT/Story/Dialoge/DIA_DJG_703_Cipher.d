@@ -348,14 +348,17 @@ func int DIA_CipherDJG_WHATNEXT_Condition ()
 	};
 };
 
+var int DIA_CipherDJG_WHATNEXT_Once;
 func void DIA_CipherDJG_WHATNEXT_Info ()
 {
 	AI_Output	(other, self, "DIA_CipherDJG_WHATNEXT_15_00"); //The swamp dragon is dead! What are you going to do now?
 	AI_Output	(self, other, "DIA_CipherDJG_WHATNEXT_07_01"); //No idea. I haven't thought about it, really. At any rate, you could now return to Khorinis as a hero.
 	AI_Output	(self, other, "DIA_CipherDJG_WHATNEXT_07_02"); //I bet there's a pile to be made out of this. Think about it.
-
-	B_LogEntry (TOPIC_Dragonhunter,"When the swamp dragon was dead, Cipher said he'd now make big bucks as the great 'hero'. Yeah right. We'll see."); 
-
+	if(DIA_CipherDJG_WHATNEXT_Once == FALSE)
+	{
+		B_LogEntry (TOPIC_Dragonhunter,"When the swamp dragon was dead, Cipher said he'd now make big bucks as the great 'hero'. Yeah right. We'll see."); 
+		DIA_CipherDJG_WHATNEXT_Once = TRUE;
+	};
 	AI_StopProcessInfos	(self);
 };
 

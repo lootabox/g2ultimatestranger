@@ -235,8 +235,11 @@ FUNC VOID DIA_Ignaz_Danach_Info()
 	AI_Output (self, other, "DIA_Ignaz_Danach_14_05");//I could also give you some useful things if you want.
 	
 	Ignaz_TeachAlchemy = TRUE;
-	Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
-	B_LogEntry (Topic_CityTeacher,"Ignaz can show me some recipes for brewing potions. He lives in the harbor district.");
+	if(DIA_Kardif_Lernen_permanent == FALSE)
+	{
+		Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
+		B_LogEntry (Topic_CityTeacher,"Ignaz can show me some recipes for brewing potions. He lives in the harbor district.");
+	};
 	MIS_Ignaz_Charm = LOG_SUCCESS;
 	B_GivePlayerXP (XP_MIS_Ignaz_Charm);
 	

@@ -1545,6 +1545,7 @@ func int DIA_Bennet_KnowWhereEnemy_Condition ()
 		return TRUE;
 	};
 };
+var int SCToldBennetHeKnowWhereEnemy;
 func void DIA_Bennet_KnowWhereEnemy_Info ()
 {
 	AI_Output			(other, self, "DIA_Bennet_KnowWhereEnemy_15_00"); //I need to go to an island. I could use a smith.
@@ -1552,10 +1553,13 @@ func void DIA_Bennet_KnowWhereEnemy_Info ()
 	AI_Output			(other, self, "DIA_Bennet_KnowWhereEnemy_15_02"); //Yes. What do you say? At any rate, that would get you out of here.
 	AI_Output			(self, other, "DIA_Bennet_KnowWhereEnemy_06_03"); //Better than Onar's farm. Boy, even hell can't be THAT bad. Count me in.
 	
-	Log_CreateTopic (TOPIC_Crew, LOG_MISSION);   
-	Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING); 
-	B_LogEntry (TOPIC_Crew,"Bennet could leave at once. His skill as a smith is unrivalled. I'm sure I could learn a few things from him.");
-		
+	if(SCToldBennetHeKnowWhereEnemy == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Crew, LOG_MISSION);   
+		Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING); 
+		B_LogEntry (TOPIC_Crew,"Bennet could leave at once. His skill as a smith is unrivalled. I'm sure I could learn a few things from him.");
+		SCToldBennetHeKnowWhereEnemy = TRUE;
+	};
 	if (crewmember_count >= Max_Crew)
 	{
 		AI_Output			(other,self , "DIA_Bennet_KnowWhereEnemy_15_04"); //My crew is already complete at the moment.

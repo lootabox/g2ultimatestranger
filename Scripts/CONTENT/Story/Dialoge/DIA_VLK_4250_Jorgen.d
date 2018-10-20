@@ -414,13 +414,11 @@ func void DIA_Jorgen_BEMYCAPTAIN_Info ()
 		AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN_07_02"); //Errh... there's only a minor problem. I ate those novices out of half their larder.
 		AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN_07_03"); //They're hopping mad, those fellows. I don't think that head magician will let me leave here just like that.
 		DIA_Jorgen_BEMYCAPTAIN_OneTime = TRUE;
+		Log_CreateTopic (TOPIC_Captain, LOG_MISSION);                                                                                                                                                                                                                                            
+		Log_SetTopicStatus(TOPIC_Captain, LOG_RUNNING);                                                                                                                                                                                                                                          
+		B_LogEntry (TOPIC_Captain,"Jorgen is willing to be my captain, but I'd have to pay his debts at the monastery first.");
 	};
 	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN_07_04"); //First, I have to work off my debt with Pyrokar. I'm sorry.
-	
-	Log_CreateTopic (TOPIC_Captain, LOG_MISSION);                                                                                                                                                                                                                                            
-	Log_SetTopicStatus(TOPIC_Captain, LOG_RUNNING);                                                                                                                                                                                                                                          
-    B_LogEntry (TOPIC_Captain,"Jorgen is willing to be my captain, but I'd have to pay his debts at the monastery first.");
-
 };
 
 ///////////////////////////////////////////////////////////////////////

@@ -837,13 +837,13 @@ func void DIA_Addon_Lares_PeopleMissing_TellMe()
 			Log_CreateTopic (TOPIC_Addon_WhoStolePeople, LOG_MISSION);
 			Log_SetTopicStatus(TOPIC_Addon_WhoStolePeople, LOG_RUNNING);
 			B_LogEntry (TOPIC_Addon_WhoStolePeople, LogText_Addon_SCKnowsMisspeapl); 
+
+			Log_CreateTopic (TOPIC_Addon_MissingPeople, LOG_MISSION);
+			Log_SetTopicStatus(TOPIC_Addon_MissingPeople, LOG_RUNNING);
+			B_LogEntry (TOPIC_Addon_MissingPeople, LogText_Addon_WilliamMissing); 
+
+			SC_HearedAboutMissingPeople = TRUE;
 		};
-
-	Log_CreateTopic (TOPIC_Addon_MissingPeople, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_Addon_MissingPeople, LOG_RUNNING);
-	B_LogEntry (TOPIC_Addon_MissingPeople, LogText_Addon_WilliamMissing); 
-
-	SC_HearedAboutMissingPeople = TRUE;
 };
 func void DIA_Addon_Lares_PeopleMissing_MIL()
 {
@@ -2087,8 +2087,11 @@ func void DIA_Lares_DEX_Info ()
 
 	Lares_TeachDEX = TRUE;
 	
-	Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
-	B_LogEntry (Topic_CityTeacher,"Lares can help me become stronger and more dextrous.");
+	if(DIA_Kardif_Lernen_permanent == FALSE)
+	{
+		Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
+		B_LogEntry (Topic_CityTeacher,"Lares can help me become stronger and more dextrous.");
+	};
 };
 // ------------------------------------------------------------
 // 			  				   TEACH 

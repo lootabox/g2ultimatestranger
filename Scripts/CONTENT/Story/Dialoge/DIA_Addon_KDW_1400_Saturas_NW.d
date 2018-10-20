@@ -558,7 +558,7 @@ func void DIA_Addon_Saturas_OpenPortal_Info ()
 			B_UseFakeScroll ();
 			if (Vatras2Saturas_FindRaven_Open == TRUE)
 			{
-				AI_Output	(self, other, "DIA_Addon_Saturas_OpenPortal_14_04"); //(annoyed) I see. And of course you couldn't restrain yourself and you absolutely had to open it, yes?
+				AI_Output	(self, other, "DIA_Addon_Saturas_OpenPortal_14_04"); //(annoyed) I see. Of course you couldn't restrain yourself and you absolutely had to open it, yes?
 				AI_Output	(other, self, "DIA_Addon_Saturas_OpenPortal_15_05"); //Well, uhh...
 				AI_Output	(self, other, "DIA_Addon_Saturas_OpenPortal_14_06"); //(threatening) I hope for your sake that my still very delicate trust in you will not be shaken.
 			}
@@ -594,8 +594,11 @@ func void DIA_Addon_Saturas_OpenPortal_Info ()
 	else
 	{
 		AI_Output	(self, other, "DIA_Addon_Saturas_OpenPortal_14_10"); //As long as Vatras has not given me a clear sign that you are to be trusted, I shall keep the ring myself.
-		Saturas_WillVertrauensBeweis = TRUE;
-		B_LogEntry (TOPIC_Addon_Ornament,"Saturas won't give me the ring as long as he hasn't had a sign from Vatras that I can be trusted."); 
+		if(Saturas_WillVertrauensBeweis == FALSE)
+		{
+			Saturas_WillVertrauensBeweis = TRUE;
+			B_LogEntry (TOPIC_Addon_Ornament,"Saturas won't give me the ring as long as he hasn't had a sign from Vatras that I can be trusted."); 
+		};
 		AI_StopProcessInfos (self);		
 	};
 };

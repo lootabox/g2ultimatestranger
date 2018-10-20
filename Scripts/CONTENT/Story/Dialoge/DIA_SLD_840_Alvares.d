@@ -42,11 +42,13 @@ func int DIA_Alvares_HAUAB_Condition ()
 };
 func void DIA_Alvares_HAUAB_Info ()
 {
-	Akils_SLDStillthere = TRUE;
 	AI_Output (self, other, "DIA_Alvares_HAUAB_11_00"); //Whatever it is that brought you here - you had better forget it and hit the road.
-	Log_CreateTopic (TOPIC_AkilsSLDStillthere, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_AkilsSLDStillthere, LOG_RUNNING);
-	B_LogEntry (TOPIC_AkilsSLDStillthere,"Akil's farm is threatened by mercenaries."); 
+	if (Akils_SLDStillthere == FALSE) {
+		Log_CreateTopic (TOPIC_AkilsSLDStillthere, LOG_MISSION);
+		Log_SetTopicStatus(TOPIC_AkilsSLDStillthere, LOG_RUNNING);
+		B_LogEntry (TOPIC_AkilsSLDStillthere,"Akil's farm is threatened by mercenaries.");
+		Akils_SLDStillthere = TRUE;
+	};
 	AI_StopProcessInfos (self);
 };
 ///////////////////////////////////////////////////////////////////////

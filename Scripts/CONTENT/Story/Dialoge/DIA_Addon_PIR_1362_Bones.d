@@ -171,9 +171,16 @@ FUNC VOID DIA_Addon_Bones_Teacher_Info()
 	AI_Output (self ,other,"DIA_Addon_Bones_Teacher_01_11"); //But I'm sure that Alligator Jack or Samuel could still show you a trick or two.
 	Knows_HenrysEntertrupp = TRUE;
 	
-	Log_CreateTopic (Topic_Addon_PIR_Teacher,LOG_NOTE);
-	B_LogEntry (Topic_Addon_PIR_Teacher,Log_Text_Addon_HenryTeach);
-	B_LogEntry (Topic_Addon_PIR_Teacher,Log_Text_Addon_MorganTeach);
+	if(Henry_Addon_TeachPlayer == FALSE)
+	{
+		Log_CreateTopic (Topic_Addon_PIR_Teacher,LOG_NOTE);
+		B_LogEntry (Topic_Addon_PIR_Teacher,Log_Text_Addon_HenryTeach);
+	};
+	if(Morgan_Addon_TeachPlayer == FALSE)
+	{
+		Log_CreateTopic (Topic_Addon_PIR_Teacher,LOG_NOTE);
+		B_LogEntry (Topic_Addon_PIR_Teacher,Log_Text_Addon_MorganTeach);
+	};
 
 };
 
@@ -230,6 +237,7 @@ FUNC INT DIA_Addon_Bones_WantArmor_Condition()
 	};	
 };
 
+var int DIA_Addon_Bones_WantArmor_Once;
 FUNC VOID DIA_Addon_Bones_WantArmor_Info()
 {	
 	AI_Output (other,self ,"DIA_Addon_Bones_WantArmor_15_00"); //Give me that bandit's armor.
@@ -240,7 +248,11 @@ FUNC VOID DIA_Addon_Bones_WantArmor_Info()
 		AI_Output (self ,other,"DIA_Addon_Bones_WantArmor_01_03"); //I can't give it to you. Especially not now that he's come back.
 	};
 	
-	B_LogEntry (TOPIC_Addon_BDTRuestung,"Bones won't give me the armor without permission from Greg."); 
+	if(DIA_Addon_Bones_WantArmor_Once == FALSE)
+	{
+		B_LogEntry (TOPIC_Addon_BDTRuestung,"Bones won't give me the armor without permission from Greg."); 
+		DIA_Addon_Bones_WantArmor_Once = TRUE;
+	};
 };
 
 //*********************************************************

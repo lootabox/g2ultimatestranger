@@ -157,8 +157,11 @@ FUNC VOID DIA_Carl_Lernen_Info()
 	AI_Output (self, other, "DIA_Carl_Lernen_05_03");//If you want to learn that, then go see Harad. He sure knows how to forge weapons!
 	AI_Output (self, other, "DIA_Carl_Lernen_05_04");//But if you want to train your muscles a bit, I can help you with that.
 	
-	Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
-	B_LogEntry (Topic_CityTeacher,"Carl, the smith in the harbor district, can help me become stronger.");
+	if(DIA_Kardif_Lernen_permanent == FALSE)
+	{
+		Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
+		B_LogEntry (Topic_CityTeacher,"Carl, the smith in the harbor district, can help me become stronger.");
+	};
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Für's lernen bezahlen 

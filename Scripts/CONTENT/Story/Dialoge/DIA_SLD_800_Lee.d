@@ -638,8 +638,11 @@ FUNC VOID DIA_Lee_JoinNOW_Info()
 		{
 			AI_Output (self, other, "DIA_Lee_JoinNOW_04_09"); //Good, then go see Onar now. I've already talked with him.
 			AI_Output (self, other, "DIA_Lee_JoinNOW_04_10"); //But you'll have to negotiate your pay yourself.
-			Lee_SendToOnar = TRUE;
-			B_LogEntry (TOPIC_BecomeSLD,"All I need now is Onar's approval.");
+			if (Lee_SendToOnar == FALSE)
+			{
+				B_LogEntry (TOPIC_BecomeSLD,"All I need now is Onar's approval.");
+				Lee_SendToOnar = TRUE;
+			};
 		}
 		else //Onar ist einverstanden
 		{
@@ -1965,16 +1968,20 @@ func int DIA_Lee_KnowWhereEnemy_Condition ()
 		return TRUE;
 	};
 };
+var int SCToldLeeHeKnowWhereEnemy;
 func void DIA_Lee_KnowWhereEnemy_Info ()
 {
 	AI_Output			(other, self, "DIA_Lee_KnowWhereEnemy_15_00"); //Would you accompany me on the ship?
 	AI_Output			(self, other, "DIA_Lee_KnowWhereEnemy_04_01"); //Are you kidding? Of course I'm in. I have a few old scores to settle on the mainland.
 	AI_Output			(self, other, "DIA_Lee_KnowWhereEnemy_04_02"); //Besides, I can teach you one and two-handed combat. I could be very useful to you.
-	
-	Log_CreateTopic (TOPIC_Crew, LOG_MISSION);                                                                                        	                 
-	Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING); 	                                                                                  	                 
-	B_LogEntry (TOPIC_Crew,"Lee's eager to see the mainland again. He's offered to support me. I'd be hard put to find as good a combat trainer as he is anywhere else.");
-	
+	if(SCToldLeeHeKnowWhereEnemy == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Crew, LOG_MISSION);                                                                                        	                 
+		Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING); 	                                                                                  	                 
+		B_LogEntry (TOPIC_Crew,"Lee's eager to see the mainland again. He's offered to support me. I'd be hard put to find as good a combat trainer as he is anywhere else.");
+		SCToldLeeHeKnowWhereEnemy = TRUE;
+	};
+
 	if (crewmember_count >= Max_Crew)
 	{
 		AI_Output			(other,self , "DIA_Lee_KnowWhereEnemy_15_03"); //The ship is full now, but I'll be back if there is an opening.

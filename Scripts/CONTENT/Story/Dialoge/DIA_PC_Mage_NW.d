@@ -529,10 +529,10 @@ func void DIA_MiltenNW_KnowWhereEnemy_Info ()
 {
 	AI_Output			(other, self, "DIA_MiltenNW_KnowWhereEnemy_15_00"); //I know now where the enemy is hiding. It's a small island, not far from here.
 	AI_Output			(self, other, "DIA_MiltenNW_KnowWhereEnemy_03_01"); //This is our big chance. We have to set out at once and destroy evil forever.
-	SCToldMiltenHeKnowWhereEnemy = TRUE;
 	
 	Log_CreateTopic (TOPIC_Crew, LOG_MISSION);  
-  	Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING);
+	Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING);
+	
   	if ((Npc_IsDead(DiegoNW))== FALSE)
   	{
  		AI_Output			(self, other, "DIA_MiltenNW_KnowWhereEnemy_03_02"); //Have you talked to Diego about it? I think he would want to accompany you.
@@ -552,8 +552,11 @@ func void DIA_MiltenNW_KnowWhereEnemy_Info ()
  	};
 	
 	AI_Output			(self, other, "DIA_MiltenNW_KnowWhereEnemy_03_05"); //I also know my role in all this. I can increase your mana and be helpful in constructing runes once we face the enemy. When do we start?
-	
-	B_LogEntry (TOPIC_Crew,"If Milten comes with me, he can teach me to create runes and increase my mana.");
+	if(SCToldMiltenHeKnowWhereEnemy == FALSE)
+	{
+		B_LogEntry (TOPIC_Crew,"If Milten comes with me, he can teach me to create runes and increase my mana.");
+		SCToldMiltenHeKnowWhereEnemy = TRUE;
+	};
 	
 	if (crewmember_count >= Max_Crew)
 	{

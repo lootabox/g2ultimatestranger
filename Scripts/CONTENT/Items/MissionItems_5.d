@@ -50,9 +50,8 @@ func void Use_XardasLetterToOpenBook ()
 	if(MIS_Xardas_SCCanOpenIrdorathBook == FALSE)
 	{
 		B_LogEntry (TOPIC_BuchHallenVonIrdorath,"In his letter, Xardas informed me what words to speak to open the book THE HALLS OF IRDORATH."); 
+		MIS_Xardas_SCCanOpenIrdorathBook  = TRUE; //Joly:  Spieler kann nun das Buch im Kloster lesen und findet so die geheime Bibliothek!
 	};
-
-	MIS_Xardas_SCCanOpenIrdorathBook  = TRUE;	//Joly:  Spieler kann nun das Buch im Kloster lesen und findet so die geheime Bibliothek!
 };
 
 
@@ -158,9 +157,8 @@ FUNC VOID Use_HallsofIrdorath_Open ()
 	if (ItWr_SCReadsHallsofIrdorath == FALSE)
 	{
 		B_LogEntry (TOPIC_BuchHallenVonIrdorath,"I have read Xardas' book. It mentions a secret library. It must be somewhere here in the cellar of the monastery."); 
+		ItWr_SCReadsHallsofIrdorath = TRUE;
 	};
-	
-	ItWr_SCReadsHallsofIrdorath = TRUE;
 		
 	var int nDocID;
 		
@@ -388,9 +386,8 @@ FUNC VOID Use_Seamap_Irdorath ()
 	    Log_SetTopicStatus(TOPIC_SHIP, LOG_RUNNING);                                                                 
 	    B_LogEntry (TOPIC_SHIP,"It appears I must reach the enemy's strange island. But for that I need a ship, a crew and a captain.");
 		B_GivePlayerXP (XP_SCKnowsWayToIrdorath);
+		MIS_SCKnowsWayToIrdorath  = TRUE;
 	};
-
-	MIS_SCKnowsWayToIrdorath  = TRUE;
 };
 
 //**********************************************************************

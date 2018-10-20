@@ -91,8 +91,11 @@ func void DIA_Brahim_GREET_Info ()
 	AI_Output (self, other, "DIA_Brahim_GREET_07_02"); //Since you're new here, maybe you could use a map of the city.
 	AI_Output (self, other, "DIA_Brahim_GREET_07_03"); //It's quite affordable - and very useful until you know your way around.
 	
-	Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
-	B_LogEntry (Topic_CityTrader,"Brahim draws and sells maps near the harbor.");
+	if(DIA_Kardif_Lernen_permanent == FALSE)
+	{
+		Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
+		B_LogEntry (Topic_CityTrader,"Brahim draws and sells maps near the harbor.");
+	};
 };
 
 ///////////////////////////////////////////////////////////////////////
