@@ -23,6 +23,8 @@ Changed Buster to give reduced gold for each Shadowbeast Horn, but still way mor
 
 NPCs:
 Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Lobart, Karras, Lares, Parlan, Pyrokar, Ramirez, Raoul, Saturas, Scatty.
+Fixed logical issues with dialogue of Diego, Xardas.
+
 Fixed XP award for pickpocketing Valentino, Salandril, Cavalorn, Dobar, Engor, Franco and Francis.
 Fixed XP award for recruiting Lares and Lester.
 
@@ -66,6 +68,10 @@ Talbin wields a Wolf Blade instead of a branch.
 Thekla now grants previously omitted XP bonus for defeating Bullco.
 Vatras does not sell Almanacs of the Possessed given to him
 
+Lares's dialog has 5 more previously unused dialogue lines.
+Diego's dialog has 6 more previously unused dialogue lines or 15 more if player never met him in Valley of Mines.
+Xardas' dialog has 3 more previously unused dialogue lines.
+
 Following actions no longer create extra journal updates:
 * Reading Cornelius' Diary, Xardas' Letter, Lucia's farewell letter, almanac in the secret library, Black Magician's Scroll, novice black magician's Diary, "Pure mana" and "Pure health".
 * Akil, Alvares, Kati and Randolph talked to while mercenaries threaten the farm.
@@ -93,8 +99,8 @@ Following actions no longer create extra journal updates:
 * Saturas talked to about activating portal before receiving letter from Vatras.
 
 Random:
+Addon armor have correct material tag.
 Black Ore effect ends on using transformation scrolls.
-Changed few addon armor material to metal from leather.
 Goblins and Skeletons do not create additional weapons in their inventory.
 Gold mining skill does not improve by mining empty veins.
 Magic Runes are removed from frozen corpses.

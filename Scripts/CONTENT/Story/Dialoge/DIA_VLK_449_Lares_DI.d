@@ -82,7 +82,14 @@ FUNC INT DIA_Lares_DI_Training_Condition()
 FUNC VOID DIA_Lares_DI_Training_Info()
 {	
 	AI_Output (other,self ,"DIA_Lares_DI_Training_15_00"); //Teach me your abilities.
-	AI_Output (self ,other,"DIA_Lares_DI_Training_09_01"); //No problem.
+	if(!Npc_GetTalentSkill(other,NPC_TALENT_SNEAK) && (other.aivar[REAL_TALENT_1H] < 100))
+	{
+		AI_Output (self ,other,"DIA_Lares_DI_Training_09_01"); //No problem.
+	}
+	else
+	{
+		AI_Output(self,other,"DIA_Lares_Dex_09_01");	//Sure, if you want. I'll help you become more dexterous.
+	};
 	
 	Info_ClearChoices (DIA_Lares_DI_Training);
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);

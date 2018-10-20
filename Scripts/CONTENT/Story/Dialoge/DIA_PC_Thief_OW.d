@@ -72,8 +72,6 @@ FUNC INT DIA_DiegoOw_Beweise_Condition()
 };
 FUNC VOID DIA_DiegoOw_Beweise_Info()
 {	
-		//AI_Output (other ,self,"DIA_DiegoOw_Silvestro_15_00");//Was weiﬂt du von Silvestros Erz?
-	
 	AI_Output (other ,self,"DIA_DiegoOw_Hallo_15_11"); //Listen, I need this proof.
 		
 	if (MIS_ScoutMine == LOG_RUNNING)
@@ -91,6 +89,11 @@ FUNC VOID DIA_DiegoOw_Beweise_Info()
 		AI_Output (other ,self,"DIA_DiegoOw_Garond_15_00");//I'm traveling on behalf of Garond. He needs to know how much ore has been mined so far.
 		AI_Output (self ,other,"DIA_DiegoOw_Garond_11_01");//And then he will give you the proof you want?
 		AI_Output (other ,self,"DIA_DiegoOw_Garond_15_02");//That's right. So - can you tell me anything about it?
+		if(Npc_KnowsInfo(other,DIA_Parcival_Diego))
+		{
+			AI_Output(self,other,"DIA_DiegoOw_Garond_11_03");	//Sure, what do you want to know?
+			AI_Output (other ,self,"DIA_DiegoOw_Silvestro_15_00");//What do you know about Silvestro's ore?
+		};
 	}
 	else
 	{

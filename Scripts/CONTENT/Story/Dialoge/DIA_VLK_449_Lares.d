@@ -174,6 +174,9 @@ FUNC VOID DIA_Lares_HALLO_YES()
 		AI_Output (self, other, "B_Lares_AboutLee_09_00"); //I got out of the colony with him then. Just after the Barrier was destroyed.
 		AI_Output (self, other, "B_Lares_AboutLee_09_01"); //He and his boys are now on the farm of Onar the landowner.
 		AI_Output (self, other, "B_Lares_AboutLee_09_02"); //He made a deal with the farmer. He and his boys defend the farm, and Onar feeds them in return.
+
+		AI_Output (self, other, "DIA_Lares_WhyInCity_09_03"); //Why did YOU come to the city?
+		AI_Output (other, self, "DIA_Lares_Alternative_15_00"); //Do I have a choice?
 	};
 // ------------------------------	
 
@@ -1016,9 +1019,9 @@ func int DIA_Lares_Paladine_Condition ()
 };
 func void DIA_Lares_Paladine_Info ()
 {
-	AI_Output (other, self, "DIA_Lares_Paladine_15_00"); //I must talk to the paladins, by all means!
+	AI_Output (other, self, "DIA_Lares_Paladine_15_00"); //I must talk to the paladins, by any means!
 	AI_Output (self, other, "DIA_Lares_Paladine_09_01"); //What do you want from THEM?
-	AI_Output (other, self, "DIA_Lares_Paladine_15_02"); //They've got a powerful amulet, the Eye of Innos. I need to have it.
+	AI_Output (other, self, "DIA_Lares_Paladine_15_02"); //They've got a powerful amulet, the Eye of Innos. I must have it.
 	AI_Output (self, other, "DIA_Lares_Paladine_09_03"); //And you think they'll give it to you? You'll never get into the upper end of town.
 	if (!Npc_KnowsInfo (other, DIA_Addon_Lares_Vatras))
 	{
@@ -1026,9 +1029,8 @@ func void DIA_Lares_Paladine_Info ()
 		AI_Output (self, other, "DIA_Lares_Paladine_09_05"); //Sure, if you want to ingratiate yourself with the citizens or play errand boy for the militia ...
 	};
 	
-	//AI_Output (other, self, "DIA_Lares_Alternative_15_00"); //Hab' ich eine Alternative?
-	//AI_Output (self, other, "DIA_Lares_Alternative_09_01"); //Wenn ich du wäre, würde ich zu Onars Hof gehen und mit Lee reden.
-	//AI_Output (self, other, "DIA_Lares_Alternative_09_02"); //Ich bin mir sicher, wir finden einem Weg, dich ins obere Viertel zu bringen.
+	//AI_Output (self, other, "DIA_Lares_Alternative_09_01"); //If I were you, I'd go to Onar's farm and talk to Lee.
+	//AI_Output (self, other, "DIA_Lares_Alternative_09_02"); //I'm sure we'll find a way to get you into the upper end of town.
 };	
 
 // ------------------------------------------------------------
@@ -1205,7 +1207,6 @@ func void DIA_Lares_AboutSld_WhyNotYou()
 	AI_Output (other, self, "DIA_Lares_WhyInCity_15_00"); //Why aren't YOU with Lee and his mercenaries?
 	AI_Output (self, other, "DIA_Lares_WhyInCity_09_01"); //But I am! Just not on the farm.
 	AI_Output (self, other, "DIA_Lares_WhyInCity_09_02"); //You could say I'm our outpost in the city. We don't want the ship to sail without us.
-	//AI_Output (self, other, "DIA_Lares_WhyInCity_09_03"); //Warum bist DU in die Stadt gekommen?
 	Lares_WorkForLee = TRUE;
 	
 	Info_AddChoice (DIA_Lares_AboutSld, "What ship were you talking about?", DIA_Lares_AboutSld_Schiff);
@@ -1216,15 +1217,20 @@ func void DIA_Lares_AboutSld_Schiff()
 	AI_Output (self, other, "DIA_Lares_Schiff_09_01"); //It's on the open sea harbor, behind the cliffs. Lee and a few of his people really want to get away from here.
 	AI_Output (self, other, "DIA_Lares_Schiff_09_02"); //But that could take a while...
 	AI_Output (other,self , "DIA_Lares_Schiff_15_03"); //Why?
-	AI_Output (self, other, "DIA_Lares_Schiff_09_04"); //You'd better ask Lee about that, if you meet him ... He's got plans.
+	AI_Output (self, other, "DIA_Lares_Schiff_09_04"); //You'd better ask Lee about that, if you meet him... He's got plans.
 };
 func void DIA_Lares_AboutSld_WayToOnar()
 {
 	AI_Output (other,self, "DIA_Lares_WegZumHof_15_00"); //How do I find the landowner's farm?
 	AI_Output (self, other, "DIA_Addon_Lares_WegZumHof_09_00"); //It's quite simple. You leave the seaport by the east gate, and then follow the path towards the east.
-	AI_Output (self, other, "DIA_Addon_Lares_WegZumHof_09_01"); //I can take you there if you want.
-	//AI_Output (self, other, "DIA_Lares_WegZumHof_09_01"); //Ich kann dich hinbringen, wenn du willst. Hab sowieso schon zu lange hier rumgehangen.
-	//AI_Output (self, other, "DIA_Lares_WegZumHof_09_02"); //Hier im Hafen gibt es zwar für gewöhnlich keine Miliz, aber ich muss ja nicht riskieren, dass einer von ihnen Verdacht schöpft ...
+	if (Lares_CanBringScToPlaces == FALSE) {
+		AI_Output (self, other, "DIA_Addon_Lares_WegZumHof_09_01"); //I can take you there if you want.
+	}
+	else
+	{
+		AI_Output (self, other, "DIA_Lares_WegZumHof_09_01"); //I can take you there if you want. I've hung around here too long anyway.
+	}
+	//AI_Output (self, other, "DIA_Lares_WegZumHof_09_02"); //There's usually no militia here in the harbor, but I can't risk one of them getting suspicious...
 	Lares_WayToOnar = TRUE;
 };	
 
@@ -1373,6 +1379,7 @@ func void DIA_Lares_OtherGuild_Info ()
 		}
 		else //GIL_PAL
 		{
+			AI_Output (self, other, "DIA_Lares_OtherGuild_09_09"); //I heard you got accepted.
 			AI_Output (self, other, "DIA_Lares_OtherGuild_09_02"); //So now you're one of the King's paladins!
 		};
 	
@@ -1396,7 +1403,6 @@ func void DIA_Lares_OtherGuild_Info ()
 	if (other.guild == GIL_SLD) 
 	|| (other.guild == GIL_DJG)
 	{
-		//AI_Output (self, other, "DIA_Lares_OtherGuild_09_09"); //Ich hab gehört, du bist aufgenommen worden.
 		AI_Output (self, other, "DIA_Addon_Lares_OtherGuild_09_00"); //I heard that you have been accepted to join Lee.
 		AI_Output (self, other, "DIA_Lares_OtherGuild_09_10"); //Congratulations.
 	};
@@ -1469,7 +1475,7 @@ func int DIA_Lares_GoNow_Condition ()
 
 func void DIA_Lares_GoNow_GoingConditions ()
 {	
- 	AI_Output (self, other, "DIA_Lares_GoNow_09_01"); //Then let's go...Follow me.
+ 	AI_Output (self, other, "DIA_Lares_GoNow_09_01"); //Then let's go... Follow me.
 	AI_StopProcessInfos (self);
 	
 	Lares_Guide = Wld_GetDay();
@@ -2117,7 +2123,7 @@ func int DIA_Lares_TEACH_Condition ()
 };
 func void DIA_Lares_TEACH_Info ()
 {
-	//AI_Output (other, self, "DIA_Lares_TEACH_15_00"); //Ich will geschickter werden!
+	//AI_Output (other, self, "DIA_Lares_TEACH_15_00"); //I want to become more dexterous!
 	AI_Output (other,self ,"DIA_Addon_Lares_Teach_15_00"); //Teach me something.
 	
 	Lares_MerkeDEX = other.attribute[ATR_DEXTERITY];
@@ -2583,29 +2589,3 @@ func void DIA_Lares_StillNeedYou_Info ()
 		AI_StopProcessInfos (self);
 	};	
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

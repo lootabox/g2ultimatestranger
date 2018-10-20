@@ -102,12 +102,12 @@ func void DIA_Addon_Xardas_Hello_Dragons ()
 {
 	AI_Output (other,self ,"DIA_Xardas_Hello_15_03"); //At least we have enough time now. I did it. The Sleeper ...
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_04"); //... has been banned. You vanquished him, so much is true - but it is not within our power to stop the war that ensues now.
-	//AI_Output (other,self ,"DIA_Xardas_Hello_15_05"); //Du redest von den Orks?
-	//AI_Output (self ,other,"DIA_Xardas_Hello_14_06"); //Ich rede von weitaus schlimmeren Kreaturen.
+	AI_Output (other,self ,"DIA_Xardas_Hello_15_05"); //You're talking about the orcs?
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_06"); //I am talking about much more terrible creatures.
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_07"); //With his final, furious scream, the Sleeper has set into movement the armies of darkness.
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_08"); //It was an order to all evil creatures. A word of power that they were all bound to obey.
- 	AI_Output (self ,other,"DIA_Xardas_Hello_14_09"); //His last order was: COME! And they came. All of them. Even the dragons.
- 	AI_Output (other,self ,"DIA_Xardas_Hello_15_10"); //(amazed) ... Dragons!
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_09"); //His last order was: COME! And they came. All of them. Even the dragons.
+	AI_Output (other,self ,"DIA_Xardas_Hello_15_10"); //(amazed) ... Dragons!
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_11"); //They are creatures of ancient power. I can sense their presence - even here.
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_12"); //And they have gathered an entire army of lowly servant creatures around them.
 	AI_Output (other,self ,"DIA_Xardas_Hello_15_13"); //Where's this army now?
@@ -216,8 +216,6 @@ func int DIA_Addon_Xardas_StonePlate_Condition ()
 func void DIA_Addon_Xardas_StonePlate_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Xardas_StonePlate_15_00"); //Can you tell me anything about this stone tablet?
-	//AI_Output	(self, other, "DIA_Addon_Xardas_StonePlate_14_01"); //Ich habe so eine unten in der Höhlen vor meinem Turm gefunden.
-	//AI_Output	(self, other, "DIA_Addon_Xardas_StonePlate_14_02"); //Sie sind in einer seltsam alten Sprache geschrieben, die ich in dieser Form noch nirgendwo gesehen habe.
 	AI_Output	(self, other, "DIA_Addon_Xardas_StonePlate_14_03"); //First I suspected it might be a magical artifact, but I finally concluded that it is not of any great significance.
 	AI_Output	(self, other, "DIA_Addon_Xardas_StonePlate_14_04"); //I have not been able to decode the meaning of this tablet entirely, but it seems to concern the history of a very old culture.
 	AI_Output	(self, other, "DIA_Addon_Xardas_StonePlate_14_05"); //If you want the tablet, it's yours, I have no use for it.
@@ -331,7 +329,10 @@ func void DIA_Addon_Xardas_AddonSuccess_Info ()
 	else
 	{
 		AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_11"); //I don't have it any more ...
-		AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_12"); //I gave it to the Water Mages so they could dump it in the sea ...
+		if (Saturas_KlaueInsMeer == TRUE)
+		{
+			AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_12"); //I gave it to the Water Mages so they could dump it in the sea ...
+		};
 		AI_Output (self, other, "DIA_Addon_Xardas_AddonSuccess_14_13"); //(ranting) Are you out of your mind? Do you have any idea what you gave away there?
 		AI_Output (self, other, "DIA_Addon_Xardas_AddonSuccess_14_14"); //This weapon could have been of great service to us!
 		AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_15"); //I think it was for the better this way.
@@ -738,12 +739,12 @@ func int DIA_Xardas_DMTSINDDA_Condition ()
 func void DIA_Xardas_DMTSINDDA_Info ()
 {
 
+	AI_Output			(other, self, "DIA_Xardas_DMTSINDDA_15_01"); //What the hell has happened here in the meantime?
  	if (Npc_KnowsInfo(other, DIA_Lester_BACKINTOWN))
 	{
 		AI_Output			(other, self, "DIA_Xardas_DMTSINDDA_15_00"); //Lester said you wanted to see me at once.
 	};
-	
-	AI_Output			(other, self, "DIA_Xardas_DMTSINDDA_15_01"); //What the hell has happened here in the meantime?
+	AI_Output			(self,other,"DIA_Xardas_Hello_14_00");	//Finally! I've been trying to bring you here for days.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_14_02"); //The enemy has learned who you really are and that you are planning to get hold of the Eye of Innos.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_14_03"); //He has recognized the threat. It has forced him to leave his cover and openly attack.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_14_04"); //The game of hide-and-seek is over. Yesterday nobody knew what the enemy's attack would look like. Now it has become only too obvious.
@@ -1038,8 +1039,6 @@ func void DIA_Xardas_PYROWILLNICHT_Info ()
 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_02"); //Ah really. Pyrokar. How interesting.
 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_03"); //That old geezer is getting to be a nuisance. But I think I've got something for you that will be useful.
 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_04"); //Back when I left the Order of the Fire Magicians, I took a few things with me from the monastery.
-	//AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_05"); //Jetzt, da ich meinen Turm so nahe der Stadt errichtet habe, muss ich ständig damit rechnen, dass jemand hierher kommt, um danach zu suchen.
-	//"hier" passt nicht, weil Xardas am Steinkreis stehen könnte - Satz ist eh überflüssig
 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_06"); //I didn't want a troop of paladins or Fire Magicians to turn my tower upside down at some point, and find all those things.
 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_07"); //So I hid them in safe places where the magicians would certainly never look for them.
 	AI_Output			(other, self, "DIA_Xardas_PYROWILLNICHT_15_08"); //And where?

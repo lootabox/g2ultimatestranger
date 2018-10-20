@@ -103,9 +103,9 @@ FUNC VOID DIA_DiegoNW_NeedHelp_Info()
 	};
 	Info_ClearChoices (DIA_DiegoNW_NeedHelp);
 	
-	if (DiegoOW.aivar[AIV_TalkedToPlayer] == FALSE)
+	if (!Npc_KnowsInfo(other,DIA_DiegoOW_Hallo)) //(DiegoOW.aivar[AIV_TalkedToPlayer] == FALSE)
 	{
-	//	Info_AddChoice (DIA_DiegoNW_NeedHelp,"Wer bist du?",DIA_DiegoNW_NeedHelp_WhoAreYou);//Joly:macht keinen Sinn. Ohne mit Diego gesprochen zu haben -> Kein DiegoNW !! Hauptstory Kapitel 2 OW!!!!
+		Info_AddChoice (DIA_DiegoNW_NeedHelp,"Who are you?",DIA_DiegoNW_NeedHelp_WhoAreYou);
 	};
 	
 	Info_AddChoice (DIA_DiegoNW_NeedHelp,"What kind of clothes are these?",DIA_DiegoNW_NeedHelp_Clothes);
@@ -197,6 +197,7 @@ FUNC VOID DIA_DiegoNW_NeedHelp_Problem_WillHelpYou()
 	Info_AddChoice (DIA_DiegoNW_NeedHelp,"What are you planning to do with the gold?",DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_YourPlan);
 	Info_AddChoice (DIA_DiegoNW_NeedHelp,"Where did you get all that gold?",DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_HowGold);
 	Info_AddChoice (DIA_DiegoNW_NeedHelp,"Where's the gold hidden?",DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold);
+	Info_AddChoice (DIA_DiegoNW_NeedHelp,"Why can't you fetch it yourself?",DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_Why);
 };
 
 FUNC VOID DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_YourPlan()
@@ -218,18 +219,28 @@ FUNC VOID DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold()
 {
 	AI_Output (other,self ,"DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold_15_00"); //Where's the gold hidden?
 	AI_Output (self ,other,"DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold_11_01"); //Directly at the trading square. Above the abandoned mine. It's in a leather satchel.
-	if (Diego_angekommen == TRUE)
+	if (Npc_KnowsInfo(other,DIA_Addon_ThiefOW_Nostalgie)) //(Diego_angekommen == TRUE)
 	{
 		AI_Output (self ,other,"DIA_Addon_DiegoNW_WillHelpYou_WhereGold_11_01"); //Spare yourself that comment. I know myself that we must have walked right past it.
 		AI_Output (self ,other,"DIA_Addon_DiegoNW_WillHelpYou_WhereGold_11_02"); //Just bring me the bag.
+	}
+	else
+	{
+		AI_Output(self,other,"DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_11_02");	//I was going to go and get it, but unfortunately there's a bunch of orcs hanging out near the stash.
 	};
 	AI_Output (self ,other,"DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold_11_02"); //But don't forget to check that it's the right one so you don't walk all that way for nothing.
 	AI_Output (other,self ,"DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold_15_03"); //How can I recognize it?
 	AI_Output (self ,other,"DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold_11_04"); //It's full of gold. A whole lot of gold!
-					
+
 	Info_AddChoice (DIA_DiegoNW_NeedHelp,"I will try to find your gold.",DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold_End_TryIt);		
 	
 	B_LogEntry (TOPIC_HelpDiegoNW,"Diego's gold is somewhere at the old trading square, where goods used to be sent into the colony by cable railway, above the abandoned mine.");
+};
+
+FUNC VOID DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_Why()
+{
+	AI_Output(other,self,"DIA_DiegoNW_HelpYou_15_04");	//Why can't you fetch it yourself?
+	AI_Output(self,other,"DIA_DiegoNW_HelpYou_11_05");	//Because some orcs are hanging out near the stash. You're just the right person for this job, believe me!
 };
 
 FUNC VOID DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold_End_TryIt ()
@@ -490,6 +501,7 @@ FUNC VOID DIA_DiegoNW_CanYouTeach_Info()
 	}
 	else
 	{
+		AI_Output (self,other,"DIA_DiegoOW_Teach_11_01");	//There's no time for that! I really have more important things to do.
 		AI_Output (self ,other,"DIA_DiegoNW_CanYouTeach_11_02"); //I have to attend to my business first.
 	};
 };
@@ -526,7 +538,8 @@ FUNC INT DIA_DiegoNW_Teach_Condition()
 FUNC VOID DIA_DiegoNW_Teach_Info()
 {	
 	AI_Output (other,self ,"DIA_DiegoNW_Teach_15_00"); //Teach me.
-	AI_Output (self ,other,"DIA_DiegoNW_Teach_11_01"); //I can teach you to become more dexterous.
+	AI_Output (self, other,"DIA_Addon_DiegoOw_Teach_11_01");//Sure, what would you like to know?
+	//AI_Output (self ,other,"DIA_DiegoNW_Teach_11_01"); //I can teach you to become more dexterous.
 	
 	DiegoNW_Merke_Dex = other.attribute[ATR_DEXTERITY];
 	DiegoNW_Merke_Str = other.attribute[ATR_STRENGTH];
