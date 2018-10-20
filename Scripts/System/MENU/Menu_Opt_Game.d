@@ -171,7 +171,7 @@ instance MENUITEM_MROTATION_CHOICE(C_MENU_ITEM_DEF)
 {
 	backpic = MENU_CHOICE_BACK_PIC;
 	type = MENU_ITEM_CHOICEBOX;
-	text[0] = "off|slow|standard|fast|very fast";
+	text[0] = "none|slow|standard|fast|very fast";
 	fontname = MENU_FONT_SMALL;
 	posx = 5000;
 	posy = MENU_START_Y + (MENU_DY * 3) + MENU_CHOICE_YPLUS;
