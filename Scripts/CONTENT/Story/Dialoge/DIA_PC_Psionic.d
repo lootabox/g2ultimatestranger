@@ -691,14 +691,24 @@ func int DIA_Lester_LeaveMyShip_Condition ()
 		return TRUE;
 	};
 };
+
+var int Lester_Dismissed;
 func void DIA_Lester_LeaveMyShip_Info ()
 {
 	AI_Output			(other, self, "DIA_Lester_LeaveMyShip_15_00"); //I've got no more room for you after all.
 	AI_Output			(self, other, "DIA_Lester_LeaveMyShip_13_01"); //I understand you. I'd probably do the same in your situation.
-	AI_Output			(self, other, "DIA_Lester_LeaveMyShip_13_02"); //If you need me, I'll help you. You know where to find me.
 	
-	Lester_IsOnBoard	 = LOG_OBSOLETE;				//Log_Obsolete ->der Sc kann ihn wiederholen, Log_Failed ->hat die Schnauze voll, kommt nicht mehr mit! 
 	crewmember_Count = (Crewmember_Count -1);
+	Lester_Dismissed += 1;
+	if (Lester_Dismissed < 2)
+	{
+		Lester_IsOnBoard	 = LOG_OBSOLETE;				//Log_Obsolete ->der Sc kann ihn wiederholen, Log_Failed ->hat die Schnauze voll, kommt nicht mehr mit! 
+		AI_Output			(self, other, "DIA_Lester_LeaveMyShip_13_02"); //If you need me, I'll help you. You know where to find me.
+	}
+	else
+	{
+		Lester_IsOnBoard	 = LOG_FAILED;
+	};
 	
 	Npc_ExchangeRoutine (self,"ShipOff"); 
 };

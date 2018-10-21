@@ -2051,13 +2051,25 @@ func int DIA_Lee_LeaveMyShip_Condition ()
 	};
 };
 
+var int Lee_Dismissed;
 func void DIA_Lee_LeaveMyShip_Info ()
 {
 	AI_Output			(other, self, "DIA_Lee_LeaveMyShip_15_00"); //I can't use you after all!
-	AI_Output			(self, other, "DIA_Lee_LeaveMyShip_04_01"); //Suit yourself, you know where to find me!
-	
-	Lee_IsOnBoard	 = LOG_OBSOLETE;				//Log_Obsolete ->der Sc kann ihn wiederholen, Log_Failed ->hat die Schnauze voll, kommt nicht mehr mit! 
+
 	crewmember_Count = (Crewmember_Count -1);
+	Lee_Dismissed += 1;
+	if (Lee_Dismissed < 2)
+	{
+		AI_Output			(self, other, "DIA_Lee_LeaveMyShip_04_01"); //Suit yourself, you know where to find me!
+		Lee_IsOnBoard	 = LOG_OBSOLETE;				//Log_Obsolete ->der Sc kann ihn wiederholen, Log_Failed ->hat die Schnauze voll, kommt nicht mehr mit! 
+	}
+	else
+	{
+		AI_Output	(self, other, "DIA_Lee_StillNeedYou_04_02"); //You know what, screw you. First you say I should come, then you send me away again.
+		AI_Output	(self, other, "DIA_Lee_StillNeedYou_04_03"); //Find yourself another idiot!
+		Lee_IsOnBoard	 = LOG_FAILED;
+		AI_StopProcessInfos (self);
+	};
 	
 	Npc_ExchangeRoutine (self,"ShipOff"); 
 };

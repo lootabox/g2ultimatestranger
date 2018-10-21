@@ -58,6 +58,20 @@ func void DIA_Wirt_PICKPOCKET_BACK()
 ///////////////////////////////////////////////////////////////////////
 //	Info Hallo
 ///////////////////////////////////////////////////////////////////////
+func void B_GiveBeer()
+{
+	var int Wirt_GiveBeer_Day;
+	var int Wirt_GiveBeer_Count;
+
+	if (Wirt_GiveBeer_Count < Kapitel * 5)
+	&& (Wirt_GiveBeer_Day != Wld_GetDay())
+	{
+		Wirt_GiveBeer_Count += 1;
+		Wirt_GiveBeer_Day = Wld_GetDay();
+		B_GiveInvItems(self,other,ItFo_Beer,1);
+	};
+};
+
 INSTANCE DIA_Wirt_Hallo   (C_INFO)
 {
 	npc         = VLK_4201_Wirt;
@@ -80,30 +94,26 @@ FUNC VOID DIA_Wirt_Hallo_Info()
 	randy = Hlp_Random (3);
 	
 	AI_Output (self, other,"DIA_Wirt_Hallo_14_00");//Hey, come closer. Take a break and have a sip of cool beer.
-	
+	B_GiveBeer();
 	if (self.aivar [AIV_TalkedToPlayer] == FALSE) 
 	{
 		AI_Output (self, other,"DIA_Wirt_Hallo_14_01");//Lord Andre is springing for a few barrels of free beer.
-		AI_StopProcessInfos (self);
 	}
 	else if (randy == 0)
 	{
 		AI_Output (self, other,"DIA_Wirt_Hallo_14_02");//Nothing hits the spot like a cool pint after work.
-		AI_StopProcessInfos (self);
 	}
 	else if (randy == 1)
 	{
 		AI_Output (self, other,"DIA_Wirt_Hallo_14_03");//The paladins will set everything right. So take another draught and have a good time.
-		
-		B_GiveInvItems (self, other, ItFo_Beer,1);
-		AI_StopProcessInfos (self);
 	}
 	else if (randy == 2)
 	{
 		AI_Output (self, other,"DIA_Wirt_Hallo_14_04");//You can say what you want about Khorinis, but our 'Dark Paladin' is simply the best in all of Myrtana.
-		AI_StopProcessInfos (self);
 	};
+	AI_StopProcessInfos (self);
 };
+
 
 /*
 	Wenn du ein Problem hast und es lässt sich lösen, dann denk nicht weiter drüber nach.

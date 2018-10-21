@@ -330,15 +330,29 @@ func int DIA_Mario_LeaveMyShip_Condition ()
 		return TRUE;
 	};
 };
+var int Mario_Dismissed;
 func void DIA_Mario_LeaveMyShip_Info ()
 {
 	AI_Output			(other, self, "DIA_Mario_LeaveMyShip_15_00"); //I can't use you after all!
-	AI_Output			(self, other, "DIA_Mario_LeaveMyShip_07_01"); //As you like. You know where to find me!
 	
-	Mario_IsOnBoard	 = LOG_OBSOLETE;				//Log_Obsolete ->der Sc kann ihn wiederholen, Log_Failed ->hat die Schnauze voll, kommt nicht mehr mit! 
 	crewmember_Count = (Crewmember_Count -1);
-	AI_StopProcessInfos (self);
-	Npc_ExchangeRoutine (self,"ShipOff"); 
+	Mario_Dismissed += 1;
+
+	if (Mario_Dismissed < 2)
+	{
+		AI_Output			(self, other, "DIA_Mario_LeaveMyShip_07_01"); //As you like. You know where to find me!
+		Mario_IsOnBoard	 = LOG_OBSOLETE;				//Log_Obsolete ->der Sc kann ihn wiederholen, Log_Failed ->hat die Schnauze voll, kommt nicht mehr mit! 
+		AI_StopProcessInfos (self);
+		Npc_ExchangeRoutine (self,"ShipOff"); 
+	}
+	else
+	{
+		AI_Output	(self, other, "DIA_Mario_StillNeedYou_07_02"); //You can't treat me like that. I'll gut you!
+		Mario_IsOnBoard	 = LOG_FAILED;
+		Npc_ExchangeRoutine (self,"ShipOff");
+		AI_StopProcessInfos (self);
+		B_Attack	(self,other,AR_NONE,1); 
+	};
 };
 
 ///////////////////////////////////////////////////////////////////////

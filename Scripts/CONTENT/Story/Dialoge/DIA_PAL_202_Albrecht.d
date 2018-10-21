@@ -171,14 +171,14 @@ FUNC VOID DIA_Albrecht_TEACHPalRunes_Heal()
 	{
 		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
 		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
-		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString ("Heal Light Wounds", CostForPalSpells) ,DIA_Albrecht_TEACHPalRunes_PalLightHeal);
+		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalLightHeal,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalLightHeal)) ,DIA_Albrecht_TEACHPalRunes_PalLightHeal);
 	}
 	else if 	(PLAYER_TALENT_RUNES [SPL_PalMediumHeal] == FALSE)
 	&&	(Kapitel >= 5)
 	{
 		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
 		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
-		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString ("Heal Medium Wounds", CostForPalSpells) ,DIA_Albrecht_TEACHPalRunes_PalMediumHeal);
+		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalMediumHeal,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalMediumHeal)) ,DIA_Albrecht_TEACHPalRunes_PalMediumHeal);
 	}
 	else
 	{
@@ -195,14 +195,14 @@ FUNC VOID DIA_Albrecht_TEACHPalRunes_Combat()
 	{
 		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
 		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
-		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString ("Holy Arrow", CostForPalSpells) ,DIA_Albrecht_TEACHPalRunes_PalHolyBolt);
+		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalHolyBolt,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalHolyBolt)) ,DIA_Albrecht_TEACHPalRunes_PalHolyBolt);
 	}
 	else if (PLAYER_TALENT_RUNES [SPL_PalRepelEvil] == FALSE)
 	&&	(Kapitel >= 5)
 	{
 		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
 		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
-		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString ("Expel evil", CostForPalSpells) ,DIA_Albrecht_TEACHPalRunes_PalRepelEvil);
+		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalRepelEvil,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalRepelEvil)) ,DIA_Albrecht_TEACHPalRunes_PalRepelEvil);
 	}
 	else
 	{
@@ -210,74 +210,24 @@ FUNC VOID DIA_Albrecht_TEACHPalRunes_Combat()
 	};
 };
 
-
-FUNC INT DIA_Albrecht_TEACHPalRunes_PalLightHeal()
+func void DIA_Albrecht_TEACHPalRunes_PalLightHeal()
 {
-	if (other.lp < CostForPalSpells)
-	{
-		PrintScreen	(PRINT_NotEnoughLearnPoints, -1,-1, FONT_ScreenSmall ,2);
-		B_Say (self, other, "$NOLEARNNOPOINTS");
-		
-		return FALSE;
-	};
-	
-	PLAYER_TALENT_RUNES [SPL_PalLightHeal] = TRUE;
-	CreateInvItems (self,ItRu_PalLightHeal,1);
-	B_GiveInvItems (self,other,ItRu_PalLightHeal,1);
-	other.lp = (other.lp -CostForPalSpells);
-	Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes); 
-
-	return TRUE;
+	B_TeachPlayerTalentRunes(self,other,SPL_PalLightHeal);
 };
 
-FUNC INT DIA_Albrecht_TEACHPalRunes_PalMediumHeal()
+func void DIA_Albrecht_TEACHPalRunes_PalMediumHeal()
 {
-	if (other.lp < CostForPalSpells)
-	{
-		PrintScreen	(PRINT_NotEnoughLearnPoints, -1,-1, FONT_ScreenSmall ,2);
-		B_Say (self, other, "$NOLEARNNOPOINTS");
-		
-		return FALSE;
-	};
-	PLAYER_TALENT_RUNES [SPL_PalMediumHeal] = TRUE;
-	CreateInvItems (self,ItRu_PalMediumHeal,1);
-	B_GiveInvItems (self,other,ItRu_PalMediumHeal,1); 
-	other.lp = (other.lp -CostForPalSpells);
-	return TRUE;
+	B_TeachPlayerTalentRunes(self,other,SPL_PalMediumHeal);
 };
 
-FUNC INT DIA_Albrecht_TEACHPalRunes_PalHolyBolt()
+func void DIA_Albrecht_TEACHPalRunes_PalHolyBolt()
 {
-	if (other.lp < CostForPalSpells)
-	{
-		PrintScreen	(PRINT_NotEnoughLearnPoints, -1,-1, FONT_ScreenSmall ,2);
-		B_Say (self, other, "$NOLEARNNOPOINTS");
-		
-		return FALSE;
-	};
-	
-	PLAYER_TALENT_RUNES [SPL_PalHolyBolt] = TRUE;
-	CreateInvItems (self,ItRu_PalHolyBolt,1);
-	B_GiveInvItems (self,other,ItRu_PalHolyBolt,1);  
-	other.lp = (other.lp -CostForPalSpells);
-	return TRUE;
+	B_TeachPlayerTalentRunes(self,other,SPL_PalHolyBolt);
 };
 
-FUNC INT DIA_Albrecht_TEACHPalRunes_PalRepelEvil()
+func void DIA_Albrecht_TEACHPalRunes_PalRepelEvil()
 {
-	if (other.lp < CostForPalSpells)
-	{
-		PrintScreen	(PRINT_NotEnoughLearnPoints, -1,-1, FONT_ScreenSmall ,2);
-		B_Say (self, other, "$NOLEARNNOPOINTS");
-		
-		return FALSE;
-	};
-	
-	PLAYER_TALENT_RUNES [SPL_PalRepelEvil] = TRUE;
-	CreateInvItems (self,ItRu_PalRepelEvil,1);
-	B_GiveInvItems (self,other,ItRu_PalRepelEvil,1);
-	other.lp = (other.lp -CostForPalSpells);
-	return TRUE;
+	B_TeachPlayerTalentRunes(self,other,SPL_PalRepelEvil);
 };
 
 

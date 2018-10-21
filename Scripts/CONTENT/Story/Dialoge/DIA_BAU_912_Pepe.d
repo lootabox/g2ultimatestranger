@@ -312,7 +312,9 @@ instance DIA_Pepe_Liesel		(C_INFO)
 };
 func int DIA_Pepe_Liesel_Condition ()
 {
-	if Npc_KnowsInfo (hero, DIA_Pepe_Hallo)
+	if (Npc_KnowsInfo (hero, DIA_Pepe_Hallo))
+	&& (SC_KnowsKlosterTribut == TRUE)
+	&& (other.guild == GIL_NONE)
 	{
 		return TRUE;
 	};

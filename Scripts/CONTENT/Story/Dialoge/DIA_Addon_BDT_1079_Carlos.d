@@ -28,7 +28,7 @@ INSTANCE DIA_Addon_Carlos_PICKPOCKET (C_INFO)
 	condition	= DIA_Addon_Carlos_PICKPOCKET_Condition;
 	information	= DIA_Addon_Carlos_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = Pickpocket_60;
+	description = Pickpocket_80;
 };                       
 
 FUNC INT DIA_Addon_Carlos_PICKPOCKET_Condition()

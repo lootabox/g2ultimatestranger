@@ -75,7 +75,7 @@ INSTANCE MENUITEM_EXT_AMBIENTPFX(C_MENU_ITEM_DEF)
 	text[1]		= 	"Toggle ambient particle effects on/off."; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*0;
-	dimx		=	3000;	dimy		=	750;
+	dimx		=	3500;	dimy		=	750;
 	// Aktionen
 	onSelAction[0]	= SEL_ACTION_UNDEF;
 	// Weitere Eigenschaften

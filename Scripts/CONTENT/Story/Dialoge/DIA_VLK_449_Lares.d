@@ -1229,7 +1229,7 @@ func void DIA_Lares_AboutSld_WayToOnar()
 	else
 	{
 		AI_Output (self, other, "DIA_Lares_WegZumHof_09_01"); //I can take you there if you want. I've hung around here too long anyway.
-	}
+	};
 	//AI_Output (self, other, "DIA_Lares_WegZumHof_09_02"); //There's usually no militia here in the harbor, but I can't risk one of them getting suspicious...
 	Lares_WayToOnar = TRUE;
 };	

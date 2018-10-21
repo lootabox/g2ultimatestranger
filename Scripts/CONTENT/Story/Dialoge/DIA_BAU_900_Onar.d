@@ -218,6 +218,7 @@ INSTANCE DIA_Onar_WegenSekob (C_INFO)
 FUNC INT DIA_Onar_WegenSekob_Condition()
 {
 	if (MIS_Sekob_RedeMitOnar == LOG_RUNNING)
+	&& (MIS_Torlof_HolPachtVonSekob != LOG_SUCCESS)
 	{
 		return TRUE;
 	};
@@ -524,6 +525,8 @@ instance DIA_Onar_WannaSheep	(C_INFO)
 func int DIA_Onar_WannaSheep_Condition ()
 {	
 	if (Onar_SellSheep == FALSE)
+	&& (SC_KnowsKlosterTribut == TRUE)
+	&& (other.guild == GIL_NONE)
 	{
 		return TRUE;
 	};

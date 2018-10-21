@@ -572,8 +572,8 @@ func void DIA_Rosi_ANGEKOMMEN_Info ()
 	MIS_RosisFlucht = LOG_SUCCESS;
 		AI_Output			(self, other, "DIA_Rosi_ANGEKOMMEN_17_02"); //Please accept this modest gift as a reward.
 
-		CreateInvItems (Rosi, ItMi_Gold, 650);									
-		B_GiveInvItems (self, other, ItMi_Gold, 450);					
+		CreateInvItems (Rosi, ItMi_Gold, 450);
+		B_GiveInvItems (self, other, ItMi_Gold, 450);
 
 		if (Npc_IsDead(Till))
 		{

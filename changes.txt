@@ -19,57 +19,75 @@ Default menu option when not ingame is load game instead of new game.
 Changed Buster to give reduced gold for each Shadowbeast Horn, but still way more then regular merchants.
 
 
-	Ported fixes and improvements
+	Ported fixes and improvements Dimus' patch
 
 NPCs:
 Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Lobart, Karras, Lares, Parlan, Pyrokar, Ramirez, Raoul, Saturas, Scatty.
-Fixed logical issues with dialogue of Diego, Xardas.
+Fixed logical issues with dialogue of Diego, Ulf, Xardas.
 
-Fixed XP award for pickpocketing Valentino, Salandril, Cavalorn, Dobar, Engor, Franco and Francis.
-Fixed XP award for recruiting Lares and Lester.
+Fixed XP award for pickpocketing Cavalorn, Dobar, Engor, Francis, Franco, Salandril, Valentino.
+Fixed XP award for recruiting Lares, Lester.
 
+Agon returns to monastery after the Trial of Fire, if alive.
 Angar has same weapon everywhere as in the Valley of Mines.
 Bandit 10008 warns NH not to wake up Skinner only if he has not already done so.
 Bartok now grants previously omitted XP bonus for finishing the hunt with him.
 Brandon quest cancels if he is killed.
 Buster buys Shadowbeast Horns, even if NH does not know how to remove them.
 Buster does not drop Shadowbeast Horns given to him.
+Carlos shows correct pick pocket difficulty in Valley of Mines.
 Cassia can give the Blood Chalice quest, even if NH was a wanted thief.
 Cassia cannot be paid for learning to pickpocket if it’s already learned.
 Cassias quests become obsolete if the paladins kill her.
 Diego can teach strength in Khorinis.
 Diego cannot be led to Pedrakhan.
+Diego's dialog has 6 more previously unused dialogue lines or 15 more if NH never met him in Valley of Mines.
 Dragomir immediately equips his crossbow after receiving it.
 Esteban does not turn to his guards if they are dead.
 Esteban's bodyguards go running to meet Fisk.
+Gaan can only be asked about hunting training once NH learns he is a hunter.
+Gaan dialog does not create unnecessary BACK options when learning hunting talents.
 Gaan wields a Wolf Blade instead of a branch.
 Gaan won't know about the death of the Snorting Dragon Snapper unless he is close to its location.
 Gaan's dialog option for asking who he is cannot glitch up and become unavailable.
-Gaan can only be asked about hunting training once NH learns he is a hunter.
-Gaan dialog does not create unnecessary BACK options when learning hunting talents.
 Garond can be told about Silvestro's mining site even if Diego has died.
 Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
 Igaraz can be asked about the living rock, even after moving north from the tavern.
+Igaraz returns to monastery after the Trial of Fire, if alive.
 Jan cannot drop the gold used to buy the Medium Dragon Hunter's Armor.
-Kervo's quest fails if he is killed.
 Kervo's quest cancels in chapter 4, causing Kerov and Geppert to be killed by a Lurker instead of them disappearing.
-Lehmar does not lend money to NH if he attacked him, unless Oblivion is cast on him.
+Kervo's quest fails if he is killed.
+Landlord will not give more then 5 beers per chapter and only 1 per day.
+Lares's dialog has 5 more previously unused dialogue lines.
+Lee will refuse joining the crew if dismissed twice, with previously unused dialogue.
+Lehmar attacking the NH causes Meldor to also attack the NH.
 Lehmar does not immediately notice the theft of his ledger.
-Lehmar attacking the NH causes Meldor to also attack the player.
+Lehmar does not lend money to NH if he attacked him, unless Oblivion is cast on him.
+Lester will refuse joining the crew if dismissed twice, with previously unused dialogue.
 Mario cannot be recruited to a full ship crew.
+Mario will refuse joining the crew if dismissed twice and gets angry at NH, with previously unused dialogue.
+Milten can teach Paladin runes in Irdorath.
 Nagur now grants previously omitted XP bonus for showing thieves' signal and returning Baltram's shipment.
+Onar can't be talked about rent after completing the related quest.
+Onar's dialog for buying a sheep is only available if NH knows he needs one and is not part of any guild yet.
 Opolos can be told about Pedro's betrayal also after the chase quest is completed.
+Parcival can be asked about Diego only after asking about scrapers in general.
 Pedro cannot be asked about life in the monastery if NH is magician.
+Pepe's dialog for buying a sheep is only available if NH knows he needs one and is not part of any guild yet.
 Ramirez shows two dialogue options only after he sees the thieves' signal.
 Riordian mentions William in the initial dialogue instead of the dialogue about the west.
+Rosi will not create extra gold in her inventory when giving the reward to NH for escorting her.
+Sekob can't be talked about rent after completing the related quest.
+Sekob dialog no longer has option to go to talk to Onar if NH already talked with him.
 Skip quest cancels if he is killed.
+Sylvio shows correct pick pocket difficulty in Valley of Mines.
 Talbin wields a Wolf Blade instead of a branch.
 Thekla now grants previously omitted XP bonus for defeating Bullco.
+Ulf does not randomly die in the beginning of chapter 3.
+Ulf returns to monastery after the Trial of Fire, if alive.
+Ulf smokes a joint as well instead of watching as NH smokes one.
 Vatras does not sell Almanacs of the Possessed given to him
-
-Lares's dialog has 5 more previously unused dialogue lines.
-Diego's dialog has 6 more previously unused dialogue lines or 15 more if player never met him in Valley of Mines.
 Xardas' dialog has 3 more previously unused dialogue lines.
 
 Following actions no longer create extra journal updates:
@@ -95,7 +113,7 @@ Following actions no longer create extra journal updates:
 * Riordian and Saturas talked about William.
 * Riordian asked about temple locations.
 * Rod asked for his vote to join mercenaries.
-* Rod betting gold against player being able to lift his sword.
+* Rod betting gold against NH being able to lift his sword.
 * Saturas talked to about activating portal before receiving letter from Vatras.
 
 Random:
@@ -104,9 +122,11 @@ Black Ore effect ends on using transformation scrolls.
 Goblins and Skeletons do not create additional weapons in their inventory.
 Gold mining skill does not improve by mining empty veins.
 Magic Runes are removed from frozen corpses.
+Novices do not create additional sausages when given one.
+Paladin runes now cost correct amount of learning points.
 Pirates generate ambient inventories.
 Skeletal monsters do not bleed.
-Snorting Dragon Snapper will have 2 horns instead of 1 if Gaan teaches the player that trophy skill after killing it.
+Snorting Dragon Snapper will have 2 horns instead of 1 if Gaan teaches the NH that trophy skill after killing it.
 Steel Blanks and Lab Water Bottles cannot be looted from anyone.
 Stone Guardians leave properly colored pebbles on ground when hit.
 Swamp Golem bleeds green.

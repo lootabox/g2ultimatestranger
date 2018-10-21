@@ -485,7 +485,7 @@ func void DIA_Sagitta_OBSESSION_Info ()
 {
 	AI_Output			(other, self, "DIA_Sagitta_OBSESSION_15_00"); //I've got this feeling of trepidation. I need help.
 	AI_Output			(self, other, "DIA_Sagitta_OBSESSION_17_01"); //I can see that sleep will not be enough for you to recuperate. You have been exposed to the black look of the Seekers.
-	AI_Output			(self, other, "DIA_Sagitta_OBSESSION_17_02"); //Go to Pyrokar, the highest magician of the monastery. My humble remedies are not enough
+	AI_Output			(self, other, "DIA_Sagitta_OBSESSION_17_02"); //Go to Pyrokar, the highest magician of the monastery. My humble remedies are not enough.
 };
 
 ///////////////////////////////////////////////////////////////////////

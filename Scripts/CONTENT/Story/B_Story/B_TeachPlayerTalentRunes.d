@@ -53,14 +53,22 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	};
 	
 	// ------ Rune lernen ------
-	if (spell == SPL_PalLight)				{	PLAYER_TALENT_RUNES[SPL_PalLight] 				= TRUE;	};		
-	if (spell == SPL_PalLightHeal)			{	PLAYER_TALENT_RUNES[SPL_PalLightHeal] 			= TRUE;	};		
-	if (spell == SPL_PalHolyBolt)			{	PLAYER_TALENT_RUNES[SPL_PalHolyBolt] 			= TRUE; };		
-	if (spell == SPL_PalMediumHeal)			{	PLAYER_TALENT_RUNES[SPL_PalMediumHeal] 			= TRUE;	};		
-	if (spell == SPL_PalRepelEvil)			{	PLAYER_TALENT_RUNES[SPL_PalRepelEvil] 			= TRUE;	};		
-	if (spell == SPL_PalFullHeal)			{	PLAYER_TALENT_RUNES[SPL_PalFullHeal] 			= TRUE;	};		
-	if (spell == SPL_PalDestroyEvil)		{	PLAYER_TALENT_RUNES[SPL_PalDestroyEvil]			= TRUE;	};		
-	if (spell == SPL_PalTeleportSecret)		{	PLAYER_TALENT_RUNES[SPL_PalTeleportSecret] 		= TRUE;	};		
+	if (spell == SPL_PalLight)				{ PLAYER_TALENT_RUNES[SPL_PalLight] = TRUE;
+		CreateInvItems(slf,ItRu_PalLight,1);	B_GiveInvItems(slf,oth,ItRu_PalLight,1); };
+	if (spell == SPL_PalLightHeal)			{ PLAYER_TALENT_RUNES[SPL_PalLightHeal] = TRUE;
+		CreateInvItems(slf,ItRu_PalLightHeal,1);	B_GiveInvItems(slf,oth,ItRu_PalLightHeal,1); };
+	if (spell == SPL_PalHolyBolt)			{ PLAYER_TALENT_RUNES[SPL_PalHolyBolt] = TRUE;
+		CreateInvItems(slf,ItRu_PalHolyBolt,1);	B_GiveInvItems(slf,oth,ItRu_PalHolyBolt,1); };
+	if (spell == SPL_PalMediumHeal)			{ PLAYER_TALENT_RUNES[SPL_PalMediumHeal] = TRUE;
+		CreateInvItems(slf,ItRu_PalMediumHeal,1);	B_GiveInvItems(slf,oth,ItRu_PalMediumHeal,1); };
+	if (spell == SPL_PalRepelEvil)			{ PLAYER_TALENT_RUNES[SPL_PalRepelEvil] = TRUE;
+		CreateInvItems(slf,ItRu_PalRepelEvil,1);	B_GiveInvItems(slf,oth,ItRu_PalRepelEvil,1); };
+	if (spell == SPL_PalFullHeal)			{ PLAYER_TALENT_RUNES[SPL_PalFullHeal] = TRUE;
+		CreateInvItems(slf,ItRu_PalFullHeal,1);	B_GiveInvItems(slf,oth,ItRu_PalFullHeal,1); };
+	if (spell == SPL_PalDestroyEvil)		{ PLAYER_TALENT_RUNES[SPL_PalDestroyEvil] = TRUE;
+		CreateInvItems(slf,ItRu_PalDestroyEvil,1);	B_GiveInvItems(slf,oth,ItRu_PalDestroyEvil,1); };
+	if (spell == SPL_PalTeleportSecret)		{ PLAYER_TALENT_RUNES[SPL_PalTeleportSecret] = TRUE;
+		CreateInvItems(slf,ItRu_PalTeleportSecret,1);	B_GiveInvItems(slf,oth,ItRu_PalTeleportSecret,1); };
 	if (spell == SPL_TeleportSeaport)		{	PLAYER_TALENT_RUNES[SPL_TeleportSeaport] 		= TRUE;	};		
 	if (spell == SPL_TeleportMonastery)		{	PLAYER_TALENT_RUNES[SPL_TeleportMonastery] 		= TRUE;	};		
 	if (spell == SPL_TeleportFarm)			{	PLAYER_TALENT_RUNES[SPL_TeleportFarm] 			= TRUE;	};		

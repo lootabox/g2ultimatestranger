@@ -79,8 +79,8 @@ FUNC VOID DIA_Opolos_Wurst_Info()
 	B_GiveInvItems (other, self, ItFo_SchafsWurst, 1);
 	Wurst_Gegeben = (Wurst_Gegeben +1);
 	
-	CreateInvItems (self, ITFO_Sausage,1);
-	B_UseItem (self, ITFO_Sausage);
+	//CreateInvItems (self, ITFO_Sausage,1);
+	B_UseItem (self, ItFo_SchafsWurst);
 	
 	var string NovizeText;
 	var string NovizeLeft;

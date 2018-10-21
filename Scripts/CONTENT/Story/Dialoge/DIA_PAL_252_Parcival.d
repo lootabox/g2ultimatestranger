@@ -72,6 +72,7 @@ func int DIA_Parcival_Diego_Condition ()
 {	
 	if (SearchForDiego == LOG_RUNNING)
 	&& (Kapitel < 3)
+	&& (Npc_KnowsInfo(hero,DIA_Parcival_Schurfer))
 	{
 		return TRUE;
 	};

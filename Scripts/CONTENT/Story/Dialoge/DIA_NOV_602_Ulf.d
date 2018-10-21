@@ -46,7 +46,7 @@ func void DIA_Ulf_Hallo_Info ()
 {
 	AI_Output (other, self, "DIA_Ulf_Hallo_15_00"); //What are you doing here?
 	
-	if (hero.guild == GIL_KDF)
+	if (hero.guild == GIL_PAL)
 	{
 		AI_Output (self, other, "DIA_Ulf_Hallo_03_01"); //I'm trying to fulfill the tasks the monastery has set me to your satisfaction.
 	}
@@ -407,7 +407,9 @@ FUNC VOID DIA_Ulf_Abrechnung_Rauch()
 	AI_Output (self, other, "DIA_Ulf_Abrechnung_Rauch_03_01"); //You're lucky. I've actually got something right here.
 	
 	B_GiveInvItems (self, other, ITmi_Joint,1);
+	CreateInvItems(self,ItMi_Joint,1);
 	B_UseItem (other, itmI_Joint);
+	B_UseItem (self, itmI_Joint);
 	AI_Output (self, other, "DIA_Ulf_Abrechnung_Rauch_03_02"); //Let's get it over with.
 	
 	AI_StopProcessInfos (self);

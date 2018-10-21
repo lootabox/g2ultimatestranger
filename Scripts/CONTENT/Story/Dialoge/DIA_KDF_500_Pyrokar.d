@@ -496,6 +496,31 @@ func void DIA_Pyrokar_OATH_Info ()
 	MIL_Aufnahme = LOG_OBSOLETE;
 	B_GivePlayerXP (XP_BecomeMage);
 	
+	if(!Npc_IsDead(Ulf))
+	{
+		B_StartOtherRoutine(Ulf,"BackToMonastery");
+		Ulf.aivar[AIV_DropDeadAndKill] = FALSE;
+		Ulf.aivar[AIV_NewsOverride] = FALSE;
+		Ulf.aivar[AIV_IgnoresArmor] = FALSE;
+		Ulf.aivar[AIV_IgnoresFakeGuild] = FALSE;
+	};
+	if(!Npc_IsDead(Igaraz))
+	{
+		B_StartOtherRoutine(Igaraz,"Start");
+		Igaraz.aivar[AIV_DropDeadAndKill] = FALSE;
+		Igaraz.aivar[AIV_NewsOverride] = FALSE;
+		Igaraz.aivar[AIV_IgnoresArmor] = FALSE;
+		Igaraz.aivar[AIV_IgnoresFakeGuild] = FALSE;
+	};
+	if(!Npc_IsDead(Agon))
+	{
+		B_StartOtherRoutine(Nov607,"Start");
+		B_StartOtherRoutine(Agon,"Start");
+		Agon.aivar[AIV_DropDeadAndKill] = FALSE;
+		Agon.aivar[AIV_NewsOverride] = FALSE;
+		Agon.aivar[AIV_IgnoresArmor] = FALSE;
+		Agon.aivar[AIV_IgnoresFakeGuild] = FALSE;
+	};
 	
 	AI_Output (self, other, "DIA_Pyrokar_OATH_11_08"); //Now that you have been accepted into our ranks, you can talk to Lord Hagen, the high commander of the paladins.
 	AI_Output (self, other, "DIA_Pyrokar_OATH_11_09"); //We are also very interested to hear how he assesses the situation. So you are free now to go to Khorinis.

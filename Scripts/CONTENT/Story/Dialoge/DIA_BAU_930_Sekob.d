@@ -205,7 +205,10 @@ func void DIA_Sekob_Defeated_Info ()
 
 	Info_ClearChoices	(DIA_Sekob_Defeated);
 	Info_AddChoice	(DIA_Sekob_Defeated, "Pay your rent, now, or I'll kill you.", DIA_Sekob_Defeated_hart);
-	Info_AddChoice	(DIA_Sekob_Defeated, "All right, I'll talk to Onar.", DIA_Sekob_Defeated_weich);
+	if (Onar_WegenSekob == FALSE)
+	{
+		Info_AddChoice	(DIA_Sekob_Defeated, "All right, I'll talk to Onar.", DIA_Sekob_Defeated_weich);
+	};
 };
 
 func void DIA_Sekob_Defeated_Weich()
@@ -217,17 +220,17 @@ func void DIA_Sekob_Defeated_Weich()
 	AI_StopProcessInfos (self);
 };
 
-			func void B_Sekob_Kassieren()
-			{
-				AI_Output (other, self, "DIA_Sekob_Kassieren_15_00"); //Cut out that piffle. It rains here all the time, and your larders are full. Pay your rent, now, or I'll kill you.
-				AI_Output (self, other, "DIA_Sekob_Kassieren_01_01"); //(obsequious) No, please, here take the gold. I'll even add a bonus if you let me live.
-				B_GiveInvItems (self, other, ItMi_Gold, 60);
-				AI_Output (other, self, "DIA_Sekob_Kassieren_15_02"); //See, that wasn't so hard.
-				AI_Output (self ,other, "DIA_Sekob_Kassieren_01_03"); //(despairing) I'm ruined.
-				Sekob_Pachtbezahlt = TRUE;
-			
-				AI_StopProcessInfos (self);	
-			};
+func void B_Sekob_Kassieren()
+{
+	AI_Output (other, self, "DIA_Sekob_Kassieren_15_00"); //Cut out that piffle. It rains here all the time, and your larders are full. Pay your rent, now, or I'll kill you.
+	AI_Output (self, other, "DIA_Sekob_Kassieren_01_01"); //(obsequious) No, please, here take the gold. I'll even add a bonus if you let me live.
+	B_GiveInvItems (self, other, ItMi_Gold, 60);
+	AI_Output (other, self, "DIA_Sekob_Kassieren_15_02"); //See, that wasn't so hard.
+	AI_Output (self ,other, "DIA_Sekob_Kassieren_01_03"); //(despairing) I'm ruined.
+	Sekob_Pachtbezahlt = TRUE;
+
+	AI_StopProcessInfos (self);	
+};
 
 func void DIA_Sekob_Defeated_hart()
 {
@@ -253,6 +256,7 @@ func int DIA_Sekob_Again_Condition ()
 	if (MIS_Sekob_RedeMitOnar == LOG_RUNNING)
 	&& (Npc_KnowsInfo (other, DIA_Sekob_Defeated))
 	&& (Sekob_Pachtbezahlt == FALSE)
+	&& (MIS_Torlof_HolPachtVonSekob != LOG_SUCCESS)
 	{
 		return TRUE;
 	};

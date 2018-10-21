@@ -143,10 +143,10 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_2 ()
 			Wld_InsertItem		(ItAm_Hp_Mana_01,		"FP_ROAM_XARDAS_SECRET_26");
 		};
 
-		if (hero.guild == GIL_KDF)
+/* 		if (hero.guild == GIL_KDF)
 		{
 			B_StartOtherRoutine (Agon,"StillAlive"); 
-		};
+		}; */
 
  		EnterNW_Kapitel2 = TRUE;
 	};
@@ -193,10 +193,10 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 		B_KillNpc		(PAL_297_Ritter);	//Passwache
 		B_KillNpc		(PAL_298_Ritter);	//Passwache
 		
-		if (hero.guild == GIL_KDF)
+/* 		if (hero.guild == GIL_KDF)
 		{
 			B_KillNpc 		(Ulf);
-		};
+		}; */
 		
 		Wld_InsertNpc 	(Giant_Bug, 	"FP_ROAM_MEDIUMFOREST_KAP2_01");
 		Wld_InsertNpc 	(Giant_Bug, 	"FP_ROAM_MEDIUMFOREST_KAP2_02");
