@@ -265,15 +265,25 @@ FUNC VOID DIA_Addon_Henry_WantEnter_Info()
 		 
 	var C_Item itm; itm = Npc_GetEquippedArmor(other);
 	
-	if	((Hlp_IsItem(itm, ITAR_KDF_L) == TRUE)
+	if	 ((Hlp_IsItem(itm, ITAR_KDF_L) == TRUE)
 	||	 (Hlp_IsItem(itm, ITAR_KDF_H) == TRUE)
-	||   (Hlp_IsItem(itm, ITAR_RANGER_Addon) == TRUE)
+	||	 (Hlp_IsItem(itm, ITAR_RANGER_Addon) == TRUE)
 	||	 (Hlp_IsItem(itm, ITAR_MIL_L) == TRUE)
-	||	 (Hlp_IsItem(itm, ITAR_MIL_M) == TRUE))
+	||	 (Hlp_IsItem(itm, ITAR_MIL_M) == TRUE)
+	||	 (Hlp_IsItem(itm,ITAR_PAL_M) == TRUE)
+	||	 (Hlp_IsItem(itm,ITAR_PAL_H) == TRUE)
+	||	 (Hlp_IsItem(itm,ITAR_DJG_L) == TRUE)
+	||	 (Hlp_IsItem(itm,ITAR_DJG_M) == TRUE)
+	||	 (Hlp_IsItem(itm,ITAR_DJG_H) == TRUE)
+	||	 (Hlp_IsItem(itm,ITAR_SLD_M) == TRUE)
+	||	 (Hlp_IsItem(itm,ITAR_SLD_H) == TRUE))
 	{
 		AI_Output (self ,other,"DIA_Addon_Henry_WantEnter_04_07"); //And you look like someone who's got gold on him.
 		AI_Output (self ,other,"DIA_Addon_Henry_WantEnter_04_08"); //So, a small contribution is not going to kill you.
-		AI_Output (self ,other,"DIA_Addon_Henry_WantEnter_04_09"); //Or did you steal those posh rags of yours?
+		if (!Hlp_IsItem(itm, ITAR_KDF_L) && !Hlp_IsItem(itm, ITAR_KDF_H))
+		{
+			AI_Output (self ,other,"DIA_Addon_Henry_WantEnter_04_09"); //Or did you steal those posh rags of yours?
+		};
 	}
 	else
 	{

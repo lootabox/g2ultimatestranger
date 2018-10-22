@@ -168,7 +168,7 @@ func void DIA_Borka_BUYHERB_Info ()
 	
 	AI_Output (other, self, "DIA_Borka_BUYHERB_15_00"); //I've heard you're selling weed.
 	
-	if (Hlp_IsItem (heroArmor, ItAR_MIl_L) == TRUE) 
+	if (Hlp_IsItem (heroArmor, ItAR_MIl_L) == TRUE || Hlp_IsItem (heroArmor, ItAR_MIl_M) == TRUE) 
 	{
 		AI_Output (self, other, "DIA_Borka_BUYHERB_11_01"); //I'm sorry, Mr. City Guard, sir. There must have been a mistake. I know nothing about weed.
 	}

@@ -572,7 +572,7 @@ FUNC VOID DIA_Jan_ArmorReady_Info()
 		else
 		{
 			AI_Output (self ,other,"DIA_JAN_ArmorReady_10_02"); //Yes, a real masterpiece. You can buy it if you want.
-			AI_Output (self ,other,"DIA_JAN_ArmorReady_10_03"); //I'll give you a special price. 12,000 gold pieces.
+			AI_Output (self ,other,"DIA_JAN_ArmorReady_10_03"); //I'll give you a special price. 12000 gold pieces.
 			AI_Output (other,self ,"DIA_JAN_ArmorReady_15_04"); //What? After all I've done for you?
 			AI_Output (self ,other,"DIA_JAN_ArmorReady_10_05"); //Don't be like that. I've got to make a living here. Take it or leave it.
 		
@@ -596,7 +596,7 @@ instance DIA_Jan_DJG_ARMOR_M		(C_INFO)
 	condition	 = 	DIA_Jan_DJG_ARMOR_M_Condition;
 	information	 = 	DIA_Jan_DJG_ARMOR_M_Info;
 	permanent	 = 	TRUE;
-	description	 =	"Medium dragon hunter armor: Protection: weapons 120, arrows 120 (12000 gold)"; //Wenn ändern, dann bitte auch in der Info-Instanz. s.u.
+	description	 =	"I want to buy the armor. (Protection: 120/120/75/35, Cost: 12000 gold)"; //Wenn ändern, dann bitte auch in der Info-Instanz. s.u.
 };
 
 func int DIA_Jan_DJG_ARMOR_M_Condition ()

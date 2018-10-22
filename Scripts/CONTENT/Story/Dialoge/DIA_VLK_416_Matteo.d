@@ -97,8 +97,11 @@ FUNC VOID DIA_Matteo_SellWhat_Info()
 {	
 	AI_Output (other, self, "DIA_Matteo_SellWhat_15_00"); //What are you selling?
 	AI_Output (self, other, "DIA_Matteo_SellWhat_09_01"); //I can offer you everything you need to survive in the wild. Weapons, torches, provisions ... even armor.
-	AI_Output (self, other, "DIA_Matteo_SellWhat_09_02"); //I still have a special piece in stock.
-	AI_Output (self, other, "DIA_Matteo_SellWhat_09_03"); //Double hardened armor of snapper leather - still unused. Interested?
+	if (Kapitel < 3)
+	{
+		AI_Output (self, other, "DIA_Matteo_SellWhat_09_02"); //I still have a special piece in stock.
+		AI_Output (self, other, "DIA_Matteo_SellWhat_09_03"); //Double hardened armor of snapper leather - still unused. Interested?
+	};
 	
 	if (Knows_Matteo == FALSE)
 	{
@@ -169,13 +172,14 @@ instance DIA_Matteo_LEATHER		(C_INFO)
 	condition	 = 	DIA_Matteo_LEATHER_Condition;
 	information	 = 	DIA_Matteo_LEATHER_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Buy leather armor. Protection: weapons 25, arrow 20. (250 gold)";
+	description	 = 	"All right, give me the armor. (Protection: 25/20/5/0, Cost: 250 gold)";
 };
 
 func int DIA_Matteo_LEATHER_Condition ()
 {	
 	if (Npc_KnowsInfo (other,DIA_Matteo_SellWhat))
 	&& (Matteo_LeatherBought == FALSE)
+	&& (Kapitel < 3)
 	{
 		return TRUE;
 	};

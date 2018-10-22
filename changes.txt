@@ -32,6 +32,9 @@ Agon returns to monastery after the Trial of Fire, if alive.
 Angar has same weapon everywhere as in the Valley of Mines.
 Bandit 10008 warns NH not to wake up Skinner only if he has not already done so.
 Bartok now grants previously omitted XP bonus for finishing the hunt with him.
+Bartok only equips his hunting gear while hunting.
+Bennet makes NH dragon hunter only after giving the armor.
+Borka considers Heavy Militia armor as militia armor.
 Brandon quest cancels if he is killed.
 Buster buys Shadowbeast Horns, even if NH does not know how to remove them.
 Buster does not drop Shadowbeast Horns given to him.
@@ -53,13 +56,16 @@ Gaan's dialog option for asking who he is cannot glitch up and become unavailabl
 Garond can be told about Silvestro's mining site even if Diego has died.
 Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
+Henry will consider all higher tier armor as luxurious and will comment appropriately.
 Igaraz can be asked about the living rock, even after moving north from the tavern.
 Igaraz returns to monastery after the Trial of Fire, if alive.
-Jan cannot drop the gold used to buy the Medium Dragon Hunter's Armor.
+Jan does not drop the gold used to buy the Medium Dragon Hunter's Armor.
+Kardif considers Heavy Militia armor as militia armor.
 Kervo's quest cancels in chapter 4, causing Kerov and Geppert to be killed by a Lurker instead of them disappearing.
 Kervo's quest fails if he is killed.
 Landlord will not give more then 5 beers per chapter and only 1 per day.
 Lares's dialog has 5 more previously unused dialogue lines.
+Lee will only sell mercenary armour while the player is a mercenary.
 Lee will refuse joining the crew if dismissed twice, with previously unused dialogue.
 Lehmar attacking the NH causes Meldor to also attack the NH.
 Lehmar does not immediately notice the theft of his ledger.
@@ -67,7 +73,11 @@ Lehmar does not lend money to NH if he attacked him, unless Oblivion is cast on 
 Lester will refuse joining the crew if dismissed twice, with previously unused dialogue.
 Mario cannot be recruited to a full ship crew.
 Mario will refuse joining the crew if dismissed twice and gets angry at NH, with previously unused dialogue.
+Matteo only sells his leather armor until beginning of chapter 3, dialogue adjusted accordingly.
+Meldor considers Heavy Militia armor as militia armor.
 Milten can teach Paladin runes in Irdorath.
+Nadja considers Heavy Militia armor as militia armor.
+Nagur considers Heavy Militia armor as militia armor.
 Nagur now grants previously omitted XP bonus for showing thieves' signal and returning Baltram's shipment.
 Onar can't be talked about rent after completing the related quest.
 Onar's dialog for buying a sheep is only available if NH knows he needs one and is not part of any guild yet.
@@ -78,6 +88,7 @@ Pepe's dialog for buying a sheep is only available if NH knows he needs one and 
 Ramirez shows two dialogue options only after he sees the thieves' signal.
 Riordian mentions William in the initial dialogue instead of the dialogue about the west.
 Rosi will not create extra gold in her inventory when giving the reward to NH for escorting her.
+Rupert can only be asked where Matteo can be found if NH did not find him yet.
 Sekob can't be talked about rent after completing the related quest.
 Sekob dialog no longer has option to go to talk to Onar if NH already talked with him.
 Skip quest cancels if he is killed.
@@ -118,6 +129,7 @@ Following actions no longer create extra journal updates:
 
 Random:
 Addon armor have correct material tag.
+Armor buying dialog options are formatted the same way.
 Black Ore effect ends on using transformation scrolls.
 Goblins and Skeletons do not create additional weapons in their inventory.
 Gold mining skill does not improve by mining empty veins.

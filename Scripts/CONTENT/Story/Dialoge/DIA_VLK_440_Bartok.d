@@ -440,6 +440,28 @@ func void DIA_Bartok_Zusammen_Pay()
 var int Bartok_Los;
 // ----------------------
 
+FUNC VOID Bartok_EquipHuntGear()
+{
+	CreateInvItem(self,ITAR_Leather_L);
+	Npc_RemoveInvItem(self,ITAR_Vlk_L);
+	CreateInvItem(self,ItRw_Bow_M_03);
+	if(!Npc_HasItems(self,ItRw_Arrow) < 30)
+	{
+		CreateInvItems(self,ItRw_Arrow,40);
+	};
+	AI_EquipArmor(self,ITAR_Leather_L);
+	AI_EquipBestRangedWeapon(self);
+};
+
+FUNC VOID Bartok_UnequipHuntGear()
+{
+	AI_EquipArmor(self,ITAR_Vlk_L);
+	Npc_RemoveInvItem(self,ITAR_Leather_L);
+	AI_UnequipWeapons(self);
+	AI_EquipBestMeleeWeapon(self);
+	Npc_RemoveInvItem(self,ItRw_Bow_M_03);
+};
+
 INSTANCE DIA_Bartok_HuntNOW (C_INFO)
 {
 	npc			= VLK_440_Bartok;
@@ -461,8 +483,10 @@ FUNC VOID DIA_Bartok_HuntNOW_Info()
 	AI_Output (other ,self,"DIA_Bartok_HuntNOW_15_00"); //Let's go hunting!
 	AI_Output (self ,other,"DIA_Bartok_HuntNOW_GO_04_01"); //All right, follow me. Outside the south gate is a wood where we should find more than enough critters.
 	AI_Output (self ,other,"DIA_Bartok_HuntNOW_GO_04_02"); //(to himself) Probably more than we'd like ...
+
+	Bartok_EquipHuntGear();
 	Bartok_Los = TRUE;
-		
+
 	AI_StopProcessInfos (self);
 	
 	self.aivar[AIV_PARTYMEMBER] = TRUE;
@@ -509,7 +533,7 @@ func void DIA_Bartok_ImWald_NachHause()
 {
 	AI_Output (other ,self,"DIA_Bartok_ImWald_NachHause_15_00"); //Let's go back!
 	AI_Output (self ,other,"DIA_Bartok_ImWald_NachHause_04_01"); //That's what I'd prefer. We'd probably wind up running straight into the arms of an orc.
-	
+	Bartok_UnequipHuntGear();
 	Info_ClearChoices (DIA_Bartok_ImWald);
 	AI_StopProcessInfos (self);
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
@@ -570,6 +594,7 @@ FUNC VOID DIA_Bartok_Angekommen_Info()
 	AI_Output (self ,other,"DIA_Bartok_Angekommen_04_03"); //So, see you!
 	AI_Output (self ,other,"DIA_Bartok_Angekommen_04_04"); //You can sell the skins to Bosper.
 	
+	Bartok_UnequipHuntGear();
 	Bartok_Ende = TRUE;
 	B_GivePlayerXP(XP_Bartok_Deal);
 	AI_StopProcessInfos (self);

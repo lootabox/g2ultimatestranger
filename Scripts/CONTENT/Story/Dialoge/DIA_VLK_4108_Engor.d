@@ -151,7 +151,7 @@ instance DIA_Engor_RSkaufen		(C_INFO)
 	condition	 = 	DIA_Engor_RSkaufen_Condition;
 	information	 = 	DIA_Engor_RSkaufen_Info;
 	permanent 	 =  TRUE;
-	description	 = 	"Buy heavy milita armor (Protection: Weapons 60, Arrows 60. Price: 2500 gold)"; 
+	description	 = 	"Give me the armor. (Protection: 60/60/10/10, Cost: 2500 gold)"; 
 };
 //--------------------------------------
 var int DIA_Engor_RSkaufen_perm;

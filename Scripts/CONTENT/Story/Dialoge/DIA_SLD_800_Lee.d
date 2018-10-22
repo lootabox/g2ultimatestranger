@@ -1055,12 +1055,13 @@ instance DIA_Lee_BuyArmorM (C_INFO)
 	condition	= DIA_Lee_BuyArmorM_Condition;
 	information	= DIA_Lee_BuyArmorM_Info;
 	permanent	= TRUE;
-	description = "Buy medium mercenary armor. Protection: weapons 50, arrows 50. Cost: 1000 gold";
+	description = "Give me the armor. (Protection: 50/50/0/5, Cost: 1000 gold)";
 };                       
 FUNC INT DIA_Lee_BuyArmorM_Condition()
 {
 	if (Lee_Give_Sld_M == TRUE)
 	&& (Lee_SldMGiven == FALSE)
+	&& (other.guild == GIL_SLD)
 	{
 		return TRUE;
 	};
@@ -1161,7 +1162,7 @@ instance DIA_Lee_ArmorH (C_INFO)
 FUNC INT DIA_Lee_ArmorH_Condition()
 {
 	if (Kapitel == 3)
-	&& ( (other.guild == GIL_SLD) || (other.guild == GIL_DJG) )
+	&& (other.guild == GIL_SLD)
 	{
 		return TRUE;
 	};
@@ -1185,12 +1186,13 @@ instance DIA_Lee_BuyArmorH (C_INFO)
 	condition	= DIA_Lee_BuyArmorH_Condition;
 	information	= DIA_Lee_BuyArmorH_Info;
 	permanent	= TRUE;
-	description = "Buy heavy mercenary armor. Protection: weapons 80, arrows 80. Cost: 2500 gold";
+	description = "Give me the heavy armor. (Protection: 80/80/5/10, Cost: 2500 gold)";
 };                       
 FUNC INT DIA_Lee_BuyArmorH_Condition()
 {
 	if (Npc_KnowsInfo (other, DIA_Lee_ArmorH))
 	&& (Lee_SldHGiven == FALSE)
+	&& (other.guild == GIL_SLD)
 	{
 		return TRUE;
 	};

@@ -153,6 +153,7 @@ FUNC INT DIA_Rupert_WoMatteo_Condition()
 {
 	if (Npc_KnowsInfo (other,DIA_Rupert_HelpMeIntoOV))
 	&& (hero.guild == GIL_NONE)
+	&& (Knows_Matteo == FALSE)
 	{
 		return TRUE;
 	};	

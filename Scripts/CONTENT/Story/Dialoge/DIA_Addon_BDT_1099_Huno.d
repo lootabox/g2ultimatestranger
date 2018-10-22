@@ -207,7 +207,7 @@ FUNC VOID DIA_Addon_Huno_Armor_Info()
 		
 		BDT_Armor_H_Value = 2100;
 		Info_AddChoice (DIA_Addon_Huno_Armor, DIALOG_BACK, DIA_Addon_Huno_Armor_BACK);
-		Info_AddChoice (DIA_Addon_Huno_Armor, "Buy heavy bandit armor (Protection: weapons 45, arrows 45. Cost: 2100 gold)", DIA_Addon_Huno_Armor_BUY);
+		Info_AddChoice (DIA_Addon_Huno_Armor, "Okay, I'll take the armor. (Protection: 50/50, Cost: 2100 gold)", DIA_Addon_Huno_Armor_BUY);
 	}
 	else //CHEAP
 	{
@@ -216,7 +216,7 @@ FUNC VOID DIA_Addon_Huno_Armor_Info()
 				
 		BDT_Armor_H_Value = 1400;
 		Info_AddChoice (DIA_Addon_Huno_Armor, DIALOG_BACK, DIA_Addon_Huno_Armor_BACK);
-		Info_AddChoice (DIA_Addon_Huno_Armor, "Buy heavy bandit armor (Protection: weapons 45, arrows 45. Cost: 1400 gold)", DIA_Addon_Huno_Armor_BUY);
+		Info_AddChoice (DIA_Addon_Huno_Armor, "Okay, I'll take the armor. (Protection: 50/50, Cost: 1400 gold)", DIA_Addon_Huno_Armor_BUY);
 	};
 };
 func void DIA_Addon_Huno_Armor_Back()

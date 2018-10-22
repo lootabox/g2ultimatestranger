@@ -16,12 +16,12 @@ instance VLK_440_Bartok (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItRw_Bow_M_03); 
+	//EquipItem	(self, ItRw_Bow_M_03); 
 	EquipItem	(self, ItMW_Addon_Hacker_1h_01); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	CreateInvItems (self, ItRw_Arrow,40);	
+	//CreateInvItems (self, ItRw_Arrow,40);	
 	CreateInvItems (self, ItPo_Health_03, 5);
 	
 	// ------ visuals ------																			

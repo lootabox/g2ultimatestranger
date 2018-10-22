@@ -395,7 +395,7 @@ func void DIA_Orlan_RUESTUNG_Info ()
 	Info_ClearChoices		(DIA_Orlan_RUESTUNG);
 
 	Info_AddChoice			(DIA_Orlan_RUESTUNG, DIALOG_BACK	,	DIA_Orlan_RUESTUNG_BACK);	
-	Info_AddChoice			(DIA_Orlan_RUESTUNG, "Leather armor. Protection: weapons 25, arrows 20, fire 5 (250 gold)" , DIA_Orlan_RUESTUNG_Buy);	
+	Info_AddChoice			(DIA_Orlan_RUESTUNG, "I'd like to buy the leather armor. (Protection: 25/20/5/0, Cost: 250 gold)" , DIA_Orlan_RUESTUNG_Buy);	
 };  
 
 func void DIA_Orlan_RUESTUNG_Buy ()

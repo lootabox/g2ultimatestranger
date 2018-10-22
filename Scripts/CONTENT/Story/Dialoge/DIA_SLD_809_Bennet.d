@@ -819,12 +819,6 @@ func int DIA_Bennet_ThankYou_Condition ()
 
 func void DIA_Bennet_ThankYou_Info ()
 {
-	if (hero.guild == GIL_SLD)
-	{
-		other.guild = GIL_DJG;
-		Npc_SetTrueGuild (other, GIL_DJG);
-	};
-
 	AI_Output	(self ,other,"DIA_Bennet_ThankYou_06_00"); //Man, and here I was thinking they'd really hang me!
 	AI_Output	(other,self ,"DIA_Bennet_ThankYou_15_01"); //Well, it worked out all right in the end.
 	AI_Output 	(self ,other,"DIA_Bennet_ThankYou_06_02"); //You can say that again. You should have seen the face of the soldier when he had to let me out!
@@ -832,7 +826,6 @@ func void DIA_Bennet_ThankYou_Info ()
 	AI_Output 	(self ,other,"DIA_Bennet_ThankYou_06_04"); //Which reminds me, I've got something for you.
 	AI_Output	(other,self ,"DIA_Bennet_ThankYou_15_05"); //What do you mean?
 	AI_Output 	(self ,other,"DIA_Bennet_ThankYou_06_06"); //(grins) A present.
-	
 };
 
 //*********************************************************************
@@ -867,7 +860,6 @@ func void DIA_Bennet_Present_Info ()
 	
 	if (hero.guild == GIL_DJG)
 	{
-			
 		AI_Output 	(self ,other,"DIA_Bennet_Present_06_04"); //At any rate, some of the boys have decided to go into the valley as well.
 		AI_Output 	(self ,other,"DIA_Bennet_Present_06_05"); //(grins) They are planning to tidy up in there.
 		AI_Output	(other,self ,"DIA_Bennet_Present_15_06"); //What's that got to do with me?
@@ -877,6 +869,8 @@ func void DIA_Bennet_Present_Info ()
 			
 		CreateInvItems (self,ITAR_DJG_L,1);
 		B_GiveInvItems (self,other,ITAR_DJG_L,1);
+		other.guild = GIL_DJG;
+		Npc_SetTrueGuild (other, GIL_DJG);
 			
 		AI_Output 	(self ,other,"DIA_Bennet_Present_06_10"); //I thought you might want to be in on the fun. You're going to need the right equipment when you go down to that valley.
 		AI_Output 	(self ,other,"DIA_Bennet_Present_06_11"); //Also, I am interested in dragon scales. Genuine dragon scales. I shall pay you a good price for them.
@@ -959,7 +953,7 @@ instance DIA_Bennet_DJG_ARMOR_M		(C_INFO)
 	condition	 = 	DIA_Bennet_DJG_ARMOR_M_Condition;
 	information	 = 	DIA_Bennet_DJG_ARMOR_M_Info;
 	permanent	 = 	TRUE;
-	description	 =	"Medium dragon hunter armor: Protection: weapons 120, arrows 120 (12000 gold)"; //Wenn ändern, dann bitte auch in der Info-Instanz. s.u.
+	description	 =	"I want to buy the armor. (Protection: 120/120/75/35, Cost: 12000 gold)"; //Wenn ändern, dann bitte auch in der Info-Instanz. s.u.
 };
 
 func int DIA_Bennet_DJG_ARMOR_M_Condition ()
@@ -1045,7 +1039,7 @@ instance DIA_Bennet_DJG_ARMOR_H		(C_INFO)
 	condition	 = 	DIA_Bennet_DJG_ARMOR_H_Condition;
 	information	 = 	DIA_Bennet_DJG_ARMOR_H_Info;
 	permanent	 = 	TRUE;
-	description	 =	"Heavy dragon hunter armor: Protection: weapons 150, arrows 150. (20000 gold)"; //Wenn ändern, dann bitte auch in der Info-Instanz. s.u.
+	description	 =	"Give me the armor. (Protection: 150/150/100/50, Cost: 20000 gold)"; //Wenn ändern, dann bitte auch in der Info-Instanz. s.u.
 };
 
 func int DIA_Bennet_DJG_ARMOR_H_Condition ()
