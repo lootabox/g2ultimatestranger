@@ -45,6 +45,7 @@ FUNC VOID DIA_Edda_Hallo_Info()
 	AI_Output (other ,self,"DIA_Edda_Hallo_15_00"); //What are you cooking there?
 	AI_Output (self ,other,"DIA_Edda_Hallo_17_01"); //A fish soup. It's not all that tasty, but at least it's hot.
 	AI_Output (self ,other,"DIA_Edda_Hallo_17_02"); //You can try a plateful if you like.
+	AI_Output (self ,other,"DIA_Edda_Kochen_17_01"); //I cook for everybody. For you, too, if you want. All you need to do is bring me a fish.
 };
 
 // ************************************************************
@@ -79,7 +80,7 @@ FUNC VOID DIA_Edda_Stadt_Info()
 // ************************************************************
 // 			Kannst du mir eine Suppe kochen?
 // ************************************************************
-INSTANCE DIA_Edda_Kochen(C_INFO)
+/* INSTANCE DIA_Edda_Kochen(C_INFO)
 {
 	npc			= VLK_471_Edda;
 	nr			= 6;
@@ -97,7 +98,7 @@ FUNC VOID DIA_Edda_Kochen_Info()
 {	
 	AI_Output (other ,self,"DIA_Edda_Kochen_15_00"); //Could you cook me some soup?
 	AI_Output (self ,other,"DIA_Edda_Kochen_17_01"); //I cook for everybody. For you, too, if you want. All you need to do is bring me a fish.
-};			
+};			 */
 // ************************************************************
 // 		tägliche Suppe abholen
 // ************************************************************
@@ -113,18 +114,27 @@ INSTANCE DIA_Edda_Suppe(C_INFO)
 
 FUNC INT DIA_Edda_Suppe_Condition()
 {	
-	if Npc_KnowsInfo (other,DIA_Edda_Kochen)
+/* 	if Npc_KnowsInfo (other,DIA_Edda_Kochen)
 	{
 		return TRUE;
-	};
+	}; */
+	return TRUE;
 };
 FUNC VOID DIA_Edda_Suppe_Info()
 {	
-	AI_Output (other ,self,"DIA_Edda_Suppe_15_00"); //Could you cook me some soup?
+	if (Hlp_RAndom(100) > 50)
+	{
+		AI_Output (other ,self,"DIA_Edda_Suppe_15_00"); //Could you cook me some soup?
+	}
+	else
+	{
+		AI_Output (other ,self,"DIA_Edda_Kochen_15_00"); //Could you cook me some soup?
+	};
 	
 	if (Wld_GetDay() == 0)
 	{
 		AI_Output (self ,other,"DIA_Edda_Suppe_17_02"); //Starting tomorrow, you can come and get some soup every day.
+		AI_Output (self ,other,"DIA_Edda_Suppe_17_04"); //Bring me a fish, and I'll cook you a tasty soup.
 	}
 	else if (Edda_Day != Wld_GetDay())
 	{

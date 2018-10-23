@@ -617,7 +617,7 @@ func void DIA_Parlan_Stand_Info ()
 		B_GiveInvItems (self, other, ItKe_KlosterBibliothek,1);
 		
 		//laufende Arbeiten im Log verschwinden lassen
-		if (MIS_NeorasPflanzen == LOG_RUNNING)
+		/* if (MIS_NeorasPflanzen == LOG_RUNNING)
 		{
 			MIS_NeorasPflanzen = LOG_OBSOLETE;
 		};
@@ -644,7 +644,7 @@ func void DIA_Parlan_Stand_Info ()
 		if (MIS_MardukBeten == LOG_RUNNING)
 		{
 			MIS_MardukBeten = LOG_OBSOLETE;
-		};
+		}; */
 		
 		B_CheckLog();
 		

@@ -112,6 +112,7 @@ func int DIA_Sergio_Aufgabe_Condition ()
 	if  (Npc_GetDistToWP (self,"NW_MONASTERY_CHAPELL_02") <= 1500)
 	&& (other.guild == GIL_NOV)
 	&& (Npc_KnowsInfo (other,DIA_Sergio_Isgaroth))
+	&& (Parlan_Erlaubnis == FALSE)
 	{	
 		return TRUE;
 	};
@@ -127,6 +128,7 @@ func void DIA_Sergio_Aufgabe_Info ()
 	
 	Log_CreateTopic (Topic_IsgarothWolf,LOG_MISSION);
 	Log_SetTopicStatus	 (Topic_IsgarothWolf,LOG_RUNNING);
+	MIS_IsgarothWolf = LOG_RUNNING;
 	B_LogEntry (Topic_IsgarothWolf,"Master Isgaroth needs help at the shrine. I should look him up.");
 };	
 

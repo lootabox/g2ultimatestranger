@@ -479,6 +479,36 @@ func void DIA_Pyrokar_OATH_Info ()
 	AI_Output (self, other, "DIA_Pyrokar_OATH_11_06"); //By speaking the words of the oath, you have entered the pact with the fire.
 	AI_Output (self, other, "DIA_Pyrokar_OATH_11_07"); //Wear this robe as a token of the eternal bond.
 	
+	if(MIS_NeorasPflanzen == LOG_Running)
+	{
+		MIS_NeorasPflanzen = LOG_OBSOLETE;
+	};
+	if(MIS_NeorasRezept == LOG_Running)
+	{
+		MIS_NeorasRezept = LOG_OBSOLETE;
+	};
+	if(MIS_IsgarothWolf == LOG_Running)
+	{
+		MIS_IsgarothWolf = LOG_OBSOLETE;
+	};
+	if(MIS_ParlanFegen == LOG_Running)
+	{
+		MIS_ParlanFegen = LOG_OBSOLETE;
+	};
+	if(MIS_GoraxEssen == LOG_Running)
+	{
+		MIS_GoraxEssen = LOG_OBSOLETE;
+	};
+	if(MIS_GoraxWein == LOG_Running)
+	{
+		MIS_GoraxWein = LOG_OBSOLETE;
+	};
+	if(MIS_MardukBeten == LOG_Running)
+	{
+		MIS_MardukBeten = LOG_OBSOLETE;
+	};
+	B_CheckLog();
+
 	CreateInvItems 		(hero,ITAR_KDF_L,1);
 	AI_EquipArmor		(hero,ITAR_KDF_L);		
 	

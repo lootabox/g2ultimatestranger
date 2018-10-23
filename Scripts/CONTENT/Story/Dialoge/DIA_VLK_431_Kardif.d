@@ -776,6 +776,8 @@ instance DIA_Kardif_DEFEATEDATTILA		(C_INFO)
 func int DIA_Kardif_DEFEATEDATTILA_Condition ()
 {
 	if (Npc_KnowsInfo(other, DIA_Attila_Hallo))
+	&& (Kardif_OneQuestion == FALSE)
+	&& (!Npc_HasItems(Attila,ItKe_ThiefGuildKey_MIS) || (Npc_GetDistToWP(Attila,"NW_CITY_KARDIF") > 2000) || Npc_IsDead(Attila))
 	{
 		return TRUE;
 	};
@@ -789,8 +791,8 @@ func void DIA_Kardif_DEFEATEDATTILA_Info ()
 
 	B_GivePlayerXP (XP_Kardif_Blame4Attila);
 	
-	B_KillNpc	(Attila);
-	Npc_RemoveInvItem	(Attila, ItMi_OldCoin);
+	//B_KillNpc	(Attila);
+	//Npc_RemoveInvItem	(Attila, ItMi_OldCoin);
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Diebeszeichen

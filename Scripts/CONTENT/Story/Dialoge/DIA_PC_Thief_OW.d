@@ -756,8 +756,8 @@ func VOID DIA_Addon_ThiefOW_Nostalgie_Info()
 	AI_Output (self, other, "DIA_Addon_Diego_Nostalgie_11_03"); //It's been ages ...
 	AI_Output (self, other, "DIA_Addon_Diego_Nostalgie_11_04"); //There was something ELSE in this place - hmm - damn! I just can't remember.
 	AI_Output (self, other, "DIA_Addon_Diego_Nostalgie_11_05"); //Whatever ...
-	hero.exp = hero.exp + 500;
-	B_GivePlayerXP (500);
+	//hero.exp = hero.exp + 500;
+	B_GivePlayerXP (1000);
 	PrintScreen (ConcatStrings(NAME_Addon_NostalgieBonus, IntToString(500)), -1, 60, FONT_Screen, 2);
 	
 	

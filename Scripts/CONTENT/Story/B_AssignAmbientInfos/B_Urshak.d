@@ -36,8 +36,8 @@ instance DIA_Urshak_HALLO		(C_INFO)
 
 func int DIA_Urshak_HALLO_Condition ()
 {
-	if (Npc_IsInState (self,ZS_Talk))
-	&& (URSHAK_SUCKED	== FALSE)
+	//if (Npc_IsInState (self,ZS_Talk))
+	if (URSHAK_SUCKED	== FALSE)
 		{
 			return TRUE;
 		};	

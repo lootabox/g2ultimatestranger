@@ -46,6 +46,7 @@ Diego can teach strength in Khorinis.
 Diego cannot be led to Pedrakhan.
 Diego's dialog has 6 more previously unused dialogue lines or 15 more if NH never met him in Valley of Mines.
 Dragomir immediately equips his crossbow after receiving it.
+Edda does not have duplicate dialog option, moved dialog lines around appropriately.
 Esteban does not turn to his guards if they are dead.
 Esteban's bodyguards go running to meet Fisk.
 Gaan can only be asked about hunting training once NH learns he is a hunter.
@@ -59,8 +60,12 @@ Gorax waits for NH at church gate to offer him the task to kill Pedro.
 Henry will consider all higher tier armor as luxurious and will comment appropriately.
 Igaraz can be asked about the living rock, even after moving north from the tavern.
 Igaraz returns to monastery after the Trial of Fire, if alive.
+Isgaroth can be asked for a blessing after he tells who he is.
+Isgaroth can be traded with as a mage, even if he was never spoken to before.
+Isgaroth properly updates quest log for requirements of joining the monastery.
 Jan does not drop the gold used to buy the Medium Dragon Hunter's Armor.
 Kardif considers Heavy Militia armor as militia armor.
+Kardif cannot be talked about Attila if he is nearby and the dialog option does not kill him.
 Kervo's quest cancels in chapter 4, causing Kerov and Geppert to be killed by a Lurker instead of them disappearing.
 Kervo's quest fails if he is killed.
 Landlord will not give more then 5 beers per chapter and only 1 per day.
@@ -91,6 +96,7 @@ Rosi will not create extra gold in her inventory when giving the reward to NH fo
 Rupert can only be asked where Matteo can be found if NH did not find him yet.
 Sekob can't be talked about rent after completing the related quest.
 Sekob dialog no longer has option to go to talk to Onar if NH already talked with him.
+Sergio can only be asked about access to library if NH has not already achieved it.
 Skip quest cancels if he is killed.
 Sylvio shows correct pick pocket difficulty in Valley of Mines.
 Talbin wields a Wolf Blade instead of a branch.
@@ -98,8 +104,10 @@ Thekla now grants previously omitted XP bonus for defeating Bullco.
 Ulf does not randomly die in the beginning of chapter 3.
 Ulf returns to monastery after the Trial of Fire, if alive.
 Ulf smokes a joint as well instead of watching as NH smokes one.
+Urshak will not wait for player to talk to him.
 Vatras does not sell Almanacs of the Possessed given to him
 Xardas' dialog has 3 more previously unused dialogue lines.
+
 
 Following actions no longer create extra journal updates:
 * Reading Cornelius' Diary, Xardas' Letter, Lucia's farewell letter, almanac in the secret library, Black Magician's Scroll, novice black magician's Diary, "Pure mana" and "Pure health".
@@ -134,6 +142,8 @@ Black Ore effect ends on using transformation scrolls.
 Goblins and Skeletons do not create additional weapons in their inventory.
 Gold mining skill does not improve by mining empty veins.
 Magic Runes are removed from frozen corpses.
+Monastery novice quest become obsolete only after player becomes a mage.
+Nostalgia bonus properly awards levels to NH.
 Novices do not create additional sausages when given one.
 Paladin runes now cost correct amount of learning points.
 Pirates generate ambient inventories.

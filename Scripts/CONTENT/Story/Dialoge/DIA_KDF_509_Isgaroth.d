@@ -60,7 +60,10 @@ INSTANCE DIA_Isgaroth_Segen   (C_INFO)
 };
 FUNC INT DIA_Isgaroth_Segen_Condition()
 {
-	return TRUE;
+	if(Npc_KnowsInfo(other,DIA_Isgaroth_Job))
+	{
+		return TRUE;
+	};
 };
 FUNC VOID DIA_Isgaroth_Segen_Info()
 {
@@ -83,7 +86,7 @@ INSTANCE DIA_Isgaroth_Wolf   (C_INFO)
 };
 FUNC INT DIA_Isgaroth_Wolf_Condition()
 {	
-	if (MIS_KlosterArbeit == LOG_RUNNING)
+	if (MIS_IsgarothWolf == LOG_RUNNING) //(MIS_KlosterArbeit == LOG_RUNNING)
 	&& (Sergio_Sends == TRUE) 
 	&& (Kapitel == 1)
 	{
@@ -95,7 +98,7 @@ FUNC VOID DIA_Isgaroth_Wolf_Info()
 	AI_Output (other,self ,"DIA_Isgaroth_Wolf_15_00"); //Sergio sent me. I have taken over his task. So, what is it?
 	AI_Output (self ,other,"DIA_Isgaroth_Wolf_01_01"); //A dark wolf has been roaming the area recently. Track it down and kill it.
 
-	MIS_IsgarothWolf = LOG_RUNNING;
+	//MIS_IsgarothWolf = LOG_RUNNING;
 	B_LogEntry (Topic_IsgarothWolf,"There's a dark wolf roaming around the shrine. I should find him and kill him.");
 	
 };
@@ -108,7 +111,7 @@ INSTANCE DIA_Isgaroth_tot   (C_INFO)
 	nr          = 2;
 	condition   = DIA_Isgaroth_tot_Condition;
 	information = DIA_Isgaroth_tot_Info;
-	permanent   = TRUE;
+	permanent   = FALSE;
 	description	= "I have killed the wolf.";
 };
 FUNC INT DIA_Isgaroth_tot_Condition()
@@ -146,10 +149,11 @@ INSTANCE DIA_Isgaroth_Job   (C_INFO)
 };
 FUNC INT DIA_Isgaroth_Job_Condition()
 {
-	if (hero.guild != GIL_KDF)
+	/* if (hero.guild != GIL_KDF)
 	{
 		return TRUE;
-	};		
+	};		 */
+	return TRUE;
 };
 FUNC VOID DIA_Isgaroth_Job_Info()
 {
@@ -216,10 +220,13 @@ FUNC VOID DIA_Isgaroth_Kloster_Info()
 	{
 		AI_Output (self ,other,"DIA_Isgaroth_Kloster_01_02"); //And if you want to be accepted as a novice in the monastery, you must bring a sheep and ...
 		B_Say_Gold (self, other,Summe_Kloster);
-		
-		Log_CreateTopic (Topic_Kloster,LOG_MISSION);
-		Log_SetTopicStatus (Topic_Kloster,LOG_RUNNING);
-		B_LogEntry (Topic_Kloster,"To become a novice at the monastery of Innos, I need a sheep and 1000 pieces of gold.");
+		if(SC_KnowsKlosterTribut == FALSE)
+		{
+			SC_KnowsKlosterTribut = TRUE;
+			Log_CreateTopic (Topic_Kloster,LOG_MISSION);
+			Log_SetTopicStatus (Topic_Kloster,LOG_RUNNING);
+			B_LogEntry (Topic_Kloster,"To become a novice at the monastery of Innos, I need a sheep and 1000 pieces of gold.");
+		};
 	}
 	else 
 	{
