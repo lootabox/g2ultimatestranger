@@ -37,6 +37,7 @@ func int DIA_Orlan_Wein_Condition ()
 {	
 	if (MIS_GoraxWein == LOG_RUNNING)
 	&& (Npc_HasItems (other, ItFo_Wine) >= 12)
+	&& (Npc_KnowsInfo (other, DIA_Orlan_WERBISTDU))
 	{
 		return TRUE;
 	};

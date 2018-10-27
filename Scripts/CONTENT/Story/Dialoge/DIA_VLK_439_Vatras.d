@@ -1057,7 +1057,9 @@ func void DIA_Addon_Vatras_MissingPeople_Success()
 	if (Npc_HasItems (other,ItWr_RavensKidnapperMission_Addon))
 	{	
 		AI_Output	(other, self, "DIA_Addon_Vatras_MissingPeople_Success_15_05"); //Here.
+		AI_PrintScreen (PRINT_ItemGegeben, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 		B_UseFakeScroll ();
+		AI_PrintScreen	(PRINT_ItemErhalten, -1, YPOS_ItemTaken, FONT_ScreenSmall, 2);
 	};
 	AI_Output	(self, other, "DIA_Addon_Vatras_MissingPeople_Success_05_06"); //Good. You did a great job. I had feared that we might have to resign ourselves to never knowing.
 	MIS_Addon_Vatras_WhereAreMissingPeople = LOG_SUCCESS;

@@ -562,7 +562,7 @@ instance DIA_Onar_BuyLiesel	(C_INFO)
 };
 func int DIA_Onar_BuyLiesel_Condition ()
 {	
-	if (Onar_SellSheep == TRUE)
+	if (Onar_SellSheep == TRUE) && (Liesel_Giveaway == FALSE)
 	{
 		return TRUE;
 	};

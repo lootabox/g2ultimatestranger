@@ -109,7 +109,8 @@ FUNC VOID DIA_Addon_Senyan_Hi_Info()
 {	
 	
 	AI_Output (self, other, "DIA_Addon_BDT_1084_Senyan_Hi_12_00");//Ah! Who have we here then?
-	B_UseFakeScroll();
+	//B_UseFakeScroll();
+	B_UseFakeHeroFace();
 	AI_Output (self, other, "DIA_Addon_BDT_1084_Senyan_Hi_12_01");//Looky, looky. There you are. I've got good news and bad news for you.
 	
 	Info_ClearChoices (DIA_Addon_BDT_1084_Senyan_Hi);

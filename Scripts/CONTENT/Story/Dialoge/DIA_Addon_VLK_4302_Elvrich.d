@@ -371,10 +371,12 @@ func void DIA_Addon_Elvrich_LuciaLetter_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Elvrich_LuciaLetter_15_00"); //I found a letter from your Lucia.
 	AI_Output	(self, other, "DIA_Addon_Elvrich_LuciaLetter_04_01"); //(excited) What? Give it here!
+	AI_PrintScreen (PRINT_ItemGegeben, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 	B_UseFakeScroll ();
 	AI_Output	(self, other, "DIA_Addon_Elvrich_LuciaLetter_04_02"); //(desperate) NO! I don't believe this. No. I just can't believe it.
 	AI_Output	(self, other, "DIA_Addon_Elvrich_LuciaLetter_04_03"); //(desperate) She can't just leave me behind like this.
 	AI_Output	(self, other, "DIA_Addon_Elvrich_LuciaLetter_04_04"); //(desperate) Take this letter back. I don't want it. I firmly believe that she's going to come back to me some day.
+	AI_PrintScreen	(PRINT_ItemErhalten, -1, YPOS_ItemTaken, FONT_ScreenSmall, 2);
 	
 	Log_CreateTopic (TOPIC_Addon_Lucia, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Addon_Lucia, LOG_RUNNING);

@@ -1098,8 +1098,10 @@ func void DIA_Addon_Greg_NW_RavensLetter_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Greg_NW_RavensLetter_15_00"); //Dexter carried nothing but this letter.
 	AI_Output	(self, other, "DIA_Addon_Greg_NW_RavensLetter_01_01"); //Show me that thing.
+	AI_PrintScreen (PRINT_ItemGegeben, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 	B_UseFakeScroll ();
 	AI_Output	(self, other, "DIA_Addon_Greg_NW_RavensLetter_01_02"); //Aw, damnit. That doesn't help me at all.
+	AI_PrintScreen	(PRINT_ItemErhalten, -1, YPOS_ItemTaken, FONT_ScreenSmall, 2);
 	AI_Output	(self, other, "DIA_Addon_Greg_NW_RavensLetter_01_03"); //We shouldn't have just let him croak like that.
 	AI_Output	(self, other, "DIA_Addon_Greg_NW_RavensLetter_01_04"); //You wouldn't happen to know how to cross those mountains in the north-east of Khorinis?
 	

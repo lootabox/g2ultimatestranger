@@ -101,7 +101,8 @@ func void DIA_Pablo_WANTED_Info ()
 	AI_Output (self, other, "DIA_Pablo_WANTED_12_00"); //Hey you, wait - you look familiar to me.
 	AI_Output (other, self, "DIA_Pablo_WANTED_15_01"); //What do you want?
 	AI_Output (self, other, "DIA_Pablo_WANTED_12_02"); //I've seen your face before somewhere ... ah - right!
-	B_UseFakeScroll ();
+	//B_UseFakeScroll ();
+	B_UseFakeHeroFace();
 	AI_Output (self, other, "DIA_Pablo_WANTED_12_03"); //Here - we found this picture on some bandits we picked up a few days ago - it looks a lot like you.
 	B_GiveInvItems (self, other, ItWr_Poster_MIS,1);
 	AI_Output (self, other, "DIA_Pablo_WANTED_12_04"); //Apparently, those guys were looking for you.

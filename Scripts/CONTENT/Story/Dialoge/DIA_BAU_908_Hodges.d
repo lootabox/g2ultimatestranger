@@ -309,7 +309,7 @@ instance DIA_Hodges_BennetsCrime			(C_INFO)
 
 func int DIA_Hodges_BennetsCrime_Condition ()
 {
-	if (Npc_KnowsInfo (other,DIA_Hodges_DontWork))
+	if (Npc_KnowsInfo (other,DIA_Hodges_WhatHappened))
 	&& (MIS_RescueBennet != LOG_SUCCESS)
 	{
 		return TRUE;

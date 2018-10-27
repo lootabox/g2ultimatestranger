@@ -362,6 +362,23 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 			return FALSE; //Nahkampfangriff
 		};
 	};
-	
+	// ------ Hanna ------
+	if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(VLK_414_Hanna))
+	{
+		if(!Npc_IsInState(oth,ZS_MagicFreeze) && Npc_HasItems(slf,ItSc_IceCube))
+		{
+			B_ReadySpell(slf,SPL_IceCube,SPL_Cost_Scroll);
+			return TRUE;
+		}
+		else if(Npc_HasItems(slf,ItSc_Firestorm))
+		{
+			B_ReadySpell(slf,SPL_Firestorm,SPL_Cost_Scroll);
+			return TRUE;
+		}
+		else
+		{
+			return FALSE;
+		};
+	};
 	return FALSE; //alle anderen Gilden		
 };   

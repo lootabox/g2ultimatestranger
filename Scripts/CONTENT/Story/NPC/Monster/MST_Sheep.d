@@ -102,7 +102,8 @@ INSTANCE Hammel	(Mst_Default_Sheep)
 INSTANCE Follow_Sheep	(Mst_Default_Sheep)
 {
 	name						= "Betsy";
-	
+	level						= 0;
+
 	aivar[AIV_ToughGuy] = TRUE; //Liesel knn getötet werden, ohne daß jemand sich anpißt!
 		
 	B_SetVisuals_Sheep();

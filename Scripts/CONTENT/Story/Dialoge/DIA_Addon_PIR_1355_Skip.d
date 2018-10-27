@@ -84,7 +84,8 @@ func VOID DIA_Addon_Skip_Hello_Info()
 	AI_Output (self ,other,"DIA_Addon_Skip_Hello_08_04"); //(proudly) I see I made a lasting impression.
 	AI_Output (self ,other,"DIA_Addon_Skip_Hello_08_05"); //But I've seen your mug ELSEWHERE in the meantime ...
 	AI_Output (self ,other,"DIA_Addon_Skip_Hello_08_06"); //But of course!
-	B_UseFakeScroll ();
+	//B_UseFakeScroll ();
+	B_UseFakeHeroFace();
 	AI_Output (self ,other,"DIA_Addon_Skip_Hello_08_07"); //Oh well. Not a great likeness, but it's certainly YOU.
 	AI_Output (self ,other,"DIA_Addon_Skip_Hello_08_08"); //Don't let it get to you. My own wanted poster looks just as daft.
 	Npc_ExchangeRoutine	(self,"Start");

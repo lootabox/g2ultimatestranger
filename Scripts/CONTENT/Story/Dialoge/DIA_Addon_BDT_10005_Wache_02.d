@@ -73,7 +73,8 @@ FUNC VOID DIA_Addon_Wache_02_Hi_Info()
 {
 	AI_Output (other, self, "DIA_Addon_Wache_02_Hi_15_00");//How's it going?
 	AI_Output (self, other, "DIA_Addon_Wache_02_Hi_13_01");//Wait a minute, don't I know you from somewhere?
-	B_UseFakeScroll ();
+	//B_UseFakeScroll ();
+	B_UseFakeHeroFace();
 	AI_Output (self, other, "DIA_Addon_Wache_02_Hi_13_02");//Hmm... no. You're not him. Go on, piss off.
 };
 //--------------------------------------------------------------------

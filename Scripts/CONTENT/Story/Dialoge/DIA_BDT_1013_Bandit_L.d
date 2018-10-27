@@ -80,7 +80,8 @@ FUNC VOID DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN()
 {
 	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_15_00"); //I've come from the mountains.
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_01"); //Exactly. You come from the mountains. And that is bad for you.
-	B_UseFakeScroll();
+	//B_UseFakeScroll();
+	B_UseFakeHeroFace();
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_02"); //Very bad.
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_03"); //They're looking for you - a whole bunch of evil guys.
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_04"); //There's someone here you absolutely have to talk to. Follow me!

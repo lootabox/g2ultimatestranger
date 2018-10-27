@@ -459,7 +459,7 @@ INSTANCE DIA_Hanna_AusKeller(C_INFO)
 };                       
 FUNC INT DIA_Hanna_AusKeller_Condition()
 {
-	if (Npc_HasItems (other, ItKe_ThiefGuildKey_Hotel_MIS) >= 1)
+	if (Npc_HasItems (other, ItKe_ThiefGuildKey_Hotel_MIS) >= 1 && Andre_Diebesgilde_aufgeraeumt == FALSE)
 	{
 		return TRUE;
 	};
@@ -549,6 +549,124 @@ FUNC VOID DIA_Hanna_GiveSchuldenbuch_Info()
 	AI_Output (self, other, "DIA_Hanna_Add_17_48"); //It is a key to the gate of wealth.
 };
 
+// ************************************************************
+//						Blubb
+// ************************************************************
+
+instance DIA_Hanna_Blubb(C_Info)
+{
+	npc = VLK_414_Hanna;
+	nr = 1;
+	condition = DIA_Hanna_Blubb_Condition;
+	information = DIA_Hanna_Blubb_Info;
+	permanent = TRUE;
+	description = "Everything all right in the hideout?";
+};
+
+func int DIA_Hanna_Blubb_Condition()
+{
+	if(Npc_KnowsInfo(other,DIA_Hanna_AusKeller) && (Knows_SecretSign == TRUE) && (Andre_Diebesgilde_aufgeraeumt == FALSE))
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Hanna_Blubb_Info()
+{
+	AI_Output(other,self,"DIA_Hanna_Add_15_37");	//Everything all right in the hideout?
+	if ((Cassia.aivar[AIV_KilledByPlayer] == TRUE)
+	&& (Jesper.aivar[AIV_KilledByPlayer] == TRUE)
+	&& (Ramirez.aivar[AIV_KilledByPlayer] == TRUE))
+	{
+		AI_Output(self,other,"DIA_Hanna_Add_17_39");	//I haven't seen any of them in quite a while.
+		AI_Output(self,other,"DIA_Hanna_Add_17_40");	//I should go down there when I get the chance and check up on things.
+	}
+	else
+	{
+		AI_Output(self,other,"DIA_Hanna_Add_17_38");	//Yes. But you'd better not talk about it...
+	};
+};
+
+instance DIA_Hanna_Blubb2(C_Info)
+{
+	npc = VLK_414_Hanna;
+	nr = 1;
+	condition = DIA_Hanna_Blubb2_Condition;
+	information = DIA_Hanna_Blubb2_Info;
+	permanent = FALSE;
+	description = "Do you know about the thieves' hideout?";
+};
+
+func int DIA_Hanna_Blubb2_Condition()
+{
+	if(!Npc_KnowsInfo(other,DIA_Hanna_AusKeller) && (Knows_SecretSign == FALSE) && (Andre_Diebesgilde_aufgeraeumt == FALSE))
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Hanna_Blubb2_Info()
+{
+	AI_Output(other,self,"DIA_Hanna_Add_15_25");	//Do you know about the thieves' hideout?
+	AI_Output(self,other,"DIA_Hanna_Add_17_26");	//(smirks) I don't know what you're talking about...
+};
+
+instance DIA_Hanna_Blubb3(C_Info)
+{
+	npc = VLK_414_Hanna;
+	nr = 1;
+	condition = DIA_Hanna_Blubb3_Condition;
+	information = DIA_Hanna_Blubb3_Info;
+	important = TRUE;
+};
+
+func int DIA_Hanna_Blubb3_Condition()
+{
+	if(Npc_KnowsInfo(other,DIA_Hanna_AusKeller) && Andre_Diebesgilde_aufgeraeumt == TRUE)
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Hanna_Blubb3_Info()
+{
+	CreateInvItem(self,ItSc_IceCube);
+	CreateInvItem(self,ItSc_Firestorm);
+	AI_Output(self,other,"DIA_Hanna_Add_17_32");	//The militia was here... Somebody betrayed the hideout!
+	AI_Output(self,other,"DIA_Hanna_Add_17_33");	//They couldn't pin anything on me, but Cassia and her people are dead!
+	AI_Output(self,other,"DIA_Hanna_Add_17_34");	//I'm sure it was YOU!
+	B_SelectSpell(self,other);
+	AI_Output(self,other,"DIA_Hanna_Add_17_35");	//I bought this here especially for you.
+	AI_Output(self,other,"DIA_Hanna_Add_17_36");	//It cost me a lot of money. But you're worth it, you swine...
+	self.aivar[AIV_DropDeadAndKill] = TRUE;
+	AI_StopProcessInfos(self);
+	B_Attack(self,other,AR_NONE,1);
+};
+
+instance DIA_Hanna_Blubb4(C_Info)
+{
+	npc = VLK_414_Hanna;
+	nr = 1;
+	condition = DIA_Hanna_Blubb4_Condition;
+	information = DIA_Hanna_Blubb4_Info;
+	permanent = TRUE;
+	important = TRUE;
+};
+
+func int DIA_Hanna_Blubb4_Condition()
+{
+	if((Andre_Diebesgilde_aufgeraeumt == TRUE) && Npc_KnowsInfo(other,DIA_Hanna_Blubb3) && Npc_IsInState(self,ZS_Talk))
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Hanna_Blubb4_Info()
+{
+	B_Say(self,other,"$KillEnemy");
+	AI_StopProcessInfos(self);
+	B_Attack(self,other,AR_NONE,1);
+};
 
 // ************************************************************
 // 			  				

@@ -191,7 +191,7 @@ INSTANCE DIA_Opolos_rezept   (C_INFO)
 	condition   = DIA_Opolos_rezept_Condition;
 	information = DIA_Opolos_rezept_Info;
 	permanent   = TRUE;
-	description	= "About the recipe ...";
+	description	= "About the recipe...";
 };
 //-----------------------------------
 var int DIA_Opolos_rezept_permanent;
@@ -199,7 +199,7 @@ var int DIA_Opolos_rezept_permanent;
 FUNC INT DIA_Opolos_rezept_Condition()
 {	
 	if Npc_KnowsInfo (hero, DIA_Opolos_beibringen)
-	&& (other.guild == GIL_NOV)
+	&& (other.guild == GIL_NOV || other.guild == GIL_KDF)
 	&& (DIA_Opolos_rezept_permanent == FALSE)
 	{
 		return TRUE;
@@ -211,9 +211,11 @@ FUNC VOID DIA_Opolos_rezept_Info()
 	{
 		AI_Output (other,self ,"DIA_Opolos_rezept_15_00"); //I've got the recipe you wanted.
 		AI_Output (self ,other,"DIA_Opolos_rezept_12_01"); //Good, then let me read it.
+		AI_PrintScreen (PRINT_ItemGegeben, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 		B_UseFakeScroll ();
-		AI_Output (self ,other,"DIA_Opolos_rezept_12_02"); //Aha ... hm ... yes ... I see ... well, well ...
+		AI_Output (self ,other,"DIA_Opolos_rezept_12_02"); //Aha... hm... yes... I see... well, well...
 		B_UseFakeScroll ();
+		AI_PrintScreen	(PRINT_ItemErhalten, -1, YPOS_ItemTaken, FONT_ScreenSmall, 2);
 		AI_Output (self ,other,"DIA_Opolos_rezept_12_03"); //Good, thanks a lot. If you want, you can train with me.
 		
 		DIA_Opolos_rezept_permanent = TRUE;
@@ -563,14 +565,28 @@ FUNC VOID DIA_Opolos_Kap3_PERM_Info()
 	AI_Output (self ,other,"DIA_Opolos_Kap3_PERM_12_01"); //How do you think they are? They stand around and munch grass.
 	AI_Output (self ,other,"DIA_Opolos_Kap3_PERM_12_02"); //I'd rather know what's happening outside. The magicians seem to be very nervous.
 
-	Info_ClearChoices (DIA_Opolos_Kap3_PERM);
-	Info_AddChoice (DIA_Opolos_Kap3_PERM,DIALOG_BACK,DIA_Opolos_Kap3_PERM_BACK);
-	Info_AddChoice (DIA_Opolos_Kap3_PERM,"There are dragons in the Valley of Mines.",DIA_Opolos_Kap3_PERM_DRAGONS);
-	Info_AddChoice (DIA_Opolos_Kap3_PERM,"Strangers in black robes roam the countryside.",DIA_Opolos_Kap3_PERM_DMT);
-	
-	if (MIS_NOVIZENCHASE == LOG_RUNNING || MIS_NOVIZENCHASE == LOG_SUCCESS)
+	if((Opolos_Dragons == FALSE)
+	|| (Opolos_DMT == FALSE)
+	|| ((MIS_NOVIZENCHASE == LOG_RUNNING || MIS_NOVIZENCHASE == LOG_SUCCESS) && (Opolos_Pedro == FALSE)))
 	{
-		Info_AddChoice (DIA_Opolos_Kap3_PERM,"Pedro betrayed us.",DIA_Opolos_Kap3_PERM_PEDRO);
+		Info_ClearChoices (DIA_Opolos_Kap3_PERM);
+		Info_AddChoice (DIA_Opolos_Kap3_PERM,DIALOG_BACK,DIA_Opolos_Kap3_PERM_BACK);
+		if(Opolos_Dragons == FALSE)
+		{
+			Info_AddChoice (DIA_Opolos_Kap3_PERM,"There are dragons in the Valley of Mines.",DIA_Opolos_Kap3_PERM_DRAGONS);
+		};
+		if(Opolos_DMT == FALSE)
+		{
+			Info_AddChoice (DIA_Opolos_Kap3_PERM,"Strangers in black robes roam the countryside.",DIA_Opolos_Kap3_PERM_DMT);
+		};
+		if ((MIS_NOVIZENCHASE == LOG_RUNNING || MIS_NOVIZENCHASE == LOG_SUCCESS) && (Opolos_Pedro == FALSE))
+		{
+			Info_AddChoice (DIA_Opolos_Kap3_PERM,"Pedro betrayed us.",DIA_Opolos_Kap3_PERM_PEDRO);
+		};
+	}
+	else
+	{
+		AI_Output	(other, self, "DIA_Addon_Vatras_MissingPeople_Report_15_14"); //Nothing important so far.
 	};
 };
 
@@ -580,7 +596,6 @@ FUNC VOID DIA_Opolos_Kap3_PERM_BACK()
 };
 
 var int Opolos_Dragons;
-
 FUNC VOID DIA_Opolos_Kap3_PERM_DRAGONS()
 {
 	AI_Output (other,self ,"DIA_Opolos_Kap3_PERM_DRAGONS_15_00"); //There are dragons in the Valley of Mines. They are besieging the royal troops together with the army of orcs.
@@ -588,16 +603,11 @@ FUNC VOID DIA_Opolos_Kap3_PERM_DRAGONS()
 	AI_Output (other,self ,"DIA_Opolos_Kap3_PERM_DRAGONS_15_02"); //They are there, believe me.
 	AI_Output (self ,other,"DIA_Opolos_Kap3_PERM_DRAGONS_12_03"); //But the king's paladins will deal with them, won't they?
 	AI_Output (other,self ,"DIA_Opolos_Kap3_PERM_DRAGONS_15_04"); //We'll see.
-	
-	if (Opolos_Dragons == FALSE)
-	{
-		B_GivePlayerXP (XP_AMBIENT);
-		Opolos_Dragons = TRUE;
-	};	
+	B_GivePlayerXP (XP_AMBIENT);
+	Opolos_Dragons = TRUE;
 };
 
 var int Opolos_DMT;
-
 FUNC VOID DIA_Opolos_Kap3_PERM_DMT()
 {
 	AI_Output (other,self ,"DIA_Opolos_Kap3_PERM_DMT_15_00"); //Strangers in black robes roam the countryside.
@@ -605,28 +615,19 @@ FUNC VOID DIA_Opolos_Kap3_PERM_DMT()
 	AI_Output (other,self ,"DIA_Opolos_Kap3_PERM_DMT_15_02"); //Nobody knows where they've come from. They wear long, black robes, and they cover their faces.
 	AI_Output (other,self ,"DIA_Opolos_Kap3_PERM_DMT_15_03"); //They seem to be some kind of magician. At least they are capable of magic.
 	AI_Output (self ,other,"DIA_Opolos_Kap3_PERM_DMT_12_04"); //That sounds very disturbing, but I'm sure that the High Council will solve this problem.
-	
-	if (Opolos_DMT == FALSE)
-	{
-		B_GivePlayerXP (XP_AMBIENT);
-		Opolos_DMT = TRUE;
-	};	
+	B_GivePlayerXP (XP_AMBIENT);
+	Opolos_DMT = TRUE;
 };
 
 var int Opolos_Pedro;
-
 FUNC VOID DIA_Opolos_Kap3_PERM_PEDRO()
 {
 	AI_Output (other,self ,"DIA_Opolos_Kap3_PERM_PEDRO_15_00"); //Pedro betrayed us.
 	AI_Output (self ,other,"DIA_Opolos_Kap3_PERM_PEDRO_12_01"); //I'd heard that, but I didn't know that you were aware of that, too. That's why I didn't say anything.
 	AI_Output (self ,other,"DIA_Opolos_Kap3_PERM_PEDRO_12_02"); //Is the enemy stronger than us - I mean, can we defeat him?
 	AI_Output (other,self ,"DIA_Opolos_Kap3_PERM_PEDRO_15_03"); //We're not dead yet.
-	
-	if (Opolos_Pedro == FALSE)
-	{
-		B_GivePlayerXP (XP_AMBIENT);
-		Opolos_Pedro = TRUE;
-	};
+	B_GivePlayerXP (XP_AMBIENT);
+	Opolos_Pedro = TRUE;
 };
 //##########################################
 //##

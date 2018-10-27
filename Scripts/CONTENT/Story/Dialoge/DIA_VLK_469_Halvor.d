@@ -225,7 +225,8 @@ func void DIA_Halvor_MESSAGE_Info ()
 {
 	AI_Output (other, self, "DIA_Halvor_MESSAGE_15_00"); //I think this piece of paper belongs to you ...
 	AI_Output (self, other, "DIA_Halvor_MESSAGE_06_01"); //What...? Let me see.
-	B_UseFakeScroll 	();
+	AI_Output (other, self, "DIA_Igaraz_Seufz_15_01"); //Actually, I don't think so...
+	//B_UseFakeScroll 	();
 	AI_Output (self, other, "DIA_Halvor_MESSAGE_06_02"); //(sweating) Er... OK, let's stay calm about this - er ... listen. I have resold the goods I got from the bandits.
 	AI_Output (self, other, "DIA_Halvor_MESSAGE_06_03"); //(hastily) But there's no reason to take this straight to the militia, right? I'm sure we can come to an understanding, can't we?
 	

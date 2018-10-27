@@ -76,6 +76,10 @@ FUNC VOID DIA_Alwin_Sheep_Info()
 {	
 	AI_Output (other, self,"DIA_Alwin_Sheep_15_00"); //Are those your sheep?
 	AI_Output (self ,other,"DIA_Alwin_Sheep_12_01"); //The only one that belongs to me is the one that answers to the name of Lucy. (laughs) That's my wife - Lucy.
+	if(SC_KnowsKlosterTribut == TRUE && Liesel_Giveaway == FALSE)
+	{
+		AI_Output (other, self, "DIA_Pepe_Liesel_15_00"); //Can I buy a sheep?
+	};
 	AI_Output (self ,other,"DIA_Alwin_Sheep_12_02"); //The sheep belong to the militia. All the sheep they collect from the farmers they bring to me.
 };
 //***************************************************

@@ -65,11 +65,14 @@ func void DIA_Addon_Saturas_Nefarius_Info ()
 		AI_Output (self, other, "DIA_ADDON_Saturas_Nefarius_14_03"); //(sighs) Do you at least know what you are looking for?
 		AI_Output (other, self, "DIA_ADDON_Saturas_Nefarius_15_04"); //Nefarius gave me this map...
 		AI_Output (self, other, "DIA_ADDON_Saturas_Nefarius_14_05"); //Show me!
-		B_UseFakeScroll ();
+		AI_PrintScreen (PRINT_ItemGegeben, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
+		//B_UseFakeScroll ();
+		B_UseFakeMap();
 		AI_Output (self, other, "DIA_ADDON_Saturas_Nefarius_14_06"); //Hmmm. It is very dangerous in the big forest. You should not go alone.
 		AI_Output (self, other, "DIA_ADDON_Saturas_Nefarius_14_07"); //Look for someone to accompany you in Khorinis.
 		AI_Output (self, other, "DIA_ADDON_Saturas_Nefarius_14_08"); //I do not want you eaten by monsters - and the ornament with you.
 		AI_Output (self, other, "DIA_ADDON_Saturas_Nefarius_14_09"); //Here is your map back...
+		AI_PrintScreen	(PRINT_ItemErhalten, -1, YPOS_ItemTaken, FONT_ScreenSmall, 2);
 
 		Log_CreateTopic (TOPIC_Addon_Ornament, LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_Addon_Ornament, LOG_RUNNING);

@@ -342,7 +342,7 @@ instance DIA_Pepe_BuyLiesel	(C_INFO)
 };
 func int DIA_Pepe_BuyLiesel_Condition ()
 {	
-	if (Npc_KnowsInfo (other, DIA_Pepe_LIESEL))
+	if (Npc_KnowsInfo (other, DIA_Pepe_LIESEL) && (Liesel_Giveaway == FALSE))
 	{
 		return TRUE;
 	};
