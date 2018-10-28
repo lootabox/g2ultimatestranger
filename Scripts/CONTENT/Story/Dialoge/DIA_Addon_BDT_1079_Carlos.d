@@ -146,7 +146,10 @@ INSTANCE DIA_Addon_Carlos_PERM   (C_INFO)
 };
 FUNC INT DIA_Addon_Carlos_PERM_Condition()
 {	
-	return TRUE;
+	if(Npc_IsDead(Franco))
+	{
+		return TRUE;
+	};
 };
 FUNC VOID DIA_Addon_Carlos_PERM_Info()
 {
@@ -154,4 +157,30 @@ FUNC VOID DIA_Addon_Carlos_PERM_Info()
 	AI_Output (self, other, "DIA_Addon_Carlos_PERM_12_00"); //Leave me alone!
 	AI_StopProcessInfos (self);
 };
+
+INSTANCE DIA_Addon_Carlos_PERM2(C_Info)
+{
+	npc = BDT_1079_Addon_Carlos;
+	nr = 3;
+	condition = DIA_Addon_Carlos_PERM2_Condition;
+	information = DIA_Addon_Carlos_PERM2_Info;
+	permanent = TRUE;
+	description = "How's it going?";
+};
+FUNC INT DIA_Addon_Carlos_PERM2_Condition()
+{
+	if(!Npc_IsDead(Franco))
+	{
+		return TRUE;
+	};
+};
+FUNC VOID DIA_Addon_Carlos_PERM2_Info()
+{
+	AI_Output (other, self, "DIA_Addon_Edgor_Hi_15_00"); //How's it going?
+	AI_Output (self, other, "DIA_Addon_Carlos_PERM_12_00"); //Leave me alone!
+	AI_StopProcessInfos(self);
+};
+
+
+
 

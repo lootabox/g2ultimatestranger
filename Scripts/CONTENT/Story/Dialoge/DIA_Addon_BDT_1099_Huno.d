@@ -201,10 +201,13 @@ FUNC VOID DIA_Addon_Huno_Armor_Info()
 	
 	AI_Output (other, self, "DIA_Addon_Huno_Armor_15_00"); //I need better armor.
 	if (Huno_ArmorCheap == FALSE)
-	{	
+	{
 		AI_Output (self, other, "DIA_Addon_Huno_Armor_06_01"); //So - you can have this. It's Esteban's fault it's so expensive.
-		AI_Output (self, other, "DIA_Addon_Huno_Armor_06_02"); //That damned dog pockets his share of every piece of armor I sell.
-		
+		if(!Npc_IsDead(Esteban))
+		{
+			AI_Output (self, other, "DIA_Addon_Huno_Armor_06_02"); //That damned dog pockets his share of every piece of armor I sell.
+		};
+
 		BDT_Armor_H_Value = 2100;
 		Info_AddChoice (DIA_Addon_Huno_Armor, DIALOG_BACK, DIA_Addon_Huno_Armor_BACK);
 		Info_AddChoice (DIA_Addon_Huno_Armor, "Okay, I'll take the armor. (Protection: 50/50, Cost: 2100 gold)", DIA_Addon_Huno_Armor_BUY);

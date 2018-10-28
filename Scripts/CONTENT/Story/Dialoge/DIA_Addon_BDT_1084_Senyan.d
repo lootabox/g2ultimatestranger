@@ -198,10 +198,18 @@ FUNC INT DIA_Addon_Senyan_unterwegs_Condition()
 };
 FUNC VOID DIA_Addon_Senyan_unterwegs_Info()
 {
-	AI_Output (other, self, "DIA_Addon_Senyan_unterwegs_15_00");//About Esteban...
-	AI_Output (self, other, "DIA_Addon_Senyan_unterwegs_12_01");//Have you already talked to him?
-	AI_Output (other, self, "DIA_Addon_Senyan_unterwegs_15_02");//Not yet.
-	AI_Output (self, other, "DIA_Addon_Senyan_unterwegs_12_03");//Well, you should do that soon.
+	if(!Npc_IsDead(Esteban))
+	{
+		AI_Output (other, self, "DIA_Addon_Senyan_unterwegs_15_00");//About Esteban...
+		AI_Output (self, other, "DIA_Addon_Senyan_unterwegs_12_01");//Have you already talked to him?
+		AI_Output (other, self, "DIA_Addon_Senyan_unterwegs_15_02");//Not yet.
+		AI_Output (self, other, "DIA_Addon_Senyan_unterwegs_12_03");//Well, you should do that soon.
+	}
+	else
+	{
+		AI_Output (other,self,"DIA_Addon_Tom_Dead_15_00"); //Esteban is dead.
+		B_Senyan_Attack();
+	};
 };
 //---------------------------------------------------------------------
 //	Info Attentat

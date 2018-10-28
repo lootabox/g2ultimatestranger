@@ -75,13 +75,20 @@ FUNC INT DIA_Addon_Skinner_Hi_Condition()
 };
 FUNC VOID DIA_Addon_Skinner_Hi_Info()
 {
-	AI_Output (self, other, "DIA_Addon_Skinner_Hi_08_00");//Why did you wake me, eh? I bet you don't even know...
-	AI_Output (self, other, "DIA_Addon_Skinner_Hi_08_01");//No - don't say anything. It's too late for excuses.
-	AI_Output (self, other, "DIA_Addon_Skinner_Hi_08_02");//Now you have two choices. You can fight me and my Betty. Or you can try to run away.
-	AI_Output (self, other, "DIA_Addon_Skinner_Hi_08_03");//In your place, I'd run...
-	
-	AI_StopProcessInfos (self);
-	B_Attack (self, other, AR_NONE,1);
+	if(Wld_IsTime(12,0,20,0) && (MIS_Judas == LOG_Running))
+	{
+		B_Say(self,self,"$AWAKE");
+	}
+	else
+	{
+		AI_Output (self, other, "DIA_Addon_Skinner_Hi_08_00");//Why did you wake me, eh? I bet you don't even know...
+		AI_Output (self, other, "DIA_Addon_Skinner_Hi_08_01");//No - don't say anything. It's too late for excuses.
+		AI_Output (self, other, "DIA_Addon_Skinner_Hi_08_02");//Now you have two choices. You can fight me and my Betty. Or you can try to run away.
+		AI_Output (self, other, "DIA_Addon_Skinner_Hi_08_03");//In your place, I'd run...
+		
+		AI_StopProcessInfos (self);
+		B_Attack (self, other, AR_NONE,1);
+	};
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Attentat
@@ -109,8 +116,8 @@ FUNC VOID DIA_Addon_Skinner_Attentat_Info()
 	
 	Info_ClearChoices (DIA_Addon_Skinner_Attentat);
 	
-	Info_AddChoice (DIA_Addon_Skinner_Attentat,"Get rid of Esteban",DIA_Addon_Skinner_ATTENTAT_ADDON_CONTRA);
-	Info_AddChoice (DIA_Addon_Skinner_Attentat,"Hunt down the traitor",DIA_Addon_Skinner_ATTENTAT_ADDON_PRO);
+	Info_AddChoice (DIA_Addon_Skinner_Attentat,"I want to get Esteban out of the way.",DIA_Addon_Skinner_ATTENTAT_ADDON_CONTRA);
+	Info_AddChoice (DIA_Addon_Skinner_Attentat,"I want to track down the traitor.",DIA_Addon_Skinner_ATTENTAT_ADDON_PRO);
 };
 FUNC VOID DIA_Addon_Skinner_ATTENTAT_ADDON_CONTRA()
 {

@@ -46,3 +46,8 @@ FUNC VOID Rtn_Start_1079 ()
    TA_Stand_Eating     (00,00,03,00,"BANDIT_FIGHT");
    TA_Stand_Drinking   (03,00,06,00,"BANDIT_FIGHT");   	
 };
+FUNC VOID Rtn_Guard_1079()
+{
+	TA_Stand_Guarding(9,0,21,0,"BL_ENTRANCE_04");
+	TA_Stand_Guarding(21,0,9,0,"BL_ENTRANCE_04");
+};

@@ -72,8 +72,6 @@ func void DIA_Franco_PICKPOCKET_DoIt()
 	{
 		AI_StopProcessInfos	(self);
 		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
-		
-		
 	};
 };
 	
@@ -323,6 +321,7 @@ FUNC INT DIA_Addon_Franco_WOEDGOR_Condition()
 {	
 	if (MIS_HlpEdgor == LOG_RUNNING)
 	&& (Npc_HasItems (other,ItMi_Addon_Stone_04 ) < 1)
+	&& (!Npc_KnowsInfo(other,DIA_Addon_Edgor_Hi))
 	{	
 			return TRUE;
 	};
@@ -449,7 +448,10 @@ INSTANCE DIA_Addon_Franco_Fight   (C_INFO)
 };
 FUNC INT DIA_Addon_Franco_Fight_Condition()
 {	
-	return TRUE;
+	if  (!Npc_IsDead(Ramon))
+	{
+		return TRUE;
+	};
 };
 FUNC VOID DIA_Addon_Franco_Fight_Info()
 {	
@@ -493,7 +495,7 @@ INSTANCE DIA_Addon_Franco_Pig   (C_INFO)
 };
 FUNC INT DIA_Addon_Franco_Pig_Condition()
 {	
-	if (Npc_KnowsInfo (other, DIA_Addon_Franco_JemandAnderen))
+	if (Npc_KnowsInfo (other, DIA_Addon_Franco_JemandAnderen) && !Npc_IsDead(Ramon))
 	{
 		return TRUE;
 	};

@@ -351,6 +351,12 @@ FUNC VOID DIA_Addon_Logan_Lern_Info()
 	AI_Output (other, self, "DIA_Addon_Logan_Lern_15_00");//Show me how to gut animals...
 	AI_Output (self, other, "DIA_Addon_Logan_Lern_10_01");//If you want to learn something about bloodflies, go to Edgor. He knows all about them.
 	AI_Output (self, other, "DIA_Addon_Logan_Lern_10_02");//And if you want to gut swampsharks or lizards, you have to know how to remove skins and teeth. I can show you that.
+	if(Edgor_Teach == FALSE)
+	{
+		Log_CreateTopic(Topic_Addon_BDT_Teacher,LOG_NOTE);
+		B_LogEntry(Topic_Addon_BDT_Teacher,"Edgor knows a lot about bloodflies and their trophies.");
+		Edgor_Teach = TRUE;
+	};
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Allgemeine Talente
@@ -362,34 +368,46 @@ INSTANCE DIA_Addon_Logan_Allg   (C_INFO)
 	condition   = DIA_Addon_Logan_Allg_Condition;
 	information = DIA_Addon_Logan_Allg_Info;
 	permanent   = TRUE;
-	description = "I want to learn...";
+	description = "I want to learn your abilities.";
 };
 FUNC INT DIA_Addon_Logan_Allg_Condition()
 {	
 	if Npc_KnowsInfo (other,DIA_Addon_Logan_Lern)
-	&& ((PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Teeth] == FALSE)
+	/* && ((PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Teeth] == FALSE)
 	|| (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
-	|| (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE))
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)) */
 	{
 		return TRUE;
 	};
 };
 FUNC VOID DIA_Addon_Logan_Allg_Info()
 {
-	Info_ClearChoices (DIA_Addon_Logan_Allg);
-	Info_AddChoice (DIA_Addon_Logan_Allg,DIALOG_BACK,DIA_Addon_Logan_Allg_BACK);
-	
-	if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Teeth] == FALSE)
-	{ 
-		Info_AddChoice	(DIA_Addon_Logan_Allg, B_BuildLearnString ("Remove teeth",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Teeth)),  DIA_Addon_Logan_Allg_Teeth);
-	};
-	if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
-	{ 
-		Info_AddChoice	(DIA_Addon_Logan_Allg, B_BuildLearnString ("Remove claws",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Claws)),  DIA_Addon_Logan_Allg_Claws);
-	};
-	if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)
-	{ 
-		Info_AddChoice	(DIA_Addon_Logan_Allg, B_BuildLearnString ("Skin",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Fur)),  DIA_Addon_Logan_Allg_Fur);
+	AI_Output (other, self, "DIA_Addon_Cavalorn_TEACH_15_00"); //I want to learn your abilities.
+
+	if((PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Teeth] == FALSE) || (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Claws] == FALSE) || (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_ReptileSkin] == FALSE))
+	{
+		Info_ClearChoices (DIA_Addon_Logan_Allg);
+		Info_AddChoice (DIA_Addon_Logan_Allg,DIALOG_BACK,DIA_Addon_Logan_Allg_BACK);
+		if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Teeth] == FALSE)
+		{ 
+			Info_AddChoice	(DIA_Addon_Logan_Allg, B_BuildLearnString ("Remove teeth",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Teeth)),  DIA_Addon_Logan_Allg_Teeth);
+		};
+		if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
+		{ 
+			Info_AddChoice	(DIA_Addon_Logan_Allg, B_BuildLearnString ("Remove claws",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Claws)),  DIA_Addon_Logan_Allg_Claws);
+		};
+		/* if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)
+		{ 
+			Info_AddChoice	(DIA_Addon_Logan_Allg, B_BuildLearnString ("Skin",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Fur)),  DIA_Addon_Logan_Allg_Fur);
+		}; */
+		if(PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_ReptileSkin] == FALSE)
+		{
+			Info_AddChoice	(DIA_Addon_Logan_Allg, B_BuildLearnString ("Skin reptiles",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_ReptileSkin)),  DIA_Addon_Logan_Allg_Fur);
+		};
+	}
+	else
+	{
+		B_Say(self,other,"$NOLEARNYOUREBETTER");
 	};
 	
 };
@@ -410,7 +428,8 @@ FUNC VOID DIA_Addon_Logan_Allg_Claws ()
 };
 FUNC VOID DIA_Addon_Logan_Allg_Fur ()
 {
-	B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Fur);
+	//B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Fur);
+	B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_ReptileSkin);
 };
 
 //----------------------------------------------------------------------

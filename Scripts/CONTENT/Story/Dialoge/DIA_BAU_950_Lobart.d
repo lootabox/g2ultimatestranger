@@ -304,7 +304,7 @@ func void DIA_Lobart_BuyClothes_Info ()
 
 	Info_ClearChoices	(DIA_Lobart_BuyClothes);
 	Info_AddChoice		(DIA_Lobart_BuyClothes, "That's still too expensive.", DIA_Lobart_BuyClothes_NotYet );
-	Info_AddChoice		(DIA_Lobart_BuyClothes, ConcatStrings(ConcatStrings("Give me the work clothes, then. (Protection: 15/15/0/0, Cost: ", IntToString(Wert_LobartsRuestung)), " gold)"), DIA_Lobart_BuyClothes_BUY );
+	Info_AddChoice		(DIA_Lobart_BuyClothes, ConcatStrings(ConcatStrings("Give me the work clothes, then. (Protection: 15/15, Cost: ", IntToString(Wert_LobartsRuestung)), " gold)"), DIA_Lobart_BuyClothes_BUY );
 };
 
 func void DIA_Lobart_BuyClothes_BUY()

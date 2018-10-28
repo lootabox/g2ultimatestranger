@@ -66,6 +66,7 @@ func int DIA_Wolf_WannaJoin_Condition ()
 {
 	if (Npc_KnowsInfo (other, DIA_Wolf_Hallo))
 	&& (Kapitel < 2)
+	&& (other.guild == GIL_NONE)
 	{
 		return TRUE;
 	};

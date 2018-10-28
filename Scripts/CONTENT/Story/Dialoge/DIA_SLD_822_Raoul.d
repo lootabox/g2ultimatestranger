@@ -218,6 +218,7 @@ instance DIA_Raoul_Stimme (C_INFO)
 FUNC INT DIA_Raoul_Stimme_Condition()
 {
 	if (self.aivar[AIV_DefeatedByPlayer] == TRUE)
+	&& (other.guild == GIL_NONE)
 	{
 		return TRUE;
 	};

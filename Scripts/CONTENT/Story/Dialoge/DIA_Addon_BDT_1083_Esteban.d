@@ -80,7 +80,14 @@ FUNC VOID DIA_Addon_Esteban_Hi_Info()
 {
 	AI_Output (self, other, "DIA_Addon_Esteban_Hi_07_00");//So you're the fellow who fought his way into camp.
 	AI_Output (other, self, "DIA_Addon_Esteban_Hi_15_01");//That got around fast...
-	AI_Output (self, other, "DIA_Addon_Esteban_Hi_07_02");//Franco was a tough nut. No one messed with him. No one - except you.
+	if(Npc_IsDead(Franco))
+	{
+		AI_Output (self, other, "DIA_Addon_Esteban_Hi_07_02");//Franco was a tough nut. No one messed with him. No one - except you.
+	}
+	else
+	{
+		B_StartOtherRoutine(Carlos,"GUARD");
+	};
 	AI_Output (self, other, "DIA_Addon_Esteban_Hi_07_03");//Just to make it clear, if you try the same shit with me, I'll kill you.
 };
 //--------------------------------------------------------------------

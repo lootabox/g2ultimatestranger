@@ -450,7 +450,7 @@ INSTANCE ItFo_SmellyFish (C_Item)
 {	
 	name 				=	"Herring";
 
-	mainflag 			=	ITEM_KAT_NONE;
+	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MISSION;
 	
 	value 				=	0;

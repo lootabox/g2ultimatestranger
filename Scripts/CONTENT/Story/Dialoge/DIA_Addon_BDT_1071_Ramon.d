@@ -65,7 +65,10 @@ func void DIA_Addon_Ramon_FirstWarn_Info()
 		AI_Output (self, other,"DIA_Addon_Ramon_FirstWarn_07_04"); //Forget it. You did in Franco - now you're the leader. So do your job.
 		AI_Output (other, self,"DIA_Addon_Ramon_FirstWarn_15_05"); //If I'm the leader, then I decide who goes in next.
 		AI_Output (other, self,"DIA_Addon_Ramon_FirstWarn_15_06"); //And I decided that I'M next.
-		AI_Output (self, other,"DIA_Addon_Ramon_FirstWarn_07_07"); //(laughs) It isn't that easy. We haven't asked for ANYONE, so NO one gets in.
+		if(Npc_KnowsInfo(other,DIA_Addon_Franco_JemandAnderen))
+		{
+			AI_Output (self, other,"DIA_Addon_Ramon_FirstWarn_07_07"); //(laughs) It isn't that easy. We haven't asked for ANYONE, so NO one gets in.
+		};
 		AI_Output (other, self,"DIA_Addon_Ramon_FirstWarn_15_08"); //Thorus can send a new leader for the hunters, then there will be a vacancy inside for me.
 		AI_Output (self, other,"DIA_Addon_Ramon_FirstWarn_07_09"); //(laughs) You don't give up, do you? Okay, then move your butt inside.
 		AI_Output (self, other,"DIA_Addon_Ramon_FirstWarn_07_10"); //Thorus will make sure that the hunters won't have to live without a leader.
@@ -89,11 +92,11 @@ func void DIA_Addon_Ramon_FirstWarn_Info()
 		if Npc_KnowsInfo (other, DIA_Addon_Franco_HI)
 		{
 			AI_Output (other, self,"DIA_Addon_Ramon_FirstWarn_15_13"); //Franco sent me. He wants to know if anyone is needed in the camp.
+			AI_Output (self, other,"DIA_Addon_Ramon_FirstWarn_07_14"); //Yeah, we need someone. Another one of the guys kicked the bucket yesterday.
+			AI_Output (self, other,"DIA_Addon_Ramon_FirstWarn_07_15"); //That idiot tangled with Esteban.
+			AI_Output (other, self,"DIA_Addon_Ramon_FirstWarn_15_16"); //Who is Esteban?
+			AI_Output (self, other,"DIA_Addon_Ramon_FirstWarn_07_17"); //The leader of the lower camp. He decides who gets into the mine.
 		};
-		AI_Output (self, other,"DIA_Addon_Ramon_FirstWarn_07_14"); //Yeah, we need someone. Another one of the guys kicked the bucket yesterday.
-		AI_Output (self, other,"DIA_Addon_Ramon_FirstWarn_07_15"); //That idiot tangled with Esteban.
-		AI_Output (other, self,"DIA_Addon_Ramon_FirstWarn_15_16"); //Who is Esteban?
-		AI_Output (self, other,"DIA_Addon_Ramon_FirstWarn_07_17"); //The leader of the lower camp. He decides who gets into the mine.
 		AI_Output (self, other,"DIA_Addon_Ramon_FirstWarn_07_18"); //So tell Franco that Thorus wants a new man. Got it?
 		
 		Log_CreateTopic (Topic_Addon_Franco,LOG_MISSION);
@@ -222,7 +225,7 @@ INSTANCE DIA_Addon_Ramon_News (C_INFO)
 
 FUNC INT DIA_Addon_Ramon_News_Condition()
 {	
-	if !Npc_IsDead (Franco)
+	if (!Npc_IsDead (Franco) && Ramon_News == TRUE)
 	{
 		return TRUE;
 	};
@@ -248,6 +251,7 @@ INSTANCE DIA_Addon_Ramon_Lie (C_INFO)
 FUNC INT DIA_Addon_Ramon_Lie_Condition()
 {
 	if Npc_KnowsInfo (other,DIA_Addon_Ramon_News)
+	&& (Ramon_News == TRUE)
 	&& !Npc_IsDead (Franco)
 	{
 		return TRUE;
