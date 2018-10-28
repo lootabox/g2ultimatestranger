@@ -147,12 +147,12 @@ INSTANCE NewMine_LeadSnapper	(Mst_Default_Snapper)	//OW NewMineMission Kill_Snap
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	30;
+/* 	protection	[PROT_BLUNT]		=	30;
 	protection	[PROT_EDGE]			=	30;
 	protection	[PROT_POINT]		=	20;		
 	protection	[PROT_FIRE]			=	0;
 	protection	[PROT_FLY]			=	30;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_MAGIC]		=	0; */
 	
 	CreateInvItems (self, ItAt_ClawLeader,1);
 };

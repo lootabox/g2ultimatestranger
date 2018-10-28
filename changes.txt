@@ -63,6 +63,7 @@ Gaan wields a Wolf Blade instead of a branch.
 Gaan won't know about the death of the Snorting Dragon Snapper unless he is close to its location.
 Gaan's dialog option for asking who he is cannot glitch up and become unavailable.
 Garond can be told about Silvestro's mining site even if Diego has died.
+Gerold gives explicit options for giving stew and fish soup.
 Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
 Halvor is not given the compromising note for reading.
@@ -160,17 +161,26 @@ Annotation added for giving and taking back letter to Elvrich, letter to Greg, r
 Armor buying dialog options are formatted the same way.
 Black Ore effect ends on using transformation scrolls.
 Document look changed for Esteban's Bodyguard, Pablo, Senyan, Skip, a thug in Khorinis for reading NH's wanted poster and Saturas for reading a map.
+El Bastardo and Rough Sword are categorized as sword, not axes.
+Fear spell does not affect any magician, paladins, golems, dragons or trolls.
+Fear spell can be used with no target in focus, cannot bypass immunity and monsters immediately react to it instead of standing still.
 Goblins and Skeletons do not create additional weapons in their inventory.
 Gold mining skill does not improve by mining empty veins.
 Herring is categorized as food.
+Inquisitor deals blunt damage, not edge.
+Lightning spells properly deal double damage to submerged targets.
 Magic Runes are removed from frozen corpses.
 Monastery novice quest become obsolete only after player becomes a mage.
 Nostalgia bonus properly awards levels to NH.
 Novices do not create additional sausages when given one.
 Paladin runes now cost correct amount of learning points.
 Pirates generate ambient inventories.
+Shadow Lord Archol has same amount of protection as other shadow warriors.
 Sheep cannot be bought from Onar or Pepe after escorting one to the monastery.
 Skeletal monsters do not bleed.
+Sleep spell does not affect any magician.
+Sleep spell affects Cornelius, Judge, Larius and NH even if he becomes paladin/fire mage.
+Snapper Pack Leader has same amount of protection as other snappers.
 Snorting Dragon Snapper will have 2 horns instead of 1 if Gaan teaches the NH that trophy skill after killing it.
 Steel Blanks and Lab Water Bottles cannot be looted from anyone.
 Stone Guardians leave properly colored pebbles on ground when hit.

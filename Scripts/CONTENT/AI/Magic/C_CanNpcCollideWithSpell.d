@@ -38,16 +38,11 @@ if (spellType == SPL_Whirlwind)
 	if (C_NpcIsDown(self))
 	|| (C_BodyStateContains(self,BS_SWIM)) 	
 	|| (C_BodyStateContains(self,BS_DIVE))
-	|| (self.guild == GIL_STONEGOLEM)
-	|| (self.guild == GIL_ICEGOLEM)
-	|| (self.guild == GIL_FIREGOLEM	)
-	|| (self.guild == GIL_SUMMONED_GOLEM)
+	|| (C_NpcIsGolem(self))
 	|| (self.guild == GIL_DEMON)
 	|| (self.guild == GIL_SUMMONED_DEMON)
 	|| (self.guild == GIL_TROLL)
-	|| (self.guild == GIL_SUMMONED_GOLEM)
 	|| (self.guild == GIL_DRAGON)
-	|| (self.guild == GIL_STONEGUARDIAN)
 	|| (self.flags == NPC_FLAG_IMMORTAL)
 	|| (self.guild == GIL_SHADOWBEAST)
 	|| (self.guild == GIL_GARGOYLE)
@@ -129,16 +124,11 @@ if (spellType == SPL_Geyser)
 	if (C_NpcIsDown(self))
 	|| (C_BodyStateContains(self,BS_SWIM)) 	
 	|| (C_BodyStateContains(self,BS_DIVE))
-	|| (self.guild == GIL_STONEGOLEM)
-	|| (self.guild == GIL_ICEGOLEM)
-	|| (self.guild == GIL_FIREGOLEM	)
-	|| (self.guild == GIL_SUMMONED_GOLEM)
+	|| (C_NpcIsGolem(self))
 	|| (self.guild == GIL_DEMON)
 	|| (self.guild == GIL_SUMMONED_DEMON)
 	|| (self.guild == GIL_TROLL)
-	|| (self.guild == GIL_SUMMONED_GOLEM)
 	|| (self.guild == GIL_DRAGON)
-	|| (self.guild == GIL_STONEGUARDIAN)
 	{
 		return COLL_DONOTHING;
 	};
@@ -244,10 +234,7 @@ if (spellType == SPL_Swarm)
 	if (C_NpcIsDown(self))
 	|| (C_BodyStateContains(self,BS_SWIM)) 	
 	|| (C_BodyStateContains(self,BS_DIVE))
-	|| (self.guild == GIL_STONEGOLEM)
-	|| (self.guild == GIL_ICEGOLEM)
-	|| (self.guild == GIL_FIREGOLEM	)
-	|| (self.guild == GIL_SUMMONED_GOLEM)
+	|| (C_NpcIsGolem(self))
 	|| (self.guild == GIL_DEMON)
 	|| (self.guild == GIL_SUMMONED_DEMON)
 	|| (self.guild == GIL_TROLL)
@@ -255,7 +242,6 @@ if (spellType == SPL_Swarm)
 	|| (self.guild == GIL_DRAGON)
 	|| (self.guild == GIL_Gargoyle)
 	|| (self.guild == GIL_DMT)
-	|| (self.guild == GIL_STONEGUARDIAN)
 	|| (C_NPCIsUndead (self) == TRUE)
 	{
 		return COLL_DONOTHING;	
@@ -301,9 +287,9 @@ if (spellType == SPL_WINDFIST)
 
 //----- Betäubung -----
 
-	if (spellType == SPL_Zap)
-	|| (spellType == SPL_ChargeZap)
-	|| (spellType == SPL_Concussionbolt)
+	if (spellType == SPL_Concussionbolt)
+	//|| (spellType == SPL_ChargeZap)
+	//|| (spellType == SPL_Zap)
 	{
 		if (C_NpcIsDown(self))
 		{
@@ -434,30 +420,43 @@ if (spellType == SPL_WINDFIST)
 	
 //----- Blitz -----	
 	
-	if (spellType == SPL_LightningFlash)
+	if (spellType == SPL_Zap) || (spellType == SPL_ChargeZap)
 	{
 		if (C_NpcIsDown(self))
 		{
-			return COLL_DONOTHING;	
+			return COLL_DONOTHING;
 		};
 		
-		if (C_BodyStateContains(self,BS_SWIM)) 	
+		if (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
 		{
 			return COLL_APPLYDOUBLEDAMAGE;
 		};
 		
-		return COLL_DOEVERYTHING;	
+		return COLL_APPLYDAMAGE | COLL_DONTKILL;
+	};
+
+	if (spellType == SPL_LightningFlash)
+	{
+		if (C_NpcIsDown(self))
+		{
+			return COLL_DONOTHING;
+		};
+		
+		if (C_BodyStateContains(self,BS_SWIM))
+		|| (C_BodyStateContains(self,BS_DIVE))
+		{
+			return COLL_APPLYDOUBLEDAMAGE;
+		};
+		
+		return COLL_DOEVERYTHING;
 	};
 
 //------ Angst -----	
 
-	if (spellType  == SPL_Fear)	
+/* 	if (spellType  == SPL_Fear)	
 	{
-		if (self.guild != GIL_FIREGOLEM)
-		&& (self.guild != GIL_ICEGOLEM)
-		&& (self.guild != GIL_STONEGOLEM)
-		&& (self.guild != GIL_SUMMONED_GOLEM)
+		if (C_NpcIsGolem(self)))
 		&& (self.guild != GIL_SWAMPSHARK)
 		&& (self.guild != GIL_TROLL)
 		&& (!C_NpcIsEvil(self))
@@ -466,7 +465,7 @@ if (spellType == SPL_WINDFIST)
 			return COLL_DOEVERYTHING;
 		};
 		return COLL_DONOTHING;
-	};
+	}; */
 
 // ---- Untote vernichten ----
 

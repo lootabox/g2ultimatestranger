@@ -19,8 +19,17 @@ func int B_StopMagicFlee()
 
 	//AI_PlayAni			(self, "T_VICTIM_SLE_2_STAND");	
 	
+	Npc_ClearAIQueue	(self);
+	B_ClearPerceptions	(self);
 	Npc_SetTarget 		(self, hero);
-	AI_StartState 		(self, ZS_Flee, 0, "");
+	if(self.guild < GIL_SEPERATOR_HUM)
+	{
+		AI_StartState(self,ZS_Flee,0,"");
+	}
+	else
+	{
+		AI_StartState(self,ZS_MM_Flee,0,"");
+	};
 	
 	// nach Aufruf dieses Befehles wird die Loop über return LOOP_END beendet (weiter im TA)
 };		
@@ -36,14 +45,33 @@ func void ZS_MagicFlee ()
 	// auch nicht gesetzt werden, ansonsten wird der diesen zustand aktivierende effekt wenn er beendet ist (z.B. weil
 	// der partikeleffekt stirbt) ein assessstopmagic senden, und dadurch illegalerweise vorzeitig den zustand beenden
 	// mit anderen worten: der pfx triggert diesen zustand, und der zustand beendet sich selbst
-	
-	if self.guild == GIL_DRAGON
+
+	if(self.guild > GIL_SEPERATOR_HUM)
 	{
-		AI_ContinueRoutine (self);
+		if((self.guild != GIL_DRAGON) && (self.guild != GIL_TROLL) && !C_NpcIsGolem(self) && !C_NpcIsUndead(self))
+		{
+			AI_StartState(self,ZS_MM_Flee,0,"");
+		}
+		else
+		{
+			AI_ContinueRoutine(self);
+			return;
+		};
+	};
+	if((self.guild == GIL_KDF) || (self.guild == GIL_PAL) || (self.guild == GIL_KDW)
+	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Xardas))
+	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Vatras))
+	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Myxir_CITY))
+	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(KDF_511_Daron)))
+	{
+		if(Hlp_GetInstanceID(self) != Hlp_GetInstanceID(Xardas))
+		{
+			B_Say(self,other,"$ISAIDSTOPMAGIC");
+		};
+		AI_ContinueRoutine(self);
 		return;
 	};
 	
-	var int randy;
 	
 	Npc_PercEnable		(self,	PERC_ASSESSDAMAGE, 		B_StopMagicFlee);
 	Npc_PercEnable  	(self, 	PERC_ASSESSMAGIC,		B_AssessMagic);
@@ -73,6 +101,7 @@ func void ZS_MagicFlee ()
 
 	if (self.guild < GIL_SEPERATOR_HUM)
 	{
+		var int randy;
 		randy = Hlp_Random (3);
 
 		if (randy == 0)		{		AI_PlayAniBS (self,	"T_STAND_2_FEAR_VICTIM1",	 BS_STAND);		};
@@ -91,8 +120,9 @@ func int ZS_MagicFlee_Loop ()
 	{
 		Npc_ClearAIQueue(self);
 		B_StopMagicFlee();
-		//return LOOP_END;
+		return LOOP_END;
 	};
+	return LOOP_CONTINUE;
 };
 
 func void ZS_MagicFlee_End()

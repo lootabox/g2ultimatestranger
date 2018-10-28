@@ -491,44 +491,47 @@ func void DIA_Gerold_MoreFood ()
 	else
 	{
 		if (Gerold_FoodCounter == 0)
-			{
-				Info_AddChoice	(DIA_Gerold_FOOD, "I don't have anything right now.", DIA_Gerold_FOOD_nichts );
-			}
+		{
+			Info_AddChoice	(DIA_Gerold_FOOD, "I don't have anything right now.", DIA_Gerold_FOOD_nichts );
+		}
 		else
+		{
+			Info_AddChoice	(DIA_Gerold_FOOD, "That's all I have.", DIA_Gerold_FOOD_kaese_nichtmehr );
+			if (Gerold_FoodCounter < 5)
 			{
-				Info_AddChoice	(DIA_Gerold_FOOD, "That's all I have.", DIA_Gerold_FOOD_kaese_nichtmehr );
-				if (Gerold_FoodCounter < 5)
-				{
-					AI_Output			(self, other, "DIA_Gerold_MoreFood_12_03"); //Sure. Give it here. Do you have more?
-				}
-				else
-				{
-					AI_Output			(self, other, "DIA_Gerold_MoreFood_12_04"); //Yeah. More, more!
-				};
+				AI_Output			(self, other, "DIA_Gerold_MoreFood_12_03"); //Sure. Give it here. Do you have more?
+			}
+			else
+			{
+				AI_Output			(self, other, "DIA_Gerold_MoreFood_12_04"); //Yeah. More, more!
 			};
+		};
 			
 		if Npc_HasItems (other,ItFo_FishSoup)
-				|| Npc_HasItems (other,ItFo_Stew)
-			{
-			Info_AddChoice	(DIA_Gerold_FOOD, "(Give soup)", DIA_Gerold_FOOD_Suppe );
-			};
+		{
+			Info_AddChoice	(DIA_Gerold_FOOD, "(Give fish soup)", DIA_Gerold_FOOD_Suppe );
+		};
+		if Npc_HasItems (other,ItFo_Stew)
+		{
+			Info_AddChoice	(DIA_Gerold_FOOD, "(Give stew)", DIA_Gerold_FOOD_Stew );
+		};
 		if Npc_HasItems (other,ItFoMutton)
-			{
-			Info_AddChoice	(DIA_Gerold_FOOD, "(Give meat)", DIA_Gerold_FOOD_fleisch );
-			};
+		{
+			Info_AddChoice	(DIA_Gerold_FOOD, "(Give fried meat)", DIA_Gerold_FOOD_fleisch );
+		};
 		if Npc_HasItems (other,ItFo_Bacon)
-			{
+		{
 			Info_AddChoice	(DIA_Gerold_FOOD, "(Give ham)", DIA_Gerold_FOOD_schinken );
-			};
+		};
 		if Npc_HasItems (other,ItFo_Cheese)
-			{
+		{
 			Info_AddChoice	(DIA_Gerold_FOOD, "(Give cheese)", DIA_Gerold_FOOD_kaese );
-			};
+		};
 		if Npc_HasItems (other,ItFo_Sausage)
-			{
+		{
 			Info_AddChoice	(DIA_Gerold_FOOD, "(Give sausage)", DIA_Gerold_FOOD_Wurst );
-			};
-			Gerold_FoodCounter = (Gerold_FoodCounter +1);
+		};
+		Gerold_FoodCounter += 1;
 	};
 };
 
@@ -611,15 +614,15 @@ func void DIA_Gerold_FOOD_fleisch ()
 func void DIA_Gerold_FOOD_Suppe ()
 {
 	AI_Output			(other, self, "DIA_Gerold_FOOD_Suppe_15_00"); //A good soup would hit the spot, don't you think?
-
-	if (B_GiveInvItems (other, self, ItFo_FishSoup,1))
-		{
-		}
-		else
-		{
-			B_GiveInvItems (other,self , ItFo_Stew, 1);
-		};
+	B_GiveInvItems (other, self, ItFo_FishSoup,1);
 	DIA_Gerold_MoreFood ();
+};
+
+func void DIA_Gerold_FOOD_Stew()
+{
+	AI_Output			(other, self, "DIA_Gerold_FOOD_Suppe_15_00"); //A good soup would hit the spot, don't you think?
+	B_GiveInvItems (other,self , ItFo_Stew, 1);
+	DIA_Gerold_MoreFood();
 };
 
 ///////////////////////////////////////////////////////////////////////

@@ -141,6 +141,7 @@ AI\HUMAN\C_Human\C_NpcRansacksAlways.d
 AI\HUMAN\C_Human\C_NpcIsHero.d
 AI\HUMAN\C_Human\C_NpcIsUndead.d
 AI\HUMAN\C_Human\C_NpcIsEvil.d
+AI\HUMAN\C_Human\C_NpcIsGolem.d
 AI\HUMAN\C_Human\C_RefuseTalk.d
 
 AI\HUMAN\B_Human\B_GetTotalPetzCounter.d

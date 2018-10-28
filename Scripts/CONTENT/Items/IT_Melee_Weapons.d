@@ -588,7 +588,7 @@ INSTANCE ItMw_1h_Sld_Sword (C_Item)
 	name 				=	"Rough Sword";  //SÖLDNER
 
 	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_AXE;	
+	flags 				=	ITEM_SWD;	
 	material 			=	MAT_METAL;
 
 	value 				=	Value_Sld1hSchwert;
@@ -1764,7 +1764,7 @@ INSTANCE ItMw_Inquisitor (C_Item)
 	value 				=	Value_Inquisitor;
 
 	damageTotal  		= 	Damage_Inquisitor;
-	damagetype 			=	DAM_EDGE;	//!!!
+	damagetype 			=	DAM_BLUNT;	//!!!
 	range    			=  	Range_Inquisitor;		
 
 	cond_atr[2]   		=	ATR_STRENGTH;
@@ -1896,7 +1896,7 @@ INSTANCE ItMw_ElBastardo (C_Item)
 	name 				=	"El Bastardo";  
 
 	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_AXE;	
+	flags 				=	ITEM_SWD;	
 	material 			=	MAT_METAL;
 
 	value 				=	Value_ElBastardo;

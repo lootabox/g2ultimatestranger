@@ -112,12 +112,12 @@ INSTANCE Skeleton_Lord_Archol	(Mst_Skeleton_Lord)
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protection ----
-	protection	[PROT_BLUNT]		=	10;
+/* 	protection	[PROT_BLUNT]		=	10;
 	protection	[PROT_EDGE]			=	20;
 	protection	[PROT_POINT]		=	1000; 
 	protection	[PROT_FIRE]			=	10;
 	protection	[PROT_FLY]			=	10;
-	protection	[PROT_MAGIC]		=	10;	
+	protection	[PROT_MAGIC]		=	10;	 */
 
 	B_SetVisuals_Skeleton_Lord ();
 	

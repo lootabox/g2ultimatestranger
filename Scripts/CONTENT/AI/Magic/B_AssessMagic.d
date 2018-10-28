@@ -85,7 +85,7 @@ func void B_AssessMagic ()
 	};
 
 	// ------ Fear ------
-	if (Npc_GetLastHitSpellID(self) == SPL_Fear)	
+/* 	if (Npc_GetLastHitSpellID(self) == SPL_Fear)	
 	{
 		Npc_ClearAIQueue	(self);
 		B_ClearPerceptions	(self);
@@ -109,7 +109,7 @@ func void B_AssessMagic ()
 			AI_StartState	(self, ZS_MM_Flee, 0, "");
 			return;
 		};
-	};
+	}; */
 	
 	// Firespells senden ein ASSESSMAGIC bei Kollision
 	if (Npc_GetLastHitSpellID(self) == SPL_Firerain)		
