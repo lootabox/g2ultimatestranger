@@ -197,20 +197,22 @@ FUNC INT DIA_Alwin_FellanSuccess_Condition()
 FUNC VOID DIA_Alwin_FellanSuccess_Info()
 {	
 	AI_Output (other, self,"DIA_Alwin_FellanSuccess_15_00"); //Fellan will hammer no longer.
-	AI_Output (self ,other,"DIA_Alwin_FellanSuccess_12_01"); //Hear that? No more hammering. At last. I thought the fellow would never quit.
 	
-	if (Npc_IsDead (Fellan) == FALSE) 
+	if (Npc_IsDead (Fellan) == FALSE)
 	{
+		AI_Output (self ,other,"DIA_Alwin_FellanSuccess_12_01"); //Hear that? No more hammering. At last. I thought the fellow would never quit.
 		AI_Output (self ,other,"DIA_Alwin_FellanSuccess_12_02"); //You've done me a huge favor. You know what, I'll give you 30 gold pieces.
-		
 		B_GiveInvItems (self, other, ItMi_Gold, 30);
-		
 		MIS_AttackFellan = LOG_SUCCESS;
-		B_GivePlayerXP (XP_Ambient); 
+		B_GivePlayerXP (XP_Ambient);
 	}
-	else 
+	else
 	{
+		B_Say(self,other,"$YOUMURDERER");
+		B_Say(self,other,"$GETOUTOFHERE");
 		MIS_AttackFellan = LOG_FAILED;
+		B_MemorizePlayerCrime(self,other,CRIME_MURDER);
+		B_CheckLog();
 	};
 };
 //***************************************************

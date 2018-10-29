@@ -225,6 +225,7 @@ func void DIA_Wulfgar_HowToBegin_Info ()
 // *************************************************
 // 						TRAIN
 // *************************************************
+var int Wulfgar_Merke;
 INSTANCE DIA_Wulfgar_Teach(C_INFO)
 {
 	npc			= Mil_312_Wulfgar;
@@ -266,11 +267,17 @@ FUNC VOID DIA_Wulfgar_Teach_Info()
 		Info_AddChoice		(DIA_Wulfgar_Teach, B_BuildLearnString(PRINT_Learn2h5	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 5))		,DIA_Wulfgar_Teach_2H_5);
 		Info_AddChoice		(DIA_Wulfgar_Teach, B_BuildLearnString(PRINT_Learn1h1	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1))			,DIA_Wulfgar_Teach_1H_1);
 		Info_AddChoice		(DIA_Wulfgar_Teach, B_BuildLearnString(PRINT_Learn1h5	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 5))			,DIA_Wulfgar_Teach_1H_5);
+
+		Wulfgar_Merke = other.aivar[REAL_TALENT_1H] + other.aivar[REAL_TALENT_2H];
 	};
 };
 
 FUNC VOID DIA_Wulfgar_Teach_Back ()
 {
+	if((Wulfgar_Merke < other.aivar[REAL_TALENT_1H] + other.aivar[REAL_TALENT_2H]))
+	{
+		AI_Output (self, other, "DIA_Wulfgar_AlsMil_04_04"); //I'll make a good fighter of you yet!
+	};
 	Info_ClearChoices (DIA_Wulfgar_Teach);
 };
 

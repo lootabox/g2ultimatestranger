@@ -22,7 +22,7 @@ Changed Buster to give reduced gold for each Shadowbeast Horn, but still way mor
 	Ported fixes and improvements Dimus' patch
 
 NPCs:
-Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Parlan, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner.
+Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner.
 Fixed logical issues with dialogue of Diego, Ramon, Ulf, Xardas.
 
 Fixed XP award for pickpocketing Cavalorn, Dobar, Engor, Francis, Franco, Salandril, Valentino.
@@ -31,6 +31,7 @@ Fixed XP award for recruiting Lares, Lester.
 Agon returns to monastery after the Trial of Fire, if alive.
 Alvares cannot be talked about joining the mercenaries if part of a guild already.
 Alwin is asked about buying a sheep if NH is looking for a sheep for the monastery.
+Alwin vocally disapproves murdering of Fellan and will remember the crime.
 Angar has same weapon everywhere as in the Valley of Mines.
 Bandit 10008 warns NH not to wake up Skinner only if he has not already done so.
 Bartok now grants previously omitted XP bonus for finishing the hunt with him.
@@ -64,11 +65,14 @@ Gaan won't know about the death of the Snorting Dragon Snapper unless he is clos
 Gaan's dialog option for asking who he is cannot glitch up and become unavailable.
 Garond can be told about Silvestro's mining site even if Diego has died.
 Gerold gives explicit options for giving stew and fish soup.
+Gerold can be asked whether he ever sleeps only before receiving the order from Garond to free Gorn.
+Girion attacks NH to kill.
 Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
 Halvor is not given the compromising note for reading.
 Hanna has 16 lines of dialogue and new interaction restored related to the thieves' guild.
 Henry will consider all higher tier armor as luxurious and will comment appropriately.
+Hilda only takes the required 20 turnips instead of all of them.
 Hodges can be asked about why Bennet was arrested after asking what happened.
 Huno only makes a vague comment about high price of his armor once Esteban is dead and does not say that he takes a share.
 Igaraz can be asked about the living rock, even after moving north from the tavern.
@@ -83,6 +87,7 @@ Kervo's quest cancels in chapter 4, causing Kerov and Geppert to be killed by a 
 Kervo's quest fails if he is killed.
 Landlord will not give more then 5 beers per chapter and only 1 per day.
 Lares's dialog has 5 more previously unused dialogue lines.
+Lee can be told about lizard people only from chapter 4 onwards.
 Lee will only sell mercenary armour while the player is a mercenary.
 Lee will refuse joining the crew if dismissed twice, with previously unused dialogue.
 Lehmar attacking the NH causes Meldor to also attack the NH.
@@ -104,7 +109,10 @@ Opolos can be talked about the recipe after becoming a magician.
 Opolos can be told about Pedro's betrayal also after the chase quest is completed.
 Opolos can only be told each bit of news once.
 Orlan can be given the wine only after asking who he is.
+Parcival attacks NH to kill.
 Parcival can be asked about Diego only after asking about scrapers in general.
+Pardos does not speak out NH's dialog lines.
+Peck does not speak out NH's dialog lines.
 Pedro cannot be asked about life in the monastery if NH is magician.
 Pepe's dialog for buying a sheep is only available if NH knows he needs one and is not part of any guild yet.
 Ramirez shows two dialogue options only after he sees the thieves' signal.
@@ -127,6 +135,7 @@ Ulf smokes a joint as well instead of watching as NH smokes one.
 Urshak will not wait for player to talk to him.
 Vatras does not sell Almanacs of the Possessed given to him
 Wolf cannot be talked about joining the mercenaries if part of a guild already.
+Wulfgar makes comments on training of weapon skills.
 Xardas' dialog has 3 more previously unused dialogue lines.
 
 Following actions no longer create extra journal updates:
@@ -162,6 +171,7 @@ Armor buying dialog options are formatted the same way.
 Black Ore effect ends on using transformation scrolls.
 Document look changed for Esteban's Bodyguard, Pablo, Senyan, Skip, a thug in Khorinis for reading NH's wanted poster and Saturas for reading a map.
 El Bastardo and Rough Sword are categorized as sword, not axes.
+Failing to create runes for Ice Block and Destroy Undead properly returns the runestone to inventory.
 Fear spell does not affect any magician, paladins, golems, dragons or trolls.
 Fear spell can be used with no target in focus, cannot bypass immunity and monsters immediately react to it instead of standing still.
 Goblins and Skeletons do not create additional weapons in their inventory.

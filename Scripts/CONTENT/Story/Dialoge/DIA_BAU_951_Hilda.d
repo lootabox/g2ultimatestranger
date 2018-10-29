@@ -164,7 +164,8 @@ func void DIA_Hilda_BringBeet_Info ()
 	
 	if (Npc_HasItems (other,ItPl_Beet) >= 20)
 	{
-		B_GiveInvItems (other, self, ItPl_Beet, Npc_HasItems (other,ItPl_Beet));
+		//B_GiveInvItems (other, self, ItPl_Beet, Npc_HasItems (other,ItPl_Beet));
+		B_GiveInvItems (other, self, ItPl_Beet, 20);
 		
 		AI_Output (self, other, "DIA_Hilda_BringBeet_17_01"); //Great! (laughs) That should be enough to fatten those guys up!
 		AI_Output (self, other, "DIA_Hilda_BringBeet_17_02"); //Since you're here anyway - I saw a traveling trader pass by here a few minutes ago.

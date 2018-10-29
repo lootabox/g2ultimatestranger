@@ -338,6 +338,7 @@ FUNC INT DIA_Gerold_Perm_Condition()
 {
 	if (Kapitel < 4)
 	&& Npc_KnowsInfo (other,DIA_Gerold_Gold)
+	&& Garond_Kerkerauf == FALSE
 	{
 		return TRUE;
 	};

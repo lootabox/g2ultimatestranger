@@ -1719,7 +1719,7 @@ instance DIA_Lee_DRACHENEI		(C_INFO)
 func int DIA_Lee_DRACHENEI_Condition ()
 {
 
-	if (Npc_HasItems (other,ItAt_DragonEgg_MIS))
+	if (Npc_HasItems (other,ItAt_DragonEgg_MIS) && (Kapitel >= 4))
 	{
 		return TRUE;
 	};

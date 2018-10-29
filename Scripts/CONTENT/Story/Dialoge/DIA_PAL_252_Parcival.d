@@ -590,7 +590,7 @@ func void DIA_Parcival_VERRAETER_Info ()
 	
 	Npc_SetRefuseTalk (self,30);
 	AI_StopProcessInfos (self);
-	B_Attack (self, other, AR_NONE, 1);
+	B_Attack (self, other, AR_KILL, 1);
 };
 
 

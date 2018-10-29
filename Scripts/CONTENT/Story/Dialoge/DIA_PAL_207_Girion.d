@@ -265,7 +265,7 @@ func void DIA_Girion_CATCHPLAYERSTOLENSHIP_weg ()
 	AI_Output			(self, other, "DIA_Girion_CATCHPLAYERSTOLENSHIP_weg_08_02"); //Even if you are one of us, that does not give you the right to steal the king's property. Die, you damned traitor.
 	};
 	AI_StopProcessInfos (self);
-	B_Attack (self, other, AR_NONE, 1);
+	B_Attack (self, other, AR_KILL, 1);
 	Girion_WantstoKillSC = TRUE;
 };
 
@@ -331,7 +331,7 @@ FUNC VOID DIA_Girion_Verrat_Info()
 {
 	AI_Output			(self, other, "DIA_Girion_Verrat_08_00"); //Traitor!
 	AI_StopProcessInfos (self);
-	B_Attack (self, other, AR_NONE, 1);
+	B_Attack (self, other, AR_KILL, 1);
 };
 
 

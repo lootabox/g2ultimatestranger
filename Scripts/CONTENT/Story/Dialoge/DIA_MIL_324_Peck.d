@@ -230,7 +230,7 @@ func int DIA_Peck_WEAPON2_Condition ()
 };
 func void DIA_Peck_WEAPON2_Info ()
 {
-	AI_Output (self ,other,"DIA_Peck_Add_15_01"); //Do you have a better weapon for me?
+	AI_Output (other ,self,"DIA_Peck_Add_15_01"); //Have you got a better weapon for me?
 	if (MIS_Andre_Peck == LOG_SUCCESS) //Peck verpetzt
 	{	
 		AI_Output (self ,other,"DIA_Peck_Add_12_06"); //I haven't forgotten that you ratted me out to Lord Andre.

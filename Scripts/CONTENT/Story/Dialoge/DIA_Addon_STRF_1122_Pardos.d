@@ -28,7 +28,7 @@ INSTANCE DIA_Addon_Pardos_Hi   (C_INFO)
 	condition   = DIA_Addon_Pardos_Hi_Condition;
 	information = DIA_Addon_Pardos_Hi_Info;
 	permanent   = FALSE;
-	description = "How are you holding up?";
+	description = "How are you?";
 };
 FUNC INT DIA_Addon_Pardos_Hi_Condition()
 {	
@@ -39,7 +39,8 @@ FUNC INT DIA_Addon_Pardos_Hi_Condition()
 };
 FUNC VOID DIA_Addon_Pardos_Hi_Info()
 {
-	AI_Output (self, other, "DIA_Addon_Pardos_Hi_03_00");//How are you holding up?
+	//AI_Output (self, other, "DIA_Addon_Pardos_Hi_03_00");//How are you holding up?
+	AI_Output (other, self, "DIA_Hilda_DISTURB_15_00"); //How are you?
 	AI_Output (self, other, "DIA_Addon_Pardos_Hi_03_01");//(wearily) I'm beat ... completely worn out. Is it a glorious sunny day, or one of those clear nights where a thousand stars are twinkling?
 	AI_Output (self, other, "DIA_Addon_Pardos_Hi_03_02");//(even more weary) I don't know ... where's the gentle rain of summer ... the cool evening breeze ... I can feel them no longer ...
 	AI_Output (self, other, "DIA_Addon_Pardos_Hi_03_03");//(resignedly) It's the eyes that go first in here ...
