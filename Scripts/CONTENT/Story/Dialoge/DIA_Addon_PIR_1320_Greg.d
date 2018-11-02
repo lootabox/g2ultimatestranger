@@ -120,8 +120,7 @@ FUNC VOID DIA_Addon_Greg_ImNew_Info()
 // ------------------------------------------------------------------
 func void B_UseRakeBilanz ()
 {
-	if (MIS_Addon_Greg_RakeCave == LOG_RUNNING)
-	&& (Greg_SuchWeiter == TRUE)
+	if (MIS_Addon_Greg_RakeCave == LOG_RUNNING) && (Greg_SuchWeiter == TRUE) || (MIS_Addon_Greg_RakeCave == LOG_FAILED)
 	{
 		AI_Output (self, other, "DIA_Addon_Greg_UseRakeBilanz_01_00"); //And don't think I've forgotten that you still owe me a thing or two.
 		AI_Output (self, other, "DIA_Addon_Greg_UseRakeBilanz_01_01"); //That is, things worth several hundred gold coins that I buried all over Khorinis.

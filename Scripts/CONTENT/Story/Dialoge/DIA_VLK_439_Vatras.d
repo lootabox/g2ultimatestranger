@@ -66,7 +66,7 @@ func void DIA_Addon_Vatras_LastWarning_Info ()
 	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_06"); //What have you got to say for yourself?
 
 	Info_ClearChoices	(DIA_Addon_Vatras_LastWarning);
-	Info_AddChoice	(DIA_Addon_Vatras_LastWarning, "Kiss my ass.", DIA_Addon_Vatras_LastWarning_Arsch );	 
+	Info_AddChoice	(DIA_Addon_Vatras_LastWarning, "Get stuffed.", DIA_Addon_Vatras_LastWarning_Arsch );	 
 	Info_AddChoice	(DIA_Addon_Vatras_LastWarning, "I'm sorry. I didn't know what I was doing.", DIA_Addon_Vatras_LastWarning_Reue );	 
 };
 func void DIA_Addon_Vatras_LastWarning_Arsch ()

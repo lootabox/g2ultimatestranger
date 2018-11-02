@@ -658,7 +658,7 @@ FUNC VOID DIA_Pyrokar_Wunsch_Nothing ()
 	{
 		MIS_HelpBabo = LOG_FAILED;
 	};
-	
+	B_CheckLog();
 	Info_ClearChoices (DIA_Pyrokar_Wunsch);
 	
 	
@@ -684,6 +684,7 @@ FUNC VOID DIA_Pyrokar_Wunsch_Dyrian ()
 	{
 		MIS_HelpBabo = LOG_FAILED;
 	};
+	B_CheckLog();
 	Info_ClearChoices (DIA_Pyrokar_Wunsch);
 };
 
@@ -710,7 +711,7 @@ FUNC VOID DIA_Pyrokar_Wunsch_Babo ()
 	{
 		MIS_HelpOpolos 	= LOG_FAILED;
 	};
-	
+	B_CheckLog();
 	Info_ClearChoices (DIA_Pyrokar_Wunsch);
 };
 
@@ -735,9 +736,9 @@ FUNC VOID DIA_Pyrokar_Wunsch_Opolos ()
 	};
 	if (MIS_HelpBabo == LOG_RUNNING)
 	{
-		
 		MIS_HelpBabo = LOG_FAILED;
 	};
+	B_CheckLog();
 	Info_ClearChoices (DIA_Pyrokar_Wunsch);
 };
 ///////////////////////////////////////////////////////////////////////

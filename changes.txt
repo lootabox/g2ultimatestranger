@@ -22,7 +22,8 @@ Changed Buster to give reduced gold for each Shadowbeast Horn, but still way mor
 	Ported fixes and improvements Dimus' patch
 
 NPCs:
-Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner.
+Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
+Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras.
 Fixed logical issues with dialogue of Diego, Ramon, Ulf, Xardas.
 
 Fixed XP award for pickpocketing Cavalorn, Dobar, Engor, Francis, Franco, Salandril, Valentino.
@@ -69,6 +70,7 @@ Gerold can be asked whether he ever sleeps only before receiving the order from 
 Girion attacks NH to kill.
 Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
+Greg's treasure hunt quest cancels if the first treasure is not given to him and he will comment in Jharkendar if the quest fails.
 Halvor is not given the compromising note for reading.
 Hanna has 16 lines of dialogue and new interaction restored related to the thieves' guild.
 Henry will consider all higher tier armor as luxurious and will comment appropriately.
@@ -135,6 +137,7 @@ Ulf smokes a joint as well instead of watching as NH smokes one.
 Urshak will not wait for player to talk to him.
 Vatras does not sell Almanacs of the Possessed given to him
 Wolf cannot be talked about joining the mercenaries if part of a guild already.
+Wolf will not join the crew if he gets pissed off at NH.
 Wulfgar makes comments on training of weapon skills.
 Xardas' dialog has 3 more previously unused dialogue lines.
 

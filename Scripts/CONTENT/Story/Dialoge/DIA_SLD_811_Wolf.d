@@ -765,6 +765,9 @@ func void DIA_Wolf_KnowWhereEnemy_Info ()
 		AI_Output			(other,self , "DIA_Wolf_KnowWhereEnemy_15_02"); //I just remembered that I've actually got enough people already.
 		AI_Output			(self, other, "DIA_Wolf_KnowWhereEnemy_08_03"); //(angry) So THAT'S the way it is. First you wave a red flag at me and then nothing comes of it, eh?
 		AI_Output			(self, other, "DIA_Wolf_KnowWhereEnemy_08_04"); //Screw you. I hope your tub sinks.
+		Wolf_IsOnBoard	 = LOG_FAILED;
+		B_CheckLog();
+		wolf_SaidNo = TRUE;
 		AI_StopProcessInfos (self);
 	}
 	else 
@@ -835,6 +838,7 @@ func void DIA_Wolf_LeaveMyShip_Info ()
 	AI_Output			(self, other, "DIA_Wolf_LeaveMyShip_08_01"); //First you give me hope and then a rejection like that. You bastard, I'll pay you back for that.
 	
 	Wolf_IsOnBoard	 = LOG_FAILED;				//Log_Obsolete ->der Sc kann ihn wiederholen, Log_Failed ->hat die Schnauze voll, kommt nicht mehr mit! 
+	B_CheckLog();
 	crewmember_Count = (Crewmember_Count -1);
 	AI_StopProcessInfos (self);
 	B_Attack (self, other, AR_NONE, 1);

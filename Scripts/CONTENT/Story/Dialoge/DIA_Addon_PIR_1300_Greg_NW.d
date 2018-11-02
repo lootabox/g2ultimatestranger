@@ -79,6 +79,7 @@ func void DIA_Addon_Greg_NW_Hallo_weg ()
 
 	AI_StopProcessInfos (self);
 	MIS_Addon_Greg_BringMeToTheCity = LOG_FAILED;
+	B_CheckLog();
 };
 
 func void DIA_Addon_Greg_NW_Hallo_ja ()
@@ -649,6 +650,7 @@ func void DIA_Addon_Greg_NW_RakeCavePlundered_No ()
 	AI_Output			(self, other, "DIA_Addon_Greg_NW_RakeCavePlundered_No_01_03"); //Damnit. I knew it. Those vultures were faster than me - again.
 	AI_Output			(self, other, "DIA_Addon_Greg_NW_RakeCavePlundered_No_01_04"); //Oh well. Never mind, kiddo. Gotta go. Catch you later.
 	AI_StopProcessInfos (self);
+	MIS_Addon_Greg_RakeCave = LOG_OBSOLETE;
 	GregLocation = Greg_Bigcross;
 	Npc_ExchangeRoutine	(self,"Bigcross");
 	B_StartotherRoutine	(BAU_974_Bauer,"Start");

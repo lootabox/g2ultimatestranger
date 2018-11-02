@@ -23,6 +23,7 @@ func void B_VatrasPissedOff ()
 	};
 
 	Vatras_IsOnBoard = LOG_FAILED;				//Log_Obsolete ->der Sc kann ihn wiederholen, Log_Failed ->hat die Schnauze voll, kommt nicht mehr mit! 
+	B_CheckLog();
 	self.flags = 0;
 	VatrasPissedOffForever = TRUE;
 

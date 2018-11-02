@@ -2496,6 +2496,7 @@ FUNC VOID DIA_Lares_KnowWhereEnemy_No ()
 	else
 	{
 		Lares_IsOnBoard	 = LOG_FAILED;
+		B_CheckLog();
 	};	
 	Info_ClearChoices (DIA_Lares_KnowWhereEnemy);
 };

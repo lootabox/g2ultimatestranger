@@ -708,6 +708,7 @@ func void DIA_Lester_LeaveMyShip_Info ()
 	else
 	{
 		Lester_IsOnBoard	 = LOG_FAILED;
+		B_CheckLog();
 	};
 	
 	Npc_ExchangeRoutine (self,"ShipOff"); 

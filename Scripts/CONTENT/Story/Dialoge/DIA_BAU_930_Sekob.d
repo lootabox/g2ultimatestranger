@@ -790,7 +790,7 @@ func void DIA_Sekob_ROSINEVERBACK_Info ()
 	B_Attack (self, other, AR_NONE, 1);
 	B_GivePlayerXP (XP_Ambient);
 	MIS_bringRosiBackToSekob = LOG_FAILED;
-
+	B_CheckLog();
 };
 
 

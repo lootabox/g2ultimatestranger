@@ -271,7 +271,7 @@ FUNC VOID DIA_Hanna_AnyNews_No ()
 	AI_Output (self ,other,"DIA_Hanna_AnyNews_No_17_01"); //That's what I'm saying. Everyone here thinks of no one but himself. So what do you want?
 
 	MIS_HannaRetrieveLetter = LOG_FAILED;
-
+	B_CheckLog();
 	Info_ClearChoices (DIA_Hanna_AnyNews);
 };
 
@@ -283,7 +283,7 @@ FUNC VOID DIA_Hanna_AnyNews_Depends ()
 
 
 	MIS_HannaRetrieveLetter = LOG_FAILED;
-
+	B_CheckLog();
 	Info_ClearChoices (DIA_Hanna_AnyNews);
 };
 
@@ -296,7 +296,7 @@ FUNC VOID DIA_Hanna_AnyNews_Yes ()
 	AI_Output (self ,other,"DIA_Hanna_AnyNews_Yes_17_04"); //Could you perhaps get it back for me?
 	
 	MIS_HannaRetrieveLetter = LOG_RUNNING;
-
+	B_CheckLog();
 	Log_CreateTopic (TOPIC_HannaRetrieveLetter, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_HannaRetrieveLetter, LOG_RUNNING);
 	B_LogEntry (TOPIC_HannaRetrieveLetter,"Hanna's missing a document. Seems it disappeared at the harbor, where the cartographer Brahim is."); 
@@ -344,7 +344,7 @@ FUNC VOID DIA_Hanna_AnyNews_Yes_Reward_BeNice ()
 	AI_Output (self ,other,"DIA_Hanna_AnyNews_Yes_Reward_BeNice_17_01"); //But that's outrageous. I ... get out of here! You boorish lout!
 	
 	MIS_HannaRetrieveLetter = LOG_FAILED;
-	
+	B_CheckLog();
 	AI_StopProcessInfos (self);
 };
 

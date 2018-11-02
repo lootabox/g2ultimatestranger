@@ -288,7 +288,8 @@ func void DIA_Gorax_Wurst_Info ()
 		AI_Output (self, other, "DIA_Gorax_Wurst_14_03"); //So, either you ate those sausages yourself, or you gave someone more than his share.
 		AI_Output (self, other, "DIA_Gorax_Wurst_14_04"); //Listen, since you're new - and for that reason only - I shall let you get away with it. Keep that in mind, novice!
 		
-		MIS_GoraxEssen = LOG_FAILED; 
+		MIS_GoraxEssen = LOG_FAILED;
+		B_CheckLog();
 	};
 };
 ///////////////////////////////////////////////////////////////////////
@@ -378,6 +379,7 @@ FUNC VOID DIA_Gorax_Orlan_100 ()
 	B_GiveInvItems (other, self, ItMI_Gold, 100);
 	
 	MIS_GoraxWein = LOG_FAILED;
+	B_CheckLog();
 	 
 	Info_ClearChoices (DIA_Gorax_Orlan);
 	AI_StopProcessInfos (self);
@@ -396,6 +398,7 @@ FUNC VOID DIA_Gorax_Orlan_240 ()
 	{
 		AI_Output (self, other, "DIA_Gorax_Orlan_240_14_02"); //But you've already spent part of the money, haven't you? You're good for nothing - begone!
 		MIS_GoraxWein = LOG_FAILED; 
+		B_CheckLog();
 		B_GiveInvItems (other, self, ItMI_Gold, Npc_HasItems (other, ItmI_Gold));
 	};
 	

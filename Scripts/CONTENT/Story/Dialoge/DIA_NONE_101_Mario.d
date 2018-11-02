@@ -349,6 +349,7 @@ func void DIA_Mario_LeaveMyShip_Info ()
 	{
 		AI_Output	(self, other, "DIA_Mario_StillNeedYou_07_02"); //You can't treat me like that. I'll gut you!
 		Mario_IsOnBoard	 = LOG_FAILED;
+		B_CheckLog();
 		Npc_ExchangeRoutine (self,"ShipOff");
 		AI_StopProcessInfos (self);
 		B_Attack	(self,other,AR_NONE,1); 

@@ -2070,6 +2070,7 @@ func void DIA_Lee_LeaveMyShip_Info ()
 		AI_Output	(self, other, "DIA_Lee_StillNeedYou_04_02"); //You know what, screw you. First you say I should come, then you send me away again.
 		AI_Output	(self, other, "DIA_Lee_StillNeedYou_04_03"); //Find yourself another idiot!
 		Lee_IsOnBoard	 = LOG_FAILED;
+		B_CheckLog();
 		AI_StopProcessInfos (self);
 	};
 	
