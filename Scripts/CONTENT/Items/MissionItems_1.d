@@ -1118,13 +1118,17 @@ INSTANCE ItWr_Poster_MIS	(C_Item)
 
 	value 				=	0;
 
-	visual 				=	"ItWr_Scroll_01.3DS";
+	//visual 				=	"ItWr_Scroll_01.3DS";
+	visual 				=	"ItWr_Poster_MIS.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UsePoster;
 	scemeName			=	"MAP";
 	description			= 	name;
 	TEXT[3]				=	"A picture of me!";
 	TEXT[4]				=   "";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 FUNC VOID UsePoster()
 {

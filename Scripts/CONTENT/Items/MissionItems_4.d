@@ -297,7 +297,8 @@ instance ItWr_Map_Orcelite_MIS (C_Item)
 
 	value 		= 350;
 
-	visual 		= "ItWr_Map_01.3DS";
+	//visual 		= "ItWr_Map_01.3DS";
+	visual 		= "ItWr_Map_NW_01.3DS";
 	material 	= MAT_LEATHER;
 
 	scemeName	= "MAP";
@@ -308,6 +309,9 @@ instance ItWr_Map_Orcelite_MIS (C_Item)
 	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 var int Use_Map_NewWorld_Orcelite_MIS_OneTime;
 	func void Use_Map_NewWorld_Orcelite_MIS()
@@ -348,7 +352,8 @@ instance ItWr_Map_Caves_MIS (C_Item)
 
 	value 		= 200;
 
-	visual 		= "ItWr_Map_01.3DS";
+	//visual 		= "ItWr_Map_01.3DS";
+	visual 		= "ItWr_Map_NW_01.3DS";
 	material 	= MAT_LEATHER;
 
 	scemeName	= "MAP";
@@ -359,6 +364,9 @@ instance ItWr_Map_Caves_MIS (C_Item)
 	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 	func void Use_Map_NewWorld_Caves_MIS()

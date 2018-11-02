@@ -583,7 +583,8 @@ INSTANCE ItWr_Addon_SUMMONANCIENTGHOST (C_ITEM)
 
 	value 				=	250;
 
-	visual 				=	"ItWr_Scroll_01.3DS";	
+	//visual 				=	"ItWr_Scroll_01.3DS";	
+	visual 				=	"ItWr_Scroll_02.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseSummonAncientGhost;
 	scemeName			=	"MAP";
@@ -628,7 +629,8 @@ instance ItWr_Map_AddonWorld (C_Item)
 
 	value 		= 250;
 
-	visual 		= "ItWr_Map_01.3DS";
+	//visual 		= "ItWr_Map_01.3DS";
+	visual 		= "ItWr_Map_AW.3DS";
 	material 	= MAT_LEATHER;
 
 	scemeName	= "MAP";
@@ -639,6 +641,9 @@ instance ItWr_Map_AddonWorld (C_Item)
 	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 	func void Use_Map_AddonWorld ()

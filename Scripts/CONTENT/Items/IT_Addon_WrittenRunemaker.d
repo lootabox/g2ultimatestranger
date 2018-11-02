@@ -11,7 +11,8 @@ INSTANCE ITWR_Addon_Runemaking_KDW_CIRC1 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_04.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	//visual 					=	"ItWr_Book_02_04.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"ItWr_Book_Runemaking_KDW.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -19,6 +20,9 @@ INSTANCE ITWR_Addon_Runemaking_KDW_CIRC1 (C_ITEM)
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
 	on_state[0]				=	Use_Runemaking_KDW_CIRC1_S1;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 INSTANCE ITWR_Addon_Runemaking_KDW_CIRC2 (C_ITEM)
@@ -134,7 +138,8 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC1 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	//visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"ItWr_Book_Runemaking_KDF.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -142,6 +147,9 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC1 (C_ITEM)
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
 	on_state[0]				=	Use_Bookstand_Kreise_01_S1;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 INSTANCE ITWR_Addon_Runemaking_KDF_CIRC2 (C_ITEM)
 {
@@ -152,7 +160,8 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC2 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	//visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"ItWr_Book_Runemaking_KDF.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -160,6 +169,9 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC2 (C_ITEM)
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
 	on_state[0]				=	Use_Bookstand_Kreise_02_S1;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 INSTANCE ITWR_Addon_Runemaking_KDF_CIRC3 (C_ITEM)
 {
@@ -170,7 +182,8 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC3 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	//visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"ItWr_Book_Runemaking_KDF.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -178,6 +191,9 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC3 (C_ITEM)
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
 	on_state[0]				=	Use_Bookstand_Kreise_03_S1;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 INSTANCE ITWR_Addon_Runemaking_KDF_CIRC4 (C_ITEM)
 {
@@ -188,7 +204,8 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC4 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	//visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"ItWr_Book_Runemaking_KDF.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -196,6 +213,9 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC4 (C_ITEM)
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
 	on_state[0]				=	Use_Bookstand_Kreise_04_S1;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 INSTANCE ITWR_Addon_Runemaking_KDF_CIRC5 (C_ITEM)
 {
@@ -206,7 +226,8 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC5 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	//visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"ItWr_Book_Runemaking_KDF.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -214,6 +235,9 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC5 (C_ITEM)
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
 	on_state[0]				=	Use_Bookstand_Kreise_05_S1;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 INSTANCE ITWR_Addon_Runemaking_KDF_CIRC6 (C_ITEM)
 {
@@ -224,7 +248,8 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC6 (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	//visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"ItWr_Book_Runemaking_KDF.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -232,4 +257,7 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC6 (C_ITEM)
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
 	on_state[0]				=	Use_Bookstand_Kreise_06_S1;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };

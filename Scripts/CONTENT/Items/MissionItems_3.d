@@ -170,7 +170,8 @@ INSTANCE ItWr_XardasBookForPyrokar_Mis (C_ITEM)
 
 	value 					=	0;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	//visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"ItWr_Book_03_03.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -283,7 +284,8 @@ INSTANCE ITWR_DementorObsessionBook_MIS (C_ITEM)
 
 	value 					=	0;
 
-	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	//visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"ItWr_Book_03_05.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
@@ -604,11 +606,15 @@ INSTANCE ItWr_BabosPinUp_MIS		(C_Item)
 
 	value 				=	0;
 
-	visual 				=	"ItWr_Scroll_01.3DS";
+	//visual 				=	"ItWr_Scroll_01.3DS";
+	visual 				=	"ItWr_BabosPinUp_MIS.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   Use_BabosPinUp;
 	scemeName			=	"MAP";
 	description			= "A picture of a nude woman.";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 func void Use_BabosPinUp ()
 {   
@@ -820,7 +826,8 @@ instance ItWr_ShatteredGolem_MIS (C_Item)
 
 	value 		= 150;
 
-	visual 		= "ItWr_Map_01.3DS";
+	//visual 		= "ItWr_Map_01.3DS";
+	visual 		= "ItWr_Map_NW_02.3DS";
 	material 	= MAT_LEATHER;
 
 	scemeName	= "MAP";
@@ -831,6 +838,9 @@ instance ItWr_ShatteredGolem_MIS (C_Item)
 	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 	func void Use_ShatteredGolem_Mis()
@@ -1161,7 +1171,8 @@ instance ItWr_Map_Shrine_MIS (C_Item)
 
 	value 		= 200;
 
-	visual 		= "ItWr_Map_01.3DS";
+	//visual 		= "ItWr_Map_01.3DS";
+	visual 		= "ItWr_Map_NW_01.3DS";
 	material 	= MAT_LEATHER;
 
 	scemeName	= "MAP";
@@ -1172,6 +1183,9 @@ instance ItWr_Map_Shrine_MIS (C_Item)
 	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 	func void Use_Map_NewWorld_Shrine_MIS()

@@ -349,7 +349,8 @@ INSTANCE ItWr_Diary_BlackNovice_MIS (C_ITEM)
 
 	value 					=	100;
 
-	visual 					=	"ItWr_Book_02_04.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	//visual 					=	"ItWr_Book_02_04.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
+	visual 					=	"ItWr_Book_03_04.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";

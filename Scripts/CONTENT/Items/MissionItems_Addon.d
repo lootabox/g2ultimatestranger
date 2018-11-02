@@ -155,7 +155,8 @@ instance ItWr_Map_NewWorld_Ornaments_Addon (C_Item)
 
 	value 		= 250;
 
-	visual 		= "ItWr_Map_01.3DS";
+	//visual 		= "ItWr_Map_01.3DS";
+	visual 		= "ItWr_Map_NW_01.3DS";
 	material 	= MAT_LEATHER;
 
 	scemeName	= "MAP";
@@ -167,6 +168,9 @@ instance ItWr_Map_NewWorld_Ornaments_Addon (C_Item)
 	TEXT[2]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 	func void Use_Map_NewWorld_Ornaments()
@@ -201,7 +205,8 @@ instance ItWr_Map_NewWorld_Dexter (C_Item)
 
 	value 		= 210;
 
-	visual 		= "ItWr_Map_01.3DS";
+	//visual 		= "ItWr_Map_01.3DS";
+	visual 		= "ItWr_Map_NW_01.3DS";
 	material 	= MAT_LEATHER;
 
 	scemeName	= "MAP";
@@ -213,6 +218,9 @@ instance ItWr_Map_NewWorld_Dexter (C_Item)
 	TEXT[2]		= "Dexter.";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 	func void Use_Map_NewWorld_Dexter ()
@@ -1638,7 +1646,8 @@ instance ItWR_Addon_TreasureMap (C_Item)
 
 	value 		= 250;
 
-	visual 		= "ItWr_Map_01.3DS";
+	//visual 		= "ItWr_Map_01.3DS";
+	visual 		= "ItWr_Map_AW.3DS";
 	material 	= MAT_LEATHER;
 
 	scemeName	= "MAP";
@@ -1649,6 +1658,9 @@ instance ItWR_Addon_TreasureMap (C_Item)
 	TEXT[1]		= "Some places are marked on the map.";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 	func void Use_TreasureMap()

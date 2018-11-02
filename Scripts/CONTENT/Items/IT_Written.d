@@ -112,7 +112,8 @@ instance ItWr_Map_NewWorld (C_Item)
 
 	value 		= 250;
 
-	visual 		= "ItWr_Map_01.3DS";
+	//visual 		= "ItWr_Map_01.3DS";
+	visual 		= "ItWr_Map_NW_01.3DS";
 	material 	= MAT_LEATHER;
 
 	scemeName	= "MAP";
@@ -123,6 +124,9 @@ instance ItWr_Map_NewWorld (C_Item)
 	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 	func void Use_Map_NewWorld()
@@ -150,7 +154,8 @@ instance ItWr_Map_NewWorld_City (C_Item)
 
 	value 		= 50;
 
-	visual 		= "ItWr_Map_01.3DS";
+	//visual 		= "ItWr_Map_01.3DS";
+	visual 		= "ItWr_Map_City.3DS";
 	material 	= MAT_LEATHER;
 
 	scemeName	= "MAP";
@@ -161,6 +166,9 @@ instance ItWr_Map_NewWorld_City (C_Item)
 	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 	func void Use_Map_NewWorld_City()
@@ -188,7 +196,8 @@ instance ItWr_Map_OldWorld (C_Item)
 
 	value 		= 350;
 
-	visual 		= "ItWr_Map_01.3DS";
+	//visual 		= "ItWr_Map_01.3DS";
+	visual 		= "ItWr_Map_OW.3DS";
 	material 	= MAT_LEATHER;
 
 	scemeName	= "MAP";
@@ -199,6 +208,9 @@ instance ItWr_Map_OldWorld (C_Item)
 	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 	func void Use_Map_OldWorld()
