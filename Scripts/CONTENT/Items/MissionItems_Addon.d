@@ -1691,7 +1691,8 @@ INSTANCE ItMi_Addon_GregsTreasureBottle_MIS	(C_Item)
 
 	value 				=	0;
 
-	visual 				=	"ItFo_Water.3DS";
+	//visual 				=	"ItFo_Water.3DS";
+	visual 				=	"ItMi_Addon_GregsTreasureBottle_MIS.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   Use_GregsBottle;
 	scemeName			=	"MAPSEALED";
@@ -1714,7 +1715,8 @@ INSTANCE itmi_erolskelch (C_Item)
 
 	value 				=	125;
 
-	visual 				=	"ItMi_SilverChalice.3DS";
+	//visual 				=	"ItMi_SilverChalice.3DS";
+	visual 				=	"ItMi_ErolsKelch.3DS";
 	material 			=	MAT_METAL;
 
 	description			= 	name;

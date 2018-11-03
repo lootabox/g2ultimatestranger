@@ -55,6 +55,18 @@ PROTOTYPE Mst_Default_Skeleton(C_Npc)
 //	Visuals
 //***************
 
+func void B_SetVisuals_Scout_Skeleton()
+{
+	Mdl_SetVisual			(self,	"HumanS.mds");
+	Mdl_ApplyOverlayMds 	(self,	"humans_1hST1.mds");
+	Mdl_ApplyOverlayMds 	(self,	"humans_2hST2.mds");
+	Mdl_ApplyOverlayMds 	(self,	"humans_BowT1.mds");
+	Mdl_ApplyOverlayMds 	(self,	"humans_CBowT1.mds");
+	Mdl_ApplyOverlayMds 	(self,	"humans_skeleton.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Ske_Body3",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
+
 func void B_SetVisuals_Skeleton()
 {
 	Mdl_SetVisual			(self,	"HumanS.mds");
@@ -139,7 +151,7 @@ INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
 
 INSTANCE Lesser_Skeleton	(Mst_Default_Skeleton)
 {
-	name							=	"Lower Skeleton";
+	name							=	"Lesser Skeleton";
 	
 	level							=	15;
 
@@ -161,7 +173,8 @@ INSTANCE Lesser_Skeleton	(Mst_Default_Skeleton)
 	fight_tactic	=	FAI_HUMAN_NORMAL;
 	
 	// ------ visual ------
-	B_SetVisuals_Lesser_Skeleton();
+	//B_SetVisuals_Lesser_Skeleton();
+	B_SetVisuals_Scout_Skeleton();
 	
 	// ------ Waffe ------
 	EquipItem (self, ItMw_1h_MISC_Sword);

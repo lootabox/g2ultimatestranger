@@ -275,7 +275,8 @@ INSTANCE ItAt_ClawLeader (C_Item)
 
 	value 				=	100;
 
-	visual 				=	"ItAt_Claw.3DS";
+	//visual 				=	"ItAt_Claw.3DS";
+	visual 				=	"ItAt_ClawLeader.3DS";
 	material 			=	MAT_LEATHER;
 
 	description			= 	"Leader of the Pack's Claws";

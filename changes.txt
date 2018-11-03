@@ -13,6 +13,10 @@ Ambient subtitles, Blood detail, Inventory columns, Item effects, Lock scramblin
 
 Default menu option when not ingame is load game instead of new game.
 
+	Monster
+
+Lower Skeleton renamed to Lesser Skeleton.
+
 
 	Quest Changes
 
@@ -142,7 +146,7 @@ Wulfgar makes comments on training of weapon skills.
 Xardas' dialog has 3 more previously unused dialogue lines.
 
 Following actions no longer create extra journal updates:
-* Reading Cornelius' Diary, Xardas' Letter, Lucia's farewell letter, almanac in the secret library, Black Magician's Scroll, novice black magician's Diary, "Pure mana" and "Pure health".
+* Reading Cornelius' Diary, Xardas' Letter, Lucia's farewell letter, almanac in the secret library, Black Magician's Scroll, Diary of the novice black magician, "Pure mana" and "Pure health".
 * Akil, Alvares, Kati and Randolph talked to while mercenaries threaten the farm.
 * Alric asked to duel when he does not have his sword.
 * Alrik, Karl, Lares, Brahim, Ignaz and Kardif talked about who can teach and sell things.
@@ -188,6 +192,7 @@ Nostalgia bonus properly awards levels to NH.
 Novices do not create additional sausages when given one.
 Paladin runes now cost correct amount of learning points.
 Pirates generate ambient inventories.
+Quarhodron summoning scroll changed from piece of paper into proper scroll.
 Shadow Lord Archol has same amount of protection as other shadow warriors.
 Sheep cannot be bought from Onar or Pepe after escorting one to the monastery.
 Skeletal monsters do not bleed.
@@ -198,6 +203,26 @@ Snorting Dragon Snapper will have 2 horns instead of 1 if Gaan teaches the NH th
 Steel Blanks and Lab Water Bottles cannot be looted from anyone.
 Stone Guardians leave properly colored pebbles on ground when hit.
 Swamp Golem bleeds green.
+Undead Orc use the restored orcish hammer Krush Karrok.
+
+
+New item models:
+* 'The Halls of Irdorath' book
+* All books of Runemaking
+* All maps
+* Almanac of the Possessed
+* Babo's pinup
+* Coragon's Silver
+* Diary of the novice black magician
+* Heavy Gold Plate
+* Leader of the Pack's Claws
+* Message in a Bottle
+* NH's wanted note
+* Scratched silver bowl
+
+NPC models:
+* Lower Skeleton model is Gothic 1 Skeleton Scout model.
+* Skeleton Mage model is transparent between bones.
 
 
 	Sources

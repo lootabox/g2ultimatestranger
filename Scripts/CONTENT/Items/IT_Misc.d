@@ -773,7 +773,8 @@ INSTANCE ItMi_BloodCup_MIS (C_Item)
 
 	value 				=	Value_BloodCup;
 
-	visual 				=	"ItMi_GoldCup.3DS";
+	//visual 				=	"ItMi_GoldCup.3DS";
+	visual 				=	"ItMi_BloodCup.3DS";
 	material 			=	MAT_METAL;
 
 	description			= 	"A Blood Chalice";

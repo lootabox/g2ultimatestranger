@@ -239,6 +239,12 @@ const int Damage_Orkaxt_04			=  80;
 const int Condition_Orkaxt_04		= 100;
 const int Range_Orkaxt_04			= 130;
 const int Value_Orkaxt_04			=  25;
+
+const int Damage_Orkmace_01			=  65; 
+const int Condition_Orkmace_01		= 85;
+const int Range_Orkmace_01			= 110;
+const int Value_Orkmace_01			=  15;
+
 // ------ Ork-Elite ------
 const int Damage_Orkschwert_01		= 100; 
 const int Condition_Orkschwert_01	= 120;

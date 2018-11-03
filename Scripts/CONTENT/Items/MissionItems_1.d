@@ -111,7 +111,8 @@ INSTANCE ItMi_CoragonsSilber (C_Item)
 
 	value 				=	Value_SilverCup;
 
-	visual 				=	"ItMi_SilverCup.3DS";
+	//visual 				=	"ItMi_SilverCup.3DS";
+	visual 				=	"ItMi_CoragonsSilber.3DS";
 	material 			=	MAT_METAL;
 
 	description			= 	name;
@@ -163,7 +164,8 @@ instance ItMi_MariasGoldPlate (C_Item)
 
 	value 				=	Value_GoldPlate;
 
-	visual 				=	"ItMi_GoldPlate.3DS";
+	//visual 				=	"ItMi_GoldPlate.3DS";
+	visual 				=	"ItMi_MariasGoldPlate.3DS";
 	material 			=	MAT_METAL;
 
 	description			= 	name;
