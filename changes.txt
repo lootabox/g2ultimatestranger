@@ -172,6 +172,7 @@ Following actions no longer create extra journal updates:
 * Saturas talked to about activating portal before receiving letter from Vatras.
 
 Random:
+Added new teleport scroll to get out of the ruins behind broken bridge in Jharkendar.
 Addon armor have correct material tag.
 Annotation added for giving and taking back letter to Elvrich, letter to Greg, recipe for Opolos, map to Saturas.
 Armor buying dialog options are formatted the same way.
@@ -214,12 +215,14 @@ New item models:
 * Babo's pinup
 * Coragon's Silver
 * Diary of the novice black magician
+* Fire and Magic ammunition
 * Heavy Gold Plate
 * Golden Compass
 * King's Sorrel
 * Leader of the Pack's Claws
 * Message in a Bottle
 * NH's wanted note
+* Oblivion scroll
 * Scratched silver bowl
 * Snapper Weed
 * Sun Aloe

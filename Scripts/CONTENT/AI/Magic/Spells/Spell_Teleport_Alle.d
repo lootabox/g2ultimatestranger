@@ -352,6 +352,44 @@ func void Spell_Cast_TeleportTaverne ()
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
 };
 
+// ------ Maya ------
+func int Spell_Logic_Teleport_Maya (var int manaInvested)
+{
+	if (Npc_GetDistToWP(hero,"ADW_VALLEY_SHOWCASE1_04") > 3200)
+	{
+		B_Say_Overlay(self,self,"$ADDON_ANCIENTGHOST_NOTNEAR");
+		return SPL_SENDSTOP;
+	}
+	else if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
+	{
+		return SPL_SENDCAST;
+	}
+	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
+	{
+		return SPL_SENDCAST;
+	};
+	return SPL_NEXTLEVEL;
+};
+
+func void Spell_Cast_Teleport_Maya ()
+{
+	B_PrintTeleportTooFarAway(ADDONWORLD_ZEN);
+
+	if (Npc_GetActiveSpellIsScroll(self))
+	{
+		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
+	}
+	else
+	{
+		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
+	};
+
+	AI_Teleport		(self, "ADW_VALLEY_PATH_054_G");
+	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
+};
+
+
+
 // ----- neu 1.21 Verteiler für die Cast-Funcs -------
 func void Spell_Cast_Teleport()
 {
@@ -365,6 +403,7 @@ func void Spell_Cast_Teleport()
 	if (Npc_GetActiveSpell(self) == SPL_TeleportOC			)	{	Spell_Cast_TeleportOC			(); };
 	if (Npc_GetActiveSpell(self) == SPL_TeleportOWDemonTower)	{	Spell_Cast_TeleportOWDemonTower (); };
 	if (Npc_GetActiveSpell(self) == SPL_TeleportTaverne		)	{	Spell_Cast_TeleportTaverne		(); };
+	if (Npc_GetActiveSpell(self) == SPL_Teleport_Maya		)	{	Spell_Cast_Teleport_Maya		(); };
 //	if (Npc_GetActiveSpell(self) == SPL_Teleport_3			)	{	Spell_Cast_XXX					(); };
 
 };

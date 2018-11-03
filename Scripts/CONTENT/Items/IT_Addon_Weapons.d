@@ -653,7 +653,8 @@ instance ItRw_Addon_MagicArrow (C_Item)
 	// FIXME_Noki: Werte
 	value 				=	Value_Pfeil;
 
-	visual 				=	"ItRw_Arrow.3ds";
+	//visual 				=	"ItRw_Arrow.3ds";
+	visual 				=	"ItRw_MagicArrow.3ds";
 	material 			=	MAT_WOOD;
 
 	description			= name;
@@ -679,7 +680,8 @@ instance ItRw_Addon_FireArrow (C_Item)
 	// FIXME_Noki: Werte
 	value 				=	Value_Pfeil;
 
-	visual 				=	"ItRw_Arrow.3ds";
+	//visual 				=	"ItRw_Arrow.3ds";
+	visual 				=	"ItRw_FireArrow.3ds";
 	material 			=	MAT_WOOD;
 
 	description			= name;
@@ -762,7 +764,8 @@ instance ItRw_Addon_MagicBolt (C_Item)
 	wear				=	WEAR_EFFECT;
 	effect				=	"SPELLFX_BOLT";
 
-	visual 				=	"ItRw_Bolt.3ds";
+	//visual 				=	"ItRw_Bolt.3ds";
+	visual 				=	"ItRw_MagicBolt.3ds";
 	material 			=	MAT_WOOD;
 
 	description			= name;

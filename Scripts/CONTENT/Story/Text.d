@@ -327,7 +327,8 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"TXT_SPL_DEATHBOLT",		// 61	SPL_Deathbolt
 	"TXT_SPL_DEATHBALL",		// 62	SPL_Deathball
 	"TXT_SPL_CONCUSSIONBOLT",	// 63	SPL_ConcussionBolt
-	"TXT_SPL_RESERVED_64",		// 64	SPL_Reserved_64
+	"Teleport",					// 64	SPL_Teleport_Maya
+	//"TXT_SPL_RESERVED_64",		// 64	SPL_Reserved_64
 	"TXT_SPL_RESERVED_65",		// 65	SPL_Reserved_65
 	"TXT_SPL_RESERVED_66",		// 66	SPL_Reserved_66
 	"TXT_SPL_RESERVED_67",		// 67	SPL_Reserved_67
@@ -469,7 +470,8 @@ const string NAME_SPL_MasterOfDisaster		= "Holy Missile";
 const string NAME_SPL_Deathbolt				= "NAME_SPL_DEATHBOLT";
 const string NAME_SPL_Deathball				= "NAME_SPL_DEATHBALL";
 const string NAME_SPL_ConcussionBolt		= "NAME_SPL_CONCUSSIONBOLT";
-const string NAME_SPL_Reserved_64			= "NAME_SPL_RESERVED_64";
+const string NAME_SPL_Teleport_Maya			= "Teleport";
+//const string NAME_SPL_Reserved_64			= "NAME_SPL_RESERVED_64";
 const string NAME_SPL_Reserved_65			= "NAME_SPL_RESERVED_65";
 const string NAME_SPL_Reserved_66			= "NAME_SPL_RESERVED_66";
 const string NAME_SPL_Reserved_67			= "NAME_SPL_RESERVED_67";

@@ -636,7 +636,8 @@ INSTANCE ItSc_Charm(C_Item)
 
 	value 				=	Value_Sc_Charm;
 
-	visual				=	"ItSc_Sleep.3DS";
+	//visual				=	"ItSc_Sleep.3DS";
+	visual 				=	"ItSc_Charm.3DS";
 	material			=	MAT_LEATHER;
 
 	spell				= 	SPL_CHARM;
@@ -1652,6 +1653,36 @@ INSTANCE ItSc_TrfDragonSnapper (C_Item)//Joly:Auf Dracheninsel in Truhe der Schw
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
 	description			=  NAME_SPL_TrfDragonSnapper;
+	
+	TEXT	[0]			=	Name_MageScroll	;
+
+	TEXT	[1]			=	NAME_Mana_needed;			
+	COUNT	[1]			=	SPL_Cost_Scroll;
+	
+	TEXT	[5]			=	NAME_Value;					
+	COUNT	[5]			=	value;
+};
+/*******************************************************************************************/
+INSTANCE ItSc_Teleport_Maya (C_Item)
+{
+	name 				=	NAME_Spruchrolle;
+
+	mainflag 			=	ITEM_KAT_RUNE;
+	flags 				=	ITEM_MULTI | ITEM_MISSION;
+
+	value 				=	50;
+
+	visual				=	"ItSc_Teleport_Maya.3DS";
+	material			=	MAT_LEATHER;
+
+	spell				= 	SPL_Teleport_Maya;
+	cond_atr[2]   		=	ATR_MANA_MAX;
+	cond_value[2]  		=	SPL_Cost_Scroll;
+
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_WEAKGLIMMER";
+
+	description			=  NAME_SPL_Teleport_Maya;
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
