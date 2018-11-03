@@ -1345,7 +1345,8 @@ INSTANCE ItSE_Addon_FrancisChest	(C_Item)
 
 	value 				=	200;
 
-	visual 				=	"ItMi_GoldChest.3ds";
+	//visual 				=	"ItMi_GoldChest.3ds";
+	visual 				=	"ItSE_Addon_FrancisChest.3ds";
 	scemename			=	"MAPSEALED";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   FrancisChest;

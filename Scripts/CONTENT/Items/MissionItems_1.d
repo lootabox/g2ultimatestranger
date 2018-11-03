@@ -1599,7 +1599,8 @@ INSTANCE ItPl_Sagitta_Herb_MIS (C_Item)
 
 	value 				=	Value_Strength_Herb_01;
 
-	visual 				=	"ItPl_Strength_Herb_01.3DS";
+	//visual 				=	"ItPl_Strength_Herb_01.3DS";
+	visual 				=	"ItPl_Strength_Herb_02.3DS";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"FOOD";

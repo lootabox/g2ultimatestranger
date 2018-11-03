@@ -215,10 +215,16 @@ New item models:
 * Coragon's Silver
 * Diary of the novice black magician
 * Heavy Gold Plate
+* Golden Compass
+* King's Sorrel
 * Leader of the Pack's Claws
 * Message in a Bottle
 * NH's wanted note
 * Scratched silver bowl
+* Snapper Weed
+* Sun Aloe
+* Treasure Chest
+
 
 NPC models:
 * Lower Skeleton model is Gothic 1 Skeleton Scout model.
