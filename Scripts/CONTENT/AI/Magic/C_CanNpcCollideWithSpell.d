@@ -58,36 +58,6 @@ if (spellType == SPL_Whirlwind)
 	return COLL_DOEVERYTHING;
 };
 	
-// ---- Icelance -----
-	
-if (spellType == SPL_Icelance)
-{
-	if (C_NpcIsDown(self))
-	|| (C_BodyStateContains(self,BS_SWIM)) 	
-	|| (C_BodyStateContains(self,BS_DIVE))
-	{
-		return COLL_DONOTHING;
-	};
-	
-	if (self.guild == GIL_ICEGOLEM)
-	|| (self.aivar[AIV_MM_REAL_ID] == ID_Icewolf) 
-	|| (self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ICE) 		
-	{
-		return COLL_APPLYHALVEDAMAGE;
-	};
-	
-	if (self.guild == GIL_FIREGOLEM)
-	|| (self.aivar[AIV_MM_REAL_ID] == ID_FIREWARAN)
-	|| (self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_FIRE)
-	|| (self.guild == GIL_GARGOYLE)
-	{
-		return COLL_APPLYDOUBLEDAMAGE;
-	};
-	
-	
-	return COLL_APPLYDAMAGE;
-};	
-	
 // ---- Thunderstorm ----	
 
 if (spellType == SPL_Thunderstorm)
@@ -118,50 +88,43 @@ if (spellType == SPL_Thunderstorm)
 };	
 
 //----- Geyser -----
-
+//----- Waterfist -----
 if (spellType == SPL_Geyser)
+|| (spellType == SPL_Waterfist)
 {
 	if (C_NpcIsDown(self))
 	|| (C_BodyStateContains(self,BS_SWIM)) 	
 	|| (C_BodyStateContains(self,BS_DIVE))
-	|| (C_NpcIsGolem(self))
+	{
+		return COLL_DONOTHING;
+	};
+
+	if ((C_NpcIsGolem(self))
+	|| (self.guild == GIL_DEMON)
+	|| (self.guild == GIL_SUMMONED_DEMON)
+	|| (self.guild == GIL_TROLL)
+	|| (self.guild == GIL_DRAGON))
+	&& (C_NpcIsFireBase(self))
+	{
+		return COLL_APPLYDAMAGE;
+	};
+
+	// counter each other out?
+	if (C_NpcIsFireBase(self))
+	{
+		return COLL_APPLYDOUBLEDAMAGE;
+	};
+	if (C_NpcIsGolem(self))
 	|| (self.guild == GIL_DEMON)
 	|| (self.guild == GIL_SUMMONED_DEMON)
 	|| (self.guild == GIL_TROLL)
 	|| (self.guild == GIL_DRAGON)
 	{
-		return COLL_DONOTHING;
+		return COLL_APPLYHALVEDAMAGE;
 	};
 	
 	return COLL_APPLYDAMAGE | COLL_DONTKILL;
 };
-	
-//----- Waterfist -----
-	
-if (spellType == SPL_Waterfist)
-{
-	if (C_NpcIsDown(self))
-	|| (C_BodyStateContains(self,BS_SWIM)) 	
-	|| (C_BodyStateContains(self,BS_DIVE))
-	{
-		return COLL_DONOTHING;
-	};
-	
-	if (self.guild == GIL_DRAGON)
-	|| (self.guild == GIL_TROLL)
-	{
-		return COLL_APPLYHALVEDAMAGE;
-	};
-	
-	if (self.guild == GIL_FIREGOLEM)
-	|| (self.aivar[AIV_MM_REAL_ID] == ID_FIREWARAN)
-	|| (self.guild == GIL_GARGOYLE)
-	{
-		return COLL_APPLYDOUBLEDAMAGE;
-	};
-	
-	return COLL_APPLYDAMAGE|COLL_DONTKILL;
-};	
 
 //###	Beliar	###
 
@@ -212,14 +175,16 @@ if (spellType == SPL_GreenTentacle)
 	if (C_NpcIsDown(self))
 	|| (C_BodyStateContains(self,BS_SWIM)) 	
 	|| (C_BodyStateContains(self,BS_DIVE))
-	|| (C_NpcIsGateGuard (self)== TRUE)
-	|| (self.guild == GIL_BLOODFLY)
+	|| (C_NpcIsGateGuard (self) == TRUE)
+	|| (C_NpcIsGolem(self))
 	|| (self.guild == GIL_DEMON)
+	|| (self.guild == GIL_SUMMONED_DEMON)
 	|| (self.guild == GIL_TROLL)
 	|| (self.guild == GIL_DRAGON)
-	|| (self.guild == GIL_HARPY)
-	|| (self.aivar[AIV_MM_REAL_ID]	== 	ID_SKELETON_MAGE)
+	|| (self.guild == GIL_BLOODFLY)
 	|| (self.guild == GIL_Gargoyle)
+	|| (self.guild == GIL_HARPY)
+	|| (self.aivar[AIV_MM_REAL_ID] == ID_SKELETON_MAGE)
 	{
 		return COLL_DONOTHING;
 	};
@@ -238,8 +203,8 @@ if (spellType == SPL_Swarm)
 	|| (self.guild == GIL_DEMON)
 	|| (self.guild == GIL_SUMMONED_DEMON)
 	|| (self.guild == GIL_TROLL)
-	|| (self.guild == GIL_BLOODFLY)
 	|| (self.guild == GIL_DRAGON)
+	|| (self.guild == GIL_BLOODFLY)
 	|| (self.guild == GIL_Gargoyle)
 	|| (self.guild == GIL_DMT)
 	|| (C_NPCIsUndead (self) == TRUE)
@@ -343,25 +308,19 @@ if (spellType == SPL_WINDFIST)
 		};
 		
 		// feuer monster bekommen halben schaden, und kein opfer zs
-		if (self.guild == GIL_FIREGOLEM	) 		
-		|| (self.aivar[AIV_MM_REAL_ID]	== 	ID_FIREWARAN)
-		|| (self.guild == GIL_GARGOYLE)
-		|| (self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_FIRE) 
+		if (C_NpcIsFireBase(self))
 		{
 			return COLL_APPLYHALVEDAMAGE;
-		}
+		};
 		
 		// grosse eis monster kriegen den doppelten schaden, brennen aber nicht
-		if (self.guild == GIL_ICEGOLEM)
-		|| (self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ICE) 
-		|| (self.aivar[AIV_MM_REAL_ID] == ID_ICEWOLF) 
+		if (C_NpcIsIceBase(self))
 		{
 			return COLL_APPLYDOUBLEDAMAGE;
 		};
-					
+		
 		// alle grosse monster bekommen nur schaden, kein opfer zs
-		if (self.guild == GIL_STONEGOLEM)
-		|| (self.guild == GIL_SUMMONED_GOLEM)
+		if (C_NpcIsGolem(self))
 		|| (self.guild == GIL_DEMON)
 		|| (self.guild == GIL_SUMMONED_DEMON)
 		|| (self.guild == GIL_TROLL)
@@ -375,9 +334,10 @@ if (spellType == SPL_WINDFIST)
 		
 //----- Eis -----
 		
-	if (spellType  == SPL_IceCube)
-	|| (spellTYpe  == SPL_IceWave)
-	|| (spelltype  == SPL_Icebolt)		
+	if (spellType == SPL_IceCube)
+	|| (spellTYpe == SPL_IceWave)
+	|| (spellType == SPL_Icebolt)
+	|| (spellType == SPL_Icelance)
 	{
 		// wenn im schwimm oder tauchmodus, bewirkt der spell nix
 		if (C_NpcIsDown(self))
@@ -388,25 +348,19 @@ if (spellType == SPL_WINDFIST)
 		};
 		
 		// feuer wesen erhalten doppelten schaden, kein opfer zs
-		if (self.guild == GIL_FIREGOLEM)
-		|| (self.aivar[AIV_MM_REAL_ID]	== 	ID_FIREWARAN)
-		|| (self.guild == GIL_GARGOYLE)
-		|| (self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_FIRE)
+		if (C_NpcIsFireBase(self))
 		{
 			return COLL_APPLYDOUBLEDAMAGE;
 		};
-		
-		// eis wesen erhalten halben schaden, kein opfer zs		
-		if (self.guild == GIL_ICEGOLEM)
-		|| (self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ICE)
-		|| (self.aivar[AIV_MM_REAL_ID] == ID_ICEWOLF)
+
+		// eis wesen erhalten halben schaden, kein opfer zs
+		if (C_NpcIsIceBase(self))
 		{
 			return COLL_APPLYHALVEDAMAGE;
 		};
 		
 		// grosse monster erhalten nur schaden, kein opfer zs		
-		if (self.guild == GIL_STONEGOLEM)
-		|| (self.guild == GIL_SUMMONED_GOLEM)
+		if (C_NpcIsGolem(self))
 		|| (self.guild == GIL_DEMON)
 		|| (self.guild == GIL_SUMMONED_DEMON)
 		|| (self.guild == GIL_TROLL)

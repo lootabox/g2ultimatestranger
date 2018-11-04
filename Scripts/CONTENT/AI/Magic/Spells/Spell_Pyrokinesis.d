@@ -7,7 +7,7 @@ const int STEP_Firestorm			= 50;
 const int SPL_Damage_FireStorm 		= 75;
 
 	// obsolete:
-	const int SPL_PYRO_DAMAGE_PER_SEC = 20;	// wird in ZS_Pyro (Pyrokinese-Opfer) benutzt, dort KEIN R¸stungsschutz!
+	const int SPL_PYRO_DAMAGE_PER_SEC = 20;	// wird in ZS_Pyro (Pyrokinese-Opfer) benutzt, dort KEIN Rùstungsschutz!
 	////////////
 
 INSTANCE Spell_Pyrokinesis (C_Spell_Proto)
@@ -20,72 +20,47 @@ INSTANCE Spell_Pyrokinesis (C_Spell_Proto)
 
 func int Spell_Logic_Pyrokinesis (var int manaInvested)
 {
-	if (self.attribute[ATR_MANA]<STEP_Firestorm) 
+	var int STEP_size; STEP_size = STEP_Firestorm;
+	if (Npc_GetActiveSpellIsScroll(self)) {STEP_size = SPL_Cost_Scroll;};
+	if (self.attribute[ATR_MANA]<STEP_size)
 	{
-		return SPL_DONTINVEST;	
-	};
-	
-	if (manaInvested <= STEP_Firestorm*1)
-	{
-		self.aivar[AIV_SpellLevel] = 1; //Start mit Level 1
-		return SPL_STATUS_CANINVEST_NO_MANADEC;
+		return SPL_SENDCAST;
 	}
-	else if (manaInvested > (STEP_Firestorm*1))
+	else if (manaInvested == 0)
+	{
+		self.attribute[ATR_MANA] -= STEP_size;
+		self.aivar[AIV_SpellLevel] = 1; //Start mit Level 1
+	}
+	else if (manaInvested > (STEP_size*1))
 	&& (self.aivar[AIV_SpellLevel] <= 1)
 	{
-		self.attribute[ATR_MANA] = (self.attribute[ATR_MANA] - STEP_Firestorm);
-
-		if (self.attribute[ATR_MANA]<0) 
-		{
-	   		self.attribute[ATR_MANA]=0;
-		};
-		
+		self.attribute[ATR_MANA] -= STEP_size;
 		self.aivar[AIV_SpellLevel] = 2;
 		return SPL_NEXTLEVEL; //Lev2 erreicht
 	}
-	else if (manaInvested > (STEP_Firestorm*2))
+	else if (manaInvested > (STEP_size*2))
 	&& (self.aivar[AIV_SpellLevel] <= 2)
 	{
-		self.attribute[ATR_MANA] = (self.attribute[ATR_MANA] - STEP_Firestorm);
-
-		if (self.attribute[ATR_MANA]<0) 
-		{
-	   		self.attribute[ATR_MANA]=0;
-		};
-	
+		self.attribute[ATR_MANA] -= STEP_size;
 		self.aivar[AIV_SpellLevel] = 3;
 		return SPL_NEXTLEVEL; //Lev3 erreicht
 	}
-	else if (manaInvested > (STEP_Firestorm*3))
+	else if (manaInvested > (STEP_size*3))
 	&& (self.aivar[AIV_SpellLevel] <= 3)
-	{	
-		self.attribute[ATR_MANA] = (self.attribute[ATR_MANA] - STEP_Firestorm);
-
-		if (self.attribute[ATR_MANA]<0) 
-		{
-	   		self.attribute[ATR_MANA]=0;
-		};
-	
+	{
+		self.attribute[ATR_MANA] -= STEP_size;
 		self.aivar[AIV_SpellLevel] = 4;
 		return SPL_NEXTLEVEL; //Lev4 erreicht
 	}
-	else if (manaInvested > (STEP_Firestorm*3))
+	else if (manaInvested > (STEP_size*3))
 	&& (self.aivar[AIV_SpellLevel] == 4)
 	{
-		return SPL_DONTINVEST;	
+		return SPL_SENDCAST;
 	};
-
-	return SPL_STATUS_CANINVEST_NO_MANADEC;	
+	return SPL_STATUS_CANINVEST_NO_MANADEC;
 };
 
 func void Spell_Cast_Pyrokinesis(var int spellLevel)
 {	
-	self.attribute[ATR_MANA] = (self.attribute[ATR_MANA] - STEP_Firestorm);
-
-	if (self.attribute[ATR_MANA]<0) 
-	{
-	   self.attribute[ATR_MANA]=0;
-	};
-		
 	self.aivar[AIV_SelectSpell] += 1;
 };

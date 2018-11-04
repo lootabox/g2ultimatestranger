@@ -177,6 +177,9 @@ Addon armor have correct material tag.
 Annotation added for giving and taking back letter to Elvrich, letter to Greg, recipe for Opolos, map to Saturas.
 Armor buying dialog options are formatted the same way.
 Black Ore effect ends on using transformation scrolls.
+Charge spell scrolls use scroll mana cost per tier, instead of rune mana cost.
+Charge spells are cast off shortly after reaching final charge tier or upon running out of mana.
+Charge spells gain tiers only when mana is removed, not before.
 Document look changed for Esteban's Bodyguard, Pablo, Senyan, Skip, a thug in Khorinis for reading NH's wanted poster and Saturas for reading a map.
 El Bastardo and Rough Sword are categorized as sword, not axes.
 Failing to create runes for Ice Block and Destroy Undead properly returns the runestone to inventory.
@@ -194,6 +197,7 @@ Novices do not create additional sausages when given one.
 Paladin runes now cost correct amount of learning points.
 Pirates generate ambient inventories.
 Quarhodron summoning scroll changed from piece of paper into proper scroll.
+Root Snare does not work against golems or summoned demons.
 Shadow Lord Archol has same amount of protection as other shadow warriors.
 Sheep cannot be bought from Onar or Pepe after escorting one to the monastery.
 Skeletal monsters do not bleed.
@@ -205,7 +209,7 @@ Steel Blanks and Lab Water Bottles cannot be looted from anyone.
 Stone Guardians leave properly colored pebbles on ground when hit.
 Swamp Golem bleeds green.
 Undead Orc use the restored orcish hammer Krush Karrok.
-
+Water based spells deal halved damage against large/heavy creatures and double against fire based creatures.
 
 New item models:
 * 'The Halls of Irdorath' book
