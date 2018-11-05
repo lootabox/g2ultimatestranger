@@ -20,7 +20,7 @@ instance BAU_930_Sekob (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Bau_Mace);
+	EquipItem			(self, ItMw_1h_Vlk_Mace);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

@@ -483,53 +483,53 @@ func void DIA_Rosi_HILFE_Info ()
 	Till.aivar[AIV_PARTYMEMBER] = TRUE;
 	
 	if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
-		{
-			AI_Output			(other, self, "DIA_Rosi_HILFE_15_01"); //I could take you to the city.
-		};
+	{
+		AI_Output			(other, self, "DIA_Rosi_HILFE_15_01"); //I could take you to the city.
+	};
 
-		if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
-		{
-			AI_Output			(other, self, "DIA_Rosi_HILFE_15_02"); //I'll bring you to the landowner's farm.
-		};
+	if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
+	{
+		AI_Output			(other, self, "DIA_Rosi_HILFE_15_02"); //I'll bring you to the landowner's farm.
+	};
 
-		if (hero.guild == GIL_KDF)
-		{
-			AI_Output			(other, self, "DIA_Rosi_HILFE_15_03"); //Come away to the monastery. You'll be welcome there.
-		};	
-		
-		AI_Output			(self, other, "DIA_Rosi_HILFE_17_04"); //I'll never forget what you did for me. I'll pay you, of course.
+	if (hero.guild == GIL_KDF)
+	{
+		AI_Output			(other, self, "DIA_Rosi_HILFE_15_03"); //Come away to the monastery. You'll be welcome there.
+	};	
+	
+	AI_Output			(self, other, "DIA_Rosi_HILFE_17_04"); //I'll never forget what you did for me. I'll pay you, of course.
 
-			if (Npc_IsDead(Till))
-			{
-				AI_Output			(self, other, "DIA_Rosi_HILFE_17_05"); //You go first. I'll follow.
-			}
-			else
-			{
-				AI_Output			(self, other, "DIA_Rosi_HILFE_17_06"); //You go first. We'll follow.
-			};
-		
-		AI_StopProcessInfos (self);	
-		if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
-		{
-			Npc_ExchangeRoutine	(self,"FollowCity"); 
-			B_StartOtherRoutine (Till,"FollowCity"); 
-		};
+	if (Npc_IsDead(Till))
+	{
+		AI_Output			(self, other, "DIA_Rosi_HILFE_17_05"); //You go first. I'll follow.
+	}
+	else
+	{
+		AI_Output			(self, other, "DIA_Rosi_HILFE_17_06"); //You go first. We'll follow.
+	};
+	
+	AI_StopProcessInfos (self);	
+	if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
+	{
+		Npc_ExchangeRoutine	(self,"FollowCity"); 
+		B_StartOtherRoutine (Till,"FollowCity"); 
+	};
 
-		if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
-		{
-			Npc_ExchangeRoutine	(self,"FollowBigfarm"); 
-			B_StartOtherRoutine (Till,"FollowBigfarm"); 
-		};
+	if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
+	{
+		Npc_ExchangeRoutine	(self,"FollowBigfarm"); 
+		B_StartOtherRoutine (Till,"FollowBigfarm"); 
+	};
 
-		if (hero.guild == GIL_KDF)
-		{
-			Npc_ExchangeRoutine	(self,"FollowKloster"); 
-			B_StartOtherRoutine (Till,"FollowKloster"); 
-		};	
-		Log_CreateTopic (TOPIC_RosisFlucht, LOG_MISSION);
-		Log_SetTopicStatus(TOPIC_RosisFlucht, LOG_RUNNING);
-		B_LogEntry (TOPIC_RosisFlucht,"Rosi couldn't stand it on Sekob's farm any longer and now she doesn't know where to go. I'll lead her out of the wilderness."); 
-		MIS_RosisFlucht = LOG_RUNNING;
+	if (hero.guild == GIL_KDF)
+	{
+		Npc_ExchangeRoutine	(self,"FollowKloster"); 
+		B_StartOtherRoutine (Till,"FollowKloster"); 
+	};	
+	Log_CreateTopic (TOPIC_RosisFlucht, LOG_MISSION);
+	Log_SetTopicStatus(TOPIC_RosisFlucht, LOG_RUNNING);
+	B_LogEntry (TOPIC_RosisFlucht,"Rosi couldn't stand it on Sekob's farm any longer and now she doesn't know where to go. I'll lead her out of the wilderness."); 
+	MIS_RosisFlucht = LOG_RUNNING;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -547,17 +547,15 @@ instance DIA_Rosi_ANGEKOMMEN		(C_INFO)
 
 func int DIA_Rosi_ANGEKOMMEN_Condition ()
 {
-	if 	(Kapitel == 5)
-	&&	(MIS_bringRosiBackToSekob != LOG_SUCCESS)
+	if (Kapitel == 5)
+	&& (MIS_bringRosiBackToSekob != LOG_SUCCESS)
 	&& (Rosi_FleeFromSekob_Kap5 == TRUE)
-	&&	(
-			(	(Npc_GetDistToWP(self,"CITY2")<6000) 	&& (hero.guild == GIL_PAL)	)
-		||	(	(Npc_GetDistToWP(self,"NW_BIGFARM_KITCHEN_02")<6000) 	&& (hero.guild == GIL_DJG)	)
-		||	(	(Npc_GetDistToWP(self,"KLOSTER")<6000)  && (hero.guild == GIL_KDF)	)
-		)
-			{
-				return TRUE;
-			};
+	&& (((Npc_GetDistToWP(self,"CITY2")<6000) && (hero.guild == GIL_PAL))
+	|| ((Npc_GetDistToWP(self,"NW_BIGFARM_KITCHEN_02")<6000) && (hero.guild == GIL_DJG))
+	|| ((Npc_GetDistToWP(self,"KLOSTER")<6000) && (hero.guild == GIL_KDF)))
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Rosi_ANGEKOMMEN_Info ()
@@ -570,39 +568,39 @@ func void DIA_Rosi_ANGEKOMMEN_Info ()
 
 	MIS_bringRosiBackToSekob = LOG_OBSOLETE;
 	MIS_RosisFlucht = LOG_SUCCESS;
-		AI_Output			(self, other, "DIA_Rosi_ANGEKOMMEN_17_02"); //Please accept this modest gift as a reward.
+	AI_Output			(self, other, "DIA_Rosi_ANGEKOMMEN_17_02"); //Please accept this modest gift as a reward.
 
-		CreateInvItems (Rosi, ItMi_Gold, 450);
-		B_GiveInvItems (self, other, ItMi_Gold, 450);
+	CreateInvItems (Rosi, ItMi_Gold, 450);
+	B_GiveInvItems (self, other, ItMi_Gold, 450);
 
-		if (Npc_IsDead(Till))
-		{
-			B_GivePlayerXP (XP_SavedRosi);
-		}
-		else
-		{
-			var int XPForBoth;
-			XPForBoth = (XP_SavedRosi + XP_Ambient);
-			B_GivePlayerXP (XPForBoth);
-		};
+	if (Npc_IsDead(Till))
+	{
+		B_GivePlayerXP (XP_SavedRosi);
+	}
+	else
+	{
+		var int XPForBoth;
+		XPForBoth = (XP_SavedRosi + XP_Ambient);
+		B_GivePlayerXP (XPForBoth);
+	};
 
-		AI_StopProcessInfos (self);
-	
-			if	(hero.guild == GIL_PAL)
-			{
-				Npc_ExchangeRoutine	(self,"CITY");
-				B_StartOtherRoutine (Till,"CITY");
-			}
-			else if	(hero.guild == GIL_DJG) 
-			{
-				Npc_ExchangeRoutine	(self,"BIGFARM");
-				B_StartOtherRoutine (Till,"BIGFARM");
-			}
-			else if	(hero.guild == GIL_KDF)
-			{
-				Npc_ExchangeRoutine	(self,"KLOSTER");
-				B_StartOtherRoutine (Till,"KLOSTER");
-			}; 
+	AI_StopProcessInfos (self);
+
+	if	(hero.guild == GIL_PAL)
+	{
+		Npc_ExchangeRoutine	(self,"CITY");
+		B_StartOtherRoutine (Till,"CITY");
+	}
+	else if	(hero.guild == GIL_DJG) 
+	{
+		Npc_ExchangeRoutine	(self,"BIGFARM");
+		B_StartOtherRoutine (Till,"BIGFARM");
+	}
+	else if	(hero.guild == GIL_KDF)
+	{
+		Npc_ExchangeRoutine	(self,"KLOSTER");
+		B_StartOtherRoutine (Till,"KLOSTER");
+	}; 
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -622,9 +620,9 @@ func int DIA_Rosi_TRAIT_Condition ()
 {
 	if (MIS_bringRosiBackToSekob == LOG_SUCCESS)
 	&& (Rosi_FleeFromSekob_Kap5 == TRUE)
-		{
-				return TRUE;
-		};
+	{
+			return TRUE;
+	};
 };
 
 func void DIA_Rosi_TRAIT_Info ()
@@ -657,9 +655,9 @@ func int DIA_Rosi_MinenAnteil_Condition ()
 	if (hero.guild == GIL_KDF)
 	&& (MIS_Serpentes_MinenAnteil_KDF == LOG_RUNNING)
 	&& (Npc_KnowsInfo(other, DIA_Rosi_WASMACHSTDU))
-		{
-				return TRUE;
-		};
+	{
+			return TRUE;
+	};
 };
 
 func void DIA_Rosi_MinenAnteil_Info ()

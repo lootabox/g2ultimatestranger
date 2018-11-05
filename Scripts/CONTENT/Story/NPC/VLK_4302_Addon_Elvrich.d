@@ -10,6 +10,7 @@ instance VLK_4302_Addon_Elvrich (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	aivar[AIV_NoFightParker] = TRUE; //Joly: Gefangener der Banditen
+	aivar[AIV_ToughGuy] = TRUE;
 	
 	// ------ Attribute ------
 	B_SetAttributesToChapter (self, 2);															
@@ -19,7 +20,7 @@ instance VLK_4302_Addon_Elvrich (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_VLK_Axe); 
+	//EquipItem	(self, ItMw_1h_VLK_Axe); 
 		
 	// ------ Inventory ------
 	// 

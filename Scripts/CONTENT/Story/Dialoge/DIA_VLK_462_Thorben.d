@@ -608,6 +608,7 @@ func void DIA_Addon_Thorben_ElvrichIsBack_Info ()
 	B_GiveInvItems (self, other, ItMi_Gold, 200);
 	MIS_Thorben_BringElvrichBack = LOG_SUCCESS;
 	VLK_4302_Addon_Elvrich.flags = 0;
+	VLK_4302_Addon_Elvrich.aivar[AIV_ToughGuy] = FALSE;
 };
 
 // ************************************************************

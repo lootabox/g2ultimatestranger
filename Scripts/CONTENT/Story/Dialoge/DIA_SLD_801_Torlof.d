@@ -530,10 +530,17 @@ func void B_Torlof_HolPachtVonSekob()
 {
 	AI_Output (self, other, "B_Torlof_HolPachtvonSekob_01_00"); //Good. Listen. The farmer Sekob hasn't paid his rent to Onar for weeks.
 	AI_Output (self, other, "B_Torlof_HolPachtvonSekob_01_01"); //Onar wants him to cough up 50 gold pieces. Any questions?
-	AI_Output (other, self, "B_Torlof_HolPachtvonSekob_15_02"); //Where is Sekob's farm?
-	AI_Output (self, other, "B_Torlof_HolPachtvonSekob_01_03"); //In the north of the valley. Looking from here, that's to the right at the big crossroad.
-	AI_Output (self, other, "B_Torlof_HolPachtvonSekob_01_04"); //If you have problems, the farmers in the fields will help you find your way around the area.
-	
+	if(Sekob.aivar[AIV_TalkedToPlayer] == FALSE)
+	{
+		AI_Output (other, self, "B_Torlof_HolPachtvonSekob_15_02"); //Where is Sekob's farm?
+		AI_Output (self, other, "B_Torlof_HolPachtvonSekob_01_03"); //In the north of the valley. Looking from here, that's to the right at the big crossroad.
+		AI_Output (self, other, "B_Torlof_HolPachtvonSekob_01_04"); //If you have problems, the farmers in the fields will help you find your way around the area.
+	}
+	else
+	{
+		AI_Output (other, self, "DIA_Torlof_Probe_15_06"); //No.
+	};
+
 	MIS_Torlof_HolPachtVonSekob = LOG_RUNNING;
 	Sekob.flags = 0;
 	
@@ -548,11 +555,17 @@ func void B_Torlof_BengarMilizKlatschen()
 	AI_Output (self, other, "B_Torlof_BengarMilizKlatschen_01_00"); //The farmer Bengar has complained that lately the militia from the city has been getting on his nerves.
 	AI_Output (self, other, "B_Torlof_BengarMilizKlatschen_01_01"); //They're pressuring the farmer - probably trying to make him break with Onar.
 	AI_Output (self, other, "B_Torlof_BengarMilizKlatschen_01_02"); //I want you to go to his farm and make it clear to the militia that they have no business there! Questions?
-	AI_Output (other, self, "B_Torlof_BengarMilizKlatschen_15_03"); //How can I find Bengar's farm?
-	AI_Output (self, other, "B_Torlof_BengarMilizKlatschen_01_04"); //In the southwest of the valley is a big stairway that leads to a high plain. That's where Bengar's farm is.
-	AI_Output (self, other, "B_Torlof_BengarMilizKlatschen_01_05"); //If you get lost, ask the farmers in the fields how to find your way around the area.
- 	
- 	MIS_Torlof_BengarMilizKlatschen = LOG_RUNNING;
+	if(Bengar.aivar[AIV_TalkedToPlayer] == FALSE)
+	{
+		AI_Output (other, self, "B_Torlof_BengarMilizKlatschen_15_03"); //How can I find Bengar's farm?
+		AI_Output (self, other, "B_Torlof_BengarMilizKlatschen_01_04"); //In the southwest of the valley is a big stairway that leads to a high plain. That's where Bengar's farm is.
+		AI_Output (self, other, "B_Torlof_BengarMilizKlatschen_01_05"); //If you get lost, ask the farmers in the fields how to find your way around the area.
+	}
+	else
+	{
+		AI_Output (other, self, "DIA_Torlof_Probe_15_06"); //No.
+	};
+	MIS_Torlof_BengarMilizKlatschen = LOG_RUNNING;
  	Bengar.flags = 0;
  	Wld_InsertNpc	(Mil_335_Rumbold,	"FARM3"); 
 	Wld_InsertNpc	(Mil_336_Rick,		"FARM3"); 

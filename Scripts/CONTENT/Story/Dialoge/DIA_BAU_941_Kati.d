@@ -213,6 +213,8 @@ instance DIA_Kati_ANDEREHOEFE		(C_INFO)
 func int DIA_Kati_ANDEREHOEFE_Condition ()
 {
 	if (Npc_KnowsInfo(other, DIA_Kati_BAUERNAUFSTAND))
+	&& (Bengar.aivar[AIV_TalkedToPlayer] == FALSE)
+	&& (Sekob.aivar[AIV_TalkedToPlayer] == FALSE)
 	{
 		return TRUE;
 	};

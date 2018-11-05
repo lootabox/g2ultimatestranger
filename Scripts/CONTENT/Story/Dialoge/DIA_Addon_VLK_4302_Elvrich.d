@@ -417,6 +417,9 @@ func void DIA_Addon_Elvrich_WasNun_Info ()
 	AI_Output (self, other, "DIA_Addon_Elvrich_WasNun_04_04"); //If you find Lucia, get her safely back to town, will you?
 	AI_Output (other, self, "DIA_Addon_Elvrich_WasNun_15_05"); //I'll see what I can do.
 
+	CreateInvItem(self,ItMw_1h_Vlk_Axe);
+	AI_EquipBestMeleeWeapon(self);
+
 	Log_CreateTopic (TOPIC_Addon_MissingPeople, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Addon_MissingPeople, LOG_RUNNING);
 	B_LogEntry (TOPIC_Addon_MissingPeople,"Elvrich has gone back to the master carpenter Thorben."); 

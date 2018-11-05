@@ -63,10 +63,21 @@ func int DIA_Boltan_ToConvicts_Condition ()
 	return TRUE;
 };
 
+func int C_PrisonIsEmpty()
+{
+	return (MIS_Andre_REDLIGHT != LOG_SUCCESS)
+		&& (Sarah_Ausgeliefert == FALSE)
+		&& (Rengaru_Ausgeliefert == FALSE)
+		&& (Nagur_Ausgeliefert == FALSE)
+		&& (Halvor_Ausgeliefert == FALSE)
+		&& (Fernando_ImKnast == FALSE)
+		&& (Canthar_Ausgeliefert == FALSE || Andre_CantharFalle == TRUE)
+		&& (MIS_RescueBennet != LOG_SUCCESS || CorneliusFlee == TRUE || Npc_IsDead(Cornelius));
+};
+
 func void DIA_Boltan_ToConvicts_Info ()
 {
 	AI_Output (other, self, "DIA_Boltan_Add_15_01"); //I want to see the prisoners.
-	
 	
 	if (Kapitel == 3) 
 	&& (MIS_RescueBennet != LOG_SUCCESS)
@@ -80,27 +91,21 @@ func void DIA_Boltan_ToConvicts_Info ()
 			AI_Output (self ,other, "DIA_Boltan_Add_05_06"); //We've put away the swine who murdered Lothar the paladin.
 		};
 	}
-	else if (Canthar_Ausgeliefert == FALSE)
-	&& (Sarah_Ausgeliefert == FALSE)
-	&& (Rengaru_Ausgeliefert == FALSE)
-	&& (Nagur_Ausgeliefert == FALSE)
+	else if (C_PrisonIsEmpty())
 	{
 		AI_Output (self ,other, "DIA_Boltan_Add_05_02"); //All the cells are empty at the moment.
 	}
+	else if (other.guild == GIL_MIL)
+	{
+		AI_Output (self ,other, "DIA_Boltan_Add_05_04"); //All right, mate.
+	}
+	else if (other.guild == GIL_PAL) || (other.guild == GIL_KDF)
+	{
+		AI_Output (self ,other, "DIA_Boltan_Add_05_05"); //Of course.
+	}
 	else
 	{
-		if (other.guild == GIL_MIL)
-		{
-			AI_Output (self ,other, "DIA_Boltan_Add_05_04"); //All right, mate.
-		}
-		else if (other.guild == GIL_PAL) || (other.guild == GIL_KDF)
-		{
-			AI_Output (self ,other, "DIA_Boltan_Add_05_05"); //Of course.
-		}
-		else
-		{
-			AI_Output (self ,other, "DIA_Boltan_Add_05_03"); //Go ahead, but don't stay away too long, understood?
-		};
+		AI_Output (self ,other, "DIA_Boltan_Add_05_03"); //Go ahead, but don't stay away too long, understood?
 	};
 };		
 		

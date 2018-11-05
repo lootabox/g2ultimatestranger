@@ -439,29 +439,29 @@ func int DIA_Sekob_DMTWEG_Condition ()
 	&& (Npc_IsDead(DMT_DementorAmbientSekob2))	
 	&& (Npc_IsDead(DMT_DementorAmbientSekob3))	
 	&& (Npc_IsDead(DMT_DementorAmbientSekob4))	
-		{
-			return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Sekob_DMTWEG_Info ()
 {
 	AI_Output			(other, self, "DIA_Sekob_DMTWEG_15_00"); //Your house is empty. The black hoods have left.
 	
-		if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
-		{
-			AI_Output	(self, other, "DIA_Sekob_DMTWEG_01_01"); //I knew that the guard could be counted on.
-		};
+	if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
+	{
+		AI_Output	(self, other, "DIA_Sekob_DMTWEG_01_01"); //I knew that the guard could be counted on.
+	};
 
-		if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
-		{
-			AI_Output	(self, other, "DIA_Sekob_DMTWEG_01_02"); //You did a great job. Onar can count himself lucky to have people like you on his side.
-		};
+	if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
+	{
+		AI_Output	(self, other, "DIA_Sekob_DMTWEG_01_02"); //You did a great job. Onar can count himself lucky to have people like you on his side.
+	};
 
-		if (hero.guild == GIL_KDF)
-		{
-			AI_Output			(self, other, "DIA_Sekob_DMTWEG_01_03"); //Thank you, worthy Sir Magician. What would become of us without the protective hand of the clergy?
-		};
+	if (hero.guild == GIL_KDF)
+	{
+		AI_Output			(self, other, "DIA_Sekob_DMTWEG_01_03"); //Thank you, worthy Sir Magician. What would become of us without the protective hand of the clergy?
+	};
 	TOPIC_END_SekobDMT = TRUE;
 	B_GivePlayerXP (XP_SekobDMTWEG);
 
@@ -484,7 +484,7 @@ func void DIA_Sekob_DMTWEG_Info ()
 	B_StartOtherRoutine (BAU_934_Babera,"Start"); 
 	B_StartOtherRoutine (BAU_937_BAUER,"Start"); 
 	B_StartOtherRoutine (BAU_938_BAUER,"Start"); 
-
+	B_StartOtherRoutine(Bronko,"Start");
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -514,26 +514,26 @@ func void DIA_Sekob_BELOHNUNG_Info ()
 	AI_Output			(other, self, "DIA_Sekob_BELOHNUNG_15_00"); //Not so fast, my friend.
 
 	if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
+	{
+		if (Npc_KnowsInfo(other, DIA_Rosi_WASMACHSTDU))
 		{
-			if (Npc_KnowsInfo(other, DIA_Rosi_WASMACHSTDU))
-				{
-					AI_Output			(other, self, "DIA_Sekob_BELOHNUNG_15_01"); //From now on, you're going to abandon your dirty deals and act for the common good instead, or I'll be back.
-				};		
-			AI_Output			(self, other, "DIA_Sekob_BELOHNUNG_01_02"); //I don't understand. What else do you want?
-		};
+			AI_Output			(other, self, "DIA_Sekob_BELOHNUNG_15_01"); //From now on, you're going to abandon your dirty deals and act for the common good instead, or I'll be back.
+		};		
+		AI_Output			(self, other, "DIA_Sekob_BELOHNUNG_01_02"); //I don't understand. What else do you want?
+	};
 
 	if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
-		{
-			AI_Output			(other, self, "DIA_Sekob_BELOHNUNG_15_03"); //You were babbling about a reward, weren't you? Or was I just hearing things?
-		};
+	{
+		AI_Output			(other, self, "DIA_Sekob_BELOHNUNG_15_03"); //You were babbling about a reward, weren't you? Or was I just hearing things?
+	};
 
 	if (hero.guild == GIL_KDF)
-		{
-			AI_Output			(other, self, "DIA_Sekob_BELOHNUNG_15_04"); //I'm only interested in one thing. What did the black hoods want in your house?
-			AI_Output			(self, other, "DIA_Sekob_BELOHNUNG_01_05"); //I can't explain it myself, honorable Sir Magician. Perhaps it has ...
-			AI_Output			(other, self, "DIA_Sekob_BELOHNUNG_15_06"); //What?
-			AI_Output			(self, other, "DIA_Sekob_BELOHNUNG_01_07"); //I'm sorry. I swore several years ago never to speak of it, and I don't plan to break my oath.
-		};
+	{
+		AI_Output			(other, self, "DIA_Sekob_BELOHNUNG_15_04"); //I'm only interested in one thing. What did the black hoods want in your house?
+		AI_Output			(self, other, "DIA_Sekob_BELOHNUNG_01_05"); //I can't explain it myself, honorable Sir Magician. Perhaps it has ...
+		AI_Output			(other, self, "DIA_Sekob_BELOHNUNG_15_06"); //What?
+		AI_Output			(self, other, "DIA_Sekob_BELOHNUNG_01_07"); //I'm sorry. I swore several years ago never to speak of it, and I don't plan to break my oath.
+	};
 
 	AI_Output			(self, other, "DIA_Sekob_BELOHNUNG_01_08"); //All that I can do is give you a bit of gold and ask you to spare me.
 	AI_Output			(other, self, "DIA_Sekob_BELOHNUNG_15_09"); //Give it here, then. I'm in a hurry.
@@ -563,46 +563,49 @@ func int DIA_Sekob_PERM_Condition ()
 	if (Npc_KnowsInfo(other, DIA_Sekob_BELOHNUNG))
 	&& (Kapitel >= 3)	
 	&& (NpcObsessedByDMT_Sekob == FALSE)
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Sekob_PERM_Info ()
 {
 	if (hero.guild == GIL_KDF)
 	&& (Kapitel >= 5)
-		{
-			B_NpcObsessedByDMT (self);
-		}
+	{
+		B_NpcObsessedByDMT (self);
+	}
 	else
+	{
+		AI_Output		(other, self, "DIA_Sekob_PERM_15_00"); //Has anything happened in the meantime?
+		
+		if (MIS_bringRosiBackToSekob == LOG_FAILED)
 		{
-			AI_Output		(other, self, "DIA_Sekob_PERM_15_00"); //Has anything happened in the meantime?
-			
-			if (MIS_bringRosiBackToSekob == LOG_FAILED)
+			AI_Output		(self, other, "DIA_Sekob_PERM_01_01"); //Beat it.
+		}
+		else if (MIS_bringRosiBackToSekob == LOG_SUCCESS)
+		{
+			AI_Output		(self, other, "DIA_Sekob_PERM_01_02"); //No. Nothing special.
+		}
+		else if (Kapitel >= 5)
+		&& (MIS_bringRosiBackToSekob != LOG_SUCCESS)
+		{
+			AI_Output		(self, other, "DIA_Sekob_PERM_01_03"); //My wife has disappeared. At first I didn't notice it at all, and suddenly she was gone.
+			AI_Output		(self, other, "DIA_Sekob_PERM_01_04"); //I suspect she fled to the woods to get away from the field raiders.
+			if(MIS_bringRosiBackToSekob != LOG_RUNNING)
 			{
-				AI_Output		(self, other, "DIA_Sekob_PERM_01_01"); //Beat it.
-			}
-			else if (MIS_bringRosiBackToSekob == LOG_SUCCESS)
-			{
-				AI_Output		(self, other, "DIA_Sekob_PERM_01_02"); //No. Nothing special.
-			}
-			else if (Kapitel >= 5)
-			&& (MIS_bringRosiBackToSekob != LOG_SUCCESS)
-			{
-				AI_Output		(self, other, "DIA_Sekob_PERM_01_03"); //My wife has disappeared. At first I didn't notice it at all, and suddenly she was gone.
-				AI_Output		(self, other, "DIA_Sekob_PERM_01_04"); //I suspect she fled to the woods to get away from the field raiders.
 				AI_Output		(self, other, "DIA_Sekob_PERM_01_05"); //Do me a favor, if you find her, bring her back to me safe and sound.
 				MIS_bringRosiBackToSekob = LOG_RUNNING;
 				Log_CreateTopic (TOPIC_bringRosiBackToSekob, LOG_MISSION);
 				Log_SetTopicStatus(TOPIC_bringRosiBackToSekob, LOG_RUNNING);
-				B_LogEntry (TOPIC_bringRosiBackToSekob,"Sekob's wife Rosi has vanished. Sekob wants her back."); 
-			}
-			else
-			{
-				AI_Output		(self, other, "DIA_Sekob_PERM_01_06"); //Nothing since those scoundrels in black were in my house.
+				B_LogEntry (TOPIC_bringRosiBackToSekob,"Sekob's wife Rosi has vanished. Sekob wants her back.");
 			};
+		}
+		else
+		{
+			AI_Output		(self, other, "DIA_Sekob_PERM_01_06"); //Nothing since those scoundrels in black were in my house.
 		};
+	};
 };
 
 //#####################################################################
@@ -737,11 +740,12 @@ func int DIA_Sekob_ROSIBACKATSEKOB_Condition ()
 {
 	if (Kapitel >= 5)
 	&& (hero.guild != GIL_KDF)
+	&& (!Npc_IsDead(Rosi))
 	&& (Npc_GetDistToWP(Rosi,"NW_FARM4_SEKOB")<3000)
 	&& (MIS_bringRosiBackToSekob == LOG_RUNNING)
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Sekob_ROSIBACKATSEKOB_Info ()
@@ -749,8 +753,8 @@ func void DIA_Sekob_ROSIBACKATSEKOB_Info ()
 	AI_Output			(other, self, "DIA_Sekob_ROSIBACKATSEKOB_15_00"); //I'm bringing back your wife.
 	AI_Output			(self, other, "DIA_Sekob_ROSIBACKATSEKOB_01_01"); //That's wonderful. Here, take this for your trouble.
 	MIS_bringRosiBackToSekob = LOG_SUCCESS;
-	CreateInvItems (self, ItMi_Gold, 650);									
-	B_GiveInvItems (self, other, ItMi_Gold, 650);					
+	CreateInvItems (self, ItMi_Gold, 650);
+	B_GiveInvItems (self, other, ItMi_Gold, 650);
 	B_GivePlayerXP (XP_Ambient);
 	B_NpcClearObsessionByDMT (self);
 	B_StartOtherRoutine	(Rosi,"Start");
@@ -775,9 +779,9 @@ func int DIA_Sekob_ROSINEVERBACK_Condition ()
 {
 	if (MIS_bringRosiBackToSekob == LOG_OBSOLETE)
 	&& (hero.guild != GIL_KDF)
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Sekob_ROSINEVERBACK_Info ()

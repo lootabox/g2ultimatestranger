@@ -15,7 +15,8 @@ instance VLK_402_Richter (Npc_Default)
 	fight_tactic		= FAI_HUMAN_NORMAL;	
 	
 	// ------ Equippte Waffen ------																
-	
+	EquipItem (self,ItMw_Richtstab);
+
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	CreateInvItems (self,ItKe_Richter,1);

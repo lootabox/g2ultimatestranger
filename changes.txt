@@ -27,11 +27,14 @@ Changed Buster to give reduced gold for each Shadowbeast Horn, but still way mor
 
 NPCs:
 Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
-Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras.
-Fixed logical issues with dialogue of Diego, Ramon, Ulf, Xardas.
-
+Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Milten, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras.
+Fixed logical issues with dialogue of Diego, Ramon, Ulf, Vatras, Xardas.
 Fixed XP award for pickpocketing Cavalorn, Dobar, Engor, Francis, Franco, Salandril, Valentino.
 Fixed XP award for recruiting Lares, Lester.
+Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
+
+Changed default weapon from Heavy Branch to something that makes sense for Akil, Cornelius, Judge, Larius, Onar, Sekob.
+Changed NPCs to receive varying guild specific weapon on spawn, instead of always Heavy Branch, if their regular weapon is taken.
 
 Agon returns to monastery after the Trial of Fire, if alive.
 Alvares cannot be talked about joining the mercenaries if part of a guild already.
@@ -43,10 +46,12 @@ Bartok now grants previously omitted XP bonus for finishing the hunt with him.
 Bartok only equips his hunting gear while hunting.
 Bennet makes NH dragon hunter only after giving the armor.
 Betsy gives no experience when killed.
+Boltan takes into account presence of Bennet, Borka, Cornelius and Fernardo when he says that all the cells are empty.
 Borka considers Heavy Militia armor as militia armor.
 Brandon quest cancels if he is killed.
 Buster buys Shadowbeast Horns, even if NH does not know how to remove them.
 Buster does not drop Shadowbeast Horns given to him.
+Canthar properly sits on the chair when imprisoned.
 Carlos has slightly altered dialog if NH entered camp without killing Franco.
 Carlos shows correct pick pocket difficulty in Valley of Mines.
 Cassia can give the Blood Chalice quest, even if NH was a wanted thief.
@@ -57,6 +62,7 @@ Diego cannot be led to Pedrakhan.
 Diego's dialog has 6 more previously unused dialogue lines and 9 more if NH never met him in Valley of Mines.
 Dragomir immediately equips his crossbow after receiving it.
 Edda does not have duplicate dialog option, moved dialog lines around appropriately.
+Elvrich won't react to weapons until he's returned to town.
 Esteban does not turn to his guards if they are dead.
 Esteban first dialog sends Carlos to Ramon's guard post, if NH killed Ramon.
 Esteban only says Franco was a tough nut if he is dead.
@@ -69,8 +75,8 @@ Gaan wields a Wolf Blade instead of a branch.
 Gaan won't know about the death of the Snorting Dragon Snapper unless he is close to its location.
 Gaan's dialog option for asking who he is cannot glitch up and become unavailable.
 Garond can be told about Silvestro's mining site even if Diego has died.
-Gerold gives explicit options for giving stew and fish soup.
 Gerold can be asked whether he ever sleeps only before receiving the order from Garond to free Gorn.
+Gerold gives explicit options for giving stew and fish soup.
 Girion attacks NH to kill.
 Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
@@ -87,8 +93,10 @@ Isgaroth can be asked for a blessing after he tells who he is.
 Isgaroth can be traded with as a mage, even if he was never spoken to before.
 Isgaroth properly updates quest log for requirements of joining the monastery.
 Jan does not drop the gold used to buy the Medium Dragon Hunter's Armor.
+Jorgen wields a Short Sword in Irdorath instead of a Sickle.
 Kardif cannot be talked about Attila if he is nearby and the dialog option does not kill him.
 Kardif considers Heavy Militia armor as militia armor.
+Kati can be asked about location of Bengar and Sekobs farms only before talking to them.
 Kervo's quest cancels in chapter 4, causing Kerov and Geppert to be killed by a Lurker instead of them disappearing.
 Kervo's quest fails if he is killed.
 Landlord will not give more then 5 beers per chapter and only 1 per day.
@@ -106,6 +114,7 @@ Mario will refuse joining the crew if dismissed twice and gets angry at NH, with
 Matteo only sells his leather armor until beginning of chapter 3, dialogue adjusted accordingly.
 Meldor considers Heavy Militia armor as militia armor.
 Milten can teach Paladin runes in Irdorath.
+Milten will not say Gorn is in prison if he is already released.
 Nadja considers Heavy Militia armor as militia armor.
 Nagur considers Heavy Militia armor as militia armor.
 Nagur now grants previously omitted XP bonus for showing thieves' signal and returning Baltram's shipment.
@@ -127,6 +136,7 @@ Riordian mentions William in the initial dialogue instead of the dialogue about 
 Rosi will not create extra gold in her inventory when giving the reward to NH for escorting her.
 Rupert can only be asked where Matteo can be found if NH did not find him yet.
 Sekob can't be talked about rent after completing the related quest.
+Sekob can't be told Rosi is back if she is dead.
 Sekob dialog no longer has option to go to talk to Onar if NH already talked with him.
 Senyan is told by NH that Esteban is dead, instead of giving him other news about Esteban.
 Sergio can only be asked about access to library if NH has not already achieved it.
@@ -135,11 +145,23 @@ Skip quest cancels if he is killed.
 Sylvio shows correct pick pocket difficulty in Valley of Mines.
 Talbin wields a Wolf Blade instead of a branch.
 Thekla now grants previously omitted XP bonus for defeating Bullco.
+Torlof won't be asked about location of Bengar or Sekobs farm if player already met them.
 Ulf does not randomly die in the beginning of chapter 3.
 Ulf returns to monastery after the Trial of Fire, if alive.
 Ulf smokes a joint as well instead of watching as NH smokes one.
 Urshak will not wait for player to talk to him.
-Vatras does not sell Almanacs of the Possessed given to him
+Vatras actually takes the orders from Raven and grants experience for all evidence not already reported.
+Vatras can be asked for help joining the monastery only if not already part of a guild.
+Vatras can be asked where to find a priest of Innos only before talking to Daron.
+Vatras can't be told about Lucia before reading her letter or talking to Elvrich about it.
+Vatras cannot be donated to usually, but instead he asks for a donation for his blessing.
+Vatras closes quest "Wanted Notes and Bandits" if it is still open when returning the orders from Raven.
+Vatras dialog creates a journal note about Martin only once he mentions him.
+Vatras dialog no longer has "MORE" option, instead options are only shown when they are relevant and options are hidden when no longer relevant.
+Vatras dialog won't have a mention of the novice at monastery gate if NH did not meet him.
+Vatras does not sell Almanacs of the Possessed given to him in Irdorath.
+Vatras gives different scrolls as reward for bringing stone tablets, if NH has corresponding runes.
+Vatras' offer for the Will-o'-the-wisp amulet can be refused, so NH never receives the amulet.
 Wolf cannot be talked about joining the mercenaries if part of a guild already.
 Wolf will not join the crew if he gets pissed off at NH.
 Wulfgar makes comments on training of weapon skills.
@@ -170,6 +192,7 @@ Following actions no longer create extra journal updates:
 * Rod asked for his vote to join mercenaries.
 * Rod betting gold against NH being able to lift his sword.
 * Saturas talked to about activating portal before receiving letter from Vatras.
+* Sekob asked what has happened in the meantime while his wife is away.
 
 Random:
 Added new teleport scroll to get out of the ruins behind broken bridge in Jharkendar.

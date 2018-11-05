@@ -48,23 +48,16 @@ FUNC VOID DIA_MiltenOW_Hello_Info()
 	AI_Output	(self ,other,"DIA_MiltenOW_Hello_03_00");//Look who has returned! Our hero from the barrier!
 	
 	Info_ClearChoices (DIA_MiltenOW_Hello);
-	Info_AddChoice (DIA_MiltenOW_Hello,"Good to see you, Milten.",DIA_MiltenOW_Hello_YES);
+	Info_AddChoice (DIA_MiltenOW_Hello,"Good to see you Milten. You here again?",DIA_MiltenOW_Hello_YES);
 	Info_AddChoice (DIA_MiltenOW_Hello,"Do I know you?",DIA_MiltenOW_Hello_NO);
 };
-	// ------------------------------------
-	func void B_Milten_GornDiegoLester()
-	{
-		AI_Output 	(self ,other,"DIA_MiltenOW_Hello_NO_03_02"); //Do you remember Gorn, Diego and Lester?
-	};
-	// ------------------------------------
-
 FUNC VOID DIA_MiltenOW_Hello_YES()
 {
-	AI_Output	(other,self ,"DIA_MiltenOW_Hello_YES_15_00");//Good to see you, Milten. Are you still here, or here again?
+	AI_Output	(other,self ,"DIA_MiltenOW_Hello_YES_15_00");//Good to see you Milten. You here again?
 	AI_Output 	(self ,other,"DIA_MiltenOW_Hello_YES_03_01");//Again. After the Barrier collapsed I entered the monastery of the Magicians of Fire.
 	AI_Output 	(self ,other,"DIA_MiltenOW_Hello_YES_03_02");//But once it was clear that the paladins wanted to come here, my experience and knowledge of the place proved to be quite useful.
 	AI_Output 	(self ,other,"DIA_MiltenOW_Hello_YES_03_03");//So they decided then and there to entrust me with the holy mission of providing magical support to this expedition.
-	B_Milten_GornDiegoLester();
+	AI_Output 	(self ,other,"DIA_MiltenOW_Hello_NO_03_02");//Do you remember Gorn, Diego and Lester?
 	
 	Info_ClearChoices (DIA_MiltenOW_Hello);
 	Info_AddChoice (DIA_MiltenOW_Hello,"Of course I remember the boys.",DIA_MiltenOW_Hello_Friends);
@@ -72,9 +65,9 @@ FUNC VOID DIA_MiltenOW_Hello_YES()
 };
 FUNC VOID DIA_MiltenOW_Hello_NO()
 {
-	AI_Output	(other,self ,"DIA_MiltenOW_Hello_NO_15_00");//Am I supposed to know them?
+	AI_Output	(other,self ,"DIA_MiltenOW_Hello_NO_15_00");//Do I know you?
 	AI_Output 	(self ,other,"DIA_MiltenOW_Hello_NO_03_01");//You've been through a lot, huh?
-	B_Milten_GornDiegoLester();
+	AI_Output 	(self ,other,"DIA_MiltenOW_Hello_NO_03_02");//Do you remember Gorn, Diego and Lester?
 	
 	Info_ClearChoices (DIA_MiltenOW_Hello);
 	Info_AddChoice (DIA_MiltenOW_Hello,"So what is there to report?",DIA_MiltenOW_Hello_Friends);
@@ -188,7 +181,14 @@ FUNC INT DIA_MiltenOW_Wo_Condition()
 FUNC VOID DIA_MiltenOW_Wo_Info()
 {	
 	AI_Output (other,self ,"DIA_MiltenOW_Wo_Forget_15_00");//Where are Gorn and Diego now?
-	AI_Output (self ,other,"DIA_MiltenOW_Wo_Forget_03_01");//Well, Gorn is sitting here in the dungeon - because he resisted arrest.
+	if(MIS_RescueGorn != LOG_SUCCESS)
+	{
+		AI_Output (self ,other,"DIA_MiltenOW_Wo_Forget_03_01");//Well, Gorn is sitting here in the dungeon - because he resisted arrest.
+	}
+	else
+	{
+		AI_Output (self ,other,"DIA_MiltenNW_FourFriends_03_01"); //Gorn seems to have coped with his stay in Garond's dungeon very well.
+	};
 	AI_Output (self ,other,"DIA_MiltenOW_Wo_Forget_03_02");//They assigned Diego to a troop of scrapers - ask the paladin Parcival, he assembled the groups.
 	
 	KnowsAboutGorn = TRUE; 
