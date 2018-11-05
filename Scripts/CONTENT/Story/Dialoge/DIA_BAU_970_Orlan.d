@@ -338,20 +338,20 @@ func void DIA_Addon_Orlan_WhenRangerMeeting_Info ()
 };
 func void DIA_Addon_Orlan_WhenRangerMeeting_Today ()
 {
+	B_MakeRangerReadyForMeetingALL ();
 	AI_Output			(other, self, "DIA_Addon_Orlan_WhenRangerMeeting_Today_15_00"); //The meeting is today?
 	AI_Output			(self, other, "DIA_Addon_Orlan_WhenRangerMeeting_Today_05_01"); //Yes, at least that's what I seem to recall.
 	AI_Output			(self, other, "DIA_Addon_Orlan_WhenRangerMeeting_Today_05_02"); //I hope it won't get so late again.
-	B_MakeRangerReadyForMeetingALL ();
 	Info_ClearChoices	(DIA_Addon_Orlan_WhenRangerMeeting);	
-	Info_AddChoice	(DIA_Addon_Orlan_WhenRangerMeeting, "(more)", DIA_Addon_Orlan_WhenRangerMeeting_Los );
+	Info_AddChoice	(DIA_Addon_Orlan_WhenRangerMeeting, DIALOG_ENDE, DIA_Addon_Orlan_WhenRangerMeeting_Los );
 };
 func void DIA_Addon_Orlan_WhenRangerMeeting_theyCome ()
 {
+	B_MakeRangerReadyForMeetingALL ();
 	AI_Output			(other, self, "DIA_Addon_Orlan_WhenRangerMeeting_theyCome_15_00"); //They should be here before long.
 	AI_Output			(self, other, "DIA_Addon_Orlan_WhenRangerMeeting_theyCome_05_01"); //We'll see.
-	B_MakeRangerReadyForMeetingALL ();
 	Info_ClearChoices	(DIA_Addon_Orlan_WhenRangerMeeting);	
-	Info_AddChoice	(DIA_Addon_Orlan_WhenRangerMeeting, "(more)", DIA_Addon_Orlan_WhenRangerMeeting_Los );
+	Info_AddChoice	(DIA_Addon_Orlan_WhenRangerMeeting, DIALOG_ENDE, DIA_Addon_Orlan_WhenRangerMeeting_Los );
 };
 func void DIA_Addon_Orlan_WhenRangerMeeting_Los ()
 {

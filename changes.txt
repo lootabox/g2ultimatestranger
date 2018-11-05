@@ -1,5 +1,9 @@
 
-	Menu Changes
+
+
+		MAJOR CHANGES
+
+	Menu
 
 Menu options are more clearly categorized:
 Game: Gameplay settings.
@@ -13,21 +17,57 @@ Ambient subtitles, Blood detail, Inventory columns, Item effects, Lock scramblin
 
 Default menu option when not ingame is load game instead of new game.
 
+	NPCs
+
+NPCs only take 20% of gold from NH.
+NPCs only loot gold from NH who was caught stealing or by people who are thieves themselves.
+NPCs only take the weapon from NH if he was caught doing something violent or threatening.
+
+
+
+
+		MINOR CHANGES
+
+	Equipment
+
+Addon armor have correct material tag.
+Armor buying dialog options are formatted the same way.
+El Bastardo and Rough Sword are categorized as sword, not axes.
+Inquisitor deals blunt damage, not edge.
+
+
+	Spells
+
+Charge spell scrolls use scroll mana cost per tier, instead of rune mana cost.
+Charge spells are cast off shortly after reaching final charge tier or upon running out of mana.
+Charge spells gain tiers only when mana is removed, not before.
+Fear spell does not affect any magician, paladins, golems, dragons or trolls.
+Fear spell can be used with no target in focus, cannot bypass immunity and monsters immediately react to it instead of standing still.
+Lightning spells properly deal double damage to submerged targets.
+Paladin runes now cost correct amount of learning points.
+Root Snare does not work against golems or summoned demons.
+Sleep spell does not affect any magician.
+Sleep spell affects Cornelius, Judge, Larius and NH even if he becomes paladin/fire mage.
+Water based spells deal halved damage against large/heavy creatures and double against fire based creatures.
+
+
 	Monster
 
+Goblins and Skeletons do not create additional weapons in their inventory.
 Lower Skeleton renamed to Lesser Skeleton.
+Shadow Lord Archol has same amount of protection as other shadow warriors.
+Skeletal monsters do not bleed.
+Snapper Pack Leader has same amount of protection as other snappers.
+Snorting Dragon Snapper will have 2 horns instead of 1 if Gaan teaches the NH that trophy skill after killing it.
+Stone Guardians leave properly colored pebbles on ground when hit.
+Swamp Golem bleeds green.
+Undead Orc use the restored orcish hammer Krush Karrok.
 
 
-	Quest Changes
+	NPCs General
 
-Changed Buster to give reduced gold for each Shadowbeast Horn, but still way more then regular merchants.
-
-
-	Ported fixes and improvements Dimus' patch
-
-NPCs:
 Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
-Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Milten, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras.
+Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Martin, Milten, Orlan, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras.
 Fixed logical issues with dialogue of Diego, Ramon, Ulf, Vatras, Xardas.
 Fixed XP award for pickpocketing Cavalorn, Dobar, Engor, Francis, Franco, Salandril, Valentino.
 Fixed XP award for recruiting Lares, Lester.
@@ -35,6 +75,11 @@ Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon 
 
 Changed default weapon from Heavy Branch to something that makes sense for Akil, Cornelius, Judge, Larius, Onar, Sekob.
 Changed NPCs to receive varying guild specific weapon on spawn, instead of always Heavy Branch, if their regular weapon is taken.
+
+Added ambient inventory generation for pirates.
+
+
+	NPCs Specific
 
 Agon returns to monastery after the Trial of Fire, if alive.
 Alvares cannot be talked about joining the mercenaries if part of a guild already.
@@ -51,6 +96,7 @@ Borka considers Heavy Militia armor as militia armor.
 Brandon quest cancels if he is killed.
 Buster buys Shadowbeast Horns, even if NH does not know how to remove them.
 Buster does not drop Shadowbeast Horns given to him.
+Buster gives reduced gold for each Shadowbeast Horn, though still more then regular merchants.
 Canthar properly sits on the chair when imprisoned.
 Carlos has slightly altered dialog if NH entered camp without killing Franco.
 Carlos shows correct pick pocket difficulty in Valley of Mines.
@@ -167,7 +213,25 @@ Wolf will not join the crew if he gets pissed off at NH.
 Wulfgar makes comments on training of weapon skills.
 Xardas' dialog has 3 more previously unused dialogue lines.
 
-Following actions no longer create extra journal updates:
+
+	Random
+
+Added new teleport scroll to get out of the ruins behind broken bridge in Jharkendar.
+Annotation added for giving and taking back letter to Elvrich, letter to Greg, recipe for Opolos, map to Saturas.
+Black Ore effect ends on using transformation scrolls.
+Document visual changed for Esteban's Bodyguard, Pablo, Senyan, Skip, a thug in Khorinis for reading NH's wanted poster and Saturas for reading a map.
+Failing to create runes for Ice Block and Destroy Undead properly returns the runestone to inventory.
+Gold mining skill does not improve by mining empty veins.
+Herring is categorized as food.
+Magic Runes are removed from frozen corpses.
+Monastery novice quest become obsolete only after player becomes a mage.
+Nostalgia bonus properly awards levels to NH.
+Novices do not create additional sausages when given one.
+Quarhodron summoning scroll changed from piece of paper into proper scroll.
+Sheep cannot be bought from Onar or Pepe after escorting one to the monastery.
+Steel Blanks and Lab Water Bottles cannot be looted from anyone.
+
+Following actions no longer cause unnecessary journal updates:
 * Reading Cornelius' Diary, Xardas' Letter, Lucia's farewell letter, almanac in the secret library, Black Magician's Scroll, Diary of the novice black magician, "Pure mana" and "Pure health".
 * Akil, Alvares, Kati and Randolph talked to while mercenaries threaten the farm.
 * Alric asked to duel when he does not have his sword.
@@ -194,46 +258,6 @@ Following actions no longer create extra journal updates:
 * Saturas talked to about activating portal before receiving letter from Vatras.
 * Sekob asked what has happened in the meantime while his wife is away.
 
-Random:
-Added new teleport scroll to get out of the ruins behind broken bridge in Jharkendar.
-Addon armor have correct material tag.
-Annotation added for giving and taking back letter to Elvrich, letter to Greg, recipe for Opolos, map to Saturas.
-Armor buying dialog options are formatted the same way.
-Black Ore effect ends on using transformation scrolls.
-Charge spell scrolls use scroll mana cost per tier, instead of rune mana cost.
-Charge spells are cast off shortly after reaching final charge tier or upon running out of mana.
-Charge spells gain tiers only when mana is removed, not before.
-Document look changed for Esteban's Bodyguard, Pablo, Senyan, Skip, a thug in Khorinis for reading NH's wanted poster and Saturas for reading a map.
-El Bastardo and Rough Sword are categorized as sword, not axes.
-Failing to create runes for Ice Block and Destroy Undead properly returns the runestone to inventory.
-Fear spell does not affect any magician, paladins, golems, dragons or trolls.
-Fear spell can be used with no target in focus, cannot bypass immunity and monsters immediately react to it instead of standing still.
-Goblins and Skeletons do not create additional weapons in their inventory.
-Gold mining skill does not improve by mining empty veins.
-Herring is categorized as food.
-Inquisitor deals blunt damage, not edge.
-Lightning spells properly deal double damage to submerged targets.
-Magic Runes are removed from frozen corpses.
-Monastery novice quest become obsolete only after player becomes a mage.
-Nostalgia bonus properly awards levels to NH.
-Novices do not create additional sausages when given one.
-Paladin runes now cost correct amount of learning points.
-Pirates generate ambient inventories.
-Quarhodron summoning scroll changed from piece of paper into proper scroll.
-Root Snare does not work against golems or summoned demons.
-Shadow Lord Archol has same amount of protection as other shadow warriors.
-Sheep cannot be bought from Onar or Pepe after escorting one to the monastery.
-Skeletal monsters do not bleed.
-Sleep spell does not affect any magician.
-Sleep spell affects Cornelius, Judge, Larius and NH even if he becomes paladin/fire mage.
-Snapper Pack Leader has same amount of protection as other snappers.
-Snorting Dragon Snapper will have 2 horns instead of 1 if Gaan teaches the NH that trophy skill after killing it.
-Steel Blanks and Lab Water Bottles cannot be looted from anyone.
-Stone Guardians leave properly colored pebbles on ground when hit.
-Swamp Golem bleeds green.
-Undead Orc use the restored orcish hammer Krush Karrok.
-Water based spells deal halved damage against large/heavy creatures and double against fire based creatures.
-
 New item models:
 * 'The Halls of Irdorath' book
 * All books of Runemaking
@@ -255,10 +279,9 @@ New item models:
 * Sun Aloe
 * Treasure Chest
 
-
-NPC models:
-* Lower Skeleton model is Gothic 1 Skeleton Scout model.
-* Skeleton Mage model is transparent between bones.
+Changed models:
+* Lower Skeleton model is now Gothic 1 Skeleton Scout model.
+* Skeleton Mage model is now transparent between bones.
 
 
 	Sources

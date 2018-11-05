@@ -26,63 +26,91 @@ func int ZS_RansackBody_Loop ()
 func void ZS_RansackBody_End ()
 {	
 	// ------ zum Body drehen ------
-	B_TurnToNpc (self, other);
+	//B_TurnToNpc (self, other);
 	
 	// ------ Durchsuchen-Ani ------
-	AI_PlayAni (self, "T_PLUNDER");
+	//AI_PlayAni (self, "T_PLUNDER");
 	
 	// ------ Besitz-Items nehmen ------
 	if (Npc_HasItems(other, Holy_Hammer_MIS) > 0)
 	&& (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Garwig))
 	{
+		B_TurnToNpc (self, other);
+		AI_PlayAni (self, "T_PLUNDER");
 		CreateInvItems		(self, Holy_Hammer_MIS, 1);
 		Npc_RemoveInvItems	(other,Holy_Hammer_MIS, 1);	
-	};
+	}
 	
-	if (Npc_HasItems(other, ItMw_2h_Rod) > 0)
+	else if (Npc_HasItems(other, ItMw_2h_Rod) > 0)
 	&& (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Rod))
 	{
+		B_TurnToNpc (self, other);
+		AI_PlayAni (self, "T_PLUNDER");
 		CreateInvItems		(self, ItMw_2h_Rod, 1);
 		Npc_RemoveInvItems	(other,ItMw_2h_Rod, 1);	
 		AI_EquipBestMeleeWeapon (self);
-	};
+	}
 	
-	if (Npc_HasItems(other, ITKE_Greg_ADDON_MIS))
+	else if (Npc_HasItems(other, ITKE_Greg_ADDON_MIS))
 	&& (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Francis))
 	{
+		B_TurnToNpc (self, other);
+		AI_PlayAni (self, "T_PLUNDER");
 		CreateInvItems		(self, ITKE_Greg_ADDON_MIS, 1);
 		Npc_RemoveInvItems	(other,ITKE_Greg_ADDON_MIS, 1);
 	};	
 	
 	// ------ Gold nehmen ------
-	if (Npc_HasItems (other, ItMi_Gold) > 0)
+	if (self.aivar[AIV_ATTACKREASON] == AR_Theft
+	|| self.aivar[AIV_ATTACKREASON] == AR_LeftPortalRoom
+	|| self.aivar[AIV_ATTACKREASON] == AR_ClearRoom
+	|| self.aivar[AIV_ATTACKREASON] == AR_GuardCalledToRoom
+	|| self.aivar[AIV_ATTACKREASON] == AR_GuardCalledToThief
+	|| self.guild == GIL_BDT
+	|| self.guild == GIL_PIR)
 	{
+		B_TurnToNpc (self, other);
+		AI_PlayAni (self, "T_PLUNDER");
+
 		var int x;
 		x = Npc_HasItems(other, ItMi_Gold);
-		CreateInvItems		(self, ItMi_Gold, x);
-		Npc_RemoveInvItems	(other,ItMi_Gold, x);				
-		
-		B_Say (self, other, "$ITOOKYOURGOLD");
-	}
-	else
-	{
-		B_Say (self, other, "$SHITNOGOLD");
+		if (Npc_IsPlayer(other)) { x /= 5; };
+
+		if (x > 0)
+		{
+			CreateInvItems		(self, ItMi_Gold, x);
+			Npc_RemoveInvItems	(other,ItMi_Gold, x);
+			B_Say (self, other, "$ITOOKYOURGOLD");
+		}
+		else
+		{
+			B_Say (self, other, "$SHITNOGOLD");
+		};
 	};
 
 	// ------ nach der Waffe des Opfers suchen ------
-	Npc_PerceiveAll	(self);
-	
-	if ( Wld_DetectItem (self, ITEM_KAT_NF) || Wld_DetectItem (self, ITEM_KAT_FF) )
+	if (self.aivar[AIV_ATTACKREASON] == AR_SheepKiller
+	|| self.aivar[AIV_ATTACKREASON] == AR_ReactToWeapon
+	|| self.aivar[AIV_ATTACKREASON] == AR_ReactToDamage
+	|| self.aivar[AIV_ATTACKREASON] == AR_GuardStopsFight
+	|| self.aivar[AIV_ATTACKREASON] == AR_GuardCalledToKill
+	|| self.aivar[AIV_ATTACKREASON] == AR_GuardStopsIntruder
+	|| self.aivar[AIV_ATTACKREASON] == AR_HumanMurderedHuman)
 	{
-		if (Hlp_IsValidItem(item))
+		Npc_PerceiveAll	(self);
+		
+		if ( Wld_DetectItem (self, ITEM_KAT_NF) || Wld_DetectItem (self, ITEM_KAT_FF) )
 		{
-			if (Npc_GetDistToItem(self,item) < 500)
+			if (Hlp_IsValidItem(item))
 			{
-				AI_TakeItem	(self, item);
-				B_Say		(self, self, "$ITAKEYOURWEAPON");		
-				
-				AI_EquipBestMeleeWeapon(self);
-				AI_EquipBestRangedWeapon(self);
+				if (Npc_GetDistToItem(self,item) < 500)
+				{
+					AI_TakeItem	(self, item);
+					B_Say		(self, self, "$ITAKEYOURWEAPON");
+					
+					//AI_EquipBestMeleeWeapon(self);
+					//AI_EquipBestRangedWeapon(self);
+				};
 			};
 		};
 	};
