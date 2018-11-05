@@ -146,13 +146,19 @@ FUNC VOID PC_Booze_Lou_Info()
 		
 		Print (PRINT_AlchemySuccess);
 		CreateInvItems (self, ItFo_Addon_LousHammer,1);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);	
+		// CreateInvItems (self, ItMi_Flask,1);	
 	};
-	B_ENDPRODUCTIONDIALOG ();
+	// B_ENDPRODUCTIONDIALOG ();
 	BoozeStart = FALSE;
 };
 //*******************************************************
@@ -190,13 +196,19 @@ FUNC VOID PC_Booze_Schlaf_Info()
 		
 		Print (PRINT_AlchemySuccess);
 		CreateInvItems (self, ItFo_Addon_SchlafHammer,1);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);	
+		// CreateInvItems (self, ItMi_Flask,1);	
 	};
-	B_ENDPRODUCTIONDIALOG ();
+	// B_ENDPRODUCTIONDIALOG ();
 	BoozeStart = FALSE;
 };
 
@@ -233,13 +245,19 @@ FUNC VOID PC_Booze_SchnellerHering_Info()
 		
 		Print (PRINT_AlchemySuccess);
 		CreateInvItems (self, ItFo_Addon_SchnellerHering,1);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);	
+		// CreateInvItems (self, ItMi_Flask,1);	
 	};
-	B_ENDPRODUCTIONDIALOG ();
+	// B_ENDPRODUCTIONDIALOG ();
 	BoozeStart = FALSE;
 };	
 //*******************************************************
@@ -290,13 +308,19 @@ FUNC VOID PC_Charge_InnosEye_Info ()
 		CreateInvItems	   (hero,ItMi_InnosEye_MIS,1);  
 		
 		Print (PRINT_AlchemySuccessInnoseye);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 	else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
+	// B_ENDPRODUCTIONDIALOG ();
 };
 //*******************************************************
 //Mana Tränke 
@@ -384,13 +408,19 @@ FUNC VOID PC_ItPo_Mana_01_Info ()
 		
 		CreateInvItems 	   (hero,ItPo_Mana_01,1); 
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
+	// B_ENDPRODUCTIONDIALOG ();
 	ManaStart = FALSE;
 };
 
@@ -424,13 +454,19 @@ FUNC VOID PC_ItPo_Mana_02_Info ()
 		
 		CreateInvItems	   (hero,ItPo_Mana_02,1);  
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
+	// B_ENDPRODUCTIONDIALOG ();
 	ManaStart = FALSE;
 };
 //*******************************************************
@@ -464,13 +500,19 @@ FUNC VOID PC_ItPo_Mana_03_Info ()
 		
 		CreateInvItems	   (hero,ItPo_Mana_03,1);  
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
+	// B_ENDPRODUCTIONDIALOG ();
 	ManaStart = FALSE;
 };
 //*******************************************************
@@ -504,13 +546,19 @@ FUNC VOID PC_ItPo_Mana_04_Info ()
 		
 		CreateInvItems	   (hero,ItPo_Mana_Addon_04,1);  
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
+	// B_ENDPRODUCTIONDIALOG ();
 	ManaStart = FALSE;
 };
 //*******************************************************
@@ -600,13 +648,19 @@ FUNC VOID PC_ItPo_Health_01_Info ()
 		
 		CreateInvItem	   (hero,ItPo_Health_01);  
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();	
+	// B_ENDPRODUCTIONDIALOG ();	
 	HealthStart = FALSE;
 };
 //*******************************************************
@@ -640,13 +694,19 @@ FUNC VOID PC_ItPo_Health_02_Info ()
 		
 		CreateInvItems	   (hero,ItPo_Health_02,1);  
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();		
+	// B_ENDPRODUCTIONDIALOG ();		
 	HealthStart = FALSE;
 };
 //*******************************************************
@@ -679,13 +739,19 @@ FUNC VOID PC_ItPo_Health_03_Info ()
 		
 		CreateInvItems	   (hero,ItPo_Health_03,1);  
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();		
+	// B_ENDPRODUCTIONDIALOG ();		
 	HealthStart = FALSE;
 };
 //*******************************************************
@@ -718,13 +784,19 @@ FUNC VOID PC_ItPo_Health_04_Info ()
 		
 		CreateInvItems	   (hero,ItPo_Health_Addon_04,1);  
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();		
+	// B_ENDPRODUCTIONDIALOG ();		
 	HealthStart = FALSE;
 };
 //*******************************************************
@@ -824,13 +896,19 @@ FUNC VOID PC_ItPo_Addon_Geist_Info ()
 			CreateInvItems	   (hero,ItPo_Addon_Geist_01,1);  
 		};
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();			
+	// B_ENDPRODUCTIONDIALOG ();			
 	SpecialStart = FALSE;
 };
 //*******************************************************
@@ -864,13 +942,19 @@ FUNC VOID PC_ItPo_Perm_Health_Info ()
 		
 		CreateInvItems	   (hero,ItPo_Perm_Health,1);  
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();			
+	// B_ENDPRODUCTIONDIALOG ();			
 	SpecialStart = FALSE;
 };
 //*******************************************************
@@ -904,13 +988,19 @@ FUNC VOID PC_ItPo_Perm_Mana_Info ()
 		
 		CreateInvItems	   (hero,ItPo_Perm_Mana,1);  
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();			
+	// B_ENDPRODUCTIONDIALOG ();			
 	SpecialStart = FALSE;
 };
 //*******************************************************
@@ -944,13 +1034,19 @@ FUNC VOID PC_ItPo_Dex_Info ()
 		
 		CreateInvItems	   (hero,ItPo_Perm_Dex,1);  
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();		
+	// B_ENDPRODUCTIONDIALOG ();		
 	SpecialStart = FALSE;
 };
 //*******************************************************
@@ -984,13 +1080,19 @@ FUNC VOID PC_ItPo_Strg_Info ()
 		
 		CreateInvItems	   (hero,ItPo_Perm_STR,1);  
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();		
+	// B_ENDPRODUCTIONDIALOG ();		
 	SpecialStart = FALSE;
 };
 //*******************************************************
@@ -1024,13 +1126,19 @@ FUNC VOID PC_ItPo_Speed_Info ()
 		
 		CreateInvItems	   (hero,ItPo_Speed,1);  
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 	else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();		
+	// B_ENDPRODUCTIONDIALOG ();		
 	SpecialStart = FALSE;
 };
 //*******************************************************
@@ -1122,9 +1230,9 @@ FUNC VOID PC_ItMi_Joint_Info ()
 	else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};
-	B_ENDPRODUCTIONDIALOG ();		
+	// B_ENDPRODUCTIONDIALOG ();		
 	TabakStart = FALSE;
 };
 //*******************************************************
@@ -1163,9 +1271,9 @@ FUNC VOID PC_ItMi_Addon_Joint_01_Info ()
 	else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};
-	B_ENDPRODUCTIONDIALOG ();		
+	// B_ENDPRODUCTIONDIALOG ();		
 	TabakStart = FALSE;
 };
 //*******************************************************
@@ -1223,7 +1331,7 @@ FUNC VOID PC_ItMi_Tabak_Honey()
 	CreateInvItems (hero, ItMi_Honigtabak,1 );
 	Print (PRINT_TabakSuccess);
 	
-	B_ENDPRODUCTIONDIALOG ();		
+	// B_ENDPRODUCTIONDIALOG ();		
 	TabakStart = FALSE;
 };
 FUNC VOID PC_ItMi_Tabak_Swampherb()
@@ -1234,7 +1342,7 @@ FUNC VOID PC_ItMi_Tabak_Swampherb()
 	CreateInvItems (hero,ItMi_SumpfTabak,1 );
 	Print (PRINT_TabakSuccess);
 	
-	B_ENDPRODUCTIONDIALOG ();		
+	// B_ENDPRODUCTIONDIALOG ();		
 	TabakStart = FALSE;
 };
 FUNC VOID PC_ItMi_Tabak_Mushroom_01()
@@ -1245,7 +1353,7 @@ FUNC VOID PC_ItMi_Tabak_Mushroom_01()
 	CreateInvItems (hero,ItMi_PilzTabak,1 );
 	Print (PRINT_TabakSuccess);
 	
-	B_ENDPRODUCTIONDIALOG ();		
+	// B_ENDPRODUCTIONDIALOG ();		
 	TabakStart = FALSE;
 };
 
@@ -1286,11 +1394,17 @@ FUNC VOID PC_ItPo_MegaDrink_Info ()
 		
 		CreateInvItems 	   (hero,ItPo_MegaDrink,1); 
 		Print (PRINT_AlchemySuccess);
+		if (Npc_HasItems (self, ItMi_Flask) > 0)
+		{
+			Npc_RemoveInvItems (self, ItMi_Flask,1);
+		} else {
+			B_ENDPRODUCTIONDIALOG ();
+		};
 	}
 		else 
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
+		// CreateInvItems (self, ItMi_Flask,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
+	// B_ENDPRODUCTIONDIALOG ();
 };

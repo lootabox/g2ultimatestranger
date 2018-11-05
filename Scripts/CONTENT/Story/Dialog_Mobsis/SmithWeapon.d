@@ -79,6 +79,7 @@ INSTANCE PC_Ore (C_INFO)
 FUNC INT PC_Ore_Condition()
 {	
 	if(PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Special_01] == TRUE || PLAYER_TALENT_SMITH[WEAPON_2H_Special_01] == TRUE)
 	&& (Normalwaffen == FALSE)
 	&& (Erzwaffen == FALSE)
 	{	
@@ -162,8 +163,12 @@ FUNC VOID PC_ItMw_1H_Common_Info ()
 	CreateInvItems 	    (hero, ItMw_1H_Common_01,  1); 
 	Print (PRINT_SmithSuccess);
 	
-	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	if (Npc_HasItems (hero, ItMiSwordrawhot)) {
+		Npc_RemoveInvItems  (hero,ItMiSwordrawhot,1);
+	} else {
+		B_ENDPRODUCTIONDIALOG ();
+		Normalwaffen = FALSE;
+	};
 };
 //*******************************************************
 INSTANCE PC_WEAPON_1H_Harad_01 (C_INFO)
@@ -189,8 +194,12 @@ FUNC VOID PC_WEAPON_1H_Harad_01_Info ()
 	CreateInvItems 	    (hero,ItMw_Schwert1 ,  1); 
 	Print (PRINT_SmithSuccess);
 	
-	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	if (Npc_HasItems (hero, ItMiSwordrawhot)) {
+		Npc_RemoveInvItems  (hero,ItMiSwordrawhot,1);
+	} else {
+		B_ENDPRODUCTIONDIALOG ();
+		Normalwaffen = FALSE;
+	};
 };
 //*******************************************************
 INSTANCE PC_WEAPON_1H_Harad_02 (C_INFO)
@@ -216,8 +225,12 @@ FUNC VOID PC_WEAPON_1H_Harad_02_Info ()
 	CreateInvItems 	    (hero,ItMw_Schwert4 ,  1); 
 	Print (PRINT_SmithSuccess);
 	
-	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	if (Npc_HasItems (hero, ItMiSwordrawhot)) {
+		Npc_RemoveInvItems  (hero,ItMiSwordrawhot,1);
+	} else {
+		B_ENDPRODUCTIONDIALOG ();
+		Normalwaffen = FALSE;
+	};
 };
 //*******************************************************
 INSTANCE PC_WEAPON_1H_Harad_03 (C_INFO)
@@ -243,8 +256,12 @@ FUNC VOID PC_WEAPON_1H_Harad_03_Info ()
 	CreateInvItems 	    (hero,ItMw_Rubinklinge ,  1); 
 	Print (PRINT_SmithSuccess);
 	
-	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	if (Npc_HasItems (hero, ItMiSwordrawhot)) {
+		Npc_RemoveInvItems  (hero,ItMiSwordrawhot,1);
+	} else {
+		B_ENDPRODUCTIONDIALOG ();
+		Normalwaffen = FALSE;
+	};
 };
 //*******************************************************
 INSTANCE PC_WEAPON_1H_Harad_04 (C_INFO)
@@ -270,8 +287,12 @@ FUNC VOID PC_WEAPON_1H_Harad_04_Info ()
 	CreateInvItems 	    (hero,ItMw_ElBastardo ,  1); 
 	Print (PRINT_SmithSuccess);
 	
-	B_ENDPRODUCTIONDIALOG ();
-	Normalwaffen = FALSE;
+	if (Npc_HasItems (hero, ItMiSwordrawhot)) {
+		Npc_RemoveInvItems  (hero,ItMiSwordrawhot,1);
+	} else {
+		B_ENDPRODUCTIONDIALOG ();
+		Normalwaffen = FALSE;
+	};
 };
 //*******************************************************
 
@@ -305,10 +326,15 @@ FUNC VOID PC_ItMw_1H_Special_01_Info ()
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
+		CreateInvItems (hero, ItMiSwordrawhot,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
-	Erzwaffen = FALSE;
+
+	if (Npc_HasItems (hero, ItMiSwordrawhot)) {
+		Npc_RemoveInvItems  (hero,ItMiSwordrawhot,1);
+	} else {
+		B_ENDPRODUCTIONDIALOG ();
+		Erzwaffen = FALSE;
+	};
 };
 //*******************************************************
 
@@ -339,13 +365,18 @@ FUNC VOID PC_ItMw_2H_Special_01_Info ()
 		CreateInvItems 	    (hero,ItMw_2H_Special_01,1); 
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
+		CreateInvItems (hero, ItMiSwordrawhot,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
-	Erzwaffen = FALSE;
+
+	if (Npc_HasItems (hero, ItMiSwordrawhot)) {
+		Npc_RemoveInvItems  (hero,ItMiSwordrawhot,1);
+	} else {
+		B_ENDPRODUCTIONDIALOG ();
+		Erzwaffen = FALSE;
+	};
 };
 //*******************************************************
 
@@ -376,13 +407,18 @@ FUNC VOID PC_ItMw_1H_Special_02_Info ()
 		CreateInvItems 	   (hero,ItMw_1H_Special_02,1); 
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
+		CreateInvItems (hero, ItMiSwordrawhot,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
-	Erzwaffen = FALSE;
+
+	if (Npc_HasItems (hero, ItMiSwordrawhot)) {
+		Npc_RemoveInvItems  (hero,ItMiSwordrawhot,1);
+	} else {
+		B_ENDPRODUCTIONDIALOG ();
+		Erzwaffen = FALSE;
+	};
 };
 //*******************************************************
 
@@ -413,13 +449,18 @@ FUNC VOID PC_ItMw_2H_Special_02_Info ()
 		CreateInvItems 	    (hero,ItMw_2H_Special_02,1); 
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
+		CreateInvItems (hero, ItMiSwordrawhot,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
-	Erzwaffen = FALSE;
+
+	if (Npc_HasItems (hero, ItMiSwordrawhot)) {
+		Npc_RemoveInvItems  (hero,ItMiSwordrawhot,1);
+	} else {
+		B_ENDPRODUCTIONDIALOG ();
+		Erzwaffen = FALSE;
+	};
 };
 //*******************************************************
 INSTANCE PC_ItMw_1H_Special_03 (C_INFO)
@@ -449,13 +490,18 @@ FUNC VOID PC_ItMw_1H_Special_03_Info ()
 		CreateInvItems 	   (hero,ItMw_1H_Special_03,1); 
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
+		CreateInvItems (hero, ItMiSwordrawhot,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
-	Erzwaffen = FALSE;
+
+	if (Npc_HasItems (hero, ItMiSwordrawhot)) {
+		Npc_RemoveInvItems  (hero,ItMiSwordrawhot,1);
+	} else {
+		B_ENDPRODUCTIONDIALOG ();
+		Erzwaffen = FALSE;
+	};
 };
 //*******************************************************
 
@@ -486,13 +532,18 @@ FUNC VOID PC_ItMw_2H_Special_03_Info ()
 		CreateInvItems 	    (hero,ItMw_2H_Special_03,1); 
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
+		CreateInvItems (hero, ItMiSwordrawhot,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
-	Erzwaffen = FALSE;
+
+	if (Npc_HasItems (hero, ItMiSwordrawhot)) {
+		Npc_RemoveInvItems  (hero,ItMiSwordrawhot,1);
+	} else {
+		B_ENDPRODUCTIONDIALOG ();
+		Erzwaffen = FALSE;
+	};
 };
 //*******************************************************
 
@@ -525,13 +576,18 @@ FUNC VOID PC_ItMw_1H_Special_04_Info ()
 		CreateInvItems 	   (hero,ItMw_1H_Special_04,1); 
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
+		CreateInvItems (hero, ItMiSwordrawhot,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
-	Erzwaffen = FALSE;
+
+	if (Npc_HasItems (hero, ItMiSwordrawhot)) {
+		Npc_RemoveInvItems  (hero,ItMiSwordrawhot,1);
+	} else {
+		B_ENDPRODUCTIONDIALOG ();
+		Erzwaffen = FALSE;
+	};
 };
 //*******************************************************
 
@@ -564,13 +620,18 @@ FUNC VOID PC_ItMw_2H_Special_04_Info ()
 		CreateInvItems 	   (hero,ItMw_2H_Special_04,1); 
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
+		CreateInvItems (hero, ItMiSwordrawhot,1);
 	};	
-	B_ENDPRODUCTIONDIALOG ();
-	Erzwaffen = FALSE;
+
+	if (Npc_HasItems (hero, ItMiSwordrawhot)) {
+		Npc_RemoveInvItems  (hero,ItMiSwordrawhot,1);
+	} else {
+		B_ENDPRODUCTIONDIALOG ();
+		Erzwaffen = FALSE;
+	};
 };
 //*******************************************************
 

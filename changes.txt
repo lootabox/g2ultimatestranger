@@ -1,9 +1,9 @@
 
 
 
-		MAJOR CHANGES
+		MAJOR FEATURES AND CHANGES
 
-	Menu
+	Main menu
 
 Menu options are more clearly categorized:
 Game: Gameplay settings.
@@ -17,6 +17,12 @@ Ambient subtitles, Blood detail, Inventory columns, Item effects, Lock scramblin
 
 Default menu option when not ingame is load game instead of new game.
 
+
+	Ingame menus
+
+Fire protection is renamed to Dragon fire protection.
+
+
 	NPCs
 
 NPCs only take 20% of gold from NH.
@@ -24,14 +30,42 @@ NPCs only loot gold from NH who was caught stealing or by people who are thieves
 NPCs only take the weapon from NH if he was caught doing something violent or threatening.
 
 
+	Alchemy
+
+Alchemist's bench does not automatically kick you out of the dialog, unless completely out of Lab Water Bottles.
+Making joints and tobacco does not consume Lab Water Bottles, though one is needed to use the Alchemy Table.
 
 
-		MINOR CHANGES
+	Smithing
 
-	Equipment
+Anvil does not automatically kick you out of the dialog, unless completely out of Red Hot Steel.
+Missing production items gives back Red Hot Steel instead of Raw Steel.
+Ore weapon forging option is visible only if NH knows how to make them.
+
+
+	Enemies
+
+Shadow Lord Archol has same amount of protection as other shadow warriors.
+
+
+		MINOR IMPROVEMENTS AND FIXES
+
+	Armor
 
 Addon armor have correct material tag.
 Armor buying dialog options are formatted the same way.
+
+
+	Weapons
+
+Cutlass (common) is renamed to Heavy Cutlass.
+Cutlass (pirate) is renamed to Heavy Pirate's Cutlass.
+Militia Short Sword and Short Sword stats are swapped.
+Orc weapons have their orcish names.
+Rapier renamed to Sabre.
+Sword renamed to Rapier.
+Wands renamed to Staves.
+
 El Bastardo and Rough Sword are categorized as sword, not axes.
 Inquisitor deals blunt damage, not edge.
 
@@ -48,14 +82,13 @@ Paladin runes now cost correct amount of learning points.
 Root Snare does not work against golems or summoned demons.
 Sleep spell does not affect any magician.
 Sleep spell affects Cornelius, Judge, Larius and NH even if he becomes paladin/fire mage.
-Water based spells deal halved damage against large/heavy creatures and double against fire based creatures.
+Water spells properly deal halved damage against large/heavy creatures and double against fire based creatures.
 
 
 	Monster
 
 Goblins and Skeletons do not create additional weapons in their inventory.
 Lower Skeleton renamed to Lesser Skeleton.
-Shadow Lord Archol has same amount of protection as other shadow warriors.
 Skeletal monsters do not bleed.
 Snapper Pack Leader has same amount of protection as other snappers.
 Snorting Dragon Snapper will have 2 horns instead of 1 if Gaan teaches the NH that trophy skill after killing it.
@@ -155,6 +188,9 @@ Lehmar does not immediately notice the theft of his ledger.
 Lehmar does not lend money to NH if he attacked him, unless Oblivion is cast on him.
 Lester will refuse joining the crew if dismissed twice, with previously unused dialogue.
 Logan teaches skinning reptiles instead of skinning off furs.
+Maria cannot be asked to raise the salary from Onar before it has been agreed upon.
+Maria gives dragon hunters gold instead of increase in salary that they can't get anymore.
+Maria's golden plate can only be returned after asking who she is.
 Mario cannot be recruited to a full ship crew.
 Mario will refuse joining the crew if dismissed twice and gets angry at NH, with previously unused dialogue.
 Matteo only sells his leather armor until beginning of chapter 3, dialogue adjusted accordingly.
@@ -212,6 +248,7 @@ Wolf cannot be talked about joining the mercenaries if part of a guild already.
 Wolf will not join the crew if he gets pissed off at NH.
 Wulfgar makes comments on training of weapon skills.
 Xardas' dialog has 3 more previously unused dialogue lines.
+
 
 
 	Random

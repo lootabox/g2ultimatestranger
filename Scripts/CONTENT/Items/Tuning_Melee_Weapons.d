@@ -74,10 +74,10 @@ const int Condition_Schmiedehammer		= 10;
 const int Range_Schmiedehammer			= 30;
 const int Value_Schmiedehammer			= 200;
 //Kurzschwert der Miliz - MILIZ - NEUE INSTANZ
-const int Damage_ShortSword1 			= 20; 
-const int Condition_ShortSword1			= 10;
+const int Damage_ShortSword1 			= 40; 
+const int Condition_ShortSword1			= 20;
 const int Range_ShortSword1				= 50;
-const int Value_ShortSword1				= 250;
+const int Value_ShortSword1				= 500;
 // Nagelknüppel - für BANDITEN - NEUE INSTANZ 
 const int Damage_Nagelknueppel			= 25; 
 const int Condition_Nagelknueppel		= 10;
@@ -260,10 +260,10 @@ const int Value_Orkschwert			=  25;
 // Kapitel 1 - Händler
 // *******************
 //Kurzschwert - NEUE INSTANZ
-const int Damage_ShortSword3 		= 40; 
-const int Condition_ShortSword3		= 20;
+const int Damage_ShortSword3 		= 20; 
+const int Condition_ShortSword3		= 10;
 const int Range_ShortSword3			= 50;
-const int Value_ShortSword3			= 500;
+const int Value_ShortSword3			= 250;
 //Nagelkeule - NEUE INSTANZ
 const int Damage_Nagelkeule 		= 40; 
 const int Condition_Nagelkeule		= 30;

@@ -165,7 +165,7 @@ instance DIA_Maria_BringPlate	(C_INFO)
 
 func int DIA_Maria_BringPlate_Condition ()
 {
-	if (Npc_HasItems (other, ItMi_MariasGoldPlate) > 0)
+	if (Npc_KnowsInfo(other,DIA_Maria_Hallo)) && (Npc_HasItems (other, ItMi_MariasGoldPlate) > 0)
 	{
 		return TRUE;
 	};
@@ -213,17 +213,24 @@ func void DIA_Maria_Belohnung_Info ()
 	
 	
 	if (other.guild == GIL_SLD)
-	|| (Npc_KnowsInfo (other, DIA_Onar_HowMuch))
 	{
 		AI_Output (self, other, "DIA_Maria_Belohnung_17_01"); //You're working for my husband as a mercenary, aren't you?
 		AI_Output (other, self, "DIA_Maria_Belohnung_15_02"); //Right.
 		AI_Output (self, other, "DIA_Maria_Belohnung_17_03"); //How much is my husband paying you?
-		B_Say_Gold (other, self, SOLD);
-		AI_Output (self, other, "DIA_Maria_Belohnung_17_04"); //That's not enough. Go to him and tell him to pay you more.
-		AI_Output (other, self, "DIA_Maria_Belohnung_15_05"); //And you think he'll do that?
-		AI_Output (self, other, "DIA_Maria_Belohnung_17_06"); //He knows what happens if he doesn't. Believe me.
-		Maria_MehrGold = TRUE;
-		Maria_Belohnung = TRUE;
+		if (Npc_KnowsInfo (other, DIA_Onar_HowMuch))
+		{
+			B_Say_Gold (other, self, SOLD);
+			AI_Output (self, other, "DIA_Maria_Belohnung_17_04"); //That's not enough. Go to him and tell him to pay you more.
+			AI_Output (other, self, "DIA_Maria_Belohnung_15_05"); //And you think he'll do that?
+			AI_Output (self, other, "DIA_Maria_Belohnung_17_06"); //He knows what happens if he doesn't. Believe me.
+			Maria_MehrGold = TRUE;
+			Maria_Belohnung = TRUE;
+		}
+		else
+		{
+			AI_Output (other, self, "DIA_Addon_Quarhodron_Fragen_NoPlan_15_00"); //I don't know.
+			AI_Output (self, other, "DIA_Maria_Belohnung_SOLD_17_02"); //Come back when you have discussed your pay with my husband.
+		};
 	}
 	else if (other.guild == GIL_NONE)
 	{
@@ -243,9 +250,9 @@ func void DIA_Maria_Belohnung_Info ()
 func void DIA_Maria_Belohnung_Gold()
 {
 	AI_Output (other, self, "DIA_Maria_Belohnung_Gold_15_00"); //No - not really.
+	AI_Output (self, other, "DIA_Maria_Belohnung_Gold_17_01"); //Then take this gold as a reward. You've earned it.
 	B_GiveInvItems (self, other, itmi_gold, 50);
 	Maria_Belohnung = TRUE;
-	AI_Output (self, other, "DIA_Maria_Belohnung_Gold_17_01"); //Then take this gold as a reward. You've earned it.
 	Info_ClearChoices (DIA_Maria_Belohnung);
 };
 

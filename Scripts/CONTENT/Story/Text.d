@@ -719,7 +719,7 @@ const string NAME_DamagePerSec	= "Damage per sec.:";
 
 const string NAME_Prot_Edge		= "Weapon protection:";
 const string NAME_Prot_Point	= "Arrow protection:";
-const string NAME_Prot_Fire		= "Fire protection:";
+const string NAME_Prot_Fire		= "Dragon fire protection:";
 const string NAME_Prot_Magic	= "Magic protection:";
 
 const string NAME_Bonus_HP		= "Hitpoint bonus:";

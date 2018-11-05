@@ -69,7 +69,7 @@ INSTANCE ItMW_Addon_Knife01 (C_Item)
 // *****************************************************
 INSTANCE ItMW_Addon_Stab01 (C_Item)
 {	
-	name 				=	"Magician's Wand";  
+	name 				=	"Magician's staff";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -89,7 +89,7 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 	visual 				=	"ItMW_MageStaff_Good_2H_01.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF1";
 
-	description			= 	"Wand of the Fire Magicians";
+	description			= 	"Staff of the Fire Magicians";
 
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
@@ -99,7 +99,7 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 // *****************************************************
 INSTANCE ItMW_Addon_Stab02 (C_Item)
 {	
-	name 				=	"Magic Wand";  
+	name 				=	"Magic staff";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -156,7 +156,7 @@ FUNC VOID UnEquip_Zauberstab()
 // *****************************************************
 INSTANCE ItMW_Addon_Stab03 (C_Item)
 {	
-	name 				=	"Wand of Water";  
+	name 				=	"Staff of Water";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -176,7 +176,7 @@ INSTANCE ItMW_Addon_Stab03 (C_Item)
 	visual 				=	"ItMW_MageStaff_Blades_2H_01.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF3";
 
-	description			= 	"Wand of the Water Mages";
+	description			= 	"Staff of the Water Mages";
 
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
@@ -186,7 +186,7 @@ INSTANCE ItMW_Addon_Stab03 (C_Item)
 // *****************************************************
 INSTANCE ItMW_Addon_Stab04 (C_Item)
 {	
-	name 				=	"Ulthar's Wand";  
+	name 				=	"Ulthar's staff";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -208,7 +208,7 @@ INSTANCE ItMW_Addon_Stab04 (C_Item)
 
 	description			= 	name;
 
-	TEXT[1]				= "Ulthar enchanted this wand.";
+	TEXT[1]				= "Ulthar enchanted this staff.";
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_04;
@@ -506,7 +506,7 @@ INSTANCE ItMw_Addon_PIR2hAxe (C_Item)
 //*********************************************************
 INSTANCE ItMw_Addon_PIR2hSword (C_Item)
 {	
-	name 				=	"Cutlass";  
+	name 				=	"Heavy Pirate's Cutlass"; //"Cutlass";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
