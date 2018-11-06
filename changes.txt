@@ -99,12 +99,13 @@ Undead Orc use the restored orcish hammer Krush Karrok.
 
 	NPCs General
 
-Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
-Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Martin, Milten, Orlan, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras.
-Fixed logical issues with dialogue of Diego, Ramon, Ulf, Vatras, Xardas.
+Fixed Fajeth, Tengron and Knight 263 referring to Lord Andre when telling NH to go settle his crimes.
 Fixed XP award for pickpocketing Cavalorn, Dobar, Engor, Francis, Franco, Salandril, Valentino.
 Fixed XP award for recruiting Lares, Lester.
+Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
+Fixed logical issues with dialogue of Diego, Ramon, Ulf, Vatras, Xardas.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
+Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Martin, Milten, Orlan, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras.
 
 Changed default weapon from Heavy Branch to something that makes sense for Akil, Cornelius, Judge, Larius, Onar, Sekob.
 Changed NPCs to receive varying guild specific weapon on spawn, instead of always Heavy Branch, if their regular weapon is taken.
@@ -124,6 +125,10 @@ Bartok now grants previously omitted XP bonus for finishing the hunt with him.
 Bartok only equips his hunting gear while hunting.
 Bennet makes NH dragon hunter only after giving the armor.
 Betsy gives no experience when killed.
+Biff can be asked to rejoin the crew in the Valley of Mines after refusing him.
+Biff can only be hired after asking what is he doing in the Valley of Mines.
+Biff does not grant NH experience before he is hired.
+Biff will not run down from the mountain when encountering Feomathar and stays within hearing distance.
 Boltan takes into account presence of Bennet, Borka, Cornelius and Fernardo when he says that all the cells are empty.
 Borka considers Heavy Militia armor as militia armor.
 Brandon quest cancels if he is killed.
@@ -154,12 +159,15 @@ Gaan wields a Wolf Blade instead of a branch.
 Gaan won't know about the death of the Snorting Dragon Snapper unless he is close to its location.
 Gaan's dialog option for asking who he is cannot glitch up and become unavailable.
 Garond can be told about Silvestro's mining site even if Diego has died.
+Garond is not informed about death of Silvestro, if NH does not know about his death.
 Gerold can be asked whether he ever sleeps only before receiving the order from Garond to free Gorn.
 Gerold gives explicit options for giving stew and fish soup.
 Girion attacks NH to kill.
 Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
 Greg's treasure hunt quest cancels if the first treasure is not given to him and he will comment in Jharkendar if the quest fails.
+Hagen will hint at NH joining paladins only when all requirements are fulfilled.
+Hagen will not make NH paladin before delivering the report from Valley of Mines to avoid issue with Pedro not letting NH in monastery.
 Halvor is not given the compromising note for reading.
 Hanna has 16 lines of dialogue and new interaction restored related to the thieves' guild.
 Henry will consider all higher tier armor as luxurious and will comment appropriately.
@@ -178,6 +186,7 @@ Kardif considers Heavy Militia armor as militia armor.
 Kati can be asked about location of Bengar and Sekobs farms only before talking to them.
 Kervo's quest cancels in chapter 4, causing Kerov and Geppert to be killed by a Lurker instead of them disappearing.
 Kervo's quest fails if he is killed.
+Knight 263 can be asked for a report only if NH is paladin.
 Landlord will not give more then 5 beers per chapter and only 1 per day.
 Lares's dialog has 5 more previously unused dialogue lines.
 Lee can be told about lizard people only from chapter 4 onwards.
@@ -224,6 +233,8 @@ Senyan is told by NH that Esteban is dead, instead of giving him other news abou
 Sergio can only be asked about access to library if NH has not already achieved it.
 Skinner can be asked about the attack on Esteban during the daytime without him getting angry.
 Skip quest cancels if he is killed.
+Sylvio attacking NH causes Biff to attack Bullco as well, if he is with NH.
+Sylvio attacks to kill NH.
 Sylvio shows correct pick pocket difficulty in Valley of Mines.
 Talbin wields a Wolf Blade instead of a branch.
 Thekla now grants previously omitted XP bonus for defeating Bullco.
@@ -274,6 +285,7 @@ Following actions no longer cause unnecessary journal updates:
 * Alric asked to duel when he does not have his sword.
 * Alrik, Karl, Lares, Brahim, Ignaz and Kardif talked about who can teach and sell things.
 * Angar, Bennet, Diego, Gorn, Lee, Milten and Vatras told where the enemy is hiding.
+* Biff asked to work for NH.
 * Bones asked to give bandit armor before receiving permission from Greg.
 * Bones, Morgan and Henry talked to about who can teach what.
 * Cipher told that the swamp dragon is dead.

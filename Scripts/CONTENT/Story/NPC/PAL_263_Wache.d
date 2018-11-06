@@ -7,7 +7,8 @@ instance PAL_263_Wache (Npc_Default)
 	id 			= 263;
 	voice 		= 4;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
-	npctype		= NPCTYPE_MAIN;
+	//npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_OCMAIN;
 	
 	// ------ Attribute ------
 	B_SetAttributesToChapter (self, 4);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)

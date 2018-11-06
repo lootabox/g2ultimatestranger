@@ -447,8 +447,12 @@ func void DIA_SylvioDJG_WHATNEXT_ATTACK ()
 
 	B_LogEntry (TOPIC_Dragonhunter,"That dirty pig Sylvio was after claiming my victory over the ice dragons. There was a bit of an argument."); 
 
-	B_Attack (self, other, AR_NONE, 1);	
-	B_Attack (DJG_Bullco, other, AR_NONE, 1);	
+	B_Attack (self, other, AR_KILL, 1);
+	B_Attack (DJG_Bullco, other, AR_NONE, 1);
+	if (Biff.aivar[AIV_PARTYMEMBER] == TRUE)
+	{
+		B_Attack(Biff,DJG_Bullco,AR_GuardStopsFight,1);
+	};
 };
 
 ///////////////////////////////////////////////////////////////////////

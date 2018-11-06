@@ -173,6 +173,8 @@ func void DIA_Biff_WASHIERIMTAL_Info ()
 	AI_Output			(other, self, "DIA_Biff_WASHIERIMTAL_15_00"); //What are you hoping to find here in the Valley of Mines?
 	AI_Output			(self, other, "DIA_Biff_WASHIERIMTAL_07_01"); //Gold and honor. What else? When I'm finished with the dragon, I'll be swimming in gold.
 	AI_Output			(self, other, "DIA_Biff_WASHIERIMTAL_07_02"); //Enough to spend the rest of my life frequenting every tavern and cathouse in the country.
+	
+	B_LogEntry (TOPIC_Dragonhunter,"The Dragon Hunter Biff is a typical mercenary. If I pay him, he'll fight for me."); 
 
 	Info_AddChoice	(DIA_Biff_WASHIERIMTAL, "Well, then, I wish you luck.", DIA_Biff_WASHIERIMTAL_vielglueck );
 	Info_AddChoice	(DIA_Biff_WASHIERIMTAL, "Either that, or you'll be dead!", DIA_Biff_WASHIERIMTAL_ihrtot );
@@ -211,7 +213,8 @@ instance DIA_Biff_ARBEITEN		(C_INFO)
 func int DIA_Biff_ARBEITEN_Condition ()
 {
 	if 	(DJG_BiffParty == FALSE)
-		&& (Npc_KnowsInfo(other, DIA_Biff_HALLO))
+		//&& (Npc_KnowsInfo(other, DIA_Biff_HALLO))
+		&& Npc_KnowsInfo(other,DIA_Biff_WASHIERIMTAL)
 		&& (DJG_Biff_Stay == FALSE)	
 			{
 					return TRUE;
@@ -221,7 +224,7 @@ func void DIA_Biff_ARBEITEN_Info ()
 {
 	AI_Output			(other, self, "DIA_Biff_ARBEITEN_15_00"); //How would you like to work for me from now on?
 	
-	B_LogEntry (TOPIC_Dragonhunter,"The Dragon Hunter Biff is a typical mercenary. If I pay him, he'll fight for me."); 
+	//B_LogEntry (TOPIC_Dragonhunter,"The Dragon Hunter Biff is a typical mercenary. If I pay him, he'll fight for me."); 
 
 	if (DJG_BiffParty_nomore >= 6) //Joly: Biff hat bei 3 die Schnauze voll vom SC
 	{
@@ -386,28 +389,26 @@ instance DIA_Biff_ICHBLEIBHIER		(C_INFO)
 
 func int DIA_Biff_ICHBLEIBHIER_Condition ()
 {
-	if 		(
-				((Npc_GetBodyState(hero))!= BS_INVENTORY)				//Joly: wegen Truhen
-				&& ((Npc_GetBodyState(hero))!= BS_MOBINTERACT_INTERRUPT)
-				&& (DJG_BiffParty == TRUE)
-				&& (DJG_Biff_Stay == FALSE)	
-				&& 	(
-						(
-							(
-								//Joly: Biff stört nicht das Drachengespräch!
-								((Npc_GetDistToWP(self,"OW_SWAMPDRAGON_01")<4000)	&& (Npc_IsDead(SwampDragon)== FALSE)&& (SwampDragon.flags != 0))
-								||((Npc_GetDistToWP(self,"LOCATION_19_03_PATH_RUIN8")<2000)	&& (Npc_IsDead(RockDragon)== FALSE) && (RockDragon.flags != 0))
-								||((Npc_GetDistToWP(self,"CASTLE_36")<4000)			&& (Npc_IsDead(FireDragon)== FALSE) && (FireDragon.flags != 0))
-								||((Npc_GetDistToWP(self,"OW_ICEDRAGON_01")<4000)	&& (Npc_IsDead(IceDragon)== FALSE) 	&& (IceDragon.flags != 0))
-							) 	
-							&& (Npc_HasItems (hero,ItMi_InnosEye_Mis)>=1)
-						)
-						||(Npc_GetDistToWP(self,"OC_CENTER_GUARD_02")<4500)//Joly: Biff kommt nicht in die Burg
-					)
+	if ((Npc_GetBodyState(hero))!= BS_INVENTORY)				//Joly: wegen Truhen
+	&& ((Npc_GetBodyState(hero))!= BS_MOBINTERACT_INTERRUPT)
+	&& (DJG_BiffParty == TRUE)
+	&& (DJG_Biff_Stay == FALSE)	
+	&& 	(
+			(
+				(
+					//Joly: Biff stört nicht das Drachengespräch!
+					((Npc_GetDistToWP(self,"OW_SWAMPDRAGON_01")<4000)			&& (Npc_IsDead(SwampDragon)== FALSE)&& (SwampDragon.flags != 0))
+					||((Npc_GetDistToWP(self,"LOCATION_19_03_PATH_RUIN8")<2000)	&& (Npc_IsDead(RockDragon)== FALSE) && (RockDragon.flags != 0))
+					||((Npc_GetDistToWP(self,"CASTLE_36")<4000)					&& (Npc_IsDead(FireDragon)== FALSE) && (FireDragon.flags != 0))
+					||((Npc_GetDistToWP(self,"OW_ICEDRAGON_01")<4000)			&& (Npc_IsDead(IceDragon)== FALSE) 	&& (IceDragon.flags != 0))
+				) 	
+				&& (Npc_HasItems (hero,ItMi_InnosEye_Mis)>=1)
 			)
-				{
-					return TRUE;
-				};
+			||(Npc_GetDistToWP(self,"OC_CENTER_GUARD_02")<4500)//Joly: Biff kommt nicht in die Burg
+		)
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Biff_ICHBLEIBHIER_Info ()
@@ -427,7 +428,8 @@ func void DIA_Biff_ICHBLEIBHIER_Info ()
 		Npc_ExchangeRoutine	(self,"Stay_Rock");
 	};
 
-	if (Npc_GetDistToWP(self,"CASTLE_36")<10000)
+	//if (Npc_GetDistToWP(self,"CASTLE_36")<10000)
+	if (Npc_GetDistToWP(self,"CASTLE_30")<1000)
 	{
 		Npc_ExchangeRoutine	(self,"Stay_Fire");
 	};
@@ -780,7 +782,7 @@ instance DIA_Biff_KnowWhereEnemy		(C_INFO)
 func int DIA_Biff_KnowWhereEnemy_Condition ()
 {	
 	if (MIS_SCKnowsWayToIrdorath == TRUE)
-	&& (Biff_IsOnBoard == FALSE) 
+	&& (Biff_IsOnBoard == FALSE || Biff_IsOnBoard == LOG_OBSOLETE)
 	{
 		return TRUE;
 	};

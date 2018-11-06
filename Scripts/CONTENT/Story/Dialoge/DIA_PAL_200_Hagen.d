@@ -752,7 +752,7 @@ FUNC VOID DIA_Lord_Hagen_Knight_Info ()
 {
 	AI_Output			(other, self, "DIA_Lord_Hagen_Knight_15_00"); //I want to take up service with the order.
 	
-	if (MIS_RescueBennet == LOG_SUCCESS)
+	if (MIS_RescueBennet == LOG_SUCCESS) && (MIS_OLDWORLD == LOG_SUCCESS)
 	{
 		AI_Output			(self, other, "DIA_Lord_Hagen_Knight_04_01"); //Good, you have proven that you have the courage, the skill and the knowledge to serve Innos.
 		AI_Output			(self ,other, "DIA_Lord_Hagen_Knight_04_02"); //Your deeds bear witness to a pure heart.
@@ -842,6 +842,7 @@ FUNC INT DIA_Lord_Hagen_WhatProof_Condition ()
 {	
 	if (Hagen_GaveInfoKnight == TRUE)	
 	&& (MIS_RescueBennet != LOG_SUCCESS)
+	&& (MIS_OLDWORLD != LOG_SUCCESS)
 	{
 		return TRUE;
 	};
@@ -1009,11 +1010,14 @@ func void DIA_Lord_Hagen_BACKINTOWN_Info ()
 	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_01"); //Take this rune as a token of my gratitude. It will take you safely back to the city whenever you want.
 	B_GiveInvItems (self, other, ItRu_TeleportSeaport, 1);
 	
-	
 	CreateInvItems 		(self, ItWr_PermissionToWearInnosEye_MIS, 1);	
 	B_GiveInvItems 		(self, other,ItWr_PermissionToWearInnosEye_MIS,1);
 	MIS_InnosEyeStolen = TRUE;
 	MIS_OLDWORLD = LOG_SUCCESS;
+	if (hero.guild == GIL_MIL) && (MIS_RescueBennet == LOG_SUCCESS)
+	{
+		AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_12"); //Your deeds would give honor to one of our own.
+	};
 	
 	B_LogEntry (TOPIC_INNOSEYE,"Lord Hagen's given me a message. This will cause Master Pyrokar to hand me the Eye of Innos at the monastery.");
 
@@ -1221,9 +1225,9 @@ FUNC VOID DIA_Lord_Hagen_Cornelius_Info ()
 	
 	B_GivePlayerXP (XP_RescueBennet);
 	
-	if (hero.guild == GIL_MIL)
+	if (hero.guild == GIL_MIL) && (MIS_OLDWORLD == LOG_SUCCESS)
 	{
-		AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_12"); //Your deeds would redound to the honor of one of our own.
+		AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_12"); //Your deeds would give honor to one of our own.
 	};
 };
 //--------Hier endet der gesamte Befreie den Schmied Klumpatsch-------------

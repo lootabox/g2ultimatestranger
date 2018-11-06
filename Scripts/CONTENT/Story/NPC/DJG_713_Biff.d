@@ -13,7 +13,7 @@ instance DJG_713_Biff (Npc_Default)
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	
-	aivar[AIV_PARTYMEMBER] = TRUE;	
+	//aivar[AIV_PARTYMEMBER] = TRUE;
 	aivar[AIV_ToughGuy] 		= TRUE;
 	aivar[AIV_ToughGuyNewsOverride] = TRUE;
 	aivar[AIV_IgnoresArmor] 		= TRUE;
@@ -79,8 +79,10 @@ FUNC VOID Rtn_Stay_Rock_713 ()
 
 FUNC VOID Rtn_Stay_Fire_713 ()
 {
-	TA_Stand_Guarding					(08,00,23,00,"CASTLE_29");
-    TA_Stand_Guarding					(23,00,08,00,"CASTLE_29");		
+	//TA_Stand_Guarding					(08,00,23,00,"CASTLE_29");
+	//TA_Stand_Guarding					(23,00,08,00,"CASTLE_29");
+	TA_Stand_Guarding					(08,00,23,00,"CASTLE_28");
+	TA_Stand_Guarding					(23,00,08,00,"CASTLE_28");
 };
 
 FUNC VOID Rtn_Stay_Ice_713 ()

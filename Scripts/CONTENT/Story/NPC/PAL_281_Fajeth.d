@@ -7,8 +7,9 @@ instance PAL_281_Fajeth (Npc_Default)
 	id 			= 281;
 	voice 		= 12;
 	flags       = NPC_FLAG_IMMORTAL;																	//NPC_FLAG_IMMORTAL oder 0
-	npctype		= NPCTYPE_MAIN;
-	
+	//npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_OCMAIN;
+
 	// ------ Attribute ------
 	B_SetAttributesToChapter (self, 4);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 		

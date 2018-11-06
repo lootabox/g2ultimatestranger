@@ -35,8 +35,8 @@ instance DIA_PAL_263_PERM		(C_INFO)
 
 func int DIA_PAL_263_PERM_Condition ()
 {
-	if hero.guild == GIL_MIL
-	|| hero.guild == GIL_PAL
+	//if (hero.guild == GIL_MIL || hero.guild == GIL_PAL)
+	if (hero.guild == GIL_PAL)
 	{
 		return TRUE;
 	};
@@ -63,8 +63,8 @@ instance DIA_PAL_263_PERM_OTH		(C_INFO)
 
 func int DIA_PAL_263_PERM_OTH_Condition ()
 {
-	if hero.guild != GIL_MIL
-	|| hero.guild != GIL_PAL
+	//if (hero.guild != GIL_MIL || hero.guild != GIL_PAL)
+	if (hero.guild != GIL_PAL)
 	{
 		return TRUE;
 	};
