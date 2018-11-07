@@ -907,7 +907,6 @@ func void DIA_Addon_Saturas_TalkedToGhost_wasistdas ()
 	Log_CreateTopic (TOPIC_Addon_Klaue, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Addon_Klaue, LOG_RUNNING);
 	B_LogEntry (TOPIC_Addon_Klaue,"There is a powerful weapon in the temple of Adanos. It is called the 'Claw of Beliar'. Raven cannot be allowed to get his hands on this weapon."); 
-
 };
 func void DIA_Addon_Saturas_TalkedToGhost_kammern ()
 {
@@ -927,6 +926,8 @@ func void DIA_Addon_Saturas_TalkedToGhost_kammern ()
 	Log_AddEntry (TOPIC_Addon_Relicts,LogText_Addon_Relicts); 
 
 	Saturas_KnowsHow2GetInTempel = TRUE;
+
+	B_CheckLog();
 };
 
 ///////////////////////////////////////////////////////////////////////

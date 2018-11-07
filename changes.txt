@@ -202,6 +202,8 @@ Maria gives dragon hunters gold instead of increase in salary that they can't ge
 Maria's golden plate can only be returned after asking who she is.
 Mario cannot be recruited to a full ship crew.
 Mario will refuse joining the crew if dismissed twice and gets angry at NH, with previously unused dialogue.
+Martin actually takes the evidence from NH and does not repeat it needlessly every time.
+Martin only hints at going to Vatras for the Wisp amulet, if NH does not already have it.
 Matteo only sells his leather armor until beginning of chapter 3, dialogue adjusted accordingly.
 Meldor considers Heavy Militia armor as militia armor.
 Milten can teach Paladin runes in Irdorath.
@@ -226,6 +228,7 @@ Raoul cannot be talked about joining the mercenaries if part of a guild already.
 Riordian mentions William in the initial dialogue instead of the dialogue about the west.
 Rosi will not create extra gold in her inventory when giving the reward to NH for escorting her.
 Rupert can only be asked where Matteo can be found if NH did not find him yet.
+Saturas properly completes "The power of the guardians of the dead" when he tells NH about the chambers of Adanos.
 Sekob can't be talked about rent after completing the related quest.
 Sekob can't be told Rosi is back if she is dead.
 Sekob dialog no longer has option to go to talk to Onar if NH already talked with him.
@@ -254,12 +257,12 @@ Vatras dialog no longer has "MORE" option, instead options are only shown when t
 Vatras dialog won't have a mention of the novice at monastery gate if NH did not meet him.
 Vatras does not sell Almanacs of the Possessed given to him in Irdorath.
 Vatras gives different scrolls as reward for bringing stone tablets, if NH has corresponding runes.
+Vatras introduces Martin to NH when reporting Fernando, if he has not already been mentioned.
 Vatras' offer for the Will-o'-the-wisp amulet can be refused, so NH never receives the amulet.
 Wolf cannot be talked about joining the mercenaries if part of a guild already.
 Wolf will not join the crew if he gets pissed off at NH.
 Wulfgar makes comments on training of weapon skills.
 Xardas' dialog has 3 more previously unused dialogue lines.
-
 
 
 	Random

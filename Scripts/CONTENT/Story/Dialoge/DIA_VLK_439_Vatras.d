@@ -1219,6 +1219,13 @@ func void DIA_Addon_Vatras_Waffen_Success ()
 	{
 		AI_Output	(other, self, "DIA_Addon_Vatras_CaughtFernando_15_09"); //Not yet.
 		AI_Output	(self, other, "DIA_Addon_Vatras_CaughtFernando_05_10"); //Then make haste and report to him at once. It must be stopped right now.
+		if (Vatras_ToMartin == FALSE)
+		{
+			AI_Output (self, other, "DIA_Addon_Vatras_Waffen_ToMartin_05_02"); //He has been tasked with unmasking the weapons dealer.
+			AI_Output (self, other, "DIA_Addon_Vatras_Waffen_ToMartin_05_03"); //You can find Martin in the harbor district. If you see a heap of crates, provisions and paladins, Martin won't be far.
+			Vatras_ToMartin = TRUE;
+			B_LogEntry (TOPIC_Addon_BanditTrader,"Martin, the paladins' provision master, is looking into the business with the weapons dealer. I can find him down by the harbor where the paladins store their supplies."); 
+		};
 	};
 };
 

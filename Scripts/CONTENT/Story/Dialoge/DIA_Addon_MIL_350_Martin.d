@@ -479,7 +479,10 @@ func int DIA_Addon_Martin_Fernando_Condition ()
 };
 
 var int Martin_IrrlichtHint;
-
+var int FernandoHints_ItMw;
+var int FernandoHints_ItRi;
+var int FernandoHints_ItWr;
+var int FernandoHints_Confession;
 func void DIA_Addon_Martin_Fernando_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_00"); //Eh, about the weapons dealer...
@@ -490,45 +493,48 @@ func void DIA_Addon_Martin_Fernando_Info ()
 	||(Fernando_HatsZugegeben == TRUE)
 	{
 		AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_01"); //Show me what you have.
-	
-		var int FernandoHints;
-		FernandoHints = 0;
 		
-		if 	(
-			(Npc_HasItems (other,ItMw_Addon_BanditTrader))
-			||(Npc_HasItems (other,ItRi_Addon_BanditTrader))
-			||((Npc_HasItems (other,ItWr_Addon_BanditTrader))&&(BanditTrader_Lieferung_Gelesen == TRUE))
-			)
+		if	(Npc_HasItems (other,ItMw_Addon_BanditTrader))
+		||	(Npc_HasItems (other,ItRi_Addon_BanditTrader))
+		||	((Npc_HasItems (other,ItWr_Addon_BanditTrader))&&(BanditTrader_Lieferung_Gelesen == TRUE))
+		{
+			if (Npc_HasItems (other,ItMw_Addon_BanditTrader))
 			{
-				
-				if (Npc_HasItems (other,ItMw_Addon_BanditTrader))
-				{
-					AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_02"); //I found this rapier with the bandits. The letter 'F' is carved on the pommel.
-					FernandoHints = (FernandoHints + 1);
-				};
-				if (Npc_HasItems (other,ItRi_Addon_BanditTrader))
-				{
-					AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_03"); //The bandits had this ring. It points to an overseas trader.
-					FernandoHints = (FernandoHints + 1);
-				};
-				if ((Npc_HasItems (other,ItWr_Addon_BanditTrader))&&(BanditTrader_Lieferung_Gelesen == TRUE))
-				{
-					AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_04"); //This list of deliveries of weapons and other things to the bandits here is signed by a certain Fernando.
-					FernandoHints = (FernandoHints + 3);
-				};
-			
-				if (Fernando_HatsZugegeben == TRUE)
-				{
-					AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_05"); //Besides that, Fernando, the old trader from the upper quarter, has admitted having done business with the bandits.
-					FernandoHints = (FernandoHints + 1);
-				};
-			}
-			else
-			{
-				AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_06"); //Fernando has admitted providing the bandits with weapons.
+				AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_02"); //I found this rapier with the bandits. The letter 'F' is carved on the pommel.
+				Npc_RemoveInvItems(other,ItMw_Addon_BanditTrader,Npc_HasItems(other,ItMw_Addon_BanditTrader));
+				FernandoHints_ItMw = TRUE;
 			};
-			
-		if (FernandoHints >= 3)
+			if (Npc_HasItems (other,ItRi_Addon_BanditTrader))
+			{
+				AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_03"); //The bandits had this ring. It points to an overseas trader.
+				Npc_RemoveInvItem(other,ItRi_Addon_BanditTrader);
+				FernandoHints_ItRi = TRUE;
+			};
+			if ((Npc_HasItems (other,ItWr_Addon_BanditTrader))&&(BanditTrader_Lieferung_Gelesen == TRUE))
+			{
+				AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_04"); //This list of deliveries of weapons and other things to the bandits here is signed by a certain Fernando.
+				Npc_RemoveInvItem(other,ItWr_Addon_BanditTrader);
+				B_UseFakeScroll();
+				FernandoHints_ItWr = TRUE;
+			};
+			AI_PrintScreen("Evidence given",-1,YPOS_ItemGiven,FONT_ScreenSmall,2);
+
+			if (Fernando_HatsZugegeben == TRUE)
+			{
+				AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_05"); //Besides that, Fernando, the old trader from the upper quarter, has admitted having done business with the bandits.
+				FernandoHints_Confession = TRUE;
+			};
+		}
+		else
+		{
+			AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_06"); //Fernando has admitted providing the bandits with weapons.
+			FernandoHints_Confession = TRUE;
+		};
+		
+		if	(FernandoHints_ItMw == TRUE)
+		&&	(FernandoHints_ItRi == TRUE)
+		&&	(FernandoHints_ItWr == TRUE)
+		&&	(FernandoHints_Confession == TRUE)
 		{
 			AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_07"); //I think that's enough. Fernando, then. Well, he'll get what's coming to him.
 			AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_08"); //And he always acts like butter wouldn't melt in his mouth.
@@ -556,7 +562,7 @@ func void DIA_Addon_Martin_Fernando_Info ()
 			{
 				AI_Output (self, other, "DIA_Addon_Martin_Fernando_07_16"); //That isn't enough. That could be almost anyone in the upper quarter.
 				AI_Output (self, other, "DIA_Addon_Martin_Fernando_07_17"); //It looks as though you'll have to follow the trail of the bandits and the weapons delivery farther until we find out who is behind it.
-				if (Martin_IrrlichtHint == FALSE)
+				if (Martin_IrrlichtHint == FALSE) && (SC_GotWisp == FALSE)
 				{
 					AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_18"); //Maybe you should talk to Vatras agian...
 					Martin_IrrlichtHint = TRUE;
