@@ -599,7 +599,7 @@ func int DIA_Addon_Vatras_PISSOFFFOREVVER_DI_Condition ()
 	if 	(
 		(VatrasPissedOffForever == TRUE)
 		|| (
-			(MadKillerCount >= 7) 						//SC hat mehr als 6 unschuldige auf dem Gewissen.
+			(MadKillerCount >= 6) 						//SC hat mehr als 6 unschuldige auf dem Gewissen.
 			&& (VatrasMadKillerCount != MadKillerCount)	//die letzte Chance von Vatras nicht genutzt
 			)
 	 	)

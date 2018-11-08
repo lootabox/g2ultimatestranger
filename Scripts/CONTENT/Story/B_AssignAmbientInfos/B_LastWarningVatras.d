@@ -14,7 +14,10 @@ func void B_LastWarningVatras ()
 
 func void B_VatrasPissedOff ()
 {
-	AI_Output	(self, other, "DIA_Addon_Vatras_PissedOffPerm_Add_05_00"); //Henceforth, you can no longer count on our support.
+	if (VatrasPissedOffForever == FALSE)
+	{
+		AI_Output	(self, other, "DIA_Addon_Vatras_PissedOffPerm_Add_05_00"); //Henceforth, you can no longer count on our support.
+	};
 	AI_Output	(self, other, "DIA_Addon_Vatras_PissedOffPerm_Add_05_01"); //Begone. To me you are now an outcast.
 	
 	if (Vatras_IsOnBoard == LOG_SUCCESS)

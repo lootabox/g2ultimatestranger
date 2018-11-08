@@ -262,6 +262,7 @@ Vatras dialog no longer has "MORE" option, instead options are only shown when t
 Vatras dialog won't have a mention of the novice at monastery gate if NH did not meet him.
 Vatras does not sell Almanacs of the Possessed given to him in Irdorath.
 Vatras gives different scrolls as reward for bringing stone tablets, if NH has corresponding runes.
+Vatras gives his first and last warning for killing innocents earlier and does not give a second chance if NH kills too many people.
 Vatras introduces Martin to NH when reporting Fernando, if he has not already been mentioned.
 Vatras' offer for the Will-o'-the-wisp amulet can be refused, so NH never receives the amulet.
 Wolf cannot be talked about joining the mercenaries if part of a guild already.

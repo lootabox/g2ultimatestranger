@@ -19,9 +19,9 @@ instance DIA_Addon_Vatras_KillerWarning		(C_INFO)
 
 func int DIA_Addon_Vatras_KillerWarning_Condition ()
 {
-	if (Kapitel >= 5)
+	if (Kapitel >= 3) //(Kapitel >= 5)
 	&& (MadKillerCount >= 3)
-	&& (MadKillerCount < 7)
+	&& (MadKillerCount < 6 || MIS_ReadyforChapter4 == FALSE)
 	&& (VatrasPissedOffForever == FALSE)
 	&& (Npc_IsInState (self,ZS_Talk))
 		{
@@ -52,8 +52,8 @@ instance DIA_Addon_Vatras_LastWarning		(C_INFO)
 
 func int DIA_Addon_Vatras_LastWarning_Condition ()
 {
-	if (Kapitel >= 5)
-	&& (MadKillerCount >= 7)
+	if (MIS_ReadyforChapter4 == TRUE) //(Kapitel >= 5)
+	&& (MadKillerCount >= 6)
 	&& (VatrasPissedOffForever == FALSE)
 		{
 			return TRUE;
@@ -63,11 +63,19 @@ func int DIA_Addon_Vatras_LastWarning_Condition ()
 func void DIA_Addon_Vatras_LastWarning_Info ()
 {
 	B_LastWarningVatras ();
-	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_06"); //What have you got to say for yourself?
+	if (MadKillerCount >= 9)
+	{
+		AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_Arsch_ADD_05_01"); //You leave me no choice.
+		B_VatrasPissedOff();
+	}
+	else
+	{
+		AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_06"); //What have you got to say for yourself?
 
-	Info_ClearChoices	(DIA_Addon_Vatras_LastWarning);
-	Info_AddChoice	(DIA_Addon_Vatras_LastWarning, "Get stuffed.", DIA_Addon_Vatras_LastWarning_Arsch );	 
-	Info_AddChoice	(DIA_Addon_Vatras_LastWarning, "I'm sorry. I didn't know what I was doing.", DIA_Addon_Vatras_LastWarning_Reue );	 
+		Info_ClearChoices	(DIA_Addon_Vatras_LastWarning);
+		Info_AddChoice	(DIA_Addon_Vatras_LastWarning, "Get stuffed.", DIA_Addon_Vatras_LastWarning_Arsch );	 
+		Info_AddChoice	(DIA_Addon_Vatras_LastWarning, "I'm sorry. I didn't know what I was doing.", DIA_Addon_Vatras_LastWarning_Reue );	 
+	};
 };
 func void DIA_Addon_Vatras_LastWarning_Arsch ()
 {
