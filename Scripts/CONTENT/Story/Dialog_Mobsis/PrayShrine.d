@@ -1,9 +1,11 @@
 var int PrayDay;
+var int PrayLevel;
 var string concatDonation;
 
 var int Shrine_STR_Bonus;
 var int Shrine_DEX_Bonus;
 var int Shrine_MANA_Bonus;
+var int Shrine_HP_Bonus;
 
 
 var int SpecialBless; //RAUS
@@ -197,30 +199,29 @@ FUNC INT PC_PrayShrine_Pray_Condition ()
 FUNC VOID PC_PrayShrine_Pray_Info()
 {
 	if (ShrineIsObsessed == TRUE)
-		{
-			SC_IsObsessed = TRUE;
-			PrintScreen	(PRINT_SCIsObsessed, -1,-1,FONT_Screen,2);
-			Snd_Play ("DEM_Die");
-		}
+	{
+		SC_IsObsessed = TRUE;
+		PrintScreen	(PRINT_SCIsObsessed, -1,-1,FONT_Screen,2);
+		Snd_Play ("DEM_Die");
+	}
 	else
-		{		
-			Info_ClearChoices (PC_PrayShrine_Pray);
-			Info_AddChoice (PC_PrayShrine_Pray,Dialog_Back,PC_PrayShrine_Pray_Back);
-			Info_AddChoice (PC_PrayShrine_Pray,"I want to pray and donate 0 gold pieces.",PC_PrayShrine_Pray_NoPay);
-			
-			if (Npc_HasItems (hero,ItMi_Gold) >=10)
-			{
-				Info_AddChoice (PC_PrayShrine_Pray,"I want to pray and donate 10 gold pieces.",PC_PrayShrine_Pray_SmallPay);
-			};
-			if (Npc_HasItems (hero,ItMi_Gold) >=50)
-			{
-				Info_AddChoice (PC_PrayShrine_Pray,"I want to pray and donate 50 gold pieces.",PC_PrayShrine_Pray_MediumPay);
-			};
-			if (Npc_HasItems (hero,ItMi_Gold) >=100)
-			{
-				Info_AddChoice (PC_PrayShrine_Pray,"I want to pray and donate 100 gold pieces.",PC_PrayShrine_Pray_BigPay);
-			};
+	{
+		Info_ClearChoices (PC_PrayShrine_Pray);
+		Info_AddChoice (PC_PrayShrine_Pray,Dialog_Back,PC_PrayShrine_Pray_Back);
+		
+		var int pricetopay; pricetopay = (PrayLevel+hero.level)*3+10;
+		pricetopay -= pricetopay % 10;
+		if (Npc_HasItems (hero,ItMi_Gold) >= pricetopay)
+		&& (PrayLevel < hero.level)
+		&& (PrayLevel < 50)
+		{
+			var string praystr; praystr = ConcatStrings(ConcatStrings ("I want to pray and donate ", IntToString (pricetopay)), " gold pieces.");
+			Info_AddChoice (PC_PrayShrine_Pray,praystr,PC_PrayShrine_Pray_BigPay);
 		};
+		
+		Info_AddChoice (PC_PrayShrine_Pray,"I want to pray for spiritual guidance.",PC_PrayShrine_Pray_NoPay_Mana);
+		Info_AddChoice (PC_PrayShrine_Pray,"I want to pray for good health and longevity.",PC_PrayShrine_Pray_NoPay_HP);
+	};
 }; 
 
 FUNC VOID PC_PrayShrine_Pray_Back ()
@@ -228,119 +229,79 @@ FUNC VOID PC_PrayShrine_Pray_Back ()
 	Info_ClearChoices (PC_PrayShrine_Pray);
 };
 
+
 //****************
-//	0 Gold
+//	pray hp
 //****************
 
-FUNC VOID PC_PrayShrine_Pray_NoPay ()
+FUNC VOID PC_PrayShrine_Pray_NoPay_HP ()
 {
-	var int zufall; zufall = Hlp_Random(100);
-
-	// ----- Heute Schon gebetet? -----	
-	if (PrayDay == Wld_GetDay() + 1)		
-	{
+	if (PrayDay == Wld_GetDay() + 1) {
 		PrintScreen	(Print_BlessNone, -1, -1, FONT_SCREEN, 2);
-	}
-	else if (zufall < 5) //heute noch nicht gebetet
-	{
-		B_BlessAttribute (hero, ATR_HITPOINTS_MAX, 1);
-	}
-	else
-	{
-		PrintScreen	(Print_BlessNone, -1, -1, FONT_SCREEN, 2);
+	} else {
+		B_BlessAttribute (hero, ATR_HITPOINTS, 1);
 	};
-	
 	PrayDay = Wld_GetDay () + 1;
 	Info_ClearChoices (PC_PrayShrine_Pray);
 };
 
 //****************
-//	10 Gold
+//	pray mana
 //****************
-func VOID PC_PrayShrine_Pray_SmallPay ()
+
+FUNC VOID PC_PrayShrine_Pray_NoPay_Mana ()
 {
-	Npc_RemoveInvItems  (hero,ItMi_Gold, 10);
-	
-	if (PrayDay == Wld_GetDay() + 1)		
-	{
+	if (PrayDay == Wld_GetDay() + 1) {
 		PrintScreen	(Print_BlessNone, -1, -1, FONT_SCREEN, 2);
-	}
-	else
-	{
-		B_BlessAttribute (hero, ATR_HITPOINTS_MAX, 1);
+	} else {
+		B_BlessAttribute (hero, ATR_MANA, 1);
 	};
-	
 	PrayDay = Wld_GetDay () + 1;
 	Info_ClearChoices (PC_PrayShrine_Pray);
 };
 
 //****************
-//	50 Gold
-//****************
-FUNC VOID PC_PrayShrine_Pray_MediumPay ()
-{
-	Npc_RemoveInvItems  (hero,ItMi_Gold, 50);
-	
-	// ----- Heute Schon gebetet? -----	
-	if (PrayDay == Wld_GetDay() + 1)		
-	{
-		PrintScreen	(Print_BlessNone, -1, -1, FONT_SCREEN, 2);
-	}
-	else//heute noch nicht gebetet
-	{
-		B_BlessAttribute (hero, ATR_HITPOINTS_MAX, 2);
-	};
-	
-	PrayDay = Wld_GetDay () + 1;
-	Info_ClearChoices (PC_PrayShrine_Pray);
-};
-
-//****************
-//	100 Gold
+//	pray gold
 //****************
 func VOID PC_PrayShrine_Pray_BigPay ()
 {
 	var int zufall;	zufall = Hlp_Random(100);
+	var int pricetopay; pricetopay = (PrayLevel+hero.level)*3+10;
+	pricetopay -= pricetopay % 10;
+	Npc_RemoveInvItems (hero,ItMi_Gold, pricetopay);
 	
-	Npc_RemoveInvItems  (hero,ItMi_Gold, 100);
-	
-	// ----- Heute Schon gebetet? -----	
-	if (PrayDay == Wld_GetDay() + 1)		
+	// Pseudo randomness, first always HP
+	if		(Shrine_HP_Bonus == 0)				{ zufall = 100; }
+	else if	(Shrine_HP_Bonus > 2*PrayLevel/5)	{ zufall = 0; };
+
+	if (zufall < 20)
+	&& (Shrine_STR_Bonus <= PrayLevel/5)
 	{
-		PrintScreen	(Print_BlessNone, -1, -1, FONT_SCREEN, 2);
+		B_BlessAttribute (hero, ATR_STRENGTH, 1);
+		Shrine_STR_Bonus += 1;
 	}
-	else//heute noch nicht gebetet
+	else if (zufall < 40)
+	&& (Shrine_DEX_Bonus <= PrayLevel/5)
 	{
-		if (Shrine_STR_Bonus < 10)
-		&& (hero.guild != GIL_KDF)
-		&& (hero.guild != GIL_NOV)
-		&& (zufall < 50)
-		{
-			B_BlessAttribute (hero, ATR_STRENGTH, 1);
-			Shrine_STR_Bonus += 1;
-		}
-		else if (Shrine_DEX_Bonus < 10)
-		&& (hero.guild != GIL_KDF)
-		&& (hero.guild != GIL_NOV)
-		&& (zufall >= 50)
-		{
-			B_BlessAttribute (hero, ATR_DEXTERITY, 1);
-			Shrine_DEX_Bonus += 1;
-		}
-		else if  (Shrine_MANA_Bonus < 20)
-		&& (hero.guild != GIL_SLD)
-		&& (hero.guild != GIL_DJG)
-		{
-			B_BlessAttribute (hero, ATR_MANA_MAX, 1);
-			Shrine_MANA_Bonus += 1;
-		}
-		else
-		{
-			B_BlessAttribute (hero, ATR_HITPOINTS_MAX, 3);
-		};
+		B_BlessAttribute (hero, ATR_DEXTERITY, 1);
+		Shrine_DEX_Bonus += 1;
+	}
+	else if (zufall < 70)
+	&& (Shrine_MANA_Bonus <= PrayLevel/5)
+	{
+		B_BlessAttribute (hero, ATR_MANA_MAX, 2);
+		Shrine_MANA_Bonus += 1;
+	}
+	else if (Shrine_HP_Bonus < 20)
+	{
+		B_BlessAttribute (hero, ATR_HITPOINTS_MAX, 3);
+		Shrine_HP_Bonus += 1;
+	} else {
+		// Should never get here really
+		PrintScreen	(Print_BlessNone, -1, -1, FONT_SCREEN, 2);
 	};
 	
-	PrayDay = Wld_GetDay () + 1;
+	PrayLevel = Shrine_STR_Bonus+Shrine_DEX_Bonus+Shrine_MANA_Bonus+Shrine_HP_Bonus;
 	Info_ClearChoices (PC_PrayShrine_Pray);
 };
 

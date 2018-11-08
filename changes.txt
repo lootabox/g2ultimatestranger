@@ -23,6 +23,11 @@ Default menu option when not ingame is load game instead of new game.
 Fire protection is renamed to Dragon fire protection.
 
 
+	Shrine of Innos
+
+Specific gold amounts cannot be donated. Instead for every level gained, up to 60, a donation can be made for an attribute bonus. The amount of gold required depends on donation prayers made and hero level. The bonus is not tied to guilds in any way and the different attributes receive bonuses inline with each other (pseudo random). The first 12 prayers always increase health. In addition the hero can pray without donating for full health or mana once per day.
+
+
 	NPCs
 
 NPCs only take 20% of gold from NH.
