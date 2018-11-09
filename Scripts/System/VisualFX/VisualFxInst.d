@@ -5023,11 +5023,11 @@ INSTANCE SLEEP_BLEND(CFx_Base_Proto)
  	visName_S      		= "screenblend.scx";
  	userString[0]     	= "100000000000";
  	userString[1]     	= "0 0 0 255";
- 	userString[2]     	= "0";
+ 	userString[2]     	= "1";
  	visAlphaBlendFunc_S = "BLEND";
-	emFXLifeSpan    	= 2;						// Dauer is Sekunden (über timer skaliert)
+	//emFXLifeSpan    	= 2;						// Dauer is Sekunden (über timer skaliert)
+    sfxisambient		= 1;
 };
-
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

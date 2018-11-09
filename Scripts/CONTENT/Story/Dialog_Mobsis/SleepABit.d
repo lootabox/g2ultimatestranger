@@ -8,28 +8,28 @@ func void PC_Sleep (var int t)
 
 	PLAYER_MOBSI_PRODUCTION	=	MOBSI_NONE;
 	self.aivar[AIV_INVINCIBLE]=FALSE;
-	if	(Wld_IsTime(00,00,t,00))
-	{
-		Wld_SetTime	(t,00);
-	}
-	else
-	{
-		t = t + 24;
-		Wld_SetTime	(t,00);
-	};
-
-	Wld_StopEffect("DEMENTOR_FX");
-
-	// FIXME_Nico: dauert zu lange um es vernuenftig zu machen.
-	// Wld_PlayEffect ("SLEEP_BLEND", hero, hero, 0, 0, 0, FALSE);
 
 	if (SC_IsObsessed == TRUE)
 	{
- 		PrintScreen	(PRINT_SleepOverObsessed, -1,-1,FONT_Screen,2);
+		Wld_StopEffect("DEMENTOR_FX");
+		AI_Wait(hero, 1);
+ 		PrintScreen	(PRINT_SleepOverObsessed, -1,-1,FONT_Screen,3);
+		B_Say_Overlay(hero, hero, "$DONTKNOW");
 	}
 	else
 	{
-		PrintScreen	(PRINT_SleepOver, -1,-1,FONT_Screen,2);
+		Wld_StopEffect("SLEEP_BLEND");
+		AI_Wait(hero, 1);
+		if	(Wld_IsTime(00,00,t,00))
+		{
+			Wld_SetTime	(t,00);
+		}
+		else
+		{
+			t = t + 24;
+			Wld_SetTime	(t,00);
+		};
+		PrintScreen	(PRINT_SleepOver, -1,-1,FONT_Screen,3);
 		hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
 		hero.attribute[ATR_MANA] = hero.attribute[ATR_MANA_MAX];
 	};
@@ -52,11 +52,14 @@ func void SLEEPABIT_S1 ()
 		self.aivar[AIV_INVINCIBLE]=TRUE;
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_SLEEPABIT;
 		Ai_ProcessInfos (her);
-
 		if (SC_IsObsessed == TRUE)
-			{
-				Wld_PlayEffect("DEMENTOR_FX",  hero, hero, 0, 0, 0, FALSE );
-			};
+		{
+			Wld_PlayEffect("DEMENTOR_FX",  hero, hero, 0, 0, 0, FALSE );
+		}
+		else
+		{
+			Wld_PlayEffect ("SLEEP_BLEND", hero, hero, 0, 0, 0, FALSE);
+		};
 	};
 };
 
@@ -86,6 +89,7 @@ func VOID PC_NoSleep_Info()
 {
 	AI_StopProcessInfos (self);
  	Wld_StopEffect("DEMENTOR_FX");
+	Wld_StopEffect("SLEEP_BLEND");
 	self.aivar[AIV_INVINCIBLE]=FALSE;
 	PLAYER_MOBSI_PRODUCTION	=	MOBSI_NONE;
 };

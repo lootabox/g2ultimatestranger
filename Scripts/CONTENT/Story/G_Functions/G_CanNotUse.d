@@ -23,7 +23,6 @@ func void G_CanNotUse (var int bIsPlayer, var int nAttribute, var int nValue)
 	&& (nValue == 666666)//Joly: ATR_MANA_MAX von Raven
 	{
 		strMessage = PRINT_ADDON_BELIARSCOURSE_MISSING;
-		B_BlitzInArsch ();
 		SC_FailedToEquipBeliarsWeapon = TRUE;
 	}
 	//ADDON<
