@@ -6,7 +6,6 @@
 //********************************************************************************
 
 const int	XP_STUNTBONUS							= 100;
-const int	XP_EXPLOITBONUS							= -100;
 
 //Kapitel 1 ADDON
 const int 	XP_Addon_Cavalorn_KillBrago				= 100;

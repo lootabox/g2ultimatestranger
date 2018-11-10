@@ -16,6 +16,7 @@ Settings have been moved around to proper categories and following new settings 
 Ambient subtitles, Blood detail, Inventory columns, Item effects, Lock scrambling, Mouse smoothing, Play intro, Turning speed, Video scaling, Weapon trails, Window animations.
 
 Default menu option when not ingame is load game instead of new game.
+Music is changed to the installation theme.
 
 
 	Ingame menus
@@ -104,6 +105,7 @@ Snorting Dragon Snapper will have 2 horns instead of 1 if Gaan teaches the NH th
 Stone Guardians leave properly colored pebbles on ground when hit.
 Swamp Golem bleeds green.
 Undead Orc use the restored orcish hammer Krush Karrok.
+Young Wolves at the pass are switched with regular Wolves.
 
 
 	NPCs General
@@ -113,6 +115,7 @@ Fixed XP award for pickpocketing Cavalorn, Dobar, Engor, Francis, Franco, Saland
 Fixed XP award for recruiting Lares, Lester.
 Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
 Fixed logical issues with dialogue of Diego, Ramon, Ulf, Vatras, Xardas.
+Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patrick, Monty, Tonak, Telbor, Pardos.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
 Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Martin, Milten, Orlan, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras.
 
@@ -120,6 +123,13 @@ Changed default weapon from Heavy Branch to something that makes sense for Akil,
 Changed NPCs to receive varying guild specific weapon on spawn, instead of always Heavy Branch, if their regular weapon is taken.
 
 Added ambient inventory generation for pirates.
+
+
+	NPCs Traders
+
+Martin does not sell Machetes.
+Matteo only sells his leather armor until beginning of chapter 3, dialogue adjusted accordingly.
+Samuel gets a ring he was supposed to have in his trade inventory.
 
 
 	NPCs Specific
@@ -132,6 +142,7 @@ Angar has same weapon everywhere as in the Valley of Mines.
 Bandit 10008 warns NH not to wake up Skinner only if he has not already done so.
 Bartok now grants previously omitted XP bonus for finishing the hunt with him.
 Bartok only equips his hunting gear while hunting.
+Bartok wears a Rough Bastard Sword instead of Machete.
 Bennet makes NH dragon hunter only after giving the armor.
 Betsy gives no experience when killed.
 Biff can be asked to rejoin the crew in the Valley of Mines after refusing him.
@@ -188,6 +199,7 @@ Igaraz returns to monastery after the Trial of Fire, if alive.
 Isgaroth can be asked for a blessing after he tells who he is.
 Isgaroth can be traded with as a mage, even if he was never spoken to before.
 Isgaroth properly updates quest log for requirements of joining the monastery.
+Isgaroth's blessing creates a log entry for Thorben's quest.
 Jan does not drop the gold used to buy the Medium Dragon Hunter's Armor.
 Jorgen wields a Short Sword in Irdorath instead of a Sickle.
 Kardif cannot be talked about Attila if he is nearby and the dialog option does not kill him.
@@ -213,7 +225,6 @@ Mario cannot be recruited to a full ship crew.
 Mario will refuse joining the crew if dismissed twice and gets angry at NH, with previously unused dialogue.
 Martin actually takes the evidence from NH and does not repeat it needlessly every time.
 Martin only hints at going to Vatras for the Wisp amulet, if NH does not already have it.
-Matteo only sells his leather armor until beginning of chapter 3, dialogue adjusted accordingly.
 Meldor considers Heavy Militia armor as militia armor.
 Milten can teach Paladin runes in Irdorath.
 Milten will not say Gorn is in prison if he is already released.
@@ -281,6 +292,7 @@ Added new teleport scroll to get out of the ruins behind broken bridge in Jharke
 Annotation added for giving and taking back letter to Elvrich, letter to Greg, recipe for Opolos, map to Saturas.
 Black Ore effect ends on using transformation scrolls.
 Document visual changed for Esteban's Bodyguard, Pablo, Senyan, Skip, a thug in Khorinis for reading NH's wanted poster and Saturas for reading a map.
+Experience gain is not printed out if receiving 0 xp.
 Failing to create runes for Ice Block and Destroy Undead properly returns the runestone to inventory.
 Gold mining skill does not improve by mining empty veins.
 Herring is categorized as food.
@@ -293,6 +305,8 @@ Sheep cannot be bought from Onar or Pepe after escorting one to the monastery.
 Sleep dialog has black overlay.
 Sleeping is not possible while afflicted by nightmares.
 Steel Blanks and Lab Water Bottles cannot be looted from anyone.
+Stunt bonus can be received only after learning Malcom fell down the hole and there is no penalty for jumping more than once.
+Sun Aloe can't be eaten.
 
 Following actions no longer cause unnecessary journal updates:
 * Reading Cornelius' Diary, Xardas' Letter, Lucia's farewell letter, almanac in the secret library, Black Magician's Scroll, Diary of the novice black magician, "Pure mana" and "Pure health".

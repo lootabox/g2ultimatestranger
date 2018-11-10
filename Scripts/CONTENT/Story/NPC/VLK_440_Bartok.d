@@ -17,7 +17,8 @@ instance VLK_440_Bartok (Npc_Default)
 	
 	// ------ Equippte Waffen ------																
 	//EquipItem	(self, ItRw_Bow_M_03); 
-	EquipItem	(self, ItMW_Addon_Hacker_1h_01); 
+	//EquipItem	(self, ItMW_Addon_Hacker_1h_01); 
+	EquipItem	(self, ItMw_Schwert3); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

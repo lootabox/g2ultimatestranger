@@ -18,8 +18,8 @@ FUNC VOID B_GiveTradeInv_Addon_Martin (var C_NPC slf)
 		// ------ Waffen ------
 		CreateInvItems (slf,ItMw_ShortSword1 , 3); 
 		CreateInvItems (slf,ItMw_Schwert2 , 2); 
-		CreateInvItems (slf,ItMW_Addon_Hacker_1h_01, 1);
-		CreateInvItems (slf,ItMW_Addon_Hacker_2h_01, 1);
+		//CreateInvItems (slf,ItMW_Addon_Hacker_1h_01, 1);
+		//CreateInvItems (slf,ItMW_Addon_Hacker_2h_01, 1);
 		CreateInvItems (slf,ItMw_Meisterdegen, 1);
 		CreateInvItems (slf,ItMw_ShortSword5 , 1); 
 		CreateInvItems (slf,ItMw_Schwert4 , 1); 

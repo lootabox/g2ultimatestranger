@@ -3932,16 +3932,16 @@ FUNC VOID STARTUP_NewWorld_Part_Pass_To_OW_01 ()
 	Wld_InsertNpc 	(PAL_298_Ritter, "NW_PASS_01");
 	Wld_InsertItem 	(ItWr_HitPointStonePlate2_Addon, "FP_ITEM_PASS_01");
 
-	Wld_InsertNpc	(YWolf,"NW_PASS_06");
-	Wld_InsertNpc	(YWolf,"NW_PASS_06");
+	Wld_InsertNpc	(Wolf,"NW_PASS_06");
+	Wld_InsertNpc	(Wolf,"NW_PASS_06");
 	
-	Wld_InsertNpc	(YWolf,"NW_PASS_11");
-	Wld_InsertNpc	(YWolf,"NW_PASS_11");
+	Wld_InsertNpc	(Wolf,"NW_PASS_11");
+	Wld_InsertNpc	(Wolf,"NW_PASS_11");
 	
-	Wld_InsertNpc	(YWolf,"NW_PASS_SECRET_15");
-	Wld_InsertNpc	(YWolf,"NW_PASS_SECRET_16");
-	Wld_InsertNpc	(YWolf,"NW_PASS_SECRET_16");
-	Wld_InsertNpc	(YWolf,"NW_PASS_SECRET_17");
+	Wld_InsertNpc	(Wolf,"NW_PASS_SECRET_15");
+	Wld_InsertNpc	(Wolf,"NW_PASS_SECRET_16");
+	Wld_InsertNpc	(Wolf,"NW_PASS_SECRET_16");
+	Wld_InsertNpc	(Wolf,"NW_PASS_SECRET_17");
 	
 	Wld_InsertNpc	(Giant_Rat,"NW_PASS_SECRET_05");
 	Wld_InsertNpc	(Giant_Rat,"NW_PASS_SECRET_06");

@@ -51,3 +51,8 @@ FUNC VOID Rtn_Flucht_1120 ()
 	TA_RunToWP	 (08,00,23,00,"ADW_BL_HOEHLE_03");
     TA_RunToWP	 (23,00,08,00,"ADW_BL_HOEHLE_03");
 };
+FUNC VOID Rtn_Tot_1120()
+{
+	TA_Sleep(8,0,23,0,"TOT");
+	TA_Sleep(23,0,8,0,"TOT");
+};

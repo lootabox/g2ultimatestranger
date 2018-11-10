@@ -4,6 +4,7 @@
 
 func void B_GivePlayerXP (var int add_xp)
 {
+	if (add_xp == 0) { return; };
 	if (hero.level == 0)
 	{
 		hero.exp_next = 500;

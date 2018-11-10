@@ -22,7 +22,7 @@ FUNC VOID B_GiveTradeInv_Addon_Samuel (var C_NPC slf)
 		CreateInvItems (slf, ItPl_SwampHerb,4);
 		CreateInvItems (slf, ItMi_Joint,1);
 		
-		CreateInvItems (slf, Ri_ProtFire02,1);
+		CreateInvItems (slf, ItRi_Prot_Fire_02,1);
 						
 		Samuel_ItemsGiven_Chapter_1 = TRUE;
 	};

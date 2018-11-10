@@ -71,6 +71,10 @@ FUNC VOID DIA_Isgaroth_Segen_Info()
 	AI_Output (self ,other,"DIA_Isgaroth_Segen_01_01"); //I bless you in the name of Innos. May the Lord's fire burn in your heart and give you the strength to act according to his justice.
 	
 	Isgaroth_Segen = TRUE;
+	if (MIS_Thorben_GetBlessings == LOG_RUNNING)
+	{
+		B_LogEntry (TOPIC_Thorben,"Isgaroth the Fire Magician has given me his blessing.");
+	};
 }; 
 //********************************************************************************
 //	Sergio schickt mich  (Wolf Mission)

@@ -18,7 +18,7 @@ INSTANCE MENU_MAIN(C_MENU_DEF)
 	items[8]		= "MENUITEM_MAIN_CREDITS";	
 	items[9]		= "MENUITEM_MAIN_EXIT"; 
 	
-	defaultOutGame	= 3;	// NEWGAME
+	defaultOutGame	= 3;	// LOADGAME
 	defaultInGame	= 4;	// SAVEGAME
 	
 	flags = flags | MENU_SHOW_INFO;

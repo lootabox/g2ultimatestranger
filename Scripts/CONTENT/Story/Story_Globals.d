@@ -523,9 +523,6 @@ var int 	Knows_Sumpfkrautschnaps;
 //---weitere Knows geschichten -----------------------------
 var int 	Knows_Banditenaxt;
 
-//--- Stunt Bonus ----
-
-var int StuntBonus_Once;
 
 
 

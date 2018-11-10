@@ -1602,12 +1602,21 @@ INSTANCE ItPl_Sagitta_Herb_MIS (C_Item)
 	//visual 				=	"ItPl_Strength_Herb_01.3DS";
 	visual 				=	"ItPl_Strength_Herb_02.3DS";
 	material 			=	MAT_WOOD;
+	on_state[0]			=	Use_Sagitta_Herb_MIS;
 
 	scemeName			=	"FOOD";
 
 	description			= 	name;
 	TEXT[5]				= 	NAME_Value;		
 	COUNT[5]			= 	Value_Strength_Herb_01;
+};
+
+FUNC VOID Use_Sagitta_Herb_MIS ()
+{
+	Print ( "Too disgusting to eat." );
+	CreateInvItem (self, ItPl_Sagitta_Herb_MIS);
+	if (Hlp_Random(100) > 50)	{ B_Say( hero, hero, "$AARGH_1"); }
+	else						{ B_Say( hero, hero, "$AARGH_3"); };
 };
 
 
