@@ -10,6 +10,8 @@ PROTOTYPE Mst_Default_Shadowbeast(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_SHADOWBEAST;
 	level							=	30;
 	
+	bodyStateInterruptableOverride	=	TRUE;
+	
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	150;
 	attribute	[ATR_DEXTERITY]		=	150;
@@ -76,7 +78,7 @@ INSTANCE Shadowbeast	(Mst_Default_Shadowbeast)
 {
 	B_SetVisuals_Shadowbeast();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 2);
+	//CreateInvItems (self, ItFoMuttonRaw, 2);
 };
 
 //Addon
@@ -85,5 +87,5 @@ INSTANCE BeachShadowbeast1	(Mst_Default_Shadowbeast)
 {
 	B_SetVisuals_Shadowbeast();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 2);
+	//CreateInvItems (self, ItFoMuttonRaw, 2);
 };

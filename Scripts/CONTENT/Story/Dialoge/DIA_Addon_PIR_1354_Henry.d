@@ -379,7 +379,8 @@ FUNC INT DIA_Addon_Henry_MeatForMorgan_Condition()
 	if  (self.aivar[AIV_PASSGATE] == FALSE)
 	&&  (Npc_KnowsInfo (other, DIA_Addon_Henry_Einigen))
 	&& 	(MIS_AlligatorJack_BringMeat == LOG_RUNNING)
-	&&	(Npc_HasItems (other,ItFoMuttonRaw) >= 1)
+	&&	(Npc_HasItems (other,ItFo_Addon_Krokofleisch_Mission) >= 1)
+	//&&	(Npc_HasItems (other,ItFoMuttonRaw) >= 1)
 	{
 		return TRUE;
 	};

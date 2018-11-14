@@ -57,15 +57,38 @@ func int ZS_MM_Attack_Loop ()
 {
 	Npc_GetTarget (self); // other = target
 	
-	// ------ Regeneration ------
+	// ------ Golems ------
+	if((self.aivar[AIV_MM_REAL_ID] == ID_FIREGOLEM) || (self.aivar[AIV_MM_REAL_ID] == ID_ICEGOLEM))
+	{
+		// Switch to melee
+		if(Npc_IsInFightMode(self,FMODE_FIST) && (Npc_GetDistToNpc(self,other) > FIGHT_DIST_MELEE))
+		{
+			AI_RemoveWeapon(self);
+		};
+	};
+	// ------ Dragon ------
 	if (self.guild == GIL_DRAGON)
 	{
-		self.aivar[AIV_TAPOSITION] += 1;
+		/* self.aivar[AIV_TAPOSITION] += 1;
 		if (self.attribute[ATR_HITPOINTS] < self.attribute[ATR_HITPOINTS_MAX])
 		&& (self.aivar[AIV_TAPOSITION] >= 2)
 		{
 			self.attribute[ATR_HITPOINTS] += 1;
 			self.aivar[AIV_TAPOSITION] = 0;
+		}; */
+
+		// Parade
+		if((Npc_GetDistToNpc(self,other) < 3000) && (Npc_GetDistToNpc(self,other) > 2000))
+		{
+			if(Hlp_Random(100) < 2)
+			{
+				AI_PlayAni(self,"T_WARN");
+			};
+		};
+		// Switch to melee
+		if (Npc_IsInFightMode(self,FMODE_FIST) && Npc_GetDistToNpc(self,other) > FIGHT_DIST_DRAGON_MAGIC)
+		{
+			AI_RemoveWeapon(self);
 		};
 	};
 		

@@ -75,5 +75,5 @@ INSTANCE Icewolf	(Mst_Default_Icewolf)
 {
 	B_SetVisuals_Icewolf();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
+	//CreateInvItems (self, ItFoMuttonRaw, 1);
 };

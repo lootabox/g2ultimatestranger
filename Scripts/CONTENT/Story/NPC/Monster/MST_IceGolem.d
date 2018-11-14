@@ -10,6 +10,8 @@ PROTOTYPE Mst_Default_IceGolem(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_ICEGOLEM;
 	level							=	45;
 	
+	bodyStateInterruptableOverride	=	TRUE;
+	
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	225;
 	attribute	[ATR_DEXTERITY]		=	225;

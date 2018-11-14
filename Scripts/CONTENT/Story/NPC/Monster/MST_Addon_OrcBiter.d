@@ -68,5 +68,5 @@ INSTANCE OrcBiter (Mst_Default_OrcBiter)
 	Set_OrcBiter_Visuals();
 	Npc_SetToFistMode(self);
 
-	CreateInvItems (self, ItFoMuttonRaw, 2);
+	//CreateInvItems (self, ItFoMuttonRaw, 2);
 };

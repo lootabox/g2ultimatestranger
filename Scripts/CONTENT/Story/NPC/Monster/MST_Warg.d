@@ -81,7 +81,7 @@ INSTANCE Warg	(Mst_Default_Warg)
 {
 	B_SetVisuals_Warg();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
+	//CreateInvItems (self, ItFoMuttonRaw, 1);
 };
 //**********************************************
 //	Schwarzer Wolf  (MIS)
@@ -111,5 +111,5 @@ INSTANCE BlackWolf	(Mst_Default_Warg)
 	
 	B_SetVisuals_BLACKWOLF();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
+	//CreateInvItems (self, ItFoMuttonRaw, 1);
 };

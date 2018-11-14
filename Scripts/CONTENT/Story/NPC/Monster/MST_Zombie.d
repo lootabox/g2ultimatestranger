@@ -10,6 +10,8 @@ PROTOTYPE Mst_Default_Zombie(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_ZOMBIE;
 	level							=	20;
 	
+	bodyStateInterruptableOverride	=	TRUE;
+	
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	100;
 	attribute	[ATR_DEXTERITY]		=	100;

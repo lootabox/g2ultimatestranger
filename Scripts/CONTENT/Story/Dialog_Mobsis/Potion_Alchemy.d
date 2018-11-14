@@ -1305,6 +1305,10 @@ FUNC VOID PC_ItMi_Tabak_Info ()
 	
 	Info_AddChoice 	(PC_ItMi_Tabak,DIALOG_BACK,PC_ItMi_Tabak_BACK);	
 	
+	if (Npc_HasItems (hero, ItFo_Apple) >=1)
+	{
+		Info_AddChoice 	(PC_ItMi_Tabak,"... with Apple",PC_ItMi_Tabak_Apple);
+	};
 	if (Npc_HasItems (hero, ItFo_Honey) >=1)
 	{
 		Info_AddChoice 	(PC_ItMi_Tabak,"... with Honey",PC_ItMi_Tabak_Honey);
@@ -1322,6 +1326,17 @@ FUNC VOID PC_ItMi_Tabak_Info ()
 FUNC VOID PC_ItMi_Tabak_BACK()
 {
 	Info_ClearChoices (PC_ItMi_Tabak);
+};
+FUNC VOID PC_ItMi_Tabak_Apple()
+{
+	Npc_RemoveInvItems (hero, ItMi_ApfelTabak, 1);
+	Npc_RemoveInvItems (hero, ItFo_Apple, 1);
+
+	CreateInvItems (hero,ItMi_DoppelTabak,1 );
+	Print (PRINT_TabakSuccess);
+	
+	// B_ENDPRODUCTIONDIALOG ();		
+	TabakStart = FALSE;
 };
 FUNC VOID PC_ItMi_Tabak_Honey()
 {

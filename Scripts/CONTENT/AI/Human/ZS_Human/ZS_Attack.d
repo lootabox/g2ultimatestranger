@@ -376,7 +376,8 @@ func void ZS_Attack_End ()
 		{
 			// ------ AlliJack nimmt Fleisch ------
 			if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(AlligatorJack))
-			&& (Npc_HasItems(other, ItFoMuttonRaw) > 0)
+			&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Swamprat))
+			//&& (Npc_HasItems(other, ItFoMuttonRaw) > 0)
 			{	
 				AI_StartState (self, ZS_GetMeat, 0, "");
 				return;

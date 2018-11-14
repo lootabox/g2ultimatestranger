@@ -869,6 +869,7 @@ INSTANCE ItFo_Addon_Krokofleisch_Mission (C_Item)
 	
 	description			= 	name;
 	TEXT[1]				=	"Smells fishy somehow!";
+	TEXT[2]				=	"Does not seem to be edible...";
 	
 	TEXT[5]				= 	NAME_Value;			
 	COUNT[5]			= 	Value_RawMeat;

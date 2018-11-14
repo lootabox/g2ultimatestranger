@@ -65,7 +65,7 @@ INSTANCE ItFo_Addon_Rum(C_Item)
 	visual 			=	"ItMi_Rum_02.3ds"; 
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseRum;
-	scemeName		=	"POTIONFAST";
+	scemeName		=	"POTION";
 
 	description		= 	"White Rum";
 	
@@ -98,7 +98,7 @@ INSTANCE ItFo_Addon_Grog(C_Item)
 	visual 			=	"ItMi_Rum_02.3ds"; 
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseGrog;
-	scemeName		=	"POTIONFAST";
+	scemeName		=	"POTION";
 
 	description		= 	"Genuine seaman's grog";
 	
@@ -132,7 +132,7 @@ INSTANCE ItFo_Addon_LousHammer (C_Item)
 	visual 			=	"ItMi_Rum_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseLouHammer;
-	scemeName		=	"POTIONFAST";
+	scemeName		=	"POTION";
 
 	description		= 	"Lou's Hammer";
 	
@@ -168,7 +168,7 @@ INSTANCE ItFo_Addon_SchlafHammer (C_Item)
 	visual 			=	"ItMi_Rum_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseSchlafHammer;
-	scemeName		=	"POTIONFAST";
+	scemeName		=	"POTION";
 
 	description		= 	"Double Hammer";
 	
@@ -204,7 +204,7 @@ INSTANCE ItFo_Addon_SchnellerHering(C_Item)
 	visual 			=	"ItMi_Rum_01.3ds"; 
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseSchnellerHering;
-	scemeName		=	"POTIONFAST";
+	scemeName		=	"POTION";
 
 	description		= 	"Looks dangerous!";
 	

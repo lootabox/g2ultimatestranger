@@ -155,7 +155,8 @@ INSTANCE DIA_Addon_Morgan_Meat(C_INFO)
 FUNC INT DIA_Addon_Morgan_Meat_Condition()
 {
 	IF (MIS_AlligatorJack_BringMeat == LOG_RUNNING)
-	&& (Npc_HasItems (other,ItFoMuttonRaw) >= 1)
+	&& (Npc_HasItems (other,ItFo_Addon_Krokofleisch_Mission) >= 1)
+	//&& (Npc_HasItems (other,ItFoMuttonRaw) >= 1)
 	{
 		return TRUE;
 	};	
@@ -177,14 +178,16 @@ func VOID DIA_Addon_Morgan_Meat_Info()
 
 	AI_Output (self ,other,"DIA_Addon_Morgan_Meat_07_04"); //I remember. Right! The meat! Give it here.
 	
-	var int GivenMeat; GivenMeat = Npc_HasItems (other, ItFoMuttonRaw);
+	//var int GivenMeat; GivenMeat = Npc_HasItems (other, ItFoMuttonRaw);
+	var int GivenMeat; GivenMeat = Npc_HasItems (other, ItFo_Addon_Krokofleisch_Mission);
 	
 	if (GivenMeat > 10)
 	{
 		GivenMeat = 10;
 	};
 	
-	B_GiveInvItems (other,self,ItFoMuttonRaw, GivenMeat);
+	//B_GiveInvItems (other,self,ItFoMuttonRaw, GivenMeat);
+	B_GiveInvItems (other,self,ItFo_Addon_Krokofleisch_Mission, GivenMeat);
 	
 	if (GivenMeat < 10)
 	{

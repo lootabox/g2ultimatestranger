@@ -39,10 +39,10 @@ const int	Value_DarkPearl			= 1000;
 
 //Tabak
 const int 	VALUE_ItMi_ApfelTabak	= 10;
-const int 	VALUE_ItMi_PilzTabak	= 10;
-const int 	VALUE_ItMi_SumpfTabak	= 10;
-const int 	VALUE_ItMi_DoppelTabak	= 10;
-const int 	VALUE_ItMi_HonigTabak	= 10;
+const int 	VALUE_ItMi_PilzTabak	= VALUE_ItMi_ApfelTabak + 10;//Value_Mushroom_01;
+const int 	VALUE_ItMi_SumpfTabak	= VALUE_ItMi_ApfelTabak + 10;//Value_SwampHerb;
+const int 	VALUE_ItMi_DoppelTabak	= VALUE_ItMi_ApfelTabak + 8;//Value_Apple;
+const int 	VALUE_ItMi_HonigTabak	= VALUE_ItMi_ApfelTabak + 30;//Value_Honey;
 
 //Schmuck Items 
 const int	Value_SilverRing		 = 120; 

@@ -10,6 +10,8 @@ PROTOTYPE Mst_Default_FireGolem(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_FIREGOLEM;
 	level							=	40;
 	
+	bodyStateInterruptableOverride	=	TRUE;
+	
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	200;
 	attribute	[ATR_DEXTERITY]		=	200;

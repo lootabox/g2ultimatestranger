@@ -12,6 +12,8 @@ PROTOTYPE Mst_Default_Shadowbeast_Addon_Fire (C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	30;
 	
+	bodyStateInterruptableOverride	=	TRUE;
+	
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		= 150;
 	attribute	[ATR_DEXTERITY]		= 150;

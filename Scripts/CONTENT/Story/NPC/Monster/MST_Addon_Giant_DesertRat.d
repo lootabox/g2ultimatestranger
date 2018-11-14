@@ -74,5 +74,5 @@ INSTANCE Giant_DesertRat	(Mst_Default_Giant_DesertRat)
 {
 	B_SetVisuals_Giant_DesertRat();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
+	//CreateInvItems (self, ItFoMuttonRaw, 1);
 };

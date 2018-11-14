@@ -33,6 +33,7 @@ Specific gold amounts cannot be donated. Instead for every level gained, up to 6
 
 No stats can be sacrificed for gold.
 
+
 	NPCs
 
 NPCs only take 20% of gold from NH.
@@ -44,18 +45,33 @@ NPCs only take the weapon from NH if he was caught doing something violent or th
 
 Alchemist's bench does not automatically kick you out of the dialog, unless completely out of Lab Water Bottles.
 Making joints and tobacco does not consume Lab Water Bottles, though one is needed to use the Alchemy Table.
+It is possible to create Double Apple tobacco and all tobacco have their prices adjusted based on their ingredients.
 
 
 	Smithing
 
 Anvil does not automatically kick you out of the dialog, unless completely out of Red Hot Steel.
-Missing production items gives back Red Hot Steel instead of Raw Steel.
+When missing production items and failing to craft something, anvil gives back Red Hot Steel instead of Raw Steel.
 Ore weapon forging option is visible only if NH knows how to make them.
+
+
+	Food
+
+Snapperweed effect lasts four times as long.
+Chompers, Rats, Shadowbeasts, Wargs and Wolves no longer drop Raw Meat.
 
 
 	Enemies
 
+Fire Devils, Golems, Shadowbeasts, Shadowbeast Skeletons, Trolls and Zombies do not flinch and cannot be interrupted.
+
+Dragons do not try to use breath attack when target is too far.
+Dragons only regenerate when not fighting.
+Dragon regeneration is only 4% to 20% as fast, depending on dragon type.
+Minecrawlers no longer drop Minecrawler Plates.
+Molerats no longer stop to stare at their enemies.
 Shadow Lord Archol has same amount of protection as other shadow warriors.
+Stone Golems get up sooner as NH approaches them.
 
 
 		MINOR IMPROVEMENTS AND FIXES
@@ -97,6 +113,8 @@ Water spells properly deal halved damage against large/heavy creatures and doubl
 
 	Monster
 
+Fixed Dragons and Golems getting stuck when trying to switch back to using magic.
+
 Goblins and Skeletons do not create additional weapons in their inventory.
 Lower Skeleton renamed to Lesser Skeleton.
 Skeletal monsters do not bleed.
@@ -135,6 +153,8 @@ Samuel gets a ring he was supposed to have in his trade inventory.
 	NPCs Specific
 
 Agon returns to monastery after the Trial of Fire, if alive.
+Alligator Jack gives previously unused item Swamprat meat for his delivery quest.
+Alligator Jack only takes meat from Swamprats.
 Alvares cannot be talked about joining the mercenaries if part of a guild already.
 Alwin is asked about buying a sheep if NH is looking for a sheep for the monastery.
 Alwin vocally disapproves murdering of Fellan and will remember the crime.
@@ -301,6 +321,7 @@ Monastery novice quest become obsolete only after player becomes a mage.
 Nostalgia bonus properly awards levels to NH.
 Novices do not create additional sausages when given one.
 Quarhodron summoning scroll changed from piece of paper into proper scroll.
+Rum drinking animations are slower.
 Sheep cannot be bought from Onar or Pepe after escorting one to the monastery.
 Sleep dialog has black overlay.
 Sleeping is not possible while afflicted by nightmares.

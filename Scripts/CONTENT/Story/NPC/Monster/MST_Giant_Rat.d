@@ -73,7 +73,7 @@ INSTANCE Giant_Rat	(Mst_Default_Giant_Rat)
 {
 	B_SetVisuals_Giant_Rat();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
+	//CreateInvItems (self, ItFoMuttonRaw, 1);
 };
 
 
@@ -110,5 +110,5 @@ INSTANCE YGiant_Rat	(Mst_Default_Giant_Rat)
 	B_SetVisuals_Giant_Rat();
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
+	//CreateInvItems (self, ItFoMuttonRaw, 1);
 };

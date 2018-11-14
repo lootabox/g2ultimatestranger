@@ -49,10 +49,29 @@ func int ZS_MM_Rtn_DragonRest_Loop ()
 	{
 		self.aivar[AIV_TAPOSITION] += 1;
 		if (self.attribute[ATR_HITPOINTS] < self.attribute[ATR_HITPOINTS_MAX])
-		&& (self.aivar[AIV_TAPOSITION] >= 2)
+		&& (self.aivar[AIV_TAPOSITION] >= 50)
 		{
 			self.attribute[ATR_HITPOINTS] += 1;
-			self.aivar[AIV_TAPOSITION] = 0;
+			if(self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_SWAMP)
+			{
+				self.aivar[AIV_TAPOSITION] = 0;
+			}
+			else if(self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ROCK)
+			{
+				self.aivar[AIV_TAPOSITION] = 10;
+			}
+			else if(self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_FIRE || Hlp_GetInstanceID(self) == Hlp_GetInstanceID(FireDragonIsland))
+			{
+				self.aivar[AIV_TAPOSITION] = 20;
+			}
+			else if(self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ICE)
+			{
+				self.aivar[AIV_TAPOSITION] = 30;
+			}
+			else if(self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_UNDEAD)
+			{
+				self.aivar[AIV_TAPOSITION] = 40;
+			};
 		};
 	};
 	

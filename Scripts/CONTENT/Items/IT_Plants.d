@@ -16,7 +16,7 @@ const int	Value_SwampHerb			=	10;
  const int	Value_Health_Herb_03	=	60;		const int	HP_Health_Herb_03	=	30;
  const int	Value_Dex_Herb_01		=	250;
  const int	Value_Strength_Herb_01	=	500;
- const int	Value_Speed_Herb_01		=	100;	const int  Speed_Boost			= 15000; //15 Sekunden
+ const int	Value_Speed_Herb_01		=	100;	const int  Speed_Boost			= 60000; //60 Sekunden
 
 const int	Value_Mushroom_01		=	10;		const int	HP_Mushroom_01		=	5;
 const int	Value_Mushroom_02		=	30;		const int	HP_Mushroom_02		=	15;

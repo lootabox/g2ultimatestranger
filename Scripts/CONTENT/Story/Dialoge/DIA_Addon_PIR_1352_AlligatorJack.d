@@ -641,7 +641,8 @@ func void DIA_Addon_AlligatorJack_HuntEnd_Info ()
 
 	B_LogEntry (TOPIC_Addon_RatHunt,"The hunt was successful. We caught several swamp rats.");
 	
-	B_GiveInvItems (self ,other,ItFoMuttonRaw,10);
+	//B_GiveInvItems (self ,other,ItFoMuttonRaw,10);
+	B_GiveInvItems (self ,other,ItFo_Addon_Krokofleisch_Mission,10);
 	MIS_KrokoJagd = LOG_SUCCESS;
 	B_GivePlayerXP (XP_Addon_KrokoJagd);
 };

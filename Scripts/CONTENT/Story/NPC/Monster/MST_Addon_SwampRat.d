@@ -72,5 +72,5 @@ INSTANCE Swamprat	(Mst_Default_Swamprat)
 {
 	B_SetVisuals_Swamprat();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 2);
+	//CreateInvItems (self, ItFoMuttonRaw, 2);
 };

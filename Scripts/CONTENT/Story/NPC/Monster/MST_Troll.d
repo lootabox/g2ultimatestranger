@@ -10,6 +10,8 @@ PROTOTYPE Mst_Default_Troll(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_TROLL;
 	level							=	50; //30
 	
+	bodyStateInterruptableOverride	=	TRUE;
+	
 	//----- Attribute ----	
 	attribute	[ATR_STRENGTH]		=	100;	//FlyDamage
 	attribute	[ATR_DEXTERITY]		=	100;

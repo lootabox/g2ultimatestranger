@@ -62,7 +62,8 @@ INSTANCE FA_MY_W_NOFOCUS_40 (C_FightAI)
 INSTANCE FA_MY_G_RUNTO_40 (C_FightAI)
 {
  	//move[0] = MOVE_ATTACK; //Sturmattacke
- 	move[0] = MOVE_TURN;
+ 	//move[0] = MOVE_TURN;
+ 	move[0] = MOVE_ATTACK;
 };
 
 // ------- Ich Strafe gerade ------
@@ -75,7 +76,8 @@ INSTANCE FA_MY_G_STRAFE_40 (C_FightAI)
 INSTANCE FA_MY_G_FOCUS_40 (C_FightAI)
 {
  	//move[0] = MOVE_RUN; // --- STANDARDEINTRAG ---
- 	move[0] = MOVE_WAIT;
+ 	//move[0] = MOVE_WAIT;
+ 	move[0] = MOVE_ATTACK;
 };
 
 

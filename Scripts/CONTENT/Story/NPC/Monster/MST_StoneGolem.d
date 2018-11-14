@@ -9,6 +9,8 @@ PROTOTYPE Mst_Default_StoneGolem(C_Npc)
 	guild							=	GIL_STONEGOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_STONEGOLEM;
 	level							=	25;
+	
+	bodyStateInterruptableOverride	=	TRUE;
 
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	125;
@@ -128,16 +130,16 @@ func void ZS_GolemDown_END()
 
 func void B_GolemRise ()
 {
-	if (Npc_GetDistToNpc (self,hero) <= 700)
+	if (Npc_GetDistToNpc (self,hero) <= 900)
 	&& (Mob_HasItems ("NW_GOLEMCHEST",ItSe_GolemChest_Mis) == 0)
 	{
 		AI_PlayAni (self,"T_RISE");
 		self.NoFocus	= FALSE;
-		self.name			=	"Steingolem";
+		self.name			=	"Stone Golem";
 		self.flags				   			= 	0;
 		
 		AI_StartState 		(self, ZS_MM_Attack, 0, "");
-		self.bodyStateInterruptableOverride 	= FALSE;
+		//self.bodyStateInterruptableOverride 	= FALSE;
 		self.start_aistate				= ZS_MM_AllScheduler;
 		self.aivar[AIV_MM_RestStart] 	= OnlyRoutine;
 	};

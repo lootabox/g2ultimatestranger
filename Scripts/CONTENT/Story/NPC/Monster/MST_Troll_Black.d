@@ -10,6 +10,8 @@ PROTOTYPE Mst_Default_Troll_Black(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_TROLL_BLACK;
 	level							=	100; //40
 	
+	bodyStateInterruptableOverride	=	TRUE;
+	
 	//----- Attribute ----	
 	attribute	[ATR_STRENGTH]		=	200;
 	attribute	[ATR_DEXTERITY]		=	200;

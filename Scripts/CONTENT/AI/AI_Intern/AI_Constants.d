@@ -409,7 +409,7 @@ const int PERC_DIST_DRAGON_ACTIVE_MAX	= 3500; //Damit das Vlippern endlich ein E
 //---------------------------------------------
 const int FIGHT_DIST_MONSTER_ATTACKRANGE = 700;	// Wann greifen Monster an bzw. ab welcher Distanz vertreiben sie dich vom Fressen
 const int FIGHT_DIST_MONSTER_FLEE		= 300;	// Ab wann fliehe ich vor einem Feind
-const int FIGHT_DIST_DRAGON_MAGIC		= 700;
+const int FIGHT_DIST_DRAGON_MAGIC		= 500;
 //---------------------------------------------
 const int MONSTER_THREATEN_TIME			= 4; 	// Sekunden, die Monster drohen, bevor sie angreifen (wenn Gegner nicht zu weit und nicht zu nah)
 const int MONSTER_SUMMON_TIME			= 60;

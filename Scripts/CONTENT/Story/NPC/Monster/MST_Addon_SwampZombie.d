@@ -10,6 +10,8 @@ PROTOTYPE Mst_Default_SwampZombie(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_ZOMBIE;
 	level							=	15;
 	
+	bodyStateInterruptableOverride	=	TRUE;
+	
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	75;
 	attribute	[ATR_DEXTERITY]		=	75;
