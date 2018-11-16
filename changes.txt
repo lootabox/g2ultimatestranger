@@ -117,6 +117,7 @@ Fixed Dragons and Golems getting stuck when trying to switch back to using magic
 
 Goblins and Skeletons do not create additional weapons in their inventory.
 Lower Skeleton renamed to Lesser Skeleton.
+Magic Golem grants experience and creates a magical explosion when killed.
 Skeletal monsters do not bleed.
 Snapper Pack Leader has same amount of protection as other snappers.
 Snorting Dragon Snapper will have 2 horns instead of 1 if Gaan teaches the NH that trophy skill after killing it.
@@ -135,7 +136,7 @@ Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, 
 Fixed logical issues with dialogue of Diego, Ramon, Ulf, Vatras, Xardas.
 Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patrick, Monty, Tonak, Telbor, Pardos.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
-Fixed wrong or inconsistent style of dialogue text for Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Martin, Milten, Orlan, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras.
+Fixed wrong or inconsistent style of dialogue text for Agon, Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Martin, Milten, Orlan, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras.
 
 Changed default weapon from Heavy Branch to something that makes sense for Akil, Cornelius, Judge, Larius, Onar, Sekob.
 Changed NPCs to receive varying guild specific weapon on spawn, instead of always Heavy Branch, if their regular weapon is taken.
@@ -152,6 +153,7 @@ Samuel gets a ring he was supposed to have in his trade inventory.
 
 	NPCs Specific
 
+Agon ends the dialog after answering to "how's it going".
 Agon returns to monastery after the Trial of Fire, if alive.
 Alligator Jack gives previously unused item Swamprat meat for his delivery quest.
 Alligator Jack only takes meat from Swamprats.
@@ -211,6 +213,9 @@ Hagen will not make NH paladin before delivering the report from Valley of Mines
 Halvor is not given the compromising note for reading.
 Hanna has 16 lines of dialogue and new interaction restored related to the thieves' guild.
 Henry will consider all higher tier armor as luxurious and will comment appropriately.
+Highwayman hides if he sees NH coming with Lares.
+Highwayman is not a friendly to Seekers, he will be dead in chapter 3.
+Highwayman only appears after returning from the Valley of Mines.
 Hilda only takes the required 20 turnips instead of all of them.
 Hodges can be asked about why Bennet was arrested after asking what happened.
 Huno only makes a vague comment about high price of his armor once Esteban is dead and does not say that he takes a share.

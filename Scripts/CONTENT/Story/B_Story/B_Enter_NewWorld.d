@@ -129,6 +129,9 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_2 ()
   		Wld_InsertNpc 	(Gobbo_Green,	"NW_BIGFARM_LAKE_MONSTER_05_01"); 
   		Wld_InsertNpc 	(Gobbo_Green,	"NW_BIGFARM_LAKE_MONSTER_05_01"); 
   		Wld_InsertNpc 	(Gobbo_Green,	"NW_BIGFARM_LAKE_MONSTER_05_01"); 
+		  
+		Wld_InsertNpc(BDT_1020_Bandit_L,"NW_TROLLAREA_PATH_47");
+		
 		//Joly:Xardas Secret-Area (gegenüber vom Turm in den Bergen.)
 		if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
 		{

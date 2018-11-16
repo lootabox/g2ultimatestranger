@@ -36,6 +36,7 @@ instance DIA_BDT_1020_Wegelagerer_FirstWarn (C_INFO)
 func int DIA_BDT_1020_Wegelagerer_FirstWarn_Condition()
 {
 	if ((other.aivar[AIV_Guardpassage_Status]			== GP_NONE		)
+	&&  (Npc_GetDistToWP(Lares,"NW_TROLLAREA_PATH_47") < 1000)
 	&&  (self.aivar[AIV_PASSGATE]						== FALSE		)
 	&&	(Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)		== TRUE			))
 	{
@@ -202,6 +203,7 @@ INSTANCE DIA_BDT_1020_Wegelagerer_SecondWarn (C_INFO)
 FUNC INT DIA_BDT_1020_Wegelagerer_SecondWarn_Condition()
 {
 	if ((self.aivar[AIV_Guardpassage_Status]			== GP_FirstWarnGiven					)
+	&&  (Npc_GetDistToWP(self,"NW_TROLLAREA_PATH_47") < 1000)
 	&&  (self.aivar[AIV_PASSGATE]						== FALSE								) 
 	&&	(Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)		== TRUE									)
 	&&  (Npc_GetDistToWP(other,BDT_1020_Wegelagerer_Checkpoint)		<  (other.aivar[AIV_LastDistToWP]-50)	)) 
@@ -261,6 +263,7 @@ INSTANCE DIA_BDT_1020_Wegelagerer_Attack (C_INFO)
 FUNC INT DIA_BDT_1020_Wegelagerer_Attack_Condition()
 {
 	if ((self.aivar[AIV_Guardpassage_Status]			== GP_SecondWarnGiven					)
+	&&  (Npc_GetDistToWP(self,"NW_TROLLAREA_PATH_47") < 1000)
 	&&  (self.aivar[AIV_PASSGATE]						== FALSE								) 
 	&&	(Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)		== TRUE									)
 	&&  (Npc_GetDistToWP(other,BDT_1020_Wegelagerer_Checkpoint)		<  (other.aivar[AIV_LastDistToWP]-50)	))
@@ -277,3 +280,33 @@ func void DIA_BDT_1020_Wegelagerer_Attack_Info()
 	
 	B_Attack (self, other, AR_NONE, 1);
 };
+
+
+
+
+instance BDT_1020_Bandit_L_GetLost(C_Info)
+{
+	npc = BDT_1020_Bandit_L;
+	nr = 2;
+	condition = BDT_1020_Bandit_L_GetLost_Condition;
+	information = BDT_1020_Bandit_L_GetLost_Info;
+	important = TRUE;
+	permanent = TRUE;
+};
+
+
+func int BDT_1020_Bandit_L_GetLost_Condition()
+{
+//	if(Npc_IsInState(self,ZS_Talk) && (Npc_GetDistToWP(Lares,"NW_TROLLAREA_PATH_47") <= 3000))
+	if(Npc_IsInState(self,ZS_Talk) && (Npc_GetDistToWP(self,"NW_TROLLAREA_PATH_47") >= 1000))
+	{
+		return TRUE;
+	};
+};
+
+func void BDT_1020_Bandit_L_GetLost_Info()
+{
+	B_Say(self,other,"$GetOutOfHere");
+	AI_StopProcessInfos(self);
+};
+

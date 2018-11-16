@@ -372,7 +372,7 @@ INSTANCE DIA_Agon_Perm   (C_INFO)
 	condition   = DIA_Agon_Perm_Condition;
 	information = DIA_Agon_Perm_Info;
 	permanent   = TRUE;
-	description = "So how are things?";
+	description = "So how's it going?";
 };
 
 FUNC INT DIA_Agon_Perm_Condition()
@@ -395,6 +395,7 @@ FUNC VOID DIA_Agon_Perm_Info()
 	{
 		AI_Output	(self ,other,"DIA_Agon_Perm_07_02"); //(arrogant) You are only a guest here in the monastery of Innos. Therefore you should act accordingly and not disturb me while I am working. Good day.
 	};
+	AI_StopProcessInfos(self);
 };
 
 // ************************************************************

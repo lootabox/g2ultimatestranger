@@ -1819,6 +1819,10 @@ func int DIA_Addon_Lares_ArrivedPortalInterWeiter4_Condition ()
 func void DIA_Addon_Lares_ArrivedPortalInterWeiter4_Info ()
 {
 	AI_Output	(self, other, "DIA_Addon_Lares_ArrivedPortalInterWeiter4_09_00"); //Right. It could get dangerous here.
+	if ((EnterNW_Kapitel2 == TRUE) && !Npc_IsDead(BDT_1020_Bandit_L))
+	{
+		B_StartOtherRoutine(BDT_1020_Bandit_L,"Intercept");
+	};
 	LaresGuide_ZumPortal = 7;
 };
 
@@ -2056,6 +2060,10 @@ func void DIA_Addon_Lares_PortalInterWEITER_Info ()
 	else if	(LaresGuide_ZumPortal == 5)
 	{
 		Npc_ExchangeRoutine (self,"GUIDEPORTALTEMPEL5");
+		if ((EnterNW_Kapitel2 == TRUE) && !Npc_IsDead(BDT_1020_Bandit_L))
+		{
+			B_StartOtherRoutine(BDT_1020_Bandit_L,"Hide");
+		};
 	}
 	else if	(LaresGuide_ZumPortal == 6)
 	{

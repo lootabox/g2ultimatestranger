@@ -9,7 +9,7 @@ instance BDT_1020_Bandit_L (Npc_Default)
 	flags       = 0;									//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	aivar[AIV_EnemyOverride] = TRUE;
-	aivar[AIV_DropDeadAndKill] = TRUE;     
+	//aivar[AIV_DropDeadAndKill] = TRUE;     
 	
 	// ------ Attribute ------
 	B_SetAttributesToChapter (self, 1);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
@@ -37,6 +37,19 @@ instance BDT_1020_Bandit_L (Npc_Default)
 
 	// ------ TA ------
 	
-	TA_Guard_Passage (00,00,12,00,"NW_TROLLAREA_PATH_47");
-	TA_Guard_Passage (12,00,00,00,"NW_TROLLAREA_PATH_47");
+	//TA_Guard_Passage (00,00,12,00,"NW_TROLLAREA_PATH_47");
+	//TA_Guard_Passage (12,00,00,00,"NW_TROLLAREA_PATH_47");
+	daily_routine = Rtn_Intercept_1020;
+};
+
+func void Rtn_Intercept_1020()
+{
+	TA_Guard_Passage(0,0,12,0,"NW_TROLLAREA_PATH_47");
+	TA_Guard_Passage(12,0,0,0,"NW_TROLLAREA_PATH_47");
+};
+
+func void Rtn_Hide_1020()
+{
+	TA_Guard_Passage(0,0,12,0,"NW_TROLLAREA_GOBBO_01");
+	TA_Guard_Passage(12,0,0,0,"NW_TROLLAREA_GOBBO_01");
 };

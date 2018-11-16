@@ -5,7 +5,8 @@
 INSTANCE MENU_MAIN(C_MENU_DEF) 
 {
 	backpic			= MENU_BACK_PIC;
-	musictheme		= "SYS_Menu";
+	//musictheme		= "SYS_Menu";
+	musictheme		= "";
 	
 	items[0]		= "MENUITEM_MAIN_HEADLINE";
 	items[1]		= "MENUITEM_MAIN_HEADLINE2";

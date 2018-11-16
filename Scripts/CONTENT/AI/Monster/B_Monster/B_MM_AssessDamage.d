@@ -20,7 +20,14 @@ func void B_MM_AssessDamage ()
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(MagGol))
 		&& (Hlp_GetInstanceID(OthWeap) == Hlp_GetInstanceID(item))
 		{
-			Npc_ChangeAttribute (self, ATR_HITPOINTS, -1000);
+			//Npc_ChangeAttribute (self, ATR_HITPOINTS, -1000);
+			Npc_ChangeAttribute (self, ATR_HITPOINTS, -self.attribute[ATR_HITPOINTS_MAX]);
+			if(!C_BodyStateContains(self,BS_PARADE))
+			{
+				Wld_PlayEffect("spellFX_LIGHTSTAR_WHITE",self,self,0,0,0,FALSE);
+				Snd_Play("MFX_Transform_Cast");
+			};
+			B_GivePlayerXP (self.level * XP_PER_VICTORY);
 			return;
 		};
 	};		
