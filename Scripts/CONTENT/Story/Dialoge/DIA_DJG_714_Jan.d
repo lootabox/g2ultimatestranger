@@ -267,6 +267,7 @@ FUNC VOID DIA_Jan_JanIsSmith_Info()
 		AI_StopProcessInfos (self);
 	
 		Npc_ExchangeRoutine (self,"SMITH");
+		B_StartOtherRoutine(Rethon,"START");
 };
 
 //*******************************************

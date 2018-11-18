@@ -136,7 +136,7 @@ Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, 
 Fixed logical issues with dialogue of Diego, Ramon, Ulf, Vatras, Xardas.
 Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patrick, Monty, Tonak, Telbor, Pardos.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
-Fixed wrong or inconsistent style of dialogue text for Agon, Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Martin, Milten, Orlan, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras.
+Fixed wrong or inconsistent style of dialogue text for Agon, Babo, Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Gorax, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Martin, Milten, Orlan, Pardos, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras and NH for giving a potion to anyone.
 
 Changed default weapon from Heavy Branch to something that makes sense for Akil, Cornelius, Judge, Larius, Onar, Sekob.
 Changed NPCs to receive varying guild specific weapon on spawn, instead of always Heavy Branch, if their regular weapon is taken.
@@ -193,6 +193,11 @@ Esteban does not turn to his guards if they are dead.
 Esteban first dialog sends Carlos to Ramon's guard post, if NH killed Ramon.
 Esteban only says Franco was a tough nut if he is dead.
 Esteban's bodyguards go running to meet Fisk.
+Ferros actually takes an offered sword from NH and inspects it when the dialog indicates so.
+Ferros can be offered alternative sword more than one time.
+Ferros dialog options are properly ordered when learning from him.
+Ferros no longer stops the dialogue if NH asks him what he would give for finding his sword.
+Ferros' learning log entry is added to correct category.
 Franco can be asked about whereabouts of Edgor only before talking to him.
 Franco can be provoked into a fight only if Ramon is alive.
 Gaan can only be asked about hunting training once NH learns he is a hunter.
@@ -211,6 +216,8 @@ Greg's treasure hunt quest cancels if the first treasure is not given to him and
 Hagen will hint at NH joining paladins only when all requirements are fulfilled.
 Hagen will not make NH paladin before delivering the report from Valley of Mines to avoid issue with Pedro not letting NH in monastery.
 Halvor is not given the compromising note for reading.
+Harad accepts any orc weapon for his quest.
+Harad will take the best orc weapon NH has and inspect it before commenting on it.
 Hanna has 16 lines of dialogue and new interaction restored related to the thieves' guild.
 Henry will consider all higher tier armor as luxurious and will comment appropriately.
 Highwayman hides if he sees NH coming with Lares.
@@ -256,6 +263,7 @@ Milten will not say Gorn is in prison if he is already released.
 Nadja considers Heavy Militia armor as militia armor.
 Nagur considers Heavy Militia armor as militia armor.
 Nagur now grants previously omitted XP bonus for showing thieves' signal and returning Baltram's shipment.
+Neoras uses all potion ingredients given to him.
 Onar can't be talked about rent after completing the related quest.
 Onar's dialog for buying a sheep is only available if NH knows he needs one and is not part of any guild yet.
 Opolos can be talked about the recipe after becoming a magician.
@@ -270,6 +278,8 @@ Pedro cannot be asked about life in the monastery if NH is magician.
 Pepe's dialog for buying a sheep is only available if NH knows he needs one and is not part of any guild yet.
 Ramirez shows two dialogue options only after he sees the thieves' signal.
 Raoul cannot be talked about joining the mercenaries if part of a guild already.
+Raoul turns toward Sentenza when he calls for him.
+Rethon will only work with Jan after givent he permission from Garond.
 Riordian mentions William in the initial dialogue instead of the dialogue about the west.
 Rosi will not create extra gold in her inventory when giving the reward to NH for escorting her.
 Rupert can only be asked where Matteo can be found if NH did not find him yet.

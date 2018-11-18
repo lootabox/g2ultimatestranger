@@ -434,7 +434,7 @@ INSTANCE DIA_Babo_Windfaust  (C_INFO)
 	condition   = DIA_Babo_Windfaust_Condition;
 	information = DIA_Babo_Windfaust_Info;
 	permanent   = TRUE;
-	description	= "About the spell scroll ... (GIVE FIST OF WIND)";
+	description	= "About the spell scroll... (give Fist of Wind spell scroll)";
 };
 //---------------------------------
 var int DIA_Babo_Windfaust_permanent;
@@ -450,7 +450,7 @@ FUNC INT DIA_Babo_Windfaust_Condition()
 };
 FUNC VOID DIA_Babo_Windfaust_Info()
 {
-	AI_Output (other,self ,"DIA_Babo_Windfaust_15_00"); //About the spell scroll ...
+	AI_Output (other,self ,"DIA_Babo_Windfaust_15_00"); //About the spell scroll...
 	AI_Output (self ,other,"DIA_Babo_Windfaust_03_01"); //Do you have a Fist of Wind spell for me?
 	
 	if B_GiveInvItems (other, self, ItSc_Windfist,1)

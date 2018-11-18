@@ -361,8 +361,8 @@ func void DIA_Gorax_Orlan_Info ()
 		DIA_Gorax_Orlan_permanent = TRUE;
 		Info_ClearChoices (DIA_Gorax_Orlan);
 	
-		Info_AddChoice (DIA_Gorax_Orlan,"He put one over on me! (Give 100 gold)",DIA_Gorax_Orlan_100);
-		Info_AddChoice (DIA_Gorax_Orlan,"I've got the gold. (Give 240 gold)",DIA_Gorax_Orlan_240);
+		Info_AddChoice (DIA_Gorax_Orlan,"He put one over on me! (give 100 gold)",DIA_Gorax_Orlan_100);
+		Info_AddChoice (DIA_Gorax_Orlan,"I've got the gold. (give 240 gold)",DIA_Gorax_Orlan_240);
 	}
 	else
 	{

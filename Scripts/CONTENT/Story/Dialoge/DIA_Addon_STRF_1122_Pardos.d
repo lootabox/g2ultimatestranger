@@ -83,7 +83,7 @@ INSTANCE DIA_Addon_Pardos_trank   (C_INFO)
 	condition   = DIA_Addon_Pardos_trank_Condition;
 	information = DIA_Addon_Pardos_trank_Info;
 	permanent   = FALSE;
-	description = "Here, drink this. (give potion)";
+	description = "Here, drink this.";
 };
 FUNC INT DIA_Addon_Pardos_trank_Condition()
 {	
@@ -104,19 +104,19 @@ FUNC VOID DIA_Addon_Pardos_trank_Info()
 	
 	if Npc_HasItems (other, ItPo_Health_01)
 	{
-		Info_AddChoice (DIA_Addon_Pardos_trank,"Give essence of healing",DIA_Addon_Pardos_trank_01);
+		Info_AddChoice (DIA_Addon_Pardos_trank,"(Give essence of healing)",DIA_Addon_Pardos_trank_01);
 	};
 	if Npc_HasItems (other, ItPo_Health_02)
 	{
-		Info_AddChoice (DIA_Addon_Pardos_trank,"Give extract of healing",DIA_Addon_Pardos_trank_02);
+		Info_AddChoice (DIA_Addon_Pardos_trank,"(Give extract of healing)",DIA_Addon_Pardos_trank_02);
 	};
 	if Npc_HasItems (other, ItPo_Health_03)
 	{
-		Info_AddChoice (DIA_Addon_Pardos_trank,"Give elixir of healing",DIA_Addon_Pardos_trank_03);
+		Info_AddChoice (DIA_Addon_Pardos_trank,"(Give elixir of healing)",DIA_Addon_Pardos_trank_03);
 	};
 	if Npc_HasItems (other, ItFo_Addon_Meatsoup)
 	{
-		Info_AddChoice (DIA_Addon_Pardos_trank,"Give meat stew",DIA_Addon_Pardos_trank_Soup);
+		Info_AddChoice (DIA_Addon_Pardos_trank,"(Give meat stew)",DIA_Addon_Pardos_trank_Soup);
 	};
 	
 	

@@ -202,6 +202,8 @@ func int DIA_Harad_OrcSuccess_Condition ()
 		|| (Npc_HasItems(other, ItMw_2H_OrcAxe_03) > 0)
 		|| (Npc_HasItems(other, ItMw_2H_OrcAxe_04) > 0)
 		|| (Npc_HasItems(other, ItMw_2H_OrcSword_01) > 0)
+		|| (Npc_HasItems(other, ItMw_2H_OrcSword_02) > 0)
+		|| (Npc_HasItems(other, ItMw_2H_OrcMace_01) > 0)
 		{
 			return TRUE;
 		};
@@ -210,29 +212,37 @@ func int DIA_Harad_OrcSuccess_Condition ()
 func void DIA_Harad_OrcSuccess_Info ()
 {
 	AI_Output (other, self, "DIA_Harad_OrcSuccess_15_00"); //I've got the orc weapon you wanted.
-	AI_Output (self, other, "DIA_Harad_OrcSuccess_12_01"); //Show me ...
+	AI_Output (self, other, "DIA_Harad_OrcSuccess_12_01"); //Show me...
 	
-		if (Npc_HasItems(other, ItMw_2H_OrcAxe_01) > 0)
-		{
-			B_GiveInvItems (other, self, ItMw_2H_OrcAxe_01, 1);
-		}
-		else if (Npc_HasItems(other, ItMw_2H_OrcAxe_02) > 0)
-		{
-			B_GiveInvItems (other, self, ItMw_2H_OrcAxe_02, 1);
-		}
-		else if (Npc_HasItems(other, ItMw_2H_OrcAxe_03) > 0)
-		{
-			B_GiveInvItems (other, self, ItMw_2H_OrcAxe_03, 1);
-		}
-		else if (Npc_HasItems(other, ItMw_2H_OrcAxe_04) > 0)
-		{
-			B_GiveInvItems (other, self, ItMw_2H_OrcAxe_04, 1);
-		}
-		else //if (Npc_HasItems(other, ItMw_2H_OrcSword_01) > 0)
-		{
-			B_GiveInvItems (other, self, ItMw_2H_OrcSword_01, 1);
-		};
-	
+	if(Npc_HasItems(other,ItMw_2H_OrcAxe_04))
+	{
+		B_GiveInvItems(other,self,ItMw_2H_OrcAxe_04,1);
+	}
+	else if(Npc_HasItems(other,ItMw_2H_OrcSword_02))
+	{
+		B_GiveInvItems(other,self,ItMw_2H_OrcSword_02,1);
+	}
+	else if(Npc_HasItems(other,ItMw_2H_OrcSword_01))
+	{
+		B_GiveInvItems(other,self,ItMw_2H_OrcSword_01,1);
+	}
+	else if(Npc_HasItems(other,ItMw_2H_OrcAxe_03))
+	{
+		B_GiveInvItems(other,self,ItMw_2H_OrcAxe_03,1);
+	}
+	else if(Npc_HasItems(other,ItMw_2H_OrcAxe_02))
+	{
+		B_GiveInvItems(other,self,ItMw_2H_OrcAxe_02,1);
+	}
+	else if(Npc_HasItems(other,ItMw_2H_OrcAxe_01))
+	{
+		B_GiveInvItems(other,self,ItMw_2H_OrcAxe_01,1);
+	}
+	else if(Npc_HasItems(other,ItMw_2H_OrcMace_01))
+	{
+		B_GiveInvItems(other,self,ItMw_2H_OrcMace_01,1);
+	};
+	B_InspectMeleeWeapon(self);
 	if (Harad_HakonMission == TRUE)
 	{
 		AI_Output (self, other, "DIA_Harad_OrcSuccess_12_02"); //You did it AFTER ALL? Good man!

@@ -495,6 +495,8 @@ FUNC VOID DIA_Neoras_BrewForMe_Speed ()
 		B_GiveInvItems (other,self,ItPl_Speed_Herb_01,1);
 		B_GiveInvItems (other,self,ItPl_Temp_Herb,1);
 		B_GiveInvItems (other,self,ItMi_Gold,10);
+		Npc_RemoveInvItems(self,ItPl_Speed_Herb_01,1);
+		Npc_RemoveInvItems(self,ItPl_Temp_Herb,1);
 		
 		AI_Output (self ,other,"DIA_Neoras_BrewForMe_Speed_01_03"); //Good, thanks. I shall give you a potion now, then you won't have to wait so long.
 	
@@ -526,6 +528,8 @@ FUNC VOID DIA_Neoras_BrewForMe_Mana ()
 		B_GiveInvItems (other,self,ItPl_Mana_Herb_02,2);
 		B_GiveInvItems (other,self,ItPl_Temp_Herb,1);
 		B_GiveInvItems (other,self,ItMi_Gold,10);
+		Npc_RemoveInvItems(self,ItPl_Mana_Herb_02,1);
+		Npc_RemoveInvItems(self,ItPl_Temp_Herb,1);
 		
 		AI_Output (self ,other,"DIA_Neoras_BrewForMe_Mana_01_03"); //Good. I shall give you a potion now, then you won't have to wait so long.
 	
@@ -557,6 +561,8 @@ FUNC VOID DIA_Neoras_BrewForMe_Health ()
 		B_GiveInvItems (other,self,ItPl_Health_Herb_02,2);
 		B_GiveInvItems (other,self,ItPl_Temp_Herb,1);
 		B_GiveInvItems (other,self,ItMi_Gold,10);
+		Npc_RemoveInvItems(self,ItPl_Health_Herb_02,1);
+		Npc_RemoveInvItems(self,ItPl_Temp_Herb,1);
 		
 		AI_Output (self ,other,"DIA_Neoras_BrewForMe_Health_01_03"); //Good. I shall give you a potion now, then you won't have to wait so long.
 	
@@ -712,6 +718,7 @@ func void DIA_Neoras_FOUNDDRAGONEGG_Info ()
 	AI_Output			(other, self, "DIA_Neoras_FOUNDDRAGONEGG_15_00"); //Here, I've got a dragon egg for you.
 	AI_Output			(self, other, "DIA_Neoras_FOUNDDRAGONEGG_01_01"); //You're trying to pull my leg.
 	B_GiveInvItems 		(other, self, ItAt_DragonEgg_Mis,1);
+	Npc_RemoveInvItems	(self,ItAt_DragonEgg_Mis,1);
 	AI_Output			(self, other, "DIA_Neoras_FOUNDDRAGONEGG_01_02"); //It's real! I hadn't thought it possible. Where did you find it?
 	AI_Output			(other, self, "DIA_Neoras_FOUNDDRAGONEGG_15_03"); //I'd rather keep that to myself.
 	AI_Output			(self, other, "DIA_Neoras_FOUNDDRAGONEGG_01_04"); //Excellent. What do you want for it?

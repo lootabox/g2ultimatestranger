@@ -10,7 +10,7 @@ instance DIA_Addon_GivePotion(C_INFO)
 	condition	= DIA_Addon_GivePotion_Condition;
 	information	= DIA_Addon_GivePotion_Info;
 	permanent	= TRUE;
-	description = "(give healing potion)";
+	description = "(Give a healing potion)";
 };                       
 FUNC INT DIA_Addon_GivePotion_Condition()
 {
@@ -31,15 +31,15 @@ func VOID DIA_Addon_GivePotion_Info()
 	Info_AddChoice (DIA_Addon_GivePotion,DIALOG_BACK,DIA_Addon_GivePotion_BACK);
 	if (Npc_HasItems (other,ItPo_Health_03) >= 1)
 	{
-		Info_AddChoice (DIA_Addon_GivePotion,"(give elixir of healing)",DIA_Addon_GivePotion_ItPo_Health_03);
+		Info_AddChoice (DIA_Addon_GivePotion,"(Give elixir of healing)",DIA_Addon_GivePotion_ItPo_Health_03);
 	};
 	if (Npc_HasItems (other,ItPo_Health_02) >= 1)
 	{
-		Info_AddChoice (DIA_Addon_GivePotion,"(give extract of healing)",DIA_Addon_GivePotion_ItPo_Health_02);
+		Info_AddChoice (DIA_Addon_GivePotion,"(Give extract of healing)",DIA_Addon_GivePotion_ItPo_Health_02);
 	};
 	if (Npc_HasItems (other,ItPo_Health_01) >= 1)
 	{
-		Info_AddChoice (DIA_Addon_GivePotion,"(give essence of healing)",DIA_Addon_GivePotion_ItPo_Health_01);
+		Info_AddChoice (DIA_Addon_GivePotion,"(Give essence of healing)",DIA_Addon_GivePotion_ItPo_Health_01);
 	};
 };
 // ------------------------------------------------------------

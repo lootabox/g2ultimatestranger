@@ -165,7 +165,7 @@ FUNC VOID DIA_DJG_715_Ferros_OldCamp_Price ()
 	AI_Output (other,self ,"DIA_DJG_715_Ferros_OldCamp_Price_15_00"); //What will you give me if I find you a good sword?
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_OldCamp_Price_01_01"); //Alas, I can't give you anything. I spent my last gold on the sword.
 
-	Info_ClearChoices (DIA_DJG_715_Ferros_OldCamp);
+	//Info_ClearChoices (DIA_DJG_715_Ferros_OldCamp);
 };
 
 FUNC VOID DIA_DJG_715_Ferros_OldCamp_Yes ()
@@ -187,7 +187,8 @@ INSTANCE DIA_DJG_715_Ferros_FerrosAnySword   (C_INFO)
 	nr          = 6;
 	condition   = DIA_DJG_715_Ferros_FerrosAnySword_Condition;
 	information = DIA_DJG_715_Ferros_FerrosAnySword_Info;
-	permanent   = FALSE;
+	//permanent   = FALSE;
+	permanent   = TRUE;
 	description = "Maybe I've got another sword for you.";
 };
 
@@ -212,11 +213,13 @@ FUNC VOID DIA_DJG_715_Ferros_FerrosAnySword_Info()
 	
 	if (Npc_HasItems (other,ItMW_1H_Special_01) >= 1)
 	{
-		Info_AddChoice (DIA_DJG_715_Ferros_FerrosAnySword,ItMW_1H_Special_01.name,DIA_DJG_715_Ferros_FerrosAnySword_Silverblade);
+		Info_AddChoice (DIA_DJG_715_Ferros_FerrosAnySword,"(Give Ore Longsword)",DIA_DJG_715_Ferros_FerrosAnySword_Silverblade);
+		//Info_AddChoice (DIA_DJG_715_Ferros_FerrosAnySword,ItMW_1H_Special_01.name,DIA_DJG_715_Ferros_FerrosAnySword_Silverblade);
 	};
 	if (Npc_HasItems (other,ItMW_1H_Special_02) >= 1)
 	{
-		Info_AddChoice (DIA_DJG_715_Ferros_FerrosAnySword,ItMW_1H_Special_02.name,DIA_DJG_715_Ferros_FerrosAnySword_Oreblade);
+		Info_AddChoice (DIA_DJG_715_Ferros_FerrosAnySword,"(Give Ore Bastard Longsword)",DIA_DJG_715_Ferros_FerrosAnySword_Oreblade);
+		//Info_AddChoice (DIA_DJG_715_Ferros_FerrosAnySword,ItMW_1H_Special_02.name,DIA_DJG_715_Ferros_FerrosAnySword_Oreblade);
 	};
 };
 
@@ -227,12 +230,19 @@ FUNC VOID DIA_DJG_715_Ferros_FerrosAnySword_Back ()
 
 FUNC VOID B_Ferros_FerrosAnySword_Give ()
 {
+	if(C_BodyStateContains(self,BS_SIT))
+	{
+		AI_Standup(self);
+		B_TurnToNpc(self,other);
+	};
+	B_InspectMeleeWeapon(self);
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_FerrosAnySword_Give_01_00"); //That's a good blade. Really excellent work.
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_FerrosAnySword_Give_01_01"); //Are you sure you want to give it to me just like that?
 };
 
 FUNC VOID DIA_DJG_715_Ferros_FerrosAnySword_Silverblade ()
 {
+	B_GiveInvItems (other,self ,ItMW_1H_Special_01,1);
 	B_Ferros_FerrosAnySword_Give ();
 	
 	Info_ClearChoices (DIA_DJG_715_Ferros_FerrosAnySword);
@@ -242,6 +252,7 @@ FUNC VOID DIA_DJG_715_Ferros_FerrosAnySword_Silverblade ()
 
 FUNC VOID DIA_DJG_715_Ferros_FerrosAnySword_Oreblade ()
 {
+	B_GiveInvItems (other,self ,ItMW_1H_Special_02,1);
 	B_Ferros_FerrosAnySword_Give ();
 	
 	Info_ClearChoices (DIA_DJG_715_Ferros_FerrosAnySword);
@@ -259,8 +270,8 @@ FUNC VOID B_Ferros_FerrosAnySword_Yes2 ()
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_FerrosAnySword_Blade_Yes2_01_00"); //Thanks, I owe you.
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_FerrosAnySword_Blade_Yes2_01_01"); //In return, I'll show you a couple of tricks that will allow you to use your strength and dexterity better in combat.
 
-	Log_CreateTopic	(TOPIC_OutTeacher, LOG_NOTE);
-	B_LogEntry		(TOPIC_OutTeacher, "Feros can teach me to improve my strength and dexterity.");
+	Log_CreateTopic	(TOPIC_Teacher_OC, LOG_NOTE);
+	B_LogEntry		(TOPIC_Teacher_OC, "Feros can teach me to improve my strength and dexterity.");
 
 };
 
@@ -273,7 +284,7 @@ FUNC VOID B_Ferros_FerrosAnySword_No ()
 FUNC VOID DIA_DJG_715_Ferros_FerrosAnySword_Silverblade_Yes ()
 {
 	B_Ferros_FerrosAnySword_Yes1();
-	B_GiveInvItems (other,self ,ItMW_1H_Special_01,1);
+	//B_GiveInvItems (other,self ,ItMW_1H_Special_01,1);
 	B_Ferros_FerrosAnySword_Yes2();
 
 	Info_ClearChoices (DIA_DJG_715_Ferros_FerrosAnySword);
@@ -283,15 +294,15 @@ FUNC VOID DIA_DJG_715_Ferros_FerrosAnySword_Silverblade_Yes ()
 
 FUNC VOID DIA_DJG_715_Ferros_FerrosAnySword_Silverblade_No ()
 {
-
 	B_Ferros_FerrosAnySword_No();
+	B_GiveInvItems (self,other ,ItMW_1H_Special_01,1);
 	Info_ClearChoices (DIA_DJG_715_Ferros_FerrosAnySword);
 };
 
 FUNC VOID DIA_DJG_715_Ferros_FerrosAnySword_Oreblade_Yes ()
 {
 	B_Ferros_FerrosAnySword_Yes1();
-	B_GiveInvItems (other,self ,ItMW_1H_Special_02,1);
+	//B_GiveInvItems (other,self ,ItMW_1H_Special_02,1);
 	B_Ferros_FerrosAnySword_Yes2();
 
 	Info_ClearChoices (DIA_DJG_715_Ferros_FerrosAnySword);
@@ -302,7 +313,7 @@ FUNC VOID DIA_DJG_715_Ferros_FerrosAnySword_Oreblade_Yes ()
 FUNC VOID DIA_DJG_715_Ferros_FerrosAnySword_Oreblade_No ()
 {
 	B_Ferros_FerrosAnySword_No();
-
+	B_GiveInvItems (self,other ,ItMW_1H_Special_02,1);
 	Info_ClearChoices (DIA_DJG_715_Ferros_FerrosAnySword);
 };
 
@@ -358,56 +369,55 @@ FUNC INT DIA_Ferros_Teach_Condition()
 		return TRUE;
 	};
 };
- 
+
+FUNC VOID DIA_Ferros_Teach_Add_Options()
+{
+	Info_ClearChoices (DIA_Ferros_Teach);
+	Info_AddChoice	(DIA_Ferros_Teach, DIALOG_BACK, DIA_Ferros_Teach_Back);
+	Info_AddChoice	(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnSTR1, B_GetLearnCostAttribute(other, ATR_STRENGTH))	,DIA_Ferros_Teach_STR_1);
+	Info_AddChoice	(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnSTR5, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)	,DIA_Ferros_Teach_STR_5);
+	Info_AddChoice	(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnDEX1, B_GetLearnCostAttribute(other, ATR_DEXTERITY))	,DIA_Ferros_Teach_DEX_1);
+	Info_AddChoice	(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnDEX5, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)	,DIA_Ferros_Teach_DEX_5);
+};
+
 FUNC VOID DIA_Ferros_Teach_Info()
 {	
 	AI_Output (other,self ,"DIA_Ferros_Teach_15_00"); //Show me how to improve my abilities.
 
 	if (MIS_OCGateOpen == TRUE)
 	{
-	AI_Output (self ,other,"DIA_Ferros_Teach_01_01"); //After these orc attacks, I quit. I'm just glad to still be alive, man.
+		AI_Output (self ,other,"DIA_Ferros_Teach_01_01"); //After these orc attacks, I quit. I'm just glad to still be alive, man.
 	}
 	else
 	{
-	AI_Output (self ,other,"DIA_Ferros_Teach_01_02"); //A good fighter has to learn to transfer his abilities directly to his weapon.
-	
-	Info_ClearChoices (DIA_Ferros_Teach);
-	Info_AddChoice		(DIA_Ferros_Teach, DIALOG_BACK, DIA_Ferros_Teach_Back);
-	Info_AddChoice		(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnSTR1			, B_GetLearnCostAttribute(other, ATR_STRENGTH))			,DIA_Ferros_Teach_STR_1);
-	Info_AddChoice		(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnSTR5			, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)		,DIA_Ferros_Teach_STR_5);
-	Info_AddChoice		(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnDEX1, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Ferros_Teach_DEX_1);
-	Info_AddChoice		(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnDEX5, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Ferros_Teach_DEX_5);
+		AI_Output (self ,other,"DIA_Ferros_Teach_01_02"); //A good fighter has to learn to transfer his abilities directly to his weapon.
+		DIA_Ferros_Teach_Add_Options();
 	};
 
 };
-
 FUNC VOID DIA_Ferros_Teach_Back ()
 {
 	Info_ClearChoices (DIA_Ferros_Teach);
 };
-
 FUNC VOID DIA_Ferros_Teach_STR_1 ()
 {
 	B_TeachAttributePoints (self, other, ATR_STRENGTH, 1, T_MED);
-	Info_AddChoice		(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnSTR1			, B_GetLearnCostAttribute(other, ATR_STRENGTH))			,DIA_Ferros_Teach_STR_1);
+	DIA_Ferros_Teach_Add_Options();
 };
-
 FUNC VOID DIA_Ferros_Teach_STR_5 ()
 {
 	B_TeachAttributePoints (self, other, ATR_STRENGTH, 5, T_MED);
-	Info_AddChoice		(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnSTR5		, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)		,DIA_Ferros_Teach_STR_5);
+	DIA_Ferros_Teach_Add_Options();
 };
-
 FUNC VOID DIA_Ferros_Teach_DEX_1 ()
 {
 	B_TeachAttributePoints (self, other, ATR_DEXTERITY, 1, T_MED);
-	Info_AddChoice		(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnDEX1, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Ferros_Teach_DEX_1);
+	DIA_Ferros_Teach_Add_Options();
 };
-
 FUNC VOID DIA_Ferros_Teach_DEX_5 ()
 {
 	B_TeachAttributePoints (self, other, ATR_DEXTERITY, 5, T_MED);
-	Info_AddChoice		(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnDEX5, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Ferros_Teach_DEX_5);
+	DIA_Ferros_Teach_Add_Options();
 };
 
 //*********************************************************************

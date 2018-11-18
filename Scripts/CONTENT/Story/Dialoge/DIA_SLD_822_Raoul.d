@@ -54,7 +54,9 @@ FUNC VOID DIA_Raoul_NoSentenza_Info()
 	if (Hlp_IsValidNpc(Sentenza))
 	&& (!C_NpcIsDown(Sentenza))
 	{
+		AI_TurnToNPC(self,Sentenza);
 		AI_Output (self ,other,"DIA_Raoul_NoSentenza_01_02"); //SENTENZA! Come here!
+		AI_TurnToNPC(self,other);
 		AI_Output (self ,other,"DIA_Raoul_NoSentenza_01_03"); //(feigned polite) One moment, he'll be right here!
 		AI_Output (self ,other,"DIA_Raoul_NoSentenza_01_04"); //Then you're in for a nasty surprise!
 		

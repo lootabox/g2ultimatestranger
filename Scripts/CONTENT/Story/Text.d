@@ -1085,6 +1085,9 @@ const string Pickpocket_80_Female	=	"(It would be difficult to steal her purse.)
 const string Pickpocket_100_Female	=	"(It would be damn difficult to steal her purse.)";
 const string Pickpocket_120_Female	=	"(It would be nearly impossible to steal her purse.)";
 
+const string PRINT_PickPocketFailed = " - failed!";
+const string PRINT_PickPocketSuccess = " - success!";
+
 // ****************************************************************************************
 // Relative	Y-Koordinaten für die Bildschirmausgabe	(in	% der aktuellen	Bildhöhe, von oben)
 // ****************************************************************************************
