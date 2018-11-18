@@ -646,12 +646,7 @@ INSTANCE DIA_MiltenOW_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_MiltenOW_PICKPOCKET_Condition()
 {
-	if (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == TRUE)
-	&& (other.attribute[ATR_DEXTERITY] >= (80 - TheftDiff))
-	{
-		return 1;
-	};
+	return C_StealItem(80, ItPo_Perm_Mana);
 };
 FUNC VOID DIA_MiltenOW_PICKPOCKET_Info()
 {	
@@ -662,20 +657,8 @@ FUNC VOID DIA_MiltenOW_PICKPOCKET_Info()
 
 func void DIA_MiltenOW_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 80)
-	{
-		CreateInvItems (self,ItPo_Perm_Mana,1);
-		B_GiveInvItems (self, other, ItPo_Perm_Mana, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP ();	
-		Info_ClearChoices (DIA_MiltenOW_PICKPOCKET);
-	}
-	else
-	{
-		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
-	};
+	B_StealItem(80, ItPo_Perm_Mana);
+	Info_ClearChoices(DIA_MiltenOW_PICKPOCKET);
 };
 	
 func void DIA_MiltenOW_PICKPOCKET_BACK()

@@ -36,15 +36,14 @@ INSTANCE DIA_Salandril_PICKPOCKET (C_INFO)
 	permanent	= TRUE;
 	description = "(It would be easy to steal his key)";
 };
-//----------------------------------------                       
-var int DIA_Salandril_PICKPOCKET_perm;
 //----------------------------------------
 FUNC INT DIA_Salandril_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (DIA_Salandril_PICKPOCKET_perm == FALSE)
-	&& (other.attribute[ATR_DEXTERITY] >= (30 - Theftdiff))
+	// Can't have the key on a trader
+	//return C_StealItem(30, ItKe_Salandril);
+	if (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
+	&& (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == TRUE)
+	&& (other.attribute[ATR_DEXTERITY] >= (30 - TheftDiff))
 	{
 		return TRUE;
 	};
@@ -59,22 +58,8 @@ FUNC VOID DIA_Salandril_PICKPOCKET_Info()
 
 func void DIA_Salandril_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 30)
-	{
-		CreateInvItems (self, ItKe_Salandril, 1);
-		B_GiveInvItems (self, other, ItKe_Salandril, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		
-		DIA_Salandril_PICKPOCKET_perm = TRUE;
-		B_GiveThiefXP();
-		//B_GivePlayerXP (XP_Ambient);
-		Info_ClearChoices (DIA_Salandril_PICKPOCKET);
-	}
-	else
-	{
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); 
-	};
+	B_StealItem(30, ItKe_Salandril);
+	Info_ClearChoices(DIA_Salandril_PICKPOCKET);
 };
 	
 func void DIA_Salandril_PICKPOCKET_BACK()

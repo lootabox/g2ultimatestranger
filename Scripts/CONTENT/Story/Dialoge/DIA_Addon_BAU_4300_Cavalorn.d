@@ -50,6 +50,7 @@ INSTANCE DIA_Addon_Cavalorn_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Addon_Cavalorn_PICKPOCKET_Condition()
 {
+	// Handle multiple items
 	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
 	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
 	&& (other.attribute[ATR_DEXTERITY] >= (25 - Theftdiff))
@@ -67,20 +68,22 @@ FUNC VOID DIA_Addon_Cavalorn_PICKPOCKET_Info()
 
 func void DIA_Addon_Cavalorn_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 25)
+	// Handle multiple items
+	if(other.attribute[ATR_DEXTERITY] >= 25)
 	{
-		
-		B_GiveInvItems (self, other, ItRw_Arrow, 44);
+		B_GiveInvItems(self,other,ItRw_Arrow,44);
 		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
 		B_GiveThiefXP();
-		//B_GivePlayerXP (XP_Ambient);
-		Info_ClearChoices (DIA_Addon_Cavalorn_PICKPOCKET);
+		B_LogEntry(Topic_PickPocket, ConcatStrings(self.name, PRINT_PickPocketSuccess));
 	}
 	else
 	{
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
+		B_ResetThiefLevel();
+		B_LogEntry(Topic_PickPocket, ConcatStrings(self.name, PRINT_PickPocketFailed));
+		AI_StopProcessInfos(self);
+		B_Attack(self,other,AR_Theft,1);
 	};
+	Info_ClearChoices(DIA_Addon_Cavalorn_PICKPOCKET);
 };
 	
 func void DIA_Addon_Cavalorn_PICKPOCKET_BACK()

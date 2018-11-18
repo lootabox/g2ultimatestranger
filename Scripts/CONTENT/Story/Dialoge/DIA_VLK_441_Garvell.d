@@ -31,18 +31,12 @@ INSTANCE DIA_Garvell_PICKPOCKET (C_INFO)
 	condition	= DIA_Garvell_PICKPOCKET_Condition;
 	information	= DIA_Garvell_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(It would be child's play to steal his purse.)";
+	description = Pickpocket_20;
 };                       
 
 FUNC INT DIA_Garvell_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Npc_HasItems (self, ItSe_GoldPocket25) >= 1)
-	&& (other.attribute[ATR_DEXTERITY] >= (10 - Theftdiff))
-	{
-		return TRUE;
-	};
+	return C_StealItem(10, ItSe_GoldPocket25);
 };
  
 FUNC VOID DIA_Garvell_PICKPOCKET_Info()
@@ -54,20 +48,8 @@ FUNC VOID DIA_Garvell_PICKPOCKET_Info()
 
 func void DIA_Garvell_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 10)
-	{
-		
-		B_GiveInvItems (self, other, ItSe_GoldPocket25, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP ();
-		Info_ClearChoices (DIA_Garvell_PICKPOCKET);
-	}
-	else
-	{
-		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
-	};
+	B_StealItem(10, ItSe_GoldPocket25);
+	Info_ClearChoices(DIA_Garvell_PICKPOCKET);
 };
 	
 func void DIA_Garvell_PICKPOCKET_BACK()

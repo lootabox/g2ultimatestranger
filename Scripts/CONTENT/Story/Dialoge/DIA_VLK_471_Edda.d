@@ -202,13 +202,7 @@ INSTANCE DIA_Edda_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Edda_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Npc_HasItems(self, ItMI_EddasStatue) >= 1)
-	&& (other.attribute[ATR_DEXTERITY] >= (20 - Theftdiff))
-	{
-		return TRUE;
-	};
+	return C_StealItem(20, ItMI_EddasStatue);
 };
  
 FUNC VOID DIA_Edda_PICKPOCKET_Info()
@@ -220,19 +214,8 @@ FUNC VOID DIA_Edda_PICKPOCKET_Info()
 
 func void DIA_Edda_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 20)
-	{
-		B_GiveInvItems (self, other, ItMI_EddasStatue, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP();
-		Info_ClearChoices (DIA_Edda_PICKPOCKET);
-	}
-	else
-	{
-		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); 
-	};
+	B_StealItem(20, ItMI_EddasStatue);
+	Info_ClearChoices(DIA_Edda_PICKPOCKET);
 };
 	
 func void DIA_Edda_PICKPOCKET_BACK()

@@ -39,13 +39,7 @@ INSTANCE DIA_Franco_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Franco_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (other.attribute[ATR_DEXTERITY] >= (60 - Theftdiff)
-	&& (Npc_HasItems (self,ItAm_Addon_Franco) >= 1))
-	{
-		return TRUE;
-	};
+	return C_StealItem(60, ItAm_Addon_Franco);
 };
  
 FUNC VOID DIA_Franco_PICKPOCKET_Info()
@@ -57,22 +51,10 @@ FUNC VOID DIA_Franco_PICKPOCKET_Info()
 
 func void DIA_Franco_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 60)
-	{
-		B_GiveInvItems (self, other, ItAm_Addon_Franco, 1);
-		B_GiveThiefXP();
-		//B_GivePlayerXP (XP_Ambient);
-		Info_ClearChoices (DIA_Franco_PICKPOCKET);
-		
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		self.attribute[ATR_HITPOINTS_MAX]	= 196; //boah ey, ist ja ein super trick!
-		self.attribute[ATR_HITPOINTS] 		= 196;
-	}
-	else
-	{
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
-	};
+	B_StealItem(60, ItAm_Addon_Franco);
+	Info_ClearChoices(DIA_Franco_PICKPOCKET);
+	//self.attribute[ATR_HITPOINTS_MAX]	= 196; //boah ey, ist ja ein super trick!
+	//self.attribute[ATR_HITPOINTS] 		= 196;
 };
 	
 func void DIA_Franco_PICKPOCKET_BACK()

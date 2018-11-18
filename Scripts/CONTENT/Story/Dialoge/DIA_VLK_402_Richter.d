@@ -371,13 +371,7 @@ INSTANCE DIA_Richter_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Richter_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Npc_HasItems(self, ItKe_Richter) >= 1)
-	&& (other.attribute[ATR_DEXTERITY] >= (30 - Theftdiff))
-	{
-		return TRUE;
-	};
+	return C_StealItem(30, ItKe_Richter);
 };
  
 FUNC VOID DIA_Richter_PICKPOCKET_Info()
@@ -389,19 +383,8 @@ FUNC VOID DIA_Richter_PICKPOCKET_Info()
 
 func void DIA_Richter_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 30)
-	{
-		B_GiveInvItems (self, other, ItKe_Richter, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP ();	
-		Info_ClearChoices (DIA_Richter_PICKPOCKET);
-	}
-	else
-	{
-		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); 
-	};
+	B_StealItem(30, ItKe_Richter);
+	Info_ClearChoices(DIA_Richter_PICKPOCKET);
 };
 	
 func void DIA_Richter_PICKPOCKET_BACK()

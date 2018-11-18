@@ -37,11 +37,13 @@ INSTANCE DIA_Gorax_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Gorax_PICKPOCKET_Condition()
 {
+	// Can't have the key on a trader
+	//return C_StealItem(80, ItKe_KlosterSchatz);
 	if (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
 	&& (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == TRUE)
 	&& (other.attribute[ATR_DEXTERITY] >= (80 - TheftDiff))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 FUNC VOID DIA_Gorax_PICKPOCKET_Info()
@@ -53,20 +55,8 @@ FUNC VOID DIA_Gorax_PICKPOCKET_Info()
 
 func void DIA_Gorax_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 80)
-	{
-		CreateInvItems (self,ItKe_KlosterSchatz,1);
-		B_GiveInvItems (self, other, ItKe_KlosterSchatz, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP ();	
-		Info_ClearChoices (DIA_Gorax_PICKPOCKET);
-	}
-	else
-	{
-		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
-	};
+	B_StealItem(80, ItKe_KlosterSchatz);
+	Info_ClearChoices(DIA_Gorax_PICKPOCKET);
 };
 	
 func void DIA_Gorax_PICKPOCKET_BACK()

@@ -129,6 +129,9 @@ Young Wolves at the pass are switched with regular Wolves.
 
 	NPCs General
 
+Added logging for pickpocket failures and successes.
+Added pickpocketable items to NPCs inventories, except for traders.
+
 Fixed Fajeth, Tengron and Knight 263 referring to Lord Andre when telling NH to go settle his crimes.
 Fixed XP award for pickpocketing Cavalorn, Dobar, Engor, Francis, Franco, Salandril, Valentino.
 Fixed XP award for recruiting Lares, Lester.

@@ -26,6 +26,7 @@ INSTANCE PC_Mage_OW (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
+	CreateInvItems(self, ItPo_Perm_Mana, 1);
 	
 		
 	// ------ visuals ------																			

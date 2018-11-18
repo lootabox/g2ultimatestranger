@@ -24,6 +24,7 @@ instance VLK_471_Edda (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
+	CreateInvItems (self, ItMi_EddasStatue, 1);
 	EquipItem (self, ItMw_1h_Vlk_Dagger);
 		
 	// ------ visuals ------																			

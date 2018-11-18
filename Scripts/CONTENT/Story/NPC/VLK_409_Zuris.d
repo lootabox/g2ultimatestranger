@@ -17,7 +17,7 @@ instance VLK_409_Zuris (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ItMw_1H_VLK_DAGGER);
-	
+
 	// ------ Inventory ------
 	// Händler
 		

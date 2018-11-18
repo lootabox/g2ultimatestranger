@@ -20,6 +20,7 @@ instance Pal_201_Ingmar (Npc_Default)
 		
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
+	CreateInvItems(self, ITWr_Manowar, 1);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_ToughBart01, BodyTex_N, ITAR_PAL_H);	

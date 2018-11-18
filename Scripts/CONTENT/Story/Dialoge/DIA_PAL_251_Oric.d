@@ -740,12 +740,7 @@ INSTANCE DIA_Oric_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Oric_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (other.attribute[ATR_DEXTERITY] >= (85 - Theftdiff))
-	{
-		return TRUE;
-	};
+	return C_StealItem(85, ITSc_PalRepelEvil);
 };
  
 FUNC VOID DIA_Oric_PICKPOCKET_Info()
@@ -757,19 +752,8 @@ FUNC VOID DIA_Oric_PICKPOCKET_Info()
 
 func void DIA_Oric_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 85)
-	{
-		B_GiveInvItems (self, other, ITSc_PalRepelEvil, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP ();
-		Info_ClearChoices (DIA_Oric_PICKPOCKET);
-	}
-	else
-	{	
-		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
-	};
+	B_StealItem(85, ITSc_PalRepelEvil);
+	Info_ClearChoices(DIA_Oric_PICKPOCKET);
 };
 	
 func void DIA_Oric_PICKPOCKET_BACK()

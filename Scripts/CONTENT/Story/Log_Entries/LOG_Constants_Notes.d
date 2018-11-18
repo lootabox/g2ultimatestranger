@@ -31,3 +31,4 @@ const string	TOPIC_Language				= 	"The language of the builders";
 const string	Topic_Bonus					=	"Specials"; //z.B. täglich essen abholen...
 const string	Topic_Diebesgilde			=	"Thieves' Guild"; 
 
+const string	Topic_PickPocket			=	"Pickpocketing";

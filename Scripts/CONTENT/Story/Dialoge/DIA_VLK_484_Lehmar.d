@@ -390,13 +390,7 @@ INSTANCE DIA_Lehmar_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Lehmar_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Npc_HasItems(self, ItWr_Schuldenbuch) >= 1)
-	&& (other.attribute[ATR_DEXTERITY] >= (20 - Theftdiff))
-	{
-		return TRUE;
-	};
+	return C_StealItem(20, ItWr_Schuldenbuch);
 };
  
 FUNC VOID DIA_Lehmar_PICKPOCKET_Info()
@@ -408,25 +402,16 @@ FUNC VOID DIA_Lehmar_PICKPOCKET_Info()
 
 func void DIA_Lehmar_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 20)
+	if (B_StealItem(20, ItWr_Schuldenbuch))
 	{
-		B_GiveInvItems (self, other, ItWr_Schuldenbuch, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP ();
-		Info_ClearChoices (DIA_Lehmar_PICKPOCKET);
 		Lehmar_StealBook_Day = Wld_GetDay();
-	}
-	else
-	{
-		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
 	};
+	Info_ClearChoices(DIA_Lehmar_PICKPOCKET);
 };
 	
 func void DIA_Lehmar_PICKPOCKET_BACK()
 {
-	Info_ClearChoices (DIA_Canthar_PICKPOCKET);
+	Info_ClearChoices (DIA_Lehmar_PICKPOCKET);
 };
 
 // ************************************************************

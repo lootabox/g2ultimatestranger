@@ -353,14 +353,7 @@ INSTANCE DIA_Cornelius_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Cornelius_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Npc_HasItems(self, ItWr_CorneliusTagebuch_Mis) >= 1)
-	&&  (other.attribute[ATR_DEXTERITY] >= (60 - Theftdiff))
-	
-	{
-		return TRUE;
-	};
+	return C_StealItem(60, ItWr_CorneliusTagebuch_Mis);
 };
  
 FUNC VOID DIA_Cornelius_PICKPOCKET_Info()
@@ -372,19 +365,8 @@ FUNC VOID DIA_Cornelius_PICKPOCKET_Info()
 
 func void DIA_Cornelius_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 60)
-	{
-		B_GiveInvItems (self, other, ItWr_CorneliusTagebuch_Mis, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP ();
-		Info_ClearChoices (DIA_Cornelius_PICKPOCKET);
-	}
-	else
-	{
-		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
-	};
+	B_StealItem(60, ItWr_CorneliusTagebuch_Mis);
+	Info_ClearChoices(DIA_Cornelius_PICKPOCKET);
 };
 	
 func void DIA_Cornelius_PICKPOCKET_BACK()

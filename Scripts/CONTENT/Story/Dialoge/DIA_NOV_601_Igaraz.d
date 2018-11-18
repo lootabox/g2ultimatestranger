@@ -647,14 +647,8 @@ INSTANCE DIA_Igaraz_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Igaraz_PICKPOCKET_Condition()
 {
-	if (Npc_KnowsInfo (other,DIA_Igaranz_WhereDocs))
-	&& (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Npc_HasItems (self, ItKe_IgarazChest_mis) >= 1)
-	&& (other.attribute[ATR_DEXTERITY] >= (40 - Theftdiff))
-	{
-		return TRUE;
-	};
+	return C_StealItem(40, ItKe_IgarazChest_mis)
+	&& (Npc_KnowsInfo (other,DIA_Igaranz_WhereDocs));
 };
  
 FUNC VOID DIA_Igaraz_PICKPOCKET_Info()
@@ -666,19 +660,8 @@ FUNC VOID DIA_Igaraz_PICKPOCKET_Info()
 
 func void DIA_Igaraz_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 40)
-	{
-		B_GiveInvItems (self,other , ItKe_IgarazChest_mis, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP ();
-		Info_ClearChoices (DIA_Igaraz_PICKPOCKET);
-	}
-	else
-	{
-		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //AR_Theft führt zu NEWS!
-	};
+	B_StealItem(40, ItKe_IgarazChest_mis);
+	Info_ClearChoices(DIA_Igaraz_PICKPOCKET);
 };
 	
 func void DIA_Igaraz_PICKPOCKET_BACK()

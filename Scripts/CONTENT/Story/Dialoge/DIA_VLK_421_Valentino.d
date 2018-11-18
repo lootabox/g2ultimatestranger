@@ -197,13 +197,7 @@ INSTANCE DIA_Valentino_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Valentino_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Npc_HasItems(self, ItKe_Valentino) >= 1)
-	&& (other.attribute[ATR_DEXTERITY] >= (30 - Theftdiff))
-	{
-		return TRUE;
-	};
+	return C_StealItem(30, ItKe_Valentino);
 };
  
 FUNC VOID DIA_Valentino_PICKPOCKET_Info()
@@ -215,19 +209,8 @@ FUNC VOID DIA_Valentino_PICKPOCKET_Info()
 
 func void DIA_Valentino_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 30)
-	{
-		B_GiveInvItems (self, other, ItKe_Valentino, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP();
-		//B_GivePlayerXP (XP_Ambient);
-		Info_ClearChoices (DIA_Valentino_PICKPOCKET);
-	}
-	else
-	{
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); 
-	};
+	B_StealItem(30, ItKe_Valentino);
+	Info_ClearChoices(DIA_Valentino_PICKPOCKET);
 };
 	
 func void DIA_Valentino_PICKPOCKET_BACK()

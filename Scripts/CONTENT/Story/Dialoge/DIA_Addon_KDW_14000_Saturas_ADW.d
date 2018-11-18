@@ -36,13 +36,8 @@ INSTANCE DIA_Addon_Saturas_ADW_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Addon_Saturas_ADW_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Saturas_NW.aivar[AIV_PlayerHasPickedMyPocket] == FALSE) 
-	&& (other.attribute[ATR_DEXTERITY] >= (31 - Theftdiff))
-	{
-		return TRUE;
-	};
+	return C_StealItem(30, ItSc_Water01)
+	&& (Saturas_NW.aivar[AIV_PlayerHasPickedMyPocket] == FALSE);
 };
  
 FUNC VOID DIA_Addon_Saturas_ADW_PICKPOCKET_Info()
@@ -54,20 +49,8 @@ FUNC VOID DIA_Addon_Saturas_ADW_PICKPOCKET_Info()
 
 func void DIA_Addon_Saturas_ADW_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 31)
-	{
-		
-		B_GiveInvItems (self, other, ItSc_Water01, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP ();
-		Info_ClearChoices (DIA_Addon_Saturas_ADW_PICKPOCKET);
-	}
-	else
-	{
-		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
-	};
+	B_StealItem(30, ItSc_Water01);
+	Info_ClearChoices(DIA_Addon_Saturas_ADW_PICKPOCKET);
 };
 	
 func void DIA_Addon_Saturas_ADW_PICKPOCKET_BACK()

@@ -21,6 +21,7 @@ instance PAL_251_Oric (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
+	CreateInvItems(self, ITSc_PalRepelEvil, 1);
 
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird

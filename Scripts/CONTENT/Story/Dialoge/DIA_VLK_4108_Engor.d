@@ -439,13 +439,7 @@ INSTANCE DIA_Engor_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Engor_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Npc_HasItems(self, ItWr_Map_Oldworld) >= 1)
-	&& (other.attribute[ATR_DEXTERITY] >= (40 - Theftdiff))
-	{
-		return TRUE;
-	};
+	return C_StealItem(40, ItWr_Map_Oldworld);
 };
  
 FUNC VOID DIA_Engor_PICKPOCKET_Info()
@@ -457,19 +451,8 @@ FUNC VOID DIA_Engor_PICKPOCKET_Info()
 
 func void DIA_Engor_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 40)
-	{
-		B_GiveInvItems (self, other, ItWr_Map_Oldworld, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP();
-		//B_GivePlayerXP (XP_Ambient);
-		Info_ClearChoices (DIA_Engor_PICKPOCKET);
-	}
-	else
-	{
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
-	};
+	B_StealItem(40, ItWr_Map_Oldworld);
+	Info_ClearChoices(DIA_Engor_PICKPOCKET);
 };
 	
 func void DIA_Engor_PICKPOCKET_BACK()

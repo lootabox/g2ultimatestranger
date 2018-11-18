@@ -55,14 +55,8 @@ INSTANCE DIA_Gerbrandt_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Gerbrandt_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Npc_HasItems (self, ItSe_GoldPocket100) >= 1)
-	&& (other.attribute[ATR_DEXTERITY] >= (30 - Theftdiff))
-	&& (DIEGO_COMING != TRUE) //NICHT, wenn Diego kommt
-	{
-		return TRUE;
-	};
+	return C_StealItem(30, ItSe_GoldPocket100)
+	&& (DIEGO_COMING != TRUE); //NICHT, wenn Diego kommt
 };
  
 FUNC VOID DIA_Gerbrandt_PICKPOCKET_Info()
@@ -74,20 +68,8 @@ FUNC VOID DIA_Gerbrandt_PICKPOCKET_Info()
 
 func void DIA_Gerbrandt_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 30)
-	{
-		
-		B_GiveInvItems (self, other, ItSe_GoldPocket100, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP ();
-		Info_ClearChoices (DIA_Gerbrandt_PICKPOCKET);
-	}
-	else
-	{
-		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
-	};
+	B_StealItem(30, ItSe_GoldPocket100);
+	Info_ClearChoices(DIA_Gerbrandt_PICKPOCKET);
 };
 	
 func void DIA_Gerbrandt_PICKPOCKET_BACK()

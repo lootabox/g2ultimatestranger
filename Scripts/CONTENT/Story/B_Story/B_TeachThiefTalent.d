@@ -64,6 +64,7 @@ func int B_TeachThiefTalent (var C_NPC slf, var C_NPC oth, var int talent)
 	{
 		Npc_SetTalentSkill 	(oth, NPC_TALENT_PICKPOCKET, 1);	
 		PrintScreen	(PRINT_LearnPickpocket, -1, -1, FONT_Screen, 2);
+		Log_CreateTopic(Topic_PickPocket,LOG_NOTE);
 		return TRUE;
 	};
 };

@@ -22,7 +22,6 @@ instance BDT_1093_Addon_Franco (Npc_Default)
 
 	// ------ Inventory ------
 	B_CreateAmbientInv (self); 
-	//CreateInvItems (self, ItAm_Addon_Franco,1); siehe oben
 	CreateInvItems (self, ItMi_GoldNugget_Addon,7);
 	CreateInvItems (self, ItAm_Addon_Franco,1);
 	

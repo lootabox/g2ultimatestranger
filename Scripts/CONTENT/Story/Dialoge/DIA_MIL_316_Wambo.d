@@ -37,13 +37,7 @@ INSTANCE DIA_Wambo_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Wambo_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Npc_HasItems(self, ItKe_City_Tower_04) >= 1)
-	&& (other.attribute[ATR_DEXTERITY] >= 40)
-	{
-		return TRUE;
-	};
+	return C_StealItem(50, ItKe_City_Tower_04);
 };
  
 FUNC VOID DIA_Wambo_PICKPOCKET_Info()
@@ -55,19 +49,8 @@ FUNC VOID DIA_Wambo_PICKPOCKET_Info()
 
 func void DIA_Wambo_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 50)
-	{
-		B_GiveInvItems (self, other, ItKe_City_Tower_04, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP ();
-		Info_ClearChoices (DIA_Wambo_PICKPOCKET);
-	}
-	else
-	{
-		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
-	};
+	B_StealItem(50, ItKe_City_Tower_04);
+	Info_ClearChoices(DIA_Wambo_PICKPOCKET);
 };
 	
 func void DIA_Wambo_PICKPOCKET_BACK()

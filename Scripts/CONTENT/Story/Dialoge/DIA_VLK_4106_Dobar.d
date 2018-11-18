@@ -237,13 +237,7 @@ INSTANCE DIA_Dobar_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Dobar_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Npc_HasItems (self, ItMI_Nugget) >= 1)
-	&& (other.attribute[ATR_DEXTERITY] >= (79 - Theftdiff))
-	{
-		return TRUE;
-	};
+	return C_StealItem(80, ItMI_Nugget);
 };
  
 FUNC VOID DIA_Dobar_PICKPOCKET_Info()
@@ -255,19 +249,8 @@ FUNC VOID DIA_Dobar_PICKPOCKET_Info()
 
 func void DIA_Dobar_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 79)
-	{
-		B_GiveInvItems (self, other, ItMI_Nugget, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP();
-		//B_GivePlayerXP (XP_Ambient);
-		Info_ClearChoices (DIA_Dobar_PICKPOCKET);
-	}
-	else
-	{
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
-	};
+	B_StealItem(80, ItMI_Nugget);
+	Info_ClearChoices(DIA_Dobar_PICKPOCKET);
 };
 	
 func void DIA_Dobar_PICKPOCKET_BACK()

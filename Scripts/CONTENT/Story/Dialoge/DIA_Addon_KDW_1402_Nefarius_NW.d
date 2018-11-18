@@ -36,12 +36,7 @@ INSTANCE DIA_Addon_Nefarius_NW_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Addon_Nefarius_NW_PICKPOCKET_Condition()
 {
-	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
-	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (other.attribute[ATR_DEXTERITY] >= (35 - Theftdiff))
-	{
-		return TRUE;
-	};
+	return C_StealItem(35, ItSc_Windfist);
 };
  
 FUNC VOID DIA_Addon_Nefarius_NW_PICKPOCKET_Info()
@@ -53,20 +48,8 @@ FUNC VOID DIA_Addon_Nefarius_NW_PICKPOCKET_Info()
 
 func void DIA_Addon_Nefarius_NW_PICKPOCKET_DoIt()
 {
-	if (other.attribute[ATR_DEXTERITY] >= 30)
-	{
-		
-		B_GiveInvItems (self, other, ItSc_Windfist, 1);
-		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
-		B_GiveThiefXP ();
-		Info_ClearChoices (DIA_Addon_Nefarius_NW_PICKPOCKET);
-	}
-	else
-	{
-		B_ResetThiefLevel();
-		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
-	};
+	B_StealItem(35, ItSc_Windfist);
+	Info_ClearChoices(DIA_Addon_Nefarius_NW_PICKPOCKET);
 };
 	
 func void DIA_Addon_Nefarius_NW_PICKPOCKET_BACK()
