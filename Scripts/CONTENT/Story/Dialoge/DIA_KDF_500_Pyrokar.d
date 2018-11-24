@@ -522,8 +522,8 @@ func void DIA_Pyrokar_OATH_Info ()
 	Snd_Play ("LEVELUP"); 
 	
 	KDF_Aufnahme = LOG_SUCCESS;
-	SLD_Aufnahme = LOG_OBSOLETE;
-	MIL_Aufnahme = LOG_OBSOLETE;
+	//SLD_Aufnahme = LOG_OBSOLETE;
+	//MIL_Aufnahme = LOG_OBSOLETE;
 	B_GivePlayerXP (XP_BecomeMage);
 	
 	if(!Npc_IsDead(Ulf))

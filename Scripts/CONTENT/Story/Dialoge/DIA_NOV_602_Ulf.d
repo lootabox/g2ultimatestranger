@@ -172,10 +172,13 @@ func void DIA_Ulf_Aufnahme_Info ()
 	AI_Output (other, self, "DIA_Ulf_Aufnahme_15_02"); //Hey - just tell me what the conditions are.
 	AI_Output (self, other, "DIA_Ulf_Aufnahme_03_03"); //You need the offerings. A sheep and ...
 	B_Say_Gold (self, other, Summe_Kloster);
-	
-	Log_CreateTopic (Topic_Kloster,LOG_MISSION);
-	Log_SetTopicStatus (Topic_Kloster,LOG_RUNNING);
-	B_LogEntry (Topic_Kloster,"To become a novice at the monastery of Innos, I need a sheep and 1000 pieces of gold.");
+	if(SC_KnowsKlosterTribut == FALSE)
+	{
+		SC_KnowsKlosterTribut = TRUE;
+		Log_CreateTopic (Topic_Kloster,LOG_MISSION);
+		Log_SetTopicStatus (Topic_Kloster,LOG_RUNNING);
+		B_LogEntry (Topic_Kloster,"To become a novice at the monastery of Innos, I need a sheep and 1000 pieces of gold.");
+	};
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Gold

@@ -168,10 +168,13 @@ func void DIA_Pedro_TEMPEL_Info ()
  		AI_Output (other, self, "DIA_Pedro_TEMPEL_15_04"); //That's a whole lot of gold.
  		AI_Output (self, other, "DIA_Pedro_TEMPEL_09_05"); //It is a sign that you are beginning a new life as a servant of Innos. When you are accepted you will be forgiven all your previous transgressions.
  		AI_Output (self, other, "DIA_Pedro_TEMPEL_09_06"); //And consider - you cannot take back the decision to become a servant of Innos.
- 		SC_KnowsKlosterTribut = TRUE;
-  		Log_CreateTopic (Topic_Kloster,LOG_MISSION);
-		Log_SetTopicStatus (Topic_Kloster,LOG_RUNNING);
-		B_LogEntry (Topic_Kloster,"To become a novice at the monastery of Innos, I need a sheep and a huge sum of gold.");
+		if(SC_KnowsKlosterTribut == FALSE)
+		{
+			SC_KnowsKlosterTribut = TRUE;
+			Log_CreateTopic (Topic_Kloster,LOG_MISSION);
+			Log_SetTopicStatus (Topic_Kloster,LOG_RUNNING);
+			B_LogEntry (Topic_Kloster,"To become a novice at the monastery of Innos, I need a sheep and 1000 pieces of gold.");
+		};
  	};
 };
 
@@ -342,23 +345,23 @@ FUNC VOID DIA_Pedro_AUFNAHME_YES()
 {
 	AI_Output (other, self, "DIA_Pedro_AUFNAHME_YES_15_00"); //Yes, I want to dedicate my life to the service of Innos.
 	AI_Output (self, other, "DIA_Pedro_AUFNAHME_YES_09_01"); //Then be welcome, Brother. I give to you the key to the monastery gate.
+	CreateInvItems 		(self,ItKe_Innos_MIS,1);
+	B_GiveInvItems 		(self, hero, ItKe_Innos_MIS,1); 
 	AI_Output (self, other, "DIA_Pedro_AUFNAHME_YES_09_02"); //As a sign of your free decision, it is up to you to open the gate and step through.
 	AI_Output (self, other, "DIA_Pedro_AUFNAHME_YES_09_03"); //You are now a novice. Wear this robe as a sign that you are now a member of this brotherhood.
+	CreateInvItems 		(other,ITAR_NOV_L,1);
+	AI_EquipArmor		(other,ITAR_NOV_L);		   
 	AI_Output (self, other, "DIA_Pedro_AUFNAHME_YES_09_04"); //When you are in the monastery, go to Parlan. He'll see to your needs from now on.
 	AI_Output (other, self, "DIA_Pedro_AUFNAHME_YES_15_05"); //Will my transgressions be forgiven now?
 	AI_Output (self, other, "DIA_Pedro_AUFNAHME_YES_09_06"); //Not yet. Speak to Master Parlan. He will bless you and wash you clean of your sins.
-	
-	CreateInvItems 		(self,ItKe_Innos_MIS,1);
-	B_GiveInvItems 		(self, hero, ItKe_Innos_MIS,1); 
-	
-	CreateInvItems 		(other,ITAR_NOV_L,1);
-	AI_EquipArmor		(other,ITAR_NOV_L);		   
 	
 	other.guild = GIL_NOV;
 	Npc_SetTrueGuild (other, GIL_NOV);
 	
 	DIA_Pedro_AUFNAHME_NOPERM = TRUE;
 	NOV_Aufnahme = TRUE;
+	SLD_Aufnahme = LOG_OBSOLETE;
+	MIL_Aufnahme = LOG_OBSOLETE;
 	B_GivePlayerXP (XP_AufnahmeNovize);
 	
 	//ADDON>

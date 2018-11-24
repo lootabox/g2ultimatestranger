@@ -107,7 +107,7 @@ INSTANCE StoryHelper_INFO1 (C_INFO)
 	information		= StoryHelper_INFO1_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Kapitel 1"; 
+	description		= "Chapter 1"; 
 };
 
 FUNC INT StoryHelper_INFO1_Condition()
@@ -120,7 +120,7 @@ func VOID StoryHelper_INFO1_Info()
 
 	Info_ClearChoices	( StoryHelper_INFO1 );
 	Info_AddChoice		( StoryHelper_INFO1, DIALOG_BACK			                			, StoryHelper_BACK1);
-	Info_AddChoice		( StoryHelper_INFO1, "KAPITELANFANG"			                			, StoryHelper_KAPITEL1ANFANG);
+	Info_AddChoice		( StoryHelper_INFO1, "START CHAPTER"			                			, StoryHelper_KAPITEL1ANFANG);
 	Info_AddChoice		( StoryHelper_INFO1, "ADDON Ready for first Meeting with Saturas (forget Lares)"			                	, StoryHelper_SATURAS);
 	Info_AddChoice		( StoryHelper_INFO1, "ADDON Cavalorn bug "			                	, StoryHelper_Cavalorn);
 };
@@ -192,7 +192,7 @@ INSTANCE StoryHelper_INFO2 (C_INFO)
 	information		= StoryHelper_INFO2_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Kapitel 2"; 
+	description		= "Chapter 2"; 
 };
 
 FUNC INT StoryHelper_INFO2_Condition()
@@ -205,7 +205,7 @@ func VOID StoryHelper_INFO2_Info()
 
 	Info_ClearChoices	( StoryHelper_INFO2 );
 	Info_AddChoice		( StoryHelper_INFO2, DIALOG_BACK			                			, StoryHelper_BACK2);
-	Info_AddChoice		( StoryHelper_INFO2, "KAPITELANFANG"			                			, StoryHelper_KAPITEL2ANFANG);
+	Info_AddChoice		( StoryHelper_INFO2, "START CHAPTER"			                			, StoryHelper_KAPITEL2ANFANG);
 };
 //---------------------------------------------------------------------
 //	BACK
@@ -242,7 +242,7 @@ INSTANCE StoryHelper_INFO3 (C_INFO)
 	information		= StoryHelper_INFO3_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Kapitel 3"; 
+	description		= "Chapter 3"; 
 };
 
 FUNC INT StoryHelper_INFO3_Condition()
@@ -255,7 +255,7 @@ func VOID StoryHelper_INFO3_Info()
 
 	Info_ClearChoices	( StoryHelper_INFO3 );
 	Info_AddChoice		( StoryHelper_INFO3, DIALOG_BACK			                			, StoryHelper_BACK3);
-	Info_AddChoice		( StoryHelper_INFO3, "KAPITELANFANG"			                			, StoryHelper_KAPITEL3ANFANG);
+	Info_AddChoice		( StoryHelper_INFO3, "START CHAPTER"			                			, StoryHelper_KAPITEL3ANFANG);
 };
 //---------------------------------------------------------------------
 //	BACK
@@ -296,7 +296,7 @@ INSTANCE StoryHelper_INFO4 (C_INFO)
 	information		= StoryHelper_INFO4_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Kapitel 4"; 
+	description		= "Chapter 4"; 
 };
 
 FUNC INT StoryHelper_INFO4_Condition()
@@ -309,7 +309,7 @@ func VOID StoryHelper_INFO4_Info()
 
 	Info_ClearChoices	( StoryHelper_INFO4 );
 	Info_AddChoice		( StoryHelper_INFO4, DIALOG_BACK			                			, StoryHelper_BACK4);
-	Info_AddChoice		( StoryHelper_INFO4, "KAPITELANFANG"			                			, StoryHelper_KAPITEL4ANFANG);
+	Info_AddChoice		( StoryHelper_INFO4, "START CHAPTER"			                			, StoryHelper_KAPITEL4ANFANG);
 };
 //---------------------------------------------------------------------
 //	BACK
@@ -357,7 +357,7 @@ INSTANCE StoryHelper_INFO5 (C_INFO)
 	information		= StoryHelper_INFO5_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Kapitel 5"; 
+	description		= "Chapter 5"; 
 };
 
 FUNC INT StoryHelper_INFO5_Condition()
@@ -370,7 +370,7 @@ func VOID StoryHelper_INFO5_Info()
 
 	Info_ClearChoices	( StoryHelper_INFO5 );
 	Info_AddChoice		( StoryHelper_INFO5, DIALOG_BACK			                			, StoryHelper_BACK5);
-	Info_AddChoice		( StoryHelper_INFO5, "KAPITELANFANG"			                			, StoryHelper_KAPITEL5ANFANG);
+	Info_AddChoice		( StoryHelper_INFO5, "START CHAPTER"			                			, StoryHelper_KAPITEL5ANFANG);
 };
 //---------------------------------------------------------------------
 //	BACK
@@ -422,7 +422,7 @@ INSTANCE StoryHelper_INFO6 (C_INFO)
 	information		= StoryHelper_INFO6_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Kapitel 6"; 
+	description		= "Chapter 6"; 
 };
 
 FUNC INT StoryHelper_INFO6_Condition()
@@ -435,7 +435,7 @@ func VOID StoryHelper_INFO6_Info()
 
 	Info_ClearChoices	( StoryHelper_INFO6 );
 	Info_AddChoice		( StoryHelper_INFO6, DIALOG_BACK			                			, StoryHelper_BACK6);
-	Info_AddChoice		( StoryHelper_INFO6, "KAPITELANFANG"			                			, StoryHelper_KAPITEL6ANFANG);
+	Info_AddChoice		( StoryHelper_INFO6, "START CHAPTER"			                			, StoryHelper_KAPITEL6ANFANG);
 };
 //---------------------------------------------------------------------
 //	BACK

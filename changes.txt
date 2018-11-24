@@ -144,7 +144,7 @@ Fixed Fajeth, Tengron and Knight 263 referring to Lord Andre when telling NH to 
 Fixed XP award for pickpocketing Cavalorn, Dobar, Engor, Francis, Franco, Salandril, Valentino.
 Fixed XP award for recruiting Lares, Lester.
 Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
-Fixed logical issues with dialogue of Diego, Ramon, Ulf, Vatras, Xardas.
+Fixed logical issues with dialogue of Diego, Lobart, Ramon, Ulf, Vatras, Xardas.
 Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patrick, Monty, Tonak, Telbor, Pardos.
 Fixed NPCs not considering Heavy Militia armor as militia armor for Borka, Kardif, Meldor, Nagur, Nadja.
 Fixed NPCs speaking out NH's dialog lines for Pardos, Peck.
@@ -237,7 +237,6 @@ Huno only makes a vague comment about high price of his armor once Esteban is de
 Igaraz can be asked about the living rock, even after moving north from the tavern.
 Isgaroth can be asked for a blessing after he tells who he is.
 Isgaroth can be traded with as a mage, even if he was never spoken to before.
-Isgaroth properly updates quest log for requirements of joining the monastery.
 Isgaroth's blessing creates a log entry for Thorben's quest.
 Jan does not drop the gold used to buy the Medium Dragon Hunter's Armor.
 Jorgen wields a Short Sword in Irdorath instead of a Sickle.
@@ -248,11 +247,14 @@ Kervo's quest fails if he is killed.
 Knight 263 can be asked for a report only if NH is paladin.
 Landlord will not give more then 5 beers per chapter and only 1 per day.
 Lares's dialog has 5 more previously unused dialogue lines.
+Larius dialog has 2 more previously inaccessible dialogue lines.
 Lee can be told about lizard people only from chapter 4 onwards.
+Lee's dialog has 1 more previously unused dialogue lines.
 Lee will only sell mercenary armour while the player is a mercenary.
 Lehmar attacking the NH causes Meldor to also attack the NH.
 Lehmar does not immediately notice the theft of his ledger.
 Lehmar does not lend money to NH if he attacked him, unless Oblivion is cast on him.
+Lobart's quest for working clothes does not start if player already has bought the clothes or has some other armor.
 Logan teaches skinning reptiles instead of skinning off furs.
 Maria cannot be asked to raise the salary from Onar before it has been agreed upon.
 Maria gives dragon hunters gold instead of increase in salary that they can't get anymore.
@@ -323,10 +325,11 @@ Failing to create runes for Ice Block and Destroy Undead properly returns the ru
 Gold mining skill does not improve by mining empty veins.
 Herring is categorized as food.
 Magic Runes are removed from frozen corpses.
-Monastery novice quest become obsolete only after player becomes a mage.
 Nostalgia bonus properly awards levels to NH.
 Novices do not create additional sausages when given one.
 Quarhodron summoning scroll changed from piece of paper into proper scroll.
+Quests from monastery for novices become obsolete after player becomes a mage, not when they receive the key to the library.
+Quests to join mercenaries and the militia become obsolete already when joining the monastery as novice, not after becoming a mage.
 Rum drinking animations are slower.
 Sheep cannot be bought from Onar or Pepe after escorting one to the monastery.
 Sleep dialog has black overlay.
@@ -334,6 +337,8 @@ Sleeping is not possible while afflicted by nightmares.
 Steel Blanks and Lab Water Bottles cannot be looted from anyone.
 Stunt bonus can be received only after learning Malcom fell down the hole and there is no penalty for jumping more than once.
 Sun Aloe can't be eaten.
+Translated dialogs of CH, SH, SH_Oldworld dialogs and added addon skills to CH dialog.
+Weed has no price field and makes NH cough funnily.
 
 Following actions no longer cause unnecessary journal updates:
 * Reading Cornelius' Diary, Xardas' Letter, Lucia's farewell letter, almanac in the secret library, Black Magician's Scroll, Diary of the novice black magician, "Pure mana" and "Pure health".
@@ -349,6 +354,7 @@ Following actions no longer cause unnecessary journal updates:
 * Cord talked about joining mercenaries.
 * Cronos asked whether he can sell equipment to NH.
 * Gaan asked "How is the hunt?"
+* Isgaroth, Pedro and Ulf telling the requirements of joining the monastery.
 * Jorgen asked to become captain
 * Lares asked what he knows about missing people.
 * Lee talked to about joining mercenaries before talking to Onar.

@@ -523,16 +523,14 @@ func void DIA_Lobart_WorkNOW_Info ()
 	if (hero.guild == GIL_NONE)
 	{
 		AI_Output (self, other, "DIA_Lobart_WorkNOW_05_03"); //I could pay you with gold. Or give you a few decent things to wear.
-		AI_Output (self, other, "DIA_Lobart_WorkNOW_05_04"); //The things are worth a fair bit. I can't give them to you for nothing, but I can sell them to you cheap, if you work for me.
-			
-		Log_CreateTopic (TOPIC_Kleidung,LOG_MISSION);  
-		Log_SetTopicStatus  (TOPIC_Kleidung,LOG_RUNNING);  
-		B_LogEntry (TOPIC_Kleidung,"Farmer Lobart is prepared to sell me work clothes. I can pay part of the price by working on his farm. The more work I do, the cheaper the clothes get.");
-			
-		if (Npc_HasEquippedArmor(other) == FALSE)
-		|| (Lobart_Kleidung_Verkauft == TRUE)
+		if (Lobart_Kleidung_Verkauft == FALSE)
+		&& (Npc_HasEquippedArmor(other) == FALSE)
 		{
+			AI_Output (self, other, "DIA_Lobart_WorkNOW_05_04"); //The things are worth a fair bit. I can't give them to you for nothing, but I can sell them to you cheap, if you work for me.
 			AI_Output (self, other, "DIA_Lobart_WorkNOW_05_05"); //By the looks of you, I should say: take the clothes.
+			Log_CreateTopic (TOPIC_Kleidung,LOG_MISSION);
+			Log_SetTopicStatus  (TOPIC_Kleidung,LOG_RUNNING);
+			B_LogEntry (TOPIC_Kleidung,"Farmer Lobart is prepared to sell me work clothes. I can pay part of the price by working on his farm. The more work I do, the cheaper the clothes get.");
 		}
 		else
 		{

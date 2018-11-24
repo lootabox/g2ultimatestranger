@@ -943,7 +943,7 @@ INSTANCE SH_Oldworld_INFO1 (C_INFO)
 	information		= SH_Oldworld_INFO1_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Kapitel 1"; 
+	description		= "Chapter 1"; 
 };
 
 FUNC INT SH_Oldworld_INFO1_Condition()
@@ -956,7 +956,7 @@ func VOID SH_Oldworld_INFO1_Info()
 
 	Info_ClearChoices	( SH_Oldworld_INFO1 );
 	Info_AddChoice		( SH_Oldworld_INFO1, DIALOG_BACK			                			, SH_Oldworld_BACK1);
-	Info_AddChoice		( SH_Oldworld_INFO1, "KAPITELANFANG"			                			, SH_Oldworld_KAPITEL1ANFANG);
+	Info_AddChoice		( SH_Oldworld_INFO1, "START CHAPTER"			                			, SH_Oldworld_KAPITEL1ANFANG);
 };
 //---------------------------------------------------------------------
 //	BACK
@@ -992,7 +992,7 @@ INSTANCE SH_Oldworld_INFO2 (C_INFO)
 	information		= SH_Oldworld_INFO2_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Kapitel 2"; 
+	description		= "Chapter 2"; 
 };
 
 FUNC INT SH_Oldworld_INFO2_Condition()
@@ -1005,7 +1005,7 @@ func VOID SH_Oldworld_INFO2_Info()
 
 	Info_ClearChoices	( SH_Oldworld_INFO2 );
 	Info_AddChoice		( SH_Oldworld_INFO2, DIALOG_BACK			                			, SH_Oldworld_BACK2);
-	Info_AddChoice		( SH_Oldworld_INFO2, "KAPITELANFANG"			                			, SH_Oldworld_KAPITEL2ANFANG);
+	Info_AddChoice		( SH_Oldworld_INFO2, "START CHAPTER"			                			, SH_Oldworld_KAPITEL2ANFANG);
 };
 //---------------------------------------------------------------------
 //	BACK
@@ -1042,7 +1042,7 @@ INSTANCE SH_Oldworld_INFO3 (C_INFO)
 	information		= SH_Oldworld_INFO3_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Kapitel 3"; 
+	description		= "Chapter 3"; 
 };
 
 FUNC INT SH_Oldworld_INFO3_Condition()
@@ -1055,7 +1055,7 @@ func VOID SH_Oldworld_INFO3_Info()
 
 	Info_ClearChoices	( SH_Oldworld_INFO3 );
 	Info_AddChoice		( SH_Oldworld_INFO3, DIALOG_BACK			                			, SH_Oldworld_BACK3);
-	Info_AddChoice		( SH_Oldworld_INFO3, "KAPITELANFANG"			                			, SH_Oldworld_KAPITEL3ANFANG);
+	Info_AddChoice		( SH_Oldworld_INFO3, "START CHAPTER"			                			, SH_Oldworld_KAPITEL3ANFANG);
 };
 //---------------------------------------------------------------------
 //	BACK
@@ -1096,7 +1096,7 @@ INSTANCE SH_Oldworld_INFO4 (C_INFO)
 	information		= SH_Oldworld_INFO4_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Kapitel 4"; 
+	description		= "Chapter 4"; 
 };
 
 FUNC INT SH_Oldworld_INFO4_Condition()
@@ -1109,7 +1109,7 @@ func VOID SH_Oldworld_INFO4_Info()
 
 	Info_ClearChoices	( SH_Oldworld_INFO4 );
 	Info_AddChoice		( SH_Oldworld_INFO4, DIALOG_BACK			                			, SH_Oldworld_BACK4);
-	Info_AddChoice		( SH_Oldworld_INFO4, "KAPITELANFANG"			                			, SH_Oldworld_KAPITEL4ANFANG);
+	Info_AddChoice		( SH_Oldworld_INFO4, "START CHAPTER"			                			, SH_Oldworld_KAPITEL4ANFANG);
 };
 //---------------------------------------------------------------------
 //	BACK
@@ -1160,7 +1160,7 @@ INSTANCE SH_Oldworld_INFO5 (C_INFO)
 	information		= SH_Oldworld_INFO5_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Kapitel 5"; 
+	description		= "Chapter 5"; 
 };
 
 FUNC INT SH_Oldworld_INFO5_Condition()
@@ -1173,7 +1173,7 @@ func VOID SH_Oldworld_INFO5_Info()
 
 	Info_ClearChoices	( SH_Oldworld_INFO5 );
 	Info_AddChoice		( SH_Oldworld_INFO5, DIALOG_BACK			                			, SH_Oldworld_BACK5);
-	Info_AddChoice		( SH_Oldworld_INFO5, "KAPITELANFANG"			                			, SH_Oldworld_KAPITEL5ANFANG);
+	Info_AddChoice		( SH_Oldworld_INFO5, "START CHAPTER"			                			, SH_Oldworld_KAPITEL5ANFANG);
 };
 //---------------------------------------------------------------------
 //	BACK
@@ -1228,7 +1228,7 @@ INSTANCE SH_Oldworld_INFO6 (C_INFO)
 	information		= SH_Oldworld_INFO6_Info;
 	important		= 0;
 	permanent		= 1;
-	description		= "Kapitel 6"; 
+	description		= "Chapter 6"; 
 };
 
 FUNC INT SH_Oldworld_INFO6_Condition()
@@ -1241,7 +1241,7 @@ func VOID SH_Oldworld_INFO6_Info()
 
 	Info_ClearChoices	( SH_Oldworld_INFO6 );
 	Info_AddChoice		( SH_Oldworld_INFO6, DIALOG_BACK			                			, SH_Oldworld_BACK6);
-	Info_AddChoice		( SH_Oldworld_INFO6, "KAPITELANFANG"			                			, SH_Oldworld_KAPITEL6ANFANG);
+	Info_AddChoice		( SH_Oldworld_INFO6, "START CHAPTER"			                			, SH_Oldworld_KAPITEL6ANFANG);
 };
 //---------------------------------------------------------------------
 //	BACK
@@ -1460,7 +1460,7 @@ INSTANCE DIA_Dragon_Testmodell_Hello(C_INFO)
 	information	= DIA_Dragon_Testmodell_Hello_Info;
 	permanent	= TRUE ;
 	
-	description = "Quatsch mich voll";
+	description = "Gossip me full";
 
 };                       
 
