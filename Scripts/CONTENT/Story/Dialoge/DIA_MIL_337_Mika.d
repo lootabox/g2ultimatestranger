@@ -128,10 +128,18 @@ func void DIA_Mika_WASGEFAEHRLICH_Info ()
 {
 	AI_Output			(other, self, "DIA_Mika_WASGEFAEHRLICH_15_00"); //What's so dangerous out here?
 	AI_Output			(self, other, "DIA_Mika_WASGEFAEHRLICH_12_01"); //Many things.
-	if (other.protection[PROT_EDGE]	< ITAR_Leather_L.protection [PROT_EDGE])	//Joly: kleiner als die Lederrüstung
+	AI_Output			(self, other, "DIA_Mika_WASGEFAEHRLICH_12_02"); //For one thing, there's the bandits. They'd polish off a little wimp like you for breakfast.
+	AI_Output			(self, other, "DIA_Mika_WASGEFAEHRLICH_12_03"); //If the bandits don't catch you, then the wild animals in the forest or the mercenaries roaming around will take care of you.
+	
+	var C_Item itm; itm = Npc_GetEquippedArmor(other);
+	//if (other.protection[PROT_EDGE]	< ITAR_Leather_L.protection [PROT_EDGE])	//Joly: kleiner als die Lederrüstung
+	if(!Npc_HasEquippedArmor(other)
+	|| Hlp_IsItem(itm,ITAR_Bau_L)
+	|| Hlp_IsItem(itm,ITAR_Bau_M)
+	|| Hlp_IsItem(itm,ITAR_Vlk_L)
+	|| Hlp_IsItem(itm,ITAR_Vlk_M)
+	|| Hlp_IsItem(itm,ITAR_Vlk_H))
 	{
-		AI_Output			(self, other, "DIA_Mika_WASGEFAEHRLICH_12_02"); //For one thing, there's the bandits. They'd polish off a little wimp like you for breakfast.
-		AI_Output			(self, other, "DIA_Mika_WASGEFAEHRLICH_12_03"); //If the bandits don't catch you, then the wild animals in the forest or the mercenaries roaming around will take care of you.
 		AI_Output			(self, other, "DIA_Mika_WASGEFAEHRLICH_12_04"); //So, first get yourself some decent armor before you go out.
 	};
 	AI_Output			(self, other, "DIA_Mika_WASGEFAEHRLICH_12_05"); //I bet you'll be yelling for my help after the next bend in the road.

@@ -18,14 +18,16 @@ instance STRF_1125_Addon_Tonak_NW (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem (self, ItMw_2H_Axe_L_01 );
+	//EquipItem (self, ItMw_2H_Axe_L_01 );
+	EquipItem(self,ItMw_1h_Bau_Axe);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
 	
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_B_Normal01, BodyTex_B, ITAR_Prisoner);	
+	//B_SetNpcVisual 	(self, MALE, "Hum_Head_Thief", Face_B_Normal01, BodyTex_B, ITAR_Prisoner);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_B_Normal01, BodyTex_B, ITAR_Bau_L);	
 	Mdl_SetModelFatness	(self, - 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 	
