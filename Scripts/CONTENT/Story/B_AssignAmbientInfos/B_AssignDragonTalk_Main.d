@@ -44,9 +44,12 @@ func void DIA_DragonTalk_Main_1_verbannen ()
 		AI_Output			(self, other, "DIA_DragonTalk_MAIN_1_verbannen_20_06"); //Therefore, we have dispatched our offspring to your world in order to secure the continuance of our ancestral line.
 		AI_Output			(self, other, "DIA_DragonTalk_MAIN_1_verbannen_20_07"); //You have already lost, little human.
 		
-		Log_CreateTopic (TOPIC_DRACHENEIER, LOG_MISSION);
-		Log_SetTopicStatus(TOPIC_DRACHENEIER, LOG_RUNNING);
-		B_LogEntry (TOPIC_DRACHENEIER,"One of the dragons mumbled something about 'offspring' and the continuance of his ancestral line. I'm afraid they've scattered their brood throughout the civilized world."); 
+		if(TOPIC_END_DRACHENEIER == FALSE)
+		{
+			Log_CreateTopic (TOPIC_DRACHENEIER, LOG_MISSION);
+			Log_SetTopicStatus(TOPIC_DRACHENEIER, LOG_RUNNING);
+			B_LogEntry (TOPIC_DRACHENEIER,"One of the dragons mumbled something about 'offspring' and the continuance of his ancestral line. I'm afraid they've scattered their brood throughout the civilized world."); 
+		};
 	}
 	else
 	{

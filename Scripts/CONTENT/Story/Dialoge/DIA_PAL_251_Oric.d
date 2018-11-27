@@ -103,9 +103,9 @@ FUNC INT DIA_Oric_ScoutMine_Condition()
 	if 	(MIS_ScoutMine == LOG_RUNNING)
 	&&	(Kapitel < 3)
 	&& 	(Npc_KnowsInfo(other, DIA_Oric_HALLO))
-	&&  (Fajeth_Ore == FALSE)
-	&&  (Marcos_Ore == FALSE)
-	&&  (Silvestro_Ore == FALSE)
+	&&  ((Fajeth_Ore == FALSE)
+	||  (Marcos_Ore == FALSE)
+	||  (Silvestro_Ore == FALSE))
 	{
 		return TRUE;
 	};	
@@ -357,7 +357,7 @@ INSTANCE DIA_Oric_NeedStuff   (C_INFO)
 FUNC INT DIA_Oric_NeedStuff_Condition()
 {
 	if 	(OrikToldMissionChapter4 == TRUE)
-	&& 	(MIS_KillHoshPak == FALSE)
+	//&& 	(MIS_KillHoshPak == FALSE)
 	{
 		return TRUE;
 	};	

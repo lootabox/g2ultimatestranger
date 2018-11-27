@@ -145,8 +145,8 @@ instance DIA_Addon_Bromor_LuciaGold		(C_INFO)
 
 func int DIA_Addon_Bromor_LuciaGold_Condition ()
 {
-	if (NpcObsessedByDMT_Bromor == FALSE)
-	&& (MIS_Bromor_LuciaStoleGold == LOG_RUNNING)
+	//if (NpcObsessedByDMT_Bromor == FALSE)
+	if (MIS_Bromor_LuciaStoleGold == LOG_RUNNING)
 	&& (Npc_HasItems (other,ItMi_BromorsGeld_Addon))
 		{
 			return TRUE;

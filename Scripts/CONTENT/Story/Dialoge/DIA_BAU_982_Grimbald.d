@@ -90,7 +90,9 @@ func void DIA_Grimbald_HALLO_Was_ja ()
 	AI_Output			(other, self, "DIA_Grimbald_HALLO_Was_ja_15_00"); //OK. I'll help you. You go first.
 	AI_Output			(self, other, "DIA_Grimbald_HALLO_Was_ja_07_01"); //Sure thing. But don't get too close to the black troll back there. He'll rip you to pieces otherwise, got it?
 	AI_Output			(self, other, "DIA_Grimbald_HALLO_Was_ja_07_02"); //And woe betide you if you chicken out.
-	B_StartOtherRoutine	(self,"Jagd");
+	//B_StartOtherRoutine	(self,"Jagd");
+	self.aivar[AIV_PARTYMEMBER] = TRUE;
+	Npc_ExchangeRoutine	(self,"Jagd");
 	AI_StopProcessInfos (self);
 };
 
@@ -118,21 +120,24 @@ func int DIA_Grimbald_Jagd_Condition ()
 {
 	if (Npc_KnowsInfo(other, DIA_Grimbald_HALLO))
 	&& (Grimbald_TeachAnimalTrophy == FALSE)
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Grimbald_Jagd_Info ()
 {
 	AI_Output			(other, self, "DIA_Grimbald_Jagd_15_00"); //Can you teach me how to hunt?
-	if 	((Npc_IsDead(Grimbald_Snapper1))
-		&& (Npc_IsDead(Grimbald_Snapper2))
-		&& (Npc_IsDead(Grimbald_Snapper3)))
-		|| (Grimbald_PissOff == FALSE)
+
+	if (Npc_IsDead(Grimbald_Snapper1))
+	&& (Npc_IsDead(Grimbald_Snapper2))
+	&& (Npc_IsDead(Grimbald_Snapper3))
+	&& (Grimbald_PissOff == FALSE)
 	{
 		AI_Output			(self, other, "DIA_Grimbald_Jagd_07_01"); //Mmh. All right. You haven't been much help to me so far, but let's not be too harsh.
 		Grimbald_TeachAnimalTrophy = TRUE;
+		Log_CreateTopic(TOPIC_OutTeacher,LOG_NOTE);
+		B_LogEntry(TOPIC_OutTeacher,"Grimbald can teach me to take animal trophies.");
 	}
 	else
 	{
@@ -153,6 +158,8 @@ func void DIA_Grimbald_Jagd_ja ()
 		{
 			AI_Output			(self, other, "DIA_Grimbald_Jagd_ja_07_01"); //Good. Then tell me when you want to learn something.
 			Grimbald_TeachAnimalTrophy = TRUE;
+			Log_CreateTopic(TOPIC_OutTeacher,LOG_NOTE);
+			B_LogEntry(TOPIC_OutTeacher,"Grimbald can teach me to take animal trophies.");
 		}
 		else
 		{
@@ -185,19 +192,13 @@ instance DIA_Grimbald_TEACHHUNTING		(C_INFO)
 func int DIA_Grimbald_TEACHHUNTING_Condition ()
 {
 	if (Grimbald_TeachAnimalTrophy == TRUE)
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
-var int DIA_Grimbald_TEACHHUNTING_OneTime;
 func void DIA_Grimbald_TEACHHUNTING_Info ()
 {
 	AI_Output			(other, self, "DIA_Grimbald_TEACHHUNTING_15_00"); //Teach me how to hunt.
-	if (DIA_Grimbald_TEACHHUNTING_OneTime == FALSE)
-	{
-		B_StartOtherRoutine	(self,"JagdOver");
-		DIA_Grimbald_TEACHHUNTING_OneTime = TRUE;
-	};
 	
 	if 		(
 				(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFSting] == FALSE)
@@ -344,6 +345,44 @@ func void DIA_Grimbald_Trolltot_Info ()
 {
 	AI_Output			(self, other, "DIA_Grimbald_Trolltot_07_00"); //The black troll is dead. Nicely done. I never thought those could be killed at all. I won't forget that.
 	B_GivePlayerXP (XP_Ambient);
+};
+
+instance DIA_Grimbald_Success(C_Info)
+{
+	npc = BAU_982_Grimbald;
+	nr = 3;
+	condition = DIA_Grimbald_Success_Condition;
+	information = DIA_Grimbald_Success_Info;
+	important = TRUE;
+};
+
+
+func int DIA_Grimbald_Success_Condition()
+{
+	if (self.aivar[AIV_PARTYMEMBER] == TRUE)
+	&& (Npc_IsDead(Grimbald_Snapper1))
+	&& (Npc_IsDead(Grimbald_Snapper2))
+	&& (Npc_IsDead(Grimbald_Snapper3))
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Grimbald_Success_Info()
+{
+	if (Grimbald_Snapper1.aivar[AIV_KilledByPlayer] == TRUE)
+	|| (Grimbald_Snapper2.aivar[AIV_KilledByPlayer] == TRUE)
+	|| (Grimbald_Snapper3.aivar[AIV_KilledByPlayer] == TRUE)
+	{
+		B_Say(self,other,"$NotBad");
+	}
+	else
+	{
+		B_Say(self,other,"$StupidBeastKilled");
+	};
+	self.aivar[AIV_PARTYMEMBER] = FALSE;
+	Npc_ExchangeRoutine(self,"JagdOver");
+	AI_StopProcessInfos(self);
 };
 
 // ************************************************************
