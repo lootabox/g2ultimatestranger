@@ -41,9 +41,9 @@ FUNC VOID DIA_Addon_Pardos_Hi_Info()
 {
 	//AI_Output (self, other, "DIA_Addon_Pardos_Hi_03_00");//How are you holding up?
 	AI_Output (other, self, "DIA_Hilda_DISTURB_15_00"); //How are you?
-	AI_Output (self, other, "DIA_Addon_Pardos_Hi_03_01");//(wearily) I'm beat ... completely worn out. Is it a glorious sunny day, or one of those clear nights where a thousand stars are twinkling?
-	AI_Output (self, other, "DIA_Addon_Pardos_Hi_03_02");//(even more weary) I don't know ... where's the gentle rain of summer ... the cool evening breeze ... I can feel them no longer ...
-	AI_Output (self, other, "DIA_Addon_Pardos_Hi_03_03");//(resignedly) It's the eyes that go first in here ...
+	AI_Output (self, other, "DIA_Addon_Pardos_Hi_03_01");//(wearily) I'm beat... completely worn out. Is it a glorious sunny day, or one of those clear nights where a thousand stars are twinkling?
+	AI_Output (self, other, "DIA_Addon_Pardos_Hi_03_02");//(even more weary) I don't know... where's the gentle rain of summer... the cool evening breeze... I can feel them no longer...
+	AI_Output (self, other, "DIA_Addon_Pardos_Hi_03_03");//(resignedly) It's the eyes that go first in here...
 };
 //---------------------------------------------------------------------
 //	Info save
@@ -82,7 +82,7 @@ INSTANCE DIA_Addon_Pardos_trank   (C_INFO)
 	nr          = 2;
 	condition   = DIA_Addon_Pardos_trank_Condition;
 	information = DIA_Addon_Pardos_trank_Info;
-	permanent   = FALSE;
+	permanent   = TRUE;
 	description = "Here, drink this.";
 };
 FUNC INT DIA_Addon_Pardos_trank_Condition()
@@ -95,7 +95,7 @@ FUNC INT DIA_Addon_Pardos_trank_Condition()
 };
 FUNC VOID DIA_Addon_Pardos_trank_Info()
 {
-	AI_Output (other, self, "DIA_Addon_Pardos_trank_15_00");//Here, drink that.
+	AI_Output (other, self, "DIA_Addon_Pardos_trank_15_00");//Here, drink this.
 	AI_StandUpQuick	(self);	
 	
 	Info_ClearChoices (DIA_Addon_Pardos_trank);
@@ -114,6 +114,10 @@ FUNC VOID DIA_Addon_Pardos_trank_Info()
 	{
 		Info_AddChoice (DIA_Addon_Pardos_trank,"(Give elixir of healing)",DIA_Addon_Pardos_trank_03);
 	};
+	if Npc_HasItems (other, ItPo_Health_Addon_04)
+	{
+		Info_AddChoice (DIA_Addon_Pardos_trank,"(Give pure life energy)",DIA_Addon_Pardos_trank_04);
+	};
 	if Npc_HasItems (other, ItFo_Addon_Meatsoup)
 	{
 		Info_AddChoice (DIA_Addon_Pardos_trank,"(Give meat stew)",DIA_Addon_Pardos_trank_Soup);
@@ -123,7 +127,8 @@ FUNC VOID DIA_Addon_Pardos_trank_Info()
 };
 FUNC VOID B_SayPardosThanks()
 {
-	AI_Output (self, other, "DIA_Addon_Pardos_trank_03_00");//Thanks, that does me good.
+	//AI_Output (self, other, "DIA_Addon_Pardos_trank_03_00");//Thanks, that does me good.
+	AI_Output (self, other, "DIA_Addon_Pardos_trank_03_01");//Thank you, I feel a little stronger now.
 };
 FUNC VOID DIA_Addon_Pardos_trank_BACK()
 {
@@ -140,7 +145,7 @@ FUNC VOID DIA_Addon_Pardos_trank_01()
 	Info_ClearChoices (DIA_Addon_Pardos_trank);
 	Pardos_Geheilt = TRUE;
 	B_SayPardosThanks();
-	B_GivePlayerXP (XP_Ambient); 
+	B_GivePlayerXP (XP_Ambient*2);
 };
 //---------------------------------------------------------------------
 FUNC VOID DIA_Addon_Pardos_trank_02()
@@ -153,7 +158,7 @@ FUNC VOID DIA_Addon_Pardos_trank_02()
 	Info_ClearChoices (DIA_Addon_Pardos_trank);
 	Pardos_Geheilt = TRUE;
 	B_SayPardosThanks();
-	B_GivePlayerXP (XP_Ambient*2);
+	B_GivePlayerXP (XP_Ambient*3);
 };
 //---------------------------------------------------------------------
 FUNC VOID DIA_Addon_Pardos_trank_03()
@@ -166,7 +171,20 @@ FUNC VOID DIA_Addon_Pardos_trank_03()
 	Info_ClearChoices (DIA_Addon_Pardos_trank);
 	Pardos_Geheilt = TRUE;
 	B_SayPardosThanks();
-	B_GivePlayerXP (XP_Ambient*3);
+	B_GivePlayerXP (XP_Ambient*4);
+};
+//---------------------------------------------------------------------
+FUNC VOID DIA_Addon_Pardos_trank_04()
+{
+	if B_GiveInvItems (other, self, ItPo_Health_Addon_04,1)
+	{
+		B_UseItem (self,ItPo_Health_Addon_04);
+	};
+	
+	Info_ClearChoices (DIA_Addon_Pardos_trank);
+	Pardos_Geheilt = TRUE;
+	B_SayPardosThanks();
+	B_GivePlayerXP (XP_Ambient*5);
 };
 //---------------------------------------------------------------------
 FUNC VOID DIA_Addon_Pardos_trank_Soup()
@@ -177,8 +195,10 @@ FUNC VOID DIA_Addon_Pardos_trank_Soup()
 	{
 		B_UseItem 	(self,ItFo_Addon_Meatsoup);
 	};	
-	AI_Output (self, other, "DIA_Addon_Pardos_trank_03_01");//Thank you, I feel a little stronger now.
-	B_GivePlayerXP (XP_Ambient *3);
+	Pardos_Geheilt = TRUE;
+	AI_Output (self, other, "DIA_Addon_Pardos_trank_03_00");//Thanks, that does me good.
+	//AI_Output (self, other, "DIA_Addon_Pardos_trank_03_01");//Thank you, I feel a little stronger now.
+	B_GivePlayerXP (XP_Ambient);
 };
 //---------------------------------------------------------------------
 //	Info perm

@@ -187,6 +187,7 @@ FUNC VOID DIA_Fernando_Minental_Info()
 ///////////////////////////////////////////////////////////////////////
 //	Info BanditTrader
 ///////////////////////////////////////////////////////////////////////
+var int DIA_Addon_Fernando_BanditTrader_NoPerm;
 instance DIA_Addon_Fernando_BanditTrader		(C_INFO)
 {
 	npc		 = 	VLK_405_Fernando;
@@ -199,65 +200,80 @@ instance DIA_Addon_Fernando_BanditTrader		(C_INFO)
 
 func int DIA_Addon_Fernando_BanditTrader_Condition ()
 {
-	if (Npc_KnowsInfo (other, DIA_Fernando_Hello))
+	if (DIA_Addon_Fernando_BanditTrader_NoPerm == FALSE)
+	&& (MIS_Vatras_FindTheBanditTrader > 0)
+	&& ((Fernando_HatsZugegeben == FALSE) || Fernando_ImKnast == TRUE)
+	&& (Npc_KnowsInfo (other, DIA_Fernando_Hello))
 	&& (NpcObsessedByDMT_Fernando == FALSE)
-	&& 	(
-		(Npc_HasItems (other,ItMw_Addon_BanditTrader))
-		||(Npc_HasItems (other,ItRi_Addon_BanditTrader))
-		||((Npc_HasItems (other,ItWr_Addon_BanditTrader))&&(BanditTrader_Lieferung_Gelesen == TRUE))
-		)
-		{
-			return TRUE;
-		};
+	&& ((Npc_HasItems (other,ItMw_Addon_BanditTrader))
+	|| (Npc_HasItems (other,ItRi_Addon_BanditTrader))
+	|| ((Npc_HasItems (other,ItWr_Addon_BanditTrader)) && (BanditTrader_Lieferung_Gelesen == TRUE)))
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Addon_Fernando_BanditTrader_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Fernando_BanditTrader_15_00"); //You've been selling weapons to the bandits.
-	AI_Output	(self, other, "DIA_Addon_Fernando_BanditTrader_14_01"); //(baffled) But - what makes you think THAT?
-
-	B_LogEntry (TOPIC_Addon_BanditTrader,"Fernando the overseas trader admitted himself that he supplied weapons to the bandits."); 
-
-	B_GivePlayerXP (XP_Addon_Fernando_HatsZugegeben);
-	Fernando_HatsZugegeben = TRUE;
-
-	if	((Npc_HasItems (other,ItWr_Addon_BanditTrader))&&(BanditTrader_Lieferung_Gelesen == TRUE))
-	{
-		AI_Output	(other, self, "DIA_Addon_Fernando_BanditTrader_15_02"); //This list of merchandise that I took from a bandit bears YOUR signature.
-	};
-	
-	if (Npc_HasItems (other,ItRi_Addon_BanditTrader))
-	{
-		AI_Output	(other, self, "DIA_Addon_Fernando_BanditTrader_15_03"); //I found this ring of the overseas traders' guild Araxos with the bandits. You're an overseas trader.
-
-		if	(Npc_HasItems (other,ItMw_Addon_BanditTrader))
-		{
-		AI_Output	(other, self, "DIA_Addon_Fernando_BanditTrader_15_04"); //And the swords which the bandits were carrying bore your initials.
-		};
-	}
-	else //nur (Npc_HasItems (other,ItMw_Addon_BanditTrader))
-	{
-		AI_Output	(other, self, "DIA_Addon_Fernando_BanditTrader_15_05"); //The swords which the bandits were carrying bore your initials.
-	};
-
-	AI_Output	(other, self, "DIA_Addon_Fernando_BanditTrader_15_06"); //You can admit it now. I've blown your cover.
-
 	if (Fernando_ImKnast == TRUE)
 	{
 		AI_Output	(self, other, "DIA_Addon_Fernando_BanditTrader_14_07"); //So YOU did this. YOU'RE the one who gave me away. I'm going to make you pay for this.
 		AI_Output	(other, self, "DIA_Addon_Fernando_BanditTrader_15_08"); //You'd first have to get out of here, and I hardly think they're going to let you go any time soon.
 		AI_Output	(self, other, "DIA_Addon_Fernando_BanditTrader_14_09"); //(angrily, to himself) My time will come.
+		DIA_Addon_Fernando_BanditTrader_NoPerm = TRUE;
 		B_NpcClearObsessionByDMT (self);
 	}
 	else
 	{
-		AI_Output	(self, other, "DIA_Addon_Fernando_BanditTrader_14_10"); //(pleading) I didn't mean to do that, believe me.
-		AI_Output	(self, other, "DIA_Addon_Fernando_BanditTrader_14_11"); //(pleading) First, all they wanted from me was food supplies. Business was really slow, so I got involved with them.
-		AI_Output	(self, other, "DIA_Addon_Fernando_BanditTrader_14_12"); //(pleading) Then they became more aggressive and threatened to kill me if I didn't sell them the swords they wanted.
-		AI_Output	(self, other, "DIA_Addon_Fernando_BanditTrader_14_13"); //(pleading) You can't blame me for this. I am a victim of circumstances.
-		
-		if (Fernando_ImKnast == FALSE)//Joly:zur Sicherheit
+		AI_Output	(self, other, "DIA_Addon_Fernando_BanditTrader_14_01"); //(baffled) But - what makes you think THAT?
+		var int FernandoEnoughEvidence; FernandoEnoughEvidence = FALSE;
+
+		if	((Npc_HasItems (other,ItWr_Addon_BanditTrader))&&(BanditTrader_Lieferung_Gelesen == TRUE))
 		{
+			AI_Output	(other, self, "DIA_Addon_Fernando_BanditTrader_15_02"); //This list of merchandise that I took from a bandit bears YOUR signature.
+			FernandoEnoughEvidence = TRUE;
+		};
+		if (Npc_HasItems (other,ItRi_Addon_BanditTrader))
+		{
+			AI_Output	(other, self, "DIA_Addon_Fernando_BanditTrader_15_03"); //I found this ring of the overseas traders' guild Araxos with the bandits. You're an overseas trader.
+			if	(Npc_HasItems (other,ItMw_Addon_BanditTrader))
+			{
+				AI_Output	(other, self, "DIA_Addon_Fernando_BanditTrader_15_04"); //And the swords which the bandits were carrying bore your initials.
+				FernandoEnoughEvidence = TRUE;
+			};
+		}
+		else if (Npc_HasItems (other,ItMw_Addon_BanditTrader))
+		{
+			AI_Output	(other, self, "DIA_Addon_Fernando_BanditTrader_15_05"); //The swords which the bandits were carrying bore your initials.
+		};
+
+		if (FernandoEnoughEvidence == FALSE)
+		{
+			AI_Output(self,other,"DIA_Addon_Cord_TalkedToDexter_14_01"); //And?
+			AI_Output(other,self,"DIA_Dar_Pilztabak_15_04"); //Well...
+			if((other.guild == GIL_MIL) || (other.guild == GIL_PAL) || (other.guild == GIL_KDF))
+			{
+				B_Say(self,other,"$SPAREME");
+			}
+			else
+			{
+				B_Say(self,other,"$NOTNOW");
+			};
+			B_NpcClearObsessionByDMT(self);
+		}
+		else
+		{
+			AI_Output	(other, self, "DIA_Addon_Fernando_BanditTrader_15_06"); //You can admit it now. I've blown your cover.
+			AI_Output	(self, other, "DIA_Addon_Fernando_BanditTrader_14_10"); //(pleading) I didn't mean to do that, believe me.
+			AI_Output	(self, other, "DIA_Addon_Fernando_BanditTrader_14_11"); //(pleading) First, all they wanted from me was food supplies. Business was really slow, so I got involved with them.
+			AI_Output	(self, other, "DIA_Addon_Fernando_BanditTrader_14_12"); //(pleading) Then they became more aggressive and threatened to kill me if I didn't sell them the swords they wanted.
+			AI_Output	(self, other, "DIA_Addon_Fernando_BanditTrader_14_13"); //(pleading) You can't blame me for this. I am a victim of circumstances.
+
+			B_LogEntry (TOPIC_Addon_BanditTrader,"Fernando the overseas trader admitted himself that he supplied weapons to the bandits."); 
+			B_GivePlayerXP (XP_Addon_Fernando_HatsZugegeben);
+			Fernando_HatsZugegeben = TRUE;
+
 			Info_ClearChoices	(DIA_Addon_Fernando_BanditTrader);
 			Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "What will you pay me if I let you go?", DIA_Addon_Fernando_BanditTrader_preis );
 			Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "The militia is going to deal with you.", DIA_Addon_Fernando_BanditTrader_mil );
@@ -277,6 +293,7 @@ func void DIA_Addon_Fernando_BanditTrader_mil ()
 	AI_Output			(self, other, "DIA_Addon_Fernando_BanditTrader_mil_14_01"); //You can't do this.
 	AI_Output			(other, self, "DIA_Addon_Fernando_BanditTrader_mil_15_02"); //I should say I can. You'll be amazed.
 	AI_Output			(self, other, "DIA_Addon_Fernando_BanditTrader_mil_14_03"); //By Innos. I'm ruined.
+	DIA_Addon_Fernando_BanditTrader_NoPerm = TRUE;
 	B_NpcClearObsessionByDMT (self);
 };
 func void DIA_Addon_Fernando_BanditTrader_preis ()
@@ -294,17 +311,24 @@ func void DIA_Addon_Fernando_BanditTrader_ja ()
 { 
 	AI_Output			(other, self, "DIA_Addon_Fernando_BanditTrader_ja_15_00"); //Well, all right. Agreed.
 	B_GivePlayerXP (XP_Ambient);
-	Npc_RemoveInvItems	(hero ,ItMw_Addon_BanditTrader, Npc_HasItems (other,ItMw_Addon_BanditTrader));
-	Npc_RemoveInvItem	(hero ,ItRi_Addon_BanditTrader);
-	Npc_RemoveInvItem	(hero ,ItWr_Addon_BanditTrader);
+
+	Npc_RemoveInvItems	(other,ItMw_Addon_BanditTrader, Npc_HasItems (other,ItMw_Addon_BanditTrader));
+	Npc_RemoveInvItem	(other,ItRi_Addon_BanditTrader);
+	Npc_RemoveInvItem	(other,ItWr_Addon_BanditTrader);
 
 	AI_Output			(self, other, "DIA_Addon_Fernando_BanditTrader_ja_14_01"); //Fine, here's your gold.
+	CreateInvItems (self, ItMi_Gold, 200);
+	B_GiveInvItems (self, other, ItMi_Gold, 200);
 
-	CreateInvItems (self, ItMi_Gold, 200);									
-	B_GiveInvItems (self, other, ItMi_Gold, 200);		
 	AI_Output			(self, other, "DIA_Addon_Fernando_BanditTrader_ja_14_02"); //And the ring. We're even now.
-	CreateInvItems (self, ItRi_Prot_Point_01, 1);									
-	B_GiveInvItems (self, other, ItRi_Prot_Point_01, 1);		
+	CreateInvItems (self, ItRi_Prot_Point_01, 1);
+	B_GiveInvItems (self, other, ItRi_Prot_Point_01, 1);
+
+	MIS_Martin_FindTheBanditTrader = LOG_FAILED;
+	MIS_Vatras_FindTheBanditTrader = LOG_FAILED;
+	B_LogEntry(TOPIC_Addon_Bandittrader,"I decided to let Fernando go and gave him all the evidence I had.");
+	DIA_Addon_Fernando_BanditTrader_NoPerm = TRUE;
+
 	Info_ClearChoices	(DIA_Addon_Fernando_BanditTrader);
 };
 func void DIA_Addon_Fernando_BanditTrader_nein ()

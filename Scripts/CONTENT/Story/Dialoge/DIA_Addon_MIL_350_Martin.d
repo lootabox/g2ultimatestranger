@@ -383,7 +383,7 @@ instance DIA_Addon_Martin_FromVatras (C_INFO)
 };
 func int DIA_Addon_Martin_FromVatras_Condition ()
 {
-	if (Vatras_ToMartin == TRUE)
+	if (Vatras_ToMartin == TRUE) && (MIs_Martin_FindTheBanditTrader != LOG_Failed)
 	{
 		return TRUE;
 	};
@@ -411,7 +411,7 @@ instance DIA_Addon_Martin_TellAll (C_INFO)
 };
 func int DIA_Addon_Martin_TellAll_Condition ()
 {
-	if (Npc_KnowsInfo (other, DIA_Addon_Martin_FromVatras))
+	if (Npc_KnowsInfo (other, DIA_Addon_Martin_FromVatras)) && (MIs_Martin_FindTheBanditTrader != LOG_Failed)
 	{
 		return TRUE;
 	};
@@ -439,7 +439,7 @@ instance DIA_Addon_Martin_AboutBandits (C_INFO)
 };
 func int DIA_Addon_Martin_AboutBandits_Condition ()
 {
-	if (Npc_KnowsInfo (other, DIA_Addon_Martin_TellAll))
+	if (Npc_KnowsInfo (other, DIA_Addon_Martin_TellAll)) && (MIs_Martin_FindTheBanditTrader != LOG_Failed)
 	{
 		return TRUE;
 	};

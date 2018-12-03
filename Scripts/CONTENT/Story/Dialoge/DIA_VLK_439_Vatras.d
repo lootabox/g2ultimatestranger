@@ -414,8 +414,8 @@ func void DIA_Addon_Vatras_TellMe_Konkret()
 	AI_Output (other, self, "DIA_Addon_Vatras_TellMe_Konkret_15_00"); //(frowning) And what does that mean in concrete terms?
 	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Konkret_05_01"); //The fall of the barrier has evoked numerous threats.
 	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Konkret_05_02"); //The bandits are probably the most obvious one.
-	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Konkret_05_03"); //Not only has it become all but impossible to travel the island without being attacked ...
-	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Konkret_05_04"); //... there's somebody in town, too, who supports the bandits!
+	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Konkret_05_03"); //Not only has it become all but impossible to travel the island without being attacked...
+	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Konkret_05_04"); //...there's somebody in town, too, who supports the bandits!
 	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Add_05_00"); //We have found out that the bandits receive regular deliveries from a weapons merchant in Khorinis.
 	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Konkret_05_05"); //We try to find such people and keep them from endangering the city.
 	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Konkret_05_06"); //If you can find out anything about this, let me know.
