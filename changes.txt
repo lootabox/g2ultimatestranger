@@ -264,6 +264,10 @@ Lehmar does not immediately notice the theft of his ledger.
 Lehmar does not lend money to NH if he attacked him, unless Oblivion is cast on him.
 Lobart's quest for working clothes does not start if player already has bought the clothes or has some other armor.
 Logan teaches skinning reptiles instead of skinning off furs.
+Lothar can only be told about getting proof of dragons after talking to him about the dragons.
+Lothar cannot be asked about the part of the metal ornament after already receiving it from Hagen.
+Lothar's dialog has 21 more previously unused dialogue lines.
+Lothar's few dialog options are not hidden after talking to Hagen.
 Maria cannot be asked to raise the salary from Onar before it has been agreed upon.
 Maria gives dragon hunters gold instead of increase in salary that they can't get anymore.
 Maria's golden plate can only be returned after asking who she is.

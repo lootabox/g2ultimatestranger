@@ -162,6 +162,10 @@ func void DIA_Lothar_MESSAGE_Info ()
  	AI_Output (other, self, "DIA_Lothar_MESSAGE_15_00"); //I have an important message for the leader of the paladins!
 	AI_Output (self, other, "DIA_Lothar_MESSAGE_01_01"); //The honorable Lord Hagen is not receiving anyone.
 	AI_Output (self, other, "DIA_Lothar_MESSAGE_01_02"); //Lord Andre, the commander of the city guard, is responsible for all issues pertaining to the common folk.
+	AI_Output (other, self, "DIA_Lothar_Add_15_00"); //But I MUST see Lord Hagen!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_01"); //You must obey the rules, just like everybody else!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_02"); //Lord Hagen is not available.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_03"); //If you have something IMPORTANT to say, go to Lord Andre. He will help you!
 };	
 
 // ***************************************************************
@@ -179,7 +183,7 @@ instance DIA_Lothar_EyeInnos (C_INFO)
 func int DIA_Lothar_EyeInnos_Condition ()
 {	
 	if (Npc_KnowsInfo (other, DIA_Lothar_MESSAGE))
-	&& (LordHagen.aivar[AIV_TalkedToPlayer] == FALSE)
+	//&& (LordHagen.aivar[AIV_TalkedToPlayer] == FALSE)
 	{
 		return TRUE;
 	};
@@ -222,7 +226,7 @@ instance DIA_Lothar_Dragons (C_INFO)
 func int DIA_Lothar_Dragons_Condition ()
 {	
 	if (Npc_KnowsInfo (other, DIA_Lothar_MESSAGE))
-	&& (LordHagen.aivar[AIV_TalkedToPlayer] == FALSE)
+	//&& (LordHagen.aivar[AIV_TalkedToPlayer] == FALSE)
 	{
 		return TRUE;
 	};
@@ -261,8 +265,8 @@ instance DIA_Addon_Lothar_Ornament		(C_INFO)
 
 func int DIA_Addon_Lothar_Ornament_Condition ()
 {
-	if (LordHagen.aivar[AIV_TalkedToPlayer] == FALSE)
-	&& (MIS_Addon_Cavalorn_GetOrnamentFromPAL == LOG_RUNNING)
+	if (MIS_Addon_Cavalorn_GetOrnamentFromPAL == LOG_RUNNING)
+	//&& (LordHagen.aivar[AIV_TalkedToPlayer] == FALSE)
 		{
 			return TRUE;
 		};
@@ -275,7 +279,10 @@ func void DIA_Addon_Lothar_Ornament_Info ()
 	AI_Output	(self, other, "DIA_Addon_Lothar_Ornament_01_02"); //Why do you ask?
 	
 	Info_ClearChoices	(DIA_Addon_Lothar_Ornament);
-	Info_AddChoice	(DIA_Addon_Lothar_Ornament, "I am looking for a metal fragment of a ring ornament.", DIA_Addon_Lothar_Ornament_suche );
+	if(Lord_Hagen_GotOrnament == FALSE)
+	{
+		Info_AddChoice	(DIA_Addon_Lothar_Ornament, "I am looking for a metal fragment of a ring ornament.", DIA_Addon_Lothar_Ornament_suche );
+	};
 	Info_AddChoice	(DIA_Addon_Lothar_Ornament, "Do you think that's normal?", DIA_Addon_Lothar_Ornament_normal );
 };
 func void DIA_Addon_Lothar_Ornament_normal ()
@@ -310,7 +317,7 @@ instance DIA_Lothar_WhoDragons (C_INFO)
 func int DIA_Lothar_WhoDragons_Condition ()
 {	
 	if (Npc_KnowsInfo (other, DIA_Lothar_Dragons))
-	&& (LordHagen.aivar[AIV_TalkedToPlayer] == FALSE)
+	//&& (LordHagen.aivar[AIV_TalkedToPlayer] == FALSE)
 	{
 		return TRUE;
 	};
@@ -453,6 +460,8 @@ func void DIA_Lothar_WoArbeit_Info ()
 	AI_Output (self ,other, "DIA_Lothar_Add_01_17"); //However, the other masters must agree to it, that is the custom here in Khorinis.
 	AI_Output (self ,other, "DIA_Lothar_Add_01_18"); //If you were thinking about looking for work in the harbor district - forget it!
 	AI_Output (self ,other, "DIA_Lothar_Add_01_19"); //The scum of the city live there. Don't even go there, you would regret it!
+	AI_Output (other, self, "DIA_Lothar_Add_15_20"); //How many masters are there?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_21"); //I believe there are five altogether.
 };
 
 // ***************************************************************
@@ -512,6 +521,15 @@ func void DIA_Lothar_ToMiliz_Info ()
 	{
 		AI_Output (self ,other, "DIA_Lothar_Add_01_27"); //By express command of Lord Hagen, only citizens of the town will be admitted into the militia.
 		AI_Output (other, self, "DIA_Lothar_Add_15_28"); //I see.
+	};
+	if((MIS_Harad_Orc == LOG_SUCCESS)
+	|| (MIS_HakonBandits == LOG_SUCCESS)
+	|| (MIS_Thorben_GetBlessings == LOG_SUCCESS)
+	|| (MIS_Matteo_Gold == LOG_SUCCESS)
+	|| (MIS_Bosper_WolfFurs == LOG_SUCCESS)
+	|| (MIS_Bosper_Bogen == LOG_SUCCESS))
+	{
+		AI_Output (self ,other, "DIA_Lothar_Add_01_12"); //I have heard that you already have the approval of some of the masters.
 	};
 	AI_Output (self ,other, "DIA_Lothar_Add_01_29"); //If you want to know more, speak to Lord Andre in the barracks.
 };	
@@ -637,7 +655,7 @@ func void DIA_Lothar_PermB4OV_Info ()
 // ***************
 // 		Blubb
 // ***************
-
+/*
 func void B_Lothar_Blubb() //überflüsige Outputs
 {
 	AI_Output (other, self, "DIA_Lothar_Add_15_00"); //But I MUST see Lord Hagen!
@@ -652,12 +670,12 @@ func void B_Lothar_Blubb() //überflüsige Outputs
 	AI_Output (other, self, "DIA_Lothar_Add_15_63"); //How do you know ...?
 	AI_Output (self ,other, "DIA_Lothar_Add_01_64"); //That is NONE of your business!
 	AI_Output (self ,other, "DIA_Lothar_Add_01_65"); //That was the last time, understood?!
-	
-	AI_Output (other, self, "DIA_Lothar_Add_15_66"); //Where do I find the commander of the militia?
+
+	//AI_Output (other, self, "DIA_Lothar_Add_15_66"); //Where do I find the commander of the militia?
 	AI_Output (other, self, "DIA_Lothar_Add_15_08"); //I am now an apprentice with one of the masters!
-	
+
 	// ------ NEWS_Modul für Unterstadt ------
-	AI_Output (self ,other, "DIA_Lothar_Add_01_47"); //You again.
+	//AI_Output (self ,other, "DIA_Lothar_Add_01_47"); //You again.
 
 	AI_Output (self ,other, "DIA_Lothar_Add_01_43"); //I have heard that you saw Lord Andre?
 	AI_Output (self ,other, "DIA_Lothar_Add_01_44"); //I told you that you could only join the militia if you were a citizen of the town.
@@ -675,7 +693,7 @@ func void B_Lothar_Blubb() //überflüsige Outputs
 	AI_Output (self ,other, "DIA_Lothar_Add_01_02"); //Lord Hagen is not available.
 	AI_Output (self ,other, "DIA_Lothar_Add_01_03"); //If you have something IMPORTANT to say, go to Lord Andre. He will help you!
 };
-
+*/
 
 // #########################################
 // #########################################
@@ -708,15 +726,26 @@ func int DIA_Lothar_HelloAgain_Condition ()
 func void DIA_Lothar_HelloAgain_Info ()
 {
 	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_00"); //Ah! You again!
-	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_01"); //So you actually managed to get into the upper quarter!
 	
+	if((Player_TalkedAboutDragons == TRUE) && (Player_TalkedAboutDragonsToAndre == TRUE))
+	{
+		AI_Output (self ,other, "DIA_Lothar_Add_01_62"); //Tell me, didn't I make myself clear? No more tales about dragons!
+		AI_Output (other, self, "DIA_Lothar_Add_15_63"); //How do you know..?
+		AI_Output (self ,other, "DIA_Lothar_Add_01_64"); //That is NONE of your business!
+		AI_Output (self ,other, "DIA_Lothar_Add_01_65"); //That was the last time, understood?!
+	};
+	if(Player_IsApprentice > APP_NONE)
+	{
+		AI_Output (other, self, "DIA_Lothar_Add_15_08"); //I am now an apprentice with one of the masters!
+	};
+	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_01"); //So you actually managed to get into the upper quarter!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_13"); //You're quite serious about this, aren't you?
 	if (other.guild == GIL_KDF)
 	{
 		AI_Output (self ,other, "DIA_Lothar_Add_01_36"); //Where did you get that robe?
 		AI_Output (other, self, "DIA_Lothar_Add_15_37"); //I have passed the Test of Fire.
 		AI_Output (self ,other, "DIA_Lothar_Add_01_38"); //Incredible. Then what is happening here must be the will of Innos ...
 	};
-
 	if (other.guild == GIL_SLD)
 	{
 		AI_Output (self ,other, "DIA_Lothar_Add_01_39"); //You haven't joined Onar's mercenaries, have you?
@@ -724,7 +753,14 @@ func void DIA_Lothar_HelloAgain_Info ()
 		AI_Output (other, self, "DIA_Lothar_Add_15_41"); //I bring a peace offering from Lee ...
 		AI_Output (self ,other, "DIA_Lothar_Add_01_42"); //Bah! Lord Hagen will never agree to it.
 	};
-		
+	if((other.guild == GIL_MIL) && (Player_IsApprentice == APP_NONE))
+	{
+		AI_Output (self ,other, "DIA_Lothar_Add_01_43"); //I have heard that you saw Lord Andre?
+		AI_Output (self ,other, "DIA_Lothar_Add_01_44"); //I told you that you could only join the militia if you were a citizen of the town.
+		AI_Output (self ,other, "DIA_Lothar_Add_01_45"); //And as I see, he accepted you into the militia.
+		AI_Output (self ,other, "DIA_Lothar_Add_01_46"); //Hm - he must know what he's doing.
+	};
+
 	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_02"); //There are some things you must heed here, otherwise you will wind up outside as fast as you got in here.
 	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_03"); //You are only allowed to enter the merchants' buildings. You can recognize them by the signs over the door - just so there are no misunderstandings.
 	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_04"); //The other buildings belong to important citizens - there is nothing there for you!
@@ -768,6 +804,11 @@ func void DIA_Lothar_Hagen_Info ()
 	AI_Output (other, self, "DIA_Lothar_Hagen_15_00"); //Where can I find Lord Hagen?
 	AI_Output (self, other, "DIA_Lothar_Hagen_01_01"); //He is in the town hall, at the end of the upper quarter.
 	AI_Output (self, other, "DIA_Lothar_Hagen_01_02"); //But you will not be admitted there without a good reason.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_48"); //I have reported to Lord Hagen that you wish to speak to him...
+	AI_Output (other, self, "DIA_Lothar_Add_15_49"); //And? What did he say?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_50"); //He has never heard of you.
+	AI_Output (other, self, "DIA_Lothar_Add_15_51"); //Of course not. Did you tell him about the dragons?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_52"); //Didn't I tell you to STOP these stories?!
 };
 
 // ***************************************************************
@@ -780,22 +821,23 @@ instance DIA_Lothar_OWRunning (C_INFO)
 	condition	 = 	DIA_Lothar_OWRunning_Condition;
 	information	 = 	DIA_Lothar_OWRunning_Info;
 	permanent    =  FALSE;
-	description  = 	"I went to see Lord Hagen ...";
+	description  = 	"I went to see Lord Hagen...";
 };
 func int DIA_Lothar_OWRunning_Condition ()
 {	
 	if (MIS_OLDWORLD == LOG_RUNNING)
 	&& (Npc_HasItems (hero, ItWr_PaladinLetter_MIS) == 0)
+	&& (Npc_KnowsInfo (other, DIA_Lothar_Dragons))
 	{
 		return TRUE;
 	};
 };
 func void DIA_Lothar_OWRunning_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_Add_15_53"); //I went to see Lord Hagen ...
+	AI_Output (other, self, "DIA_Lothar_Add_15_53"); //I went to see Lord Hagen...
 	AI_Output (self ,other, "DIA_Lothar_Add_01_54"); //And? You didn't bother him with your dragon tales, did you?
 	AI_Output (other, self, "DIA_Lothar_Add_15_55"); //Yes, I did...
-	AI_Output (self ,other, "DIA_Lothar_Add_01_56"); //Tell me this isn't true ...
+	AI_Output (self ,other, "DIA_Lothar_Add_01_56"); //Tell me this isn't true...
 	AI_Output (other, self, "DIA_Lothar_Add_15_57"); //He sent me to get him some proof...
 	AI_Output (self ,other, "DIA_Lothar_Add_01_58"); //Well then, good luck. (to himself) What a lunatic...
 	
@@ -846,7 +888,7 @@ instance DIA_Lothar_PERM (C_INFO)
 func int DIA_Lothar_PERM_Condition ()
 {	
 	if (Mil_305_schonmalreingelassen == TRUE) //Torwache zu oberem Viertel.
-	&& (LordHagen.aivar[AIV_TalkedToPlayer] == FALSE)
+	//&& (LordHagen.aivar[AIV_TalkedToPlayer] == FALSE)
 	{
 		return TRUE;
 	};

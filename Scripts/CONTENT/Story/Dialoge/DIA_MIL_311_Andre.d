@@ -526,6 +526,7 @@ func void DIA_Andre_Message_Dragons()
 	AI_Output (self, other, "DIA_Andre_Message_Dragons_08_03"); //He would tear your head from your shoulders if you wasted his time with such stories.
 	AI_Output (self, other, "DIA_Andre_Message_Dragons_08_04"); //And I am sure that you are clever enough to know that for yourself.
 	AI_Output (self, other, "DIA_Andre_Message_Dragons_08_05"); //So, what is this really about?
+	Player_TalkedAboutDragonsToAndre = TRUE;
 };
 func void DIA_Andre_Message_Personal()
 {

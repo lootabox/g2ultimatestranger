@@ -632,6 +632,7 @@ var int 	Points_Monastery;
 // ------ City ------
 var int 	Mil_310_Scheisse_erzaehlt;
 var int 	Player_TalkedAboutDragons;
+var int 	Player_TalkedAboutDragonsToAndre;
 var int 	Player_KnowsLordHagen;
 var int 	Hagen_FriedenAbgelehnt;
 // -------------------
