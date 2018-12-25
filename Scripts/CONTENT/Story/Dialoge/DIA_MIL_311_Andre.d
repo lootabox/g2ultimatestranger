@@ -1864,6 +1864,7 @@ func int DIA_Andre_Cornelius_Liar_Condition ()
 {	
 	if (Cornelius_ThreatenByMilSC == TRUE)
 	&& (CorneliusFlee != TRUE)
+	&& (MIS_RescueBennet != LOG_SUCCESS)
 	{
 		return TRUE;
 	};

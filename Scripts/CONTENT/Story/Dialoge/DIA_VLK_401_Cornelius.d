@@ -353,7 +353,14 @@ INSTANCE DIA_Cornelius_PICKPOCKET (C_INFO)
 
 FUNC INT DIA_Cornelius_PICKPOCKET_Condition()
 {
-	return C_StealItem(60, ItWr_CorneliusTagebuch_Mis);
+	if(Npc_HasItems(self,ItWr_CorneliusTagebuch_Mis) && (RecueBennet_KnowsCornelius == TRUE))
+	{
+		return C_StealItem(60, ItWr_CorneliusTagebuch_Mis);
+	}
+	else
+	{
+		return FALSE;
+	};
 };
  
 FUNC VOID DIA_Cornelius_PICKPOCKET_Info()

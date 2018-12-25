@@ -144,11 +144,12 @@ Fixed Fajeth, Tengron and Knight 263 referring to Lord Andre when telling NH to 
 Fixed XP award for pickpocketing Cavalorn, Dobar, Engor, Francis, Franco, Salandril, Valentino.
 Fixed XP award for recruiting Lares, Lester.
 Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
-Fixed logical issues with dialogue of Diego, Fernando, Lobart, Ramon, Ulf, Vatras, Xardas.
+Fixed logical issues with dialogue of Diego, Fernando, Lobart, Lothar, Ramon, Ulf, Vatras, Xardas.
 Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patrick, Monty, Tonak, Telbor, Pardos.
 Fixed NPCs not considering Heavy Militia armor as militia armor for Borka, Kardif, Meldor, Nagur, Nadja.
 Fixed NPCs speaking out NH's dialog lines for Pardos, Peck.
 Fixed NPCs showing wrong pick pocket difficulty in Valley of Mines for Carlos, Sylvio.
+Fixed NPCs talking to NH when he is transformed into an animal.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
 Fixed issue with dragon dialog restarting quest 'Dragon Eggs', if it was already completed.
 Fixed wrong or inconsistent style of dialogue text for Agon, Babo, Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Gorax, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Martin, Milten, Orlan, Pardos, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras and NH for giving a potion to anyone.
@@ -168,6 +169,7 @@ Samuel gets a ring he was supposed to have in his trade inventory.
 	NPCs Specific
 
 Agon ends the dialog after answering to "how's it going".
+Andre can't be told that Cornelius is lying if Hagen has already ordered Bennets release.
 Alligator Jack gives previously unused item Swamprat meat for his delivery quest.
 Alligator Jack only takes meat from Swamprats.
 Alwin is asked about buying a sheep if NH is looking for a sheep for the monastery.
@@ -194,6 +196,7 @@ Carlos has slightly altered dialog if NH entered camp without killing Franco.
 Cassia can give the Blood Chalice quest, even if NH was a wanted thief.
 Cassia cannot be paid for learning to pickpocket if it’s already learned.
 Cassias quests become obsolete if the paladins kill her.
+Cornelius' diary cannot be stolen before learning of him being a witness to the murder.
 Diego can teach strength in Khorinis.
 Diego cannot be led to Pedrakhan.
 Diego's dialog has 6 more previously unused dialogue lines and 9 more if NH never met him in Valley of Mines.
@@ -229,8 +232,11 @@ Greg's treasure hunt quest cancels if the first treasure is not given to him and
 Grimbald does not teach NH for free without finishing the hunt.
 Grimbald gives NH experience for killed snappers.
 Grimbald makes a remark once the hunt is over.
+Hagen actually takes Cornelius' diary from NH.
+Hagen can only be told about carrying the eye if NH has it.
 Hagen will hint at NH joining paladins only when all requirements are fulfilled.
 Hagen will not make NH paladin before delivering the report from Valley of Mines to avoid issue with Pedro not letting NH in monastery.
+Hagens dialog has 1 more previously inaccessible dialogue lines.
 Halvor is not given the compromising note for reading.
 Harad accepts any orc weapon for his quest.
 Harad will take the best orc weapon NH has and inspect it before commenting on it.
@@ -275,6 +281,8 @@ Mario cannot be recruited to a full ship crew.
 Martin actually takes the evidence from NH and does not repeat it needlessly every time.
 Martin only hints at going to Vatras for the Wisp amulet, if NH does not already have it.
 Milten can teach Paladin runes in Irdorath.
+Milten does not simultaneously return the letter from Hagen and the key to the monastery.
+Milten returns to the monastery in the beginning of the third chapter instead of after giving the report to Hagen.
 Milten will not say Gorn is in prison if he is already released.
 Mika properly evaluates NH's armor before commenting on it.
 Nagur now grants previously omitted XP bonus for showing thieves' signal and returning Baltram's shipment.

@@ -399,6 +399,8 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 		ShrineIsObsessed_NW_BIGMILL_MALAKSVERSTECK_02 	= TRUE;
 		ShrineIsObsessed_NW_FARM3_BIGWOOD_02 			= TRUE;
  
+		Wld_InsertNpc (PC_MAGE_NW ,"NW_MONASTERY_ENTRY_01");
+		
   		if ((hero.guild == GIL_MIL)|| (hero.guild == GIL_PAL))
 		{
 			IntroduceChapter (KapWechsel_3,KapWechsel_3_Text,"chapter3_MIL.tga","chapter_01.wav", 6000);

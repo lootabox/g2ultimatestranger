@@ -29,5 +29,11 @@ func int C_RefuseTalk (var C_NPC slf, var C_NPC oth)
 		return TRUE;
 	};
 	
+	// Transform
+	if((oth.guild > GIL_SEPERATOR_HUM) && (oth.guild < GIL_SEPERATOR_ORC))
+	{
+		return TRUE;
+	};
+
 	return FALSE; //DEFAULT
 };

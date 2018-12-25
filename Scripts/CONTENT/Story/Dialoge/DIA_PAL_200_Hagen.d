@@ -603,7 +603,8 @@ func void DIA_Lord_Hagen_Minental_Info ()
 	}
 	else
 	{
-		if (Garond.aivar[AIV_TalkedToPlayer] == TRUE)
+		//if (Garond.aivar[AIV_TalkedToPlayer] == TRUE)
+		if(Npc_KnowsInfo(other,DIA_Garond_NeedProof))
 		{
 			AI_Output (self, other, "DIA_Lord_Hagen_Minental_04_02"); //You were there. You should know.
 		}
@@ -1039,11 +1040,11 @@ func void DIA_Lord_Hagen_BACKINTOWN_Info ()
 			Wld_InsertNpc		(DMT_1210_Dementor, "NW_TROLLAREA_RITUALPATH_01");
 			Wld_InsertNpc		(DMT_1211_Dementor, "NW_TROLLAREA_RITUALPATH_01");
 			B_StartOtherRoutine (Pedro,"Tot"); 
-				if (Npc_IsDead (MiltenNW))	//Wichtig, damit Milten vor dem Kloster steht!!!!!
+			/* 	if (Npc_IsDead (MiltenNW))	//Wichtig, damit Milten vor dem Kloster steht!!!!!
 				{ 
 					Wld_InsertNpc (PC_MAGE_NW ,"NW_MONASTERY_ENTRY_01");
 					B_StartOtherRoutine (MiltenNW,"START");		//zur Sicherheit
-				};		
+				};	*/
 			Wld_InsertNpc		(NOV_650_ToterNovize, "NW_TROLLAREA_RITUALPATH_01"); B_KillNpc (NOV_650_ToterNovize);
 			Wld_InsertNpc		(NOV_651_ToterNovize, "NW_TROLLAREA_RITUALPATH_01"); B_KillNpc (NOV_651_ToterNovize);
 			Wld_InsertNpc		(NOV_652_ToterNovize, "NW_TROLLAREA_RITUALPATH_01"); B_KillNpc (NOV_652_ToterNovize);
@@ -1145,12 +1146,12 @@ FUNC VOID DIA_Lord_Hagen_RescueBennet_WhySure()
 /*
 FUNC VOID DIA_Lord_Hagen_RescueBennet_Witness()
 {
-	AI_Output			(other, self, "DIA_Lord_Hagen_RescueBennet_Witness_15_00"); //Wer ist der Zeuge?
-	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_01"); //Cornelius, der Sekretär des Statthalters, hat den Mord gesehen.
-	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_02"); //Seine Beschreibung trifft zweifelsfrei auf Bennet zu. Damit ist die Sache für mich erledigt.
-	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_03"); //Der Söldner wird wegen Landesverrats hängen.
+	AI_Output			(other, self, "DIA_Lord_Hagen_RescueBennet_Witness_15_00"); //Who is that witness?
+	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_01"); //Cornelius, the governor's secretary, saw the murder.
+	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_02"); //His description fits Bennet, no doubt about that. As far as I am concerned, that settles the matter.
+	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_03"); //The mercenary will hang for treason.
 
-	B_LogEntry (TOPIC_RESCUEBENNET,"Cornelius, der Sekretär des Stadthalters, ist also der Zeuge. Er behauptet, den Mord beobachtet zu haben."); 
+	B_LogEntry (TOPIC_RESCUEBENNET,"Cornelius, the governor's secretary, is the witness. He claims to have witnessed the murder."); 
 
 	RecueBennet_KnowsCornelius = TRUE;
 };
@@ -1194,6 +1195,7 @@ FUNC VOID DIA_Lord_Hagen_Cornelius_Info ()
 	AI_Output			(other, self, "DIA_Lord_Hagen_Cornelius_15_00"); //Cornelius lied.
 	AI_Output			(self, other, "DIA_Lord_Hagen_Cornelius_04_01"); //How do you know that?
 	AI_Output			(other,self , "DIA_Lord_Hagen_Cornelius_15_02"); //Here, I've got his diary. Everything's in there.
+	B_GiveInvItems(other,self,ItWr_CorneliusTagebuch_Mis,1);
 	AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_03"); //(furious) That slimy little criminal!
 	AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_04"); //In view of the new evidence, there is nothing else I can do.
 	AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_05"); //By virtue of the office granted me by king and church, I declare ...
@@ -1253,6 +1255,7 @@ FUNC INT DIA_Lord_Hagen_AugeAmStart_Condition ()
 {	
 	if (Kapitel <= 4)
 	&& (MIS_ReadyForChapter4 == TRUE)
+	&& (Npc_HasItems (other,ItMi_InnosEye_MIS) >= 1)
 	{
 		return TRUE;
 	};

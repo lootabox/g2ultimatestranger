@@ -734,26 +734,26 @@ func void DIA_Lothar_HelloAgain_Info ()
 		AI_Output (self ,other, "DIA_Lothar_Add_01_64"); //That is NONE of your business!
 		AI_Output (self ,other, "DIA_Lothar_Add_01_65"); //That was the last time, understood?!
 	};
-	if(Player_IsApprentice > APP_NONE)
-	{
-		AI_Output (other, self, "DIA_Lothar_Add_15_08"); //I am now an apprentice with one of the masters!
-	};
-	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_01"); //So you actually managed to get into the upper quarter!
-	AI_Output (self ,other, "DIA_Lothar_Add_01_13"); //You're quite serious about this, aren't you?
 	if (other.guild == GIL_KDF)
 	{
 		AI_Output (self ,other, "DIA_Lothar_Add_01_36"); //Where did you get that robe?
 		AI_Output (other, self, "DIA_Lothar_Add_15_37"); //I have passed the Test of Fire.
 		AI_Output (self ,other, "DIA_Lothar_Add_01_38"); //Incredible. Then what is happening here must be the will of Innos ...
-	};
-	if (other.guild == GIL_SLD)
+	}
+	else if (other.guild == GIL_SLD)
 	{
 		AI_Output (self ,other, "DIA_Lothar_Add_01_39"); //You haven't joined Onar's mercenaries, have you?
 		AI_Output (self ,other, "DIA_Lothar_Add_01_40"); //How did you get in here?
 		AI_Output (other, self, "DIA_Lothar_Add_15_41"); //I bring a peace offering from Lee ...
 		AI_Output (self ,other, "DIA_Lothar_Add_01_42"); //Bah! Lord Hagen will never agree to it.
-	};
-	if((other.guild == GIL_MIL) && (Player_IsApprentice == APP_NONE))
+	}
+	else if(Player_IsApprentice > APP_NONE)
+	{
+		AI_Output (other, self, "DIA_Lothar_Add_15_08"); //I am now an apprentice with one of the masters!
+		AI_Output (self, other, "DIA_Lothar_HelloAgain_01_01"); //So you actually managed to get into the upper quarter!
+		AI_Output (self ,other, "DIA_Lothar_Add_01_13"); //You're quite serious about this, aren't you?
+	}
+	else if((other.guild == GIL_MIL) && (Player_IsApprentice == APP_NONE))
 	{
 		AI_Output (self ,other, "DIA_Lothar_Add_01_43"); //I have heard that you saw Lord Andre?
 		AI_Output (self ,other, "DIA_Lothar_Add_01_44"); //I told you that you could only join the militia if you were a citizen of the town.

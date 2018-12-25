@@ -263,12 +263,13 @@ FUNC VOID DIA_MiltenNW_KAP3_Entry_Permit ()
 	
 	B_GiveInvItems (other,self,ItWr_PermissionToWearInnosEye_MIS,1);
 	B_UseFakeScroll ();	
+	AI_Output 	(self ,other,"DIA_MiltenOW_Hello_NO_03_01");//You've been through a lot, huh?
+	B_GiveInvItems (self,other,ItWr_PermissionToWearInnosEye_MIS,1);
 	
 	AI_Output (self ,other,"DIA_MiltenNW_KAP3_Entry_Permit_03_02"); //(hesitantly) All right. Here's the key to the monastery. Pyrokar is in the church.
 	
 	CreateInvItems (self,ItKe_Innos_Mis,1);
-	B_GiveInvItems (self,other,ItKe_Innos_Mis,1); 
-	B_GiveInvItems (self,other,ItWr_PermissionToWearInnosEye_MIS,1);
+	B_GiveInvItems (self,other,ItKe_Innos_Mis,1);
 	
 	MiltenNW_GivesMonasteryKey = TRUE;
 	
