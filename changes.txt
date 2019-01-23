@@ -169,7 +169,11 @@ Samuel gets a ring he was supposed to have in his trade inventory.
 	NPCs Specific
 
 Agon ends the dialog after answering to "how's it going".
+Andre actually takes and inspects the evidence from NH about Halvor being a fence and Canthar trying to frame Sarah.
 Andre can't be told that Cornelius is lying if Hagen has already ordered Bennets release.
+Andre does not tell NH that Canthar came to him if he is dead or if he never gave the quest for framing Sarah.
+Andre only comments on allowing NH to join the militia after giving the letter of recommendation if NH is not in any guild.
+Andre only comments on not being able to use anyone without a clean record in the militia if NH is in the militia.
 Alligator Jack gives previously unused item Swamprat meat for his delivery quest.
 Alligator Jack only takes meat from Swamprats.
 Alwin is asked about buying a sheep if NH is looking for a sheep for the monastery.

@@ -64,7 +64,10 @@ func void B_Andre_Steckbrief()
 	AI_Output (self ,other,"DIA_Andre_Add_08_02"); //So what is it all about?
 	AI_Output (other, self,"DIA_Andre_Add_15_03"); //I don't know why those guys are looking for me...
 	AI_Output (self ,other,"DIA_Andre_Add_08_04"); //I hope for your sake that you're telling the truth.
-	AI_Output (self ,other,"DIA_Andre_Add_08_05"); //I cannot use anyone in the militia who doesn't have a clean record.
+	if (other.guild == GIL_MIL)
+	{
+		AI_Output (self ,other,"DIA_Andre_Add_08_05"); //I cannot use anyone in the militia who doesn't have a clean record.
+	};
 	AI_Output (self ,other,"DIA_Andre_Add_08_06"); //Most of these bandits are former prisoners from the mining colony.
 	AI_Output (self ,other,"DIA_Andre_Add_08_07"); //I should hope that you didn't get involved in any way with those cutthroats!
 	Andre_Steckbrief = TRUE;
@@ -81,12 +84,17 @@ func void B_Andre_CantharFalle()
 	AI_Output (self, other, "B_Andre_CantharFalle_08_00"); //The merchant Canthar was here. He said that you are an escaped convict from the mining colony.
 	AI_Output (self, other, "B_Andre_CantharFalle_08_01"); //I don't know whether that's the truth and I prefer not to ask you, but you should clear that matter up.
 	
+	if (other.guild == GIL_MIL)
+	&& (Andre_Steckbrief == FALSE)
+	{
+		AI_Output (self ,other,"DIA_Andre_Add_08_05"); //I cannot use anyone in the militia who doesn't have a clean record.
+	};
+
 	B_RemoveNpc (Sarah);
 	
-			
 	B_StartOtherRoutine (Canthar,"MARKTSTAND");
 	AI_Teleport (Canthar,"NW_CITY_SARAH");
-					
+	
 	if (Canthar_Sperre == FALSE)
 	&& (Canthar_Pay == FALSE)
 	{
@@ -115,9 +123,10 @@ INSTANCE DIA_Andre_CantharFalle (C_INFO)
 
 FUNC INT DIA_Andre_CantharFalle_Condition()
 {
-	if (MIS_Canthars_KomproBrief == LOG_RUNNING) 
+	if (Andre_CantharFalle == FALSE)
+	&& (MIS_Canthars_KomproBrief == LOG_Running)
 	&& (MIS_Canthars_KomproBrief_Day <= Wld_GetDay() - 2)
-	&& (Andre_CantharFalle == FALSE)
+	&& (!Npc_IsDead(Canthar))
 	{
 		return TRUE;
 	};
@@ -132,13 +141,17 @@ FUNC INT DIA_Andre_CantharFalle_Condition()
 
 FUNC INT DIA_Andre_CantharFalle_Info()
 {
-	if (Andre_Steckbrief == FALSE)
+	if (Pablo_AndreMelden == TRUE)
+	&& (!Npc_IsDead(Pablo))
+	&& (Andre_Steckbrief == FALSE)
 	{
 		B_Andre_Steckbrief();
 	};
 	
 	if (Andre_CantharFalle == FALSE)
+	&& (MIS_Canthars_KomproBrief == LOG_Running)
 	&& (MIS_Canthars_KomproBrief_Day <= Wld_GetDay() - 2)
+	&& (!Npc_IsDead(Canthar))
 	{
 		B_Andre_CantharFalle();
 	};
@@ -703,7 +716,15 @@ func void DIA_Addon_Andre_MartinEmpfehlung_Info ()
 	B_GiveInvItems (other, self, ItWr_Martin_MilizEmpfehlung_Addon,1);
 	B_UseFakeScroll();
 	AI_Output	(self, other, "DIA_Addon_Andre_MartinEmpfehlung_08_02"); //(impressed) Well, I'll be ...! This must have cost you quite an effort. It's no easy feat to get something like this out of Martin.
-	AI_Output	(self, other, "DIA_Addon_Andre_MartinEmpfehlung_08_03"); //All right. I'm convinced. If Martin vouches for you, I shall let you join. Let me know when you're ready.
+	
+	if(hero.guild == GIL_NONE)
+	{
+		AI_Output	(self, other, "DIA_Addon_Andre_MartinEmpfehlung_08_03"); //All right. I'm convinced. If Martin vouches for you, I shall let you join. Let me know when you're ready.
+	}
+	else
+	{
+		B_GivePlayerXP(XP_Ambient);
+	};
 	Andre_Knows_MartinEmpfehlung = TRUE;
 };
 
@@ -931,6 +952,11 @@ func void DIA_Andre_Auslieferung_Halvor()
 	AI_Teleport			(Halvor,"NW_CITY_HABOUR_KASERN_HALVOR"); 
 	
 	AI_Output (other, self, "DIA_Andre_Auslieferung_Halvor_15_00"); //Halvor is a fence. He sells the goods that the bandits steal from the merchants.
+	if(Npc_HasItems(other,ItWr_HalvorMessage))
+	{
+		B_GiveInvItems(other,self,ItWr_HalvorMessage,1);
+		B_UseFakeScroll();
+	};
 	AI_Output (self, other, "DIA_Andre_Auslieferung_Halvor_08_01"); //So he's behind it. My men will lock him up at once.
 	AI_Output (self, other, "DIA_Andre_Auslieferung_Halvor_08_02"); //I don't think he'll create any difficulties. I shall give you your bounty now.
 	B_GiveInvItems (self, other, itmi_gold, Kopfgeld);
@@ -968,6 +994,11 @@ func void DIA_Andre_Auslieferung_Canthar()
 	AI_Output (other, self, "DIA_Andre_Auslieferung_Canthar_15_00"); //Canthar the merchant is trying to get rid of Sarah!
 	AI_Output (self, other, "DIA_Andre_Auslieferung_Canthar_08_01"); //Sarah? The weapons merchant in the marketplace?
 	AI_Output (other,self , "DIA_Andre_Auslieferung_Canthar_15_02"); //I was supposed to foist a letter on Sarah which claimed that she's supplying weapons to Onar.
+	if(Npc_HasItems(other,ItWr_Canthars_KomproBrief_MIS))
+	{
+		B_GiveInvItems(other,self,ItWr_Canthars_KomproBrief_MIS,1);
+		B_UseFakeScroll();
+	};
 	AI_Output (self, other, "DIA_Andre_Auslieferung_Canthar_08_03"); //I see. I shall gladly pay the bounty for that bastard. He is already as good as behind bars.
 	B_GiveInvItems (self, other, itmi_gold, Kopfgeld);
 	
