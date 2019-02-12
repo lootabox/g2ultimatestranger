@@ -259,9 +259,10 @@ func void DIA_Serpentes_SUCCESS_Info ()
 	if (Npc_HasItems (other, Holy_Hammer_Mis) >= 1)
 	{
 		AI_Output (self, other, "DIA_Serpentes_SUCCESS_10_05"); //And I had best take the hammer myself.
-		
-		Npc_RemoveInvItems (other, Holy_Hammer_MIS,1); 
+		B_GiveInvItems (other,self, Holy_Hammer_MIS,1);
+		Npc_RemoveInvItems (self, Holy_Hammer_MIS,1); 
 		Wld_InsertItem (Holy_Hammer_MIS,"FP_HAMMER");
+		Garwig_DIA_THIEF_OneTime = FALSE;
 	};
 	
 	MIS_GOLEM = LOG_SUCCESS;

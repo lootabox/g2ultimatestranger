@@ -141,7 +141,7 @@ func void B_AssessPlayer ()
 			&& (!C_BodyStateContains(other,BS_SWIM))
 			&& (!C_BodyStateContains(other,BS_DIVE))
 			// ------- und NUR, wenn keine CRIME vorliegt -------
-			&& (B_GetPlayerCrime(self) == CRIME_NONE)
+			&& ((B_GetPlayerCrime(self) == CRIME_NONE) || (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Garwig)))
 			// ------- und NUR, wenn NSC KEINEN RefuseTalk hat ------
 			&& (C_RefuseTalk(self,other) == FALSE)
 			// ------- Will ich die FakeArmor kommentieren? ---

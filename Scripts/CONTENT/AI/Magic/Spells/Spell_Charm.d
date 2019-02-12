@@ -22,7 +22,9 @@ func int Spell_Logic_Charm(var int manaInvested)
 		//---STORY: Ignaz-Mission-----------------------------
 		if (other.aivar[AIV_NpcSawPlayerCommit] != CRIME_NONE)
 		&& (MIS_Ignaz_Charm == LOG_RUNNING)
+		&& (Charm_Test == FALSE)
 		{
+			B_LogEntry(TOPIC_Ignaz,"It seems the spell worked! I should tell Ignaz about it.");
 			Charm_Test = TRUE;
 		};
 		//----------------------------------------------------

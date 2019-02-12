@@ -849,6 +849,7 @@ var int 	Fire_Contest;
 
 var int 	Opolos_Rezept;
 var int 	Babo_Training;
+var int 	Garwig_DIA_THIEF_OneTime;
 
 var int 	MIS_GuardSheep;				//Schafe hüten für Opolos 
 var int 	MIS_PickHerb;				//Unkraut jäten mit Agon

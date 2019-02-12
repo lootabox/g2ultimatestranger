@@ -9,9 +9,21 @@ func int C_WantToRansack (var C_NPC slf)
 	{
 		return FALSE;
 	};
-	
+
 	// Raven
 	if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Raven))
+	{
+		return FALSE;
+	};
+	
+	if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Garwig))
+	{
+		return TRUE;
+	};
+	
+	if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Myxir_CITY))
+	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(KDF_511_Daron))
+	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Vatras))
 	{
 		return FALSE;
 	};

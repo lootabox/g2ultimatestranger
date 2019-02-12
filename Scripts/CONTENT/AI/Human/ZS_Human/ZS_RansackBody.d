@@ -39,6 +39,7 @@ func void ZS_RansackBody_End ()
 		AI_PlayAni (self, "T_PLUNDER");
 		CreateInvItems		(self, Holy_Hammer_MIS, 1);
 		Npc_RemoveInvItems	(other,Holy_Hammer_MIS, 1);	
+		Garwig_DIA_THIEF_OneTime = FALSE;
 	}
 	
 	else if (Npc_HasItems(other, ItMw_2h_Rod) > 0)
@@ -61,13 +62,14 @@ func void ZS_RansackBody_End ()
 	};	
 	
 	// ------ Gold nehmen ------
-	if (self.aivar[AIV_ATTACKREASON] == AR_Theft
-	|| self.aivar[AIV_ATTACKREASON] == AR_LeftPortalRoom
-	|| self.aivar[AIV_ATTACKREASON] == AR_ClearRoom
-	|| self.aivar[AIV_ATTACKREASON] == AR_GuardCalledToRoom
-	|| self.aivar[AIV_ATTACKREASON] == AR_GuardCalledToThief
-	|| self.guild == GIL_BDT
-	|| self.guild == GIL_PIR)
+	if ((self.aivar[AIV_ATTACKREASON] == AR_Theft)
+	|| (self.aivar[AIV_ATTACKREASON] == AR_LeftPortalRoom)
+	|| (self.aivar[AIV_ATTACKREASON] == AR_ClearRoom)
+	|| (self.aivar[AIV_ATTACKREASON] == AR_GuardCalledToRoom)
+	|| (self.aivar[AIV_ATTACKREASON] == AR_GuardCalledToThief)
+	|| (self.guild == GIL_BDT)
+	|| (self.guild == GIL_PIR))
+	&& (Hlp_GetInstanceID(self) != Hlp_GetInstanceID(Garwig))
 	{
 		B_TurnToNpc (self, other);
 		AI_PlayAni (self, "T_PLUNDER");
@@ -89,24 +91,27 @@ func void ZS_RansackBody_End ()
 	};
 
 	// ------ nach der Waffe des Opfers suchen ------
-	if (self.aivar[AIV_ATTACKREASON] == AR_SheepKiller
-	|| self.aivar[AIV_ATTACKREASON] == AR_ReactToWeapon
-	|| self.aivar[AIV_ATTACKREASON] == AR_ReactToDamage
-	|| self.aivar[AIV_ATTACKREASON] == AR_GuardStopsFight
-	|| self.aivar[AIV_ATTACKREASON] == AR_GuardCalledToKill
-	|| self.aivar[AIV_ATTACKREASON] == AR_GuardStopsIntruder
-	|| self.aivar[AIV_ATTACKREASON] == AR_HumanMurderedHuman)
+	Npc_PerceiveAll	(self);
+	if ( Wld_DetectItem (self, ITEM_KAT_NF) || Wld_DetectItem (self, ITEM_KAT_FF) )
 	{
-		Npc_PerceiveAll	(self);
-		
-		if ( Wld_DetectItem (self, ITEM_KAT_NF) || Wld_DetectItem (self, ITEM_KAT_FF) )
+		if (Hlp_IsValidItem(item))
 		{
-			if (Hlp_IsValidItem(item))
+			if (self.aivar[AIV_ATTACKREASON] == AR_SheepKiller)
+			|| (self.aivar[AIV_ATTACKREASON] == AR_ReactToWeapon)
+			|| (self.aivar[AIV_ATTACKREASON] == AR_ReactToDamage)
+			|| (self.aivar[AIV_ATTACKREASON] == AR_GuardStopsFight)
+			|| (self.aivar[AIV_ATTACKREASON] == AR_GuardCalledToKill)
+			|| (self.aivar[AIV_ATTACKREASON] == AR_GuardStopsIntruder)
+			|| (self.aivar[AIV_ATTACKREASON] == AR_HumanMurderedHuman)
+			|| ((Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Garwig)) && (Hlp_IsItem(item, Holy_Hammer_MIS)))
 			{
 				if (Npc_GetDistToItem(self,item) < 500)
 				{
 					AI_TakeItem	(self, item);
-					B_Say		(self, self, "$ITAKEYOURWEAPON");
+					if (Hlp_GetInstanceID(self) != Hlp_GetInstanceID(Garwig))
+					{
+						B_Say		(self, self, "$ITAKEYOURWEAPON");
+					};
 					
 					//AI_EquipBestMeleeWeapon(self);
 					//AI_EquipBestRangedWeapon(self);

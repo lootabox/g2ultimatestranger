@@ -36,7 +36,7 @@ No stats can be sacrificed for gold.
 
 	NPCs
 
-NPCs only take 20% of gold from NH.
+NPCs only loot 20% of gold from NH.
 NPCs only loot gold from NH who was caught stealing or by people who are thieves themselves.
 NPCs only take the weapon from NH if he was caught doing something violent or threatening.
 
@@ -44,30 +44,30 @@ NPCs only take the weapon from NH if he was caught doing something violent or th
 	Alchemy
 
 Alchemist's bench does not automatically kick you out of the dialog, unless completely out of Lab Water Bottles.
-Making joints and tobacco does not consume Lab Water Bottles, though one is needed to use the Alchemy Table.
 It is possible to create Double Apple tobacco and all tobacco have their prices adjusted based on their ingredients.
+Making joints and tobacco does not consume Lab Water Bottles, though one is needed to use the Alchemy Table.
 
 
 	Smithing
 
 Anvil does not automatically kick you out of the dialog, unless completely out of Red Hot Steel.
-When missing production items and failing to craft something, anvil gives back Red Hot Steel instead of Raw Steel.
 Ore weapon forging option is visible only if NH knows how to make them.
+When missing production items and failing to craft something, anvil gives back Red Hot Steel instead of Raw Steel.
 
 
 	Food
 
-Snapperweed effect lasts four times as long.
 Chompers, Rats, Shadowbeasts, Wargs and Wolves no longer drop Raw Meat.
+Snapperweed effect lasts four times as long.
 
 
 	Enemies
 
 Fire Devils, Golems, Shadowbeasts, Shadowbeast Skeletons, Trolls and Zombies do not flinch and cannot be interrupted.
 
+Dragon regeneration is only 4% to 20% as fast, depending on dragon type.
 Dragons do not try to use breath attack when target is too far.
 Dragons only regenerate when not fighting.
-Dragon regeneration is only 4% to 20% as fast, depending on dragon type.
 Minecrawlers no longer drop Minecrawler Plates.
 Molerats no longer stop to stare at their enemies.
 Shadow Lord Archol has same amount of protection as other shadow warriors.
@@ -101,13 +101,13 @@ Inquisitor deals blunt damage, not edge.
 Charge spell scrolls use scroll mana cost per tier, instead of rune mana cost.
 Charge spells are cast off shortly after reaching final charge tier or upon running out of mana.
 Charge spells gain tiers only when mana is removed, not before.
-Fear spell does not affect any magician, paladins, golems, dragons or trolls.
 Fear spell can be used with no target in focus, cannot bypass immunity and monsters immediately react to it instead of standing still.
+Fear spell does not affect any magician, paladins, golems, dragons or trolls.
 Lightning spells properly deal double damage to submerged targets.
 Paladin runes now cost correct amount of learning points.
 Root Snare does not work against golems or summoned demons.
-Sleep spell does not affect any magician.
 Sleep spell affects Cornelius, Judge, Larius and NH even if he becomes paladin/fire mage.
+Sleep spell does not affect any magician.
 Water spells properly deal halved damage against large/heavy creatures and double against fire based creatures.
 
 
@@ -132,31 +132,32 @@ Young Wolves at the pass are switched with regular Wolves.
 Added logging for pickpocket failures and successes.
 Added pickpocketable items to NPCs inventories, except for traders.
 
-Changed default weapon from Heavy Branch to something that makes sense for Akil, Cornelius, Judge, Larius, Onar, Sekob.
 Changed NPCs to attack to kill for Girion, Parcival, Sylvio.
 Changed NPCs to receive varying guild specific weapon on spawn, instead of always Heavy Branch, if their regular weapon is taken.
 Changed NPCs to refuse joining the crew with previously unused dialogue if dismissed twice for Lee, Lester, Mario.
 Changed NPCs to return to monastery after surviving the Trial of Fire for Agon, Igaraz, Ulf.
 Changed NPCs to wear farmer clothing and equip sickles after returning to Khorinis for Pardok, Telbor, Tonak.
+Changed default weapon from Heavy Branch to something that makes sense for Akil, Cornelius, Judge, Larius, Onar, Sekob.
 
-Fixed ambient inventory generation for pirates.
 Fixed Fajeth, Tengron and Knight 263 referring to Lord Andre when telling NH to go settle his crimes.
+Fixed NPCs not considering Heavy Militia armor as militia armor for Borka, Kardif, Meldor, Nagur, Nadja.
+Fixed NPCs showing wrong pick pocket difficulty in Valley of Mines for Carlos, Sylvio.
+Fixed NPCs speaking out NH's dialog lines for Pardos, Peck.
+Fixed NPCs talking to NH when he is transformed into an animal.
 Fixed XP award for pickpocketing Cavalorn, Dobar, Engor, Francis, Franco, Salandril, Valentino.
 Fixed XP award for recruiting Lares, Lester.
+Fixed ambient inventory generation for pirates.
 Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
-Fixed logical issues with dialogue of Diego, Fernando, Lobart, Lothar, Ramon, Ulf, Vatras, Xardas.
 Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patrick, Monty, Tonak, Telbor, Pardos.
-Fixed NPCs not considering Heavy Militia armor as militia armor for Borka, Kardif, Meldor, Nagur, Nadja.
-Fixed NPCs speaking out NH's dialog lines for Pardos, Peck.
-Fixed NPCs showing wrong pick pocket difficulty in Valley of Mines for Carlos, Sylvio.
-Fixed NPCs talking to NH when he is transformed into an animal.
-Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
 Fixed issue with dragon dialog restarting quest 'Dragon Eggs', if it was already completed.
+Fixed logical issues with dialogue of Diego, Fernando, Lobart, Lothar, Ramon, Ulf, Vatras, Xardas.
+Fixed mages to not loot the player while in the city for Daron, Myxir and Vatras.
+Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
 Fixed wrong or inconsistent style of dialogue text for Agon, Babo, Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Gorax, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Martin, Milten, Orlan, Pardos, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras and NH for giving a potion to anyone.
 
 Removed Goblin Berries and Pepper bags from ambient inventories.
-Removed option to discuss rent after completing related quest for Onar, Sekob.
 Removed option to discuss joining the mercenaries once part of any guild for Alvares, Raoul, Wolf.
+Removed option to discuss rent after completing related quest for Onar, Sekob.
 
 
 	NPCs Traders
@@ -169,15 +170,15 @@ Samuel gets a ring he was supposed to have in his trade inventory.
 	NPCs Specific
 
 Agon ends the dialog after answering to "how's it going".
+Alligator Jack gives previously unused item Swamprat meat for his delivery quest.
+Alligator Jack only takes meat from Swamprats.
+Alwin is asked about buying a sheep if NH is looking for a sheep for the monastery.
+Alwin vocally disapproves murdering of Fellan and will remember the crime.
 Andre actually takes and inspects the evidence from NH about Halvor being a fence and Canthar trying to frame Sarah.
 Andre can't be told that Cornelius is lying if Hagen has already ordered Bennets release.
 Andre does not tell NH that Canthar came to him if he is dead or if he never gave the quest for framing Sarah.
 Andre only comments on allowing NH to join the militia after giving the letter of recommendation if NH is not in any guild.
 Andre only comments on not being able to use anyone without a clean record in the militia if NH is in the militia.
-Alligator Jack gives previously unused item Swamprat meat for his delivery quest.
-Alligator Jack only takes meat from Swamprats.
-Alwin is asked about buying a sheep if NH is looking for a sheep for the monastery.
-Alwin vocally disapproves murdering of Fellan and will remember the crime.
 Angar has same weapon everywhere as in the Valley of Mines.
 Bandit 10008 warns NH not to wake up Skinner only if he has not already done so.
 Bartok now grants previously omitted XP bonus for finishing the hunt with him.
@@ -228,6 +229,12 @@ Gaan won't know about the death of the Snorting Dragon Snapper unless he is clos
 Gaan's dialog option for asking who he is cannot glitch up and become unavailable.
 Garond can be told about Silvestro's mining site even if Diego has died.
 Garond is not informed about death of Silvestro, if NH does not know about his death.
+Garwig does not get stuck repeating himself after stealing the hammer.
+Garwig initiates the dialog about the Sacred Hammer disappearing if the player has it or he knows he took it.
+Garwig will always loot or pick up the Sacred Hammer from NH after beating him.
+Garwig will know NH took the Sacred Hammer if NH has it equipped.
+Garwig will not tell NH about the hammer, if NH has the hammer.
+Garwig will talk with NH even if he has been caught for a crime.
 Gerold can be asked whether he ever sleeps only before receiving the order from Garond to free Gorn.
 Gerold gives explicit options for giving stew and fish soup.
 Girion does not count towards max ship crew.
@@ -242,9 +249,9 @@ Hagen will hint at NH joining paladins only when all requirements are fulfilled.
 Hagen will not make NH paladin before delivering the report from Valley of Mines to avoid issue with Pedro not letting NH in monastery.
 Hagens dialog has 1 more previously inaccessible dialogue lines.
 Halvor is not given the compromising note for reading.
+Hanna has 16 lines of dialogue and new interaction restored related to the thieves' guild.
 Harad accepts any orc weapon for his quest.
 Harad will take the best orc weapon NH has and inspect it before commenting on it.
-Hanna has 16 lines of dialogue and new interaction restored related to the thieves' guild.
 Henry will consider all higher tier armor as luxurious and will comment appropriately.
 Highwayman hides if he sees NH coming with Lares.
 Highwayman is not a friendly to Seekers, he will be dead in chapter 3.
@@ -267,8 +274,8 @@ Landlord will not give more then 5 beers per chapter and only 1 per day.
 Lares's dialog has 5 more previously unused dialogue lines.
 Larius dialog has 2 more previously inaccessible dialogue lines.
 Lee can be told about lizard people only from chapter 4 onwards.
-Lee's dialog has 1 more previously unused dialogue lines.
 Lee will only sell mercenary armour while the player is a mercenary.
+Lee's dialog has 1 more previously unused dialogue lines.
 Lehmar attacking the NH causes Meldor to also attack the NH.
 Lehmar does not immediately notice the theft of his ledger.
 Lehmar does not lend money to NH if he attacked him, unless Oblivion is cast on him.
@@ -284,11 +291,11 @@ Maria's golden plate can only be returned after asking who she is.
 Mario cannot be recruited to a full ship crew.
 Martin actually takes the evidence from NH and does not repeat it needlessly every time.
 Martin only hints at going to Vatras for the Wisp amulet, if NH does not already have it.
+Mika properly evaluates NH's armor before commenting on it.
 Milten can teach Paladin runes in Irdorath.
 Milten does not simultaneously return the letter from Hagen and the key to the monastery.
 Milten returns to the monastery in the beginning of the third chapter instead of after giving the report to Hagen.
 Milten will not say Gorn is in prison if he is already released.
-Mika properly evaluates NH's armor before commenting on it.
 Nagur now grants previously omitted XP bonus for showing thieves' signal and returning Baltram's shipment.
 Neoras uses all potion ingredients given to him.
 Onar's dialog for buying a sheep is only available if NH knows he needs one and is not part of any guild yet.
@@ -348,6 +355,7 @@ Xardas' dialog has 3 more previously unused dialogue lines.
 
 Added new teleport scroll to get out of the ruins behind broken bridge in Jharkendar.
 Annotation added for giving and taking back letter to Elvrich, letter to Greg, recipe for Opolos, map to Saturas.
+Annotation added for giving the Sacred Hammer to Serpentes.
 Black Ore effect ends on using transformation scrolls.
 Document visual changed for Esteban's Bodyguard, Pablo, Senyan, Skip, a thug in Khorinis for reading NH's wanted poster and Saturas for reading a map.
 Embarla Firgasto correctly depletes NH's mana.
@@ -401,6 +409,7 @@ Following actions no longer cause unnecessary journal updates:
 * Sekob asked what has happened in the meantime while his wife is away.
 
 Following actions now do create a log entry:
+* Using Oblivion spell while Ignaz' quest is running.
 * Grimbald agreeing to teach taking animal trophies.
 
 New item models:
@@ -412,8 +421,8 @@ New item models:
 * Coragon's Silver
 * Diary of the novice black magician
 * Fire and Magic ammunition
-* Heavy Gold Plate
 * Golden Compass
+* Heavy Gold Plate
 * King's Sorrel
 * Leader of the Pack's Claws
 * Message in a Bottle
@@ -432,10 +441,10 @@ Changed models:
 	Sources
 
 User PowerGamer@worldofgothic.com
-	Original G2 NotR scripts with English dialogue and a lot of bug fixes. The original
+	Original G2 NotR scripts with English dialogue and a lot of bug fixes.
 
 User Korianous@worldofgothic.com
 	English menu and other system script files.
 
 User Dimus@worldofplayers.ru
-	Insane metric ton of bug fixes and improvements. He has credits numerous other mods and users, but it's difficult to tell who/what should be credited for what changes due to poor documentation and language barrier. Due to Russian origin all changes had to be manually ported and are documented above in "Ported fixes and improvements".
+	Insane metric ton of bug fixes and improvements. (converted manually to English code base)

@@ -122,6 +122,8 @@ INSTANCE DIA_Garwig_Hammer  (C_INFO)
 FUNC INT DIA_Garwig_Hammer_Condition()
 {
 	if (Npc_KnowsInfo (other,DIA_Garwig_Room))
+	&& (Hammer_Taken == FALSE)
+	&& (!Npc_HasItems(other,Holy_Hammer_MIS))
 	{
 		return TRUE;
 	};	
@@ -260,26 +262,28 @@ instance DIA_Garwig_THIEF		(C_INFO)
 };
 func int DIA_Garwig_THIEF_Condition ()
 {	
-	if  (Npc_IsInState (self, ZS_Talk))
-	&&  (Npc_HasItems (hero, Holy_Hammer_MIS) == 1)
+	if ((Npc_HasItems (other, Holy_Hammer_MIS) == 1) || (Hammer_Taken == TRUE))
+	&& (Garwig_DIA_THIEF_OneTime == FALSE)
 	{
 		return TRUE;
 	};
 };
 func void DIA_Garwig_THIEF_Info ()
-{		
-					
+{
+	var C_Item EquipWeap;
+	EquipWeap = Npc_GetEquippedMeleeWeapon(other);
 	if (Hammer_Taken == TRUE) 
+	|| (Hlp_IsItem(EquipWeap, Holy_Hammer_MIS))
 	{ 
 		AI_Output (self, other, "DIA_Garwig_THIEF_06_00"); //(upset) Thief! You have disgraced not only yourself and me, but this entire monastery!
 		AI_Output (self, other, "DIA_Garwig_THIEF_06_01"); //You shall atone for this sacrilege. And, above all - GIVE ME BACK THAT HAMMER!!
-		
 	}
 	else
 	{
 		AI_Output (self, other, "DIA_Garwig_THIEF_06_02"); //(desperate) The hammer has disappeared - how could that happen?
 		AI_Output (self, other, "DIA_Garwig_THIEF_06_03"); //I have failed. Innos will punish me!
 	};	
+	Garwig_DIA_THIEF_OneTime = TRUE;
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Hammer zurückbringen (immer wenn Spieler den Hammer hat)
@@ -316,6 +320,7 @@ func void DIA_Garwig_Abgeben_Info ()
 	
 	B_GiveInvItems (other,self, Holy_Hammer_MIS,1);
 	Hammer_Taken = FALSE;
+	Garwig_DIA_THIEF_OneTime = FALSE;
 };
 
 

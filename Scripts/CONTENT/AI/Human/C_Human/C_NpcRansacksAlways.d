@@ -8,7 +8,8 @@
 func int C_NpcRansacksAlways (var C_Npc slf)
 {
 	if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Garwig))
-	&& (Npc_HasItems(other, Holy_Hammer_MIS) > 0)
+	&& (Hammer_Taken == TRUE)
+	//&& (Npc_HasItems(other, Holy_Hammer_MIS) > 0)
 	{
 		return TRUE;
 	};
