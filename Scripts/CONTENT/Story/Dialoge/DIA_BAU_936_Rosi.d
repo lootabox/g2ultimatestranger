@@ -204,6 +204,7 @@ instance DIA_Rosi_BENGAR		(C_INFO)
 func int DIA_Rosi_BENGAR_Condition ()
 {
 	if (Npc_KnowsInfo(other, DIA_Rosi_DuInBarriere))
+	&& (Bengar.aivar[AIV_TalkedToPlayer] == FALSE)
 	&& (Npc_IsDead(Balthasar)==FALSE)
 		{
 				return TRUE;

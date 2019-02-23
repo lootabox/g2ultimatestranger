@@ -22,6 +22,7 @@ var C_NPC Balthasar;
 var C_NPC BalthasarSheep1;
 var C_NPC BalthasarSheep2;
 var C_NPC BalthasarSheep3;
+var C_NPC Baltram;
 var C_NPC BanditGuard;
 var C_NPC Bandit_1;
 var C_NPC Bandit_2;
@@ -346,6 +347,7 @@ func void B_InitNpcGlobals ()
 	BalthasarSheep1			= Hlp_GetNpc(Balthasar_Sheep1);
 	BalthasarSheep2			= Hlp_GetNpc(Balthasar_Sheep2);
 	BalthasarSheep3			= Hlp_GetNpc(Balthasar_Sheep3);
+	Baltram					= Hlp_GetNpc(VLK_410_Baltram);
 	BanditGuard				= Hlp_GetNpc(BDT_1064_Bandit_L);
 	Bandit_1				= Hlp_GetNpc(BDT_1009_Bandit_L);
 	Bandit_2				= Hlp_GetNpc(BDT_1010_Bandit_L);

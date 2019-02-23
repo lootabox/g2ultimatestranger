@@ -57,7 +57,8 @@ FUNC INT DIA_Liesel_KommMit_Condition()
 {
 	if (self.aivar[AIV_PARTYMEMBER] == FALSE)
 	&& (Npc_KnowsInfo(other, DIA_Liesel_Hallo))
-	&& (self.aivar[AIV_TAPOSITION] == FALSE)
+	&& (self.aivar[AIV_TAPOSITION] == ISINPOS)
+	&& (Liesel_Giveaway == FALSE)
 	{
 		return TRUE;
 	};
@@ -67,7 +68,7 @@ FUNC VOID DIA_Liesel_KommMit_Info()
 {	
 	AI_Output (other, self,"DIA_Liesel_KommMit_15_00");	//Come with me!
 	B_LieselMaeh ();
-	
+	Npc_ExchangeRoutine(self,"Follow");
 	self.aivar[AIV_PARTYMEMBER] = TRUE;
 	
 	AI_StopProcessInfos	(self);
@@ -88,7 +89,8 @@ FUNC INT DIA_Liesel_WarteHier_Condition()
 {
 	if (self.aivar[AIV_PARTYMEMBER] == TRUE) 
 	&& (Npc_KnowsInfo(other, DIA_Liesel_Hallo))
-	&& (self.aivar[AIV_TAPOSITION] == FALSE)
+	&& (self.aivar[AIV_TAPOSITION] == ISINPOS)
+	&& (Liesel_Giveaway == FALSE)
 	{
 		return TRUE;
 	};
@@ -97,7 +99,7 @@ FUNC VOID DIA_Liesel_WarteHier_Info()
 {	
 	AI_Output (other, self,"DIA_Liesel_WarteHier_15_00");	//Wait here!
 	B_LieselMaeh ();
-	
+	Npc_ExchangeRoutine(self,"Wait");
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	
 	AI_StopProcessInfos	(self);

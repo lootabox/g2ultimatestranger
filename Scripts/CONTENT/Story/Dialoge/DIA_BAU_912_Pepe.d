@@ -363,7 +363,7 @@ func void DIA_Pepe_BuyLiesel_Info ()
 			AI_Output (self, other, "DIA_Pepe_BuyLiesel_03_03"); //Again? Okay. Take Betsy.
 			AI_Output (other, self, "DIA_Pepe_BuyLiesel_15_04"); //Betsy? But the last sheep was called Betsy ...
 			AI_Output (self, other, "DIA_Pepe_BuyLiesel_03_05"); //All the sheep are called Betsy.
-			if (Pepe_SchafGekauft == 3)
+			if (Pepe_SchafGekauft >= 3)
 			{
 				AI_Output (self, other, "DIA_Pepe_BuyLiesel_03_06"); //Except for the rams, of course.
 				AI_Output (other, self, "DIA_Pepe_BuyLiesel_15_07"); //And what are they called?

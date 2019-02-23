@@ -354,19 +354,18 @@ func int DIA_Opolos_LIESEL_Condition ()
 };
 func void DIA_Opolos_LIESEL_Info ()
 {
-	
-	
 	AI_Output (other, self, "DIA_Opolos_LIESEL_15_00"); //Look here, I brought Betsy. Can I leave her with you?
-	
 	Npc_PerceiveAll (self);
-	
+
 	if  Wld_DetectNpc (self,Follow_Sheep,NOFUNC,-1) 
 	&& (Npc_GetDistToNpc(self, other) < 800)
 	{
 		other.aivar[AIV_PARTYMEMBER] = FALSE;
-		other.aivar[AIV_TAPOSITION] = TRUE;
-		other.wp = "FP_ROAM_MONASTERY_04";
-		other.start_aistate = ZS_MM_AllScheduler; 
+		other.aivar[AIV_TAPOSITION] = NOTINPOS;
+		//other.wp = "FP_ROAM_MONASTERY_04";
+		other.wp = "NW_MONASTERY_SHEEP_02";
+		other.start_aistate = ZS_MM_AllScheduler;
+		B_StartOtherRoutine(other,"Monastery");
 		
 		Liesel_Giveaway = TRUE;
 		AI_Output (self, hero, "DIA_Opolos_LIESEL_12_01"); //Yes, of course. Good-looking animal. I'll take good care of her.
@@ -374,7 +373,7 @@ func void DIA_Opolos_LIESEL_Info ()
 	}
 	else
 	{
-		AI_Output (other, self, "DIA_Opolos_Add_15_00"); //Hm...somehow I seem to have misplaced it. I'll come back later.
+		AI_Output (other, self, "DIA_Opolos_Add_15_00"); //Hm... Somehow I seem to have misplaced it. I'll come back later.
 	};
 	
 	

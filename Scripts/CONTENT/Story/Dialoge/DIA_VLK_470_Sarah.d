@@ -158,6 +158,7 @@ instance DIA_Sarah_AkilsHof		(C_INFO)
 func int DIA_Sarah_AkilsHof_Condition ()
 {
 	if Npc_KnowsInfo (other, DIA_Sarah_Bauern)
+	&& (SC_KnowsAkilsHof == FALSE)
 	{
 		return TRUE;
 	};
@@ -168,6 +169,7 @@ func void DIA_Sarah_AkilsHof_Info ()
 	AI_Output (self, other, "DIA_Sarah_Add_16_04"); //If you go out of the east gate here and follow the road to the right, you'll come to a stairway.
 	AI_Output (self, other, "DIA_Sarah_Add_16_05"); //It leads up to Akil's farm.
 	AI_Output (self, other, "DIA_Sarah_Add_16_06"); //But I wouldn't go there now - the mercenaries are certainly still there.
+	SC_KnowsAkilsHof = TRUE;
 };
 
 

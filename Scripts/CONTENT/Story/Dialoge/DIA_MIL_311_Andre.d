@@ -904,7 +904,7 @@ func void DIA_Andre_Auslieferung_Info ()
 		Info_AddChoice (DIA_Andre_Auslieferung,"Halvor sells stolen goods.",DIA_Andre_Auslieferung_Halvor);
 	};
 	// ------ Nagur ------
-	if (MIS_Nagur_Bote == LOG_RUNNING)
+	if ((MIS_Nagur_Bote == LOG_RUNNING) || (MIS_Nagur_Bote == LOG_FAILED))
 	&& (Nagur_Ausgeliefert == FALSE)
 	{
 		Info_AddChoice (DIA_Andre_Auslieferung,"Nagur has killed Baltram's messenger.",DIA_Andre_Auslieferung_Nagur);

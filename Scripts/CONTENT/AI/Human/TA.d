@@ -62,3 +62,8 @@ func void TA_Sleep_Deep			(var int start_h, var int start_m, var int stop_h, var
 func void TA_RangerMeeting		(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Stand_RangerMeeting,	waypoint);};
 func void TA_Ghost				(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Ghost,					waypoint);};
 func void TA_GhostWusel			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_GhostWusel,				waypoint);};
+
+//CUSTOM
+func void TA_MM_Rtn_Follow_Sheep(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_MM_Rtn_Follow_Sheep,	waypoint);};
+func void TA_MM_AllScheduler	(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_MM_AllScheduler,		waypoint);};
+//func void TA_Obesession			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Obesession,				waypoint);};

@@ -131,6 +131,7 @@ func int DIA_Addon_Bengar_MissingPeople_Condition ()
 {
 	if 	(Npc_KnowsInfo(other, DIA_Bengar_WOVONLEBTIHR))
 	&& (SC_HearedAboutMissingPeople == TRUE)
+	&& (MissingPeopleReturnedHome == FALSE)
 		{
 			return TRUE;
 		};
@@ -209,7 +210,8 @@ instance DIA_Addon_Bengar_ReturnPardos		(C_INFO)
 func int DIA_Addon_Bengar_ReturnPardos_Condition ()
 {
 	if 	(MIS_Bengar_BringMissPeopleBack == LOG_RUNNING)
-	&&  (Npc_GetDistToWP (Pardos_NW, "NW_FARM3_HOUSE_IN_NAVI_2") <= 1000)
+	// &&  (Npc_GetDistToWP (Pardos_NW, "NW_FARM3_HOUSE_IN_NAVI_2") <= 1000)
+	&& !Npc_IsDead(Pardos_NW)
 	&& (MissingPeopleReturnedHome == TRUE)
 	{
 		return TRUE;
@@ -274,7 +276,8 @@ instance DIA_Bengar_REBELLIEREN		(C_INFO)
 
 func int DIA_Bengar_REBELLIEREN_Condition ()
 {
-	if (Npc_KnowsInfo(other, DIA_Bengar_HALLO))
+	//if (Npc_KnowsInfo(other, DIA_Bengar_HALLO))
+	if (Npc_KnowsInfo(other,DIA_Bengar_WOVONLEBTIHR))
 	{
 		return TRUE;
 	};
@@ -530,6 +533,7 @@ func void DIA_Bengar_MILIZWEG_Info ()
 		};
 		
 		Bengar_MilSuccess = TRUE;
+		Npc_ExchangeRoutine(self,"Start");
 	};
 };
 
@@ -582,14 +586,12 @@ instance DIA_Bengar_BALTHASARDARFAUFWEIDE		(C_INFO)
 
 func int DIA_Bengar_BALTHASARDARFAUFWEIDE_Condition ()
 {
-	if 	(
-		(Npc_KnowsInfo(other, DIA_Bengar_BALTHASAR))
-		&& (MIS_Torlof_BengarMilizKlatschen == LOG_SUCCESS)
-		&& (Bengar_MilSuccess == TRUE)
-		)
-			{
-					return TRUE;
-			};
+	if (Npc_KnowsInfo(other, DIA_Bengar_BALTHASAR))
+	//&& (MIS_Torlof_BengarMilizKlatschen == LOG_SUCCESS)
+	&& (Bengar_MilSuccess == TRUE)
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Bengar_BALTHASARDARFAUFWEIDE_Info ()

@@ -103,6 +103,7 @@ INSTANCE Follow_Sheep	(Mst_Default_Sheep)
 {
 	name						= "Betsy";
 	level						= 0;
+	id							= 167;
 
 	aivar[AIV_ToughGuy] = TRUE; //Liesel knn getötet werden, ohne daß jemand sich anpißt!
 		
@@ -110,9 +111,35 @@ INSTANCE Follow_Sheep	(Mst_Default_Sheep)
 	Npc_SetToFistMode(self);
 	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
 	
-	start_aistate				= ZS_MM_Rtn_Follow_Sheep;
+	//start_aistate				= ZS_MM_Rtn_Follow_Sheep;
 	CreateInvItems (self, ItFoMuttonRaw, 1);
+	daily_routine = Rtn_Start_167;
 };
+
+func void Rtn_Start_167()
+{
+	TA_Stand_WP(8,0,22,0,"NW_BIGFARM_SHEEP2_02");
+	TA_Stand_WP(22,0,8,0,"NW_BIGFARM_SHEEP2_02");
+};
+
+func void Rtn_Wait_167()
+{
+	TA_Stand_WP(8,0,22,0,"");
+	TA_Stand_WP(22,0,8,0,"");
+};
+
+func void Rtn_Follow_167()
+{
+	TA_MM_Rtn_Follow_Sheep(8,0,22,0,"");
+	TA_MM_Rtn_Follow_Sheep(22,0,8,0,"");
+};
+
+func void Rtn_Monastery_167()
+{
+	TA_MM_AllScheduler(8,0,22,0,"NW_MONASTERY_SHEEP_02");
+	TA_MM_AllScheduler(22,0,8,0,"NW_MONASTERY_SHEEP_02");
+};
+
 //***************
 //	Follow_Sheep_AKIL
 //***************
@@ -120,6 +147,7 @@ INSTANCE Follow_Sheep	(Mst_Default_Sheep)
 INSTANCE Follow_Sheep_AKIL	(Mst_Default_Sheep)
 {
 	name						= "Sheep";
+	id							= 166;
 	
 	aivar[AIV_ToughGuy] = TRUE;
 	
@@ -127,8 +155,27 @@ INSTANCE Follow_Sheep_AKIL	(Mst_Default_Sheep)
 	Npc_SetToFistMode(self);
 	
 	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
-	start_aistate				= ZS_MM_Rtn_Follow_Sheep;
+	//start_aistate				= ZS_MM_Rtn_Follow_Sheep;
 	CreateInvItems (self, ItFoMuttonRaw, 1);
+	daily_routine = Rtn_Cave_166;
+};
+
+func void Rtn_Cave_166()
+{
+	TA_Stand_WP(8,0,22,0,"NW_FOREST_CAVE1_IN_02");
+	TA_Stand_WP(22,0,8,0,"NW_FOREST_CAVE1_IN_02");
+};
+
+func void Rtn_Follow_166()
+{
+	TA_MM_Rtn_Follow_Sheep(8,0,22,0,"NW_FOREST_CAVE1_IN_02");
+	TA_MM_Rtn_Follow_Sheep(22,0,8,0,"NW_FOREST_CAVE1_IN_02");
+};
+
+func void Rtn_Farm_166()
+{
+	TA_MM_AllScheduler(8,0,22,0,"NW_FARM2_OUT_02");
+	TA_MM_AllScheduler(22,0,8,0,"NW_FARM2_OUT_02");
 };
 
 //******************************
@@ -137,28 +184,69 @@ INSTANCE Follow_Sheep_AKIL	(Mst_Default_Sheep)
 
 INSTANCE Balthasar_Sheep1	(Mst_Default_Sheep)
 {
+	id = 168;
 	B_SetVisuals_Hammel();
-
 	Npc_SetToFistMode(self);
-	start_aistate				= ZS_MM_AllScheduler;
+	// start_aistate				= ZS_MM_AllScheduler;
 	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
 	CreateInvItems (self, ItFoMuttonRaw, 1);
+	daily_routine = Rtn_Start_168;
+};
+
+func void Rtn_Start_168()
+{
+	TA_MM_AllScheduler(8,0,22,0,"NW_FARM4_BALTHASAR");
+	TA_MM_AllScheduler(22,0,8,0,"NW_FARM4_BALTHASAR");
+};
+
+func void Rtn_NewFarm_168()
+{
+	TA_MM_AllScheduler(8,0,22,0,"NW_BIGMILL_FARM3_BALTHASAR");
+	TA_MM_AllScheduler(22,0,8,0,"NW_BIGMILL_FARM3_BALTHASAR");
 };
 
 INSTANCE Balthasar_Sheep2	(Mst_Default_Sheep)
 {
+	id = 169;
 	B_SetVisuals_Sheep();
 	Npc_SetToFistMode(self);
-	start_aistate				= ZS_MM_AllScheduler;
+	// start_aistate				= ZS_MM_AllScheduler;
 	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
 	CreateInvItems (self, ItFoMuttonRaw, 1);
+	daily_routine = Rtn_Start_169;
+};
+
+func void Rtn_Start_169()
+{
+	TA_MM_AllScheduler(8,0,22,0,"NW_FARM4_BALTHASAR");
+	TA_MM_AllScheduler(22,0,8,0,"NW_FARM4_BALTHASAR");
+};
+
+func void Rtn_NewFarm_169()
+{
+	TA_MM_AllScheduler(8,0,22,0,"NW_BIGMILL_FARM3_BALTHASAR");
+	TA_MM_AllScheduler(22,0,8,0,"NW_BIGMILL_FARM3_BALTHASAR");
 };
 
 INSTANCE Balthasar_Sheep3	(Mst_Default_Sheep)
 {
+	id = 170;
 	B_SetVisuals_Sheep();
 	Npc_SetToFistMode(self);
-	start_aistate				= ZS_MM_AllScheduler;
+	// start_aistate				= ZS_MM_AllScheduler;
 	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
 	CreateInvItems (self, ItFoMuttonRaw, 1);
+	daily_routine = Rtn_Start_170;
+};
+
+func void Rtn_Start_170()
+{
+	TA_MM_AllScheduler(8,0,22,0,"NW_FARM4_BALTHASAR");
+	TA_MM_AllScheduler(22,0,8,0,"NW_FARM4_BALTHASAR");
+};
+
+func void Rtn_NewFarm_170()
+{
+	TA_MM_AllScheduler(8,0,22,0,"NW_BIGMILL_FARM3_BALTHASAR");
+	TA_MM_AllScheduler(22,0,8,0,"NW_BIGMILL_FARM3_BALTHASAR");
 };

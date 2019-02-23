@@ -170,22 +170,39 @@ Samuel gets a ring he was supposed to have in his trade inventory.
 	NPCs Specific
 
 Agon ends the dialog after answering to "how's it going".
+Akil always notices return of Telbor and/or Tonak.
+Akil can only be asked about Onar's farm if NH is not a mercenary or dragon hunter.
+Akil can only be asked about the missing people if they have not been returned yet.
+Akil's sheep always returns to the bandit cave if NH gets too far from her.
+Akil's sheep dialog has options to tell the sheep to wait and "END".
+Akil's sheep stays at his farm once brought there, instead of going back to the bandit cave.
 Alligator Jack gives previously unused item Swamprat meat for his delivery quest.
 Alligator Jack only takes meat from Swamprats.
 Alwin is asked about buying a sheep if NH is looking for a sheep for the monastery.
 Alwin vocally disapproves murdering of Fellan and will remember the crime.
 Andre actually takes and inspects the evidence from NH about Halvor being a fence and Canthar trying to frame Sarah.
+Andre can be told about Nagurs murder of Baltrams messenger, even after delivering Akils package to Baltram.
 Andre can't be told that Cornelius is lying if Hagen has already ordered Bennets release.
 Andre does not tell NH that Canthar came to him if he is dead or if he never gave the quest for framing Sarah.
 Andre only comments on allowing NH to join the militia after giving the letter of recommendation if NH is not in any guild.
 Andre only comments on not being able to use anyone without a clean record in the militia if NH is in the militia.
 Angar has same weapon everywhere as in the Valley of Mines.
+Balthasar can only be asked about Bengar's farm if NH has not yet spoken with Bengar.
+Balthasar's sheep properly move to Bengar's farm with him, instead of being duplicated.
+Baltram can only be asked about Akils farm if NH does yet know how to find it.
 Bandit 10008 warns NH not to wake up Skinner only if he has not already done so.
 Bartok now grants previously omitted XP bonus for finishing the hunt with him.
 Bartok only equips his hunting gear while hunting.
 Bartok wears a Rough Bastard Sword instead of Machete.
+Bengar always notices return of Pardos.
+Bengar can immediately be told to let Baltasar back on his pastures after getting rid of the militia.
+Bengar can only be asked about Onar after asking how does he make a living.
+Bengar can only be asked about the missing people if they have not been returned yet.
+Bengar returns to his normal routine after the militia are gone.
 Bennet makes NH dragon hunter only after giving the armor.
 Betsy gives no experience when killed.
+Betsy stays with Opolos in the monastery once brought there, instead of going back to Pepe.
+Betsy will always disappear if NH gets too far away from her, instead of sometimes appearing back at Pepe's.
 Biff can be asked to rejoin the crew in the Valley of Mines after refusing him.
 Biff can only be hired after asking what is he doing in the Valley of Mines.
 Biff does not grant NH experience before he is hired.
@@ -199,7 +216,7 @@ Buster gives reduced gold for each Shadowbeast Horn, though still more then regu
 Canthar properly sits on the chair when imprisoned.
 Carlos has slightly altered dialog if NH entered camp without killing Franco.
 Cassia can give the Blood Chalice quest, even if NH was a wanted thief.
-Cassia cannot be paid for learning to pickpocket if it’s already learned.
+Cassia cannot be paid for learning to pickpocket if it's already learned.
 Cassias quests become obsolete if the paladins kill her.
 Cornelius' diary cannot be stolen before learning of him being a witness to the murder.
 Diego can teach strength in Khorinis.
@@ -296,6 +313,7 @@ Milten can teach Paladin runes in Irdorath.
 Milten does not simultaneously return the letter from Hagen and the key to the monastery.
 Milten returns to the monastery in the beginning of the third chapter instead of after giving the report to Hagen.
 Milten will not say Gorn is in prison if he is already released.
+Nagur can only be asked about finding Baltram if NH has not yet spoken with him.
 Nagur now grants previously omitted XP bonus for showing thieves' signal and returning Baltram's shipment.
 Neoras uses all potion ingredients given to him.
 Onar's dialog for buying a sheep is only available if NH knows he needs one and is not part of any guild yet.
@@ -316,8 +334,10 @@ Ramirez shows two dialogue options only after he sees the thieves' signal.
 Raoul turns toward Sentenza when he calls for him.
 Rethon will only work with Jan after givent he permission from Garond.
 Riordian mentions William in the initial dialogue instead of the dialogue about the west.
+Rosi can only be asked about Bengar's farm if NH has not yet spoken with Bengar.
 Rosi will not create extra gold in her inventory when giving the reward to NH for escorting her.
 Rupert can only be asked where Matteo can be found if NH did not find him yet.
+Sarah can only be asked about Akils farm if NH does yet know how to find it.
 Saturas properly completes "The power of the guardians of the dead" when he tells NH about the chambers of Adanos.
 Sekob can't be told Rosi is back if she is dead.
 Sekob dialog no longer has option to go to talk to Onar if NH already talked with him.

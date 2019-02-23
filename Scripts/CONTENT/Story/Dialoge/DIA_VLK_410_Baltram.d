@@ -389,6 +389,7 @@ instance DIA_Baltram_AkilsHof		(C_INFO)
 func int DIA_Baltram_AkilsHof_Condition ()
 {
 	if (MIS_Baltram_ScoutAkil == LOG_RUNNING)
+	&& (SC_KnowsAkilsHof == FALSE)
 	{
 		return TRUE;
 	};
@@ -399,6 +400,7 @@ func void DIA_Baltram_AkilsHof_Info ()
 	AI_Output (other, self, "DIA_Baltram_AkilsHof_15_00"); //Where can I find Akil's farm?
 	AI_Output (self, other, "DIA_Baltram_AkilsHof_01_01"); //Just go straight out here through the east gate and follow the road to the southeast.
 	AI_Output (self, other, "DIA_Baltram_AkilsHof_01_02"); //After a short while, you'll come to a stone stairway. Go up that and from there you'll already be able to see Akil's farm.
+	SC_KnowsAkilsHof = TRUE;
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Lieferung geholt

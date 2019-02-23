@@ -177,11 +177,12 @@ instance DIA_Balthasar_WOBENGAR		(C_INFO)
 
 func int DIA_Balthasar_WOBENGAR_Condition ()
 {
-	if 	(Npc_KnowsInfo(other, DIA_Balthasar_AERGERMITNACHBARN))
-		&& ((hero.guild == GIL_NONE)||(hero.guild == GIL_SLD)||(hero.guild == GIL_DJG))
-			{
-				return TRUE;
-			};
+	if (Npc_KnowsInfo(other, DIA_Balthasar_AERGERMITNACHBARN))
+	&& (Bengar.aivar[AIV_TalkedToPlayer] == FALSE)
+	&& ((hero.guild == GIL_NONE)||(hero.guild == GIL_SLD)||(hero.guild == GIL_DJG))
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Balthasar_WOBENGAR_Info ()
@@ -279,30 +280,39 @@ func void DIA_Balthasar_BENGARUEBERREDET_Info ()
 
 	//Joly: "NW_BIGMILL_FARM3_BALTHASAR"
 	
-	Wld_InsertNpc	(Sheep,"NW_BIGMILL_FARM3_BALTHASAR"); 
-	Wld_InsertNpc	(Sheep,"NW_BIGMILL_FARM3_BALTHASAR"); 
-	Wld_InsertNpc	(Hammel,"NW_BIGMILL_FARM3_BALTHASAR"); 
+	// Wld_InsertNpc	(Sheep,"NW_BIGMILL_FARM3_BALTHASAR"); 
+	// Wld_InsertNpc	(Sheep,"NW_BIGMILL_FARM3_BALTHASAR"); 
+	// Wld_InsertNpc	(Hammel,"NW_BIGMILL_FARM3_BALTHASAR"); 
 
 	BalthasarSheep1 = Hlp_GetNpc (Balthasar_Sheep1); 
 
 	if (Hlp_IsValidNpc(BalthasarSheep1))
 	&& (!Npc_IsDead(BalthasarSheep1))
 		{
-			AI_StartState (BalthasarSheep1, ZS_MM_Rtn_Follow_Sheep_Balthasar, 1, "");
+			// AI_StartState (BalthasarSheep1, ZS_MM_Rtn_Follow_Sheep_Balthasar, 1, "");
+			BalthasarSheep1.wp = "NW_BIGMILL_FARM3_BALTHASAR";
+			BalthasarSheep1.start_aistate = ZS_MM_AllScheduler;
+			B_StartOtherRoutine(BalthasarSheep1,"NewFarm");
 		};
 	BalthasarSheep2 = Hlp_GetNpc (Balthasar_Sheep2); 
 
 	if (Hlp_IsValidNpc(BalthasarSheep2))
 	&& (!Npc_IsDead(BalthasarSheep2))
 		{
-			AI_StartState (BalthasarSheep2, ZS_MM_Rtn_Follow_Sheep_Balthasar, 1, "");
+			// AI_StartState (BalthasarSheep2, ZS_MM_Rtn_Follow_Sheep_Balthasar, 1, "");
+			BalthasarSheep2.wp = "NW_BIGMILL_FARM3_BALTHASAR";
+			BalthasarSheep2.start_aistate = ZS_MM_AllScheduler;
+			B_StartOtherRoutine(BalthasarSheep2,"NewFarm");
 		};	
 	BalthasarSheep3 = Hlp_GetNpc (Balthasar_Sheep3); 
 
 	if (Hlp_IsValidNpc(BalthasarSheep3))
 	&& (!Npc_IsDead(BalthasarSheep3))
 		{
-			AI_StartState (BalthasarSheep3, ZS_MM_Rtn_Follow_Sheep_Balthasar, 1, "");
+			// AI_StartState (BalthasarSheep3, ZS_MM_Rtn_Follow_Sheep_Balthasar, 1, "");
+			BalthasarSheep3.wp = "NW_BIGMILL_FARM3_BALTHASAR";
+			BalthasarSheep3.start_aistate = ZS_MM_AllScheduler;
+			B_StartOtherRoutine(BalthasarSheep3,"NewFarm");
 		};
 };
 

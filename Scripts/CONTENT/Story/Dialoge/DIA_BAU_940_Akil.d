@@ -70,6 +70,7 @@ func void DIA_Akil_Hallo_Info ()
 	};
 
 	Akils_SLDStillthere = TRUE;
+	SC_KnowsAkilsHof = TRUE;
 	AI_StopProcessInfos (self);
 };	
 ///////////////////////////////////////////////////////////////////////
@@ -234,6 +235,7 @@ func int DIA_Addon_Akil_MissingPeople_Condition ()
 {
 	if 	(Npc_KnowsInfo(other, DIA_Akil_NachKampf))
 	&& (SC_HearedAboutMissingPeople == TRUE)
+	&& (MissingPeopleReturnedHome == FALSE)
 	{
 		return TRUE;
 	};
@@ -272,7 +274,8 @@ func int DIA_Addon_Akil_ReturnPeople_Condition ()
 {
 	if (MIS_Akil_BringMissPeopleBack == LOG_RUNNING) 
 	&& (MissingPeopleReturnedHome == TRUE)
-	&& ((Npc_GetDistToWP (Tonak_NW,"NW_FARM2_FIELD_TANOK")<= 1000) || (Npc_GetDistToWP (Telbor_NW,"NW_FARM2_FIELD_TELBOR")<= 1000))
+	//&& ((Npc_GetDistToWP (Tonak_NW,"NW_FARM2_FIELD_TANOK")<= 1000) || (Npc_GetDistToWP (Telbor_NW,"NW_FARM2_FIELD_TELBOR")<= 1000))
+	&& (!Npc_IsDead(Tonak_NW) || !Npc_IsDead(Telbor_NW))
 	{
 		return TRUE;
 	};
@@ -282,8 +285,8 @@ func void DIA_Addon_Akil_ReturnPeople_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Akil_ReturnPeople_15_00"); //About your farmhands ...
 	
-	if (Npc_GetDistToWP (Tonak_NW,"NW_FARM2_FIELD_TANOK")<= 1000)
-	&& (Npc_GetDistToWP (Telbor_NW,"NW_FARM2_FIELD_TELBOR")<= 1000)
+	// if (Npc_GetDistToWP (Tonak_NW,"NW_FARM2_FIELD_TANOK")<= 1000) && (Npc_GetDistToWP (Telbor_NW,"NW_FARM2_FIELD_TELBOR")<= 1000)
+	if (!Npc_IsDead(Tonak_NW) && !Npc_IsDead(Telbor_NW))
 	{
 		AI_Output	(self, other, "DIA_Addon_Akil_ReturnPeople_13_01"); //You brought them back - you're one brave man.
 	}
@@ -398,7 +401,9 @@ instance DIA_Akil_Hof		(C_INFO)
 
 func int DIA_Akil_Hof_Condition ()
 {
-	if  Npc_KnowsInfo(other, DIA_Akil_Gegend)
+	if (Npc_KnowsInfo(other, DIA_Akil_Gegend))
+	&& (hero.guild != GIL_SLD)
+	&& (hero.guild != GIL_DJG)
 	{
 		return TRUE;
 	};
@@ -699,8 +704,10 @@ func void DIA_Akil_AkilsSchaf_Info ()
 	B_GiveInvItems (self, other, ItMi_Gold, 150);					
 	
 	Follow_Sheep_AKIL.aivar[AIV_PARTYMEMBER] = FALSE;
+	Follow_Sheep_AKIL.aivar[AIV_TAPOSITION] = NOTINPOS;
 	Follow_Sheep_AKIL.wp = "NW_FARM2_OUT_02";
-	Follow_Sheep_AKIL.start_aistate = ZS_MM_AllScheduler; 
+	Follow_Sheep_AKIL.start_aistate = ZS_MM_AllScheduler;
+	B_StartOtherRoutine(Follow_Sheep_AKIL,"Farm");
 	
 	B_GivePlayerXP (XP_AkilsSchaf);
 };

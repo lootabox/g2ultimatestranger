@@ -207,9 +207,15 @@ FUNC VOID DIA_Nagur_Auftrag_Info()
 	
 	Info_ClearChoices (DIA_Nagur_Auftrag);
 	Info_AddChoice    (DIA_Nagur_Auftrag,"Well then, I'm all set (END)",DIA_Nagur_Auftrag_Okay);
-	Info_AddChoice    (DIA_Nagur_Auftrag,"Where can I find Baltram?",DIA_Nagur_Auftrag_Baltram);
+	if(Baltram.aivar[AIV_TalkedToPlayer] == FALSE)
+	{
+		Info_AddChoice    (DIA_Nagur_Auftrag,"Where can I find Baltram?",DIA_Nagur_Auftrag_Baltram);
+	};
 	Info_AddChoice    (DIA_Nagur_Auftrag,"When should I talk to Baltram?",DIA_Nagur_Auftrag_Wann);
-	Info_AddChoice    (DIA_Nagur_Auftrag,"Where is Akil's farm?",DIA_Nagur_Auftrag_Akil);
+	if(SC_KnowsAkilsHof == FALSE)
+	{
+		Info_AddChoice    (DIA_Nagur_Auftrag,"Where is Akil's farm?",DIA_Nagur_Auftrag_Akil);
+	};
 	Info_AddChoice    (DIA_Nagur_Auftrag,"How much will the profit be?",DIA_Nagur_Auftrag_Gewinn);
 
 };
@@ -219,6 +225,7 @@ FUNC VOID DIA_Nagur_Auftrag_Akil()
 	AI_Output (self, other, "DIA_Nagur_Auftrag_Akil_08_01");//Leave the city by the east gate, that's directly on the marketplace.
 	AI_Output (self, other, "DIA_Nagur_Auftrag_Akil_08_02");//If you follow the road to the right, you'll soon come to a few steps cut into the rock.
 	AI_Output (self, other, "DIA_Nagur_Auftrag_Akil_08_03");//Go up there and you'll come to Akil's farm.
+	SC_KnowsAkilsHof = TRUE;
 };
 FUNC VOID DIA_Nagur_Auftrag_Gewinn()
 {
