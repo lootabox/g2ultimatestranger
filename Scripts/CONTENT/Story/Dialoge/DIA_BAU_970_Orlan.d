@@ -710,30 +710,36 @@ func void DIA_Orlan_WETTKAMPFLAEUFT_Info ()
 			AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_02"); //The drinking contest is finally over.
 			AI_Output			(other, self, "DIA_Orlan_WETTKAMPFLAEUFT_15_03"); //Who won?
 	
-			if 	(
-				((Mob_HasItems	("CHEST_RUKHAR", ItFo_Booze)) == FALSE)
-				&& ((Mob_HasItems	("CHEST_RUKHAR", ItFo_Water)) == TRUE)
-				)
-					{
-						AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_04"); //This time Randolph has won. Rukhar must have been having a bad day.
-					}
-				else
-				{
-					AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_05"); //Once again, Rukhar has gotten Randolph pickled. It was only to be expected.
-					Rukhar_Won_Wettkampf = TRUE;
-				};
+			if ((Mob_HasItems	("CHEST_RUKHAR", ItFo_Booze)) == FALSE)
+			&& ((Mob_HasItems	("CHEST_RUKHAR", ItFo_Water)) > 0)
+			{
+				AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_04"); //This time Randolph has won. Rukhar must have been having a bad day.
+			}
+			else
+			{
+				AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_05"); //Once again, Rukhar has gotten Randolph pickled. It was only to be expected.
+				Rukhar_Won_Wettkampf = TRUE;
+			};
 			
 			if ((hero.guild != GIL_PAL) && (hero.guild != GIL_KDF))
-				{
-					AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_06"); //So, well, I hope that was the last time. I don't want that kind of to-do in my house ever again, remember that.
-				};
-			
-			B_GivePlayerXP (XP_Rukhar_WettkampfVorbei);	
+			{
+				AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_06"); //So, well, I hope that was the last time. I don't want that kind of to-do in my house ever again, remember that.
+			};
+			// B_GivePlayerXP (XP_Rukhar_WettkampfVorbei);	
 
 			AI_StopProcessInfos (self);
-		
-			Npc_ExchangeRoutine	(self,"Start"); 
-			B_StartotherRoutine	(Randolph,"Start");
+			Npc_ExchangeRoutine	(self,"Start");
+			if(Hlp_IsValidNpc(Randolph))
+			{
+				if(Rukhar_Won_Wettkampf == TRUE)
+				{
+					B_StartOtherRoutine(Randolph,"WettkampfRandolphLost");
+				}
+				else
+				{
+					B_StartOtherRoutine(Randolph,"Start");
+				};
+			};
 
 			if (Hlp_IsValidNpc (Rukhar))
 				{

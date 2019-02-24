@@ -310,21 +310,21 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 		Wld_InsertNpc		(Follow_Sheep_AKIL, "NW_FOREST_CAVE1_IN_02");
 
 		if (Npc_IsDead (Malak)  == FALSE)	
-			{ 
-				B_StartOtherRoutine (Malak,"FleeFromPass"); 
-				Malak_isAlive_Kap3 = TRUE;
-				B_StartOtherRoutine (BAU_962_Bauer,"FleeFromPass"); 
-				B_StartOtherRoutine (BAU_964_Bauer,"FleeFromPass"); 
-				B_StartOtherRoutine (BAU_965_Bauer,"FleeFromPass"); 
-				B_StartOtherRoutine (BAU_966_Bauer,"FleeFromPass"); 
-				B_StartOtherRoutine (BAU_967_Bauer,"FleeFromPass"); 
-				B_StartOtherRoutine (BAU_968_Bauer,"FleeFromPass"); 
-				B_StartOtherRoutine (BAU_969_Bauer,"FleeFromPass"); 
-			if (hero.guild == GIL_KDF)
-				{
-				CreateInvItems 	(Malak, ITWR_DementorObsessionBook_MIS, 1 );	
-				};
+		{ 
+			B_StartOtherRoutine (Malak,"FleeFromPass"); 
+			Malak_isAlive_Kap3 = TRUE;
+			B_StartOtherRoutine (BAU_962_Bauer,"FleeFromPass"); 
+			B_StartOtherRoutine (BAU_964_Bauer,"FleeFromPass"); 
+			B_StartOtherRoutine (BAU_965_Bauer,"FleeFromPass"); 
+			B_StartOtherRoutine (BAU_966_Bauer,"FleeFromPass"); 
+			B_StartOtherRoutine (BAU_967_Bauer,"FleeFromPass"); 
+			B_StartOtherRoutine (BAU_968_Bauer,"FleeFromPass"); 
+			B_StartOtherRoutine (BAU_969_Bauer,"FleeFromPass"); 
+		if (hero.guild == GIL_KDF)
+			{
+			CreateInvItems 	(Malak, ITWR_DementorObsessionBook_MIS, 1 );	
 			};
+		};
 
 		if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
 		{
@@ -371,18 +371,18 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 		
 		//-----------------------Sarah-----------------------
 	
-			if (MIS_Canthars_KomproBrief != LOG_SUCCESS)
-			&& (MIS_Canthars_KomproBrief != FALSE)
-			&& (Canthar_Pay == FALSE)
-			&& (Npc_IsDead  (Canthar) == FALSE)
-			{
-				B_RemoveNpc (Sarah);
-				B_StartOtherRoutine (Canthar,"MARKTSTAND");
-				AI_Teleport (Canthar,"NW_CITY_SARAH");
-				
-				Canthar_Sperre = TRUE; 
-				Canthar_WiederRaus = TRUE;
-			};
+		if (MIS_Canthars_KomproBrief != LOG_SUCCESS)
+		&& (MIS_Canthars_KomproBrief != FALSE)
+		&& (Canthar_Pay == FALSE)
+		&& (Npc_IsDead  (Canthar) == FALSE)
+		{
+			B_RemoveNpc (Sarah);
+			B_StartOtherRoutine (Canthar,"MARKTSTAND");
+			AI_Teleport (Canthar,"NW_CITY_SARAH");
+			
+			Canthar_Sperre = TRUE; 
+			Canthar_WiederRaus = TRUE;
+		};
 
 		// ------ Sonstige ------
  		CreateInvItems 	(Lester, ItMw_1h_Bau_Axe, 1);
@@ -431,8 +431,10 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
 		// ------ Immortal-Flags löschen ------
 
 		// ------ TAs ändern ------
-		if (Npc_GetDistToWP(Salandril,"ALTAR")<10000) 
-		{B_StartOtherRoutine	(Salandril,"Start"); };
+		if (Npc_GetDistToWP(Salandril,"ALTAR")<10000)
+		{
+			B_StartOtherRoutine	(Salandril,"Start");
+		};
 
 		B_StartOtherRoutine	(Jorgen,"Kloster"); 
 		B_KillNpc	(BDT_1050_Landstreicher); //Joly: brauchen wir nicht mehr!
@@ -462,100 +464,100 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
 		//AntiPaladine für den Paladin 
 		if (hero.Guild == GIL_PAL)
 		{
-		Wld_InsertNpc	(OrcElite_AntiPaladin1, "NW_FARM3_PATH_BRIDGE");
-		Wld_InsertNpc	(OrcElite_AntiPaladin2, "NW_FARM1_PATH_CITY_13");
-		Wld_InsertNpc	(OrcElite_AntiPaladin3, "NW_CITY_TO_FOREST_11");
+			Wld_InsertNpc	(OrcElite_AntiPaladin1, "NW_FARM3_PATH_BRIDGE");
+			Wld_InsertNpc	(OrcElite_AntiPaladin2, "NW_FARM1_PATH_CITY_13");
+			Wld_InsertNpc	(OrcElite_AntiPaladin3, "NW_CITY_TO_FOREST_11");
+			
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_FARM3_PATH_12_MONSTER_03");
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_FARM3_PATH_12_MONSTER_03");
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_FARM3_PATH_10");
+
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_BIGFARM_LAKE_06");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_NW_BIGFARM_LAKE_MONSTER_01_04");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_NW_BIGFARM_LAKE_MONSTER_01_02");
+
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_TAVERNE_TROLLAREA_08");
 		
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_FARM3_PATH_12_MONSTER_03");
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_FARM3_PATH_12_MONSTER_03");
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_FARM3_PATH_10");
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "FP_ROAM_TAVERNE_TROLLAREA_03_02");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_TAVERNE_TROLLAREA_03_01");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_TAVERNE_TROLLAREA_03_03");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_TAVERNE_TROLLAREA_03_04");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_TAVERNE_TROLLAREA_03_05");
 
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_BIGFARM_LAKE_06");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_NW_BIGFARM_LAKE_MONSTER_01_04");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_NW_BIGFARM_LAKE_MONSTER_01_02");
-
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_TAVERNE_TROLLAREA_08");
-	
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "FP_ROAM_TAVERNE_TROLLAREA_03_02");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_TAVERNE_TROLLAREA_03_01");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_TAVERNE_TROLLAREA_03_03");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_TAVERNE_TROLLAREA_03_04");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_TAVERNE_TROLLAREA_03_05");
-
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_TROLLAREA_PATH_62");
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_TROLLAREA_PATH_62");
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_TROLLAREA_RIVERSIDE_07");
-	
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_TROLLAREA_RITUAL_01");
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_TROLLAREA_RITUAL_02");
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_TROLLAREA_RITUAL_03");
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_TROLLAREA_RITUAL_04");
-
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_FOREST_PATH_32");
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_FARM2_TO_TAVERN_10");
-
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_FARM3_PATH_12_MONSTER_01");
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_FARM3_PATH_12_MONSTER_02");
-
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "FP_ROAM_XARDAS_GOBBO_01");
-		Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_XARDAS_GOBBO_02");
-		Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_XARDAS_GOBBO_03");
-
-		Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_FARM1_GOBBO_02");
-		Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_FARM1_GOBBO_03");
-		Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_FARM1_GOBBO_04");
-
-		Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_FARM1_Wolf_01");
-		Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_FARM1_Wolf_02");
-		Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_FARM1_Wolf_03");
-
-
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_CITY_TO_FOREST_39");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_CITY_TO_FOREST_42");
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_TROLLAREA_PATH_62");
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_TROLLAREA_PATH_62");
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_TROLLAREA_RIVERSIDE_07");
 		
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_CITY_TO_FOREST_41");
-		Wld_InsertNpc	(OrcElite_AntiPaladin, 	"XARDAS"); 
-	
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_BIGFARM_FARM4_PATH_04");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_PICK_NW_FARM4_FIELD_01");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_PICK_NW_FARM4_FIELD_04");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_PICK_NW_FARM4_FIELD_05");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_PICK_NW_FARM4_FIELD_02");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_PICK_NW_FARM4_FIELD_06");
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_FARM4_BRONKO");
-	
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_PATH_TO_MONASTERY_06");
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_PATH_TO_MONASTER_AREA_03");
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_PATH_TO_MONASTERY_05");
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_PATH_TO_MONASTER_AREA_09");
-		Wld_InsertNpc	(OrcWarrior_Roam, "NW_PATH_TO_MONASTER_AREA_05");
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "BIGCROSS");
-	
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_FARM2_TO_TAVERN_05");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_CAMPFIRE_CITY_TO_FOREST_43");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_CAMPFIRE_CITY_TO_FOREST_46");
-		Wld_InsertNpc	(OrcWarrior_Roam, "FP_CAMPFIRE_CITY_TO_FOREST_44");
-		//Der Oberst
-		Wld_InsertNpc	(OrkElite_AntiPaladinOrkOberst, "NW_FARM1_BANDITS_CAVE_08");
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "FP_STAND_DEMENTOR_KDF_29");
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "FP_STAND_DEMENTOR_KDF_30");
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_FARM1_BANDITS_CAVE_03");
-		Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_FARM1_BANDITS_CAVE_07");
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_TROLLAREA_RITUAL_01");
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_TROLLAREA_RITUAL_02");
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_TROLLAREA_RITUAL_03");
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_TROLLAREA_RITUAL_04");
+
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_FOREST_PATH_32");
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_FARM2_TO_TAVERN_10");
+
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_FARM3_PATH_12_MONSTER_01");
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_FARM3_PATH_12_MONSTER_02");
+
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "FP_ROAM_XARDAS_GOBBO_01");
+			Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_XARDAS_GOBBO_02");
+			Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_XARDAS_GOBBO_03");
+
+			Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_FARM1_GOBBO_02");
+			Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_FARM1_GOBBO_03");
+			Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_FARM1_GOBBO_04");
+
+			Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_FARM1_Wolf_01");
+			Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_FARM1_Wolf_02");
+			Wld_InsertNpc	(OrcWarrior_Rest, "FP_ROAM_FARM1_Wolf_03");
+
+
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_CITY_TO_FOREST_39");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_CITY_TO_FOREST_42");
+			
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_CITY_TO_FOREST_41");
+			Wld_InsertNpc	(OrcElite_AntiPaladin, 	"XARDAS"); 
+		
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_BIGFARM_FARM4_PATH_04");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_PICK_NW_FARM4_FIELD_01");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_PICK_NW_FARM4_FIELD_04");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_PICK_NW_FARM4_FIELD_05");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_PICK_NW_FARM4_FIELD_02");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_PICK_NW_FARM4_FIELD_06");
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_FARM4_BRONKO");
+		
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_PATH_TO_MONASTERY_06");
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_PATH_TO_MONASTER_AREA_03");
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_PATH_TO_MONASTERY_05");
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_PATH_TO_MONASTER_AREA_09");
+			Wld_InsertNpc	(OrcWarrior_Roam, "NW_PATH_TO_MONASTER_AREA_05");
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "BIGCROSS");
+		
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_FARM2_TO_TAVERN_05");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_CAMPFIRE_CITY_TO_FOREST_43");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_CAMPFIRE_CITY_TO_FOREST_46");
+			Wld_InsertNpc	(OrcWarrior_Roam, "FP_CAMPFIRE_CITY_TO_FOREST_44");
+			//Der Oberst
+			Wld_InsertNpc	(OrkElite_AntiPaladinOrkOberst, "NW_FARM1_BANDITS_CAVE_08");
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "FP_STAND_DEMENTOR_KDF_29");
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "FP_STAND_DEMENTOR_KDF_30");
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_FARM1_BANDITS_CAVE_03");
+			Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_FARM1_BANDITS_CAVE_07");
 		};
 
 		if ((hero.guild == GIL_DJG)
 		|| (hero.guild == GIL_PAL))
 		{
-		Wld_InsertNpc	(OrcWarrior_Lobart1, "NW_FARM1_PATH_CITY_SHEEP_04");
-		Wld_InsertNpc	(OrcWarrior_Lobart2, "NW_FARM1_PATH_CITY_SHEEP_04");
-		Wld_InsertNpc	(OrcWarrior_Lobart3, "NW_FARM1_PATH_CITY_SHEEP_04");
-		Wld_InsertNpc	(OrcWarrior_Lobart4, "NW_FARM1_PATH_CITY_SHEEP_01");
-		Wld_InsertNpc	(OrcWarrior_Lobart5, "NW_FARM1_PATH_CITY_SHEEP_01");
-		Wld_InsertNpc	(OrcWarrior_Lobart6, "NW_FARM1_PATH_CITY_SHEEP_01");
+			Wld_InsertNpc	(OrcWarrior_Lobart1, "NW_FARM1_PATH_CITY_SHEEP_04");
+			Wld_InsertNpc	(OrcWarrior_Lobart2, "NW_FARM1_PATH_CITY_SHEEP_04");
+			Wld_InsertNpc	(OrcWarrior_Lobart3, "NW_FARM1_PATH_CITY_SHEEP_04");
+			Wld_InsertNpc	(OrcWarrior_Lobart4, "NW_FARM1_PATH_CITY_SHEEP_01");
+			Wld_InsertNpc	(OrcWarrior_Lobart5, "NW_FARM1_PATH_CITY_SHEEP_01");
+			Wld_InsertNpc	(OrcWarrior_Lobart6, "NW_FARM1_PATH_CITY_SHEEP_01");
 
-		B_StartOtherRoutine	(Vino,"BugsThere");
-		B_StartOtherRoutine	(LobartsBauer1,"BugsThere");
-		B_StartOtherRoutine	(LobartsBauer2,"BugsThere");
+			B_StartOtherRoutine	(Vino,"BugsThere");
+			B_StartOtherRoutine	(LobartsBauer1,"BugsThere");
+			B_StartOtherRoutine	(LobartsBauer2,"BugsThere");
 		};
 	
 		if ((hero.guild == GIL_KDF)
@@ -573,146 +575,161 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
 		
 		if (hero.guild == GIL_DJG)
 		{
-		Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_RIVERSIDE_EGG");  
-		Wld_InsertNpc	(Draconian , "FP_ROAM_TROLLAREA_06"); 
-		Wld_InsertNpc	(Draconian, "NW_TROLLAREA_RIVERSIDE_05");
-		Wld_InsertNpc	(Draconian, "NW_TROLLAREA_RIVERSIDE_04");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_TROLLAREA_07");
+			Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_RIVERSIDE_EGG");  
+			Wld_InsertNpc	(Draconian , "FP_ROAM_TROLLAREA_06"); 
+			Wld_InsertNpc	(Draconian, "NW_TROLLAREA_RIVERSIDE_05");
+			Wld_InsertNpc	(Draconian, "NW_TROLLAREA_RIVERSIDE_04");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_TROLLAREA_07");
 
-		Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_MAGECAVE_EGG"); 	
-		Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_16");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_19");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_19");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_19");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_01");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_02");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_11");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_06");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_07");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_08");
-		
-		Wld_InsertNpc	(Draconian, "NW_TROLLAREA_PATH_01_01");
-		Wld_InsertNpc	(Draconian, "NW_TROLLAREA_PATH_01");
-		Wld_InsertNpc	(Draconian, "NW_TROLLAREA_PATH_01_02");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_08");
-		Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_RITUALFOREST_CAVE_EGG"); 	
-		Wld_InsertNpc	(Draconian, "NW_RITUALFOREST_CAVE_06"); 
-		Wld_InsertNpc	(Draconian, "FP_ROAM_RITUALFOREST_CAVE_01"); 
-		Wld_InsertNpc	(Draconian, "FP_ROAM_RITUALFOREST_CAVE_02"); 
-		
-		Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_ROAM_NW_CITY_SMFOREST_09_04"); 	 
-		Wld_InsertNpc	(Draconian, "FP_ROAM_NW_CITY_SMFOREST_09_03");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_NW_CITY_SMFOREST_09_02");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_NW_CITY_SMFOREST_09_01");
+			Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_MAGECAVE_EGG"); 	
+			Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_16");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_19");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_19");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_19");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_01");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_02");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_11");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_06");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_07");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_08");
+			
+			Wld_InsertNpc	(Draconian, "NW_TROLLAREA_PATH_01_01");
+			Wld_InsertNpc	(Draconian, "NW_TROLLAREA_PATH_01");
+			Wld_InsertNpc	(Draconian, "NW_TROLLAREA_PATH_01_02");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_MAGECAVE_08");
+			Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_RITUALFOREST_CAVE_EGG"); 	
+			Wld_InsertNpc	(Draconian, "NW_RITUALFOREST_CAVE_06"); 
+			Wld_InsertNpc	(Draconian, "FP_ROAM_RITUALFOREST_CAVE_01"); 
+			Wld_InsertNpc	(Draconian, "FP_ROAM_RITUALFOREST_CAVE_02"); 
+			
+			Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_ROAM_NW_CITY_SMFOREST_09_04"); 	 
+			Wld_InsertNpc	(Draconian, "FP_ROAM_NW_CITY_SMFOREST_09_03");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_NW_CITY_SMFOREST_09_02");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_NW_CITY_SMFOREST_09_01");
 
-		Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_ROAM_NW_CITY_SMFOREST_05_03"); 	
-		Wld_InsertNpc	(Draconian, "FP_ROAM_NW_CITY_SMFOREST_05_04");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_NW_CITY_SMFOREST_05_02");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_NW_CITY_SMFOREST_05_01");
-		
-		Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_ROAM_CITYFOREST_KAP3_07"); 	
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CITYFOREST_KAP3_06");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CITYFOREST_KAP3_08");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CITYFOREST_KAP3_05");
-		
-		
-		Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_ROAM_CITYFOREST_KAP3_07"); 	
-		Wld_InsertNpc	(Draconian, "FP_ROAM_NW_BIGFARMFORESTCAVE_01");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_NW_BIGFARMFORESTCAVE_02");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_NW_BIGFARMFORESTCAVE_03");
-		
-		Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_CASTLEMINE_EGG"); 	
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE_01");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE_02");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE_03");
-		Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_CASTLEMINE_EGG2"); 	
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE_04");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE_05");
-		
-		Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_BIGFARMLAKECAVE_EGG"); 	
-		Wld_InsertNpc	(Draconian, "FP_ROAM_BIGFARM_LAKE_CAVE_01");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_BIGFARM_LAKE_CAVE_02");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_BIGFARM_LAKE_CAVE_03");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_BIGFARM_LAKE_CAVE_04");
+			Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_ROAM_NW_CITY_SMFOREST_05_03"); 	
+			Wld_InsertNpc	(Draconian, "FP_ROAM_NW_CITY_SMFOREST_05_04");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_NW_CITY_SMFOREST_05_02");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_NW_CITY_SMFOREST_05_01");
+			
+			Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_ROAM_CITYFOREST_KAP3_07"); 	
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CITYFOREST_KAP3_06");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CITYFOREST_KAP3_08");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CITYFOREST_KAP3_05");
+			
+			
+			Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_ROAM_CITYFOREST_KAP3_07"); 	
+			Wld_InsertNpc	(Draconian, "FP_ROAM_NW_BIGFARMFORESTCAVE_01");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_NW_BIGFARMFORESTCAVE_02");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_NW_BIGFARMFORESTCAVE_03");
+			
+			Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_CASTLEMINE_EGG"); 	
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE_01");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE_02");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE_03");
+			Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_CASTLEMINE_EGG2"); 	
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE_04");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE_05");
+			
+			Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_BIGFARMLAKECAVE_EGG"); 	
+			Wld_InsertNpc	(Draconian, "FP_ROAM_BIGFARM_LAKE_CAVE_01");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_BIGFARM_LAKE_CAVE_02");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_BIGFARM_LAKE_CAVE_03");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_BIGFARM_LAKE_CAVE_04");
 
-		Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_CASTLEMINE2_EGG"); 	
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_16");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_15");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_14");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_13");
+			Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_NW_ITEM_CASTLEMINE2_EGG"); 	
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_16");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_15");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_14");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_13");
 
-		Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_ITEM_FARM1_02"); 	
-		Wld_InsertNpc	(Draconian, "NW_FARM1_BANDITS_CAVE_08");
-		Wld_InsertNpc	(Draconian, "FP_STAND_DEMENTOR_KDF_29");
-		Wld_InsertNpc	(Draconian, "FP_STAND_DEMENTOR_KDF_30");
-		Wld_InsertNpc	(Draconian, "NW_FARM1_BANDITS_CAVE_03");
-		Wld_InsertNpc	(Draconian, "NW_FARM1_BANDITS_CAVE_02");
-		Wld_InsertNpc	(Draconian, "NW_FARM1_BANDITS_CAVE_04");
-		Wld_InsertNpc	(Draconian, "NW_FARM1_BANDITS_CAVE_07");
+			Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_ITEM_FARM1_02"); 	
+			Wld_InsertNpc	(Draconian, "NW_FARM1_BANDITS_CAVE_08");
+			Wld_InsertNpc	(Draconian, "FP_STAND_DEMENTOR_KDF_29");
+			Wld_InsertNpc	(Draconian, "FP_STAND_DEMENTOR_KDF_30");
+			Wld_InsertNpc	(Draconian, "NW_FARM1_BANDITS_CAVE_03");
+			Wld_InsertNpc	(Draconian, "NW_FARM1_BANDITS_CAVE_02");
+			Wld_InsertNpc	(Draconian, "NW_FARM1_BANDITS_CAVE_04");
+			Wld_InsertNpc	(Draconian, "NW_FARM1_BANDITS_CAVE_07");
 
 
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_03");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_04");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_05");
-		
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_VALLEY_01");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_VALLEY_03");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_VALLEY_04");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_03");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_04");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_CASTLEMINE2_05");
+			
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_VALLEY_01");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_VALLEY_03");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_VALLEY_04");
 
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_MONSTER_02_01");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_MONSTER_02_02");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_MONSTER_02_03");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_MONSTER_02_04");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_MONSTER_02_01");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_MONSTER_02_02");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_MONSTER_02_03");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_MONSTER_02_04");
 
-		Wld_InsertNpc	(Draconian, "NW_XARDAS_GOBBO_01");
-		Wld_InsertNpc	(Draconian, "NW_XARDAS_GOBBO_01");
-		Wld_InsertNpc	(Draconian, "NW_XARDAS_GOBBO_02");
+			Wld_InsertNpc	(Draconian, "NW_XARDAS_GOBBO_01");
+			Wld_InsertNpc	(Draconian, "NW_XARDAS_GOBBO_01");
+			Wld_InsertNpc	(Draconian, "NW_XARDAS_GOBBO_02");
 
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_TOWER_4_01");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_TOWER_4_02");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_TOWER_4_03");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_TOWER_4_04");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_TOWER_4_01");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_TOWER_4_02");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_TOWER_4_03");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_TOWER_4_04");
 
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_CAVE_01");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_CAVE_02");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_CAVE_03");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_CAVE_04");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_CAVE_01");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_CAVE_02");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_CAVE_03");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_XARDAS_CAVE_04");
 
-		Wld_InsertNpc	(Draconian, "FP_ROAM_TROLLAREA_11");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_TROLLAREA_09");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_TROLLAREA_10");
-		Wld_InsertNpc	(Draconian, "FP_ROAM_TROLLAREA_08");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_TROLLAREA_11");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_TROLLAREA_09");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_TROLLAREA_10");
+			Wld_InsertNpc	(Draconian, "FP_ROAM_TROLLAREA_08");
 		};
 
 		if (hero.guild == GIL_KDF)
 		{
-		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "NW_TROLLAREA_PATH_80");
-		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_ROAM_TROLLAREA_19");
-		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "NW_FARM2_TO_TAVERN_08");
-		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_ROAM_MEDIUMFOREST_KAP2_13");
-		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_ROAM_XARDAS_TOWER_3_02");
-		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_ROAM_XARDAS_TOWER_3_02");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_04");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_05");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_06");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_07");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_08");
-		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_STAND_DEMENTOR_KDF_09");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_10");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_11");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_13");
-		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_STAND_DEMENTOR_KDF_14");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_22");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_23");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_24");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_25");
-		
-		Wld_InsertNpc		(DMT_DementorAmbientWalker10, "CITY1");
-		Wld_InsertNpc		(DMT_DementorAmbientWalker8, "CITY1");
-		Wld_InsertNpc		(DMT_DementorAmbientWalker7, "CITY1");
-		
-		CreateInvItems 		(Randolph,ITWR_DementorObsessionBook_MIS,1);
-		B_StartOtherRoutine	(Randolph,"Obsessed");
+			Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "NW_TROLLAREA_PATH_80");
+			Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_ROAM_TROLLAREA_19");
+			Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "NW_FARM2_TO_TAVERN_08");
+			Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_ROAM_MEDIUMFOREST_KAP2_13");
+			Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_ROAM_XARDAS_TOWER_3_02");
+			Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_ROAM_XARDAS_TOWER_3_02");
+			Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_04");
+			Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_05");
+			Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_06");
+			Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_07");
+			Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_08");
+			Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_STAND_DEMENTOR_KDF_09");
+			Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_10");
+			Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_11");
+			Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_13");
+			Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_STAND_DEMENTOR_KDF_14");
+			Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_22");
+			Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_23");
+			Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_24");
+			Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_25");
+			
+			Wld_InsertNpc		(DMT_DementorAmbientWalker10, "CITY1");
+			Wld_InsertNpc		(DMT_DementorAmbientWalker8, "CITY1");
+			Wld_InsertNpc		(DMT_DementorAmbientWalker7, "CITY1");
+			
+			CreateInvItems 		(Randolph,ITWR_DementorObsessionBook_MIS,1);
+			B_StartOtherRoutine	(Randolph,"Obsessed");
+		};
+		if(TOPIC_END_AkilsSLDStillthere == FALSE)
+		{
+			if(!Npc_IsDead(Alvares))
+			{
+				Alvares.guild = GIL_SLD;
+				Npc_SetTrueGuild(Alvares,GIL_SLD);
+				B_StartOtherRoutine(Alvares,"Bigfarm");
+			};
+			if(!Npc_IsDead(Engardo))
+			{
+				Engardo.guild = GIL_SLD;
+				Npc_SetTrueGuild(Engardo,GIL_SLD);
+				B_StartOtherRoutine(Engardo,"Bigfarm");
+			};
 		};
 		EnterNW_Kapitel4 = TRUE;
 	};
@@ -720,11 +737,11 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
 		// Talbin_NW
 		//-----------
 		
-		if (Talbin_FollowsThroughPass == LOG_RUNNING)
-			{
-				Wld_InsertNpc	(VLK_4132_Talbin_NW, "LEVELCHANGE");
-				Talbin_FollowsThroughPass = LOG_SUCCESS;	//Joly: VORSICHT!! keine Abfrage machen auf LOG_SUCCESS!!!!!!!!
-			};
+	if (Talbin_FollowsThroughPass == LOG_RUNNING)
+	{
+		Wld_InsertNpc	(VLK_4132_Talbin_NW, "LEVELCHANGE");
+		Talbin_FollowsThroughPass = LOG_SUCCESS;	//Joly: VORSICHT!! keine Abfrage machen auf LOG_SUCCESS!!!!!!!!
+	};
 };
 
 // B_ENTER_NEWWORLD_Kapitel_5
@@ -754,14 +771,14 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_5 ()
 		Rosi_FleeFromSekob_Kap5 = TRUE;
 	};
 	
-	IF (GornDJG_is_alive == TRUE)
-		{
-			Wld_InsertNpc		(PC_Fighter_NW_nach_DJG, 	"Bigfarm");
-		};
-	IF (DJG_Angar_is_alive == TRUE)
-		{
-			Wld_InsertNpc		(DJG_705_Angar_NW, 	"Bigfarm");
-		};
+	if (GornDJG_is_alive == TRUE)
+	{
+		Wld_InsertNpc		(PC_Fighter_NW_nach_DJG, 	"Bigfarm");
+	};
+	if (DJG_Angar_is_alive == TRUE)
+	{
+		Wld_InsertNpc		(DJG_705_Angar_NW, 	"Bigfarm");
+	};
 
 	// ------ Respawn ------
 	Wld_InsertNpc		(Xardas_DT_Demon1, 		"FP_ROAM_NW_XARDASTOWER_DEMON_02"); 

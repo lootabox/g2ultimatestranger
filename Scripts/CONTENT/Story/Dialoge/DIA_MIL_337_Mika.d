@@ -444,8 +444,7 @@ FUNC INT DIA_Mika_Kap3u4u5_PERM_Condition()
 {
 	if  (Kapitel >= 3)
 	&& 	(Npc_KnowsInfo(other, DIA_Mika_WOHIN))
-	&& 	(Npc_IsDead (Alvares))
-	&&  (Npc_IsDead (Engardo))	
+	&& 	((Npc_IsDead (Alvares)) && (Npc_IsDead (Engardo)) || (TOPIC_END_AkilsSLDStillthere == FALSE))
 	{
 		return TRUE;
 	};	

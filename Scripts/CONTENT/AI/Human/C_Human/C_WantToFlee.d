@@ -29,7 +29,13 @@ func int C_WantToFlee (var C_NPC slf, var C_NPC oth)
 	
 		
  	// FUNC 
- 	
+	
+	if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Randolph))
+	&& (Npc_GetDistToWP(slf,"NW_FARM2_TO_TAVERN_06") <= 5000)
+	{
+		return TRUE;
+	};
+
  	// ------ Flucht, wenn other VIEL stärker ist ------
  	if ((2*slf.level) < oth.level) 							
  	{

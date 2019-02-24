@@ -86,15 +86,24 @@ func void DIA_Randolph_HALLO_Info ()
 	&& Npc_IsDead (Kati)
 	{
 		AI_Output (self, other, "DIA_Randolph_HALLO_06_01"); //Now that Kati and Akil have been taken to the realm of Innos, I'm going to run the farm.
-		
-		Npc_ExchangeRoutine (self,"START");
-		AI_ContinueRoutine  (self);
+		TOPIC_END_AkilsSLDStillthere = TRUE;
 	}
 	else
 	{
 		AI_Output (self, other, "DIA_Randolph_HALLO_06_02"); //Yes, I'm fine. That Alvares has become bolder and bolder lately. Good thing that's over now.
 	};
 	AI_Output (self, other, "DIA_Randolph_HALLO_06_03"); //What I could use now is a good drop in the tavern.
+
+	Npc_ExchangeRoutine(self,"Start");
+	self.flags = 0;
+	if(Hlp_IsValidNpc(Akil) && !Npc_IsDead(Akil))
+	{
+		B_StartOtherRoutine(Akil,"Start");
+	};
+	if(Hlp_IsValidNpc(Kati) && !Npc_IsDead(Kati))
+	{
+		B_StartOtherRoutine(Kati,"Start");
+	};
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -107,7 +116,7 @@ instance DIA_Randolph_Baltram		(C_INFO)
 	condition	 = 	DIA_Randolph_Baltram_Condition;
 	information	 = 	DIA_Randolph_Baltram_Info;
 	permanent  	 =  FALSE;
-	description	 = 	"Baltram sent me ...";
+	description	 = 	"Baltram sent me. I'm supposed to pick up his shipment.";
 };
 
 func int DIA_Randolph_Baltram_Condition ()
@@ -130,6 +139,8 @@ func void DIA_Randolph_Baltram_Info ()
 	CreateInvItems 	(self, ItMi_BaltramPaket, 1 );
 	B_GiveInvItems (self, other, ItMi_BaltramPaket,1);
 	Lieferung_Geholt = TRUE;
+	B_LogEntry (TOPIC_Baltram, "I've got the shipment. I could take it to Baltram now ...");
+	B_LogEntry (TOPIC_Nagur,   "I've got the shipment. I could take it to Nagur now ...");
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -161,20 +172,6 @@ func void DIA_Randolph_Geschichte_Info ()
 	AI_Output (self, other, "DIA_Randolph_Geschichte_06_02"); //But when I got there, they had this huge barrier in place. And I didn't want to go in there. So I started working in the harbor.
 	AI_Output (self, other, "DIA_Randolph_Geschichte_06_03"); //Well, the ships stopped coming in, and so I went to work for Akil. I've had worse jobs, actually.
 };
-/*
-	Du kommst nicht aus der Gegend, richtig? 
-	Ich komme von den südlichen Inseln. Irgendwann hieß es, sie bräuchten Leute in Khorinis, wegen dem magischen Erz. 
-	Aber als ich ankam war da diese riesige Barriere. Und da wollte ich nicht rein. Ich hab dann angefangen im Hafen zu arbeiten. 
-	Und seitdem keine Schiffe mehr kommen, bin ich halt zu Akil gegangen. Naja, ich hab schon schlechtere Jobs gemacht.  
-	
-	
-	Hey, ich kenne da noch jemanden, der dir ein paar Sachen besorgen kann. 
-	Ein Freund, der mit mir zusammen aus dem Süden gekommen ist. 
-	Aber ich brauche 10 Goldmünzen, um beim Wett - Trinken in der Taverne mitzumachen.  
-	Also wenn du die Info willst, dann gib mir das Gold. 
-	
-//Wenn du die Taverne suchst dann geh einfach über die Brücke und folge dem Weg, dann kommst direkt daran vorbei.
-*/
 ///////////////////////////////////////////////////////////////////////
 //	Info Taverne
 ///////////////////////////////////////////////////////////////////////
@@ -386,24 +383,25 @@ func void DIA_Randolph_WETTKAMPFZUENDE_Info ()
 	
 	
 	if (Rukhar_Won_Wettkampf == TRUE)
-		{
-			AI_Output			(self, other, "DIA_Randolph_WETTKAMPFZUENDE_06_01"); //This is the mother of all hangovers, and I can't get rid of it. I'll never touch another drop, I swear.
-			AI_Output			(self, other, "DIA_Randolph_WETTKAMPFZUENDE_06_02"); //Your money is gone. I'm sorry.
-		}
+	{
+		AI_Output			(self, other, "DIA_Randolph_WETTKAMPFZUENDE_06_01"); //This is the mother of all hangovers, and I can't get rid of it. I'll never touch another drop, I swear.
+		AI_Output			(self, other, "DIA_Randolph_WETTKAMPFZUENDE_06_02"); //Your money is gone. I'm sorry.
+	}
 	else
+	{
+		AI_Output			(self, other, "DIA_Randolph_WETTKAMPFZUENDE_06_03"); //Nope. I feel fine, really.
+	
+		if (DIA_Randolph_WETTKAMPFZUENDE_OneTime == FALSE)
 		{
-			AI_Output			(self, other, "DIA_Randolph_WETTKAMPFZUENDE_06_03"); //Nope. I feel fine, really.
-		
-			if (DIA_Randolph_WETTKAMPFZUENDE_OneTime == FALSE)
-			{
-				AI_Output			(self, other, "DIA_Randolph_WETTKAMPFZUENDE_06_04"); //It finally worked this time. Thanks again for your money. Here, take it back.
-				CreateInvItems (self, ItMi_Gold, 20);									
-				B_GiveInvItems (self, other, ItMi_Gold, 12);
-				DIA_Randolph_WETTKAMPFZUENDE_OneTime = TRUE;					
-			};
-			
-			AI_Output			(self, other, "DIA_Randolph_WETTKAMPFZUENDE_06_05"); //Looks like Rukhar won't be getting up any time soon.
+			AI_Output			(self, other, "DIA_Randolph_WETTKAMPFZUENDE_06_04"); //It finally worked this time. Thanks again for your money. Here, take it back.
+			CreateInvItems (self, ItMi_Gold, 20);
+			B_GiveInvItems (self, other, ItMi_Gold, 12);
+			B_GivePlayerXP(XP_Rukhar_WettkampfVorbei);
+			DIA_Randolph_WETTKAMPFZUENDE_OneTime = TRUE;
 		};
+		
+		AI_Output			(self, other, "DIA_Randolph_WETTKAMPFZUENDE_06_05"); //Looks like Rukhar won't be getting up any time soon.
+	};
 
 	B_NpcClearObsessionByDMT (self);
 };
@@ -533,12 +531,8 @@ func void DIA_Randolph_SAGITTAHEAL_Info ()
 {
 	AI_Output			(other, self, "DIA_Randolph_SAGITTAHEAL_15_00"); //Here. This will ease your withdrawal symptoms.
 	B_GiveInvItems 		(other, self, ItPo_HealRandolph_MIS, 1);					
+	B_UseItem 			(self,ItPo_HealRandolph_MIS);
 	
-	if (Npc_IsInState (self,ZS_Pick_FP))
-		{
-			B_UseItem 			(self,ItPo_HealRandolph_MIS);
-		};	
-		
 	AI_Output			(self, other, "DIA_Randolph_SAGITTAHEAL_06_01"); //Oah! Thanks, man. Now I'll rest easy again.
 	AI_Output			(self, other, "DIA_Randolph_SAGITTAHEAL_06_02"); //How can I ever repay you for this?
 	
@@ -553,12 +547,12 @@ func void DIA_Randolph_SAGITTAHEAL_Info ()
 		{
 			AI_Output			(other, self, "DIA_Randolph_SAGITTAHEAL_15_04"); //I paid a bunch of money for you, and your few shabby coins don't even come close to reimbursing my expenses.
 			AI_Output			(self, other, "DIA_Randolph_SAGITTAHEAL_06_05"); //Well - in that case I can count myself lucky that I've met such a helpful paladin, don't you think?
-			
 		};
 	
 	MIS_HealRandolph = LOG_SUCCESS;
 	B_GivePlayerXP (XP_HealRandolph);
 	B_NpcClearObsessionByDMT (self);
+	Npc_ExchangeRoutine(self,"Start");
 };
 
 

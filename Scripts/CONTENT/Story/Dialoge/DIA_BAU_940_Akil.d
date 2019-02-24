@@ -50,7 +50,8 @@ instance DIA_Akil_Hallo	(C_INFO)
 func int DIA_Akil_Hallo_Condition ()
 {
 	if 	!(Npc_IsDead (Alvares))
-	&&  !(Npc_IsDead (Engardo))	
+	&&  !(Npc_IsDead (Engardo))
+	&&  Npc_IsInState(self,ZS_Talk)
 	{
 		return TRUE;
 	};
@@ -69,7 +70,6 @@ func void DIA_Akil_Hallo_Info ()
 		Akils_SLDStillthere = TRUE;
 	};
 
-	Akils_SLDStillthere = TRUE;
 	SC_KnowsAkilsHof = TRUE;
 	AI_StopProcessInfos (self);
 };	
@@ -145,22 +145,24 @@ func void DIA_Akil_NachKampf_Info ()
 	
 	Npc_ExchangeRoutine	(self,"Start"); 
 
-	self.flags = 0;
+	// self.flags = 0;
 
 	if ((Hlp_IsValidNpc (Kati))
 	&& (!Npc_IsDead (Kati)))
 	{
-		Npc_ExchangeRoutine	(Kati,"Start");
-		AI_ContinueRoutine (Kati);
-		Kati.flags = 0;
+		// Npc_ExchangeRoutine	(Kati,"Start");
+		// AI_ContinueRoutine (Kati);
+		// Kati.flags = 0;
+		B_StartOtherRoutine(Kati,"Start");
 	};
 	
 	if ((Hlp_IsValidNpc (Randolph))
 	&& (!Npc_IsDead (Randolph)))
 	{
-		Npc_ExchangeRoutine	(Randolph,"Start");
-		AI_ContinueRoutine (Randolph);
+		// Npc_ExchangeRoutine	(Randolph,"Start");
+		// AI_ContinueRoutine (Randolph);
 		Randolph.flags = 0;
+		B_StartOtherRoutine(Randolph,"Start");
 	};
 	
 	TOPIC_END_AkilsSLDStillthere = TRUE;
@@ -209,14 +211,14 @@ func void DIA_Akil_Soeldner_Info ()
 	AI_Output (other, self, "DIA_Akil_Soeldner_15_00"); //What did the mercenaries want from you?
 
 	if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
-		{
-				AI_Output (self, other, "DIA_Akil_Soeldner_13_01"); //You're pulling my leg. The mercenaries wanted to collect the rent.
-		}
-	else
-		{
-				AI_Output (self, other, "DIA_Akil_Soeldner_13_02"); //You don't know that? Onar, the landowner, hired them. They guard his farm and collect the rent for him.
-				AI_Output (self, other, "DIA_Akil_Soeldner_13_03"); //That means they go from farm to farm and take whatever they want. And whoever can't pay gets a taste of their steel.
-		};
+	{
+		AI_Output (self, other, "DIA_Akil_Soeldner_13_01"); //You're pulling my leg. The mercenaries wanted to collect the rent.
+	}
+else
+	{
+		AI_Output (self, other, "DIA_Akil_Soeldner_13_02"); //You don't know that? Onar, the landowner, hired them. They guard his farm and collect the rent for him.
+		AI_Output (self, other, "DIA_Akil_Soeldner_13_03"); //That means they go from farm to farm and take whatever they want. And whoever can't pay gets a taste of their steel.
+	};
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info MissingPeople
@@ -310,7 +312,7 @@ instance DIA_Akil_Lieferung		(C_INFO)
 	condition	 = 	DIA_Akil_Lieferung_Condition;
 	information	 = 	DIA_Akil_Lieferung_Info;
 	permanent	 =  FALSE; 	 
-	description	 = 	"Baltram sent me ...";
+	description	 = 	"Baltram sent me. I'm supposed to pick up a shipment for him here.";
 };
 
 func int DIA_Akil_Lieferung_Condition ()
@@ -362,30 +364,6 @@ func void DIA_Akil_Gegend_Info ()
 	AI_Output (other, self, "DIA_Akil_Gegend_15_00"); //You know your way around this area ...
 	AI_Output (self, other, "DIA_Akil_Gegend_13_01"); //Sure, what do you want to know?
 };
-/*
-FUNC VOID DIA_Akil_Gegend_BACK()
-{
-	Info_ClearChoices (DIA_Akil_Gegend);
-};
-FUNC VOID DIA_Akil_Gegend_Onar()
-{
-	AI_Output (other, self, "DIA_Akil_Gegend_Onar_15_00"); //Wo finde ich den Hof von Onar?
-	AI_Output (self, other, "DIA_Akil_Gegend_Onar_13_01"); //Geh einfach wieder die Steinstufen runter und folge dem Weg weiter nach Osten.
-	AI_Output (self, other, "DIA_Akil_Gegend_Onar_13_02"); //Irgendwann kommt eine Taverne. Da gehst du weiter nach Osten bis du zu den großen Feldern kommst. Da lungern dann schon die Söldner rum.
-	Knows_Taverne = TRUE;
-};
-FUNC VOID DIA_Akil_Gegend_Wald()
-{
-	AI_Output (other, self, "DIA_Akil_Gegend_Wald_15_00"); //Was finde ich in dem Wald hinter deinem Hof?
-	AI_Output (self, other, "DIA_Akil_Gegend_Wald_13_01"); //Da gibt's nur jede Menge Monster - wobei die Wölfe noch die ungefährlichsten sind.
-	AI_Output (self, other, "DIA_Akil_Gegend_Wald_13_02"); //Angeblich sollen da auch ein paar Banditen ihre Höhle haben. Na - meinen Hof haben sie bis jetzt in Ruhe gelassen.
-};
-FUNC VOID DIA_Akil_Gegend_Taverne ()
-{
-	AI_Output (other, self, "DIA_Akil_Gegend_Taverne_15_00"); //Was ist das für eine Taverne im Osten?
-	AI_Output (self, other, "DIA_Akil_Gegend_Taverne_13_01"); //Frag mal Randolph. Er weiß mehr darüber als ich. Er war schon ein paar mal dort.
-};
-*/
 ///////////////////////////////////////////////////////////////////////
 //	Info Onars Hof
 ///////////////////////////////////////////////////////////////////////
@@ -648,23 +626,22 @@ func int DIA_Akil_SCHAFDIEBEPLATT_Condition ()
 
 func void DIA_Akil_SCHAFDIEBEPLATT_Info ()
 {
-	AI_Output			(other, self, "DIA_Akil_SCHAFDIEBEPLATT_15_00"); //I found the sheep rustlers.
-	AI_Output			(other, self, "DIA_Akil_SCHAFDIEBEPLATT_15_01"); //You were right. Those fellows in the forest cave did it. They'll never steal sheep from you again.
+	AI_Output		(other, self, "DIA_Akil_SCHAFDIEBEPLATT_15_00"); //I found the sheep rustlers.
+	AI_Output		(other, self, "DIA_Akil_SCHAFDIEBEPLATT_15_01"); //You were right. Those fellows in the forest cave did it. They'll never steal sheep from you again.
 
-	if 		((hero.guild == GIL_PAL) || (hero.guild == GIL_KDF))
-			{
-				AI_Output			(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_02"); //Thank you, noble servant of Innos.
-			}
+	if ((hero.guild == GIL_PAL) || (hero.guild == GIL_KDF))
+	{
+		AI_Output	(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_02"); //Thank you, noble servant of Innos.
+	}
 	else if (hero.guild == GIL_MIL)
-			{
-				AI_Output			(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_03"); //Thanks. So the militia really does care about us small farmers.
-			}
+	{
+		AI_Output	(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_03"); //Thanks. So the militia really does care about us small farmers.
+	}
 	else 
-			{
-				AI_Output			(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_04"); //Thanks. You sure are a strange mercenary. Not at all like the others I know.
-			};
-		
-	AI_Output			(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_05"); //Take this as a small token of thanks for the selfless favor you did for me.
+	{
+		AI_Output	(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_04"); //Thanks. You sure are a strange mercenary. Not at all like the others I know.
+	};
+	AI_Output		(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_05"); //Take this as a small token of thanks for the selfless favor you did for me.
 
 	CreateInvItems (self, ItMi_Gold, 150);									
 	B_GiveInvItems (self, other, ItMi_Gold, 150);					
@@ -681,8 +658,8 @@ instance DIA_Akil_AkilsSchaf		(C_INFO)
 	nr		 = 	2;
 	condition	 = 	DIA_Akil_AkilsSchaf_Condition;
 	information	 = 	DIA_Akil_AkilsSchaf_Info;
-
-	description	 = 	"(return Akils sheep)";
+	important = TRUE;
+	//description	 = 	"(return Akils sheep)";
 };
 
 func int DIA_Akil_AkilsSchaf_Condition ()

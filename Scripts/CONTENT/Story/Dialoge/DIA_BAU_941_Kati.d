@@ -94,15 +94,23 @@ func void DIA_Kati_HALLO_Info ()
 	if (Npc_IsDead (Akil))
 	{
 		AI_Output (self, other, "DIA_Kati_HALLO_16_01"); //(sobs) My beloved husband is dead! Oh Innos, why do you punish me so hard?
-		
-		Npc_ExchangeRoutine	(self,"Start");
-		B_StartOtherRoutine	(Randolph,"Start");
-
-		B_GivePlayerXP (XP_Akil_Tot);	
+		B_GivePlayerXP (XP_Akil_Tot);
+		TOPIC_END_AkilsSLDStillthere = TRUE;
 	}
 	else
 	{
 		AI_Output (self, other, "DIA_Kati_HALLO_16_02"); //Yes, I'm fine, thank you.
+	};
+
+	Npc_ExchangeRoutine	(self,"Start");
+	if(Hlp_IsValidNpc(Akil) && !Npc_IsDead(Akil))
+	{
+		B_StartOtherRoutine(Akil,"Start");
+	};
+	if(Hlp_IsValidNpc(Randolph) && !Npc_IsDead(Randolph))
+	{
+		B_StartOtherRoutine(Randolph,"Start");
+		Randolph.flags = 0;
 	};
 };
 ///////////////////////////////////////////////////////////////////////
@@ -120,7 +128,8 @@ instance DIA_Kati_ESSEN		(C_INFO)
 
 func int DIA_Kati_ESSEN_Condition ()
 {
-	if (Kati_Mahlzeit == TRUE)
+	if (Npc_KnowsInfo(other,DIA_Kati_HALLO))
+	&& (Kati_Mahlzeit == TRUE)
 	&& ((Npc_IsDead(Akil))== FALSE)
 	{
 		return TRUE;
@@ -132,10 +141,18 @@ func void DIA_Kati_ESSEN_Info ()
 	AI_Output (self, other, "DIA_Kati_ESSEN_16_01"); //We've hit some hard times ever since the Barrier fell and the land is no longer safe.
 	AI_Output (self, other, "DIA_Kati_ESSEN_16_02"); //Here's a loaf of bread, a little meat and some water. That's all I can spare, I'm afraid.
 	
-	B_GiveInvItems (self, other, ItFo_Bread, 1);			
-	B_GiveInvItems (self, other, ItFo_Water, 1);			
-	B_GiveInvItems (self, other, ItFoMutton, 1);			
-
+	// B_GiveInvItems (self, other, ItFo_Bread, 1);
+	// B_GiveInvItems (self, other, ItFo_Water, 1);
+	// B_GiveInvItems (self, other, ItFoMutton, 1);
+	Npc_RemoveInvItem(self,ItFo_Bread);
+	CreateInvItem(other,ItFo_Bread);
+	Npc_RemoveInvItem(self,ItFo_Water);
+	CreateInvItem(other,ItFo_Water);
+	Npc_RemoveInvItem(self,ItFoMutton);
+	CreateInvItem(other,ItFoMutton);
+	var string concatText;
+	concatText = ConcatStrings(IntToString(3),PRINT_ItemsErhalten);
+	AI_PrintScreen(concatText,-1,YPOS_ItemTaken,FONT_ScreenSmall,2);
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -148,13 +165,14 @@ instance DIA_Kati_Baltram		(C_INFO)
 	condition	 = 	DIA_Kati_Baltram_Condition;
 	information	 = 	DIA_Kati_Baltram_Info;
 	permanent	 = 	FALSE;
-	description	 = "Baltram sent me ...";
+	description	 = "Baltram sent me. I'm supposed to pick up a shipment for him.";
 };
 func int DIA_Kati_Baltram_Condition ()
 {
-	if  (Npc_IsDead (Akil))
-	&&  (MIS_Baltram_ScoutAkil == LOG_RUNNING)
-	&&  (Lieferung_Geholt == FALSE)
+	if (Npc_KnowsInfo(other,DIA_Kati_HALLO))
+	&& (Npc_IsDead (Akil))
+	&& (MIS_Baltram_ScoutAkil == LOG_RUNNING)
+	&& (Lieferung_Geholt == FALSE)
 	{
 		return TRUE;
 	};
@@ -166,6 +184,8 @@ func void DIA_Kati_Baltram_Info ()
 	CreateInvItems 	(self, ItMi_BaltramPaket, 1 );
 	B_GiveInvItems (self, other, ItMi_BaltramPaket,1);
 	Lieferung_Geholt = TRUE;
+	B_LogEntry (TOPIC_Baltram, "I've got the shipment. I could take it to Baltram now ...");
+	B_LogEntry (TOPIC_Nagur,   "I've got the shipment. I could take it to Nagur now ...");
 };
 	
 ///////////////////////////////////////////////////////////////////////

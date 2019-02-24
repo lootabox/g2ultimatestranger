@@ -7,7 +7,7 @@ instance BAU_941_Kati (Npc_Default)
 	guild 		= GIL_OUT;
 	id 			= 941;
 	voice 		= 16;
-	flags       = NPC_FLAG_IMMORTAL;	//Joly:nur solange Alnveres da ist!																	
+	//flags       = NPC_FLAG_IMMORTAL;	//Joly:nur solange Alnveres da ist!																	
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------

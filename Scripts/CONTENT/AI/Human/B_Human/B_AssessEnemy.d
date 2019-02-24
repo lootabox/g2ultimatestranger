@@ -11,7 +11,18 @@
 func int B_AssessEnemy()
 {
 	// EXIT IF...
-		
+	
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Randolph))
+	&& (Npc_GetDistToWP(self,"NW_FARM2_TO_TAVERN_06") <= 5000)
+	&& (!Npc_IsPlayer(other))
+	{
+		Npc_ClearAIQueue	(self);
+		B_ClearPerceptions	(self);
+		Npc_SetTarget 		(self, other);
+		AI_StartState 		(self, ZS_Flee, 0, "");
+		return FALSE;
+	};
+
 	// ------- TESTMODE: Levelinspektor wird ignoriert ------
 	var C_NPC PCL; PCL = Hlp_GetNpc(PC_Levelinspektor);
 	if (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(PCL))

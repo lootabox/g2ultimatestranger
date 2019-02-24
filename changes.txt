@@ -73,6 +73,10 @@ Molerats no longer stop to stare at their enemies.
 Shadow Lord Archol has same amount of protection as other shadow warriors.
 Stone Golems get up sooner as NH approaches them.
 
+	Story
+
+Quest 'A Farmer in Need' - Akil and Kati can die. Kati inherits the farm if Akil dies and Randolph takes over if they both die. The quest becomes obsolete in Chapter 4 and the mercenaries leave.
+
 
 		MINOR IMPROVEMENTS AND FIXES
 
@@ -138,6 +142,7 @@ Changed NPCs to refuse joining the crew with previously unused dialogue if dismi
 Changed NPCs to return to monastery after surviving the Trial of Fire for Agon, Igaraz, Ulf.
 Changed NPCs to wear farmer clothing and equip sickles after returning to Khorinis for Pardok, Telbor, Tonak.
 Changed default weapon from Heavy Branch to something that makes sense for Akil, Cornelius, Judge, Larius, Onar, Sekob.
+Changed what drinks NPCs drink, depending on gender and class.
 
 Fixed Fajeth, Tengron and Knight 263 referring to Lord Andre when telling NH to go settle his crimes.
 Fixed NPCs not considering Heavy Militia armor as militia armor for Borka, Kardif, Meldor, Nagur, Nadja.
@@ -153,7 +158,7 @@ Fixed issue with dragon dialog restarting quest 'Dragon Eggs', if it was already
 Fixed logical issues with dialogue of Diego, Fernando, Lobart, Lothar, Ramon, Ulf, Vatras, Xardas.
 Fixed mages to not loot the player while in the city for Daron, Myxir and Vatras.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
-Fixed wrong or inconsistent style of dialogue text for Agon, Babo, Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Gorax, Hyglas, Jesper, Jergan, Karras, Lares, Lobart, Martin, Milten, Orlan, Pardos, Parlan, Peck, Pyrokar, Ramirez, Raoul, Saturas, Scatty, Skinner, Vatras and NH for giving a potion to anyone.
+Fixed wrong or inconsistent style of dialogue text for Agon, Babo, Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Gorax, Hyglas, Jesper, Jergan, Karras, Kati, Lares, Lobart, Martin, Milten, Orlan, Pardos, Parlan, Peck, Pyrokar, Ramirez, Randolph, Raoul, Saturas, Scatty, Skinner, Vatras and NH for giving a potion to anyone.
 
 Removed Goblin Berries and Pepper bags from ambient inventories.
 Removed option to discuss joining the mercenaries once part of any guild for Alvares, Raoul, Wolf.
@@ -173,6 +178,7 @@ Agon ends the dialog after answering to "how's it going".
 Akil always notices return of Telbor and/or Tonak.
 Akil can only be asked about Onar's farm if NH is not a mercenary or dragon hunter.
 Akil can only be asked about the missing people if they have not been returned yet.
+Akil initiates the dialog for returning the sheep, as NH has no good dialog opener there.
 Akil's sheep always returns to the bandit cave if NH gets too far from her.
 Akil's sheep dialog has options to tell the sheep to wait and "END".
 Akil's sheep stays at his farm once brought there, instead of going back to the bandit cave.
@@ -284,6 +290,7 @@ Jan does not drop the gold used to buy the Medium Dragon Hunter's Armor.
 Jorgen wields a Short Sword in Irdorath instead of a Sickle.
 Kardif cannot be talked about Attila if he is nearby and the dialog option does not kill him.
 Kati can be asked about location of Bengar and Sekobs farms only before talking to them.
+Kati can only be asked for Baltram's shipment and food after asking her whether she is alright.
 Kervo's quest cancels in chapter 4, causing Kerov and Geppert to be killed by a Lurker instead of them disappearing.
 Kervo's quest fails if he is killed.
 Knight 263 can be asked for a report only if NH is paladin.
@@ -308,6 +315,7 @@ Maria's golden plate can only be returned after asking who she is.
 Mario cannot be recruited to a full ship crew.
 Martin actually takes the evidence from NH and does not repeat it needlessly every time.
 Martin only hints at going to Vatras for the Wisp amulet, if NH does not already have it.
+Mika can be asked whether all is quiet, even if the mercenaries left Akil's farm themselves.
 Mika properly evaluates NH's armor before commenting on it.
 Milten can teach Paladin runes in Irdorath.
 Milten does not simultaneously return the letter from Hagen and the key to the monastery.
@@ -331,11 +339,16 @@ Pardos sounds more grateful for receiving a healing potion.
 Pedro cannot be asked about life in the monastery if NH is magician.
 Pepe's dialog for buying a sheep is only available if NH knows he needs one and is not part of any guild yet.
 Ramirez shows two dialogue options only after he sees the thieves' signal.
+Randolph always drinks the medicine when it is given to him.
+Randolph drinks only beer during his drinking contest.
+Randolph gives the experience bonus for winning Rukhar in the drinking competition, instead of Orlan.
+Randolph runs away from the bandits on the bridge and avoids fighting them.
 Raoul turns toward Sentenza when he calls for him.
 Rethon will only work with Jan after givent he permission from Garond.
 Riordian mentions William in the initial dialogue instead of the dialogue about the west.
 Rosi can only be asked about Bengar's farm if NH has not yet spoken with Bengar.
 Rosi will not create extra gold in her inventory when giving the reward to NH for escorting her.
+Rukhar drinks only beer during his drinking contest.
 Rupert can only be asked where Matteo can be found if NH did not find him yet.
 Sarah can only be asked about Akils farm if NH does yet know how to find it.
 Saturas properly completes "The power of the guardians of the dead" when he tells NH about the chambers of Adanos.
@@ -428,9 +441,14 @@ Following actions no longer cause unnecessary journal updates:
 * Saturas talked to about activating portal before receiving letter from Vatras.
 * Sekob asked what has happened in the meantime while his wife is away.
 
-Following actions now do create a log entry:
+Following actions now create a log entry:
 * Using Oblivion spell while Ignaz' quest is running.
 * Grimbald agreeing to teach taking animal trophies.
+* Kati handing out Baltram's shipment.
+* Randolph handing out Baltram's shipment.
+
+Following events do not create overlapping messages:
+* Kati handing out bread, water and meat.
 
 New item models:
 * 'The Halls of Irdorath' book

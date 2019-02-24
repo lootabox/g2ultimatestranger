@@ -90,6 +90,11 @@ const int 		FOOD_Apple				= 0;
 const int 		FOOD_Cheese				= 1;
 const int 		FOOD_Bacon				= 2;
 const int 		FOOD_Bread				= 3;
+const int 		DRINK_Water				= 0;
+const int 		DRINK_Wine				= 1;
+const int 		DRINK_Beer				= 2;
+const int 		DRINK_Booze				= 3;
+const int 		DRINK_Rum				= 4;
 
 // ------  TA Hilfsvariable -----------------------	//notwendig da lokale Hilfsvariablen anscheinend nicht immer neu initialisiert werden bitte nur für TAs verwenden!
 const int AIV_TAPOSITION					= 19;

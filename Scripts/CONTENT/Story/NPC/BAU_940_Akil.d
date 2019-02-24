@@ -7,7 +7,7 @@ instance BAU_940_Akil (Npc_Default)
 	guild 		= GIL_OUT;
 	id 			= 940;
 	voice 		= 13;
-	flags       = NPC_FLAG_IMMORTAL;		//Joly:nur solange Alnveres da ist!																	
+	//flags       = NPC_FLAG_IMMORTAL;		//Joly:nur solange Alnveres da ist!																	
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------

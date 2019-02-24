@@ -54,5 +54,3 @@ FUNC VOID Rtn_Wettkampf_942 ()
 	TA_Stand_Drinking  	(08,00,22,00,"NW_TAVERNE_RUKHAR");	
     TA_Stand_Drinking 	(22,00,08,00,"NW_TAVERNE_RUKHAR");
 };
-
-
