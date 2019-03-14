@@ -124,7 +124,7 @@ Snorting Dragon Snapper will have 2 horns instead of 1 if Gaan teaches the NH th
 Stone Guardians leave properly colored pebbles on ground when hit.
 Swamp Golem bleeds green.
 Undead Orc use the restored orcish hammer Krush Karrok.
-Young Wolves at the pass are switched with regular Wolves.
+Young Wolves at the pass are now regular Wolves.
 
 
 	NPCs General
@@ -133,6 +133,7 @@ Added logging for pickpocket failures and successes.
 Added pickpocketable items to NPCs inventories, except for traders.
 
 Changed NPCs to attack to kill for Girion, Parcival, Sylvio.
+Changed NPCs to engage in small talk 50% less frequently.
 Changed NPCs to receive varying guild specific weapon on spawn, instead of always Heavy Branch, if their regular weapon is taken.
 Changed NPCs to refuse joining the crew with previously unused dialogue if dismissed twice for Lee, Lester, Mario.
 Changed NPCs to return to monastery after surviving the Trial of Fire for Agon, Igaraz, Ulf.
@@ -159,6 +160,7 @@ Fixed wrong or inconsistent style of dialogue text for Agon, Babo, Bartok, Bospe
 Removed Goblin Berries and Pepper bags from ambient inventories.
 Removed option to discuss joining the mercenaries once part of any guild for Alvares, Raoul, Wolf.
 Removed option to discuss rent after completing related quest for Onar, Sekob.
+Removed visual transforming to Seekers of possessed NPCs.
 
 
 	NPCs Traders

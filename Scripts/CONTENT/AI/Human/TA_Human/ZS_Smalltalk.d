@@ -2,7 +2,7 @@
 // ZS_Smalltalk
 // ************
 
-const int SmallTalkFreq = 4;
+const int SmallTalkFreq = 6;
 
 func void ZS_Smalltalk () 
 {

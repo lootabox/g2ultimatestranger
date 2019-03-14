@@ -34,8 +34,8 @@ func void B_NpcClearObsessionByDMT (VAR C_NPC medium)	//Joly: WARUNG:  B_NpcClea
 
 	if (NpcObsessedByDMT == TRUE)
 		{
-			Npc_RemoveInvItems	(medium, ITAR_Dementor,	1);
-			AI_EquipBestArmor (medium);
+			// Npc_RemoveInvItems	(medium, ITAR_Dementor,	1);
+			// AI_EquipBestArmor (medium);
 			NpcObsessedByDMT = FALSE;
 			medium.flags = 0;
 			B_Attack (medium, other, AR_NONE, 1);
@@ -71,9 +71,9 @@ func void B_NpcObsessedByDMT (VAR C_NPC medium)
 	if (NpcObsessedByDMT == FALSE)
 		{
 			Wld_PlayEffect("DEMENTOR_FX",  hero, hero, 0, 0, 0, FALSE );
-			CreateInvItems 	(medium, ITAR_Dementor, 1 );	
-			AI_UnequipArmor	(medium);
-			AI_EquipArmor 	(medium, ITAR_Dementor);
+			// CreateInvItems 	(medium, ITAR_Dementor, 1 );	
+			// AI_UnequipArmor	(medium);
+			// AI_EquipArmor 	(medium, ITAR_Dementor);
 			AI_PlayAni (medium,"T_PRACTICEMAGIC5");	
 			Wld_PlayEffect("spellFX_Fear",  medium, medium, 0, 0, 0, FALSE );
 
