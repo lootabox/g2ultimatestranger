@@ -565,7 +565,8 @@ instance DMT_DementorSpeakerVino1 (Default_AmbientDementor) //Joly: spricht den 
 	aivar[AIV_EnemyOverride] = TRUE;
 
 	// ------ TA anmelden ------
-	start_aistate = ZS_Stand_Dementor;
+	// start_aistate = ZS_Stand_Dementor;
+	start_aistate = ZS_Vino_Obesession;
 };
 
 instance DMT_DementorSpeakerVino2 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
@@ -575,7 +576,8 @@ instance DMT_DementorSpeakerVino2 (Default_AmbientDementor) //Joly: spricht den 
 	aivar[AIV_EnemyOverride] = TRUE;
 
 	// ------ TA anmelden ------
-	start_aistate = ZS_Stand_Dementor;
+	// start_aistate = ZS_Stand_Dementor;
+	start_aistate = ZS_Vino_Obesession;
 };
 
 instance DMT_DementorSpeakerVino3 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
@@ -585,7 +587,8 @@ instance DMT_DementorSpeakerVino3 (Default_AmbientDementor) //Joly: spricht den 
 	aivar[AIV_EnemyOverride] = TRUE;
 
 	// ------ TA anmelden ------
-	start_aistate = ZS_Stand_Dementor;
+	// start_aistate = ZS_Stand_Dementor;
+	start_aistate = ZS_Vino_Obesession;
 };
 
 instance DMT_DementorSpeakerVino4 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
@@ -595,7 +598,8 @@ instance DMT_DementorSpeakerVino4 (Default_AmbientDementor) //Joly: spricht den 
 	aivar[AIV_EnemyOverride] = TRUE;
 
 	// ------ TA anmelden ------
-	start_aistate = ZS_Stand_Dementor;
+	// start_aistate = ZS_Stand_Dementor;
+	start_aistate = ZS_Vino_Obesession;
 };
 
 

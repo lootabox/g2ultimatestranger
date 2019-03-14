@@ -352,17 +352,23 @@ func void DIA_Vino_Obesessed_Info ()
 	&& (Npc_IsDead(DMT_Vino3))
 	&& (Npc_IsDead(DMT_Vino4))
 	{
-	B_NpcObsessedByDMT (self);
+		B_NpcObsessedByDMT (self);
 	}
 	else
 	{
-	AI_Output			(other, self, "DIA_Vino_Obesessed_15_00"); //What's wrong?
-	AI_Output			(self, other, "DIA_Vino_Obesessed_05_01"); //(bellows) Damn, beat it. Otherwise, they'll kill me.
-	AI_StopProcessInfos (self);
-	DMT_Vino1.aivar[AIV_EnemyOverride] = FALSE;
-	DMT_Vino2.aivar[AIV_EnemyOverride] = FALSE;
-	DMT_Vino3.aivar[AIV_EnemyOverride] = FALSE;
-	DMT_Vino4.aivar[AIV_EnemyOverride] = FALSE;
+		AI_Output			(other, self, "DIA_Vino_Obesessed_15_00"); //What's wrong?
+		AI_Output			(self, other, "DIA_Vino_Obesessed_05_01"); //(bellows) Damn, beat it. Otherwise, they'll kill me.
+		AI_EquipBestMeleeWeapon(self);
+		AI_StopProcessInfos (self);
+		Npc_ExchangeRoutine(self,"RunFromRitual");
+		DMT_Vino1.aivar[AIV_EnemyOverride] = FALSE;
+		DMT_Vino2.aivar[AIV_EnemyOverride] = FALSE;
+		DMT_Vino3.aivar[AIV_EnemyOverride] = FALSE;
+		DMT_Vino4.aivar[AIV_EnemyOverride] = FALSE;
+		DMT_Vino1.start_aistate = ZS_Stand_Dementor;
+		DMT_Vino2.start_aistate = ZS_Stand_Dementor;
+		DMT_Vino3.start_aistate = ZS_Stand_Dementor;
+		DMT_Vino4.start_aistate = ZS_Stand_Dementor;
 	};
 };
 
@@ -385,9 +391,9 @@ func int DIA_Vino_Heilung_Condition ()
  	if (NpcObsessedByDMT_Vino == TRUE) && (NpcObsessedByDMT == FALSE)
 	&& (hero.guild == GIL_KDF)
 	&& ((Npc_GetDistToWP(self,"NW_MONASTERY_PLACE_07")<4000) == FALSE)
-	 {
-				return TRUE;
-	 };
+	{
+		return TRUE;
+	};
 };
 var int DIA_Vino_Heilung_oneTime;
 func void DIA_Vino_Heilung_Info ()

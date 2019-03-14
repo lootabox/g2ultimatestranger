@@ -37,7 +37,6 @@ instance BAU_952_Vino (Npc_Default)
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_952;
 };
-//Joly: NIE AUF EINE BANK ODER THRON SETZEN
 
 FUNC VOID Rtn_Start_952 ()
 {	
@@ -47,28 +46,34 @@ FUNC VOID Rtn_Start_952 ()
 	TA_Rake_FP	(18,00,22,00,"NW_FARM1_FIELD_05");
     TA_Sleep	(22,00,08,00,"NW_FARM1_INSTABLE_BED");
 };
-//Joly: NIE AUF EINE BANK ODER THRON SETZEN
 
 FUNC VOID Rtn_BugsThere_952 ()
 {	
 	TA_Stand_Drinking	(08,00,22,00,"NW_FARM1_ENTRANCE_03");
     TA_Sleep			(22,00,08,00,"NW_FARM1_INSTABLE_BED");
 };
-//Joly: NIE AUF EINE BANK ODER THRON SETZEN
 
 FUNC VOID Rtn_ObesessionRitual_952 ()
 {	
-	TA_Smoke_Joint				(07,30,23,00,"NW_LITTLESTONEHENDGE_01");	
-   	TA_Smoke_Joint 				(23,00,07,30,"NW_LITTLESTONEHENDGE_01");
+	// TA_Smoke_Joint				(07,30,23,00,"NW_LITTLESTONEHENDGE_01");	
+   	// TA_Smoke_Joint 				(23,00,07,30,"NW_LITTLESTONEHENDGE_01");
+	TA_Vino_Obesession(7,30,23,0,"NW_LITTLESTONEHENDGE_01");
+	TA_Vino_Obesession(23,0,7,30,"NW_LITTLESTONEHENDGE_01");
 };
-//Joly: NIE AUF EINE BANK ODER THRON SETZEN
+
+FUNC VOID Rtn_RunFromRitual_952()
+{
+	// TA_FleeToWp(7,30,23,0,"NW_FARM1_OUT_09");
+	// TA_FleeToWp(23,0,7,30,"NW_FARM1_OUT_09");
+	TA_FleeToWp(7,30,23,0,"NW_FARM1_MILL_01");
+	TA_FleeToWp(23,0,7,30,"NW_FARM1_MILL_01");
+};
 
 FUNC VOID Rtn_Kloster_952 ()
 {	
 	TA_Stand_Drinking	(08,00,22,00,"NW_MONASTERY_PLACE_07");
     TA_Sleep 			(22,00,08,00,"NW_MONASTERY_NOVICE04_07");
 };
-//Joly: NIE AUF EINE BANK ODER THRON SETZEN
 
 FUNC VOID Rtn_Flee_952 ()
 {	

@@ -73,10 +73,6 @@ Molerats no longer stop to stare at their enemies.
 Shadow Lord Archol has same amount of protection as other shadow warriors.
 Stone Golems get up sooner as NH approaches them.
 
-	Story
-
-Quest 'A Farmer in Need' - Akil and Kati can die. Kati inherits the farm if Akil dies and Randolph takes over if they both die. The quest becomes obsolete in Chapter 4 and the mercenaries leave.
-
 
 		MINOR IMPROVEMENTS AND FIXES
 
@@ -176,6 +172,7 @@ Samuel gets a ring he was supposed to have in his trade inventory.
 
 Agon ends the dialog after answering to "how's it going".
 Akil always notices return of Telbor and/or Tonak.
+Akil can die during his fight with the mercenaries.
 Akil can only be asked about Onar's farm if NH is not a mercenary or dragon hunter.
 Akil can only be asked about the missing people if they have not been returned yet.
 Akil initiates the dialog for returning the sheep, as NH has no good dialog opener there.
@@ -290,6 +287,7 @@ Jan does not drop the gold used to buy the Medium Dragon Hunter's Armor.
 Jorgen wields a Short Sword in Irdorath instead of a Sickle.
 Kardif cannot be talked about Attila if he is nearby and the dialog option does not kill him.
 Kati can be asked about location of Bengar and Sekobs farms only before talking to them.
+Kati can die during his fight with the mercenaries.
 Kati can only be asked for Baltram's shipment and food after asking her whether she is alright.
 Kervo's quest cancels in chapter 4, causing Kerov and Geppert to be killed by a Lurker instead of them disappearing.
 Kervo's quest fails if he is killed.
@@ -379,6 +377,8 @@ Vatras gives different scrolls as reward for bringing stone tablets, if NH has c
 Vatras gives his first and last warning for killing innocents earlier and does not give a second chance if NH kills too many people.
 Vatras introduces Martin to NH when reporting Fernando, if he has not already been mentioned.
 Vatras' offer for the Will-o'-the-wisp amulet can be refused, so NH never receives the amulet.
+Vino has a new routine when being possessed, now the Seekers can actually be seen performing the ritual on him.
+Vino makes an attempt to run away from the ritual site if the Seekers get angry.
 Wolf will not join the crew if he gets pissed off at NH.
 Wulfgar makes comments on training of weapon skills.
 Xardas' dialog has 3 more previously unused dialogue lines.
