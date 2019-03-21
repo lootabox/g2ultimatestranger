@@ -65,9 +65,10 @@ Snapperweed effect lasts four times as long.
 
 Fire Devils, Golems, Shadowbeasts, Shadowbeast Skeletons, Trolls and Zombies do not flinch and cannot be interrupted.
 
-Dragon regeneration is only 4% to 20% as fast, depending on dragon type.
+Dragon regeneration is only 13% to 66% as fast, depending on dragon type.
 Dragons do not try to use breath attack when target is too far.
 Dragons only regenerate when not fighting.
+Ghost Light is renamed to Will-o'-the-wisp.
 Minecrawlers no longer drop Minecrawler Plates.
 Molerats no longer stop to stare at their enemies.
 Shadow Lord Archol has same amount of protection as other shadow warriors.
