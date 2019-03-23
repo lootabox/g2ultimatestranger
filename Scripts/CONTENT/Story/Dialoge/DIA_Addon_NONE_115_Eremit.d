@@ -44,7 +44,7 @@ func void DIA_Addon_Eremit_Hello_Info ()
 	AI_Output (other, self, "DIA_Addon_Eremit_Add_15_00"); //(amazed) What are you doing here?
 	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_00"); //What am I doing here?! What the hell are YOU doing here?
 	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_01"); //I came to the remotest spot on the island because I finally wanted some peace!
-	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_02"); //Civil war, bandit raids, hordes of orcs outside my door ...
+	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_02"); //Civil war, bandit raids, hordes of orcs outside my door...
 	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_03"); //That just wasn't my thing. I've retired from that madness.
 	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_04"); //There may be orcs here, but not very many.
 	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_05"); //And other PEOPLE - thank Innos - never show up here. (grumpily) Until today.
@@ -69,7 +69,7 @@ func int DIA_Addon_Eremit_SeekTafeln_Condition ()
 func void DIA_Addon_Eremit_SeekTafeln_Info ()
 {
 	AI_Output (other, self, "DIA_Addon_Eremit_Add_15_02"); //I am searching for stone tablets. You wouldn't happen to have found any?
-	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_06"); //(carefully) Yes ... But I'm keeping them!
+	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_06"); //(carefully) Yes... But I'm keeping them!
 	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_07"); //They're the only thing there is to read around here.
 	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_08"); //I may not understand all of it yet, but I've been able to decipher some of the texts.
 };
@@ -86,7 +86,7 @@ instance DIA_Addon_Eremit_Teach (C_INFO)
 	condition	= DIA_Addon_Eremit_Teach_Condition;
 	information	= DIA_Addon_Eremit_Teach_Info;
 	permanent 	= TRUE;
-	description = "About the stone tablets ...";
+	description = "About the stone tablets...";
 };
 func int DIA_Addon_Eremit_Teach_Condition ()
 {
@@ -99,7 +99,7 @@ func int DIA_Addon_Eremit_Teach_Condition ()
 };
 func void DIA_Addon_Eremit_Teach_Info ()
 {
-	AI_Output (other, self, "DIA_Addon_Eremit_Add_15_03"); //About the stone tablets ...
+	AI_Output (other, self, "DIA_Addon_Eremit_Add_15_03"); //About the stone tablets...
 	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_25"); //Shall I teach you to read them?
 	if (MIS_Eremit_Klamotten != LOG_SUCCESS)
 	{
@@ -131,7 +131,7 @@ func void DIA_Addon_Eremit_Teach_Info ()
 	func void B_Addon_Eremit_TeachLanguage()
 	{	
 		AI_Output (self, other, "DIA_Addon_Eremit_Add_04_27"); //Well, it's quite simple. A G is an O, a T is an H and an I is a C.
-		AI_Output (self, other, "DIA_Addon_Eremit_Add_04_28"); //If you understand that, the rest is quite logical ...
+		AI_Output (self, other, "DIA_Addon_Eremit_Add_04_28"); //If you understand that, the rest is quite logical...
 		
 		/*
 		
@@ -198,7 +198,7 @@ instance DIA_Addon_Eremit_Klamotten (C_INFO)
 	condition	= DIA_Addon_Eremit_Klamotten_Condition;
 	information	= DIA_Addon_Eremit_Klamotten_Info;
 	permanent 	= TRUE;
-	description = "I have some clothes for you ...";
+	description = "I have some clothes for you...";
 };
 func int DIA_Addon_Eremit_Klamotten_Condition ()
 {
@@ -209,7 +209,7 @@ func int DIA_Addon_Eremit_Klamotten_Condition ()
 };
 func void DIA_Addon_Eremit_Klamotten_Info ()
 {
-	AI_Output (other, self, "DIA_Addon_Eremit_Add_15_01"); //I have some clothes for you ...
+	AI_Output (other, self, "DIA_Addon_Eremit_Add_15_01"); //I have some clothes for you...
 	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_19"); //Really? Show me, let's see if they fit!
 	
 	Info_ClearChoices (DIA_Addon_Eremit_Klamotten);
@@ -434,7 +434,7 @@ func void DIA_Addon_Eremit_Klamotten_Info ()
 
 func void DIA_Addon_Eremit_Klamotten_BACK()
 {
-	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_24"); //Oh, great. First you get me all stirred up and then ... (sighs)
+	AI_Output (self, other, "DIA_Addon_Eremit_Add_04_24"); //Oh, great. First you get me all stirred up and then... (sighs)
 	Info_ClearChoices (DIA_Addon_Eremit_Klamotten);
 };
 func void DIA_Addon_Eremit_Klamotten_PIR_L()
@@ -703,11 +703,11 @@ func void DIA_Addon_Eremit_PERM_Info ()
 	if (MIS_Eremit_Klamotten == FALSE)
 	{
 		AI_Output (self, other, "DIA_Addon_Eremit_Add_04_09"); //(proudly) I built everything myself. My weapons, my tools, my hut, everything.
-		AI_Output (self, other, "DIA_Addon_Eremit_Add_04_10"); //Came here with nothing but a good mood ...
-		AI_Output (self, other, "DIA_Addon_Eremit_Add_04_11"); //Sometimes, though ...
+		AI_Output (self, other, "DIA_Addon_Eremit_Add_04_10"); //Came here with nothing but a good mood...
+		AI_Output (self, other, "DIA_Addon_Eremit_Add_04_11"); //Sometimes, though...
 		AI_Output (other, self, "DIA_Addon_Eremit_Doppelt_15_01"); //Yes?
 		AI_Output (self, other, "DIA_Addon_Eremit_Add_04_12"); //Sometimes, I wish I had at least taken a few clothes with me.
-		AI_Output (self, other, "DIA_Addon_Eremit_Add_04_13"); //I don't know how to weave or tan hides ...
+		AI_Output (self, other, "DIA_Addon_Eremit_Add_04_13"); //I don't know how to weave or tan hides...
 		AI_Output (self, other, "DIA_Addon_Eremit_Add_04_14"); //And the nights aren't exactly warm in this part of the island.
 		MIS_Eremit_Klamotten = LOG_RUNNING;
 	}
@@ -716,7 +716,7 @@ func void DIA_Addon_Eremit_PERM_Info ()
 		AI_Output (self, other, "DIA_Addon_Eremit_Add_04_15"); //I manage.
 		if (MIS_Eremit_Klamotten == LOG_SUCCESS)
 		{
-			AI_Output (self, other, "DIA_Addon_Eremit_Add_04_18"); //With clothes, I could get through the winter! After that ... we'll see ...
+			AI_Output (self, other, "DIA_Addon_Eremit_Add_04_18"); //With clothes, I could get through the winter! After that... we'll see...
 		}
 		else
 		{

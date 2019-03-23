@@ -66,7 +66,7 @@ func void DIA_Harad_Arbeit_Info ()
 	AI_Output (self, other, "DIA_Harad_Arbeit_12_01"); //Hm - I could use a new apprentice.
 	AI_Output (self, other, "DIA_Harad_Arbeit_12_02"); //Brian will have finished his apprenticeship soon, and then he'll leave the city.
 	AI_Output (self, other, "DIA_Harad_Arbeit_12_03"); //Are you good for anything?
-	AI_Output (other, self, "DIA_Harad_Arbeit_15_04"); //If you mean, do I know blacksmith's work ...
+	AI_Output (other, self, "DIA_Harad_Arbeit_15_04"); //If you mean, do I know blacksmith's work...
 	AI_Output (self, other, "DIA_Harad_Arbeit_12_05"); //No. That's not what I meant.
 	AI_Output (self, other, "DIA_Harad_Arbeit_12_06"); //Sooner or later, the orcs are going to lay siege to the city, and then the only men who will count will be those who are in a position to defend our city.
 	if (other.guild == GIL_NONE)
@@ -124,7 +124,7 @@ instance DIA_Harad_OrcRunning (C_INFO)
 	condition	= DIA_Harad_OrcRunning_Condition;
 	information	= DIA_Harad_OrcRunning_Info;
 	permanent   = FALSE;
-	description = "Let's talk again about that orc thing ...";
+	description = "Let's talk again about that orc thing...";
 };
 func int DIA_Harad_OrcRunning_Condition ()
 {
@@ -136,19 +136,19 @@ func int DIA_Harad_OrcRunning_Condition ()
 };
 func void DIA_Harad_OrcRunning_Info ()
 {
-	AI_Output (other, self, "DIA_Harad_OrcRunning_15_00"); //Let's talk again about that orc thing ...
+	AI_Output (other, self, "DIA_Harad_OrcRunning_15_00"); //Let's talk again about that orc thing...
 	AI_Output (self, other, "DIA_Harad_OrcRunning_12_01"); //(brusque) What?
 	
 	Info_ClearChoices (DIA_Harad_OrcRunning);	
 	Info_AddChoice (DIA_Harad_OrcRunning, "Your orc is as good as dead!", DIA_Harad_OrcRunning_Done);
-	Info_AddChoice (DIA_Harad_OrcRunning, "An orc is a damn tough opponent ...", DIA_Harad_OrcRunning_TooHard);
+	Info_AddChoice (DIA_Harad_OrcRunning, "An orc is a damn tough opponent...", DIA_Harad_OrcRunning_TooHard);
 
 	//AI_Output (self, other, "DIA_Harad_OrcRunning_12_02"); //Ah, ich verstehe schon. Du hast Wichtigeres zu tun. Schon in Ordnung, die Sache hat sich erledigt.
 };
 
 func void DIA_Harad_OrcRunning_TooHard()
 {
-	AI_Output (other, self, "DIA_Harad_OrcRunning_TooHard_15_00"); //But an orc is a damn tough opponent ...
+	AI_Output (other, self, "DIA_Harad_OrcRunning_TooHard_15_00"); //But an orc is a damn tough opponent...
 	AI_Output (self, other, "DIA_Harad_OrcRunning_TooHard_12_01"); //Hm - looking at you, you might be right. You don't have much meat on your bones. But that can change.
 	AI_Output (self, other, "DIA_Harad_OrcRunning_TooHard_12_02"); //Nevertheless, you have to prove to me that you have the courage to fight.
 	AI_Output (other, self, "DIA_Harad_OrcRunning_TooHard_15_03"); //So couldn't it be something slightly smaller?
@@ -322,7 +322,7 @@ func void DIA_Harad_LEHRLING_Info ()
 				
 		stimmen = stimmen + 1;
 		
-		AI_Output (self, other,"DIA_Harad_LEHRLING_12_05"); //As for the other masters ...
+		AI_Output (self, other,"DIA_Harad_LEHRLING_12_05"); //As for the other masters...
 		
 		// ------ Thorben ------
 		if (Thorben.aivar[AIV_TalkedToPlayer] == TRUE)
@@ -606,7 +606,7 @@ FUNC VOID DIA_Harad_AlsLehrling_Info()
 	
 	else
 	{
-		AI_Output (self, other,"DIA_Harad_AlsLehrling_12_09"); //There you are again ...
+		AI_Output (self, other,"DIA_Harad_AlsLehrling_12_09"); //There you are again...
 		Harad_Lehrling_Day = Wld_GetDay();
 	};
 };
@@ -664,7 +664,7 @@ func void DIA_Harad_Aufgaben_Info ()
 	AI_Output (other, self, "DIA_Harad_Aufgaben_15_02"); //Forge, forge, and forge?
 	AI_Output (self, other, "DIA_Harad_Aufgaben_12_03"); //You aren't as dumb as you look. I pay per blade. If you don't work, there's no money. It's that simple.
 	AI_Output (self, other, "DIA_Harad_Aufgaben_12_05"); //Furthermore, I'll teach you everything you need to know to make a plain sword.
-	AI_Output (self, other, "DIA_Harad_Aufgaben_12_06"); //Making magic blades is only something for experienced smiths - and you're a long way from that ...
+	AI_Output (self, other, "DIA_Harad_Aufgaben_12_06"); //Making magic blades is only something for experienced smiths - and you're a long way from that...
 	AI_Output (self, other, "DIA_Harad_Aufgaben_12_07"); //If you need a place to sleep, you can bunk down somewhere in my house. Everything clear so far?
 };
 

@@ -119,7 +119,7 @@ FUNC VOID DIA_VLK_17_STANDARD_Info()
 	|| (Kapitel == 2)
 	{
 		AI_Output (self,other,"DIA_VLK_17_STANDARD_17_01"); //I wonder why the paladins are here at all. They are holding the town hall, the barracks and the harbor, but they haven't actually done anything so far.
-		AI_Output (self,other,"DIA_VLK_17_STANDARD_17_02"); //If they were here about the orcs or the bandits, they would have done something ages ago. There must be another reason ...
+		AI_Output (self,other,"DIA_VLK_17_STANDARD_17_02"); //If they were here about the orcs or the bandits, they would have done something ages ago. There must be another reason...
 	};
 	
 	if (Kapitel == 3)

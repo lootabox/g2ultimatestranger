@@ -310,7 +310,7 @@ FUNC VOID DIA_Addon_Thorus_Gefangene_Info()
 {	
 	AI_Output (other, self, "DIA_Addon_BDT_10014_Thorus_Gefangene_15_00");//How are the prisoners?
 	AI_Output (self, other, "DIA_Addon_BDT_10014_Thorus_Gefangene_12_01");//Mmh, they've done their job. As far as I know, they're supposed to be digging gold now.
-	AI_Output (other, self, "DIA_Addon_BDT_10014_Thorus_Gefangene_15_02");//And if they escape...?
+	AI_Output (other, self, "DIA_Addon_BDT_10014_Thorus_Gefangene_15_02");//And if they escape..?
 	AI_Output (self, other, "DIA_Addon_BDT_10014_Thorus_Gefangene_12_03");//...Bloodwyn will send his guards after them. But I hardly think they would be crazy enough to try to escape.
 	AI_Output (self, other, "DIA_Addon_BDT_10014_Thorus_Gefangene_12_04");//Unless...
 	AI_Output (other, self, "DIA_Addon_BDT_10014_Thorus_Gefangene_15_05");//Unless, what?

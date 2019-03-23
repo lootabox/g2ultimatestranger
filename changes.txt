@@ -157,7 +157,7 @@ Fixed logical issues with dialogue of Diego, Fernando, Lobart, Lothar, Ramon, Ul
 Fixed skipping of NH dialog line when talking to possessed NPCs for Bromor, Brutus, Engrom, Fernando, Malak, Sekob, Vino.
 Fixed mages to not loot the player while in the city for Daron, Myxir and Vatras.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
-Fixed wrong or inconsistent style of dialogue text for Agon, Babo, Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Gorax, Hyglas, Jesper, Jergan, Karras, Kati, Lares, Lobart, Martin, Milten, Orlan, Pardos, Parlan, Peck, Pyrokar, Ramirez, Randolph, Raoul, Saturas, Scatty, Skinner, Vatras and NH for giving a potion to anyone.
+Fixed wrong or inconsistent style of text for most dialogs.
 
 Removed Goblin Berries and Pepper bags from ambient inventories.
 Removed option to discuss joining the mercenaries once part of any guild for Alvares, Raoul, Wolf.

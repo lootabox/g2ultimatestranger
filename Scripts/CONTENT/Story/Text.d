@@ -923,9 +923,9 @@ const string PRINT_MissingItem				= "I don't have the right item.";
 const string PRINT_AnotherUser				= "It's in use.";
 const string PRINT_NoPicklockTalent			= "I don't have that skill.";
 
-const string PRINT_NOTHINGTOGET				= "Nothing to be had there ...";
-const string PRINT_NOTHINGTOGET02			= "Nothing there ...";
-const string PRINT_NOTHINGTOGET03			= "Nothing to plunder ...";
+const string PRINT_NOTHINGTOGET				= "Nothing to be had there...";
+const string PRINT_NOTHINGTOGET02			= "Nothing there...";
+const string PRINT_NOTHINGTOGET03			= "Nothing to plunder...";
 
 // *************************************
 // StringKonstanten	für	Beten
@@ -943,9 +943,9 @@ const string Print_NotEnoughGold			= "Not enough gold.";
 const string Bless_Sword					= "Consecrate Sword (5000 gold)";
 const string Bless_Sword2					= "Consecrate Sword (Tears of Innos)";
 
-const string Pray_Paladin1					= "... Innos, extend your hand over your vassals ..." ;
-const string Pray_Paladin2					= "... bless them with your fire and grant them strength ..." ;
-const string Pray_Paladin3					= "... to fight bravely in your name ...";
+const string Pray_Paladin1					= "... Innos, extend your hand over your vassals..." ;
+const string Pray_Paladin2					= "... bless them with your fire and grant them strength..." ;
+const string Pray_Paladin3					= "... to fight bravely in your name...";
 const string Pray_Paladin4					= "... for victory or death, according to your will.";
 
 // ***************************************************************************************
@@ -1030,7 +1030,7 @@ const string PRINT_FoundGold100					= "100 gold found";
 const string PRINT_FoundRuneBlank				= "Rune found";
 const string PRINT_FoundOreNugget				= "Lump of ore found";
 const string PRINT_FoundLockpick				= "Lockpick found";
-const string PRINT_HannasBeutel					= "A small key and some lockpicks ...";
+const string PRINT_HannasBeutel					= "A small key and some lockpicks...";
 const string PRINT_GotPlants					= "Some herbs found";
 
 //-------------
@@ -1109,7 +1109,7 @@ const int YPOS_XPGAINED			= 55;
 // ------ G_PickLock ------
 const string PRINT_PICKLOCK_SUCCESS	= "That sounded good.";
 const string PRINT_PICKLOCK_UNLOCK	= "The lock's open.";
-const string PRINT_PICKLOCK_FAILURE	= "Damn ... Try again.";
+const string PRINT_PICKLOCK_FAILURE	= "Damn... Try again.";
 const string PRINT_PICKLOCK_BROKEN	= "The lockpick broke.";
 
 // ------ G_CanNotUse ------

@@ -91,7 +91,7 @@ FUNC VOID DIA_Addon_Fortuno_Hi_Info()
 	AI_Output (self, other, "DIA_Addon_Fortuno_Hi_13_03");//Green... green novice... I cannot find it...
 	
 	Info_ClearChoices (DIA_Addon_Fortuno_Hi);
-	Info_AddChoice 	  (DIA_Addon_Fortuno_Hi,"I'll be back later ... (THE END)",DIA_Addon_Fortuno_Hi_BACK);	
+	Info_AddChoice 	  (DIA_Addon_Fortuno_Hi,"I'll be back later... (THE END)",DIA_Addon_Fortuno_Hi_BACK);	
 	
 	Info_AddChoice 	  (DIA_Addon_Fortuno_Hi,"How can I help you?",DIA_Addon_Fortuno_Hi_HILFE);
 	
@@ -360,7 +360,7 @@ INSTANCE DIA_Addon_Fortuno_more   (C_INFO)
 	condition   = DIA_Addon_Fortuno_more_Condition;
 	information = DIA_Addon_Fortuno_more_Info;
 	permanent   = FALSE;
-	description	= "And...?";
+	description	= "And..?";
 };
 FUNC INT DIA_Addon_Fortuno_more_Condition()
 {
@@ -371,7 +371,7 @@ FUNC INT DIA_Addon_Fortuno_more_Condition()
 };
 FUNC VOID DIA_Addon_Fortuno_more_Info()
 {
-	AI_Output (other, self, "DIA_Addon_Fortuno_more_15_00");//And...?
+	AI_Output (other, self, "DIA_Addon_Fortuno_more_15_00");//And..?
 	AI_Output (self, other, "DIA_Addon_Fortuno_more_13_01");//Aah! I... I remember again! Now I see... Adanos be with me - what have I done?
 	AI_Output (other, self, "DIA_Addon_Fortuno_more_15_02");//Yes, what have you done? And above all - what has Raven done?
 	AI_Output (self, other, "DIA_Addon_Fortuno_more_13_03");//I helped him... to make contact. With HIM. He wanted various elixirs... I brewed them for him.

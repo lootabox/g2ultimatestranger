@@ -147,7 +147,7 @@ FUNC VOID DIA_Vatras_EXIT_Info()
 		AI_Output (self, other, "DIA_Addon_Vatras_LaresExit_05_00"); //Wait!
 		if (Vatras_GehZuLares == TRUE) 
 		{
-			AI_Output (self, other, "DIA_Addon_Vatras_LaresExit_05_01"); //If you see Lares ...
+			AI_Output (self, other, "DIA_Addon_Vatras_LaresExit_05_01"); //If you see Lares...
 		}
 		else
 		{
@@ -281,7 +281,7 @@ func void DIA_Addon_Vatras_Cavalorn_Info ()
 	{
 		B_GivePlayerXP (XP_Addon_Cavalorn_Letter2Vatras_Opened);
 		B_GiveInvItems (other, self, ItWr_SaturasFirstMessage_Addon,1);
-		AI_Output	(self, other, "DIA_Addon_Vatras_Cavalorn_05_02"); //Yes, but ... it's been opened. I hope it didn't fall into the wrong hands.
+		AI_Output	(self, other, "DIA_Addon_Vatras_Cavalorn_05_02"); //Yes, but... it's been opened. I hope it didn't fall into the wrong hands.
 	};
 
 	B_UseFakeScroll();
@@ -347,7 +347,7 @@ func void DIA_Addon_Vatras_CavalornSentMe_Info ()
 	AI_Output (other, self, "DIA_Addon_Vatras_Add_15_00"); //Cavalorn sent me to you!
 	AI_Output (self, other, "DIA_Addon_Vatras_Add_05_01"); //(cunningly) And what did he tell you?
 	AI_Output (other, self, "DIA_Addon_Vatras_Add_15_02"); //He said you're in dire need of more good people.
-	AI_Output (self, other, "DIA_Addon_Vatras_Add_05_03"); //(smiles) Aha ... So you want to JOIN us, son?
+	AI_Output (self, other, "DIA_Addon_Vatras_Add_05_03"); //(smiles) Aha... So you want to JOIN us, son?
 };
 
 // ************************************************************
@@ -487,7 +487,7 @@ func void DIA_Addon_Vatras_WannaBeRanger_Info ()
 		AI_Output (self, other, "DIA_Addon_Vatras_WannaBeRanger_05_03"); //I mean that there must be someone among us who trusts you. Otherwise, you wouldn't even know about it.
 	};
 	
-	AI_Output (self, other, "DIA_Addon_Vatras_WannaBeRanger_05_04"); //But I know nothing about you at all ...
+	AI_Output (self, other, "DIA_Addon_Vatras_WannaBeRanger_05_04"); //But I know nothing about you at all...
 	//AI_Output (self, other, "DIA_Vatras_INFLUENCE_05_03"); //Ich will dich wohl segnen, Fremder, aber ich kenne dich nicht. Erzähle mir was über dich.
 	AI_Output (other, self, "DIA_Vatras_INFLUENCE_15_04"); //What do you want to know?
 	AI_Output (self, other, "DIA_Vatras_INFLUENCE_05_05"); //Well, you could tell me where you come from and why you have come to the city.
@@ -495,7 +495,7 @@ func void DIA_Addon_Vatras_WannaBeRanger_Info ()
 	AI_Output (self, other, "DIA_Vatras_INFLUENCE_05_07"); //What is this message?
 		
 	Info_ClearChoices   (DIA_Addon_Vatras_WannaBeRanger);
-	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Dragons have come ...",DIA_Vatras_INFLUENCE_FIRST_TRUTH);
+	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Dragons have come...",DIA_Vatras_INFLUENCE_FIRST_TRUTH);
 	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Terrible things are bound to happen soon.",DIA_Vatras_INFLUENCE_FIRST_LIE);
 };
 FUNC VOID DIA_Vatras_INFLUENCE_FIRST_TRUTH()
@@ -511,8 +511,8 @@ FUNC VOID DIA_Vatras_INFLUENCE_FIRST_TRUTH()
 		AI_Output (self, other, "DIA_Vatras_INFLUENCE_FIRST_TRUTH_05_02"); //(considering) Dragons? You speak of beings which, until now, have only been mentioned in legends. How do you know this?
 	};
 	Info_ClearChoices   (DIA_Addon_Vatras_WannaBeRanger);
-	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Oh, I heard rumors somewhere ...",DIA_Vatras_INFLUENCE_SECOND_LIE);
-	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Xardas the magician told me ...",DIA_Vatras_INFLUENCE_SECOND_TRUTH);
+	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Oh, I heard rumors somewhere...",DIA_Vatras_INFLUENCE_SECOND_LIE);
+	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Xardas the magician told me...",DIA_Vatras_INFLUENCE_SECOND_TRUTH);
 	
 	Vatras_First = TRUE;
 };
@@ -526,11 +526,11 @@ FUNC VOID DIA_Vatras_INFLUENCE_FIRST_LIE()
 	}
 	else 
  	{
-		AI_Output (self, other, "DIA_Vatras_INFLUENCE_FIRST_LIE_05_02"); //Terrible things, hm ... how do you know this?
+		AI_Output (self, other, "DIA_Vatras_INFLUENCE_FIRST_LIE_05_02"); //Terrible things, hm... how do you know this?
 	};
 	Info_ClearChoices   (DIA_Addon_Vatras_WannaBeRanger);
-	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Oh, I heard rumors somewhere ...",DIA_Vatras_INFLUENCE_SECOND_LIE);
-	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Xardas the magician told me ...",DIA_Vatras_INFLUENCE_SECOND_TRUTH);
+	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Oh, I heard rumors somewhere...",DIA_Vatras_INFLUENCE_SECOND_LIE);
+	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Xardas the magician told me...",DIA_Vatras_INFLUENCE_SECOND_TRUTH);
 	
 	Vatras_First = 2;
 };
@@ -544,17 +544,17 @@ FUNC VOID DIA_Vatras_INFLUENCE_SECOND_TRUTH()
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Vatras_INFLUENCE_SECOND_TRUTH_05_02"); //The necromancer ... So he lives ... (considers) and he sent you? Who are you really?
+		AI_Output (self, other, "DIA_Vatras_INFLUENCE_SECOND_TRUTH_05_02"); //The necromancer... So he lives... (considers) and he sent you? Who are you really?
 	};
 	Info_ClearChoices   (DIA_Addon_Vatras_WannaBeRanger);
-	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"I'm just an adventurer from down south ...",DIA_Vatras_INFLUENCE_THIRD_LIE);
-	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"I'm a former convict ...",DIA_Vatras_INFLUENCE_THIRD_TRUTH);
+	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"I'm just an adventurer from down south...",DIA_Vatras_INFLUENCE_THIRD_LIE);
+	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"I'm a former convict...",DIA_Vatras_INFLUENCE_THIRD_TRUTH);
 	
 	Vatras_Second = TRUE;
 };
 FUNC VOID DIA_Vatras_INFLUENCE_SECOND_LIE()
 {
-	AI_Output (other, self, "DIA_Vatras_INFLUENCE_SECOND_LIE_15_00"); //Oh, I heard rumors somewhere ...
+	AI_Output (other, self, "DIA_Vatras_INFLUENCE_SECOND_LIE_15_00"); //Oh, I heard rumors somewhere...
 	
 	if (Vatras_Second == 2)
 	{
@@ -565,8 +565,8 @@ FUNC VOID DIA_Vatras_INFLUENCE_SECOND_LIE()
 		AI_Output (self, other, "DIA_Vatras_INFLUENCE_SECOND_LIE_05_02"); //Aha. And that is why you have made this journey. Who are you really?
 	};
 	Info_ClearChoices   (DIA_Addon_Vatras_WannaBeRanger);
-	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"I'm an adventurer from down south ...",DIA_Vatras_INFLUENCE_THIRD_LIE);
-	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"I'm a former convict ...",DIA_Vatras_INFLUENCE_THIRD_TRUTH);
+	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"I'm an adventurer from down south...",DIA_Vatras_INFLUENCE_THIRD_LIE);
+	Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"I'm a former convict...",DIA_Vatras_INFLUENCE_THIRD_TRUTH);
 	
 	Vatras_Second = 2;
 };
@@ -579,19 +579,19 @@ func VOID B_Vatras_INFLUENCE_REPEAT()
 	
 	if (Vatras_Third == TRUE)
 	{
-		AI_Output (self, other, "DIA_Vatras_INFLUENCE_REPEAT_05_02"); //You are a former prisoner, ...
+		AI_Output (self, other, "DIA_Vatras_INFLUENCE_REPEAT_05_02"); //You are a former prisoner,...
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Vatras_INFLUENCE_REPEAT_05_03"); //You are an adventurer from down south ...
+		AI_Output (self, other, "DIA_Vatras_INFLUENCE_REPEAT_05_03"); //You are an adventurer from down south...
 	};
 	if (Vatras_Second  == TRUE)
 	{
-		AI_Output (self, other, "DIA_Vatras_INFLUENCE_REPEAT_05_04"); //... who has been told by Xardas the necromancer ...
+		AI_Output (self, other, "DIA_Vatras_INFLUENCE_REPEAT_05_04"); //... who has been told by Xardas the necromancer...
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Vatras_INFLUENCE_REPEAT_05_05"); //... who heard rumors ...
+		AI_Output (self, other, "DIA_Vatras_INFLUENCE_REPEAT_05_05"); //... who heard rumors...
 	};
 	if (Vatras_First  == TRUE)
 	{
@@ -602,7 +602,7 @@ func VOID B_Vatras_INFLUENCE_REPEAT()
 		AI_Output (self, other, "DIA_Vatras_INFLUENCE_REPEAT_05_07"); //... that terrible things are going to happen.
 	};
 		
-	AI_Output (self, other, "DIA_Vatras_INFLUENCE_REPEAT_05_08"); //And you have come to report this to the paladins ...
+	AI_Output (self, other, "DIA_Vatras_INFLUENCE_REPEAT_05_08"); //And you have come to report this to the paladins...
 	if (Vatras_First   == TRUE)
 	&& (Vatras_Second  == TRUE)
 	&& (Vatras_Third   == TRUE)
@@ -629,7 +629,7 @@ func VOID B_Vatras_INFLUENCE_REPEAT()
 		//ADDON - SC kann nicht mehr versagen!
 		//Vatras_Chance = TRUE; 
 		Info_ClearChoices   (DIA_Addon_Vatras_WannaBeRanger);
-		Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Dragons have come ...",DIA_Vatras_INFLUENCE_FIRST_TRUTH);
+		Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Dragons have come...",DIA_Vatras_INFLUENCE_FIRST_TRUTH);
 		Info_AddChoice 		(DIA_Addon_Vatras_WannaBeRanger,"Terrible things are bound to happen soon.",DIA_Vatras_INFLUENCE_FIRST_LIE);
 	};
 	
@@ -645,7 +645,7 @@ FUNC VOID DIA_Vatras_INFLUENCE_THIRD_TRUTH()
 };
 FUNC VOID DIA_Vatras_INFLUENCE_THIRD_LIE()
 {
-	AI_Output (other, self, "DIA_Vatras_INFLUENCE_THIRD_LIE_15_00"); //I'm an adventurer from down south ...
+	AI_Output (other, self, "DIA_Vatras_INFLUENCE_THIRD_LIE_15_00"); //I'm an adventurer from down south...
 	Vatras_Third = FALSE;
 		
 	B_Vatras_INFLUENCE_REPEAT();
@@ -698,7 +698,7 @@ func void DIA_Addon_Vatras_HowToJoin_Sleeper ()
 func void DIA_Addon_Vatras_HowToJoin_FreedMen ()
 {
 	AI_Output (other, self, "DIA_Addon_Vatras_WannaBeRanger_FreedMen_15_00"); //I have freed many people. The barrier is gone.
-	AI_Output (self, other, "DIA_Addon_Vatras_WannaBeRanger_FreedMen_05_01"); //Even if you can REALLY claim responsibility for that ...
+	AI_Output (self, other, "DIA_Addon_Vatras_WannaBeRanger_FreedMen_05_01"); //Even if you can REALLY claim responsibility for that...
 	AI_Output (self, other, "DIA_Addon_Vatras_WannaBeRanger_FreedMen_05_02"); //The great event in the Valley of Mines has not only set free the Water Mages and other upright citizens.
 	AI_Output (self, other, "DIA_Addon_Vatras_WannaBeRanger_FreedMen_05_03"); //All the criminals of the entire country are roaming Khorinis these days, harassing the population.
 	AI_Output (self, other, "DIA_Addon_Vatras_WannaBeRanger_FreedMen_05_04"); //The bandits have already taken over large areas of land outside of the city. It has become all but impossible to leave the town and return unharmed.
@@ -725,7 +725,7 @@ func void DIA_Addon_Vatras_HowToJoin_WhatsGreat()
 	MIS_Addon_Vatras_WhereAreMissingPeople = LOG_RUNNING;
 	SC_HearedAboutMissingPeople = TRUE;
 
-	AI_Output (self, other, "DIA_Addon_Vatras_HowToJoin_WhatsGreat_05_04"); //However ...
+	AI_Output (self, other, "DIA_Addon_Vatras_HowToJoin_WhatsGreat_05_04"); //However...
 	AI_Output (other, self, "DIA_Addon_Vatras_HowToJoin_WhatsGreat_15_05"); //Yes?
 	AI_Output (self, other, "DIA_Addon_Vatras_HowToJoin_WhatsGreat_05_06"); //... you should take your message to the paladins first.
 	AI_Output (self, other, "DIA_Addon_Vatras_HowToJoin_WhatsGreat_05_07"); //I consider it a matter of utmost importance!
@@ -825,7 +825,7 @@ func void DIA_Addon_Vatras_NowRanger_Info ()
 			AI_Output (other, self, "DIA_Addon_Vatras_NowRanger_15_03"); //But he sent me to the Valley of Mines so I could get him proof for my words!
 			AI_Output (self, other, "DIA_Addon_Vatras_NowRanger_05_04"); //YOU must decide what you want to do next.
 			AI_Output (self, other, "DIA_Addon_Vatras_NowRanger_05_05"); //To me, it was important that he should get the message. Now it's up to him to act, or to wait for your proof.
-			AI_Output (self, other, "DIA_Addon_Vatras_NowRanger_05_06"); //As far as you are concerned ...
+			AI_Output (self, other, "DIA_Addon_Vatras_NowRanger_05_06"); //As far as you are concerned...
 		}
 		else
 		{
@@ -932,7 +932,7 @@ func int DIA_Addon_Vatras_MissingPeople_Condition ()
 var int DIA_Addon_Vatras_MissingPeople_Wo_NoPerm;
 func void DIA_Addon_Vatras_MissingPeople_Info ()
 {
-	AI_Output (other, self, "DIA_Addon_Vatras_MissingPeople_15_00"); //About those missing people ...
+	AI_Output (other, self, "DIA_Addon_Vatras_MissingPeople_15_00"); //About those missing people...
 	AI_Output (self, other, "DIA_Addon_Vatras_MissingPeople_05_01"); //Yes?
 	
 	Info_ClearChoices (DIA_Addon_Vatras_MissingPeople);
@@ -970,7 +970,7 @@ func void DIA_Addon_Vatras_MissingPeople_Report()
 {
 	var int Vatras_MissingPeopleReports;
 	Vatras_MissingPeopleReports = 0;
-	AI_Output (other, self, "DIA_Addon_Vatras_MissingPeople_Report_15_00"); //Let me tell you what I know ...
+	AI_Output (other, self, "DIA_Addon_Vatras_MissingPeople_Report_15_00"); //Let me tell you what I know...
 	
 	 if ((MIS_Akil_BringMissPeopleBack != 0) || (MIS_Bengar_BringMissPeopleBack != 0))
 	 &&	(MISSINGPEOPLEINFO[1] == FALSE)
@@ -1172,7 +1172,7 @@ func int DIA_Addon_Vatras_Waffen_Condition ()
 };
 func void DIA_Addon_Vatras_Waffen_Info ()
 {
-	AI_Output (other, self, "DIA_Addon_Vatras_Waffen_15_00"); //About this weapons dealer ...
+	AI_Output (other, self, "DIA_Addon_Vatras_Waffen_15_00"); //About this weapons dealer...
 	
 	Info_ClearChoices (DIA_Addon_Vatras_Waffen);
 	Info_AddChoice (DIA_Addon_Vatras_Waffen, DIALOG_BACK, DIA_Addon_Vatras_Waffen_BACK);
@@ -1386,7 +1386,7 @@ func void DIA_Addon_Vatras_SellStonplate_Info ()
 	
 	if (anzahl == 1)
 	{
-		AI_Output	(other, self, "DIA_Addon_Vatras_SellStonplate_15_00"); //I've got another stone tablet for you ...
+		AI_Output	(other, self, "DIA_Addon_Vatras_SellStonplate_15_00"); //I've got another stone tablet for you...
 	}
 	else 
 	{
@@ -1405,7 +1405,7 @@ func void DIA_Addon_Vatras_SellStonplate_Info ()
 	}
 	else if (anzahl >= 5)
 	{
-		AI_Output (self, other, "DIA_Addon_Vatras_SellStonplate_05_04"); //Here, take a few spell scrolls as a reward ...
+		AI_Output (self, other, "DIA_Addon_Vatras_SellStonplate_05_04"); //Here, take a few spell scrolls as a reward...
 		//B_GiveInvItems (self, other, ItSc_InstantFireball, anzahl);
 		if(!Npc_HasItems(other,ItRu_InstantFireball))
 		{
@@ -1426,7 +1426,7 @@ func void DIA_Addon_Vatras_SellStonplate_Info ()
 	}
 	else // 1-4 Plates --> 2-5 Tränke
 	{
-		AI_Output (self, other, "DIA_Addon_Vatras_SellStonplate_05_03"); //Here, take a few potions as a reward ...
+		AI_Output (self, other, "DIA_Addon_Vatras_SellStonplate_05_03"); //Here, take a few potions as a reward...
 		B_GiveInvItems (self, other, ItPo_Health_03, anzahl+1);
 	};
 	
@@ -1538,21 +1538,21 @@ func void DIA_Vatras_INFLUENCE_Info ()
 	AI_Output (self, other, "DIA_Vatras_Spende_05_02"); //How much can you give?
 
 	Info_ClearChoices   (DIA_Vatras_INFLUENCE);
-	Info_AddChoice 		(DIA_Vatras_INFLUENCE, "I haven't got anything to spare right now ...", DIA_Vatras_INFLUENCE_BACK);
+	Info_AddChoice 		(DIA_Vatras_INFLUENCE, "I haven't got anything to spare right now...", DIA_Vatras_INFLUENCE_BACK);
 	if (Npc_HasItems(other,itmi_gold) >= 100)
 	{
-		Info_AddChoice 		(DIA_Vatras_INFLUENCE, "I've got 100 gold pieces ...",	DIA_Vatras_INFLUENCE_100);
+		Info_AddChoice 		(DIA_Vatras_INFLUENCE, "I've got 100 gold pieces...",	DIA_Vatras_INFLUENCE_100);
 	};
 };
 func void DIA_Vatras_INFLUENCE_BACK()
 {
-	AI_Output (other, self, "DIA_Vatras_Spende_BACK_15_00"); //I haven't got anything to spare right now ...
+	AI_Output (other, self, "DIA_Vatras_Spende_BACK_15_00"); //I haven't got anything to spare right now...
 	AI_Output (self, other, "DIA_Vatras_Spende_BACK_05_01"); //That is not a problem, you can act upon your good intentions later, my son.
 	Info_ClearChoices   (DIA_Vatras_INFLUENCE);
 };
 func void DIA_Vatras_INFLUENCE_100()
 {
-	AI_Output (other, self, "DIA_Vatras_Spende_100_15_00"); //I've got 100 gold pieces ...
+	AI_Output (other, self, "DIA_Vatras_Spende_100_15_00"); //I've got 100 gold pieces...
 	AI_Output (self, other, "DIA_Vatras_Spende_100_05_01"); //I bless you in the name of Adanos for this generous act!
 	AI_Output (self, other, "DIA_Vatras_Spende_100_05_02"); //May the path you follow be blessed by Adanos!
 	B_GiveInvItems (other, self, ITmi_Gold, 100);
@@ -1617,27 +1617,27 @@ func void DIA_Vatras_Spende_Info ()
 	AI_Output (self, other, "DIA_Vatras_Spende_05_02"); //How much can you give?
 	
 	Info_ClearChoices   (DIA_Vatras_Spende);
-	Info_AddChoice 		(DIA_Vatras_Spende, "I haven't got anything to spare right now ...", DIA_Vatras_Spende_BACK);
+	Info_AddChoice 		(DIA_Vatras_Spende, "I haven't got anything to spare right now...", DIA_Vatras_Spende_BACK);
 	if (Npc_HasItems(other,itmi_gold) >= 50)
 	{
-		Info_AddChoice 		(DIA_Vatras_Spende, "I've got 50 gold pieces ...", DIA_Vatras_Spende_50);
+		Info_AddChoice 		(DIA_Vatras_Spende, "I've got 50 gold pieces...", DIA_Vatras_Spende_50);
 	};
 	if (Npc_HasItems(other,itmi_gold) >= 100)
 	{
-		Info_AddChoice 		(DIA_Vatras_Spende, "I've got 100 gold pieces ...",	DIA_Vatras_Spende_100);
+		Info_AddChoice 		(DIA_Vatras_Spende, "I've got 100 gold pieces...",	DIA_Vatras_Spende_100);
 	};
 };
 
 func void DIA_Vatras_Spende_BACK()
 {
-	AI_Output (other, self, "DIA_Vatras_Spende_BACK_15_00"); //I haven't got anything to spare right now ...
+	AI_Output (other, self, "DIA_Vatras_Spende_BACK_15_00"); //I haven't got anything to spare right now...
 	AI_Output (self, other, "DIA_Vatras_Spende_BACK_05_01"); //That is not a problem, you can act upon your good intentions later, my son.
 	Info_ClearChoices   (DIA_Vatras_Spende);
 };
 
 func void DIA_Vatras_Spende_50()
 {
-	AI_Output (other, self, "DIA_Vatras_Spende_50_15_00"); //I've got 50 gold pieces ...
+	AI_Output (other, self, "DIA_Vatras_Spende_50_15_00"); //I've got 50 gold pieces...
 	AI_Output (self, other, "DIA_Vatras_Spende_50_05_01"); //I thank you in the name of Adanos, my son. Your gold will be distributed among the needy.
 	B_GiveInvItems (other, self, Itmi_Gold, 50);
 	Info_ClearChoices   (DIA_Vatras_Spende);
@@ -1645,7 +1645,7 @@ func void DIA_Vatras_Spende_50()
 	
 func void DIA_Vatras_Spende_100()
 {
-	AI_Output (other, self, "DIA_Vatras_Spende_100_15_00"); //I've got 100 gold pieces ...
+	AI_Output (other, self, "DIA_Vatras_Spende_100_15_00"); //I've got 100 gold pieces...
 	AI_Output (self, other, "DIA_Vatras_Spende_100_05_01"); //I bless you in the name of Adanos for this generous act!
 	Snd_Play ("LevelUp");
 	AI_Output (self, other, "DIA_Vatras_Spende_100_05_02"); //May the path you follow be blessed by Adanos!

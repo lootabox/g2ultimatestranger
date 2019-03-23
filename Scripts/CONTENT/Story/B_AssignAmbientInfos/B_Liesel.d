@@ -38,7 +38,7 @@ FUNC INT DIA_Liesel_Hallo_Condition()
 };
 FUNC VOID DIA_Liesel_Hallo_Info()
 {	
-	AI_Output (other, self,"DIA_Liesel_Hallo_15_00"); //Hello ... (clears his throat) ... sheep.
+	AI_Output (other, self,"DIA_Liesel_Hallo_15_00"); //Hello... (clears his throat) ... sheep.
 	B_LieselMaeh ();
 };
 // ************************************************************

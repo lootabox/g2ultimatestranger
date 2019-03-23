@@ -89,7 +89,7 @@ FUNC VOID DIA_NOV_3_Fegen_Info()
 			B_LogEntry 	(Topic_ParlanFegen,"The novice outside the church will help me if I give him 50 pieces of gold.");
 			
 			Info_ClearChoices  (DIA_NOV_3_Fegen);
-			Info_AddChoice (DIA_NOV_3_Fegen,"Maybe later ...",DIA_NOV_3_Fegen_Nein);
+			Info_AddChoice (DIA_NOV_3_Fegen,"Maybe later...",DIA_NOV_3_Fegen_Nein);
 			
 			if (Npc_HasItems (other, ItMi_Gold) >= 50)
 			{

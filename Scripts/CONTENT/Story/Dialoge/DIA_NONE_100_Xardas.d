@@ -9,9 +9,9 @@ INSTANCE DIA_Xardas_FirstEXIT(C_INFO)
 	condition	= DIA_Xardas_FirstEXIT_Condition;
 	information	= DIA_Xardas_FirstEXIT_Info;
 	permanent	= FALSE;
-	description = "I'll be on my way as fast as I can! (END)";
+	description = "I'll be on my way as fast as I can!";
 };
-                       
+
 FUNC INT DIA_Xardas_FirstEXIT_Condition()
 {
 	if (Npc_KnowsInfo (other, DIA_Xardas_TODO))
@@ -100,7 +100,7 @@ func void DIA_Addon_Xardas_Hello_Man ()
 };
 func void DIA_Addon_Xardas_Hello_Dragons ()
 {
-	AI_Output (other,self ,"DIA_Xardas_Hello_15_03"); //At least we have enough time now. I did it. The Sleeper ...
+	AI_Output (other,self ,"DIA_Xardas_Hello_15_03"); //At least we have enough time now. I did it. The Sleeper...
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_04"); //... has been banned. You vanquished him, so much is true - but it is not within our power to stop the war that ensues now.
 	AI_Output (other,self ,"DIA_Xardas_Hello_15_05"); //You're talking about the orcs?
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_06"); //I am talking about much more terrible creatures.
@@ -239,7 +239,7 @@ instance DIA_Addon_Xardas_Portal (C_INFO)
 	condition	= DIA_Addon_Xardas_Portal_Condition;
 	information	= DIA_Addon_Xardas_Portal_Info;
 
-	description	= "The Water Mages have discovered a portal to an unknown part of the island ...";
+	description	= "The Water Mages have discovered a portal to an unknown part of the island...";
 };
 
 func int DIA_Addon_Xardas_Portal_Condition ()
@@ -254,8 +254,8 @@ func int DIA_Addon_Xardas_Portal_Condition ()
 
 func void DIA_Addon_Xardas_Portal_Info ()
 {
-	AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_00"); //The Water Mages have discovered a portal to an unknown part of the island ...
-	AI_Output (self, other, "DIA_Addon_Xardas_AddonSuccess_14_01"); //Interesting ...
+	AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_00"); //The Water Mages have discovered a portal to an unknown part of the island...
+	AI_Output (self, other, "DIA_Addon_Xardas_AddonSuccess_14_01"); //Interesting...
 	AI_Output (self, other, "DIA_Addon_Xardas_AddonSuccess_14_02"); //As soon as you find out something that is REALLY helpful, be sure to let me know!
 	AI_Output (self, other, "DIA_Addon_Xardas_AddonSuccess_14_03"); //The artifact of Beliar could be hidden somewhere there. Find it!
 };
@@ -270,7 +270,7 @@ instance DIA_Addon_Xardas_PortalAgain (C_INFO)
 	condition	= DIA_Addon_Xardas_PortalAgain_Condition;
 	information	= DIA_Addon_Xardas_PortalAgain_Info;
 	permanent 	= TRUE;
-	description	= "About that unknown part of the island ...";
+	description	= "About that unknown part of the island...";
 };
 
 func int DIA_Addon_Xardas_PortalAgain_Condition ()
@@ -285,7 +285,7 @@ func int DIA_Addon_Xardas_PortalAgain_Condition ()
 
 func void DIA_Addon_Xardas_PortalAgain_Info ()
 {
-	AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_17"); //About that unknown part of the island ...
+	AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_17"); //About that unknown part of the island...
 	AI_Output (self, other, "DIA_Addon_Xardas_AddonSuccess_14_18"); //Don't bother me with details. Come back if you really find anything useful.
 };
 
@@ -299,7 +299,7 @@ instance DIA_Addon_Xardas_AddonSuccess (C_INFO)
 	condition	= DIA_Addon_Xardas_AddonSuccess_Condition;
 	information	= DIA_Addon_Xardas_AddonSuccess_Info;
 
-	description	= "I've explored the unknown part of the island ...";
+	description	= "I've explored the unknown part of the island...";
 };
 
 func int DIA_Addon_Xardas_AddonSuccess_Condition ()
@@ -313,7 +313,7 @@ func int DIA_Addon_Xardas_AddonSuccess_Condition ()
 
 func void DIA_Addon_Xardas_AddonSuccess_Info ()
 {
-	AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_03"); //I've explored the unknown part of the island ...
+	AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_03"); //I've explored the unknown part of the island...
 	AI_Output (self, other, "DIA_Addon_Xardas_AddonSuccess_14_04"); //And, what did you find?
 	AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_05"); //It was all about a mighty artifact. The Claw of Beliar.
 	AI_Output (self, other, "DIA_Addon_Xardas_AddonSuccess_14_06"); //The Claw of Beliar?! Where is it now? Do you have it on you?
@@ -328,15 +328,15 @@ func void DIA_Addon_Xardas_AddonSuccess_Info ()
 	}
 	else
 	{
-		AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_11"); //I don't have it any more ...
+		AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_11"); //I don't have it any more...
 		if (Saturas_KlaueInsMeer == TRUE)
 		{
-			AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_12"); //I gave it to the Water Mages so they could dump it in the sea ...
+			AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_12"); //I gave it to the Water Mages so they could dump it in the sea...
 		};
 		AI_Output (self, other, "DIA_Addon_Xardas_AddonSuccess_14_13"); //(ranting) Are you out of your mind? Do you have any idea what you gave away there?
 		AI_Output (self, other, "DIA_Addon_Xardas_AddonSuccess_14_14"); //This weapon could have been of great service to us!
 		AI_Output (other, self, "DIA_Addon_Xardas_AddonSuccess_15_15"); //I think it was for the better this way.
-		AI_Output (self, other, "DIA_Addon_Xardas_AddonSuccess_14_16"); //(sighs) The ways of the Gods are unfathomable ...
+		AI_Output (self, other, "DIA_Addon_Xardas_AddonSuccess_14_16"); //(sighs) The ways of the Gods are unfathomable...
 	};
 };
 
@@ -487,7 +487,7 @@ func void DIA_Xardas_WhereEx_Info ()
 	AI_Output (self, other, "DIA_Xardas_Add_14_01"); //As I already said, near the city of Khorinis.
 	AI_Output (self, other, "DIA_Xardas_Add_14_02"); //I have rebuilt my tower here.
 	AI_Output (other, self, "DIA_Xardas_Add_15_03"); //But it's only been a few days since we last saw each other in the Valley of Mines...
-	AI_Output (self, other, "DIA_Xardas_Add_14_04"); //The servants which I summoned to build my tower have done a thorough job ...
+	AI_Output (self, other, "DIA_Xardas_Add_14_04"); //The servants which I summoned to build my tower have done a thorough job...
 	AI_Output (other, self, "DIA_Xardas_Add_15_05"); //You can say that again.
 };
 
@@ -571,7 +571,7 @@ instance DIA_Xardas_FirstPal		(C_INFO)
 	condition	 = 	DIA_Xardas_FirstPal_Condition;
 	information	 = 	DIA_Xardas_FirstPal_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"I've been to town ...";
+	description	 = 	"I've been to town...";
 };
 func int DIA_Xardas_FirstPal_Condition ()
 {	
@@ -584,9 +584,9 @@ func int DIA_Xardas_FirstPal_Condition ()
 };
 func void DIA_Xardas_FirstPal_Info ()
 {
-	AI_Output (other, self, "DIA_Xardas_FirstPal_15_00"); //I've been to town ...
+	AI_Output (other, self, "DIA_Xardas_FirstPal_15_00"); //I've been to town...
 	AI_Output (self, other, "DIA_Xardas_FirstPal_14_01"); //And? Were you able to talk to the leader of the paladins?
-	AI_Output (other, self, "DIA_Xardas_FirstPal_15_02"); //They won't let me see him ...
+	AI_Output (other, self, "DIA_Xardas_FirstPal_15_02"); //They won't let me see him...
 	AI_Output (self, other, "DIA_Xardas_FirstPal_14_03"); //Nonsense! There must be a way for you to see him.
 	AI_Output (self, other, "DIA_Xardas_FirstPal_14_04"); //If all else fails, enter the monastery and become a magician.
 	AI_Output (self, other, "DIA_Xardas_FirstPal_14_05"); //That might be considered morally questionable, but it would get you what you need.

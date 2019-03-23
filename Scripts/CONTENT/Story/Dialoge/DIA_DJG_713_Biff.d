@@ -810,7 +810,7 @@ func void DIA_Biff_KnowWhereEnemy_Info ()
 FUNC VOID DIA_Biff_KnowWhereEnemy_Yes ()
 {
 	AI_Output (other,self ,"DIA_Biff_KnowWhereEnemy_Yes_15_00"); //Won't you come along?
-	AI_Output (self ,other,"DIA_Biff_KnowWhereEnemy_Yes_07_01"); //I don' t care about more opponents. I want ...
+	AI_Output (self ,other,"DIA_Biff_KnowWhereEnemy_Yes_07_01"); //I don' t care about more opponents. I want...
 	AI_Output (other,self ,"DIA_Biff_KnowWhereEnemy_Yes_15_02"); //Where we're going, there will be more gold than you can carry.
 	AI_Output (self ,other,"DIA_Biff_KnowWhereEnemy_Yes_07_03"); //If that's the case, I'm in. Where are we going?
 	AI_Output (other,self ,"DIA_Biff_KnowWhereEnemy_Yes_15_04"); //But first we need to get you out of the Valley of Mines.

@@ -152,12 +152,12 @@ func void DIA_Addon_Cavalorn_HALLO_Info ()
 	
 	Info_ClearChoices	(DIA_Addon_Cavalorn_HALLO);
 	Info_AddChoice	(DIA_Addon_Cavalorn_HALLO, "Your name is Cavalorn, right?", DIA_Addon_Cavalorn_HALLO_Ja );
-	Info_AddChoice	(DIA_Addon_Cavalorn_HALLO, "I can barely remember...?", DIA_Addon_Cavalorn_HALLO_weissNicht );
+	Info_AddChoice	(DIA_Addon_Cavalorn_HALLO, "I can barely remember..?", DIA_Addon_Cavalorn_HALLO_weissNicht );
 
 };
 func void DIA_Addon_Cavalorn_HALLO_weissNicht ()
 {
-	AI_Output			(other, self, "DIA_Addon_Cavalorn_HALLO_weissNicht_15_00"); //I can barely remember...?
+	AI_Output			(other, self, "DIA_Addon_Cavalorn_HALLO_weissNicht_15_00"); //I can barely remember..?
 	AI_Output			(self, other, "DIA_Addon_Cavalorn_HALLO_weissNicht_08_01"); //Oh, come on. Back then in my hut outside the Old Camp, I taught you how to shoot a bow and how to sneak. Ring a bell?
 
 };

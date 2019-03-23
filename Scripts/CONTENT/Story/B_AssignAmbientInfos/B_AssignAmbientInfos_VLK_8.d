@@ -70,7 +70,7 @@ FUNC INT DIA_VLK_8_PEOPLE_Condition()
 FUNC VOID DIA_VLK_8_PEOPLE_Info()
 {	
 	AI_Output (other, self, "DIA_VLK_8_PEOPLE_15_00"); //Who are the most important citizens in this town?
-	AI_Output (self, other, "DIA_VLK_8_PEOPLE_08_01"); //Besides the paladins ... the master craftsmen in the lower part of town. They are all very important.
+	AI_Output (self, other, "DIA_VLK_8_PEOPLE_08_01"); //Besides the paladins... the master craftsmen in the lower part of town. They are all very important.
 };
 
 // *************************************************************************

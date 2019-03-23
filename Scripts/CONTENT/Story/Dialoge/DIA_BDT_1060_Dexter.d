@@ -52,7 +52,7 @@ FUNC VOID DIA_Dexter_Hallo_Info()
 		/*//ADDON>
 		AI_Output (self, other, "DIA_Dexter_Hallo_09_04");//Aber es stimmt. Ich habe meinen Jungs die Steckbriefe gegeben. Ich hatte keine andere Wahl.
 		AI_Output (self, other, "DIA_Dexter_Hallo_09_05");//Als ich versuchte, aus dem Minental zu entfliehen, entdeckten mich die Soldaten und trieben mich in eine Falle.
-		AI_Output (self, other, "DIA_Dexter_Hallo_09_06");//Ich dachte schon, das wäre mein Ende, aber dann tauchte plötzlich aus der Dunkelheit diese ... Gestalt auf.
+		AI_Output (self, other, "DIA_Dexter_Hallo_09_06");//Ich dachte schon, das wäre mein Ende, aber dann tauchte plötzlich aus der Dunkelheit diese... Gestalt auf.
 		AI_Output (self, other, "DIA_Dexter_Hallo_09_07");//Er trug eine schwarze Robe mit Kapuze und eine Maske überm Gesicht. Und er sprach mit einer Stimme, die alles andere als menschlich war.
 		AI_Output (self, other, "DIA_Dexter_Hallo_09_08");//Aber er bot mir seine Hilfe an. Er brachte mich aus dem Tal und bot mir eintausend Goldstücke für deinen Kopf.
 		AI_Output (self, other, "DIA_Dexter_Hallo_09_09");//Hey, was sollte ich machen? Wenn ich abgelehnt hätte, dann hätte er mich getötet!
@@ -69,7 +69,7 @@ FUNC VOID DIA_Dexter_Hallo_Info()
 		AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_00");//I never thought you'd come here voluntarily.
 		AI_Output (other, self, "DIA_Addon_Dexter_Hallo_15_01");//What do you mean by that?
 		AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_02");//I mean that I've been looking for you. Haven't you seen any of my wanted posters?
-		AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_03");//They all bear YOUR mug. Oh yes ... you're very much wanted. Didn't you know that?
+		AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_03");//They all bear YOUR mug. Oh yes... you're very much wanted. Didn't you know that?
 		//ADDON<
 	};
 	AI_Output (other, self, "DIA_Addon_Dexter_Hallo_15_05");//So what do you want from me?
@@ -211,15 +211,15 @@ func void DIA_Addon_Dexter_missingPeople_wer ()
 	AI_Output			(self, other, "DIA_Addon_Dexter_missingPeople_wer_09_01"); //My boss. He's a dangerous man. You know him: Raven, one of the former ore barons from the old camp in the Valley of Mines.
 	AI_Output			(self, other, "DIA_Addon_Dexter_missingPeople_wer_09_02"); //He needs those people to fulfill his plans. And that's all you need to know.
 
-	Info_AddChoice	(DIA_Addon_Dexter_missingPeople, "Raven, dangerous? Oh well ...", DIA_Addon_Dexter_missingPeople_Raven );
+	Info_AddChoice	(DIA_Addon_Dexter_missingPeople, "Raven, dangerous? Oh well...", DIA_Addon_Dexter_missingPeople_Raven );
 	Info_AddChoice	(DIA_Addon_Dexter_missingPeople, "An ore baron here, in Khorinis?", DIA_Addon_Dexter_missingPeople_RavenTot );
 		 
 };
 func void DIA_Addon_Dexter_missingPeople_Raven ()
 {
-	AI_Output			(other, self, "DIA_Addon_Dexter_missingPeople_Raven_15_00"); //Raven, dangerous? Oh well ...
+	AI_Output			(other, self, "DIA_Addon_Dexter_missingPeople_Raven_15_00"); //Raven, dangerous? Oh well...
 	AI_Output			(self, other, "DIA_Addon_Dexter_missingPeople_Raven_09_01"); //(irritated) What do YOU know? You don't know him like I do.
-	AI_Output			(self, other, "DIA_Addon_Dexter_missingPeople_Raven_09_02"); //(unsure) He was a miserable swine even back then, but these days ...
+	AI_Output			(self, other, "DIA_Addon_Dexter_missingPeople_Raven_09_02"); //(unsure) He was a miserable swine even back then, but these days...
 	AI_Output			(self, other, "DIA_Addon_Dexter_missingPeople_Raven_09_03"); //He has changed since the fall of the Barrier. There's a black shadow across his face.
 	AI_Output			(self, other, "DIA_Addon_Dexter_missingPeople_Raven_09_04"); //(intimidated) His fierce glance will pierce you like the claws of a raptor if you look into his eyes for too long.
 	AI_Output			(self, other, "DIA_Addon_Dexter_missingPeople_Raven_09_05"); //My only advice to you is: Leave Khorinis as fast as you can, before it's too late.
@@ -290,7 +290,7 @@ FUNC VOID DIA_Dexter_Vor_Info()
 	AI_Output (other, self, "DIA_Dexter_Vor_15_00");//And what do you intend to do now? Kill me?
 	AI_Output (self, other, "DIA_Dexter_Vor_09_01");//Yeah. But you set us all free. That's why I'm giving you another chance. Beat it - disappear, make yourself invisible. Go and don't cross my path again.
 	AI_Output (other, self, "DIA_Addon_Dexter_Vor_15_00");//I need to know where you brought those people.
-	AI_Output (self, other, "DIA_Addon_Dexter_Vor_09_01");//(laughs) Well. You could try beating it out of me ...
+	AI_Output (self, other, "DIA_Addon_Dexter_Vor_09_01");//(laughs) Well. You could try beating it out of me...
 	AI_Output (self, other, "DIA_Addon_Dexter_Vor_09_02");//(menacing) It's better for you if you leave now.
 	AI_Output (self, other, "DIA_Dexter_Vor_09_02");//If I see you around here again, I won't hesitate to kill you.
 	Dexter_NoMoreSmallTalk = TRUE;
@@ -321,7 +321,7 @@ FUNC VOID DIA_Dexter_Kill_Info()
 {
 	if (Knows_Dexter == TRUE)
 	{
-		AI_Output (self, other, "DIA_Addon_Dexter_Add_09_02"); //(attacking) You asked for this ...
+		AI_Output (self, other, "DIA_Addon_Dexter_Add_09_02"); //(attacking) You asked for this...
 	}
 	else
 	{
@@ -370,7 +370,7 @@ FUNC INT DIA_Dexter_Kopf_Condition()
 FUNC VOID DIA_Dexter_Kopf_Info()
 {
 	AI_Output (other, self, "DIA_Addon_Dexter_Add_15_00"); //You want my head? Come and get it, then!
-	AI_Output (self, other, "DIA_Addon_Dexter_Add_09_01"); //(attacking) If that's what you want ...
+	AI_Output (self, other, "DIA_Addon_Dexter_Add_09_01"); //(attacking) If that's what you want...
 
 	DIA_Dexter_Kill_ENDE();
 };

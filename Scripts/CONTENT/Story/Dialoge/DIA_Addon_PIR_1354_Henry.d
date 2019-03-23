@@ -213,7 +213,7 @@ func void DIA_Addon_Henry_Attack_Info()
 	other.aivar[AIV_LastDistToWP] 			= 0;
 	self.aivar[AIV_Guardpassage_Status]	= GP_NONE;						//wird auch in ZS_Attack resettet
 	
-	AI_Output (self, other,"DIA_Addon_Henry_Attack_04_00"); //You asked for it ...
+	AI_Output (self, other,"DIA_Addon_Henry_Attack_04_00"); //You asked for it...
 	
 	AI_StopProcessInfos	(self);
 	B_Attack (self, other, AR_GuardStopsIntruder, 0); 
@@ -259,7 +259,7 @@ FUNC VOID DIA_Addon_Henry_WantEnter_Info()
 	{
 		AI_Output (other,self ,"DIA_Addon_Henry_WantEnter_15_02"); //Huh? For what?
 		AI_Output (self ,other,"DIA_Addon_Henry_WantEnter_04_03"); //Don't make such a fuss.
-		AI_Output (self ,other,"DIA_Addon_Henry_WantEnter_04_04"); //There's PLENTY of stuff here in camp that might interest you ...
+		AI_Output (self ,other,"DIA_Addon_Henry_WantEnter_04_04"); //There's PLENTY of stuff here in camp that might interest you...
 		Henry_Zoll_WhatFor = TRUE;
 	};
 		 
@@ -478,7 +478,7 @@ func void DIA_Addon_Henry_Tribut_Info ()
 
 	AI_Output	(other, self, "DIA_Addon_Henry_Tribut_15_00"); //Let me in.
 	
-	AI_Output	(self, other, "DIA_Addon_Henry_Tribut_04_01"); //Mmh ...
+	AI_Output	(self, other, "DIA_Addon_Henry_Tribut_04_01"); //Mmh...
 
 	if (Npc_KnowsInfo (other, DIA_Addon_Henry_Malcom))
 	{
@@ -642,7 +642,7 @@ INSTANCE DIA_Addon_Henry_Turmbanditen(C_INFO)
 	condition	= DIA_Addon_Henry_Turmbanditen_WhatFor_Condition;
 	information	= DIA_Addon_Henry_Turmbanditen_WhatFor_Info;
 	permanent	= TRUE;
-	description	= "About those bandits in the tower ...";
+	description	= "About those bandits in the tower...";
 };                       
 FUNC INT DIA_Addon_Henry_Turmbanditen_WhatFor_Condition()
 {
@@ -654,7 +654,7 @@ FUNC INT DIA_Addon_Henry_Turmbanditen_WhatFor_Condition()
 };
 func VOID DIA_Addon_Henry_Turmbanditen_WhatFor_Info()
 {	
-	AI_Output (other,self ,"DIA_Addon_Henry_Turmbanditen_15_00"); //About those bandits in the tower ...
+	AI_Output (other,self ,"DIA_Addon_Henry_Turmbanditen_15_00"); //About those bandits in the tower...
 	
 	if (C_TowerBanditsDead() == TRUE)
 	{
@@ -872,7 +872,7 @@ instance DIA_Addon_Henry_Owen2		(C_INFO)
 	condition	= 	DIA_Addon_Henry_Owen2_Condition;
 	information	= 	DIA_Addon_Henry_Owen2_Info;
 	permanent	= 	TRUE;
-	description	= 	"About that woodcutter, Owen ...";
+	description	= 	"About that woodcutter, Owen...";
 };
 func int DIA_Addon_Henry_Owen2_Condition ()
 {
@@ -883,7 +883,7 @@ func int DIA_Addon_Henry_Owen2_Condition ()
 };
 func void DIA_Addon_Henry_Owen2_Info ()
 {
-	AI_Output (other, self, "DIA_Addon_Henry_Owen2_15_00"); //About that woodcutter, Owen ...
+	AI_Output (other, self, "DIA_Addon_Henry_Owen2_15_00"); //About that woodcutter, Owen...
 	
 	if ((Npc_IsDead(PIR_1367_Addon_Owen)) == TRUE)
 	{

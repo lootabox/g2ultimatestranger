@@ -42,7 +42,7 @@ FUNC VOID DIA_Addon_Tonak_NW_Hi_Info()
 	if !Npc_IsDead (Egill)
 	&& !Npc_IsDead (Ehnim)
 	{
-		AI_Output (self, other, "DIA_Addon_Tonak_NW_Hi_03_02");//Especially with those two nutty brothers. Oh man, the bandits weren't THAT bad ...
+		AI_Output (self, other, "DIA_Addon_Tonak_NW_Hi_03_02");//Especially with those two nutty brothers. Oh man, the bandits weren't THAT bad...
 	};
 };
 // ************************************************************

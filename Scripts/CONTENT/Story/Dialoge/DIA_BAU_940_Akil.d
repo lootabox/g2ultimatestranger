@@ -59,9 +59,9 @@ func int DIA_Akil_Hallo_Condition ()
 func void DIA_Akil_Hallo_Info ()
 {
 	AI_Output  (other, self, "DIA_Akil_Hallo_15_00"); //Is there a problem?
-	AI_Output  (self, other, "DIA_Akil_Hallo_13_01"); //(sweating) ... Eh ... no, no ... everything's fine. (nervous) It ... would be better if you left now.
+	AI_Output  (self, other, "DIA_Akil_Hallo_13_01"); //(sweating) ... Eh... no, no... everything's fine. (nervous) It... would be better if you left now.
 	AI_Output  (other, self, "DIA_Akil_Hallo_15_02"); //Are you sure?
-	AI_Output  (self, other, "DIA_Akil_Hallo_13_03"); //eh ... yeah, yeah ... everything's fine. You ... eh ... I ... I can't talk to you now.
+	AI_Output  (self, other, "DIA_Akil_Hallo_13_03"); //eh... yeah, yeah... everything's fine. You... eh... I... I can't talk to you now.
 	
 	if (Akils_SLDStillthere == FALSE) {
 		Log_CreateTopic (TOPIC_AkilsSLDStillthere, LOG_MISSION);
@@ -98,7 +98,7 @@ func int DIA_Akil_Nichtjetzt_Condition ()
 };
 func void DIA_Akil_Nichtjetzt_Info ()
 {
-	AI_Output (self, other, "DIA_Akil_Nichtjetzt_13_00"); //Eh ... not now, I can't talk to you now.
+	AI_Output (self, other, "DIA_Akil_Nichtjetzt_13_00"); //Eh... not now, I can't talk to you now.
 	AI_StopProcessInfos (self);
 };	
 ///////////////////////////////////////////////////////////////////////
@@ -136,8 +136,8 @@ func void DIA_Akil_NachKampf_Info ()
 			AI_Output (self, other, "DIA_Akil_NachKampf_13_04"); //Those were mercenaries from Onar's farm. Those bastards don't know anything but plunder and murder.
 		};
 		
-	AI_Output (self, other, "DIA_Akil_NachKampf_13_05"); //I'd been fearing the worst ...
-	AI_Output (self, other, "DIA_Akil_NachKampf_13_06"); //(deep breath)... well, thank Innos it didn't come to that. Tell me what I can do for you.
+	AI_Output (self, other, "DIA_Akil_NachKampf_13_05"); //I'd been fearing the worst...
+	AI_Output (self, other, "DIA_Akil_NachKampf_13_06"); //(deep breath) ... well, thank Innos it didn't come to that. Tell me what I can do for you.
 	
 	Info_ClearChoices (DIA_Akil_NachKampf);
 	Info_AddChoice (DIA_Akil_NachKampf,"Nothing. Just as long as you got through this all right.",DIA_Akil_NachKampf_Ehre);
@@ -269,7 +269,7 @@ instance DIA_Addon_Akil_ReturnPeople		(C_INFO)
 	condition	 = 	DIA_Addon_Akil_ReturnPeople_Condition;
 	information	 = 	DIA_Addon_Akil_ReturnPeople_Info;
 	permanent	 =  FALSE;
-	description	 = 	"About your farmhands ...";
+	description	 = 	"About your farmhands...";
 };
 
 func int DIA_Addon_Akil_ReturnPeople_Condition ()
@@ -285,7 +285,7 @@ func int DIA_Addon_Akil_ReturnPeople_Condition ()
 
 func void DIA_Addon_Akil_ReturnPeople_Info ()
 {
-	AI_Output	(other, self, "DIA_Addon_Akil_ReturnPeople_15_00"); //About your farmhands ...
+	AI_Output	(other, self, "DIA_Addon_Akil_ReturnPeople_15_00"); //About your farmhands...
 	
 	// if (Npc_GetDistToWP (Tonak_NW,"NW_FARM2_FIELD_TANOK")<= 1000) && (Npc_GetDistToWP (Telbor_NW,"NW_FARM2_FIELD_TELBOR")<= 1000)
 	if (!Npc_IsDead(Tonak_NW) && !Npc_IsDead(Telbor_NW))
@@ -331,8 +331,8 @@ func void DIA_Akil_Lieferung_Info ()
 	B_GiveInvItems (self, other, ItMi_BaltramPaket,1);
 	Lieferung_Geholt = TRUE;
 	
-	B_LogEntry (TOPIC_Baltram, "I've got the shipment. I could take it to Baltram now ...");
-	B_LogEntry (TOPIC_Nagur,   "I've got the shipment. I could take it to Nagur now ...");
+	B_LogEntry (TOPIC_Baltram, "I've got the shipment. I could take it to Baltram now...");
+	B_LogEntry (TOPIC_Nagur,   "I've got the shipment. I could take it to Nagur now...");
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -345,7 +345,7 @@ instance DIA_Akil_Gegend		(C_INFO)
 	condition	 = 	DIA_Akil_Gegend_Condition;
 	information	 = 	DIA_Akil_Gegend_Info;
 	permanent	 =  FALSE; 	 
-	description	 = 	"You know your way around this area ...";
+	description	 = 	"You know your way around this area...";
 };
 
 func int DIA_Akil_Gegend_Condition ()
@@ -361,7 +361,7 @@ var int Knows_Taverne;
 //-------------------------------
 func void DIA_Akil_Gegend_Info ()
 {
-	AI_Output (other, self, "DIA_Akil_Gegend_15_00"); //You know your way around this area ...
+	AI_Output (other, self, "DIA_Akil_Gegend_15_00"); //You know your way around this area...
 	AI_Output (self, other, "DIA_Akil_Gegend_13_01"); //Sure, what do you want to know?
 };
 ///////////////////////////////////////////////////////////////////////

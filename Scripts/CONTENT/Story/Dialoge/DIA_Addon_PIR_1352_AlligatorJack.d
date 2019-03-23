@@ -225,18 +225,18 @@ func void DIA_Addon_AlligatorJack_BDTRuestung_Info ()
 	
 	Info_ClearChoices	(DIA_Addon_AlligatorJack_BDTRuestung);
 	Info_AddChoice	(DIA_Addon_AlligatorJack_BDTRuestung, "Do you have any idea where I could find armor like that?", DIA_Addon_AlligatorJack_BDTRuestung_wo );
-	Info_AddChoice	(DIA_Addon_AlligatorJack_BDTRuestung, "Sounds good ...", DIA_Addon_AlligatorJack_BDTRuestung_gut );
+	Info_AddChoice	(DIA_Addon_AlligatorJack_BDTRuestung, "Sounds good...", DIA_Addon_AlligatorJack_BDTRuestung_gut );
 };
 func void DIA_Addon_AlligatorJack_BDTRuestung_gut ()
 {
-	AI_Output	(other, self, "DIA_Addon_AlligatorJack_BDTRuestung_gut_15_00"); //Sounds good ...
+	AI_Output	(other, self, "DIA_Addon_AlligatorJack_BDTRuestung_gut_15_00"); //Sounds good...
 	AI_Output	(self, other, "DIA_Addon_AlligatorJack_BDTRuestung_gut_12_01"); //Yes, but only to someone who's suicidal.
 };
 func void DIA_Addon_AlligatorJack_BDTRuestung_wo ()
 {
 	AI_Output	(other, self, "DIA_Addon_AlligatorJack_BDTRuestung_wo_15_00"); //Do you have any idea where I could find armor like that?
 	AI_Output	(self, other, "DIA_Addon_AlligatorJack_BDTRuestung_wo_12_01"); //We used to have one in our pirate camp.
-	//AI_Output	(self, other, "DIA_Addon_AlligatorJack_BDTRuestung_wo_12_02"); //Mmh ... Ich denke, die hatte genau deine Größe.
+	//AI_Output	(self, other, "DIA_Addon_AlligatorJack_BDTRuestung_wo_12_02"); //Mmh... Ich denke, die hatte genau deine Größe.
 	AI_Output	(self, other, "DIA_Addon_AlligatorJack_BDTRuestung_wo_12_03"); //But I don't know whether it's still there.
 	
 	B_LogEntry (TOPIC_Addon_BDTRuestung,"The pirates are supposed to have a suit of bandit armor. But Alligator Jack couldn't tell me if it exists."); 

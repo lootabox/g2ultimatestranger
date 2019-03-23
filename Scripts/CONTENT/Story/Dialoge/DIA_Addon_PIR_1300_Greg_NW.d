@@ -135,7 +135,7 @@ instance DIA_Addon_Greg_NW_Stadtwachen		(C_INFO)
 	information	 = 	DIA_Addon_Greg_NW_Stadtwachen_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"About the city guards ...";
+	description	 = 	"About the city guards...";
 };
 
 func int DIA_Addon_Greg_NW_Stadtwachen_Condition ()
@@ -153,7 +153,7 @@ VAR int DIA_Addon_Greg_NW_Stadtwachen_ChoiceClose_constantino;
 
 func void DIA_Addon_Greg_NW_Stadtwachen_Info ()
 {
-	AI_Output	(other, self, "DIA_Addon_Greg_NW_Stadtwachen_15_00"); //About the city guards ...
+	AI_Output	(other, self, "DIA_Addon_Greg_NW_Stadtwachen_15_00"); //About the city guards...
 	AI_Output	(self, other, "DIA_Addon_Greg_NW_Stadtwachen_01_01"); //Yes? Got an idea?
 	
 	Info_ClearChoices	(DIA_Addon_Greg_NW_Stadtwachen);
@@ -261,7 +261,7 @@ instance DIA_Addon_Greg_NW_PERM		(C_INFO)
 	information	 = 	DIA_Addon_Greg_NW_PERM_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"One more thing ...";
+	description	 = 	"One more thing...";
 };
 func int DIA_Addon_Greg_NW_PERM_Condition ()
 {
@@ -273,7 +273,7 @@ func int DIA_Addon_Greg_NW_PERM_Condition ()
 };
 func void DIA_Addon_Greg_NW_PERM_Info ()
 {
-	AI_Output	(other, self, "DIA_Addon_Greg_NW_PERM_15_00"); //One more thing ...
+	AI_Output	(other, self, "DIA_Addon_Greg_NW_PERM_15_00"); //One more thing...
 	AI_Output	(self, other, "DIA_Addon_Greg_NW_PERM_01_01"); //(arrogantly) Listen, kid. I've got important things to do right now.
 	AI_Output	(self, other, "DIA_Addon_Greg_NW_PERM_01_02"); //(threatening) We'll talk again later. Got it?
 	AI_StopProcessInfos (self);
@@ -780,7 +780,7 @@ instance DIA_Addon_Greg_NW_PermTaverne		(C_INFO)
 	information	 = 	DIA_Addon_Greg_NW_PermTaverne_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"One more thing ...";
+	description	 = 	"One more thing...";
 };
 
 func int DIA_Addon_Greg_NW_PermTaverne_Condition ()
@@ -801,7 +801,7 @@ func int DIA_Addon_Greg_NW_PermTaverne_Condition ()
 
 func void DIA_Addon_Greg_NW_PermTaverne_Info ()
 {
-	AI_Output	(other, self, "DIA_Addon_Greg_NW_PermTaverne_15_00"); //One more thing ...
+	AI_Output	(other, self, "DIA_Addon_Greg_NW_PermTaverne_15_00"); //One more thing...
 
 	if (MIS_Addon_Greg_RakeCave == LOG_RUNNING)
 	&& (Greg_SuchWeiter == TRUE)

@@ -98,7 +98,7 @@ func void DIA_Pepe_WhyNotSLD_Info ()
 	AI_Output (other, self, "DIA_Pepe_WhyNotSLD_15_00"); //Why didn't you tell the mercenaries about the wolves? I thought they worked for you.
 	AI_Output (self, other, "DIA_Pepe_WhyNotSLD_03_01"); //Yeah, I know. I should have done that. But I didn't, damnit.
 	AI_Output (self, other, "DIA_Pepe_WhyNotSLD_03_02"); //And now, with so many sheep gone, I'm afraid to tell anyone about it at all.
-	AI_Output (other, self, "DIA_Pepe_WhyNotSLD_15_03"); //But you just told ME ...
+	AI_Output (other, self, "DIA_Pepe_WhyNotSLD_15_03"); //But you just told ME...
 	AI_Output (self, other, "DIA_Pepe_WhyNotSLD_03_04"); //(irritated) I'm already regretting that, too.
 };
 
@@ -125,9 +125,9 @@ func void DIA_Pepe_KillWolves_Info ()
 {
 	AI_Output (other, self, "DIA_Pepe_KillWolves_15_00"); //What if I kill those wolves?
 	AI_Output (self, other, "DIA_Pepe_KillWolves_03_01"); //(mocking) You, by yourself? Ha ha. I don't believe it. I'd sooner trust my bellwether to do that.
-	AI_Output (other, self, "DIA_Pepe_KillWolves_15_02"); //Forget it. It was just a suggestion. I'll go over to the boys and see what THEY say about it ...
-	AI_Output (self, other, "DIA_Pepe_KillWolves_03_03"); //(scared) Wait a minute. Okay, okay! Ehm ... you're the greatest and you can take on a hundred wolves at once. No problem!
-	AI_Output (self, other, "DIA_Pepe_KillWolves_03_04"); //Mostly they lurk between the trees near the pasture. (incidentally) I think there were only four ...
+	AI_Output (other, self, "DIA_Pepe_KillWolves_15_02"); //Forget it. It was just a suggestion. I'll go over to the boys and see what THEY say about it...
+	AI_Output (self, other, "DIA_Pepe_KillWolves_03_03"); //(scared) Wait a minute. Okay, okay! Ehm... you're the greatest and you can take on a hundred wolves at once. No problem!
+	AI_Output (self, other, "DIA_Pepe_KillWolves_03_04"); //Mostly they lurk between the trees near the pasture. (incidentally) I think there were only four...
 	
 	AI_StopProcessInfos (self);
 	
@@ -361,7 +361,7 @@ func void DIA_Pepe_BuyLiesel_Info ()
 		else
 		{
 			AI_Output (self, other, "DIA_Pepe_BuyLiesel_03_03"); //Again? Okay. Take Betsy.
-			AI_Output (other, self, "DIA_Pepe_BuyLiesel_15_04"); //Betsy? But the last sheep was called Betsy ...
+			AI_Output (other, self, "DIA_Pepe_BuyLiesel_15_04"); //Betsy? But the last sheep was called Betsy...
 			AI_Output (self, other, "DIA_Pepe_BuyLiesel_03_05"); //All the sheep are called Betsy.
 			if (Pepe_SchafGekauft >= 3)
 			{

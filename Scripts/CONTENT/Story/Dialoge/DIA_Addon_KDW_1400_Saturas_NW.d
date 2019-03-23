@@ -347,7 +347,7 @@ func void DIA_Addon_Saturas_geheimbund_Info ()
 
 	if (Lares_Angekommen == TRUE)
 	{
-		AI_Output	(self, other, "DIA_Addon_Saturas_geheimbund_14_01"); //(furious) WHAT? How do you know about that? Who...? LARES... I will kill him!
+		AI_Output	(self, other, "DIA_Addon_Saturas_geheimbund_14_01"); //(furious) WHAT? How do you know about that? Who..? LARES... I will kill him!
 		AI_Output	(self, other, "DIA_Addon_Saturas_geheimbund_14_02"); //He has broken our first rule. Speak to no one about the 'Ring of Water'.
 	};
 

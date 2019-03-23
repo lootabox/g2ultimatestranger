@@ -491,7 +491,7 @@ INSTANCE ItFo_HalvorFish_MIS (C_Item)
 
 	description			= 	"A weird-looking fish.";
 	TEXT[2]				= 	"There's something wrong with this fish.";		
-	TEXT[3]				= 	"Looks like it's been sewn up ...";
+	TEXT[3]				= 	"Looks like it's been sewn up...";
 };
 
 	FUNC VOID Use_HalvorFish()
@@ -1454,7 +1454,7 @@ INSTANCE ItKe_Salandril(C_Item)
 };
 
 //****************************************************************************
-//				Schlüssel Truhe ...wo die Paladine schlafen
+//				Schlüssel Truhe...wo die Paladine schlafen
 //			---------------------------------------------
 //****************************************************************************
 INSTANCE ItKe_PaladinTruhe(C_Item)

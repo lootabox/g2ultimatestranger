@@ -141,7 +141,7 @@ FUNC VOID DIA_VLK_6_STANDARD_Info()
 	
 	if (Kapitel == 4)
 	{
-		AI_Output (self,other,"DIA_VLK_6_STANDARD_06_05"); //I wonder if there is anything to those stories about dragons ...
+		AI_Output (self,other,"DIA_VLK_6_STANDARD_06_05"); //I wonder if there is anything to those stories about dragons...
 	};
 
 	if (Kapitel >= 5)

@@ -178,7 +178,7 @@ FUNC VOID DIA_DragonTalk_Main_4_Info()
 {	
 	AI_Output			(other, self, "DIA_DragonTalk_Main_4_15_00"); //How can I find your Master?
 	AI_Output			(self, other, "DIA_DragonTalk_Main_4_20_01"); //He has established his hoard in the solid rock of the Halls of Irdorath and waits there for his destiny.
-	AI_Output			(self, other, "DIA_DragonTalk_Main_4_20_02"); //Until he can restore this world to the order which it has deserved, he waits there in deep meditation and ...
+	AI_Output			(self, other, "DIA_DragonTalk_Main_4_20_02"); //Until he can restore this world to the order which it has deserved, he waits there in deep meditation and...
 	AI_Output			(other, self, "DIA_DragonTalk_Main_4_15_03"); //Spare me the details. Just tell me where I can find these sacred halls of Irdorath.
 	AI_Output			(self, other, "DIA_DragonTalk_Main_4_20_04"); //Ha ha ha. You disappoint me, little man. So you have withstood all the dangers and overcome almost all of us, and now you fail in your inability to use the higher knowledge.
 	AI_Output			(self, other, "DIA_DragonTalk_Main_4_20_05"); //If Irdorath means nothing to you, then you had better go to your magicians and ask them to be allowed to take care of their worldly needs.

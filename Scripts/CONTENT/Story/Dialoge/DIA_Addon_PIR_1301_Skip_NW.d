@@ -92,7 +92,7 @@ func void DIA_Addon_Skip_NW_WerBistDu_ja ()
 	else 
 	{
 		AI_Output (self, other, "DIA_Addon_Skip_NW_WerBistDu_ja_08_05"); //You haven't come to put me away, have you?
-		AI_Output (other, self, "DIA_Addon_Skip_NW_WerBistDu_ja_15_06"); //Weeell ...
+		AI_Output (other, self, "DIA_Addon_Skip_NW_WerBistDu_ja_15_06"); //Weeell...
 		AI_Output (self, other, "DIA_Addon_Skip_NW_WerBistDu_ja_08_07"); //Good for you. Pick a fight with old Skip, and you're history.
 	};
 	
@@ -145,7 +145,7 @@ func void DIA_Addon_Skip_NW_Baltram_Info ()
 	};
 	AI_Output	(self, other, "DIA_Addon_Skip_NW_Baltram_08_02"); //That's what I just said, isn't it?
 	AI_Output	(self, other, "DIA_Addon_Skip_NW_Baltram_08_03"); //That good-for-nothing junk merchant seems to have forgotten me.
-	AI_Output	(self, other, "DIA_Addon_Skip_NW_Baltram_08_04"); //If only I could get my hands on him ...
+	AI_Output	(self, other, "DIA_Addon_Skip_NW_Baltram_08_04"); //If only I could get my hands on him...
 	
 	Log_CreateTopic (TOPIC_Addon_BaltramSkipTrade, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Addon_BaltramSkipTrade, LOG_RUNNING);
@@ -263,7 +263,7 @@ func void DIA_Addon_Skip_SCSawGreg_Info ()
 	AI_Output	(self, other, "DIA_Addon_Skip_SCSawGreg_08_01"); //I know plenty of men with eyepatches.
 	AI_Output	(other, self, "DIA_Addon_Skip_SCSawGreg_15_02"); //There's someone roaming the land of Khorinis who seems to know you rather well.
 	AI_Output	(self, other, "DIA_Addon_Skip_SCSawGreg_08_03"); //Can't imagine who. I have no dealings with landlubbers.
-	AI_Output	(other, self, "DIA_Addon_Skip_SCSawGreg_15_04"); //But ...
+	AI_Output	(other, self, "DIA_Addon_Skip_SCSawGreg_15_04"); //But...
 	AI_Output	(self, other, "DIA_Addon_Skip_SCSawGreg_08_05"); //Leave it be, I'm really not interested.
 	B_GivePlayerXP (XP_Ambient);
 };
@@ -293,7 +293,7 @@ func int DIA_Addon_Skip_NW_MissingPeople_Condition ()
 func void DIA_Addon_Skip_NW_MissingPeople_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Skip_NW_MissingPeople_15_00"); //A lot of citizens are missing. And everything seems to indicate that you're not quite innocent in the matter.
-	AI_Output	(self, other, "DIA_Addon_Skip_NW_MissingPeople_08_01"); //(feels caught) Er ... damnit, it's not what you think it is.
+	AI_Output	(self, other, "DIA_Addon_Skip_NW_MissingPeople_08_01"); //(feels caught) Er... damnit, it's not what you think it is.
 	AI_Output	(self, other, "DIA_Addon_Skip_NW_MissingPeople_08_02"); //Do I look like a slave trader to you? No, I only transport goods. What they are and where they come from is no concern of mine.
 	AI_Output	(self, other, "DIA_Addon_Skip_NW_MissingPeople_08_03"); //We have shipped all kinds of things for those swine.
 	AI_Output	(self, other, "DIA_Addon_Skip_NW_MissingPeople_08_04"); //First it was just regular stuff. Well, sometimes it may have been contraband.
@@ -351,7 +351,7 @@ instance DIA_Addon_Skip_NW_Name		(C_INFO)
 	condition	 = 	DIA_Addon_Skip_NW_Name_Condition;
 	information	 = 	DIA_Addon_Skip_NW_Name_Info;
 
-	description	 = 	"Just 'bandits' isn't good enough for me. I want a name ...";
+	description	 = 	"Just 'bandits' isn't good enough for me. I want a name...";
 };
 
 func int DIA_Addon_Skip_NW_Name_Condition ()
@@ -365,8 +365,8 @@ func int DIA_Addon_Skip_NW_Name_Condition ()
 
 func void DIA_Addon_Skip_NW_Name_Info ()
 {
-	AI_Output	(other, self, "DIA_Addon_Skip_NW_Name_15_00"); //Just 'bandits' isn't good enough for me. I want a name ...
-	AI_Output	(self, other, "DIA_Addon_Skip_NW_Name_08_01"); //A name? You want to know who's leading the bandits? Damnit, what was that bastard's name again ...
+	AI_Output	(other, self, "DIA_Addon_Skip_NW_Name_15_00"); //Just 'bandits' isn't good enough for me. I want a name...
+	AI_Output	(self, other, "DIA_Addon_Skip_NW_Name_08_01"); //A name? You want to know who's leading the bandits? Damnit, what was that bastard's name again...
 	AI_Output	(self, other, "DIA_Addon_Skip_NW_Name_08_02"); //Mmh. I just can't recall his name. Even if it wasn't all that complicated.
 	AI_Output	(self, other, "DIA_Addon_Skip_NW_Name_08_03"); //But I can show you where to find the boss of the gang in this part of Khorinis.
 	AI_Output	(self, other, "DIA_Addon_Skip_NW_Name_08_04"); //Have you got a decent map?

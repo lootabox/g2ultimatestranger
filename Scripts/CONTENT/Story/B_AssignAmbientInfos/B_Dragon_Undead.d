@@ -120,7 +120,7 @@ func void DIA_Dragon_Undead_Hello_wer ()
 		};
 
 	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_08"); //Do you not feel the bond that ties us together? Yes. You know who I am.
-	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_wer_15_09"); //(confused) No. That cannot be. Xardas always said ...
+	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_wer_15_09"); //(confused) No. That cannot be. Xardas always said...
 	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_10"); //Xardas is weak and no threat to me. You alone are worthy of facing me.
 	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_11"); //So it is written. The time has come to accept your fate.
 	

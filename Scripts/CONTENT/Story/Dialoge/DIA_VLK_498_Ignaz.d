@@ -187,7 +187,7 @@ INSTANCE DIA_Ignaz_Running   (C_INFO)
 	condition   = DIA_Ignaz_Running_Condition;
 	information = DIA_Ignaz_Running_Info;
 	permanent   = FALSE;
-	description = "About the experiment ...";
+	description = "About the experiment...";
 };
 
 FUNC INT DIA_Ignaz_Running_Condition()
@@ -200,7 +200,7 @@ FUNC INT DIA_Ignaz_Running_Condition()
 };
 FUNC VOID DIA_Ignaz_Running_Info()
 {
-	AI_Output (other, self, "DIA_Ignaz_Running_15_00");//About the experiment ...
+	AI_Output (other, self, "DIA_Ignaz_Running_15_00");//About the experiment...
 	AI_Output (self, other, "DIA_Ignaz_Running_14_01");//Have you been successful, then? Or have you just wasted the spell scroll? Huh?
 	AI_Output (self, other, "DIA_Ignaz_Running_14_02");//If you need more spell scrolls, you can buy them from me.
 	

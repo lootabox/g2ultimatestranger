@@ -642,7 +642,7 @@ instance DIA_Jan_DragonPlettBericht		(C_INFO)
 	condition	 = 	DIA_Jan_DragonPlettBericht_Condition;
 	information	 = 	DIA_Jan_DragonPlettBericht_Info;
 
-	description	 = 	"About the dragons ...";
+	description	 = 	"About the dragons...";
 };
 
 var int DIA_Jan_DragonPlettBericht_NoPerm;

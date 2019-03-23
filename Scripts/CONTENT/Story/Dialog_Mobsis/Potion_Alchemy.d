@@ -1286,7 +1286,7 @@ INSTANCE PC_ItMi_Tabak (C_INFO)
 	condition		= PC_ItMi_Tabak_Condition;
 	information		= PC_ItMi_Tabak_Info;
 	permanent		= TRUE;
-	description		= "Blend tobacco ..."; 
+	description		= "Blend tobacco..."; 
 };
 
 FUNC INT PC_ItMi_Tabak_Condition()

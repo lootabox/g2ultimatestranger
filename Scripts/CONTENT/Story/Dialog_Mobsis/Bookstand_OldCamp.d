@@ -36,7 +36,7 @@ FUNC VOID Bookstand_Milten_03_S1()
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, "Corristo"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Maybe we can ward off a disaster. It doesn't bear thinking about what would happen if the free mine ..."					);
+					Doc_PrintLines	( nDocID,  1, "Maybe we can ward off a disaster. It doesn't bear thinking about what would happen if the free mine..."					);
 					Doc_Show		( nDocID );
 
 	};

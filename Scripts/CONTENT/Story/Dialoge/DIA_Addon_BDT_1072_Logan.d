@@ -218,7 +218,7 @@ FUNC VOID DIA_Addon_Logan_Why_Info()
 	AI_Output (self, other, "DIA_Addon_Logan_Why_10_03"); //Besides, I can show you how to gut the beasts.
 	AI_Output (self, other, "DIA_Addon_Logan_Why_10_04"); //But don't think Franco will send you straight into the camp just because we've had a little fun with the swampsharks here.
 	AI_Output (self, other, "DIA_Addon_Logan_Why_10_05"); //There are people out here who have been waiting a long time to get in.
-	AI_Output (self, other, "DIA_Addon_Logan_Why_10_06"); //And the next one who gets in is me... (growls)... it had better be...
+	AI_Output (self, other, "DIA_Addon_Logan_Why_10_06"); //And the next one who gets in is me... (growls) ... it had better be...
 	
 	Log_CreateTopic (Topic_Addon_BDT_Teacher,LOG_NOTE);
 	B_LogEntry 	(Topic_Addon_BDT_Teacher,"Logan can teach me to get pelts, claws and teeth.");	

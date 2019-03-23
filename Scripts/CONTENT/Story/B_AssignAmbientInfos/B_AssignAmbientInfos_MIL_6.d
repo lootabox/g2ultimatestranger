@@ -168,7 +168,7 @@ FUNC VOID DIA_MIL_6_STANDARD_Info()
 	if (Kapitel == 3)
 	{
 		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_05"); //It's getting worse and worse, what with all that riffraff coming to town. Last night I trailed a man in a black robe through the upper end of town.
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_06"); //I'm sure he was up to no good. But when I followed him around the governor's house, he had simply disappeared. A strange character, that was ...
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_06"); //I'm sure he was up to no good. But when I followed him around the governor's house, he had simply disappeared. A strange character, that was...
 	};
 
 	if (Kapitel == 4)

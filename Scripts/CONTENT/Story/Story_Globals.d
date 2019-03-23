@@ -69,7 +69,7 @@ var int MCArmor_Equipped;
 	Minecrawler Gürtel Protection Bonus?
 	Gürtel der täglichen Erfahrung  XP Ambient *2
 	Gürtel des tiere ausnehmens (alle AT TALENTS)
-	Gürtel der Heilung (1. Rezept heiltrank oder alle ...)
+	Gürtel der Heilung (1. Rezept heiltrank oder alle...)
 */
 var int KDF01_Equipped;
 var int KDF02_Equipped;
@@ -1302,8 +1302,8 @@ var int Bartok_TeachBow;     		//Bow - 30
 var int Ruga_TeachCrossbow;			//Crossbow - 60 für Miliz oder Pal
 //Diebestalente
 var int Cassia_TeachPickpocket;		//für 100 Gold oder umsonst (Attila)
-var int Jesper_TeachSneak;			//für 100 Gold ...
-var int Ramirez_TeachPicklock;		//für 100 Gold ...
+var int Jesper_TeachSneak;			//für 100 Gold...
+var int Ramirez_TeachPicklock;		//für 100 Gold...
 var int Thorben_TeachPicklock;		//für 200, wenn Gritta bezahlt für 100, wenn Schuldenbuch zurück umsonst
 //sonstige Talente
 var int Harad_TeachSmith;			//Common

@@ -1159,7 +1159,7 @@ INSTANCE ItMi_DoppelTabak(C_Item)
 	
 	description			= 	name;
 	
-	TEXT[2]				=  "Tastes a lot like apple ...";
+	TEXT[2]				=  "Tastes a lot like apple...";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };

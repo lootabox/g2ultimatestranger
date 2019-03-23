@@ -45,7 +45,7 @@ func int DIA_Randolph_SchwereLuft_Condition ()
 func void DIA_Randolph_SchwereLuft_Info ()
 {
 	AI_Output (other, self, "DIA_Randolph_SchwereLuft_15_00"); //Everything all right?
-	AI_Output (self, other, "DIA_Randolph_SchwereLuft_06_01"); //Hmm ... as soon as anyone says anything wrong around here, the dance starts ... so watch your step, or there'll be a slaughter.
+	AI_Output (self, other, "DIA_Randolph_SchwereLuft_06_01"); //Hmm... as soon as anyone says anything wrong around here, the dance starts... so watch your step, or there'll be a slaughter.
 	AI_Output (other, self, "DIA_Randolph_SchwereLuft_15_02"); //Will you join the fight?
 	AI_Output (self, other, "DIA_Randolph_SchwereLuft_06_03"); //I'm not going to just stand here when the ruckus starts. But I'm not going to push it either.
 	if (Akils_SLDStillthere == FALSE) {
@@ -139,8 +139,8 @@ func void DIA_Randolph_Baltram_Info ()
 	CreateInvItems 	(self, ItMi_BaltramPaket, 1 );
 	B_GiveInvItems (self, other, ItMi_BaltramPaket,1);
 	Lieferung_Geholt = TRUE;
-	B_LogEntry (TOPIC_Baltram, "I've got the shipment. I could take it to Baltram now ...");
-	B_LogEntry (TOPIC_Nagur,   "I've got the shipment. I could take it to Nagur now ...");
+	B_LogEntry (TOPIC_Baltram, "I've got the shipment. I could take it to Baltram now...");
+	B_LogEntry (TOPIC_Nagur,   "I've got the shipment. I could take it to Nagur now...");
 };
 
 ///////////////////////////////////////////////////////////////////////

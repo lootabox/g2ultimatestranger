@@ -226,7 +226,7 @@ func void DIA_Talbin_TEACHHUNTING_Fur_NW()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Fur))
 		{
-			AI_Output			(self, other, "DIA_Talbin_TEACHHUNTING_Fur_07_00"); //The easiest way to skin a lurker is to make a cut along the length of its belly ...
+			AI_Output			(self, other, "DIA_Talbin_TEACHHUNTING_Fur_07_00"); //The easiest way to skin a lurker is to make a cut along the length of its belly...
 			AI_Output			(self, other, "DIA_Talbin_TEACHHUNTING_Fur_07_01"); //... then tug on its hind legs and thus pull off the skin in one piece from back to front.
 		};
 	Info_ClearChoices	(DIA_Talbin_TEACHHUNTING_NW);

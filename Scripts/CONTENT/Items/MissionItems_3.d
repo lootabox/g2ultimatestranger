@@ -1247,11 +1247,11 @@ INSTANCE ItWr_VinosKellergeister_Mis (C_ITEM)
 					Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "... I've tried a lot in my time, but this fruit that was brought to me from abroad last week has exceeded all expectations ..."					);
+					Doc_PrintLines	( nDocID,  0, "... I've tried a lot in my time, but this fruit that was brought to me from abroad last week has exceeded all expectations..."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					//Absatz
-					Doc_PrintLines	( nDocID,  0, "... the juice of this grape is fruitier than any you'll find in this part of the country ..."					);
+					Doc_PrintLines	( nDocID,  0, "... the juice of this grape is fruitier than any you'll find in this part of the country..."					);
 					Doc_PrintLines	( nDocID,  0, "");
 
 					//2.Seite
@@ -1259,10 +1259,10 @@ INSTANCE ItWr_VinosKellergeister_Mis (C_ITEM)
 					Doc_SetFont 	( nDocID,  1, FONT_BookHeadline	   			); 	// -1 -> all pages
 					Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "... so far so good. But it still makes me nervous to think what might happen if I'm caught in my secret still. I've no idea what the militia will do to me if they find me here. They might even throw me through the Barrier ..."	);
+					Doc_PrintLines	( nDocID,  1, "... so far so good. But it still makes me nervous to think what might happen if I'm caught in my secret still. I've no idea what the militia will do to me if they find me here. They might even throw me through the Barrier..."	);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					//Absatz
-					Doc_PrintLines	( nDocID,  1, "... They've gotten suspicious. I'm going to go and leave all this until things have calmed down a bit and get back to work when I can be sure they're not onto me any more ...");
+					Doc_PrintLines	( nDocID,  1, "... They've gotten suspicious. I'm going to go and leave all this until things have calmed down a bit and get back to work when I can be sure they're not onto me any more...");
 					Doc_Show		( nDocID );
 };
 

@@ -184,8 +184,8 @@ func void DIA_Kati_Baltram_Info ()
 	CreateInvItems 	(self, ItMi_BaltramPaket, 1 );
 	B_GiveInvItems (self, other, ItMi_BaltramPaket,1);
 	Lieferung_Geholt = TRUE;
-	B_LogEntry (TOPIC_Baltram, "I've got the shipment. I could take it to Baltram now ...");
-	B_LogEntry (TOPIC_Nagur,   "I've got the shipment. I could take it to Nagur now ...");
+	B_LogEntry (TOPIC_Baltram, "I've got the shipment. I could take it to Baltram now...");
+	B_LogEntry (TOPIC_Nagur,   "I've got the shipment. I could take it to Nagur now...");
 };
 	
 ///////////////////////////////////////////////////////////////////////

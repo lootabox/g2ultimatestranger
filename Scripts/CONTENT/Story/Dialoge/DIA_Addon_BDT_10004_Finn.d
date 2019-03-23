@@ -457,7 +457,7 @@ FUNC VOID DIA_Addon_Finn_Again_Info()
 		AI_Output (self, other, "DIA_Addon_Finn_Again_07_01"); //I already told you everything I know.
 		
 		Info_ClearChoices (DIA_Addon_Finn_Again);
-		Info_AddChoice (DIA_Addon_Finn_Again, "OK... (back)", DIA_Addon_Finn_Again_Exit);
+		Info_AddChoice (DIA_Addon_Finn_Again, "Okay...", DIA_Addon_Finn_Again_Exit);
 		Info_AddChoice (DIA_Addon_Finn_Again, "Then tell me again!", DIA_Addon_Finn_Again_Nochmal);		
 	}
 	else

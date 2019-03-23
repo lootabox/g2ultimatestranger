@@ -157,7 +157,7 @@ FUNC VOID DIA_Cassia_News_Info()
 		AI_Output (self, other, "DIA_Cassia_News_16_04");//Just look who found his way here. Attila underestimated you. I'm not going to make the same mistake.
 		AI_Output (other, self, "DIA_Cassia_News_15_05");//What's being played here?
 		AI_Output (self, other, "DIA_Cassia_News_16_06");//We wanted you to die for blowing the whistle on a friend. That's why we sent Attila.
-		AI_Output (self, other, "DIA_Cassia_News_16_07");//Your presence here, however, opens up a new option ...
+		AI_Output (self, other, "DIA_Cassia_News_16_07");//Your presence here, however, opens up a new option...
 		AI_Output (other, self, "DIA_Cassia_News_15_08");//... what do you want to offer me?
 		AI_Output (self, other, "DIA_Cassia_News_16_09");//You can join us.
 	};
@@ -223,7 +223,7 @@ FUNC VOID DIA_Cassia_MissingPeople_Info()
 	AI_Output (self, other, "DIA_Addon_Cassia_Add_16_01"); //Why would that interest you?
 	AI_Output (other, self, "DIA_Addon_Cassia_Add_15_02"); //I want to find out what happened to them.
 	AI_Output (self, other, "DIA_Addon_Cassia_Add_16_03"); //When you emerge from the sewers, swim down along the coast to the right for a while.
-	AI_Output (self, other, "DIA_Addon_Cassia_Add_16_04"); //You're bound to find your answers there ...
+	AI_Output (self, other, "DIA_Addon_Cassia_Add_16_04"); //You're bound to find your answers there...
 };
 
 
@@ -413,7 +413,7 @@ FUNC VOID DIA_Cassia_Beitreten_Info()
 	Cassia_Frist = FALSE;
 };
 //////////////////////////////////////////////////////////////////////
-//	Info Und wenn ich euch nicht beitrete...? 
+//	Info Und wenn ich euch nicht beitrete..? 
 ///////////////////////////////////////////////////////////////////////
 INSTANCE DIA_Cassia_Ablehnen   (C_INFO)
 {
@@ -422,7 +422,7 @@ INSTANCE DIA_Cassia_Ablehnen   (C_INFO)
 	condition   = DIA_Cassia_Ablehnen_Condition;
 	information = DIA_Cassia_Ablehnen_Info;
 	permanent   = FALSE;
-	description = "And what if I don't want to join you ... ?";
+	description = "And what if I don't want to join you... ?";
 };
 
 FUNC INT DIA_Cassia_Ablehnen_Condition()
@@ -435,7 +435,7 @@ FUNC INT DIA_Cassia_Ablehnen_Condition()
 };
 FUNC VOID DIA_Cassia_Ablehnen_Info()
 {
-	AI_Output (other, self, "DIA_Cassia_Ablehnen_15_00");//And what if I don't want to join you ... ?
+	AI_Output (other, self, "DIA_Cassia_Ablehnen_15_00");//And what if I don't want to join you... ?
 	
 	if (MIS_ThiefGuild_sucked == FALSE)
 	{
@@ -519,7 +519,7 @@ FUNC VOID DIA_Cassia_BevorLernen_Info()
 		AI_Output (self, other, "DIA_Cassia_BevorLernen_16_02");//Sure. Pickpocketing and dexterity will cost you 100 gold pieces each.
 	
 		Info_ClearChoices (DIA_Cassia_BevorLernen);
-		Info_AddChoice 	  (DIA_Cassia_BevorLernen,"Maybe later ...(BACK)",DIA_Cassia_BevorLernen_Spaeter);
+		Info_AddChoice 	  (DIA_Cassia_BevorLernen,"Maybe later...(BACK)",DIA_Cassia_BevorLernen_Spaeter);
 		
 		if (Cassia_TeachPickpocket == FALSE && !Npc_GetTalentSkill(other,NPC_TALENT_PICKPOCKET))
 		{
@@ -784,7 +784,7 @@ INSTANCE DIA_Cassia_abgeben   (C_INFO)
 	condition   = DIA_Cassia_abgeben_Condition;
 	information = DIA_Cassia_abgeben_Info;
 	permanent   = TRUE;
-	description = "About the Blood Chalices ...";
+	description = "About the Blood Chalices...";
 };
 
 FUNC INT DIA_Cassia_abgeben_Condition()
@@ -797,7 +797,7 @@ FUNC INT DIA_Cassia_abgeben_Condition()
 };
 FUNC VOID DIA_Cassia_abgeben_Info()
 {
-	AI_Output (other, self, "DIA_Cassia_abgeben_15_00");//About the Blood Chalices ...
+	AI_Output (other, self, "DIA_Cassia_abgeben_15_00");//About the Blood Chalices...
 	
 	if B_GiveInvItems (other, self, ItMi_BloodCup_MIS,6)
 	{

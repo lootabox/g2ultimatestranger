@@ -388,7 +388,7 @@ FUNC VOID Use_Diary_BlackNovice()
 				Doc_PrintLines	( nDocID,  1, "I'd have sneaked into the great Hall ages ago. I can hardly wait to see the Master. I wonder if they'll let me see him once I'm one of them."	);
 				Doc_PrintLine	( nDocID,  1, ""					);
 				//Absatz
-				Doc_PrintLines	( nDocID,  1, "I tried my luck yesterday. But I failed the two lever chambers before I could even press the three switches in the west wing in the right order. That dog locked the chambers! Tomorrow I'm going to try and get the key off him ...");
+				Doc_PrintLines	( nDocID,  1, "I tried my luck yesterday. But I failed the two lever chambers before I could even press the three switches in the west wing in the right order. That dog locked the chambers! Tomorrow I'm going to try and get the key off him...");
 				Doc_Show		( nDocID );
 
 	if(Use_Diary_BlackNovice_Once == FALSE)
