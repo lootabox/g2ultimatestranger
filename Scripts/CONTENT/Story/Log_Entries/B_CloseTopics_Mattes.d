@@ -157,5 +157,6 @@ func void B_CloseTopics_Mattes ()
 	B_CloseTopic	(TOPIC_DiegosResidence, MIS_DiegosResidence,0,6); 	
 
 	B_CloseTopic	(TOPIC_TalbinCheese,0,Talbin_TeachAnimalTrophy,6);
+	B_CloseTopic	(TOPIC_KervoLurkers,MIS_Kervo_KillLurker,0,4);
 
 };

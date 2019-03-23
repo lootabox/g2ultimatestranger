@@ -259,6 +259,7 @@ Garwig will always loot or pick up the Sacred Hammer from NH after beating him.
 Garwig will know NH took the Sacred Hammer if NH has it equipped.
 Garwig will not tell NH about the hammer, if NH has the hammer.
 Garwig will talk with NH even if he has been caught for a crime.
+Geppert does not create a runestone or a lump of ore in his inventory if Kervo dies.
 Gerold can be asked whether he ever sleeps only before receiving the order from Garond to free Gorn.
 Gerold gives explicit options for giving stew and fish soup.
 Girion does not count towards max ship crew.
@@ -293,7 +294,7 @@ Kardif cannot be talked about Attila if he is nearby and the dialog option does 
 Kati can be asked about location of Bengar and Sekobs farms only before talking to them.
 Kati can die during his fight with the mercenaries.
 Kati can only be asked for Baltram's shipment and food after asking her whether she is alright.
-Kervo's quest cancels in chapter 4, causing Kerov and Geppert to be killed by a Lurker instead of them disappearing.
+Kervo's quest cancels in chapter 4, causing Kervo and Geppert to be killed by a Lurker instead of them disappearing.
 Kervo's quest fails if he is killed.
 Knight 263 can be asked for a report only if NH is paladin.
 Landlord will not give more then 5 beers per chapter and only 1 per day.
@@ -453,6 +454,7 @@ Following actions now create a log entry:
 * Using Oblivion spell while Ignaz' quest is running.
 * Grimbald agreeing to teach taking animal trophies.
 * Kati handing out Baltram's shipment.
+* Kervo asking to take care of lurkers outside his cave.
 * Randolph handing out Baltram's shipment.
 * Talbin asking for a cheese.
 

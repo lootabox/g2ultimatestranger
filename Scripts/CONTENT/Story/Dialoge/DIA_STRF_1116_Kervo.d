@@ -80,36 +80,34 @@ func void DIA_Kervo_HILFE_Info ()
 	Info_ClearChoices	(DIA_Kervo_HILFE);
 	Info_AddChoice	(DIA_Kervo_HILFE, "Well, I'm off, then.", DIA_Kervo_HILFE_tschau );
 	Info_AddChoice	(DIA_Kervo_HILFE, "But you can't stay here forever.", DIA_Kervo_HILFE_ewig );
-
-	if (Kervo_GotStuff == TRUE)
-	{
-		Info_AddChoice	(DIA_Kervo_HILFE, "What would you give me if I killed the things?", DIA_Kervo_HILFE_Problem );
-	};
-
-	MIS_Kervo_KillLurker = LOG_RUNNING;
+	Info_AddChoice	(DIA_Kervo_HILFE, "What would you give me if I killed the things?", DIA_Kervo_HILFE_Problem );
 };
 func void DIA_Kervo_HILFE_ewig ()
 {
 	AI_Output			(other, self, "DIA_Kervo_HILFE_ewig_15_00"); //But you can't stay here forever.
 	AI_Output			(self, other, "DIA_Kervo_HILFE_ewig_13_01"); //I've no idea what it is you want from me, but I can tell you this: you're not going to get me to leave here.
 };
-var int Kervo_PromiseNugget;
 func void DIA_Kervo_HILFE_Problem ()
 {
 	AI_Output			(other, self, "DIA_Kervo_HILFE_Problem_15_00"); //What would you give me if I killed the things?
 	AI_Output			(self, other, "DIA_Kervo_HILFE_Problem_13_01"); //Mmh. Well. It would be enough if those lurkers in front of the cave would disappear.
 	
+	MIS_Kervo_KillLurker = LOG_Running;
+	Log_CreateTopic(TOPIC_KervoLurkers,LOG_MISSION);
+	Log_SetTopicStatus(TOPIC_KervoLurkers,LOG_Running);
+
 	if (hero.guild == GIL_KDF)
 	{	
 		AI_Output			(self, other, "DIA_Kervo_HILFE_Problem_13_02"); //I found a blank runestone. Since you're a magician, I'm sure you can make use of it.
+		B_LogEntry(TOPIC_KervoLurkers,"An escaped convict Kervo promised me a runestone if I kill the lurkers in front of his cave.");
 	}
 	else
 	{
 		AI_Output			(self, other, "DIA_Kervo_HILFE_Problem_13_03"); //I found a lump of ore.
+		B_LogEntry(TOPIC_KervoLurkers,"An escaped convict Kervo promised me a lump of ore if I kill the lurkers in front of his cave.");
 	};
 
 	AI_Output			(self, other, "DIA_Kervo_HILFE_Problem_13_04"); //I would give it to you in exchange.
-	Kervo_PromiseNugget = TRUE;
 	AI_StopProcessInfos (self);
 };
 
@@ -130,21 +128,21 @@ instance DIA_Kervo_LurkerPlatt		(C_INFO)
 	condition	 = 	DIA_Kervo_LurkerPlatt_Condition;
 	information	 = 	DIA_Kervo_LurkerPlatt_Info;
 
-	description = 	"The lurkers in front of the cave are gone.";	
+	description = 	"The lurkers in front of the cave are gone.";
 };
 
 func int DIA_Kervo_LurkerPlatt_Condition ()
 {
-	if 	(MIS_Kervo_KillLurker == LOG_RUNNING)
+	if (Npc_KnowsInfo(other,DIA_Kervo_HILFE))
 	&& (Npc_IsDead(Kervo_Lurker1))
 	&& (Npc_IsDead(Kervo_Lurker2))
 	&& (Npc_IsDead(Kervo_Lurker3))
 	&& (Npc_IsDead(Kervo_Lurker4))
 	&& (Npc_IsDead(Kervo_Lurker5))
 	&& (Npc_IsDead(Kervo_Lurker6))
-		{
-			return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Kervo_LurkerPlatt_Info ()
@@ -152,21 +150,24 @@ func void DIA_Kervo_LurkerPlatt_Info ()
 	AI_Output			(other, self, "DIA_Kervo_LurkerPlatt_15_00"); //The lurkers in front of the cave are gone.
 	AI_Output			(self, other, "DIA_Kervo_LurkerPlatt_13_01"); //Great. Now I can breathe again at last.
 
-	if (Kervo_PromiseNugget == TRUE)
+	if (MIS_Kervo_KillLurker == LOG_Running)
 	{
 		AI_Output			(self, other, "DIA_Kervo_LurkerPlatt_13_02"); //Here's what I promised you.
-	
+
 		if (hero.guild == GIL_KDF)
 		{
-			B_GiveInvItems (self, other, ItMi_RuneBlank, 1);					
+			CreateInvItems(self,ItMi_RuneBlank,1);
+			B_GiveInvItems(self,other,ItMi_RuneBlank,1);
 		}
 		else
 		{
-			B_GiveInvItems (self, other, ItMi_Nugget, 1);					
-		};	
+			CreateInvItems(self,ItMi_Nugget,1);
+			B_GiveInvItems(self,other,ItMi_Nugget,1);
+		};
+
+		MIS_Kervo_KillLurker = LOG_SUCCESS;
 	};
 	B_GivePlayerXP (XP_KervoKillLurker);
-	MIS_Kervo_KillLurker = LOG_SUCCESS;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -179,7 +180,7 @@ instance DIA_Kervo_VERGISSES		(C_INFO)
 	information	 = 	DIA_Kervo_VERGISSES_Info;
 	permanent	 = 	TRUE;
 
-	description = 	"Will you cross the pass now?";	
+	description = 	"Will you cross the pass now?";
 };
 
 func int DIA_Kervo_VERGISSES_Condition ()
