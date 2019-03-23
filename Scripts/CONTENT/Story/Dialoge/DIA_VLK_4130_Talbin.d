@@ -228,9 +228,8 @@ INSTANCE DIA_Talbin_AskTeacher (C_INFO)
 	nr          = 10;
 	condition	= DIA_Talbin_AskTeacher_Condition;
 	information	= DIA_Talbin_AskTeacher_Info;
-
 	description = "Can you teach me about hunting?";
-};                       
+};
 
 FUNC INT DIA_Talbin_AskTeacher_Condition()
 {
@@ -238,8 +237,8 @@ FUNC INT DIA_Talbin_AskTeacher_Condition()
 	&& (Talbin_FollowsThroughPass == 0)
 	&& (Talbin_Runs == FALSE)
 	{
-				return TRUE;
-		};
+		return TRUE;
+	};
 };
 
 FUNC VOID DIA_Talbin_AskTeacher_Info()
@@ -249,9 +248,10 @@ FUNC VOID DIA_Talbin_AskTeacher_Info()
 	AI_Output(other,self,"DIA_Talbin_AskTeacher_15_02"); //What do you want for it?
 	AI_Output(self,other,"DIA_Talbin_AskTeacher_07_03"); //Would you happen to have anything to eat other than lurker meat? Maybe a hunk of cheese. Yes, a hunk of cheese. I could die for a hunk ...
 	AI_Output(other,self,"DIA_Talbin_AskTeacher_15_04"); //I'll see what I can do.
-		
-	Log_CreateTopic	(TOPIC_OutTeacher, LOG_NOTE);
-	B_LogEntry		(TOPIC_OutTeacher, "Talbin can teach me to take animal trophies.");
+	
+	Log_CreateTopic(TOPIC_TalbinCheese,LOG_MISSION);
+	Log_SetTopicStatus(TOPIC_TalbinCheese,LOG_Running);
+	B_LogEntry(TOPIC_TalbinCheese,"A hunter in the Valley of the Mines named Talbin will teach me to take trophies from animals if I bring him cheese.");
 };
 
 
@@ -267,18 +267,15 @@ INSTANCE DIA_Talbin_PayTeacher (C_INFO)
 	information	= DIA_Talbin_PayTeacher_Info;
 	permanent	= TRUE;
 	description = "Here's your cheese. Will you teach me now?";
-};                       
-
-var int DIA_Talbin_PayTeacher_noPerm;
+};
 
 FUNC INT DIA_Talbin_PayTeacher_Condition()
 {
-	if 	(
-		(Npc_KnowsInfo (other, DIA_Talbin_AskTeacher))
-		&& (DIA_Talbin_PayTeacher_noPerm == FALSE)
-		&& (Talbin_FollowsThroughPass == 0)
-		&& (Talbin_Runs == FALSE)
-		)
+	if (Npc_KnowsInfo (other, DIA_Talbin_AskTeacher))
+	&& (Talbin_TeachAnimalTrophy == FALSE)
+	&& (Talbin_FollowsThroughPass == FALSE)
+	&& (Talbin_Runs == FALSE)
+	&& (Npc_HasItems(other,ItFo_Cheese))
 	{
 		return TRUE;
 	};
@@ -286,20 +283,40 @@ FUNC INT DIA_Talbin_PayTeacher_Condition()
 
 FUNC VOID DIA_Talbin_PayTeacher_Info()
 {
-	if (B_GiveInvItems (other, self, itfo_Cheese, 1))
+	AI_Output(other,self,"DIA_Talbin_PayTeacher_15_00"); //Here's your cheese. Will you teach me now?
+	B_GiveInvItems (other, self, itfo_Cheese, 1);
+	AI_Output(self,other,"DIA_Talbin_PayTeacher_07_01"); //Really, you've got some? Oh man, it's been ages since I ate something like that. Thank you. Er, what about ... oh yeah. Sure!
+	Talbin_TeachAnimalTrophy = TRUE;
+	Log_CreateTopic	(TOPIC_OutTeacher, LOG_NOTE);
+	B_LogEntry		(TOPIC_OutTeacher, "Talbin can teach me to take animal trophies.");
+};
+
+INSTANCE DIA_Talbin_PayTeacher_NoCheese (C_INFO)
+{
+	npc			= VLK_4130_Talbin;
+	nr          = 11;
+	condition	= DIA_Talbin_PayTeacher_NoCheese_Condition;
+	information	= DIA_Talbin_PayTeacher_NoCheese_Info;
+	description = "I don't have any cheese at the moment!";
+};
+
+FUNC INT DIA_Talbin_PayTeacher_NoCheese_Condition()
+{
+	if (Npc_KnowsInfo (other, DIA_Talbin_AskTeacher))
+	&& (Talbin_TeachAnimalTrophy == FALSE)
+	&& (Talbin_FollowsThroughPass == FALSE)
+	&& (Talbin_Runs == FALSE)
+	&& (!Npc_HasItems(other,ItFo_Cheese))
 	{
-		AI_Output(other,self,"DIA_Talbin_PayTeacher_15_00"); //Here's your cheese. Will you teach me now?
-		AI_Output(self,other,"DIA_Talbin_PayTeacher_07_01"); //Really, you've got some? Oh man, it's been ages since I ate something like that. Thank you. Er, what about ... oh yeah. Sure!
-		Talbin_TeachAnimalTrophy = TRUE;
-		DIA_Talbin_PayTeacher_noPerm = TRUE;
-	}
-	else	//SC hat keinen Käse
-	{
-		AI_Output(other,self,"DIA_Talbin_PayTeacher_15_02"); //I don't have any cheese at the moment!
-		AI_Output(self,other,"DIA_Talbin_PayTeacher_07_03"); //It would just have been too good to be true. Tell me when you've got some!
+		return TRUE;
 	};
 };
 
+FUNC VOID DIA_Talbin_PayTeacher_NoCheese_Info()
+{
+	AI_Output(other,self,"DIA_Talbin_PayTeacher_15_02"); //I don't have any cheese at the moment!
+	AI_Output(self,other,"DIA_Talbin_PayTeacher_07_03"); //It would just have been too good to be true. Tell me when you've got some!
+};
 
 ///////////////////////////////////////////////////////////////////////
 //	Info TeachHunting
@@ -319,48 +336,42 @@ func int DIA_Talbin_TEACHHUNTING_Condition ()
 	if (Talbin_TeachAnimalTrophy == TRUE)
 	&& (Talbin_FollowsThroughPass == 0)
 	&& (Talbin_Runs == FALSE)
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Talbin_TEACHHUNTING_Info ()
 {
 	AI_Output			(other, self, "DIA_Talbin_TEACHHUNTING_15_00"); //What can you teach me?
-		if 	(
-				(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
-				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)
-				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_ShadowHorn] == FALSE)
-				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Heart] == FALSE)
-			)
-		{
-			AI_Output			(self, other, "DIA_Talbin_TEACHHUNTING_07_01"); //What do you want to know?
-		
-
-			Info_AddChoice		(DIA_Talbin_TEACHHUNTING, DIALOG_BACK, DIA_Talbin_TEACHHUNTING_BACK);
-		
-			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
-			{ 
-				Info_AddChoice	(DIA_Talbin_TEACHHUNTING, B_BuildLearnString ("Remove claws",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Claws)),  DIA_Talbin_TEACHHUNTING_Claws);
-			};
-			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)
-			{ 
-				Info_AddChoice	(DIA_Talbin_TEACHHUNTING, B_BuildLearnString ("Skin",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Fur)),  DIA_Talbin_TEACHHUNTING_Fur);
-			};
-			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_ShadowHorn] == FALSE)
-			{ 
-				Info_AddChoice	(DIA_Talbin_TEACHHUNTING, B_BuildLearnString ("Shadowbeast horn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_ShadowHorn)),  DIA_Talbin_TEACHHUNTING_ShadowHorn);
-			};
-			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Heart] == FALSE)
-			{ 
-				Info_AddChoice	(DIA_Talbin_TEACHHUNTING, B_BuildLearnString ("Remove heart",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Heart)),  DIA_Talbin_TEACHHUNTING_Heart);
-			};
-
-		}
-		else
-		{
-			AI_Output			(self, other, "DIA_Talbin_TEACHHUNTING_07_02"); //I'll have to disappoint you there. You already know everything I could teach you. Still, thanks again for the cheese!
+	if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_ShadowHorn] == FALSE)
+	|| (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Heart] == FALSE)
+	{
+		AI_Output			(self, other, "DIA_Talbin_TEACHHUNTING_07_01"); //What do you want to know?
+		Info_AddChoice		(DIA_Talbin_TEACHHUNTING, DIALOG_BACK, DIA_Talbin_TEACHHUNTING_BACK);
+		if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
+		{ 
+			Info_AddChoice	(DIA_Talbin_TEACHHUNTING, B_BuildLearnString ("Remove claws",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Claws)),  DIA_Talbin_TEACHHUNTING_Claws);
 		};
+		if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)
+		{ 
+			Info_AddChoice	(DIA_Talbin_TEACHHUNTING, B_BuildLearnString ("Skin",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Fur)),  DIA_Talbin_TEACHHUNTING_Fur);
+		};
+		if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_ShadowHorn] == FALSE)
+		{ 
+			Info_AddChoice	(DIA_Talbin_TEACHHUNTING, B_BuildLearnString ("Shadowbeast horn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_ShadowHorn)),  DIA_Talbin_TEACHHUNTING_ShadowHorn);
+		};
+		if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Heart] == FALSE)
+		{ 
+			Info_AddChoice	(DIA_Talbin_TEACHHUNTING, B_BuildLearnString ("Remove heart",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Heart)),  DIA_Talbin_TEACHHUNTING_Heart);
+		};
+	}
+	else
+	{
+		AI_Output			(self, other, "DIA_Talbin_TEACHHUNTING_07_02"); //I'll have to disappoint you there. You already know everything I could teach you. Still, thanks again for the cheese!
+	};
 };
 
 func void DIA_Talbin_TEACHHUNTING_BACK()
@@ -493,12 +504,13 @@ instance DIA_Talbin_KAP4_WASNEUES		(C_INFO)
 
 func int DIA_Talbin_KAP4_WASNEUES_Condition ()
 {
-	if 	(Kapitel >= 4)
-		&& (Talbin_FollowsThroughPass == 0)
-		&& (Talbin_Runs == FALSE)
-		{
-				return TRUE;
-		};
+	if (Kapitel >= 4)
+	&& (Talbin_FollowsThroughPass == 0)
+	&& (Talbin_Runs == FALSE)
+	&& (Npc_KnowsInfo(other,DIA_Garond_BACKINKAP4))
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Talbin_KAP4_WASNEUES_Info ()

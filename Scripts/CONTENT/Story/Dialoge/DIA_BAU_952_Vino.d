@@ -347,6 +347,7 @@ func int DIA_Vino_Obesessed_Condition ()
 
 func void DIA_Vino_Obesessed_Info ()
 {
+	AI_Output			(other, self, "DIA_Vino_Obesessed_15_00"); //What's wrong?
 	if (Npc_IsDead(DMT_Vino1))
 	&& (Npc_IsDead(DMT_Vino2))
 	&& (Npc_IsDead(DMT_Vino3))
@@ -356,7 +357,6 @@ func void DIA_Vino_Obesessed_Info ()
 	}
 	else
 	{
-		AI_Output			(other, self, "DIA_Vino_Obesessed_15_00"); //What's wrong?
 		AI_Output			(self, other, "DIA_Vino_Obesessed_05_01"); //(bellows) Damn, beat it. Otherwise, they'll kill me.
 		AI_EquipBestMeleeWeapon(self);
 		AI_StopProcessInfos (self);

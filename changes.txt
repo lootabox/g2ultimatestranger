@@ -154,6 +154,7 @@ Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, 
 Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patrick, Monty, Tonak, Telbor, Pardos.
 Fixed issue with dragon dialog restarting quest 'Dragon Eggs', if it was already completed.
 Fixed logical issues with dialogue of Diego, Fernando, Lobart, Lothar, Ramon, Ulf, Vatras, Xardas.
+Fixed skipping of NH dialog line when talking to possessed NPCs for Bromor, Brutus, Engrom, Fernando, Malak, Sekob, Vino.
 Fixed mages to not loot the player while in the city for Daron, Myxir and Vatras.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
 Fixed wrong or inconsistent style of dialogue text for Agon, Babo, Bartok, Bosper, Bill, Cassia, Diego, Edgor, Gaan, Gorax, Hyglas, Jesper, Jergan, Karras, Kati, Lares, Lobart, Martin, Milten, Orlan, Pardos, Parlan, Peck, Pyrokar, Ramirez, Randolph, Raoul, Saturas, Scatty, Skinner, Vatras and NH for giving a potion to anyone.
@@ -360,7 +361,11 @@ Sergio can only be asked about access to library if NH has not already achieved 
 Skinner can be asked about the attack on Esteban during the daytime without him getting angry.
 Skip quest cancels if he is killed.
 Sylvio attacking NH causes Biff to attack Bullco as well, if he is with NH.
+Talbin can only be asked about people passing by the river once the Dragon Hunters have moved to the river banks.
+Talbin must actually be escorted through the pass to complete his quest and doesn't spawn on Bengars farm right away.
 Talbin wields a Wolf Blade instead of a branch.
+Talbin will teach NH hunting once escorted to Khorinis.
+Talbins dialog creates a journal note of him being a teacher only after he agrees to teach NH.
 Thekla now grants previously omitted XP bonus for defeating Bullco.
 Torlof won't be asked about location of Bengar or Sekobs farm if player already met them.
 Ulf does not randomly die in the beginning of chapter 3.
@@ -449,6 +454,7 @@ Following actions now create a log entry:
 * Grimbald agreeing to teach taking animal trophies.
 * Kati handing out Baltram's shipment.
 * Randolph handing out Baltram's shipment.
+* Talbin asking for a cheese.
 
 Following events do not create overlapping messages:
 * Kati handing out bread, water and meat.

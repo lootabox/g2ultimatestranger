@@ -505,7 +505,7 @@ instance DIA_Brutus_PERM4		(C_INFO)
 	information	 = 	DIA_Brutus_PERM4_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Are you crazy?";
+	description	 = 	"Are you all right?";
 };
 
 func int DIA_Brutus_PERM4_Condition ()
@@ -520,31 +520,28 @@ func int DIA_Brutus_PERM4_Condition ()
 
 func void DIA_Brutus_PERM4_Info ()
 {
-
-	if 	(
-			(MIS_OCGateOpen == TRUE) 
-			|| ((hero.guild == GIL_KDF)&& (Kapitel >= 5))
-		)
-		{						
-			B_NpcObsessedByDMT (self);
-		}
-		else 
- 		{
-			AI_Output			(other, self, "DIA_Brutus_PERM4_15_00"); //Are you all right?
-			AI_Output			(self, other, "DIA_Brutus_PERM4_06_01"); //(apprehensively) And you are sure that those meatbugs are gone?
-			AI_Output			(other, self, "DIA_Brutus_PERM4_15_02"); //Ahem ... look, there's one right behind you.
-			AI_Output			(self, other, "DIA_Brutus_PERM4_06_03"); //(bellows) What?
+	AI_Output			(other, self, "DIA_Brutus_PERM4_15_00"); //Are you all right?
+	if (MIS_OCGateOpen == TRUE) 
+	|| ((hero.guild == GIL_KDF) && (Kapitel >= 5))
+	{						
+		B_NpcObsessedByDMT (self);
+	}
+	else 
+	{
+		AI_Output			(self, other, "DIA_Brutus_PERM4_06_01"); //(apprehensively) And you are sure that those meatbugs are gone?
+		AI_Output			(other, self, "DIA_Brutus_PERM4_15_02"); //Ahem ... look, there's one right behind you.
+		AI_Output			(self, other, "DIA_Brutus_PERM4_06_03"); //(bellows) What?
+	
+		B_NpcClearObsessionByDMT (self);
 		
-			B_NpcClearObsessionByDMT (self);
-			
-			
-			Npc_SetTarget 		(self, other);
-			
-			self.aivar[AIV_INVINCIBLE] = FALSE; //HACK, weil durch AI_StartState (böse) Flag nicht zurückgesetzt wird 
-			other.aivar[AIV_INVINCIBLE] = FALSE;
-			
-			AI_StartState 		(self, ZS_Flee, 0, "");
-		 };		
+		
+		Npc_SetTarget 		(self, other);
+		
+		self.aivar[AIV_INVINCIBLE] = FALSE; //HACK, weil durch AI_StartState (böse) Flag nicht zurückgesetzt wird 
+		other.aivar[AIV_INVINCIBLE] = FALSE;
+		
+		AI_StartState 		(self, ZS_Flee, 0, "");
+	};
 };	
 
 ///////////////////////////////////////////////////////////////////////

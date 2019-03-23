@@ -570,6 +570,7 @@ func int DIA_Sekob_PERM_Condition ()
 
 func void DIA_Sekob_PERM_Info ()
 {
+	AI_Output		(other, self, "DIA_Sekob_PERM_15_00"); //Has anything happened in the meantime?
 	if (hero.guild == GIL_KDF)
 	&& (Kapitel >= 5)
 	{
@@ -577,8 +578,6 @@ func void DIA_Sekob_PERM_Info ()
 	}
 	else
 	{
-		AI_Output		(other, self, "DIA_Sekob_PERM_15_00"); //Has anything happened in the meantime?
-		
 		if (MIS_bringRosiBackToSekob == LOG_FAILED)
 		{
 			AI_Output		(self, other, "DIA_Sekob_PERM_01_01"); //Beat it.

@@ -331,6 +331,7 @@ var int DIA_Bromor_Obsession_GotMoney;
 
 func void DIA_Bromor_Obsession_Info ()
 {
+	AI_Output			(other, self, "DIA_Brutus_PERM4_15_00"); //Are you all right?
 	B_NpcObsessedByDMT (self);
 };
 

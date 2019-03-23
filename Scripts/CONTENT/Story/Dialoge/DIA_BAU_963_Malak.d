@@ -376,19 +376,19 @@ func int DIA_Malak_FLEEFROMPASS_Condition ()
 
 func void DIA_Malak_FLEEFROMPASS_Info ()
 {
+	AI_Output			(other, self, "DIA_Malak_FLEEFROMPASS_15_00"); //What are you doing here?
 	if 	(NpcObsessedByDMT_Malak == FALSE)
 	&& (hero.guild == GIL_KDF)
 	{
-	B_NpcObsessedByDMT (self);
+		B_NpcObsessedByDMT (self);
 	}
 	else
 	{
-	AI_Output			(other, self, "DIA_Malak_FLEEFROMPASS_15_00"); //What are you doing here?
-	AI_Output			(self, other, "DIA_Malak_FLEEFROMPASS_08_01"); //I fled here from Bengar's farm. I didn't want to be butchered by all the creatures coming out of the pass.
-	AI_Output			(self, other, "DIA_Malak_FLEEFROMPASS_08_02"); //You can't imagine what sort of things came out of the pass the last few days.
-	AI_Output			(other, self, "DIA_Malak_FLEEFROMPASS_15_03"); //I can.
-	B_LogEntry (TOPIC_BengarALLEIN,"Malak's entrenched himself in the south because he's scared of the creatures that were coming up to the high pastures from the pass."); 
-	B_GivePlayerXP (XP_FoundMalakFLEEFROMPASS);
+		AI_Output			(self, other, "DIA_Malak_FLEEFROMPASS_08_01"); //I fled here from Bengar's farm. I didn't want to be butchered by all the creatures coming out of the pass.
+		AI_Output			(self, other, "DIA_Malak_FLEEFROMPASS_08_02"); //You can't imagine what sort of things came out of the pass the last few days.
+		AI_Output			(other, self, "DIA_Malak_FLEEFROMPASS_15_03"); //I can.
+		B_LogEntry (TOPIC_BengarALLEIN,"Malak's entrenched himself in the south because he's scared of the creatures that were coming up to the high pastures from the pass."); 
+		B_GivePlayerXP (XP_FoundMalakFLEEFROMPASS);
 	};
 };
 

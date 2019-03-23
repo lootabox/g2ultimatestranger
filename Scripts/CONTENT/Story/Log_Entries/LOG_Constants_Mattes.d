@@ -171,3 +171,5 @@ const string	Topic_BabosDocs		 			 = "Documents";
 const string	TOPIC_Wolf_BringCrawlerPlates	 = "The Crawler Armor";
 const string	TOPIC_HelpDiegoNW		 		 = "Diego's Gold";
 const string	TOPIC_DiegosResidence		 	 = "Diego's Business";
+
+const string	TOPIC_TalbinCheese				 = "Cheese for Talbin";

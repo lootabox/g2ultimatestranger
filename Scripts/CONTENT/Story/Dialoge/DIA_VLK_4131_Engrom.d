@@ -40,9 +40,9 @@ instance DIA_Engrom_HALLO		(C_INFO)
 func int DIA_Engrom_HALLO_Condition ()
 {
 	if (Kapitel <= 3)
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Engrom_HALLO_Info ()
@@ -71,9 +71,9 @@ func int DIA_Engrom_WhatAboutLeaving_Condition ()
 {
 	if (Npc_KnowsInfo(other, DIA_Engrom_HALLO))
 	&& (Kapitel <= 3)
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Engrom_WhatAboutLeaving_Info ()
@@ -212,6 +212,7 @@ func int DIA_Engrom_B_NpcObsessedByDMT_Condition ()
 
 func void DIA_Engrom_B_NpcObsessedByDMT_Info ()
 {
+	AI_Output (other,self ,"DIA_JAN_NACHOCGATEOPEN_15_00"); //Everything all right?
 	MIS_Tabin_LookForEngrom = LOG_SUCCESS;
 	B_NpcObsessedByDMT (self);
 };
@@ -236,14 +237,13 @@ func int DIA_Engrom_BESSEN_Condition ()
  	&& (NpcObsessedByDMT == FALSE)
 	&& (Kapitel >= 4)	
 	 {
-				return TRUE;
+		return TRUE;
 	 };
 };
 
 func void DIA_Engrom_BESSEN_Info ()
 {
 	AI_Output			(other, self, "DIA_Engrom_BESSEN_15_00"); //Evil has taken possession of you.
-
 	AI_Output			(other, self, "DIA_Engrom_BESSEN_15_01"); //Let me help you.
 	AI_Output			(self, other, "DIA_Engrom_BESSEN_12_02"); //(screams) Don't touch me!
 

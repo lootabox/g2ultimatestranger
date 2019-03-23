@@ -414,13 +414,14 @@ func int DIA_Fernando_Obsession_Condition ()
 	if (Kapitel >= 3)
 	&& (NpcObsessedByDMT_Fernando == FALSE)
 	&& (hero.guild == GIL_KDF)
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Fernando_Obsession_Info ()
 {
+	AI_Output			(other, self, "DIA_Brutus_PERM4_15_00"); //Are you all right?
 	B_NpcObsessedByDMT (self);
 };
 
