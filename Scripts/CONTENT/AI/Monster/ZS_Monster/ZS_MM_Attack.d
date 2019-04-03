@@ -69,13 +69,32 @@ func int ZS_MM_Attack_Loop ()
 	// ------ Dragon ------
 	if (self.guild == GIL_DRAGON)
 	{
-		/* self.aivar[AIV_TAPOSITION] += 1;
+		self.aivar[AIV_TAPOSITION] += 1;
 		if (self.attribute[ATR_HITPOINTS] < self.attribute[ATR_HITPOINTS_MAX])
-		&& (self.aivar[AIV_TAPOSITION] >= 2)
+		&& (self.aivar[AIV_TAPOSITION] >= 15) // 1/(max-min)/(1/2)
 		{
 			self.attribute[ATR_HITPOINTS] += 1;
-			self.aivar[AIV_TAPOSITION] = 0;
-		}; */
+			if(self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_SWAMP)
+			{
+				self.aivar[AIV_TAPOSITION] = 0; // 13%
+			}
+			else if(self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ROCK)
+			{
+				self.aivar[AIV_TAPOSITION] = 3; // 16%
+			}
+			else if(self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_FIRE || Hlp_GetInstanceID(self) == Hlp_GetInstanceID(FireDragonIsland))
+			{
+				self.aivar[AIV_TAPOSITION] = 6; // 22%
+			}
+			else if(self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ICE)
+			{
+				self.aivar[AIV_TAPOSITION] = 9; // 33%
+			}
+			else if(self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_UNDEAD)
+			{
+				self.aivar[AIV_TAPOSITION] = 12; // 66%
+			};
+		};
 
 		// Parade
 		if((Npc_GetDistToNpc(self,other) < 3000) && (Npc_GetDistToNpc(self,other) > 2000))

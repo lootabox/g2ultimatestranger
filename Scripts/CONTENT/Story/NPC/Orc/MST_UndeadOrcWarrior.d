@@ -10,6 +10,8 @@ PROTOTYPE Mst_Default_UndeadOrcWarrior (C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_UNDEADORCWARRIOR;
 	level							=	40;
 	
+	bodyStateInterruptableOverride	=	TRUE;
+	
 	//----- Attribute -----	
 	attribute	[ATR_STRENGTH]		=	100; //+100 Waffe //MIN 120!
 	attribute	[ATR_DEXTERITY]		=	200; 

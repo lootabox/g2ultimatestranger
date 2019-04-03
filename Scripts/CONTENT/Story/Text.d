@@ -706,9 +706,10 @@ const string NAME_Dex_needed	= "Dexterity required:";
 const string NAME_Spell_Load	= "Boostable spell";
 const string NAME_Spell_Invest	= "Sustainable spell";
 
-const string NAME_Dam_Edge		= "Weapon damage:";
-const string NAME_Dam_Point		= "Arrow damage:";
-const string NAME_Dam_Fire		= "Fire damage:";
+const string NAME_Dam_Blunt		= "Blunt damage:";
+const string NAME_Dam_Edge		= "Edge damage:";
+const string NAME_Dam_Point		= "Point damage:";
+//const string NAME_Dam_Fire		= "Fire damage:";
 const string NAME_Dam_Magic		= "Magic damage:";
 const string NAME_Dam_Fly		= "Wind damage:";
 
@@ -717,8 +718,9 @@ const string NAME_Damage_Max	= "Maximum damage:";
 const string NAME_PerMana		= " (per mana)";
 const string NAME_DamagePerSec	= "Damage per sec.:";
 
-const string NAME_Prot_Edge		= "Weapon protection:";
-const string NAME_Prot_Point	= "Arrow protection:";
+const string NAME_Prot_Blunt	= "Blunt protection:";
+const string NAME_Prot_Edge		= "Edge protection:";
+const string NAME_Prot_Point	= "Point protection:";
 const string NAME_Prot_Fire		= "Dragon fire protection:";
 const string NAME_Prot_Magic	= "Magic protection:";
 

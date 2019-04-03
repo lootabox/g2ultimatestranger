@@ -86,18 +86,21 @@ INSTANCE ITAR_Governor (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -126,18 +129,21 @@ INSTANCE ITAR_JUDGE (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -166,18 +172,21 @@ INSTANCE ITAR_SMITH (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+	/* 
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -206,25 +215,28 @@ INSTANCE ITAR_BARKEEPER (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
 // ******************************************************
 INSTANCE ITAR_VLK_L (C_Item)
 {
-	name 					=	"Citizen's Clothing";
+	name 					=	"Citizen's Clothing 1";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -246,25 +258,28 @@ INSTANCE ITAR_VLK_L (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;		
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;	
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
 // ******************************************************
 INSTANCE ITAR_VLK_M (C_Item)
 {
-	name 					=	"Citizen's Clothing";
+	name 					=	"Citizen's Clothing 2";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -286,25 +301,28 @@ INSTANCE ITAR_VLK_M (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
 // ******************************************************
 INSTANCE ITAR_VLK_H (C_Item)
 {
-	name 					=	"Citizen's Clothing";
+	name 					=	"Citizen's Clothing 3";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -326,14 +344,21 @@ INSTANCE ITAR_VLK_H (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
+
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -362,18 +387,21 @@ instance ITAR_VlkBabe_L (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;		
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;	
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -402,18 +430,21 @@ INSTANCE ITAR_VlkBabe_M (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -442,14 +473,21 @@ INSTANCE ITAR_VlkBabe_H (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
+
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -481,18 +519,21 @@ INSTANCE ITAR_MIL_L (C_Item)
 	
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;	
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;	
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -556,14 +597,21 @@ INSTANCE ITAR_MIL_M (C_Item)
 	
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
+
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -624,17 +672,20 @@ INSTANCE ITAR_PAL_M (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -664,17 +715,20 @@ INSTANCE ITAR_PAL_H (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -704,18 +758,21 @@ INSTANCE ITAR_BAU_L (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				=	 protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -744,18 +801,21 @@ INSTANCE ITAR_BAU_M (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -784,14 +844,21 @@ INSTANCE ITAR_BauBabe_L (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
+
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -820,14 +887,21 @@ INSTANCE ITAR_BauBabe_M (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
+
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -859,18 +933,21 @@ INSTANCE ITAR_SLD_L (C_Item)
 	
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;		
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;	
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -935,17 +1012,20 @@ INSTANCE ITAR_SLD_M (C_Item)
 	
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+	 */
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -1010,14 +1090,21 @@ INSTANCE ITAR_SLD_H (C_Item)
 	
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
+
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -1081,18 +1168,21 @@ INSTANCE ITAR_DJG_Crawler (C_Item)
 	
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+	/* 
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -1153,17 +1243,20 @@ INSTANCE ITAR_DJG_L (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -1193,17 +1286,20 @@ INSTANCE ITAR_DJG_M (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;		
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -1233,17 +1329,20 @@ INSTANCE ITAR_DJG_H (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -1273,18 +1372,21 @@ INSTANCE ITAR_DJG_BABE (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+	/* 
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -1316,17 +1418,20 @@ INSTANCE ITAR_NOV_L (C_Item)
 	
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;		
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+	 */
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -1392,17 +1497,20 @@ INSTANCE ITAR_KDF_L (C_Item)
 	
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -1467,17 +1575,20 @@ INSTANCE ITAR_KDF_H (C_Item)
 	
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				=	 protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -1525,7 +1636,7 @@ INSTANCE ITAR_Leather_L (C_Item)
 	protection [PROT_EDGE]	=	25;
 	protection [PROT_BLUNT] = 	25;
 	protection [PROT_POINT] = 	20;
-	protection [PROT_FIRE] 	= 	 5;
+	protection [PROT_FIRE] 	= 	 0;
 	protection [PROT_MAGIC] = 	 0;
 
 	value 					=	VALUE_ITAR_Leather_L;
@@ -1542,14 +1653,21 @@ INSTANCE ITAR_Leather_L (C_Item)
 	
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
+	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -1610,19 +1728,23 @@ INSTANCE ITAR_BDT_M (C_Item)
 
 	description				=	name;
 	
-	TEXT[0]					= 	PRINT_Addon_BDTArmor;
+	TEXT[4]					= 	PRINT_Addon_BDTArmor;
+
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -1651,19 +1773,23 @@ INSTANCE ITAR_BDT_H (C_Item)
 
 	description				=	name;
 
-	TEXT[0]					= 	PRINT_Addon_BDTArmor;
+	TEXT[4]					= 	PRINT_Addon_BDTArmor;
+
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -1692,14 +1818,21 @@ INSTANCE ITAR_XARDAS (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
+
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -1728,18 +1861,21 @@ INSTANCE ITAR_LESTER (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -1768,18 +1904,21 @@ INSTANCE ITAR_Diego (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -1808,17 +1947,20 @@ INSTANCE ITAR_CorAngar (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -1848,14 +1990,21 @@ INSTANCE ITAR_Dementor (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
+
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -1884,17 +2033,20 @@ INSTANCE ITAR_KDW_H (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -1924,18 +2076,21 @@ instance ITAR_Prisoner (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };

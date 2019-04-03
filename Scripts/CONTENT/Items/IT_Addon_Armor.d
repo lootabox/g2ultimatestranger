@@ -34,18 +34,21 @@ INSTANCE ITAR_PIR_L_Addon (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -75,18 +78,21 @@ INSTANCE ITAR_PIR_M_Addon (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -116,18 +122,21 @@ INSTANCE ITAR_PIR_H_Addon (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -157,19 +166,23 @@ INSTANCE ITAR_Thorus_Addon (C_Item)
 
 	description				=	"Armor for Raven's guard";
 
-	TEXT[0]					= 	PRINT_Addon_BDTArmor;
+	TEXT[4]					= 	PRINT_Addon_BDTArmor;
+	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -199,17 +212,20 @@ INSTANCE ITAR_Raven_Addon (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -240,18 +256,21 @@ INSTANCE ITAR_OreBaron_Addon (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -281,17 +300,20 @@ INSTANCE ITAR_RANGER_Addon (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+	 */
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -352,17 +374,20 @@ INSTANCE ITAR_KDW_L_Addon (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -393,18 +418,21 @@ INSTANCE ITAR_Bloodwyn_Addon (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	 */
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -434,17 +462,20 @@ INSTANCE ITAR_MayaZombie_Addon (C_Item)
 
 	description				=	name;
 
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
 	
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
@@ -483,14 +514,21 @@ instance ItAr_FireArmor_Addon (C_Item)
 
 	description				=	name;
 	
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
 	TEXT[1]					=	NAME_Prot_Edge;			
 	COUNT[1]				= 	protection	[PROT_EDGE];
+
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
+
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
