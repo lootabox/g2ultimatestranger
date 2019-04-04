@@ -19,13 +19,6 @@ Default menu option when not ingame is load game instead of new game.
 Music is changed to the installation theme.
 
 
-	Ingame menus
-
-Arrow protection is renamed to Point protection.
-Fire protection is renamed to Dragon fire protection.
-Weapon protection is renamed to Edge protection.
-
-
 	Shrine of Innos
 
 Specific gold amounts cannot be donated. Instead for every level gained, up to 60, a donation can be made for an attribute bonus. The amount of gold required depends on donation prayers made and hero level. The bonus is not tied to guilds in any way and the different attributes receive bonuses inline with each other (pseudo random). The first 12 prayers always increase health. In addition the hero can pray without donating for full health or mana once per day.
@@ -43,13 +36,6 @@ NPCs only loot gold from NH who was caught stealing or by people who are thieves
 NPCs only take the weapon from NH if he was caught doing something violent or threatening.
 
 
-	Alchemy
-
-Alchemist's bench does not automatically kick you out of the dialog, unless completely out of Lab Water Bottles.
-It is possible to create Double Apple tobacco and all tobacco have their prices adjusted based on their ingredients.
-Making joints and tobacco does not consume Lab Water Bottles, though one is needed to use the Alchemy Table.
-
-
 	Smithing
 
 Anvil does not automatically kick you out of the dialog, unless completely out of Red Hot Steel.
@@ -57,77 +43,11 @@ Ore weapon forging option is visible only if NH knows how to make them.
 When missing production items and failing to craft something, anvil gives back Red Hot Steel instead of Raw Steel.
 
 
-	Food
-
-Chompers, Rats, Shadowbeasts, Wargs and Wolves no longer drop Raw Meat.
-Snapperweed effect lasts four times as long.
-
-
-	Enemies
-
-Fire Devils, Golems, Shadowbeasts, Shadowbeast Skeletons, Trolls Undead Orcs and Zombies do not flinch and cannot be interrupted.
-
-Dragon regeneration is only 13% to 66% as fast, depending on dragon type.
-Dragons do not try to use breath attack when target is too far.
-Ghost Light is renamed to Will-o'-the-wisp.
-Minecrawlers no longer drop Minecrawler Plates.
-Molerats no longer stop to stare at their enemies.
-Shadow Lord Archol has same amount of protection as other shadow warriors.
-Stone Golems get up sooner as NH approaches them.
-
-
 		MINOR IMPROVEMENTS AND FIXES
-
-	Armor
-
-Addon armor have correct material tag.
-Armor buying dialog options are formatted the same way.
-Leather Armor offers no longer any Dragon fire protection.
-Shows Blunt protection.
-
-
-	Weapons
-
-Cutlass (common) is renamed to Heavy Cutlass.
-Cutlass (pirate) is renamed to Heavy Pirate's Cutlass.
-Militia Short Sword and Short Sword stats are swapped.
-Orc weapons have their orcish names.
-Rapier renamed to Sabre.
-Sword renamed to Rapier.
-Wands renamed to Staves.
-
-El Bastardo and Rough Sword are categorized as sword, not axes.
-Inquisitor deals blunt damage, not edge.
-
-
-	Spells
-
-Charge spell scrolls use scroll mana cost per tier, instead of rune mana cost.
-Charge spells are cast off shortly after reaching final charge tier or upon running out of mana.
-Charge spells gain tiers only when mana is removed, not before.
-Fear spell can be used with no target in focus, cannot bypass immunity and monsters immediately react to it instead of standing still.
-Fear spell does not affect any magician, paladins, golems, dragons or trolls.
-Lightning spells properly deal double damage to submerged targets.
-Paladin runes now cost correct amount of learning points.
-Root Snare does not work against golems or summoned demons.
-Sleep spell affects Cornelius, Judge, Larius and NH even if he becomes paladin/fire mage.
-Sleep spell does not affect any magician.
-Water spells properly deal halved damage against large/heavy creatures and double against fire based creatures.
 
 
 	Monster
 
-Fixed Dragons and Golems getting stuck when trying to switch back to using magic.
-
-Goblins and Skeletons do not create additional weapons in their inventory.
-Lower Skeleton renamed to Lesser Skeleton.
-Magic Golem grants experience and creates a magical explosion when killed.
-Skeletal monsters do not bleed.
-Snapper Pack Leader has same amount of protection as other snappers.
-Snorting Dragon Snapper will have 2 horns instead of 1 if Gaan teaches the NH that trophy skill after killing it.
-Stone Guardians leave properly colored pebbles on ground when hit.
-Swamp Golem bleeds green.
-Undead Orc use the restored orcish hammer Krush Karrok.
 Young Wolves at the pass are now regular Wolves.
 
 
@@ -485,10 +405,6 @@ New item models:
 * Snapper Weed
 * Sun Aloe
 * Treasure Chest
-
-Changed models:
-* Lower Skeleton model is now Gothic 1 Skeleton Scout model.
-* Skeleton Mage model is now transparent between bones.
 
 
 	Sources
