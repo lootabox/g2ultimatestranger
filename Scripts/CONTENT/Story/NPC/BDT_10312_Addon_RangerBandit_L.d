@@ -16,7 +16,8 @@ instance BDT_10312_Addon_RangerBandit_L (Npc_Default)
 	fight_tactic		= FAI_HUMAN_NORMAL;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_VLK_Sword);
+	//EquipItem (self, ItMw_1h_Vlk_Sword);
+	EquipItem (self, ItMw_1h_Sld_Sword);
 
 	
 	// ------ Inventory ------

@@ -16,7 +16,8 @@ instance VLK_4105_Waffenknecht (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1H_Vlk_Sword);
+	//EquipItem (self, ItMw_1h_Vlk_Sword);
+	EquipItem (self, ItMw_1h_Sld_Sword);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

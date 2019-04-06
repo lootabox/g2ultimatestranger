@@ -505,7 +505,8 @@ func void B_CreateAmbientInv_PIR (var int InventorySet)
 if 	InventorySet ==1 
 	{
 		CreateInvItems (self, ItPl_Planeberry, 1);
-		CreateInvItems (self, ITMW_1H_VLK_Sword,1);
+		//CreateInvItems (self, ITMW_1H_VLK_Sword,1);
+		CreateInvItems (self, ItMw_1h_Sld_Sword, 1); 
 		CreateInvItems (self, ItFO_Addon_Grog,1);
 		CreateInvItems (self, ItPl_Health_Herb_02, 1);
 		
@@ -540,7 +541,8 @@ if 	InventorySet ==1
 	{
 		CreateInvItems (self ,ItMi_Gold, 23);
 		CreateInvItems (self, ItPl_Forestberry, 1);
-		CreateInvItems (self, ITMW_1H_VLK_Sword,1);
+		//CreateInvItems (self, ITMW_1H_VLK_Sword,1);
+		CreateInvItems (self, ItMw_1h_Sld_Sword, 1); 
 	}
 	else if InventorySet ==0
 	{
@@ -555,7 +557,8 @@ func void B_CreateAmbientInv_BDT (var int InventorySet)
 if 	InventorySet ==1 
 	{
 		CreateInvItems (self, ItPl_Planeberry, 1);
-		CreateInvItems (self, ITMW_1H_VLK_Sword,1);
+		//CreateInvItems (self, ITMW_1H_VLK_Sword,1);
+		CreateInvItems (self, ItMw_1h_Sld_Sword, 1); 
 		CreateInvItems (self, Itke_Lockpick,2);
 		CreateInvItems (self, ItPl_Health_Herb_02, 1);
 		
@@ -592,7 +595,8 @@ if 	InventorySet ==1
 	{
 		CreateInvItems (self ,ItMi_Gold, 23);
 		CreateInvItems (self, ItPl_Forestberry, 1);
-		CreateInvItems (self, ITMW_1H_VLK_Sword,1);
+		//CreateInvItems (self, ITMW_1H_VLK_Sword,1);
+		CreateInvItems (self, ItMw_1h_Sld_Sword, 1); 
 	}
 	else if InventorySet ==0
 	{

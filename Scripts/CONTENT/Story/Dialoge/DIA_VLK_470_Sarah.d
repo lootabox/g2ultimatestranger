@@ -261,15 +261,6 @@ func void DIA_Sarah_Success_Info ()
 	AI_Output (self, other, "DIA_Sarah_Success_16_02"); //Take this weapon as a token of my gratitude.
 	
 	B_GivePlayerXP (XP_CantharImKnast);
-	B_GiveInvItems (self, other, ItMw_Piratensaebel,1);
-	
+	//B_GiveInvItems (self, other, ItMw_Piratensaebel,1);
+	B_GiveInvItems (self, other, ItMw_Schwert,1);
 };
-	
-	  
-	  
-	   
-
-
-
-
-

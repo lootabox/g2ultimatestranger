@@ -24,6 +24,7 @@ instance VLK_448_Joe (Npc_Default)
 	
 	// ------ Equippte Waffen ------																
 	//EquipItem	(self, ItMw_1h_VLK_Sword); 
+	EquipItem (self, ItMw_1h_Sld_Sword);
 	
 	
 	// ------ Inventory ------

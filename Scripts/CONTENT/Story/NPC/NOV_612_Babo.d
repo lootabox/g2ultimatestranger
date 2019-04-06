@@ -20,7 +20,6 @@ INSTANCE NOV_612_Babo (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	CreateInvItems (self, ItMw_1h_Nov_Mace,1);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Normal07, BodyTex_N, ITAR_NOV_L);		

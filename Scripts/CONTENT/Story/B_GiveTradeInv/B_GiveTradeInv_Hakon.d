@@ -14,7 +14,8 @@ FUNC VOID B_GiveTradeInv_Hakon (var C_NPC slf)
 	
 		// ------ Waffen ------
 		CreateInvItems (slf, ItMw_ShortSword3, 1);
-		CreateInvItems (slf, ItMw_ShortSword4 , 1);
+		//CreateInvItems (slf, ItMw_ShortSword4 , 1);
+		CreateInvItems (slf, ItMw_ShortSword1 , 1);
 		CreateInvItems (slf, ItMw_Richtstab, 1); 
 		CreateInvItems (slf, ItMw_Schwert3, 1); 
 		CreateInvItems (slf, ItMw_Streitkolben, 1); 

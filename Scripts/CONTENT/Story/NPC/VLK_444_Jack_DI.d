@@ -27,7 +27,8 @@ instance VLK_444_Jack_DI (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem			(self, ItMw_1h_VLK_Sword);
+	//EquipItem (self, ItMw_1h_Vlk_Sword);
+	EquipItem (self, ItMw_1h_Sld_Sword);
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 

@@ -15,15 +15,17 @@ FUNC VOID B_GiveTradeInv_Sarah (var C_NPC slf)
 		
 		// ------ Waffen ------
 		CreateInvItems (slf,ItMw_ShortSword3, 1); 
-		CreateInvItems (slf,ItMw_ShortSword4, 1);
+		//CreateInvItems (slf, ItMw_ShortSword4 , 1);
+		CreateInvItems (slf, ItMw_ShortSword1 , 1);
 		CreateInvItems (slf,ItMw_ShortSword5, 1);
 		CreateInvItems (slf,ItMw_Kriegshammer1, 1); 
 		CreateInvItems (slf,ItMw_Stabkeule, 1);
 		CreateInvItems (slf,ItMw_Steinbrecher, 1); 
 		CreateInvItems (slf,ItMw_Schwert2, 1); 
 		CreateInvItems (slf,ItMw_Bartaxt, 1); 
-		CreateInvItems (slf,ItMw_1h_Vlk_Sword, 1); 
-		CreateInvItems (slf,ItMw_1h_Nov_Mace, 1); 
+		//CreateInvItems (slf,ItMw_1h_Vlk_Sword, 1); 
+		CreateInvItems (slf, ItMw_1h_Sld_Sword, 1); 
+		//CreateInvItems (slf,ItMw_1h_Nov_Mace, 1); 
 		CreateInvItems (slf,ItMw_Zweihaender2, 1);
 		CreateInvItems (slf,ItMw_Schwert5, 1); 
 		CreateInvItems (slf,ItMw_Inquisitor, 1); 

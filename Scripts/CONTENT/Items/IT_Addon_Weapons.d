@@ -55,14 +55,14 @@ INSTANCE ItMW_Addon_Knife01 (C_Item)
 	on_equip			=	Equip_1H_03;
 	on_unequip			=	UnEquip_1H_03;
 	
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_Wolfsmesser;
 	visual 				=	"ItMw_012_1h_Knife_02.3DS";
 
 	description			=   name;
 	
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	//TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_03;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -84,7 +84,7 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 	on_equip			=	Equip_2H_03;
 	on_unequip			=	UnEquip_2H_03;
 	
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_MANA_MAX;
 	cond_value[2]  		=	Condition_Stab01;
 	visual 				=	"ItMW_MageStaff_Good_2H_01.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF1";
@@ -92,7 +92,7 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 	description			= 	"Staff of the Fire Magicians";
 
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_03;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -121,9 +121,10 @@ INSTANCE ItMW_Addon_Stab02 (C_Item)
 
 	description			= 	name;
 
-	TEXT[1]				= NAME_Damage;					COUNT[1]	= damageTotal;
-	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
-	TEXT[3]				= NAME_Bonus_Mana;				COUNT[3]	= 20;//FIXME_FILLER
+	TEXT[0]				= NAME_Bonus_Mana;				COUNT[0]	= 20;//FIXME_FILLER
+
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -171,7 +172,7 @@ INSTANCE ItMW_Addon_Stab03 (C_Item)
 	on_equip			=	Equip_2H_04;
 	on_unequip			=	UnEquip_2H_04;
 	
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_MANA_MAX;
 	cond_value[2]  		=	Condition_Stab03;
 	visual 				=	"ItMW_MageStaff_Blades_2H_01.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF3";
@@ -179,7 +180,7 @@ INSTANCE ItMW_Addon_Stab03 (C_Item)
 	description			= 	"Staff of the Water Mages";
 
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_04;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -201,7 +202,7 @@ INSTANCE ItMW_Addon_Stab04 (C_Item)
 	on_equip			=	Equip_2H_04;
 	on_unequip			=	UnEquip_2H_04;
 	
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_MANA_MAX;
 	cond_value[2]  		=	Condition_Stab04;
 	visual 				=	"ItMW_MageStaff_Good_2H_02.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF4";
@@ -210,7 +211,7 @@ INSTANCE ItMW_Addon_Stab04 (C_Item)
 
 	TEXT[1]				= "Ulthar enchanted this staff.";
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_04;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -231,7 +232,7 @@ INSTANCE ItMW_Addon_Stab05 (C_Item)
 	on_equip			=	Equip_2H_05;
 	on_unequip			=	UnEquip_2H_05;
 	
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_MANA_MAX;
 	cond_value[2]  		=	Condition_Stab05;
 	visual 				=	"ItMW_MageStaff_Blades_2H_01.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF5";
@@ -239,7 +240,7 @@ INSTANCE ItMW_Addon_Stab05 (C_Item)
 	description			= 	name;
 
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_05;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -261,14 +262,14 @@ INSTANCE ItMW_Addon_Hacker_1h_01 (C_Item)
 	on_equip			=	Equip_1H_03;
 	on_unequip			=	UnEquip_1H_03;
 	
-	cond_atr[2]   		= 	ATR_STRENGTH;  
+	cond_atr[2]   		= 	ATR_DEXTERITY;  
 	cond_value[2]  		= 	Condition_Machete;
 	visual 				=	"ItMw_1H_Machete_02.3DS";
 
 	description			= name;
 	
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_03;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -290,14 +291,14 @@ INSTANCE ItMW_Addon_Hacker_1h_02 (C_Item)
 	on_equip			=	Equip_1H_02;
 	on_unequip			=	UnEquip_1H_02;
 	
-	cond_atr[2]   		= 	ATR_STRENGTH;  
+	cond_atr[2]   		= 	ATR_DEXTERITY;  
 	cond_value[2]  		= 	Condition_AltMachete;
 	visual 				=	"ItMw_1H_Machete_01.3DS";
 
 	description			= name;
 	
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_02;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -434,18 +435,18 @@ INSTANCE ItMw_FrancisDagger_Mis (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_VLKDolch;	
 	
-	on_equip			=	Equip_1H_05;
-	on_unequip			=	UnEquip_1H_05;	
+	on_equip			=	Equip_1H_30;
+	on_unequip			=	UnEquip_1H_30;	
 
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_VLKDolch;
 	visual 				=	"Itmw_005_1h_dagger_01.3DS";
 
 	description			= name;
 	
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_05;
+	//TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_30;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 	
 };
@@ -453,7 +454,7 @@ INSTANCE ItMw_FrancisDagger_Mis (C_Item)
 // *****************************************************
 INSTANCE ItMw_RangerStaff_Addon (C_Item)
 {	
-	name 				=	"'Ring of Water' Quarterstaff";  
+	name 				=	"Ring of Water' Quarterstaff";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -471,12 +472,43 @@ INSTANCE ItMw_RangerStaff_Addon (C_Item)
 
 	description			= 	name;
 
+	on_equip			=	Equip_RingOfWaterStaff;
+	on_unequip			=	UnEquip_RingOfWaterStaff;
+
+	TEXT[0]				= NAME_Bonus_Mana;				COUNT[0]	= 5;
+
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
+FUNC VOID Equip_RingOfWaterStaff()
+{
+	if Npc_IsPlayer (self)
+	{ 
+		Npc_ChangeAttribute (self, ATR_MANA_MAX,5);
+		Npc_ChangeAttribute (self, ATR_MANA,5);
+	};
+};
+FUNC VOID UnEquip_RingOfWaterStaff()
+{
+	if Npc_IsPlayer (self)
+	{ 
+		Npc_ChangeAttribute (self, ATR_MANA_MAX, - 5);
+		
+		if self.attribute [ATR_MANA]	>= 5
+		{
+			Npc_ChangeAttribute (self, ATR_MANA, - 5);
+		}
+		else
+		{
+			self.attribute[ATR_MANA] = 0;
+		};
+	};
+	
+	
+};
 //*********************************************************
 
 INSTANCE ItMw_Addon_PIR2hAxe (C_Item)
@@ -568,13 +600,13 @@ INSTANCE ItMw_Addon_PIR1hSword (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_PIR1hSword;		
 
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_PIR1hSword;
 	visual 				=	"ItMw_030_1h_sword_03.3DS";
 
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -590,12 +622,12 @@ INSTANCE ItMw_Addon_BanditTrader (C_Item)
 
 	value 				=	Value_BanditTrader;
 
-	damageTotal  		= 	Damage_VLKSchwert;
+	damageTotal  		= 	Damage_BanditVLKSchwert;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_VLKSchwert;		
 
 	cond_atr[2]   		=	ATR_DEXTERITY;
-	cond_value[2]  		=	Condition_VLKSchwert;
+	cond_value[2]  		=	Condition_BanditVLKSchwert;
 	visual 				=	"ItMw_018_1h_SwordCane_01.3ds";
 
 	description			= name;

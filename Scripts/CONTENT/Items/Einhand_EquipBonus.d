@@ -154,5 +154,20 @@ FUNC VOID UnEquip_1H_10()
 		B_AddFightSkill (self, NPC_TALENT_1H, - Waffenbonus_10);
 	};
 };
+//----------------------------30----------------------------------
+FUNC VOID Equip_1H_30()
+{
+	if Npc_IsPlayer (self)
+	{ 
+		B_AddFightSkill (self, NPC_TALENT_1H, Waffenbonus_30);
+	};
+};
+FUNC VOID UnEquip_1H_30()
+{
+	if Npc_IsPlayer (self)
+	{ 
+		B_AddFightSkill (self, NPC_TALENT_1H, - Waffenbonus_30);
+	};
+};
 
 

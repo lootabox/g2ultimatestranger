@@ -23,7 +23,8 @@ instance VLK_468_Canthar (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_VLK_SWORD); 
+	//EquipItem (self, ItMw_1h_Vlk_Sword);
+	EquipItem (self, ItMw_1h_Sld_Sword);
 	
 	// ------ Inventory ------
 	//CreateInvItems (self, ItWr_Passierschein, 1);wird jetzt über Dialog vergeben, damit nicht mehr im Trade auftaucht 

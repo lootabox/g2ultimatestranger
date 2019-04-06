@@ -20,7 +20,8 @@ instance VLK_447_Cassia (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_Meisterdegen); 
+	//EquipItem	(self, ItMw_Meisterdegen); 
+	EquipItem	(self, ItMw_1h_Vlk_Sword); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

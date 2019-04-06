@@ -17,10 +17,11 @@ const int Waffenbonus_07 =  7;
 const int Waffenbonus_08 =  8;
 const int Waffenbonus_09 =  9;
 const int Waffenbonus_10 = 10;
+const int Waffenbonus_30 = 30;
 // *****************************************************
 //Dolch - ItMw_1h_Vlk_Dagger
 const int Damage_VLKDolch				= 5; 
-const int Condition_VLKDolch			= 5;
+const int Condition_VLKDolch			= 0;
 const int Range_VLKDolch				= 50;
 const int Value_VLKDolch				= 5;  
 //Schürhaken - ItMw_1H_Mace_L_01    
@@ -84,8 +85,8 @@ const int Condition_Nagelknueppel		= 10;
 const int Range_Nagelknueppel			= 60;
 const int Value_Nagelknueppel			= 50;
 //Wolfsmesser - ItMw_1H_Sword_L_03 //ADDON
-const int Damage_Wolfsmesser 			= 30; 
-const int Condition_Wolfsmesser			= 10;
+const int Damage_Wolfsmesser 			= 5; 
+const int Condition_Wolfsmesser			= 0;
 const int Range_Wolfsmesser				= 30;
 const int Value_Wolfsmesser				= 350;
 //AlriksSword
@@ -94,13 +95,13 @@ const int Condition_Alrik				= 30;
 const int Range_Alrik					= 70;
 const int Value_Alrik					= 50; //wegen Sprache 
 //Wolfsklinge - ItMw_1H_Sword_L_03
-const int Damage_Wolfsklinge 			= 20; 
-const int Condition_Wolfsklinge			= 10;
+const int Damage_Wolfsklinge 			= 5; 
+const int Condition_Wolfsklinge			= 0;
 const int Range_Wolfsklinge				= 30;
 const int Value_Wolfsklinge				= 250;
 //grobes Kurzschwert - NEUE INSTANZ 
 const int Damage_ShortSword2 			= 20; 
-const int Condition_ShortSword2			= 10;
+const int Condition_ShortSword2			= 20;
 const int Range_ShortSword2				= 50;
 const int Value_ShortSword2				= 250;
 //kleine Sense - NEUE INSTANZ 
@@ -109,11 +110,13 @@ const int Condition_Sense				= 10;
 const int Range_Sense					= 60;
 const int Value_Sense					= 250;
 //Degen 	- ItMw_1h_Vlk_Sword
-const int Damage_VLKSchwert 			= 40; //+5%
-const int Condition_VLKSchwert			= 20; //DEX
+const int Damage_VLKSchwert 			= 70; //+5%
+const int Condition_VLKSchwert			= 70; //DEX
 const int Range_VLKSchwert				= 70;
-const int Value_VLKSchwert				= 500; 
-	const int Value_BanditTrader	= 250;	//Degen der Banditen
+const int Value_VLKSchwert				= 1200; 
+	const int Damage_BanditVLKSchwert 		= 40; //+5%
+	const int Condition_BanditVLKSchwert	= 40; //DEX
+	const int Value_BanditTrader			= 250;	//Degen der Banditen
 //Kampfstab (2h) - ItMw_1h_Nov_Mace 
 const int Damage_NovMace				= 30;
 const int Condition_NovMace				= 15;
@@ -125,8 +128,8 @@ const int Condition_Bau2hAxt			= 50;
 const int Range_Bau2hAxt				= 70;
 const int Value_Bau2hAxt				= 500; 
 //Spitzhacke (2h) - ItMw_2H_Axe_L_01
-const int Damage_Spitzhacke 			= 30;
-const int Condition_Spitzhacke			= 10;
+const int Damage_Spitzhacke 			= 20;
+const int Condition_Spitzhacke			= 0;
 const int Range_Spitzhacke				= 60;
 const int Value_Spitzhacke				= 300;
 //rostiges Schwert - STANDARDOBJEKTIERUNG - ItMw_1h_MISC_Sword
@@ -135,8 +138,8 @@ const int Condition_MiscSword			= 30;
 const int Range_MiscSword				= 70;
 const int Value_MiscSword				= 30; 
 //rostige Axt (2h) - STANDARDOBJEKTIERUNG - ItMw_1h_MISC_Axe
-const int Damage_MiscAxe				= 40; 
-const int Condition_MiscAxe				= 40;
+const int Damage_MiscAxe				= 25; 
+const int Condition_MiscAxe				= 25;
 const int Range_MiscAxe					= 80;
 const int Value_MiscAxe					= 40; 
 //rostiger Zweihänder - STANDARDOBJEKTIERUNG - ItMw_2H_Sword_M_01
@@ -189,8 +192,8 @@ const int Condition_PIR1hAxe			= 60;
 const int Range_PIR1hAxe				= 60;
 const int Value_PIR1hAxe				= 600;
 
-const int Damage_PIR1hSword				= 60; 
-const int Condition_PIR1hSword			= 60;
+const int Damage_PIR1hSword				= 55; 
+const int Condition_PIR1hSword			= 40;
 const int Range_PIR1hSword				= 70;
 const int Value_PIR1hSword				= 600;
 //Paladinschwert - NUR PALADIN - ItMw_1h_Pal_Sword
@@ -219,42 +222,41 @@ const int Value_HolyHammer				= 1000;
 // ACHTUNG: Orkwaffen können auch schon 
 // in Kapitel 1 erlangt werden!
 // ************************************
+// ------ Orc Scout ------
+const int Damage_Orkschwert			=  50; 
+const int Condition_Orkschwert		=  70;
+const int Range_Orkschwert			= 100;
+const int Value_Orkschwert			=  10;
 // ------ Orkwaffen ------
-const int Damage_Orkaxt_01			=  50; 
-const int Condition_Orkaxt_01		=  70;
+const int Damage_Orkaxt_01			=  60; 
+const int Condition_Orkaxt_01		=  80;
 const int Range_Orkaxt_01			= 100;
-const int Value_Orkaxt_01			=  10;
+const int Value_Orkaxt_01			=  15;
 
-const int Damage_Orkaxt_02			=  60; 
-const int Condition_Orkaxt_02		=  80;
+const int Damage_Orkaxt_02			=  70; 
+const int Condition_Orkaxt_02		=  90;
 const int Range_Orkaxt_02			= 110;
-const int Value_Orkaxt_02			=  15;
+const int Value_Orkaxt_02			=  20;
 
-const int Damage_Orkaxt_03			=  70; 
-const int Condition_Orkaxt_03		=  90;
+const int Damage_Orkaxt_03			=  80; 
+const int Condition_Orkaxt_03		= 100;
 const int Range_Orkaxt_03			= 110;
-const int Value_Orkaxt_03			=  20;
+const int Value_Orkaxt_03			=  25;
 
-const int Damage_Orkaxt_04			=  80; 
-const int Condition_Orkaxt_04		= 100;
+const int Damage_Orkaxt_04			=  90; 
+const int Condition_Orkaxt_04		= 110;
 const int Range_Orkaxt_04			= 130;
-const int Value_Orkaxt_04			=  25;
-
-const int Damage_Orkmace_01			=  65; 
-const int Condition_Orkmace_01		= 85;
+const int Value_Orkaxt_04			=  30;
+// ------ Echsenmenschen ------
+const int Damage_Orkmace_01			= 100; 
+const int Condition_Orkmace_01		= 120;
 const int Range_Orkmace_01			= 110;
-const int Value_Orkmace_01			=  15;
-
+const int Value_Orkmace_01			=  40;
 // ------ Ork-Elite ------
 const int Damage_Orkschwert_01		= 100; 
 const int Condition_Orkschwert_01	= 120;
 const int Range_Orkschwert_01		= 140;
-const int Value_Orkschwert_01		=  30;
-// ------ Echsenmenschen ------
-const int Damage_Orkschwert			=  80; 
-const int Condition_Orkschwert		= 100;
-const int Range_Orkschwert			= 100;
-const int Value_Orkschwert			=  25;
+const int Value_Orkschwert_01		=  50;
 
 // *******************
 // Kapitel 1 - Händler
@@ -270,8 +272,8 @@ const int Condition_Nagelkeule		= 30;
 const int Range_Nagelkeule			= 70;
 const int Value_Nagelkeule			= 450;
 //Wolfszahn - NEUE INSTANZ
-const int Damage_ShortSword4 		= 45; 
-const int Condition_ShortSword4		= 22;
+const int Damage_ShortSword4 		= 30; 
+const int Condition_ShortSword4		= 15;
 const int Range_ShortSword4			= 50;
 const int Value_ShortSword4			= 550;
 //Kriegskeule - NEUE INSTANZ
@@ -295,8 +297,8 @@ const int Condition_Kriegshammer1	= 55;
 const int Range_Kriegshammer1		= 40;
 const int Value_Kriegshammer1		= 550;
 //Hellebarde (2h) - NEUE INSTANZ
-const int Damage_Hellebarde			= 55; 
-const int Condition_Hellebarde		= 55;
+const int Damage_Hellebarde			= 60; 
+const int Condition_Hellebarde		= 60;
 const int Range_Hellebarde			= 80;
 const int Value_Hellebarde			= 550;
 //schwere Nagelkeule - NEUE INSTANZ
@@ -311,7 +313,7 @@ const int Range_Schiffsaxt			= 70;
 const int Value_Schiffsaxt			= 600;
 //Piratensäbel - NEUE INSTANZ 
 const int Damage_Piratensaebel 		= 65; 
-const int Condition_Piratensaebel	= 60; 
+const int Condition_Piratensaebel	= 50; 
 const int Range_Piratensaebel		= 70;
 const int Value_Piratensaebel		= 700;
 //grobes Langschwert - NUR bei Sld-Händler - NEUE INSTANZ                        
@@ -333,8 +335,8 @@ const int Value_Common1				= 450;
 // Kapitel 2 - Händler
 // *******************
 //RangerStaff	- NEUE INSTANZ //ADDON
-const int Damage_RangerStaff		= 60; 
-const int Condition_RangerStaff		= 30;
+const int Damage_RangerStaff		= 40; 
+const int Condition_RangerStaff		= 20;
 const int Range_RangerStaff			= 130;
 const int Value_RangerStaff			= 900;
 //Magier Stab	- NEUE INSTANZ //ADDON
@@ -446,8 +448,8 @@ const int Value_Special_2H_1		= 900;
 // Kapitel 3 - Händler
 // *******************
 //Rapier - NEUE INSTANZ
-const int Damage_Rapier 			= 100; //+8%
-const int Condition_Rapier			= 50; //DEX
+const int Damage_Rapier 			= 120; //+8%
+const int Condition_Rapier			= 100; //DEX
 const int Range_Rapier				= 70;
 const int Value_Rapier				= 2000;
 //Rubinklinge - NEUE INSTANZ
@@ -461,7 +463,7 @@ const int Condition_Machete			= 90;
 const int Range_Machete				= 75; 
 const int Value_Machete				= 1100;
 //Alte Machete - NEUE INSTANZ	//ADDON
-const int Damage_AltMachete 		= 60; 
+const int Damage_AltMachete 		= 70; 
 const int Condition_AltMachete		= 60; 
 const int Range_AltMachete			= 70; 
 const int Value_AltMachete			= 600;
@@ -561,8 +563,8 @@ const int Condition_Kriegshammer2	= 120;
 const int Range_Kriegshammer2		= 60;
 const int Value_Kriegshammer2		= 1200;
 //Meisterdegen - NEUE INSTANZ
-const int Damage_Meisterdegen		= 120; //+10%
-const int Condition_Meisterdegen	= 60; //DEX
+const int Damage_Meisterdegen		= 140; //+10%
+const int Condition_Meisterdegen	= 140; //DEX
 const int Range_Meisterdegen		= 100;
 const int Value_Meisterdegen		= 2400;
 //Folteraxt (2h) - NEUE INSTANZ

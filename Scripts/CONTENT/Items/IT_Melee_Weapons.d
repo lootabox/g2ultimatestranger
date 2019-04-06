@@ -43,14 +43,14 @@ INSTANCE ItMw_1h_Vlk_Dagger (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_VLKDolch;		
 	
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_VLKDolch;
 	visual 				=	"Itmw_005_1h_dagger_01.3DS";
 
 	description			= name;
 	
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	//TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -244,13 +244,13 @@ INSTANCE ItMw_ShortSword1 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword1;		
 
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_ShortSword1;
 	visual 				=	"ItMw_010_1h_Sword_short_01.3DS";
 
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -294,13 +294,13 @@ INSTANCE ItMw_1H_Sword_L_03 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Wolfsklinge;		
 
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_Wolfsklinge;
 	visual 				=	"ItMw_012_1h_Knife_02.3DS";
 
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	//TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -319,13 +319,13 @@ INSTANCE ItMw_ShortSword2 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword2;		
 
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_ShortSword2;
 	visual 				=	"ItMw_012_1h_Sword_short_02.3DS";
 
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -385,7 +385,7 @@ INSTANCE ItMw_1h_Vlk_Sword (C_Item)
 // *****************************************************
 INSTANCE ItMw_1h_Nov_Mace (C_Item)
 {	
-	name 				=	"Fighting Pike";  
+	name 				=	"Novice' Quarterstaff";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -401,11 +401,42 @@ INSTANCE ItMw_1h_Nov_Mace (C_Item)
 	cond_value[2]  		=	Condition_NovMace;
 	visual 				=	"ItMw_020_2h_Nov_Staff_01.3DS";
 
+	on_equip			=	Equip_NoviceMace;
+	on_unequip			=	UnEquip_NoviceMace;
+
 	description			= name;
+	TEXT[0]				= NAME_Bonus_Mana;				COUNT[0]	= 10;
+
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+FUNC VOID Equip_NoviceMace()
+{
+	if Npc_IsPlayer (self)
+	{ 
+		Npc_ChangeAttribute (self, ATR_MANA_MAX,10);
+		Npc_ChangeAttribute (self, ATR_MANA,10);
+	};
+};
+FUNC VOID UnEquip_NoviceMace()
+{
+	if Npc_IsPlayer (self)
+	{ 
+		Npc_ChangeAttribute (self, ATR_MANA_MAX, - 10);
+		
+		if self.attribute [ATR_MANA]	>= 10
+		{
+			Npc_ChangeAttribute (self, ATR_MANA, - 10);
+		}
+		else
+		{
+			self.attribute[ATR_MANA] = 0;
+		};
+	};
+	
+	
 };
 // *****************************************************
 INSTANCE ItMw_2h_Bau_Axe (C_Item)
@@ -453,7 +484,7 @@ INSTANCE ItMw_2H_Axe_L_01 (C_Item)
 
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	//TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -908,13 +939,13 @@ INSTANCE ItMw_ShortSword3 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword3;		
 
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_ShortSword3;
 	visual 				=	"ItMw_016_1h_Sword_short_03.3DS";
 
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -958,13 +989,13 @@ INSTANCE ItMw_ShortSword4 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword4;		
 
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_ShortSword4;
 	visual 				=	"ItMw_020_1h_Sword_short_04.3DS";
 
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -1012,10 +1043,13 @@ INSTANCE ItMw_Richtstab (C_Item)
 	cond_value[2]  		=	Condition_Richtstab;
 	visual 				=	"ItMw_025_2h_Staff_02.3DS";
 
+	on_equip			=	Equip_2H_02;
+	on_unequip			=	UnEquip_2H_02;
+
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_02;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 /********************************************************************************/
@@ -1033,13 +1067,13 @@ INSTANCE ItMw_ShortSword5 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword5;		
 
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_ShortSword5;
 	visual 				=	"ItMw_025_1h_Sword_short_05.3DS";
 
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -1087,10 +1121,13 @@ INSTANCE ItMw_Hellebarde (C_Item)
 	cond_value[2]  		= 	Condition_Hellebarde;
 	visual 				=	"itmw_028_2h_halberd_01.3DS";
 
+	on_equip			=	Equip_2H_02;
+	on_unequip			=	UnEquip_2H_02;
+
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_02;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 /********************************************************************************/
@@ -1158,13 +1195,13 @@ INSTANCE ItMw_Piratensaebel (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Piratensaebel;		
 
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_Piratensaebel;
 	visual 				=	"ItMw_030_1h_sword_03.3DS";
 
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };

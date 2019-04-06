@@ -16,8 +16,8 @@ instance VLK_416_Matteo (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1H_VLK_Sword);
-	
+	//EquipItem (self, ItMw_1h_Vlk_Sword);
+	EquipItem (self, ItMw_1h_Sld_Sword);
 	
 	// ------ Inventory ------
 	// Händler

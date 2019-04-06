@@ -53,6 +53,7 @@ FUNC VOID DIA_Babo_Hello_Info()
 	AI_Output (other,self ,"DIA_Babo_Hello_15_05"); //Well, I've wielded a weapon or two...
 	AI_Output (self ,other,"DIA_Babo_Hello_03_06"); //If you want, I can teach you something. However, I have a request...
 
+	CreateInvItems (self, ItMw_1h_Nov_Mace,1);
 	B_GiveInvItems (self,other,ITMW_1h_NOV_Mace,1);
 	AI_EquipBestMeleeWeapon (self);
 	

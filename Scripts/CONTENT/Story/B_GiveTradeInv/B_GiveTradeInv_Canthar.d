@@ -21,7 +21,8 @@ FUNC VOID B_GiveTradeInv_Canthar (var C_NPC slf)
 		CreateInvItems (slf, ItMw_Nagelkeule, 1); 
 		CreateInvItems (slf, ItMw_ShortSword5, 1); 
 		CreateInvItems (slf, ItMw_Hellebarde, 1); 
-		CreateInvItems (slf, ItMw_Piratensaebel, 1); 
+		//CreateInvItems (slf, ItMw_Piratensaebel, 1); 
+		CreateInvItems (slf, ItMw_Schwert, 1); 
 		CreateInvItems (slf, ItMw_Schwert2, 2); 
 		
 		CreateInvItems (slf, ItAm_Prot_Mage_01, 1); 
