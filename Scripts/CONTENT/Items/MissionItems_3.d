@@ -495,11 +495,10 @@ INSTANCE ItMw_MalethsGehstock_MIS (C_Item)
 	visual 				=	"Itmw_008_1h_pole_01.3ds";
 
 	description			= 	name;
-	TEXT[0]				= 	"The letter 'M' has been";
-	TEXT[1]				= 	"engraved at the top.";					
+	TEXT[0]				= 	"The letter 'M' has been engraved at the top.";
 
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	//TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };

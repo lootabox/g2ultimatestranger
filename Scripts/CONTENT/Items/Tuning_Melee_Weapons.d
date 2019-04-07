@@ -25,13 +25,13 @@ const int Condition_VLKDolch			= 0;
 const int Range_VLKDolch				= 50;
 const int Value_VLKDolch				= 5;  
 //Schürhaken - ItMw_1H_Mace_L_01    
-const int Damage_Schuerhaken 			= 5; 
-const int Condition_Schuerhaken			= 5;
+const int Damage_Schuerhaken 			= 7; 
+const int Condition_Schuerhaken			= 0;
 const int Range_Schuerhaken				= 50;
 const int Value_Schuerhaken				= 5; 
 //Sichel - ItMw_1h_Bau_Axe    
-const int Damage_BauAxe					= 7; 
-const int Condition_BauAxe				= 5;
+const int Damage_BauAxe					= 8; 
+const int Condition_BauAxe				= 8;
 const int Range_BauAxe					= 50;
 const int Value_BauAxe					= 10; 
 //Goldene Sichel - ItMw_1h_Bau_Axe    
@@ -40,18 +40,18 @@ const int Condition_Sichel01			= 5;
 const int Range_Sichel01				= 50;
 const int Value_Sichel01				= 200; 
 //Gehstock - ItMw_1h_Vlk_Mace    
-const int Damage_VLKMace 				= 8; 
-const int Condition_VLKMace				= 5;
+const int Damage_VLKMace 				= 5; 
+const int Condition_VLKMace				= 0;
 const int Range_VLKMace					= 70;
 const int Value_VLKMace					= 10; 
 //Belegnagel - ItMw_1H_Mace_L_03    
 const int Damage_Belegnagel 			= 8; 
-const int Condition_Belegnagel			= 10;
+const int Condition_Belegnagel			= 8;
 const int Range_Belegnagel				= 70;
 const int Value_Belegnagel				= 5; 
 //schwerer Ast - ItMw_1h_Bau_Mace    
-const int Damage_BauMace				= 10; 
-const int Condition_BauMace				= 10;
+const int Damage_BauMace				= 5; 
+const int Condition_BauMace				= 0;
 const int Range_BauMace					= 70;
 const int Value_BauMace					= 1; 
 //Holzkeule - ItMw_1h_Bau_Mace //ADDON  
@@ -80,10 +80,10 @@ const int Condition_ShortSword1			= 20;
 const int Range_ShortSword1				= 50;
 const int Value_ShortSword1				= 500;
 // Nagelknüppel - für BANDITEN - NEUE INSTANZ 
-const int Damage_Nagelknueppel			= 25; 
-const int Condition_Nagelknueppel		= 10;
+const int Damage_Nagelknueppel			= 20; 
+const int Condition_Nagelknueppel		= 15;
 const int Range_Nagelknueppel			= 60;
-const int Value_Nagelknueppel			= 50;
+const int Value_Nagelknueppel			= 10;
 //Wolfsmesser - ItMw_1H_Sword_L_03 //ADDON
 const int Damage_Wolfsmesser 			= 5; 
 const int Condition_Wolfsmesser			= 0;
@@ -133,20 +133,20 @@ const int Condition_Spitzhacke			= 0;
 const int Range_Spitzhacke				= 60;
 const int Value_Spitzhacke				= 300;
 //rostiges Schwert - STANDARDOBJEKTIERUNG - ItMw_1h_MISC_Sword
-const int Damage_MiscSword				= 30; 
-const int Condition_MiscSword			= 30;
+const int Damage_MiscSword				= 10; 
+const int Condition_MiscSword			= 10;
 const int Range_MiscSword				= 70;
-const int Value_MiscSword				= 30; 
+const int Value_MiscSword				= 10; 
 //rostige Axt (2h) - STANDARDOBJEKTIERUNG - ItMw_1h_MISC_Axe
 const int Damage_MiscAxe				= 25; 
 const int Condition_MiscAxe				= 25;
 const int Range_MiscAxe					= 80;
-const int Value_MiscAxe					= 40; 
+const int Value_MiscAxe					= 20; 
 //rostiger Zweihänder - STANDARDOBJEKTIERUNG - ItMw_2H_Sword_M_01
 const int Damage_Misc2hSword			= 50; 
 const int Condition_Misc2hSword			= 50;
 const int Range_Misc2hSword				= 100;
-const int Value_Misc2hSword				= 50; 
+const int Value_Misc2hSword				= 30; 
 //grobes Breitschwert - NUR MILIZ - ItMw_1h_Mil_Sword
 const int Damage_MilSchwert				= 40; 
 const int Condition_MilSchwert			= 40;
@@ -226,32 +226,32 @@ const int Value_HolyHammer				= 1000;
 const int Damage_Orkschwert			=  50; 
 const int Condition_Orkschwert		=  70;
 const int Range_Orkschwert			= 100;
-const int Value_Orkschwert			=  10;
+const int Value_Orkschwert			=  5;
 // ------ Orkwaffen ------
 const int Damage_Orkaxt_01			=  60; 
 const int Condition_Orkaxt_01		=  80;
 const int Range_Orkaxt_01			= 100;
-const int Value_Orkaxt_01			=  15;
+const int Value_Orkaxt_01			=  10;
 
 const int Damage_Orkaxt_02			=  70; 
 const int Condition_Orkaxt_02		=  90;
 const int Range_Orkaxt_02			= 110;
-const int Value_Orkaxt_02			=  20;
+const int Value_Orkaxt_02			=  15;
 
 const int Damage_Orkaxt_03			=  80; 
 const int Condition_Orkaxt_03		= 100;
 const int Range_Orkaxt_03			= 110;
-const int Value_Orkaxt_03			=  25;
+const int Value_Orkaxt_03			=  20;
 
 const int Damage_Orkaxt_04			=  90; 
 const int Condition_Orkaxt_04		= 110;
 const int Range_Orkaxt_04			= 130;
-const int Value_Orkaxt_04			=  30;
+const int Value_Orkaxt_04			=  25;
 // ------ Echsenmenschen ------
 const int Damage_Orkmace_01			= 100; 
 const int Condition_Orkmace_01		= 120;
 const int Range_Orkmace_01			= 110;
-const int Value_Orkmace_01			=  40;
+const int Value_Orkmace_01			=  30;
 // ------ Ork-Elite ------
 const int Damage_Orkschwert_01		= 100; 
 const int Condition_Orkschwert_01	= 120;

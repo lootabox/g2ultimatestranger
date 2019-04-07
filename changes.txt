@@ -277,6 +277,7 @@ Rosi will not create extra gold in her inventory when giving the reward to NH fo
 Rukhar drinks only beer during his drinking contest.
 Rupert can only be asked where Matteo can be found if NH did not find him yet.
 Sarah can only be asked about Akils farm if NH does yet know how to find it.
+Sarah gives a Rough Longsword instead of Pirate's Cutlass as the gift for not framing her.
 Saturas properly completes "The power of the guardians of the dead" when he tells NH about the chambers of Adanos.
 Sekob can't be told Rosi is back if she is dead.
 Sekob dialog no longer has option to go to talk to Onar if NH already talked with him.

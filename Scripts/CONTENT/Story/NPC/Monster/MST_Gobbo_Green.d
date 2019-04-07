@@ -74,7 +74,7 @@ INSTANCE Gobbo_Green (Mst_Default_Gobbo_Green)
 {
 	B_SetVisuals_Gobbo_Green();
 	
-	Npc_SetToFightMode (self, ItMw_1h_Bau_Mace); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
+	Npc_SetToFightMode (self, ItMw_1H_Mace_L_03); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 };
 
 

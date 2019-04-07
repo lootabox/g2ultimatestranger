@@ -552,6 +552,7 @@ func void DIA_Canthar_Success_Info ()
 		//CreateInvItems (self, ItMw_1h_Vlk_Sword, 1); 
 		CreateInvItems (self, ItMw_1h_Sld_Sword, 1); 
 		//CreateInvItems (self, ItMw_1h_Nov_Mace, 1); 
+		CreateInvItems (self, ItMw_2h_Bau_Axe, 1); 
 	};
 	if (Kapitel == 2)
 	{

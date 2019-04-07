@@ -156,7 +156,7 @@ INSTANCE Lesser_Skeleton	(Mst_Default_Skeleton)
 	level							=	15;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	45; //+30 Waffe
+	attribute	[ATR_STRENGTH]		=	65; //+30 Waffe
 	attribute	[ATR_DEXTERITY]		=	75;
 	attribute	[ATR_HITPOINTS_MAX]	=	150;
 	attribute	[ATR_HITPOINTS]		=	150;
