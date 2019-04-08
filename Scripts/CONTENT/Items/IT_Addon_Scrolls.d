@@ -32,7 +32,7 @@ INSTANCE ItSc_Geyser (C_Item)
 	TEXT	[1]			=	NAME_Mana_needed;		
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Damage;			
+	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Geyser;
 	
 	TEXT	[5]			=	NAME_Value;				
@@ -65,7 +65,7 @@ INSTANCE ItSc_Icelance (C_Item)
 	TEXT	[1]			=	NAME_Mana_needed;		
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Damage;			
+	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Icelance;
 	
 	TEXT	[5]			=	NAME_Value;				
@@ -98,7 +98,7 @@ INSTANCE ItSc_Waterfist (C_Item)
 	TEXT	[1]			=	NAME_Mana_needed;		
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Damage;			
+	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Waterfist;
 	
 	TEXT	[5]			=	NAME_Value;				
@@ -131,7 +131,7 @@ INSTANCE ItSc_Thunderstorm (C_Item)
 	TEXT	[1]			=	NAME_Mana_needed;			
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Damage;				
+	TEXT	[2]			=	NAME_Dam_Magic;			
 	COUNT	[2]			=	SPL_DAMAGE_Thunderstorm;
 	
 	TEXT	[5]			=	NAME_Value;					

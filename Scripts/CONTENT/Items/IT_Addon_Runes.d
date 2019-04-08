@@ -56,7 +56,7 @@ INSTANCE ItRu_Thunderstorm (C_Item)
 	TEXT	[1]			=	NAME_Manakosten;			
 	COUNT	[1]			=	SPL_Cost_Thunderstorm;
 	
-	TEXT	[2]			=	NAME_Damage;				
+	TEXT	[2]			=	NAME_Dam_Magic;			
 	COUNT	[2]			=	SPL_DAMAGE_Thunderstorm;
 	
 	TEXT	[5]			=	NAME_Value;					
@@ -124,7 +124,7 @@ INSTANCE ItRu_Geyser (C_Item)
 	TEXT	[1]			=	NAME_Manakosten;			
 	COUNT	[1]			=	SPL_Cost_Geyser;
 	
-	TEXT	[2]			=	NAME_Damage;			
+	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Geyser;
 	
 	TEXT	[5]			=	NAME_Value;					
@@ -157,7 +157,7 @@ INSTANCE ItRu_Waterfist	(C_Item)
 	TEXT	[1]			=	NAME_Manakosten;			
 	COUNT	[1]			=	SPL_Cost_Waterfist;
 	
-	TEXT	[2]			=	NAME_Damage;			
+	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Waterfist;
 	
 	TEXT	[5]			=	NAME_Value;					
@@ -191,7 +191,7 @@ INSTANCE ItRu_Icelance	(C_Item)
 	TEXT	[1]			=	NAME_Manakosten;			
 	COUNT	[1]			=	SPL_Cost_Icelance;
 	
-	TEXT	[2]			=	NAME_Damage;			
+	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Icelance;
 	
 	TEXT	[5]			=	NAME_Value;					
@@ -230,7 +230,7 @@ INSTANCE ItRu_BeliarsRage	(C_Item)
 	TEXT	[1]			=	NAME_Manakosten;			
 	COUNT	[1]			=	SPL_Cost_Energyball;
 	
-	TEXT	[2]			=	NAME_Damage;			
+	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Energyball;
 	
 	TEXT	[5]			=	NAME_Value;					
@@ -264,7 +264,7 @@ INSTANCE ItRu_SuckEnergy	(C_Item)
 	TEXT	[1]			=	NAME_Manakosten;			
 	COUNT	[1]			=	SPL_Cost_SuckEnergy;
 	
-	TEXT	[2]			=	NAME_Damage;			
+	TEXT	[2]			=	NAME_DamagePerSec;		
 	COUNT	[2]			=	SPL_SuckEnergy_Damage;
 	
 	TEXT	[3]			=	NAME_Sec_Duration;				
@@ -335,7 +335,7 @@ INSTANCE ItRu_Swarm	(C_Item)
 	TEXT	[1]			=	NAME_Manakosten;			
 	COUNT	[1]			=	SPL_Cost_Swarm;
 	
-	TEXT	[2]			=	NAME_Damage;			
+	TEXT	[2]			=	NAME_DamagePerSec;		
 	COUNT	[2]			=	SPL_Swarm_Damage;
 	
 	TEXT	[3]			=	NAME_Sec_Duration;				
@@ -375,7 +375,7 @@ INSTANCE ItRu_Skull	(C_Item)
 	TEXT	[2]			=	NAME_Addon_NeedsAllMana;
 	
 	
-	TEXT	[4]			=	NAME_Damage;			
+	TEXT	[4]			=	NAME_Dam_Magic;			
 	COUNT	[4]			=	SPL_Damage_Skull;		
 	
 	TEXT	[5]			=	NAME_Value;					

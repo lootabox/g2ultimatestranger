@@ -192,7 +192,7 @@ const int Condition_PIR1hAxe			= 60;
 const int Range_PIR1hAxe				= 60;
 const int Value_PIR1hAxe				= 600;
 
-const int Damage_PIR1hSword				= 55; 
+const int Damage_PIR1hSword				= 60; 
 const int Condition_PIR1hSword			= 40;
 const int Range_PIR1hSword				= 70;
 const int Value_PIR1hSword				= 600;
@@ -272,8 +272,8 @@ const int Condition_Nagelkeule		= 30;
 const int Range_Nagelkeule			= 70;
 const int Value_Nagelkeule			= 450;
 //Wolfszahn - NEUE INSTANZ
-const int Damage_ShortSword4 		= 30; 
-const int Condition_ShortSword4		= 15;
+const int Damage_ShortSword4 		= 45; 
+const int Condition_ShortSword4		= 30;
 const int Range_ShortSword4			= 50;
 const int Value_ShortSword4			= 550;
 //Kriegskeule - NEUE INSTANZ
@@ -312,8 +312,8 @@ const int Condition_Schiffsaxt		= 60;
 const int Range_Schiffsaxt			= 70;
 const int Value_Schiffsaxt			= 600;
 //Piratensäbel - NEUE INSTANZ 
-const int Damage_Piratensaebel 		= 65; 
-const int Condition_Piratensaebel	= 50; 
+const int Damage_Piratensaebel 		= 80; 
+const int Condition_Piratensaebel	= 60; 
 const int Range_Piratensaebel		= 70;
 const int Value_Piratensaebel		= 700;
 //grobes Langschwert - NUR bei Sld-Händler - NEUE INSTANZ                        
@@ -463,8 +463,8 @@ const int Condition_Machete			= 90;
 const int Range_Machete				= 75; 
 const int Value_Machete				= 1100;
 //Alte Machete - NEUE INSTANZ	//ADDON
-const int Damage_AltMachete 		= 70; 
-const int Condition_AltMachete		= 60; 
+const int Damage_AltMachete 		= 60; 
+const int Condition_AltMachete		= 50; 
 const int Range_AltMachete			= 70; 
 const int Value_AltMachete			= 600;
 //Streitkolben - NEUE INSTANZ

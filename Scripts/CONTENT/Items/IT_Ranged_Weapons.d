@@ -39,7 +39,7 @@ INSTANCE ItRw_Arrow(C_Item)
 	description			= name;
 	//TEXT[0]			= "";					COUNT[0]	= ;
 	//TEXT[1]			= "";					COUNT[1]	= ;
-	//TEXT[2]			= NAME_Damage;			COUNT[2]	= damageTotal;
+	//TEXT[2]			= NAME_Dam_Point;		COUNT[2]	= damageTotal;
 	//TEXT[3] 			= NAME_Dex_needed;		COUNT[3]	= cond_value[2];
 	//TEXT[4]			= ""; 					COUNT[4]	= ;
 	TEXT[5]				= NAME_Value;			COUNT[5]	= value;
@@ -60,7 +60,7 @@ INSTANCE ItRw_Bolt(C_Item)
 	description			= name;
 	//TEXT[0]			= "";					COUNT[0]	= ;
 	//TEXT[1]			= "";					COUNT[1]	= ;
-	//TEXT[2]			= NAME_Damage;			COUNT[2]	= damageTotal;
+	//TEXT[2]			= NAME_Dam_Point;		COUNT[2]	= damageTotal;
 	//TEXT[3] 			= NAME_Dex_needed;		COUNT[3]	= cond_value[2];
 	//TEXT[4]			= ""; 					COUNT[4]	= ;
 	TEXT[5]				= NAME_Value;			COUNT[5]	= value;
@@ -86,7 +86,7 @@ INSTANCE ItRw_Mil_Crossbow(C_Item)
 	visual 				=	"ItRw_Mil_Crossbow.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -110,7 +110,7 @@ INSTANCE ItRw_Sld_Bow(C_Item)
 	visual 				=	"ItRw_Sld_Bow.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -137,7 +137,7 @@ instance ItRw_Bow_L_01(C_Item)
 	visual 				=	"ItRw_Bow_L_01.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -161,7 +161,7 @@ INSTANCE ItRw_Bow_L_02 (C_Item)
 	visual 				=	"ItRw_Bow_L_02.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -186,7 +186,7 @@ instance ItRw_Bow_L_03 (C_Item)
 	visual 				=	"ItRw_Bow_M_01.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -210,7 +210,7 @@ instance ItRw_Bow_L_04 (C_Item)
 	visual 				=	"ItRw_Bow_M_02.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -236,7 +236,7 @@ INSTANCE ItRw_Bow_M_01 (C_Item)
 	visual 				=	"ItRw_Bow_M_01.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -260,7 +260,7 @@ INSTANCE ItRw_Bow_M_02 (C_Item)
 	visual 				=	"ItRw_Bow_M_02.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -286,7 +286,7 @@ INSTANCE ItRw_Bow_M_03 (C_Item)
 	visual 				=	"ItRw_Bow_M_03.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -310,7 +310,7 @@ INSTANCE ItRw_Bow_M_04 (C_Item)
 	visual 				=	"ItRw_Bow_M_04.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -336,7 +336,7 @@ INSTANCE ItRw_Bow_H_01 (C_Item)
 	visual 				=	"ItRw_Bow_H_01.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -360,7 +360,7 @@ INSTANCE ItRw_Bow_H_02 (C_Item)
 	visual 				=	"ItRw_Bow_H_02.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -386,7 +386,7 @@ INSTANCE ItRw_Bow_H_03 (C_Item)
 	visual 				=	"ItRw_Bow_H_03.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -410,7 +410,7 @@ INSTANCE ItRw_Bow_H_04 (C_Item)
 	visual 				=	"ItRw_Bow_H_04.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -437,7 +437,7 @@ INSTANCE ItRw_Crossbow_L_01(C_Item)
 	visual 				=	"ItRw_Crossbow_L_01.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -462,7 +462,7 @@ INSTANCE ItRw_Crossbow_L_02(C_Item)
 	visual 				=	"ItRw_Crossbow_L_02.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -487,7 +487,7 @@ INSTANCE ItRw_Crossbow_M_01(C_Item)
 	visual 				=	"ItRw_Crossbow_M_01.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -512,7 +512,7 @@ INSTANCE ItRw_Crossbow_M_02(C_Item)
 	visual 				=	"ItRw_Crossbow_M_02.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -537,7 +537,7 @@ INSTANCE ItRw_Crossbow_H_01(C_Item)
 	visual 				=	"ItRw_Crossbow_H_01.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -562,7 +562,7 @@ INSTANCE ItRw_Crossbow_H_02(C_Item)
 	visual 				=	"ItRw_Crossbow_H_02.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };

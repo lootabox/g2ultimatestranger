@@ -34,7 +34,7 @@ prototype BeliarWeaponPrototype_1H (C_Item)
 	effect				= 	"SPELLFX_FIRESWORDBLACK";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_ADDON_ONEHANDED_BELIAR;	
 	TEXT[4]				= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -169,7 +169,7 @@ prototype BeliarWeaponPrototype_2H (C_Item)
 	visual 				=	"ItMw_BeliarWeapon_2H.3DS"; 
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_ADDON_TWOHANDED_BELIAR;
 	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;

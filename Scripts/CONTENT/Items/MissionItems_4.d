@@ -77,8 +77,9 @@ INSTANCE ItMW_1H_FerrosSword_Mis (C_Item)
 	visual 				=	"ItMw_060_1h_Sword_smith_03.3DS";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
+	TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
+	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -146,7 +147,7 @@ INSTANCE ItRw_SengrathsArmbrust_MIS(C_Item)
 	visual 				=	"ItRw_Mil_Crossbow.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };

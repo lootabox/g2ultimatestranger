@@ -93,8 +93,9 @@ INSTANCE ItMw_2h_Rod (C_Item)
 	visual 				=	"ItMw_035_2h_sld_sword_01.3DS";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
+	TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
+	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -598,8 +599,9 @@ INSTANCE ItMw_AlriksSword_Mis (C_Item)
 	on_unequip			=	UnEquip_AlriksSword;
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
+	TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
+	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= 10;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
@@ -953,14 +955,16 @@ INSTANCE Holy_Hammer_MIS (C_Item)
 
 	description			=  name;
 	//FIXME_Noki: TAB
-	TEXT[2]				=  "Damage:                 ??";
-	TEXT[3] 			=  "Strength required:        ??";
+	TEXT[1]				=  "Damage:                 ??";
+	TEXT[2] 			=  "Strength required:        ??";
+	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			=  "Two-Handed Weapon";
 	TEXT[5]				=  "Value:  unable to determine";					
 	/*
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
+	TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
+	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 	
@@ -1186,9 +1190,9 @@ INSTANCE ItRw_Bow_L_03_MIS (C_Item)
 	visual 				=	"ItRw_Bow_L_03.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[0]				= "Bosper's hunting bow.";
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4]				= "Bosper's hunting bow.";
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 //****************************************************************************
@@ -1661,7 +1665,7 @@ INSTANCE ItRw_DragomirsArmbrust_MIS (C_Item)
 	visual 				=	"ItRw_Crossbow_L_02.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_STR_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };

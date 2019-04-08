@@ -55,7 +55,7 @@ PROTOTYPE Mst_Default_Skeleton(C_Npc)
 //	Visuals
 //***************
 
-func void B_SetVisuals_Scout_Skeleton()
+func void B_SetVisuals_Warrior_Skeleton()
 {
 	Mdl_SetVisual			(self,	"HumanS.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_1hST1.mds");
@@ -174,7 +174,7 @@ INSTANCE Lesser_Skeleton	(Mst_Default_Skeleton)
 	
 	// ------ visual ------
 	//B_SetVisuals_Lesser_Skeleton();
-	B_SetVisuals_Scout_Skeleton();
+	B_SetVisuals_Warrior_Skeleton();
 	
 	// ------ Waffe ------
 	EquipItem (self, ItMw_1h_MISC_Sword);

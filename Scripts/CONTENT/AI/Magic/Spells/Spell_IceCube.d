@@ -3,6 +3,7 @@
 // ***********
 
 const int	SPL_Cost_IceCube			=	40;
+const int	SPL_Damage_IceCube			=	60;		// initial hit
 const int   SPL_FREEZE_DAMAGE		 	=	2;		// IceCube, IceWave
 const int	SPL_TIME_FREEZE				=	19;		// IceCube, IceWave
 
@@ -11,7 +12,7 @@ const int	SPL_TIME_FREEZE				=	19;		// IceCube, IceWave
 INSTANCE Spell_IceCube (C_Spell_Proto)
 {
 	time_per_mana			= 0;					//Wert wird nicht gebraucht - INSTANT-Spell
-	damage_per_level 		= 60;					//Schaden wird im ZS_MagicFreeze angegeben!
+	damage_per_level 		= SPL_Damage_IceCube;	//Schaden wird im ZS_MagicFreeze angegeben!
 };
 
 func int Spell_Logic_IceCube (var int manaInvested) //Parameter wird hier nicht gebraucht

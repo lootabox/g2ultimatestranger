@@ -881,17 +881,11 @@ INSTANCE ItRu_Windfist (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;			
 	COUNT	[0]			=	mag_circle;						
 	
-	TEXT	[1]			=	NAME_MinManakosten;							
+	TEXT	[1]			=	NAME_ManaCostPerCharge;							
 	COUNT	[1]			=	STEP_WindFist;
 	
-	TEXT	[2]			=	NAME_ManakostenMax;							
-	COUNT	[2]			=	SPL_COST_WINDFIST;
-	
-	TEXT	[3]			=	NAME_Addon_Damage_Min;
-	count 	[3]			=   SPL_Damage_Windfist;
-	
-	TEXT	[4]			=	NAME_Damage_Max;
-	COUNT	[4]			=	(SPL_Damage_Windfist*4);
+	TEXT	[2]			=	"Wind damage per tier:";
+	count 	[2]			=   SPL_Damage_Windfist;
 	
 	TEXT	[5]			=	NAME_Value;									
 	COUNT	[5]			=	value;
@@ -1022,17 +1016,11 @@ INSTANCE ItRu_ChargeFireball (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;			
 	COUNT	[0]			=	mag_circle;						
 	
-	TEXT	[1]			=	NAME_MinManakosten;							
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	STEP_ChargeFireball;
 	
-	TEXT	[2]			=	NAME_ManakostenMax;							
-	COUNT	[2]			=	SPL_COST_ChargeFireball;
-	
-	TEXT	[3]			=	NAME_Addon_Damage_Min;
-	count 	[3]			=   SPL_Damage_ChargeFireball;
-	
-	TEXT	[4]			=	NAME_Damage_Max;
-	COUNT	[4]			=	(SPL_Damage_ChargeFireball*4);
+	TEXT	[2]			=	NAME_DamagePerCharge;
+	count 	[2]			=   SPL_Damage_ChargeFireball;
 	
 	TEXT	[5]			=	NAME_Value;									
 	COUNT	[5]			=	value;
@@ -1127,8 +1115,8 @@ INSTANCE ItRu_IceCube (C_Item)
 	TEXT	[1]			=	NAME_Manakosten;			
 	COUNT	[1]			=	SPL_COST_ICECUBE;
 	
-	TEXT	[2]			=	NAME_Damage;				
-	COUNT	[2]			=	60;
+	TEXT	[2]			=	NAME_Dam_Magic;			
+	COUNT	[2]			=	SPL_Damage_IceCube;
 	
 	TEXT	[3]			=	NAME_Sec_Duration;				
 	COUNT	[3]			=	SPL_TIME_FREEZE;
@@ -1165,17 +1153,11 @@ INSTANCE ItRu_ThunderBall (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;			
 	COUNT	[0]			=	mag_circle;						
 	
-	TEXT	[1]			=	NAME_MinManakosten;							
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	STEP_ChargeZap;
 	
-	TEXT	[2]			=	NAME_ManakostenMax;							
-	COUNT	[2]			=	SPL_COST_ChargeZap;
-	
-	TEXT	[3]			=	NAME_Addon_Damage_Min;
-	count 	[3]			=   SPL_Damage_ChargeZap;
-	
-	TEXT	[4]			=	NAME_Damage_Max;
-	COUNT	[4]			=	(SPL_Damage_ChargeZap*4);
+	TEXT	[2]			=	NAME_DamagePerCharge;
+	count 	[2]			=   SPL_Damage_ChargeZap;
 	
 	TEXT	[5]			=	NAME_Value;									
 	COUNT	[5]			=	value;
@@ -1269,17 +1251,11 @@ INSTANCE ItRu_Pyrokinesis (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;			
 	COUNT	[0]			=	mag_circle;						
 	
-	TEXT	[1]			=	NAME_MinManakosten;							
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	STEP_Firestorm;
 	
-	TEXT	[2]			=	NAME_ManakostenMax;							
-	COUNT	[2]			=	SPL_COST_Firestorm;
-	
-	TEXT	[3]			=	NAME_Addon_Damage_Min;
-	count 	[3]			=   SPL_Damage_Firestorm;
-	
-	TEXT	[4]			=	NAME_Damage_Max;
-	COUNT	[4]			=	(SPL_Damage_Firestorm*4);
+	TEXT	[2]			=	NAME_DamagePerCharge;
+	count 	[2]			=   SPL_Damage_Firestorm;
 	
 	TEXT	[5]			=	NAME_Value;									
 	COUNT	[5]			=	value;
@@ -1346,8 +1322,8 @@ INSTANCE ItRu_IceWave (C_Item)
 	TEXT	[1]			=	NAME_Manakosten;			
 	COUNT	[1]			=	SPL_Cost_IceWave;
 	
-	TEXT	[2]			=	NAME_Damage;				
-	COUNT	[2]			=	60;
+	TEXT	[2]			=	NAME_Dam_Magic;			
+	COUNT	[2]			=	SPL_Damage_IceCube;
 	
 	TEXT	[3]			=	NAME_Sec_Duration;				
 	COUNT	[3]			=	SPL_TIME_FREEZE;

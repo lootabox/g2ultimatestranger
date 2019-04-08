@@ -9,7 +9,7 @@ const int	SPL_Cost_IceWave			=	120;
 INSTANCE Spell_IceWave (C_Spell_Proto)
 {
 	time_per_mana			= 0;					// Wert wird nicht gebraucht - INSTANT-Spell
-	damage_per_level 		= 60;					// Relativer Schaden je nach Opfer wird im zs_MagicFreeze angegeben!
+	damage_per_level 		= SPL_Damage_IceCube;	// Relativer Schaden je nach Opfer wird im zs_MagicFreeze angegeben!
 	targetCollectAlgo		= TARGET_COLLECT_NONE;	// Opfer werden aber erst durch Kollision mit dem Effekt "eingefroren"
 };
 

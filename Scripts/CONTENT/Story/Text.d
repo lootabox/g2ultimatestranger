@@ -694,7 +694,7 @@ const string NAME_Value			= "Value:";
 const string NAME_Mag_Circle	= "Circle:";
 const string NAME_Manakosten	= "Mana cost:";
 const string NAME_MinManakosten = "Mana cost (min):";
-const string NAME_ManakostenMax	= "Mana cost (max):";
+//const string NAME_ManakostenMax	= "Mana cost (max):";
 const string NAME_ManaPerSec	= "Mana per sec.:";
 const string NAME_Duration		= "Duration (mins):";
 const string NAME_Sec_Duration	= "Duration (secs):";
@@ -709,13 +709,13 @@ const string NAME_Spell_Invest	= "Sustainable spell";
 const string NAME_Dam_Blunt		= "Blunt damage:";
 const string NAME_Dam_Edge		= "Edge damage:";
 const string NAME_Dam_Point		= "Point damage:";
-//const string NAME_Dam_Fire		= "Fire damage:";
+const string NAME_Dam_Fire		= "Fire damage:";
 const string NAME_Dam_Magic		= "Magic damage:";
 const string NAME_Dam_Fly		= "Wind damage:";
 
-const string NAME_Damage		= "Damage:";
-const string NAME_Damage_Max	= "Maximum damage:";
-const string NAME_PerMana		= " (per mana)";
+//const string NAME_Damage		= "Damage:";
+//const string NAME_Damage_Max	= "Maximum damage:";
+//const string NAME_PerMana		= " (per mana)";
 const string NAME_DamagePerSec	= "Damage per sec.:";
 
 const string NAME_Prot_Blunt	= "Blunt protection:";
@@ -726,7 +726,6 @@ const string NAME_Prot_Magic	= "Magic protection:";
 
 const string NAME_Bonus_HP		= "Hitpoint bonus:";
 const string NAME_Bonus_Mana	= "Mana bonus:";
-
 
 const string NAME_Bonus_HpMax	= "Bonus for maximum Hitpoints:";
 const string NAME_Bonus_ManaMax	= "Bonus for maximum Mana:";
@@ -744,7 +743,7 @@ const string NAME_Addon_NostalgieBonus = "Nostalgia Bonus: ";
 
 const string NAME_Addon_NeedsAllMana	= "Uses up entire mana store";
 const string NAME_Addon_SpellDontKill	= "Spell doesn't kill";	
-const string NAME_Addon_Damage_Min		= "Damage (min):";	
+//const string NAME_Addon_Damage_Min		= "Damage (min):";	
 
 //ADDON
 const string NAME_ADDON_WISPSKILL_FF 		= "Long-range Weapons and Ammunition";
@@ -773,7 +772,11 @@ const string NAME_ADDON_PRAYIDOL_GIVEHITPOINT1			= "I will pray and offer 1 life
 const string NAME_ADDON_PRAYIDOL_GIVEHITPOINT2			= "I will pray and offer 5 life energy.";
 const string NAME_ADDON_PRAYIDOL_GIVEHITPOINT3			= "I will pray and offer 10 life energy.";
 const string NAME_ADDON_PRAYIDOL_GIVEMANA				= "I will pray and offer 1 mana.";
-							
+
+//CUSTOM
+const string NAME_Reach					= "Reach:";
+const string NAME_ManaCostPerCharge		= "Mana cost per tier:";
+const string NAME_DamagePerCharge		= "Magic damage per tier:";
 
 // *************************************************************
 // NAMEN FÜR Produktionsitems
