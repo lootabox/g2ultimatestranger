@@ -140,9 +140,9 @@ FUNC VOID DIA_Edda_Suppe_Info()
 	{
 		if B_GiveInvItems (other, self, ItFo_Fish,1)
 		{
-			Npc_RemoveInvItems (self, ItFo_Fishsoup, 1);
+			Npc_RemoveInvItems (self, ItFo_Fish, 1);
 			AI_Output (self ,other,"DIA_Edda_Suppe_17_01"); //Nothing could be simpler. Here, have a plate.
-			B_GiveInvItems (self, other, ItFo_Fishsoup, 1);
+			B_GiveInvItems (self, other, ItFo_Fishsoup_Edda, 1);
 			Edda_Day = Wld_GetDay ();
 		}
 		else

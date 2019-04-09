@@ -17,6 +17,7 @@ const int	Value_Wing					=	20;
 const int	Value_Sting					=	25;
 const int	Value_ReptileSkin			=	25;
 const int 	Value_WargFur				=	25;
+const int	Value_IceWolfFur			=	50;
 const int	Value_DrgSnapperHorn		=	100;
 const int	Value_CrawlerPlate			=	50;
 const int	Value_ShadowFur				=	250;
@@ -31,6 +32,7 @@ const int	Value_TrollBlackFur			=	350;
 const int	Value_GoblinBone			=	10;
 const int	Value_SkeletonBone			=	10;
 const int	Value_DemonHeart			=	300;
+const int	Value_SwampGolemHeart		=	100;
 const int	Value_StoneGolemHeart		=	300;
 const int	Value_FireGolemHeart		=	300;
 const int	Value_IceGolemHeart			=	300;
@@ -124,6 +126,26 @@ INSTANCE ItAt_WolfFur (C_Item)
 	value 				=	Value_WolfFur;
 
 	visual 				=	"ItAt_WolfFur.3DS";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+	TEXT[0]				= 	"";
+	TEXT[1]				= 	"";
+	TEXT[2]				= 	"";
+	TEXT[3]				= 	"";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+/******************************************************************************************/
+INSTANCE ItAt_IceWolfFur (C_Item)
+{
+	name 				=	"Ice Wolf Skin";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_IceWolfFur;
+
+	visual 				=	"ItAt_IceWolfFur.3DS";
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
@@ -490,7 +512,8 @@ INSTANCE ItAt_TrollBlackFur (C_Item)
 
 	value 				=	Value_TrollBlackFur;
 
-	visual 				=	"ItAt_TrollFur.3DS";
+//	visual 				=	"ItAt_TrollFur.3DS";
+	visual 				=	"ItAt_TrollBlackFur.3DS";
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
@@ -583,6 +606,27 @@ INSTANCE ItAt_TrollTooth (C_Item)
 	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
 	
 };
+/******************************************************************************************/
+INSTANCE ItAt_SwampGolemHeart (C_Item)
+{
+	name 				=	"Heart of a Swamp Golem";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI|ITEM_MISSION;
+
+	value 				=	Value_SwampGolemHeart;
+
+	visual 				=	"ItAt_SwampGolemHeart.3DS";
+	material 			=	MAT_STONE;
+
+	description			= 	name;
+	TEXT[0]				= 	"";
+	TEXT[1]				= 	"";
+	TEXT[2]				= 	""; 
+	TEXT[3]				= 	"";
+	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+};
+
 /******************************************************************************************/
 INSTANCE ItAt_StoneGolemHeart (C_Item)
 {

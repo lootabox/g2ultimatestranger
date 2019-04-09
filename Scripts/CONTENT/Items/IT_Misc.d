@@ -653,7 +653,8 @@ INSTANCE ItMi_GoldNecklace (C_Item)
 
 	value 				=	Value_GoldNecklace;
 
-	visual 				=	"ItMi_GoldNecklace.3DS";
+//	visual 				=	"ItMi_GoldNecklace.3DS";
+	visual 				=	"ItMi_GoldNecklace_Chain.3DS";
 	material 			=	MAT_METAL;
 
 	description			= 	name;
@@ -933,7 +934,8 @@ INSTANCE ItMi_SilverNecklace (C_Item)
 
 	value 				=	Value_SilverNecklace;
 
-	visual 				=	"ItMi_SilverNecklace.3DS";
+//	visual 				=	"ItMi_SilverNecklace.3DS";
+	visual 				=	"ItMi_SilverNecklace_Chain.3DS";
 	material 			=	MAT_METAL;
 
 	description			= 	name;
@@ -1110,7 +1112,8 @@ INSTANCE ItMi_ApfelTabak(C_Item)
 
 	value 				=	VALUE_ItMi_ApfelTabak; 
 
-	visual 				=	"ItMi_Pocket.3ds";
+//	visual 				=	"ItMi_Pocket.3ds";
+	visual 				=	"ItMi_FoodPocket.3ds";
 	
 	material 			=	MAT_LEATHER ;
 	
@@ -1131,7 +1134,8 @@ INSTANCE ItMi_PilzTabak(C_Item)
 
 	value 				=	VALUE_ItMi_PilzTabak;
 
-	visual 				=	"ItMi_Pocket.3ds";
+//	visual 				=	"ItMi_Pocket.3ds";
+	visual 				=	"ItMi_FoodPocket.3ds";
 	
 	material 			=	MAT_LEATHER;
 	
@@ -1153,7 +1157,8 @@ INSTANCE ItMi_DoppelTabak(C_Item)
 
 	value 				=	VALUE_ItMi_DoppelTabak;
 
-	visual 				=	"ItMi_Pocket.3ds";
+//	visual 				=	"ItMi_Pocket.3ds";
+	visual 				=	"ItMi_FoodPocket.3ds";
 	
 	material 			=	MAT_LEATHER;
 	
@@ -1175,7 +1180,8 @@ INSTANCE ItMi_Honigtabak(C_Item)
 
 	value 				=	VALUE_ItMi_Honigtabak;
 
-	visual 				=	"ItMi_Pocket.3ds";
+//	visual 				=	"ItMi_Pocket.3ds";
+	visual 				=	"ItMi_FoodPocket.3ds";
 	
 	material 			=	MAT_LEATHER;
 	
@@ -1196,7 +1202,8 @@ INSTANCE ItMi_SumpfTabak(C_Item)
 
 	value 				=	VALUE_ItMi_SumpfTabak;
 
-	visual 				=	"ItMi_Pocket.3ds";
+//	visual 				=	"ItMi_Pocket.3ds";
+	visual 				=	"ItMi_FoodPocket.3ds";
 	
 	material 			=	MAT_LEATHER;
 	

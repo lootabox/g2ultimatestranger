@@ -866,14 +866,12 @@ func void DIA_Bosper_SellFur_Info ()
 	|| (Npc_HasItems(other, ItAt_TrollBlackFur) > 0)
 	|| (Npc_HasItems(other, ItAt_Addon_KeilerFur) > 0)
 	{
-		
 		if (Npc_HasItems(other, ItAt_Addon_KeilerFur) > 0)
 		{
-			AI_Wait (self,3);
 			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_Addon_KeilerFur) * Value_KeilerFur) );
 			B_GiveInvItems(other, self, ItAt_Addon_KeilerFur, Npc_HasItems(other, ItAt_Addon_KeilerFur));
+			B_Say(self,other,"$ABS_GOOD");
 		};
-		
 		if (Npc_HasItems(other, ItAt_SheepFur) > 0)
 		{
 			AI_Output (self, other, "DIA_Bosper_SellFur_11_01"); //A sheep skin? You didn't go slaughter some farmer's sheep in the pasture, did you?
@@ -882,12 +880,21 @@ func void DIA_Bosper_SellFur_Info ()
 			B_GiveInvItems(other, self, ItAt_SheepFur, Npc_HasItems(other, ItAt_SheepFur));
 				
 		};
-		
 		if (Npc_HasItems(other, ItAt_WolfFur) > 0)
+		|| (Npc_HasItems(other, ItAt_IceWolfFur) > 0)
 		{
 			AI_Output (self, other, "DIA_Bosper_SellFur_11_03"); //Wolf skin, that's good...
-			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_WolfFur) * Value_WolfFur) );
-			B_GiveInvItems(other, self, ItAt_WolfFur, Npc_HasItems(other, ItAt_WolfFur));
+			if(Npc_HasItems(other,ItAt_WolfFur))
+			{
+				B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_WolfFur) * Value_WolfFur) );
+				B_GiveInvItems(other, self, ItAt_WolfFur, Npc_HasItems(other, ItAt_WolfFur));
+			};
+			if(Npc_HasItems(other,ItAt_IceWolfFur))
+			{
+				B_Say(self,other,"$NOTBAD");
+				B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_IceWolfFur) * Value_IceWolfFur) );
+				B_GiveInvItems(other, self, ItAt_IceWolfFur, Npc_HasItems(other, ItAt_IceWolfFur));
+			};
 		};
 		
 		if (Npc_HasItems(other, ItAt_WargFur) > 0)

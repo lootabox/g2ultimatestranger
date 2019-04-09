@@ -450,7 +450,8 @@ INSTANCE ItPo_HealHilda_MIS(C_Item)
 
 	value 			=	Value_HpEssenz;	
 
-	visual 			=	"ItMi_Flask.3ds";
+//	visual 			=	"ItMi_Flask.3ds";
+	visual 			=	"ItPo_HealHilda.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	Use_HealHilda;
 	scemeName		=	"POTIONFAST";
@@ -749,7 +750,8 @@ INSTANCE ItPo_HealObsession_MIS(C_Item)
 
 	value 			=	Value_HpEssenz;	
 
-	visual 			=	"ItMi_Flask.3ds";
+//	visual 			=	"ItMi_Flask.3ds";
+	visual 			=	"ItPo_HealObsession.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	Use_HealObsession;
 	scemeName		=	"POTIONFAST";
@@ -941,7 +943,8 @@ INSTANCE ItMi_UltharsHolyWater_Mis (C_Item)
 
 	value 				=	Value_HolyWater;
 
-	visual 				=	"ItMi_HolyWater.3ds";
+//	visual 				=	"ItMi_HolyWater.3ds";
+	visual 				=	"ItMi_UltharsHolyWater.3ds";
 	material 			=	MAT_WOOD;
 
 	description			= 	name;
@@ -1021,7 +1024,8 @@ INSTANCE  ItAm_Prot_BlackEye_Mis (C_Item)
 
 	value 			=	Value_Am_HpMana;
 
-	visual 			=	"ItAm_Hp_Mana_01.3ds";
+//	visual 			=	"ItAm_Hp_Mana_01.3ds";
+	visual 			=	"ItAm_Prot_BlackEye_Mis.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -1054,7 +1058,8 @@ INSTANCE  ItMi_KarrasBlessedStone_Mis (C_Item)
 
 	value 			=	0;
 
-	visual 			=	"ItMi_Rockcrystal.3ds";
+//	visual 			=	"ItMi_Rockcrystal.3ds";
+	visual 			=	"ItMi_KarrasBlessedStone.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_STONE ;

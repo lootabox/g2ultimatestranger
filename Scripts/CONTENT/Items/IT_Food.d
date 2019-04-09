@@ -2,23 +2,24 @@
 // Heilwirkung und Kosten von Nahrung
 // ************************************************************************************************
 
-const int	Value_Apple		=	8;		const int	HP_Apple		=	3;
-const int	Value_Cheese	=	30;		const int	HP_Cheese		=	15;
-const int	Value_Bacon		=	50;		const int	HP_Bacon		=	20;
-const int	Value_Bread		=	20;		const int	HP_Bread		=	10;
-const int	Value_Fish		=	15;		const int	HP_Fish			=	5;
-const int	Value_Rawmeat	=	3;		const int	HP_RawMeat		=	6;
-const int	Value_Meat		=	6;		const int	HP_Meat			=	12;
-const int	Value_Stew		=	8;		const int	HP_Stew			=	20;
-const int	Value_FishSoup	=	20;		const int	HP_FishSoup		=	10;
-const int	Value_Sausage	=	30;		const int	HP_Sausage		=	12;
-const int	Value_Honey		=	30;		const int	HP_Honey		=	12;
+const int	Value_Apple			=	8;		const int	HP_Apple			=	3;
+const int	Value_Cheese		=	30;		const int	HP_Cheese			=	15;
+const int	Value_Bacon			=	50;		const int	HP_Bacon			=	20;
+const int	Value_Bread			=	20;		const int	HP_Bread			=	10;
+const int	Value_Fish			=	15;		const int	HP_Fish				=	5;
+const int	Value_Rawmeat		=	3;		const int	HP_RawMeat			=	6;
+const int	Value_Meat			=	6;		const int	HP_Meat				=	12;
+const int	Value_Stew			=	8;		const int	HP_Stew				=	20;
+const int	Value_FishSoup		=	20;		const int	HP_FishSoup			=	10;
+const int	Value_FishSoup_Edda	=	40;		const int	HP_FishSoup_Edda	=	20;
+const int	Value_Sausage		=	30;		const int	HP_Sausage			=	12;
+const int	Value_Honey			=	30;		const int	HP_Honey			=	12;
 
-const int	Value_Water		=	10;		const int	HP_Water		=	8;
-const int	Value_Beer		=	20;		const int	HP_Beer			=	3;	const int	Mana_Beer		=	1;
-const int	Value_Booze		=	15;		const int	HP_Booze		=	4;	const int	Mana_Booze		=	1;
-const int	Value_Wine		=	20;		const int	HP_Wine			=	2;	const int	Mana_Wine		=	1;
-const int	Value_Milk		=	15; 	const int	HP_Milk			=	5;	const int	Mana_Milk		=	1;	// Joly: Wenn diese Werte geändert werden passt Lobarts Auftrag holMilch nicht mehr!!!!!!
+const int	Value_Water			=	10;		const int	HP_Water			=	8;
+const int	Value_Beer			=	20;		const int	HP_Beer				=	3;	const int	Mana_Beer		=	1;
+const int	Value_Booze			=	15;		const int	HP_Booze			=	4;	const int	Mana_Booze		=	1;
+const int	Value_Wine			=	20;		const int	HP_Wine				=	2;	const int	Mana_Wine		=	1;
+const int	Value_Milk			=	15; 	const int	HP_Milk				=	5;	const int	Mana_Milk		=	1;	// Joly: Wenn diese Werte geändert werden passt Lobarts Auftrag holMilch nicht mehr!!!!!!
 
 
 
@@ -284,7 +285,8 @@ INSTANCE ItFo_XPStew (C_Item)
 	
 	value 				=	Value_Stew;
 	
-	visual 				=	"ItFo_Stew.3ds";
+//	visual 				=	"ItFo_Stew.3ds";
+	visual 				=	"ItFo_Stew_Theckla.3ds";
 	material 			=	MAT_WOOD;
 	scemeName			=	"RICE";
 	on_state[0]			=	Use_XPStew;
@@ -314,7 +316,8 @@ INSTANCE ItFo_CoragonsBeer (C_Item)
 	
 	value 				=	Value_Beer;
 	
-	visual 				=	"ItFo_Beer.3DS";
+//	visual 				=	"ItFo_Beer.3DS";
+	visual 				=	"ItFo_Beer_Coragon.3DS";
 	material 			=	MAT_GLAS;
 	scemeName			=	"POTIONFAST";
 	on_state[0]			=	Use_CoragonsBeerBeer;
@@ -365,6 +368,32 @@ INSTANCE ItFo_FishSoup (C_Item)
 	FUNC VOID Use_FishSoup()
 	{
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_FishSoup);
+	};
+
+
+INSTANCE ItFo_FishSoup_Edda (C_Item)
+{	
+	name 				=	"Edda's Fish Soup";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+	
+	value 				=	Value_FishSoup_Edda;
+	
+	visual 				=	"ItFo_FishSoup_Edda.3ds";
+	material 			=	MAT_WOOD;
+	scemeName			=	"RICE";
+	on_state[0]			=	Use_FishSoup_Edda;
+
+	description			= 	name;
+	TEXT[1]				= 	NAME_Bonus_HP;		COUNT[1]	= HP_FishSoup_Edda;
+	TEXT[5]				= 	NAME_Value;		COUNT[5]	= Value_FishSoup_Edda;
+
+};
+
+	FUNC VOID Use_FishSoup_Edda()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_FishSoup_Edda);
 	};
 
 

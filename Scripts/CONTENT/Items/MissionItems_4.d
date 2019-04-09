@@ -164,7 +164,8 @@ INSTANCE ItAt_TalbinsLurkerSkin (C_Item)
 
 	value 				=	Value_ReptileSkin;
 
-	visual 				=	"ItAt_LurkerSkin.3DS";
+//	visual 				=	"ItAt_LurkerSkin.3DS";
+	visual 				=	"ItAt_TalbinsLurkerSkin.3DS";
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
@@ -211,7 +212,8 @@ INSTANCE ItRi_OrcEliteRing(C_Item)
 
 	value 					=	Value_OrcEliteRing;
 
-	visual 					=	"ItRi_Str_02.3ds";
+//	visual 					=	"ItRi_Str_02.3ds";
+	visual 					=	"ItRi_OrcEliteRing.3ds";
 
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
@@ -258,7 +260,8 @@ INSTANCE ItPo_DragonEggDrinkNeoras_MIS (C_Item)
 
 	value 			=	Value_HpElixier;	
 
-	visual 			=	"ItPo_Perm_STR.3ds";
+//	visual 			=	"ItPo_Perm_STR.3ds";
+	visual 			=	"ItPo_Special_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	Use_DragonEggDrinkNeoras;
 	scemeName		=	"POTIONFAST";

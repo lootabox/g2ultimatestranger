@@ -79,10 +79,11 @@ func void B_GiveDeathInv (var C_NPC slf)
 	// ------ Herzen verteilen ------
 	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Heart] == TRUE)
 	{
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_Swampgolem)		{	CreateInvItems (slf, ItAt_SwampGolemHeart	, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_STONEGOLEM)		{	CreateInvItems (slf, ItAt_StoneGolemHeart	, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_FIREGOLEM)		{	CreateInvItems (slf, ItAt_FireGolemHeart	, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_ICEGOLEM)		{	CreateInvItems (slf, ItAt_IceGolemHeart		, 1);	};
-		
+
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_DEMON)			{	CreateInvItems (slf, ItAt_DemonHeart, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_DEMON_LORD)		{	CreateInvItems (slf, ItAt_DemonHeart, 1);	};
 	};

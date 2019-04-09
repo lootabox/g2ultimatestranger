@@ -254,7 +254,8 @@ PROTOTYPE Rangerring_Prototype (C_ITEM)
 
 	value 					=	Value_Ri_HpMana;
 
-	visual 					=	"ItRi_Hp_Mana_01.3ds"; 
+//	visual 					=	"ItRi_Hp_Mana_01.3ds"; 
+	visual 					=	"ItRi_RangerRing.3ds"; 
 
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
@@ -647,7 +648,8 @@ INSTANCE ItRi_Addon_BanditTrader(C_Item)	//Händlergildenring
 
 	value 					=	5 ;
 
-	visual 					=	"ItRi_Prot_Point_02.3ds";
+//	visual 					=	"ItRi_Prot_Point_02.3ds";
+	visual 					=	"ItRi_Addon_BanditTrader.3ds";
 
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
@@ -797,7 +799,8 @@ INSTANCE ItWr_Vatras2Saturas_FindRaven_opened	(C_Item)
 
 	value 			=	Value_Am_DexStrg;
 
-	visual 			=	"ItAm_Mana_01.3ds";
+//	visual 			=	"ItAm_Mana_01.3ds";
+	visual 			=	"ItAm_Addon_WispDetector.3ds";
 
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_WEAKGLIMMER_BLUE"; 
@@ -885,7 +888,8 @@ INSTANCE ItRi_Addon_MorgansRing_Mission (C_Item)
 	
 	value 				=	500;
 	
-	visual 				=	"ItRi_Prot_Total_02.3DS";
+//	visual 				=	"ItRi_Prot_Total_02.3DS";
+	visual 				=	"ItRi_Addon_MorgansRing.3DS";
 	material 			=	MAT_METAL;
 	
 	on_equip				=  	Equip_MorgansRing;

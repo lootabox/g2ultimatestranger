@@ -60,7 +60,8 @@ INSTANCE ItMi_Addon_Joint_01(C_Item)
 
 	value 				=	Value_Addon_Joint_01;
 
-	visual 				=	"ItMi_Joint_US.3ds";
+//	visual 				=	"ItMi_Joint_US.3ds";
+	visual 				=	"ItMi_Addon_Joint_01.3ds";
 	material 			=	MAT_LEATHER;
 
 	scemeName			=	"JOINT";

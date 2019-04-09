@@ -127,8 +127,7 @@ FUNC VOID DIA_Addon_Pardos_trank_Info()
 };
 FUNC VOID B_SayPardosThanks()
 {
-	//AI_Output (self, other, "DIA_Addon_Pardos_trank_03_00");//Thanks, that does me good.
-	AI_Output (self, other, "DIA_Addon_Pardos_trank_03_01");//Thank you, I feel a little stronger now.
+	AI_Output (self, other, "DIA_Addon_Pardos_trank_03_00");//Thanks, that does me good.
 };
 FUNC VOID DIA_Addon_Pardos_trank_BACK()
 {
@@ -145,7 +144,7 @@ FUNC VOID DIA_Addon_Pardos_trank_01()
 	Info_ClearChoices (DIA_Addon_Pardos_trank);
 	Pardos_Geheilt = TRUE;
 	B_SayPardosThanks();
-	B_GivePlayerXP (XP_Ambient*2);
+	B_GivePlayerXP (XP_Ambient);
 };
 //---------------------------------------------------------------------
 FUNC VOID DIA_Addon_Pardos_trank_02()
@@ -158,7 +157,7 @@ FUNC VOID DIA_Addon_Pardos_trank_02()
 	Info_ClearChoices (DIA_Addon_Pardos_trank);
 	Pardos_Geheilt = TRUE;
 	B_SayPardosThanks();
-	B_GivePlayerXP (XP_Ambient*3);
+	B_GivePlayerXP (XP_Ambient*2);
 };
 //---------------------------------------------------------------------
 FUNC VOID DIA_Addon_Pardos_trank_03()
@@ -171,7 +170,7 @@ FUNC VOID DIA_Addon_Pardos_trank_03()
 	Info_ClearChoices (DIA_Addon_Pardos_trank);
 	Pardos_Geheilt = TRUE;
 	B_SayPardosThanks();
-	B_GivePlayerXP (XP_Ambient*4);
+	B_GivePlayerXP (XP_Ambient*3);
 };
 //---------------------------------------------------------------------
 FUNC VOID DIA_Addon_Pardos_trank_04()
@@ -183,7 +182,7 @@ FUNC VOID DIA_Addon_Pardos_trank_04()
 	
 	Info_ClearChoices (DIA_Addon_Pardos_trank);
 	Pardos_Geheilt = TRUE;
-	B_SayPardosThanks();
+	AI_Output (self, other, "DIA_Addon_Pardos_trank_03_01");//Thank you, I feel a little stronger now.
 	B_GivePlayerXP (XP_Ambient*5);
 };
 //---------------------------------------------------------------------
@@ -196,9 +195,8 @@ FUNC VOID DIA_Addon_Pardos_trank_Soup()
 		B_UseItem 	(self,ItFo_Addon_Meatsoup);
 	};	
 	Pardos_Geheilt = TRUE;
-	AI_Output (self, other, "DIA_Addon_Pardos_trank_03_00");//Thanks, that does me good.
-	//AI_Output (self, other, "DIA_Addon_Pardos_trank_03_01");//Thank you, I feel a little stronger now.
-	B_GivePlayerXP (XP_Ambient);
+	AI_Output (self, other, "DIA_Addon_Pardos_trank_03_01");//Thank you, I feel a little stronger now.
+	B_GivePlayerXP (XP_Ambient*8);
 };
 //---------------------------------------------------------------------
 //	Info perm

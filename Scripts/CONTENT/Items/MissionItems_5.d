@@ -487,7 +487,8 @@ INSTANCE ItPo_PotionOfDeath_01_Mis(C_Item)
 
 	value 			=	10;	
 
-	visual 			=	"ItMi_Flask.3ds";
+//	visual 			=	"ItMi_Flask.3ds";
+	visual 			=	"ItPo_Special_03.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseItPo_PotionOfDeath;
 	scemeName		=	"POTIONFAST";
@@ -551,7 +552,8 @@ INSTANCE ItPo_PotionOfDeath_02_Mis(C_Item)
 
 	value 			=	10;	
 
-	visual 			=	"ItMi_Flask.3ds";
+//	visual 			=	"ItMi_Flask.3ds";
+	visual 			=	"ItPo_Special_03.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseItPo_PotionOfDeath;
 	scemeName		=	"POTIONFAST";
@@ -581,7 +583,8 @@ INSTANCE  ItAm_AmulettOfDeath_Mis(C_Item)
 
 	value 			=	1000;
 
-	visual 			=	"ItAm_Prot_Fire_01.3ds";
+//	visual 			=	"ItAm_Prot_Fire_01.3ds";
+	visual 			=	"ItAm_AmulettOfDeath_Mis.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -638,7 +641,8 @@ INSTANCE ItPo_HealRandolph_MIS(C_Item)
 
 	value 			=	Value_HpEssenz;	
 
-	visual 			=	"ItMi_Flask.3ds";
+//	visual 			=	"ItMi_Flask.3ds";
+	visual 			=	"ItPo_HealRandolph.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	Use_HealRandolph;
 	scemeName		=	"POTIONFAST";

@@ -34,16 +34,15 @@ INSTANCE ItFo_Addon_Shellflesh (C_Item)
 
 	value 				=	Value_Shellflesh;
 
-	visual 				=	"ItAt_Meatbugflesh.3DS";
+//	visual 				=	"ItAt_Meatbugflesh.3DS";
+	visual 				=	"ItAt_Shellflesh.3DS";
 	material 			=	MAT_LEATHER;
 	scemeName			=	"FOODHUGE";
 	on_state[0]			=	Use_Shellflesh;
 
 	description			= 	name;
-	TEXT[0]				= 	"Juicy clam meat";
+	TEXT[0]				= 	"Juicy clam meat. Can be eaten raw.";
 	TEXT[1]				= 	NAME_Bonus_HP; COUNT[1] = HP_Shellflesh;
-	TEXT[2]				= 	"Can be eaten raw";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -62,7 +61,8 @@ INSTANCE ItFo_Addon_Rum(C_Item)
 
 	value 			=	Value_Rum;	
 
-	visual 			=	"ItMi_Rum_02.3ds"; 
+//	visual 			=	"ItMi_Rum_02.3ds";
+	visual 			=	"ItMi_Rum_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseRum;
 	scemeName		=	"POTION";
@@ -129,7 +129,8 @@ INSTANCE ItFo_Addon_LousHammer (C_Item)
 
 	value 			=	Value_LousHammer;	
 
-	visual 			=	"ItMi_Rum_01.3ds";
+//	visual 			=	"ItMi_Rum_01.3ds";
+	visual 			=	"ItMi_Rum_04.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseLouHammer;
 	scemeName		=	"POTION";
@@ -165,7 +166,8 @@ INSTANCE ItFo_Addon_SchlafHammer (C_Item)
 
 	value 			=	Value_SchlafHammer;	
 
-	visual 			=	"ItMi_Rum_01.3ds";
+//	visual 			=	"ItMi_Rum_01.3ds";
+	visual 			=	"ItMi_Rum_05.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseSchlafHammer;
 	scemeName		=	"POTION";
@@ -201,7 +203,8 @@ INSTANCE ItFo_Addon_SchnellerHering(C_Item)
 
 	value 			=	Value_Schnellerhering;	
 
-	visual 			=	"ItMi_Rum_01.3ds"; 
+//	visual 			=	"ItMi_Rum_01.3ds";
+	visual 			=	"ItMi_Rum_03.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseSchnellerHering;
 	scemeName		=	"POTION";
@@ -242,7 +245,8 @@ INSTANCE ItFo_Addon_Pfeffer_01	(C_Item)
 
 	value 				=	100;
 
-	visual 				=	"ItMi_Pocket.3ds";
+//	visual 				=	"ItMi_Pocket.3ds";
+	visual 				=	"ItMi_FoodPocket.3ds";
 
 	material 			=	MAT_LEATHER;
 		
@@ -267,7 +271,8 @@ INSTANCE ItFo_Addon_FireStew (C_Item)
 	
 	value 				=	Value_FireStew;
 	
-	visual 				=	"ItFo_Stew.3ds";
+//	visual 				=	"ItFo_Stew.3ds";
+	visual 				=	"ItFo_Stew_Fire.3ds";
 	material 			=	MAT_WOOD;
 	scemeName			=	"RICE";
 	on_state[0]			=	Use_FireStew;
@@ -297,7 +302,8 @@ INSTANCE ItFo_Addon_Meatsoup (C_Item)
 	
 	value 				=	Value_FishSoup;
 	
-	visual 				=	"ItFo_FishSoup.3ds";
+//	visual 				=	"ItFo_FishSoup.3ds";
+	visual 				=	"ItFo_Stew_Meat.3ds";
 	material 			=	MAT_WOOD;
 	scemeName			=	"RICE";
 	on_state[0]			=	Use_MeatSoup;

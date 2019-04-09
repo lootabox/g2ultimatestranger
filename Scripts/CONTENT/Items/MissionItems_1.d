@@ -410,7 +410,8 @@ INSTANCE ItMi_HerbPaket(C_Item)
 
 	value 				=	0;
 
-	visual 				=	"ItMi_Packet.3ds";
+//	visual 				=	"ItMi_Packet.3ds";
+	visual 				=	"ItMi_HerbPaket.3ds";
 	
 	material 			=	 MAT_LEATHER;
 	
@@ -458,7 +459,8 @@ INSTANCE ItFo_SmellyFish (C_Item)
 	
 	value 				=	0;
 	
-	visual 				=	"ItFo_Fish.3DS";
+//	visual 				=	"ItFo_Fish.3DS";
+	visual 				=	"ItFo_Herring.3DS";
 	material 			=	MAT_LEATHER;
 	scemeName			=	"FOOD";
 	on_state[0]			=	Use_SmellyFish;
@@ -885,7 +887,8 @@ INSTANCE ItFo_Schafswurst (C_Item)
 	
 	value 				=	Value_Sausage;
 	
-	visual 				=	"ItFo_Sausage.3DS";
+//	visual 				=	"ItFo_Sausage.3DS";
+	visual 				=	"ItFo_Schafswurst.3DS";
 	material 			=	MAT_LEATHER;
 	scemeName			=	"FOOD";
 	on_state[0]			=	Use_Schafswurst;

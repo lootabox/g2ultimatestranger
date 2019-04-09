@@ -401,7 +401,8 @@ INSTANCE ItPo_MegaDrink (C_Item)	//Joly: Megatrank aus Dracheneiern auf der Drac
 
 	value 			=	Value_MegaDrink;	
 
-	visual 			=	"ItPo_Perm_Mana.3ds";
+//	visual 			=	"ItPo_Perm_Mana.3ds";
+	visual 			=	"ItPo_Special_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseItPo_MegaDrink;
 	scemeName		=	"POTIONFAST";

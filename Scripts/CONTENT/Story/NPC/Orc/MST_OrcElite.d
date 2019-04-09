@@ -63,6 +63,13 @@ func void B_SetVisuals_OrcElite()
 	Mdl_SetVisualBody	(self,	"Orc_BodyElite",	DEFAULT,	DEFAULT,	"Orc_HeadWarrior",	DEFAULT,  	DEFAULT,	-1);
 };
 
+func void B_SetVisuals_OrcCommander()
+{
+	Mdl_SetVisual		(self,	"Orc.mds");
+	//							Body-Mesh			Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody	(self,	"Orc_BodyCommander",	DEFAULT,	DEFAULT,	"Orc_HeadShaman",	DEFAULT,  	DEFAULT,	-1);
+};
+
 
 //*************************
 //	Orc Elite      														

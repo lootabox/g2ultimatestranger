@@ -138,6 +138,8 @@ Biff can only be hired after asking what is he doing in the Valley of Mines.
 Biff does not grant NH experience before he is hired.
 Biff will not run down from the mountain when encountering Feomathar and stays within hearing distance.
 Boltan takes into account presence of Bennet, Borka, Cornelius and Fernardo when he says that all the cells are empty.
+Bosper makes a short comment for giving Boar and Ice Wolf Skins.
+Bosper will take Ice Wolf Skin when delivering skins to him.
 Brandon quest cancels if he is killed.
 Bromor will take his dish back even after being possessed.
 Buster buys Shadowbeast Horns, even if NH does not know how to remove them.
@@ -154,6 +156,7 @@ Diego cannot be led to Pedrakhan.
 Diego's dialog has 6 more previously unused dialogue lines and 9 more if NH never met him in Valley of Mines.
 Dragomir immediately equips his crossbow after receiving it.
 Edda does not have duplicate dialog option, moved dialog lines around appropriately.
+Edda gives her own fish soup instead of normal soup.
 Elvrich won't react to weapons until he's returned to town.
 Esteban does not turn to his guards if they are dead.
 Esteban first dialog sends Carlos to Ramon's guard post, if NH killed Ramon.
@@ -258,10 +261,8 @@ Oric can still be talked about visiting the mining sites after visiting one or t
 Oric still offers the potion after starting quest to kill Hosh-Pak.
 Orlan can be given the wine only after asking who he is.
 Parcival can be asked about Diego only after asking about scrapers in general.
-Pardos can be given a potion of pure life energy for even greater reward.
+Pardos can be given a potion of pure life energy for a greater reward.
 Pardos can be offered a potion or stew more than once.
-Pardos gives less experience for receiving stew instead of a healing potion.
-Pardos sounds more grateful for receiving a healing potion.
 Pedro cannot be asked about life in the monastery if NH is magician.
 Pepe's dialog for buying a sheep is only available if NH knows he needs one and is not part of any guild yet.
 Ramirez shows two dialogue options only after he sees the thieves' signal.
@@ -386,26 +387,38 @@ Following actions now create a log entry:
 Following events do not create overlapping messages:
 * Kati handing out bread, water and meat.
 
-New item models:
-* 'The Halls of Irdorath' book
-* All books of Runemaking
-* All maps
-* Almanac of the Possessed
-* Babo's pinup
+New/updated item models:
+* All potions
+* Animal trophy hearts: Dragon hearts (fire, ice, rock), Heart of a Demon, Heart of a Swamp Golem, Undead Dragon Soul Stone
+* Animal trophy other: Field Raider Mandibles, Leader of the Pack's Claws, Lurker Claw, Mantis head, Minecrawler Mandibles and Plates
+* Animal trophy skins: Boarskin, Hide of a Black Troll, Ice Wolf Skin, Lurker Skin (Talbin's), Warg Skin
+* Books and documents: All maps, all books of Runemaking, 'The Halls of Irdorath', Almanac of the Possessed, Babo's pinup, Diary of the novice black magician, Message in a Bottle, NH's wanted note
+* Food and drinks: All rum and grog, Clam meat, Coragon's Beer, Fire strips, Fish Soup, Edda's Fish Soup, Herring, Honey, Milk, Sheep Sausage, Theckla's stew
+* Jewelry: All jewelery set items, Aquamarine rings, Divine Aura of Innos, Franco's amulet, Morgan's ring, Will-o'-the-wisp amulet, Ring of the Orcish Warlords, two new ring models
+* Plants: Dragonroot, King's Sorrel, Snapper Weed, Swampweed, Weed
+* Weapons: Fire and Magic ammunition, Krush Agash
+* Brush
 * Coragon's Silver
-* Diary of the novice black magician
-* Fire and Magic ammunition
+* Gold/Silver Necklaces
 * Golden Compass
+* Green Novice
 * Heavy Gold Plate
-* King's Sorrel
-* Leader of the Pack's Claws
-* Message in a Bottle
-* NH's wanted note
+* Holy Water
+* Lab Water Bottle
+* Molerat fat
 * Oblivion scroll
+* Parcel of Weed
+* Raw and fried meat
+* Red Hot Pepper / Tobaccos
+* Red Hot Steel
 * Scratched silver bowl
-* Snapper Weed
+* Stone from Blessed Soil
 * Sun Aloe
 * Treasure Chest
+* Ulthar's Holy Water
+
+New/updated world models:
+* Stuffed wolf head
 
 
 	Sources

@@ -63,6 +63,12 @@ func void B_SetVisuals_OrcWarrior()
 	Mdl_SetVisualBody		(self,	"Orc_BodyWarrior",	DEFAULT,	DEFAULT,	"Orc_HeadWarrior",	DEFAULT,  	DEFAULT,	-1);
 };
 
+func void B_SetVisuals_OrcScout()
+{
+	Mdl_SetVisual			(self,	"Orc.mds");
+	//								Body-Mesh			Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Orc_BodyScout",	DEFAULT,	DEFAULT,	"Orc_HeadWarrior",	DEFAULT,  	DEFAULT,	-1);
+};
 
 //******************
 //	Orc Warrior Roam    														
@@ -143,10 +149,11 @@ INSTANCE OrcWarrior_Harad (Mst_Default_OrcWarrior)
 	protection	[PROT_FLY]			=	75;
 	
 	//-------- visual --------
-	B_SetVisuals_OrcWarrior();
+	B_SetVisuals_OrcScout();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_01);
+	// EquipItem (self, ItMw_2H_OrcAxe_01);
+	EquipItem (self, ItMw_2H_OrcSword_01);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
