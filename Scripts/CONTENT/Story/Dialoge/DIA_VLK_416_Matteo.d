@@ -155,6 +155,10 @@ FUNC VOID DIA_Matteo_TRADE_Info()
 	
 		Matteo_TradeNewsPermanent = 2;
 	};
+	if(MIS_Serpentes_MinenAnteil_KDF == LOG_Running)
+	{
+		MatteoMinenAnteil = TRUE;
+	};
 };
 
 // *********************************************************
@@ -728,6 +732,7 @@ FUNC INT DIA_Matteo_Minenanteil_Condition()
 	if (other.guild == GIL_KDF)
 	&& (MIS_Serpentes_MinenAnteil_KDF == LOG_RUNNING)
 	&& (Npc_KnowsInfo (other,DIA_Matteo_SellWhat))
+	&& (MatteoMinenAnteil == TRUE)
 	{
 		return TRUE;
 	};
@@ -736,43 +741,7 @@ FUNC INT DIA_Matteo_Minenanteil_Condition()
 FUNC VOID DIA_Matteo_Minenanteil_Info()
 {	
 	AI_Output (other, self, "DIA_Matteo_Minenanteil_15_00"); //You've got some mining shares among your wares. Who sold them to you?
-	AI_Output (self, other, "DIA_Matteo_Minenanteil_09_01"); //(nervously) Mining shares? Oops. Where did they come from? No idea where I got them. Honestly, your honor.
+	AI_Output (self, other, "DIA_Matteo_Minenanteil_09_01"); //(sarcastic) Mining shares? Oops. Where did they come from? No idea where I got them. Honestly, your honor.
 	B_GivePlayerXP (XP_Ambient);
-};	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

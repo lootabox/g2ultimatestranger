@@ -63,6 +63,7 @@ Changed NPCs to refuse joining the crew with previously unused dialogue if dismi
 Changed NPCs to return to monastery after surviving the Trial of Fire for Agon, Igaraz, Ulf.
 Changed NPCs to wear farmer clothing and equip sickles after returning to Khorinis for Pardok, Telbor, Tonak.
 Changed default weapon from Heavy Branch to something that makes sense for Akil, Cornelius, Judge, Larius, Onar, Sekob.
+Changed option to comment about fake mining shares to only appear after browsing wares for Bosper, Canthar, Elena, Hakon, Matteo, Orlan, Rosi, Zuris.
 Changed what drinks NPCs drink, depending on gender and class.
 
 Fixed Fajeth, Tengron and Knight 263 referring to Lord Andre when telling NH to go settle his crimes.
@@ -90,7 +91,6 @@ Removed visual transforming to Seekers of possessed NPCs.
 
 	NPCs Traders
 
-Martin does not sell Machetes.
 Matteo only sells his leather armor until beginning of chapter 3, dialogue adjusted accordingly.
 Samuel gets a ring he was supposed to have in his trade inventory.
 
@@ -138,7 +138,8 @@ Biff can only be hired after asking what is he doing in the Valley of Mines.
 Biff does not grant NH experience before he is hired.
 Biff will not run down from the mountain when encountering Feomathar and stays within hearing distance.
 Boltan takes into account presence of Bennet, Borka, Cornelius and Fernardo when he says that all the cells are empty.
-Bosper makes a short comment for giving Boar and Ice Wolf Skins.
+Bosper makes a short comment for giving him skins for which he has no specific voice line for.
+Bosper will give the fake mining shares for free as he says.
 Bosper will take Ice Wolf Skin when delivering skins to him.
 Brandon quest cancels if he is killed.
 Bromor will take his dish back even after being possessed.
@@ -271,12 +272,15 @@ Randolph drinks only beer during his drinking contest.
 Randolph gives the experience bonus for winning Rukhar in the drinking competition, instead of Orlan.
 Randolph runs away from the bandits on the bridge and avoids fighting them.
 Raoul turns toward Sentenza when he calls for him.
+Regis will tell the whole story of Bosper's bow thief, if talking to him after the bow was returned.
 Rethon will only work with Jan after givent he permission from Garond.
 Riordian mentions William in the initial dialogue instead of the dialogue about the west.
 Rosi can only be asked about Bengar's farm if NH has not yet spoken with Bengar.
 Rosi will not create extra gold in her inventory when giving the reward to NH for escorting her.
 Rukhar drinks only beer during his drinking contest.
 Rupert can only be asked where Matteo can be found if NH did not find him yet.
+Salandril can be commented about fake mining shares before knowing he is behind it.
+Salandril can only be accused of distributing the fake mining shares after reading one and seeing his signature.
 Sarah can only be asked about Akils farm if NH does yet know how to find it.
 Sarah gives a Rough Longsword instead of Pirate's Cutlass as the gift for not framing her.
 Saturas properly completes "The power of the guardians of the dead" when he tells NH about the chambers of Adanos.
@@ -284,6 +288,8 @@ Sekob can't be told Rosi is back if she is dead.
 Sekob dialog no longer has option to go to talk to Onar if NH already talked with him.
 Senyan is told by NH that Esteban is dead, instead of giving him other news about Esteban.
 Sergio can only be asked about access to library if NH has not already achieved it.
+Serpentes does not drop Khorinis Ore Mine Shares given to him.
+Serpentes will not give fake mining share quest if none of the involved NPCs is alive.
 Skinner can be asked about the attack on Esteban during the daytime without him getting angry.
 Skip quest cancels if he is killed.
 Sylvio attacking NH causes Biff to attack Bullco as well, if he is with NH.

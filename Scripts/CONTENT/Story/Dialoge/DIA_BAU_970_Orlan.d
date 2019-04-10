@@ -447,35 +447,40 @@ instance DIA_Orlan_TRADE		(C_INFO)
 func int DIA_Orlan_TRADE_Condition ()
 {
 	if (Npc_KnowsInfo(other, DIA_Orlan_WERBISTDU))
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Orlan_TRADE_Info ()
 {
 	AI_Output			(other, self, "DIA_Orlan_TRADE_15_00"); //Show me your wares.
 	B_GiveTradeInv (self);
-	
-		//ADDON>
-		if ((SC_IsRanger == TRUE) || (Orlan_KnowsSCAsRanger == TRUE)||(SCIsWearingRangerRing == TRUE))
-			{
-				AI_Output			(self, other, "DIA_Addon_Orlan_TRADE_05_00"); //Certainly, Brother of the Ring.
-				Orlan_KnowsSCAsRanger = TRUE;
-			}
-		//ADDON<
-		else if ((hero.guild == GIL_PAL) || (hero.guild == GIL_KDF))
-			{
-				AI_Output			(self, other, "DIA_Orlan_TRADE_05_01"); //Of course. It is an honor for me to receive such an important guest.
-			}
-		else if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG) || (hero.guild == GIL_MIL))
-			{
-				AI_Output			(self, other, "DIA_Orlan_TRADE_05_02"); //Of course, sir.
-			}
-		else
-			{
-				AI_Output			(self, other, "DIA_Orlan_TRADE_05_03"); //If you can pay.
-			};
+
+	//ADDON>
+	if ((SC_IsRanger == TRUE) || (Orlan_KnowsSCAsRanger == TRUE)||(SCIsWearingRangerRing == TRUE))
+	{
+		AI_Output			(self, other, "DIA_Addon_Orlan_TRADE_05_00"); //Certainly, Brother of the Ring.
+		Orlan_KnowsSCAsRanger = TRUE;
+	}
+	//ADDON<
+	else if ((hero.guild == GIL_PAL) || (hero.guild == GIL_KDF))
+	{
+		AI_Output			(self, other, "DIA_Orlan_TRADE_05_01"); //Of course. It is an honor for me to receive such an important guest.
+	}
+	else if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG) || (hero.guild == GIL_MIL))
+	{
+		AI_Output			(self, other, "DIA_Orlan_TRADE_05_02"); //Of course, sir.
+	}
+	else
+	{
+		AI_Output			(self, other, "DIA_Orlan_TRADE_05_03"); //If you can pay.
+	};
+
+	if(MIS_Serpentes_MinenAnteil_KDF == LOG_Running)
+	{
+		OrlanMinenAnteil = TRUE;
+	};
 };
 
 
@@ -842,6 +847,7 @@ FUNC INT DIA_Orlan_Minenanteil_Condition()
 	if (hero.guild == GIL_KDF)
 	&& (MIS_Serpentes_MinenAnteil_KDF == LOG_RUNNING)
 	&& (Npc_KnowsInfo(other, DIA_Orlan_WERBISTDU))
+	&& (OrlanMinenAnteil == TRUE)
 	{
 		return TRUE;
 	};

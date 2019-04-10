@@ -118,7 +118,7 @@ func int DIA_Rosi_WAREZ_Condition ()
 		)
 		&& (MIS_bringRosiBackToSekob != LOG_SUCCESS)
 		{
-				return TRUE;
+			return TRUE;
 		};
 };
 func void DIA_Rosi_WAREZ_Info ()
@@ -126,6 +126,10 @@ func void DIA_Rosi_WAREZ_Info ()
 	B_GiveTradeInv (self);
 	AI_Output (other, self, "DIA_Rosi_WAREZ_15_00"); //What can you offer me?
 	AI_Output (self, other, "DIA_Rosi_WAREZ_17_01"); //What do you want?
+	if(MIS_Serpentes_MinenAnteil_KDF == LOG_Running)
+	{
+		RosiMinenAnteil = TRUE;
+	};
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -237,9 +241,9 @@ func int DIA_Rosi_Miliz_Condition ()
 {
 	if (Npc_KnowsInfo(other, DIA_Rosi_WASMACHSTDU))
 	&& ((hero.guild != GIL_MIL))
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Rosi_Miliz_Info ()
@@ -266,9 +270,9 @@ instance DIA_Rosi_ONAR		(C_INFO)
 func int DIA_Rosi_ONAR_Condition ()
 {
 	if (Npc_KnowsInfo(other, DIA_Rosi_Miliz))
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Rosi_ONAR_Info ()
@@ -297,24 +301,23 @@ func int DIA_Rosi_PERMKAP1_Condition ()
 {
 	if (Npc_KnowsInfo(other, DIA_Rosi_WASMACHSTDU))
 	|| ((Kapitel >= 5)	&&	(Npc_KnowsInfo(other, DIA_Rosi_FLEEFROMSEKOB)))
-		{
-					return TRUE;
-			};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Rosi_PERMKAP1_Info ()
 {
 	AI_Output			(other, self, "DIA_Rosi_PERMKAP1_15_00"); //Keep your chin up.
 
-
 	if ((MIS_bringRosiBackToSekob == LOG_SUCCESS))
-		{
-			AI_Output			(self, other, "DIA_Rosi_PERMKAP1_17_01"); //Go jump in the lake.
-		}
+	{
+		AI_Output			(self, other, "DIA_Rosi_PERMKAP1_17_01"); //Go jump in the lake.
+	}
 	else
-		{
-			AI_Output			(self, other, "DIA_Rosi_PERMKAP1_17_02"); //Take care of yourself and don't let them get to you.
-		};
+	{
+		AI_Output			(self, other, "DIA_Rosi_PERMKAP1_17_02"); //Take care of yourself and don't let them get to you.
+	};
 	AI_StopProcessInfos (self);
 };
 
@@ -656,8 +659,9 @@ func int DIA_Rosi_MinenAnteil_Condition ()
 	if (hero.guild == GIL_KDF)
 	&& (MIS_Serpentes_MinenAnteil_KDF == LOG_RUNNING)
 	&& (Npc_KnowsInfo(other, DIA_Rosi_WASMACHSTDU))
+	&& (RosiMinenAnteil == TRUE)
 	{
-			return TRUE;
+		return TRUE;
 	};
 };
 

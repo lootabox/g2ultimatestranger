@@ -603,6 +603,10 @@ func void DIA_Bosper_Trade_Info ()
 		McArrowAmount = (Kapitel * 50);
 		CreateInvItems 	(self, ItRw_Arrow, McArrowAmount );
 		//////////////////////////////////////////////////////////////////////////////////////
+		if(MIS_Serpentes_MinenAnteil_KDF == LOG_Running)
+		{
+			BosperMinenAnteil = TRUE;
+		};
 	}
 	else
 	{
@@ -766,7 +770,7 @@ FUNC VOID DIA_Bosper_AlsLehrling_Info()
 	&& (Bosper_StartGuild != GIL_PAL)
 	&& (Bosper_PALKommentar == FALSE)
 	{
-		AI_Output (self, other,"DIA_Bosper_AlsLehrling_11_02"); //Looks like your career took off like a rocket. Paladin of the King!
+		AI_Output (self, other,"DIA_Bosper_AlsLehrling_11_02"); //Looks like your career really took off. Paladin of the King!
 		AI_Output (self, other,"DIA_Bosper_AlsLehrling_11_03"); //Wherever you go from here, don't forget your old master...
 		Bosper_PALKommentar = TRUE;
 	}
@@ -965,6 +969,7 @@ FUNC INT DIA_Bosper_Minenanteil_Condition()
 {	
 	if (hero.guild == GIL_KDF)
 	&& (MIS_Serpentes_MinenAnteil_KDF == LOG_RUNNING)
+	&& (BosperMinenAnteil == TRUE)
 	{
 		return TRUE;
 	};
@@ -974,6 +979,10 @@ FUNC VOID DIA_Bosper_Minenanteil_Info()
 {	
 	AI_Output (other, self, "DIA_Bosper_Minenanteil_15_00"); //I see that you have mining shares for sale.
 	AI_Output (self, other, "DIA_Bosper_Minenanteil_11_01"); //Ahem. I know nothing about that. You can have them if you want.
+	if(Npc_HasItems(self, ItWr_MinenAnteil_Mis))
+	{
+		B_GiveInvItems(self, other, ItWr_MinenAnteil_Mis, Npc_HasItems(self, ItWr_MinenAnteil_Mis));
+	};
 	B_GivePlayerXP (XP_Ambient);
 };	
 

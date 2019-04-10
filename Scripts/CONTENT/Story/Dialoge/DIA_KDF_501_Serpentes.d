@@ -383,12 +383,28 @@ instance DIA_Serpentes_MinenAnteile		(C_INFO)
 
 func int DIA_Serpentes_MinenAnteile_Condition ()
 {
-	if (Pedro_Traitor == TRUE)
-	&& ((hero.guild == GIL_KDF) || (hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
-	&& (Kapitel >= 3)
+	if((Pedro_Traitor == TRUE) && (Kapitel >= 3))
+	{
+		if(hero.guild == GIL_KDF)
 		{
+			if (!Npc_IsDead(Salandril)
+			|| !Npc_IsDead(Bosper)
+			|| !Npc_IsDead(Canthar))
+			|| !Npc_IsDead(Elena)
+			|| !Npc_IsDead(Hakon)
+			|| !Npc_IsDead(Matteo)
+			|| !Npc_IsDead(Orlan)
+			|| !Npc_IsDead(Rosi)
+			|| !Npc_IsDead(Zuris)
+			{
 				return TRUE;
+			};
+		}
+		else if((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
+		{
+			return TRUE;
 		};
+	};
 };
 
 func void DIA_Serpentes_MinenAnteile_Info ()
@@ -550,71 +566,73 @@ func int DIA_Serpentes_MinenAnteileBringen_Condition ()
 	if (MIS_Serpentes_MinenAnteil_KDF == LOG_RUNNING)
 	&& (Npc_HasItems (other,ItWr_MinenAnteil_Mis))
 	&& (hero.guild == GIL_KDF) 
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 var int SerpentesMinenAnteilCounter;
 func void DIA_Serpentes_MinenAnteileBringen_Info ()
 {
-		var int SerpentesMinenAnteilCount;
-		var int XP_BringSerpentesMinenAnteils;
-		var int SerpentesMinenAnteilOffer;
-		var int SerpentesMinenAnteilGeld;
-	
-		SerpentesMinenAnteilCount = Npc_HasItems(other, ItWr_MinenAnteil_Mis);
-		SerpentesMinenAnteilOffer = 200; 
+	var int SerpentesMinenAnteilCount;
+	var int XP_BringSerpentesMinenAnteils;
+	var int SerpentesMinenAnteilOffer;
+	var int SerpentesMinenAnteilGeld;
 
-		 if (SerpentesMinenAnteilCount == 1)
-			{
-				AI_Output		(other, self, "DIA_Serpentes_MinenAnteileBringen_15_00"); //I've been able to retrieve a mining share.
-				B_GivePlayerXP (XP_BringSerpentesMinenAnteil);
-				B_GiveInvItems (other, self, ItWr_MinenAnteil_Mis,1);
-				SerpentesMinenAnteilCounter = SerpentesMinenAnteilCounter + 1;
-			}
-			else
-			{
-				AI_Output		(other, self, "DIA_Serpentes_MinenAnteileBringen_15_01"); //I've been able to retrieve a few mining shares.
-	
-				B_GiveInvItems (other, self, ItWr_MinenAnteil_Mis,  SerpentesMinenAnteilCount);
-	
-				XP_BringSerpentesMinenAnteils = (SerpentesMinenAnteilCount * XP_BringSerpentesMinenAnteil);
-				SerpentesMinenAnteilCounter = (SerpentesMinenAnteilCounter + SerpentesMinenAnteilCount); 
-	
-				B_GivePlayerXP (XP_BringSerpentesMinenAnteils);
-			};
+	SerpentesMinenAnteilCount = Npc_HasItems(other, ItWr_MinenAnteil_Mis);
+	SerpentesMinenAnteilOffer = 200; 
 
-		SalandrilMinenAnteil_MAINCounter = SalandrilMinenAnteil_MAINCounter - SerpentesMinenAnteilCount;
-		
-		var string MinenAnteilText;
-		var string MinenAnteilLeft;
-		MinenAnteilLeft = IntToString (SalandrilMinenAnteil_MAINCounter);
-		MinenAnteilText = ConcatStrings(MinenAnteilLeft, PRINT_NumberLeft);
-		AI_PrintScreen	(MinenAnteilText, -1, YPOS_GOLDGIVEN, FONT_ScreenSmall, 2);
+	if (SerpentesMinenAnteilCount == 1)
+	{
+		AI_Output		(other, self, "DIA_Serpentes_MinenAnteileBringen_15_00"); //I've been able to retrieve a mining share.
+		B_GivePlayerXP (XP_BringSerpentesMinenAnteil);
+		B_GiveInvItems (other, self, ItWr_MinenAnteil_Mis,1);
+		Npc_RemoveInvItem (self, ItWr_MinenAnteil_Mis);
+		SerpentesMinenAnteilCounter = SerpentesMinenAnteilCounter + 1;
+	}
+	else
+	{
+		AI_Output		(other, self, "DIA_Serpentes_MinenAnteileBringen_15_01"); //I've been able to retrieve a few mining shares.
 
-		if (SerpentesMinenAnteilCounter < SalandrilVerteilteMinenAnteil)
-		{
-			AI_Output			(self, other, "DIA_Serpentes_MinenAnteileBringen_10_02"); //Very good. You must remove them all from circulation. This is poison for the people. Bring them all to me.
-			AI_Output			(self, other, "DIA_Serpentes_MinenAnteileBringen_10_03"); //Here. I will give you the necessary means.
-		}
-		else if (SerpentesMinenAnteilCounter == SalandrilVerteilteMinenAnteil) //Joly:kein Exploid
-		{
-			AI_Output		(other, self, "DIA_Serpentes_MinenAnteileBringen_15_04"); //Those were all, I think.
-			AI_Output		(self, other, "DIA_Serpentes_MinenAnteileBringen_10_05"); //Well done. You have earned a reward.
-			AI_Output		(self, other, "DIA_Serpentes_MinenAnteileBringen_10_06"); //Take this protective amulet. It will help you along the paths you have yet to tread.
-			CreateInvItems (self, ItAm_Prot_Mage_01, 1); 
-			B_GiveInvItems (self, other, ItAm_Prot_Mage_01, 1);
-		}
-		else	//Joly: zur Sicherheit!
-		{
-			AI_Output			(self, other, "DIA_Serpentes_MinenAnteileBringen_10_07"); //This is really the last one now, right?
-		};
-		
-		SerpentesMinenAnteilGeld	= (SerpentesMinenAnteilCount * SerpentesMinenAnteilOffer);
-		
-		CreateInvItems (self, ItMi_Gold, SerpentesMinenAnteilGeld); 
-		B_GiveInvItems (self, other, ItMi_Gold, SerpentesMinenAnteilGeld);
+		B_GiveInvItems (other, self, ItWr_MinenAnteil_Mis,  SerpentesMinenAnteilCount);
+		Npc_RemoveInvItems (self, ItWr_MinenAnteil_Mis, SerpentesMinenAnteilCount);
+
+		XP_BringSerpentesMinenAnteils = (SerpentesMinenAnteilCount * XP_BringSerpentesMinenAnteil);
+		SerpentesMinenAnteilCounter = (SerpentesMinenAnteilCounter + SerpentesMinenAnteilCount); 
+
+		B_GivePlayerXP (XP_BringSerpentesMinenAnteils);
+	};
+
+	SalandrilMinenAnteil_MAINCounter = SalandrilMinenAnteil_MAINCounter - SerpentesMinenAnteilCount;
+	
+	var string MinenAnteilText;
+	var string MinenAnteilLeft;
+	MinenAnteilLeft = IntToString (SalandrilMinenAnteil_MAINCounter);
+	MinenAnteilText = ConcatStrings(MinenAnteilLeft, PRINT_NumberLeft);
+	AI_PrintScreen	(MinenAnteilText, -1, YPOS_GOLDGIVEN, FONT_ScreenSmall, 2);
+
+	if (SerpentesMinenAnteilCounter < SalandrilVerteilteMinenAnteil)
+	{
+		AI_Output			(self, other, "DIA_Serpentes_MinenAnteileBringen_10_02"); //Very good. You must remove them all from circulation. This is poison for the people. Bring them all to me.
+		AI_Output			(self, other, "DIA_Serpentes_MinenAnteileBringen_10_03"); //Here. I will give you the necessary means.
+	}
+	else if (SerpentesMinenAnteilCounter == SalandrilVerteilteMinenAnteil) //Joly:kein Exploid
+	{
+		AI_Output		(other, self, "DIA_Serpentes_MinenAnteileBringen_15_04"); //Those were all, I think.
+		AI_Output		(self, other, "DIA_Serpentes_MinenAnteileBringen_10_05"); //Well done. You have earned a reward.
+		AI_Output		(self, other, "DIA_Serpentes_MinenAnteileBringen_10_06"); //Take this protective amulet. It will help you along the paths you have yet to tread.
+		CreateInvItems (self, ItAm_Prot_Mage_01, 1); 
+		B_GiveInvItems (self, other, ItAm_Prot_Mage_01, 1);
+	}
+	else	//Joly: zur Sicherheit!
+	{
+		AI_Output			(self, other, "DIA_Serpentes_MinenAnteileBringen_10_07"); //This is really the last one now, right?
+	};
+	
+	SerpentesMinenAnteilGeld	= (SerpentesMinenAnteilCount * SerpentesMinenAnteilOffer);
+	
+	CreateInvItems (self, ItMi_Gold, SerpentesMinenAnteilGeld); 
+	B_GiveInvItems (self, other, ItMi_Gold, SerpentesMinenAnteilGeld);
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -634,9 +652,9 @@ func int DIA_Serpentes_GOTSalandril_Condition ()
 {
 	if (SC_KnowsProspektorSalandril == TRUE)
 	&& (hero.guild == GIL_KDF) 
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Serpentes_GOTSalandril_Info ()
@@ -663,21 +681,21 @@ instance DIA_Serpentes_SalandrilHERE		(C_INFO)
 func int DIA_Serpentes_SalandrilHERE_Condition ()
 {
 	if (Npc_GetDistToWP(Salandril,"ALTAR")<10000) 
+	{
+		if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 		{
-			if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
-				{
-					return TRUE;
-				}
-			else if (Npc_KnowsInfo(other, DIA_Serpentes_GOTSalandril))
-			&& (hero.guild == GIL_KDF) 
-				{
-					return TRUE;
-				}
-			else
-				{
-					return FALSE;
-				};
+			return TRUE;
+		}
+		else if (Npc_KnowsInfo(other, DIA_Serpentes_GOTSalandril))
+			 && (hero.guild == GIL_KDF) 
+		{
+			return TRUE;
+		}
+		else
+		{
+			return FALSE;
 		};
+	};
 };
 
 func void DIA_Serpentes_SalandrilHERE_Info ()
@@ -688,8 +706,8 @@ func void DIA_Serpentes_SalandrilHERE_Info ()
 	if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 	{
 		AI_Output		(self, other, "DIA_Serpentes_SalandrilHERE_10_02"); //Here is your reward. And not another word about this, understood?
-		CreateInvItems (self, ItMi_Gold, 400);									
-		B_GiveInvItems (self, other, ItMi_Gold, 400);					
+		CreateInvItems (self, ItMi_Gold, 400);
+		B_GiveInvItems (self, other, ItMi_Gold, 400);
 	};
 	TOPIC_END_MinenAnteile = TRUE;
 	B_GivePlayerXP 	(XP_SalandrilInKloster);

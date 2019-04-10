@@ -234,32 +234,30 @@ func void DIA_Regis_PERM_Info ()
 		Regis_Bogendieb = TRUE;
 	}
 	else if (MIS_Bosper_Bogen == LOG_SUCCESS)
-		 && (Regis_Bogendieb != 2)	
+		 && (Regis_Bogendieb != 2)
 	{
+		AI_Output (self, other, "DIA_Regis_PERM_13_01"); //You could say that.
+		AI_Output (self, other, "DIA_Regis_PERM_13_02"); //They robbed Bosper the bowyer. What a brazen thing to do, I tell you!
+		AI_Output (self, other, "DIA_Regis_PERM_13_03"); //The fellow just ambled into the shop in broad daylight and grabbed himself a bow.
+		AI_Output (self, other, "DIA_Regis_PERM_13_04"); //And Bosper right after him, hollering 'Stop right there, you rogue!' But the thief was too fast.
 		AI_Output (self, other, "DIA_Regis_PERM_13_05"); //And then an honest finder actually brought that stolen bow back to Bosper.
 		AI_Output (self, other, "DIA_Regis_PERM_13_06"); //That's odd - you'd think it's everyone for himself in times like these, but this man just drops in and returns that bow.
 		Regis_Bogendieb = 2;
 	}
+	else if (Kapitel != 3)
+	{
+		AI_Output (self, other, "DIA_Regis_PERM_13_07"); //Oh well, all's quiet. I suppose that when the orcs come, we can't fail to notice...
+	}
+	else if (MIS_RescueBennet == LOG_SUCCESS)
+	{
+		AI_Output (self, other, "DIA_Regis_PERM_13_08"); //They actually found out that the mercenary is innocent, and they had to let him go.
+		AI_Output (self, other, "DIA_Regis_PERM_13_09"); //Lord Hagen must be beside himself with rage.
+	}
 	else
 	{
-		if (Kapitel != 3)
-		{
-			AI_Output (self, other, "DIA_Regis_PERM_13_07"); //Oh well, all's quiet. I suppose that when the orcs come, we can't fail to notice...
-		}
-		else 
-		{
-			if (MIS_RescueBennet == LOG_SUCCESS)
-			{
-				AI_Output (self, other, "DIA_Regis_PERM_13_08"); //They actually found out that the mercenary is innocent, and they had to let him go.
-				AI_Output (self, other, "DIA_Regis_PERM_13_09"); //Lord Hagen must be beside himself with rage.
-			}
-			else
-			{
-				AI_Output (self, other, "DIA_Regis_PERM_13_10"); //The entire city is abuzz with it. Do you remember Lothar, the paladin?
-				AI_Output (other,self , "DIA_Regis_PERM_15_11"); //Maybe.
-				AI_Output (self, other, "DIA_Regis_PERM_13_12"); //Anyway, he's dead. Murdered out in the street. They're blaming the mercenaries, of course.
-			};
-		};
+		AI_Output (self, other, "DIA_Regis_PERM_13_10"); //The entire city is abuzz with it. Do you remember Lothar, the paladin?
+		AI_Output (other,self , "DIA_Regis_PERM_15_11"); //Maybe.
+		AI_Output (self, other, "DIA_Regis_PERM_13_12"); //Anyway, he's dead. Murdered out in the street. They're blaming the mercenaries, of course.
 	};
 };
 

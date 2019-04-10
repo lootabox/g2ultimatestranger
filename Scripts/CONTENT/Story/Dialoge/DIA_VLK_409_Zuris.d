@@ -143,6 +143,11 @@ func void DIA_Zuris_WAREZ_Info ()
 		AI_Output (self, other, "DIA_Zuris_GREET_14_02"); //I just received some new potions. My guest, Master Daron the Fire Magician, brought them along from the monastery.
 		Zuris_einmal = TRUE;
 	};
+
+	if(MIS_Serpentes_MinenAnteil_KDF == LOG_Running)
+	{
+		ZurisMinenAnteil = TRUE;
+	};
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info POTIONS
@@ -319,6 +324,7 @@ FUNC INT DIA_Zuris_Minenanteil_Condition()
 {	
 	if (hero.guild == GIL_KDF)
 	&& (MIS_Serpentes_MinenAnteil_KDF == LOG_RUNNING)
+	&& (ZurisMinenAnteil == TRUE)
 	{
 		return TRUE;
 	};

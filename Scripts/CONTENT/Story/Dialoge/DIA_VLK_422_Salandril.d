@@ -154,7 +154,8 @@ func void DIA_Salandril_Trade_Info ()
 		AI_Output (self, other, "DIA_Salandril_Trade_13_01"); //It's my pleasure, reverend brother.
 		if (MIS_Serpentes_MinenAnteil_KDF == LOG_RUNNING)
 		{
-			SC_KnowsProspektorSalandril = TRUE;
+			// SC_KnowsProspektorSalandril = TRUE;
+			SalandrilMinenAnteil = TRUE;
 		};
 	};
 	if (other.guild == GIL_PAL)
@@ -201,6 +202,34 @@ FUNC VOID DIA_Salandril_KAP3_EXIT_Info()
 ///////////////////////////////////////////////////////////////////////
 //	Info Kloster
 ///////////////////////////////////////////////////////////////////////
+instance DIA_Salandril_Minenanteil(C_Info)
+{
+	npc = VLK_422_Salandril;
+	nr = 3;
+	condition = DIA_Salandril_Minenanteil_Condition;
+	information = DIA_Salandril_Minenanteil_Info;
+	description = "You're selling illegal mining shares!";
+};
+
+func int DIA_Salandril_Minenanteil_Condition()
+{
+	if (other.guild == GIL_KDF)
+	&& (MIS_Serpentes_MinenAnteil_KDF == LOG_Running)
+	&& (SalandrilMinenAnteil == TRUE)
+	&& (SC_KnowsProspektorSalandril == FALSE)
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Salandril_Minenanteil_Info()
+{
+	AI_Output (other, self, "DIA_Canthar_Minenanteil_15_00"); //You're selling illegal mining shares!
+	B_Say (self, other, "$NOTNOW");
+	AI_StopProcessInfos(self);
+	B_GivePlayerXP(XP_Ambient);
+};
+
 instance DIA_Salandril_KLOSTER		(C_INFO)
 {
 	npc		 = 	VLK_422_Salandril;
@@ -225,7 +254,7 @@ func void DIA_Salandril_KLOSTER_Info ()
 	AI_Output			(self, other, "DIA_Salandril_KLOSTER_13_01"); //What? Have you gone off your rocker? Like hell I will. Those miserable magicians don't have the slightest proof against me.
 
 	if (hero.guild == GIL_KDF)
-	&& (SC_KnowsProspektorSalandril == TRUE)		
+	&& (SC_KnowsProspektorSalandril == TRUE)
 	{
 		AI_Output			(other, self, "DIA_Salandril_KLOSTER_15_02"); //And what about those fake ore mining shares you've huckstered all over the country? They bear your signature. You're guilty.
 	}
@@ -256,9 +285,9 @@ func int DIA_Salandril_GehinsKloster_Condition ()
 	if ((SC_KnowsProspektorSalandril == TRUE) || (MIS_Serpentes_BringSalandril_SLD == LOG_RUNNING))
 	&& (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
 	&& (Npc_KnowsInfo(other, DIA_Salandril_KLOSTER))
-		{
-				return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Salandril_GehinsKloster_Info ()

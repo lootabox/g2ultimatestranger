@@ -95,6 +95,7 @@ var C_NPC Diego_DI;
 var C_NPC Dyrian;
 var C_NPC Egill;
 var C_NPC Ehnim;
+var C_NPC Elena;
 var C_NPC Elvrich;
 var C_NPC Engardo;
 var C_NPC Engor;
@@ -138,6 +139,7 @@ var C_NPC Gorn_DI;
 var C_NPC Greg;
 var C_NPC Greg_NW;
 var C_NPC Gritta;
+var C_NPC Hakon;
 var C_NPC Halvor;
 var C_NPC HammerPirate;
 var C_NPC Harad;
@@ -315,6 +317,7 @@ var C_NPC Wache_02;
 var C_NPC Wolfi;
 var C_NPC Wulfgar;
 var C_NPC Xardas;
+var C_NPC Zuris;
 
 //*******************************************************
 //			NPC Globals füllen
@@ -420,6 +423,7 @@ func void B_InitNpcGlobals ()
 	Dyrian					= Hlp_GetNpc(NOV_604_Dyrian);
 	Egill					= Hlp_GetNpc(BAU_945_Egill);
 	Ehnim					= Hlp_GetNpc(BAU_944_Ehnim);
+	Elena					= Hlp_GetNpc(BAU_911_Elena);
 	Elvrich					= Hlp_GetNpc(VLK_4302_Addon_Elvrich);
 	Engardo					= Hlp_GetNpc(SLD_841_Engardo);
 	Engor					= Hlp_GetNpc(VLK_4108_Engor);
@@ -463,6 +467,7 @@ func void B_InitNpcGlobals ()
 	Greg					= Hlp_GetNpc(PIR_1320_Addon_Greg);
 	Greg_NW					= Hlp_GetNpc(PIR_1300_Addon_Greg_NW);
 	Gritta					= Hlp_GetNpc(VLK_418_Gritta);
+	Hakon					= Hlp_GetNpc(VLK_407_Hakon);
 	Halvor					= Hlp_GetNpc(VLK_469_Halvor);
 	HammerPirate			= Hlp_GetNpc(PIR_1360_Addon_PIRAT);
 	Harad					= Hlp_GetNpc(VLK_412_Harad);
@@ -640,4 +645,5 @@ func void B_InitNpcGlobals ()
 	Wolfi					= Hlp_GetNpc(BlackWolf);
 	Wulfgar					= Hlp_GetNpc(MIL_312_Wulfgar);
 	Xardas					= Hlp_GetNpc(NONE_100_Xardas);
+	Zuris					= Hlp_GetNpc(VLK_409_Zuris);
 };

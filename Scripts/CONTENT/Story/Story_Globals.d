@@ -975,7 +975,15 @@ var int 	MIS_RescueBilgot;					//Bilgot aus OW rausholen
 var int		MIS_Buster_KillShadowbeasts_DJG;	//Buster schickt dich los Shadowbiester zu erledigen. 					SLD oder DJG
 var int		MIS_Ulthar_HeileSchreine_PAL;		//Ulthar schickt dich los die verhexten Schreine zu heilen. 			PAL oder MIL
 var int		MIS_Serpentes_MinenAnteil_KDF;		//Serpentes schickt dich los die gef‰lschten Minenanteile einzusammeln. KDF
-
+var int		BosperMinenAnteil;
+var int		CantharMinenAnteil;
+var int		ElenaMinenAnteil;
+var int		HakonMinenAnteil;
+var int		MatteoMinenAnteil;
+var int		OrlanMinenAnteil;
+var int		RosiMinenAnteil;
+var int		SalandrilMinenAnteil;
+var int		ZurisMinenAnteil;
 
 // ------ KAPITEL 4 ------
 var int 	MIS_DJG_Sylvio_KillIceGolem;//Sylvio will, daﬂ der SC ihm den Weg frei killt.
