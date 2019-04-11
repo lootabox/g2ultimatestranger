@@ -91,12 +91,15 @@ instance DIA_Rengaru_HALLODIEB		(C_INFO)
 	nr			 =  2;
 	condition	 = 	DIA_Rengaru_HALLODIEB_Condition;
 	information	 = 	DIA_Rengaru_HALLODIEB_Info;
-	permanent	 =  FALSE;
+//	permanent	 =  FALSE;
+	permanent	 =  TRUE;
 	description	 = 	"Jora says you've got his money...";
 };
 func int DIA_Rengaru_HALLODIEB_Condition ()
 {
 	if (Jora_Dieb == LOG_RUNNING)
+	&& (!Npc_KnowsInfo(other, DIA_Rengaru_GOTYOU))
+	&& (Npc_GetDistToWP(self, Rengaru_RunAwayWP) > 1000)
 	{
 		return TRUE;
 	};
@@ -109,7 +112,9 @@ func void DIA_Rengaru_HALLODIEB_Info ()
 
 	AI_StopProcessInfos (self);
 
-	Npc_ExchangeRoutine	(self,"RunAway");  
+	self.wp = Rengaru_RunAwayWP;
+	AI_StartState(self, ZS_FleeToWp, 1, "");
+	//Npc_ExchangeRoutine	(self,"RunAway");
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info GotYou
@@ -120,13 +125,15 @@ instance DIA_Rengaru_GOTYOU		(C_INFO)
 	nr			 =  3;
 	condition	 = 	DIA_Rengaru_GOTYOU_Condition;
 	information	 = 	DIA_Rengaru_GOTYOU_Info;
-	permanent	 =  FALSE;	
+	permanent	 =  FALSE;
 	description	 = 	"Gotcha!";
 };
 
 func int DIA_Rengaru_GOTYOU_Condition ()
 {
-	if (Npc_KnowsInfo(other, DIA_Rengaru_HALLODIEB))
+	//if (Npc_KnowsInfo(other, DIA_Rengaru_HALLODIEB))
+	if (Jora_Dieb == LOG_RUNNING)
+	&& (Npc_GetDistToWP(self, Rengaru_RunAwayWP) <= 1000)
 	{
 		return TRUE;
 	};
@@ -259,10 +266,10 @@ func void DIA_Rengaru_INKNAST_HauAb ()
 {
 	AI_Output (other, self, "DIA_Rengaru_INKNAST_HauAb_15_00"); //Get lost! And don't show your face around here again!
 	AI_Output (self, other, "DIA_Rengaru_INKNAST_HauAb_07_01"); //You won't regret this! Thanks, man!
-	
-	Npc_ExchangeRoutine	(self,"Start"); 	
+
+	Npc_ExchangeRoutine	(self,"Start");
 	AI_StopProcessInfos (self);
-	
+
 	Diebesgilde_Okay = (Diebesgilde_Okay + 1);
 };
 func void DIA_Rengaru_INKNAST_Knast ()
@@ -271,10 +278,10 @@ func void DIA_Rengaru_INKNAST_Knast ()
 	AI_Output (self, other, "DIA_Rengaru_INKNAST_Knast_07_01"); //(tired) I don't want any more trouble. If you think that's what you should do, then be my guest.
 	AI_Output (self, other, "DIA_Rengaru_INKNAST_Knast_07_02"); //(warning) Be careful, though - my friends are not going to like what you're pulling here...
 
-	
-	Rengaru_InKnast		= TRUE; 	
-	
+	Rengaru_InKnast		= TRUE;
+
 	AI_StopProcessInfos (self);
+	Npc_ExchangeRoutine	(self,"Hide");
 };
 
 func void DIA_Rengaru_INKNAST_keinKnast ()

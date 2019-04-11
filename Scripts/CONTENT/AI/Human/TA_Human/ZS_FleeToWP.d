@@ -11,10 +11,10 @@ func void ZS_FleeToWp ()
 	
 	B_ResetAll (self);
 	
-	if  Hlp_GetInstanceID (self) == Hlp_GetInstanceID (Cornelius)
-	{
+	//if  Hlp_GetInstanceID (self) == Hlp_GetInstanceID (Cornelius)
+	//{
 		Npc_PercDisable (self,PERC_ASSESSENTERROOM);
-	};
+	//};
 	//B_Say_Overlay (self, other, "$RUNAWAY"); //kommst sonst nach Dialog am Ankunftspunkt
 	
 	AI_SetWalkmode 		(self, NPC_RUN);
@@ -51,8 +51,3 @@ func int ZS_FleeToWp_End ()
 {	
 	
 };
-
-
-		
-	
-	

@@ -44,16 +44,25 @@ FUNC VOID Rtn_Start_492()
     TA_Stand_Drinking 		(20,15,05,15,"NW_CITY_MERCHANT_PATH_33_B"); 
 };
 
-FUNC VOID Rtn_RunAway_492()
+const string Rengaru_RunAwayWP = "NW_CITY_HABOUR_POOR_AREA_BACK_ALLEY_01";
+/* FUNC VOID Rtn_RunAway_492()
 {	
-	TA_FleeToWP 	(08,00,23,00,"NW_CITY_HABOUR_KASERN_05_01");
-    TA_FleeToWP		(23,00,08,00,"NW_CITY_HABOUR_KASERN_05_01"); 
-};
+	//TA_FleeToWP 	(08,00,23,00,"NW_CITY_HABOUR_KASERN_05_01");
+    //TA_FleeToWP	(23,00,08,00,"NW_CITY_HABOUR_KASERN_05_01"); 
+	TA_FleeToWP 	(08,00,23,00,Rengaru_RunAwayWP);
+    TA_FleeToWP		(23,00,08,00,Rengaru_RunAwayWP); 
+}; */
 
 FUNC VOID Rtn_Prison_492()
 {	
 	TA_Stand_ArmsCrossed 	(08,00,23,00,"NW_CITY_HABOUR_KASERN_RENGARU");
     TA_Stand_ArmsCrossed	(23,00,08,00,"NW_CITY_HABOUR_KASERN_RENGARU"); 
+};
+
+FUNC VOID Rtn_Hide_492()
+{
+	TA_Stand_WP		(8,0,23,0,"NW_CITY_HABOUR_SHIP_01");
+	TA_Stand_WP		(23,0,8,0,"NW_CITY_HABOUR_SHIP_01");
 };
 
 

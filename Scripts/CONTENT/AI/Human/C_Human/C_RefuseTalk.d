@@ -35,5 +35,14 @@ func int C_RefuseTalk (var C_NPC slf, var C_NPC oth)
 		return TRUE;
 	};
 
+	// CUSTOM
+	if (Npc_IsInState(self, ZS_FleeToWp))
+	{
+		if (Npc_GetDistToWP(self, self.wp) > 1000)
+		{
+			return TRUE;
+		};
+	};
+
 	return FALSE; //DEFAULT
 };
