@@ -180,7 +180,7 @@ INSTANCE DIA_Gerold_Stuff (C_INFO)
 	condition	= DIA_Gerold_Stuff_Condition;
 	information	= DIA_Gerold_Stuff_Info;
 	permanent	= TRUE;
-	description = "I've got something for you...";
+	description = "I've got something for you. The food you wanted.";
 };
 //-----------------------------------                       
 var int DIA_Gerold_Stuff_permanent;
@@ -230,6 +230,8 @@ FUNC VOID DIA_Gerold_Stuff_Info()
 		AI_Output 	(self ,other,"DIA_Gerold_Stuff_12_03"); //Come back tomorrow, he'll have received the message by then.
 		
 		B_GiveInvItems (other,self ,ItWr_LetterForGorn_MIS,1); 
+		Npc_RemoveInvItems(self, ItWr_LetterForGorn_MIS, 1);
+
 		DayContactGorn = Wld_GetDay();
 		DIA_Gerold_Stuff_permanent = TRUE;
 		
@@ -269,6 +271,7 @@ FUNC VOID DIA_Gerold_Antwort_Info()
 	AI_Output	(other,self ,"DIA_Gerold_Antwort_15_00");//Did Gorn receive the message?
 	
 	if (DayContactGorn < Wld_GetDay() )
+	|| (MIS_RescueGorn == LOG_SUCCESS)
 	{
 		AI_Output	(self ,other,"DIA_Gerold_Antwort_12_01");//Yeah, I'm supposed to tell you from him:
 		AI_Output	(other,self ,"DIA_Gerold_Antwort_15_02");//And?

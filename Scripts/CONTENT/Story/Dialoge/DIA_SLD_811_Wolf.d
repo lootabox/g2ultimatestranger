@@ -441,6 +441,7 @@ FUNC VOID DIA_Wolf_ArmorReady_Info()
 			AI_Output (other, self, "DIA_Wolf_ArmorReady_15_04"); //Thank you!
 			AI_Output (self, other, "DIA_Wolf_ArmorReady_08_05"); //Don't mention it.
 			Player_GotCrawlerArmor = TRUE;
+			CreateInvItems(Bennet,ItBE_Addon_MC,1);
 		};
 	}
 	else

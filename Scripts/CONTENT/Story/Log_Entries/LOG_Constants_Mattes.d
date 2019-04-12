@@ -174,3 +174,4 @@ const string	TOPIC_DiegosResidence		 	 = "Diego's Business";
 
 const string	TOPIC_TalbinCheese				 = "Cheese for Talbin";
 const string	TOPIC_KervoLurkers				 = "Unnerving Lurkers";
+const string	TOPIC_BennetOre					 = "Magic ore";

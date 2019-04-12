@@ -67,8 +67,8 @@ Changed default weapon from Heavy Branch to something that makes sense for Akil,
 Changed option to comment about fake mining shares to only appear after browsing wares for Bosper, Canthar, Elena, Hakon, Matteo, Orlan, Rosi, Zuris.
 Changed what drinks NPCs drink, depending on gender and class.
 
-Fixed Fajeth, Tengron and Knight 263 referring to Lord Andre when telling NH to go settle his crimes.
 Fixed NPCs not considering Heavy Militia armor as militia armor for Borka, Kardif, Meldor, Nagur, Nadja.
+Fixed NPCs referring to Lord Andre when telling NH to go settle his crimes for  Fajeth, Tengron, Knight 263.
 Fixed NPCs showing wrong pick pocket difficulty in Valley of Mines for Carlos, Sylvio.
 Fixed NPCs speaking out NH's dialog lines for Pardos, Peck.
 Fixed NPCs talking to NH when he is transformed into an animal.
@@ -78,7 +78,7 @@ Fixed ambient inventory generation for pirates.
 Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
 Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patrick, Monty, Tonak, Telbor, Pardos.
 Fixed issue with dragon dialog restarting quest 'Dragon Eggs', if it was already completed.
-Fixed logical issues with dialogue of Diego, Fernando, Lobart, Lothar, Ramon, Ulf, Vatras, Xardas.
+Fixed logical issues with dialogue of Bennet, Diego, Fernando, Lobart, Lothar, Ramon, Ulf, Vatras, Xardas.
 Fixed skipping of NH dialog line when talking to possessed NPCs for Bromor, Brutus, Engrom, Fernando, Malak, Sekob, Vino.
 Fixed mages to not loot the player while in the city for Daron, Myxir and Vatras.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
@@ -130,7 +130,12 @@ Bengar can immediately be told to let Baltasar back on his pastures after gettin
 Bengar can only be asked about Onar after asking how does he make a living.
 Bengar can only be asked about the missing people if they have not been returned yet.
 Bengar returns to his normal routine after the militia are gone.
+Bennet cannot be given the magic ore or asked about his standing between farmers and mercenaries when he is in prison.
+Bennet does not drop Dragon Scales given to him.
+Bennet grants a small amount of experience for finding the magic ore nuggets for him.
 Bennet makes NH dragon hunter only after giving the armor.
+Bennet will only give a map of Khorinis caves if NH does not already have it and Brahim is dead or otherwise a previously unused voice line is used to tell NH to go buy it himself.
+Bennet will only sell Minecrawler Belt once NH has received the armor.
 Betsy gives no experience when killed.
 Betsy stays with Opolos in the monastery once brought there, instead of going back to Pepe.
 Betsy will always disappear if NH gets too far away from her, instead of sometimes appearing back at Pepe's.
@@ -190,8 +195,11 @@ Garwig will talk with NH even if he has been caught for a crime.
 Geppert does not create a runestone or a lump of ore in his inventory if Kervo dies.
 Gerold can be asked whether he ever sleeps only before receiving the order from Garond to free Gorn.
 Gerold gives explicit options for giving stew and fish soup.
+Gerold will not keep the note for Gorn in his inventory.
+Gerold will not wait to say that he delivered the note if Gorn is already out of the prison.
 Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
+Gorn leads the player to the rock fortress instead of running ahead of him.
 Greg's treasure hunt quest cancels if the first treasure is not given to him and he will comment in Jharkendar if the quest fails.
 Grimbald does not teach NH for free without finishing the hunt.
 Grimbald gives NH experience for killed snappers.
@@ -248,7 +256,6 @@ Martin actually takes the evidence from NH and does not repeat it needlessly eve
 Martin only hints at going to Vatras for the Wisp amulet, if NH does not already have it.
 Mika can be asked whether all is quiet, even if the mercenaries left Akil's farm themselves.
 Mika properly evaluates NH's armor before commenting on it.
-Milten can teach Paladin runes in Irdorath.
 Milten does not simultaneously return the letter from Hagen and the key to the monastery.
 Milten returns to the monastery in the beginning of the third chapter instead of after giving the report to Hagen.
 Milten will not say Gorn is in prison if he is already released.
@@ -309,8 +316,8 @@ Urshak will not wait for player to talk to him.
 Vatras actually takes the orders from Raven and grants experience for all evidence not already reported.
 Vatras can be asked for help joining the monastery only if not already part of a guild.
 Vatras can be asked where to find a priest of Innos only before talking to Daron.
-Vatras can't be told about Lucia before reading her letter or talking to Elvrich about it.
 Vatras cannot be donated to usually, but instead he asks for a donation for his blessing.
+Vatras cannot be told about Lucia before reading her letter or talking to Elvrich about it.
 Vatras closes quest "Wanted Notes and Bandits" if it is still open when returning the orders from Raven.
 Vatras dialog creates a journal note about Martin only once he mentions him.
 Vatras dialog no longer has "MORE" option, instead options are only shown when they are relevant and options are hidden when no longer relevant.
@@ -387,6 +394,7 @@ Following actions no longer cause unnecessary journal updates:
 
 Following actions now create a log entry:
 * Using Oblivion spell while Ignaz' quest is running.
+* Bennet asking to find magic ore nuggets.
 * Grimbald agreeing to teach taking animal trophies.
 * Kati handing out Baltram's shipment.
 * Kervo asking to take care of lurkers outside his cave.

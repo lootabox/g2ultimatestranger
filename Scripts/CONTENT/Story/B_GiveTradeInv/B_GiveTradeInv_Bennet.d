@@ -43,7 +43,7 @@ FUNC VOID B_GiveTradeInv_Bennet (var C_NPC slf)
 		//***********************************
 		CreateInvItems (slf, ItMi_Nugget, 1); 
 		//***********************************
-		CreateInvItems (slf, ItBE_Addon_MC, 1); 
+		//CreateInvItems (slf, ItBE_Addon_MC, 1); 
 		Bennet_ItemsGiven_Chapter_3 = TRUE;
 	};
 

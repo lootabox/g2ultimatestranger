@@ -57,8 +57,10 @@ FUNC VOID Rtn_Start_704 ()
 
 FUNC VOID Rtn_RunToRockRuinBridge_704 ()
 {	
-	TA_RunToWP		(08,00,23,00,"LOCATION_19_01");
-    TA_RunToWP		(23,00,08,00,"LOCATION_19_01");
+	//TA_RunToWP		(08,00,23,00,"LOCATION_19_01");
+	//TA_RunToWP		(23,00,08,00,"LOCATION_19_01");
+	TA_Guide_Player(8,0,23,0,"LOCATION_19_01");
+	TA_Guide_Player(23,0,8,0,"LOCATION_19_01");
 };
 
 FUNC VOID Rtn_Tot_704 ()

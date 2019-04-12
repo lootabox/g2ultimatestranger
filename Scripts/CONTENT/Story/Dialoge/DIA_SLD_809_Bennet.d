@@ -151,7 +151,10 @@ instance DIA_Bennet_BauOrSld (C_INFO)
 
 func int DIA_Bennet_BauOrSld_Condition ()
 {
-	return TRUE;
+	if((Kapitel != 3) || (MIS_RescueBennet == LOG_SUCCESS))
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Bennet_BauOrSld_Info ()
@@ -343,10 +346,13 @@ func void DIA_Bennet_WannaSmithORE_Info ()
 		AI_Output (other, self, "DIA_Bennet_WannaSmithORE_15_08");//Aw, come on - I'm with the mercenaries, and I can forge - what else do you want?
 		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_09"); //Can you tell me, then, how I am supposed to forge a magic ore weapon without any magic ore?
 		AI_Output (other, self, "DIA_Bennet_WannaSmithORE_15_10");//Weeell...
-		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_11"); //That's what I thought. I need at least 5 lumps of that ore - or you can forget it,
+		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_11"); //That's what I thought. I need at least 5 lumps of that ore - or you can forget it.
 		if (MIS_Bennet_BringOre == FALSE)
 		{
 			MIS_Bennet_BringOre = LOG_RUNNING;
+			Log_CreateTopic(TOPIC_BennetOre,LOG_MISSION);
+			Log_SetTopicStatus(TOPIC_BennetOre,LOG_Running);
+			B_LogEntry(TOPIC_BennetOre,"The mercenary smith Bennet will teach me how to forge magic ore weapons if I bring him five pieces of the magic ore.");
 		};
 	}
 	else //alles OK
@@ -409,6 +415,7 @@ func int DIA_Bennet_BringOre_Condition ()
 {
 	if (MIS_Bennet_BringOre == LOG_RUNNING)
 	&& (Npc_HasItems (other,ItMi_Nugget) >= 5)
+	&& ((Kapitel != 3) || (MIS_RescueBennet == LOG_SUCCESS))
 	{
 		return TRUE;
 	};
@@ -422,7 +429,9 @@ func void DIA_Bennet_BringOre_Info ()
 	AI_Output (self, other, "DIA_Bennet_BringOre_06_02"); //Really! Knock me down with a feather!
 	AI_Output (self, other, "DIA_Bennet_BringOre_06_03"); //You can keep two of these things. You'll need them in order to forge your own weapon.
 	B_GiveInvItems (self,other, itmi_nugget, 2);
+	B_LogEntry(TOPIC_BennetOre,"I brought the ore to Bennet and he let me keep two of the nuggets.");
 	MIS_Bennet_BringOre = LOG_SUCCESS;
+	B_GivePlayerXP(100);
 };
 
 // ************************************************************
@@ -923,17 +932,17 @@ func void DIA_Bennet_DragonScale_Info ()
 	AI_Output 	(self ,other,"DIA_Bennet_DragonScale_06_01"); //Genuine dragon scales!
 	AI_Output 	(self ,other,"DIA_Bennet_DragonScale_06_02"); //Here's your gold!
 	
-	Bennet_DragonScale_Counter = (Bennet_DragonScale_Counter +(Npc_HasItems (other,ItAT_Dragonscale)));
+	var int dragonscalecount; dragonscalecount = Npc_HasItems(other,ItAt_DragonScale);
+	Bennet_DragonScale_Counter = (Bennet_DragonScale_Counter + dragonscalecount);
 	
-	B_GiveInvItems (self ,other,ItMi_Gold,(Npc_HasItems(other,ItAT_Dragonscale) * Value_DragonScale) ); 
-	B_GiveInvItems (other,self ,ItAt_Dragonscale,(Npc_HasItems (other,ItAT_Dragonscale)));
-	
+	B_GiveInvItems (self ,other,ItMi_Gold,dragonscalecount * Value_DragonScale);
+	B_GiveInvItems (other,self ,ItAt_Dragonscale,dragonscalecount);
+	Npc_RemoveInvItems(self, ItAt_DragonScale, dragonscalecount);
 	
 	if (Bennet_DragonScale_Counter >= 20)
 	&& (Show_DJG_Armor_M == FALSE)
 	{
 		AI_Output 	(self ,other,"DIA_Bennet_DragonScale_06_03"); //All right, that should be enough. I could sell you new, improved armor if you want.
-		
 		Show_DJG_Armor_M = TRUE;
 	};
 };
@@ -1131,6 +1140,7 @@ func int DIA_Bennet_ShowInnosEye_Condition ()
 {
 	if (Npc_HasItems (other,ItMi_InnosEye_Broken_MIS))
 	&& (MIS_Bennet_InnosEyeRepairedSetting   != LOG_SUCCESS)
+	&& (Npc_KnowsInfo(other,DIA_Bennet_RepairNecklace))
  	{
     	return TRUE;
   	};
@@ -1150,8 +1160,8 @@ func void DIA_Bennet_ShowInnosEye_Info ()
 	}
 	else
 	{
-	AI_Output			(self, other, "DIA_Bennet_ShowInnosEye_06_06"); //If you leave it here with me, it will be done by the time you come back tomorrow.
-	AI_Output			(self, other, "DIA_Bennet_ShowInnosEye_06_07"); //And I won't even charge you for it. You got me out of the slammer, after all.
+		AI_Output			(self, other, "DIA_Bennet_ShowInnosEye_06_06"); //If you leave it here with me, it will be done by the time you come back tomorrow.
+		AI_Output			(self, other, "DIA_Bennet_ShowInnosEye_06_07"); //And I won't even charge you for it. You got me out of the slammer, after all.
 	};
 	
 	B_LogEntry (TOPIC_INNOSEYE, "Bennet is the smith I need to repair the amulet.");
@@ -1178,6 +1188,7 @@ func int DIA_Bennet_GiveInnosEye_Condition ()
 	&& (MIS_SCKnowsInnosEyeIsBroken  == TRUE)
 	&& (MIS_REscueBennet == LOG_SUCCESS)
 	&& (MIS_Bennet_InnosEyeRepairedSetting   != LOG_SUCCESS)
+	&& (Npc_KnowsInfo(other,DIA_Bennet_ShowInnosEye))
 	{
 		return TRUE;
 	};	                                                                             
@@ -1368,15 +1379,21 @@ func void DIA_Bennet_DRACHENEIER_ok ()
 	AI_Output			(self, other, "DIA_Bennet_DRACHENEIER_ok_06_06"); //It wouldn't surprise me if you found more of these things in the caves around here.
 	B_LogEntry (TOPIC_DRACHENEIER,"Bennet thinks I should look for the eggs in the caves of Khorinis. There are supposed to be lizard people in many caves."); 
 	
-	AI_Output (self, other, "DIA_Bennet_DRACHENEIER_ok_06_07"); //Here. Take this map. It'll help you find the caves.
-	CreateInvItems (self, ItWr_Map_Caves_MIS, 1);									
-	B_GiveInvItems (self, other, ItWr_Map_Caves_MIS,1);
-	B_LogEntry (TOPIC_DRACHENEIER,"He's given me a cave map to help me."); 
-	
-	if (1 == 2) //MH: Besser Karte direkt (war sowieso so - wegen Bug)
+
+	if(!Npc_HasItems(other,ItWr_Map_Caves_MIS))
 	{
-		AI_Output			(self, other, "DIA_Bennet_DRACHENEIER_ok_06_08"); //But first you need to get a map of the caves from a cartographer in town. It would be a pity if you couldn't find them all.
-		B_LogEntry (TOPIC_DRACHENEIER,"I should get a map of the caves from a cartographer in the city, just to make sure I don't miss any eggs."); 
+		if(Npc_IsDead(Brahim))
+		{
+			AI_Output (self, other, "DIA_Bennet_DRACHENEIER_ok_06_07"); //Here. Take this map. It'll help you find the caves.
+			CreateInvItems (self, ItWr_Map_Caves_MIS, 1);
+			B_GiveInvItems (self, other, ItWr_Map_Caves_MIS,1);
+			B_LogEntry (TOPIC_DRACHENEIER,"He's given me a cave map to help me.");
+		}
+		else
+		{
+			AI_Output			(self, other, "DIA_Bennet_DRACHENEIER_ok_06_08"); //But first you need to get a map of the caves from a cartographer in town. It would be a pity if you couldn't find them all.
+			B_LogEntry (TOPIC_DRACHENEIER,"I should get a map of the caves from a cartographer in the city, just to make sure I don't miss any eggs."); 
+		};
 	};
 	
 	Info_ClearChoices	(DIA_Bennet_DRACHENEIER);
