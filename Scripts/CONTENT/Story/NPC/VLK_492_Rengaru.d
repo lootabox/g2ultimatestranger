@@ -45,13 +45,13 @@ FUNC VOID Rtn_Start_492()
 };
 
 const string Rengaru_RunAwayWP = "NW_CITY_HABOUR_POOR_AREA_BACK_ALLEY_01";
-/* FUNC VOID Rtn_RunAway_492()
+FUNC VOID Rtn_RunAway_492()
 {	
 	//TA_FleeToWP 	(08,00,23,00,"NW_CITY_HABOUR_KASERN_05_01");
     //TA_FleeToWP	(23,00,08,00,"NW_CITY_HABOUR_KASERN_05_01"); 
 	TA_FleeToWP 	(08,00,23,00,Rengaru_RunAwayWP);
     TA_FleeToWP		(23,00,08,00,Rengaru_RunAwayWP); 
-}; */
+};
 
 FUNC VOID Rtn_Prison_492()
 {	

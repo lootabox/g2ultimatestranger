@@ -85,6 +85,7 @@ func void DIA_Rengaru_Hauab_Info ()
 ///////////////////////////////////////////////////////////////////////
 //	Info HalloDieb
 ///////////////////////////////////////////////////////////////////////
+var int DIA_Rengaru_HALLODIEB_OneTime;
 instance DIA_Rengaru_HALLODIEB		(C_INFO)
 {
 	npc			 = 	VLK_492_Rengaru;
@@ -98,6 +99,7 @@ instance DIA_Rengaru_HALLODIEB		(C_INFO)
 func int DIA_Rengaru_HALLODIEB_Condition ()
 {
 	if (Jora_Dieb == LOG_RUNNING)
+	&& (Npc_IsInState(self, ZS_Talk))
 	&& (!Npc_KnowsInfo(other, DIA_Rengaru_GOTYOU))
 	&& (Npc_GetDistToWP(self, Rengaru_RunAwayWP) > 1000)
 	{
@@ -107,7 +109,12 @@ func int DIA_Rengaru_HALLODIEB_Condition ()
 
 func void DIA_Rengaru_HALLODIEB_Info ()
 {
-	AI_Output (other, self, "DIA_Rengaru_HALLODIEB_15_00"); //Jora says you've got his money...
+	if (DIA_Rengaru_HALLODIEB_OneTime == FALSE)
+	{
+		AI_Output (other, self, "DIA_Rengaru_HALLODIEB_15_00"); //Jora says you've got his money...
+		DIA_Rengaru_HALLODIEB_OneTime = TRUE;
+		DIA_Rengaru_HALLODIEB.important = TRUE;
+	};
 	AI_Output (self, other, "DIA_Rengaru_HALLODIEB_07_01"); //Damnit! I'm outta here!
 
 	AI_StopProcessInfos (self);
@@ -143,11 +150,13 @@ func void DIA_Rengaru_GOTYOU_Info ()
 {
 	B_GivePlayerXP (XP_RengaruGotThief);
 	
+	Npc_ExchangeRoutine	(self,"RunAway");
+	
 	AI_Output (other, self, "DIA_Rengaru_GOTYOU_15_00"); //Gotcha!
 	AI_Output (self, other, "DIA_Rengaru_GOTYOU_07_01"); //What do you want from me?
 	AI_Output (other, self, "DIA_Rengaru_GOTYOU_15_02"); //You stole from Jora in broad daylight, and he even saw you do it.
 	AI_Output (other, self, "DIA_Rengaru_GOTYOU_15_03"); //So I've come to tell you that you're a lousy thief, and that...
-	
+
 	Info_ClearChoices (DIA_Rengaru_GOTYOU); 
 	Info_AddChoice	(DIA_Rengaru_GOTYOU, "... I deserve a share of the loot.", DIA_Rengaru_GOTYOU_Anteil );
 	Info_AddChoice	(DIA_Rengaru_GOTYOU, "... you had better hand over Jora's gold now.", DIA_Rengaru_GOTYOU_YouThief );

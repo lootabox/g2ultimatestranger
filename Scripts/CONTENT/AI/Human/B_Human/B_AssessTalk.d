@@ -116,7 +116,10 @@ func void B_AssessTalk ()
 			}
 			else
 			{
-				B_Say (self, other, "$NOTNOW");
+				if (!Npc_IsInState(self, ZS_FleeToWp))
+				{
+					B_Say (self, other, "$NOTNOW");
+				};
 				return;
 			};	
 		};

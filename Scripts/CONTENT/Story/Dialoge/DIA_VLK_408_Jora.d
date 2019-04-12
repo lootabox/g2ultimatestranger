@@ -280,7 +280,8 @@ func void DIA_Jora_WegenDieb_Info ()
 	{	
 		Info_AddChoice (DIA_Jora_WegenDieb,"Yes, I caught him all right.",DIA_Jora_WegenDieb_ImKnast);
 	}
-	else if (Npc_KnowsInfo (other, DIA_Rengaru_HALLODIEB))
+	//else if (Npc_KnowsInfo (other, DIA_Rengaru_HALLODIEB))
+	else if (DIA_Rengaru_HALLODIEB_OneTime == TRUE)
 	{
 		Info_AddChoice (DIA_Jora_WegenDieb,"He got away from me.",DIA_Jora_WegenDieb_Entkommen);
 	};
