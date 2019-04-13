@@ -1297,9 +1297,9 @@ FUNC INT DIA_Parlan_DontDisturb_Condition()
 {
 	if   (Parlan_DontTalkToNovice == LOG_SUCCESS)
 	&& (B_GetGreatestPetzCrime(self) == CRIME_NONE)
-	&&	 ((other.guild != GIL_PAL)
+	/* &&	 ((other.guild != GIL_PAL)
 	||	  (other.guild != GIL_NOV)
-	|| 	  (other.guild != GIL_KDF))
+	|| 	  (other.guild != GIL_KDF)) */
 	{
 		return TRUE;
 	};	
@@ -1309,8 +1309,8 @@ FUNC VOID DIA_Parlan_DontDisturb_Info()
 	AI_Output (self ,other,"DIA_Parlan_DontDisturb_05_00"); //(threatening) I do not like to repeat my self. Leave the novices alone.
 	AI_Output (self ,other,"DIA_Parlan_DontDisturb_05_01"); //They are supposed to purify their spirits with physical labor and prepare themselves for life in the monastery.
 	AI_Output (self ,other,"DIA_Parlan_DontDisturb_05_02"); //(energetic) I will not tolerate further distractions!
-	
-	Parlan_DontTalkToNovice = LOG_RUNNING;
+	//Parlan_DontTalkToNovice = LOG_RUNNING;
+	AI_StopProcessInfos(self);
 };
 
 

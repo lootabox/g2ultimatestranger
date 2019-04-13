@@ -10,6 +10,7 @@ instance VLK_431_Kardif (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	//-----------AIVARS----------------
+	aivar[AIV_IGNORE_Theft] = TRUE;
 	aivar[AIV_ToughGuy] = TRUE; 
 	
 	// ------ Attribute ------

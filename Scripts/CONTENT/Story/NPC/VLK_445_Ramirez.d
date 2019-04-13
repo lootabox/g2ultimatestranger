@@ -10,6 +10,7 @@ instance VLK_445_Ramirez (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	//----------AIVARS--------------
+	aivar[AIV_IGNORE_Theft] = TRUE;
 	aivar[AIV_DropDeadAndKill] = TRUE;
 	aivar[AIV_EnemyOverride] = TRUE;
 	

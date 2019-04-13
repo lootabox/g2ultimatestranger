@@ -11,6 +11,7 @@ instance VLK_446_Jesper (Npc_Default)
 	
 	
 	//----------AIVARS--------------
+	aivar[AIV_IGNORE_Theft] = TRUE;
 	aivar[AIV_DropDeadAndKill] = TRUE;
 	aivar[AIV_EnemyOverride] = TRUE;
 	

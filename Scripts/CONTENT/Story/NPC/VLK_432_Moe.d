@@ -10,6 +10,7 @@ instance VLK_432_Moe (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ aivar ------
+	aivar[AIV_IGNORE_Theft] = TRUE;
 	aivar[AIV_ToughGuy] = TRUE;
 	
 	// ------ Attribute ------

@@ -9,6 +9,9 @@ instance VLK_470_Sarah (Npc_Default)
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	
+	//-----------AIVARS----------------
+	aivar[AIV_IGNORE_Theft] = TRUE;
+	
 	// ------ Attribute ------
 	B_SetAttributesToChapter (self, 1);																
 		

@@ -13,6 +13,10 @@ INSTANCE DIA_Ulf_EXIT   (C_INFO)
 
 FUNC INT DIA_Ulf_EXIT_Condition()
 {
+	if(Parlan_DontTalkToNovice == LOG_Running)
+	{
+		Parlan_DontTalkToNovice = LOG_SUCCESS;
+	};
 	return TRUE;
 };
 

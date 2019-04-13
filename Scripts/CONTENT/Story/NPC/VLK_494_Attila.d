@@ -9,6 +9,9 @@ instance VLK_494_Attila (Npc_Default)
 	flags       = 0;									//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	
+	//-----------AIVARS----------------
+	aivar[AIV_IGNORE_Theft] = TRUE;
+	
 	// ------ Attribute ------
 	B_SetAttributesToChapter (self, 2);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 	

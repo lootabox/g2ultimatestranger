@@ -431,7 +431,7 @@ func void DIA_Bennet_BringOre_Info ()
 	B_GiveInvItems (self,other, itmi_nugget, 2);
 	B_LogEntry(TOPIC_BennetOre,"I brought the ore to Bennet and he let me keep two of the nuggets.");
 	MIS_Bennet_BringOre = LOG_SUCCESS;
-	B_GivePlayerXP(100);
+	B_GivePlayerXP(XP_Ambient);
 };
 
 // ************************************************************

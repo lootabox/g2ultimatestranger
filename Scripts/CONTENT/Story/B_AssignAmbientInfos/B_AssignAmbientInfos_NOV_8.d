@@ -17,6 +17,10 @@ FUNC INT DIA_NOV_8_EXIT_Condition()
 
 FUNC VOID DIA_NOV_8_EXIT_Info()
 {	
+	if(Parlan_DontTalkToNovice == LOG_Running)
+	{
+		Parlan_DontTalkToNovice = LOG_SUCCESS;
+	};
 	AI_StopProcessInfos	(self);
 };
 // *************************************************************************

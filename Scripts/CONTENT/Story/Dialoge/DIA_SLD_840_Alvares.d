@@ -195,7 +195,22 @@ FUNC VOID DIA_Alvares_PICKPOCKET_Info()
 
 func void DIA_Alvares_PICKPOCKET_DoIt()
 {
-	B_Beklauen ();
+	//B_Beklauen ();
+	if (other.attribute[ATR_DEXTERITY] >= TheftDexGlob)
+	{
+		B_GiveInvItems (self, other, ItMi_Gold, TheftGoldGlob);
+		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
+		B_GiveThiefXP();//B_GivePlayerXP (XP_Ambient);
+		Snd_Play ("Geldbeutel");
+		B_LogEntry(Topic_PickPocket, ConcatStrings(self.name, PRINT_PickPocketSuccess));
+	}
+	else
+	{
+		B_ResetThiefLevel();
+		B_LogEntry(Topic_PickPocket, ConcatStrings(self.name, PRINT_PickPocketFailed));
+		AI_StopProcessInfos	(self);
+		B_Attack (self, other, AR_SuddenEnemyInferno, 1); //reagiert trotz IGNORE_Theft mit NEWS
+	};
 	Info_ClearChoices (DIA_Alvares_PICKPOCKET);
 };
 	

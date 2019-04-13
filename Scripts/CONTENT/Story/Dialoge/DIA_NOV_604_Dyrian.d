@@ -16,6 +16,10 @@ FUNC INT DIA_Dyrian_EXIT_Condition()
 };
 FUNC VOID DIA_Dyrian_EXIT_Info()
 {
+	if(Parlan_DontTalkToNovice == LOG_Running)
+	{
+		Parlan_DontTalkToNovice = LOG_SUCCESS;
+	};
 	AI_StopProcessInfos (self);
 };
 //**************************************************************************

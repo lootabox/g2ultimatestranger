@@ -9,6 +9,7 @@ instance VLK_469_Halvor (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	//-----------AIVARS----------------
+	aivar[AIV_IGNORE_Theft] = TRUE;
 	aivar[AIV_ToughGuy] = TRUE; 
 	
 	// ------ Attribute ------

@@ -9,6 +9,8 @@ instance VLK_492_Rengaru (Npc_Default)
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	
+	//-----------AIVARS----------------
+	aivar[AIV_IGNORE_Theft] = TRUE;
 	
 	// ------ Attribute ------
 	B_SetAttributesToChapter (self, 2);															
