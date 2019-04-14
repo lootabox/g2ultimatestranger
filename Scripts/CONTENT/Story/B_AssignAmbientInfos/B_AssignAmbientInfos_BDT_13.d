@@ -40,11 +40,6 @@ FUNC INT DIA_BDT_13_STANDARD_Condition()
 	};
 };
 
-FUNC void B_Verschwinde_Stimme13 ()
-{
-	AI_Output (self,other,"DIA_BDT_13_STANDARD_13_01"); //Beat it!
-};
-
 FUNC VOID DIA_BDT_13_STANDARD_Info()
 {	
 	var int randy;
@@ -56,7 +51,7 @@ FUNC VOID DIA_BDT_13_STANDARD_Info()
 	};
 	if (randy == 1)
 	{
-		B_Verschwinde_Stimme13 ();
+		AI_Output (self,other,"DIA_BDT_13_STANDARD_13_01"); //Beat it!
 	};
 	if (randy == 2)
 	{

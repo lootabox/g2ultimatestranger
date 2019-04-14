@@ -293,6 +293,10 @@ func int DIA_Salandril_GehinsKloster_Condition ()
 func void DIA_Salandril_GehinsKloster_Info ()
 {
 	AI_Output			(other, self, "DIA_Salandril_GehinsKloster_15_00"); //So are you going to the monastery now, or should I give you another..?
+	if(Npc_HasItems(self,ItWr_MinenAnteil_Mis) && (hero.guild == GIL_KDF))
+	{
+		B_GiveInvItems(self,other,ItWr_MinenAnteil_Mis,Npc_HasItems(self,ItWr_MinenAnteil_Mis));
+	};
 	AI_Output			(self, other, "DIA_Salandril_GehinsKloster_13_01"); //You'll live to regret to this. Yes, damnit, I'll go to that monastery, but don't you think you'll get away with this.
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine	(self,"KlosterUrteil");
@@ -314,7 +318,8 @@ instance DIA_Salandril_Verschwinde		(C_INFO)
 
 func int DIA_Salandril_Verschwinde_Condition ()
 {
-	if (MIS_Serpentes_BringSalandril_SLD == LOG_SUCCESS)
+	//if (MIS_Serpentes_BringSalandril_SLD == LOG_SUCCESS)
+	if (Npc_KnowsInfo(other,DIA_Salandril_GehinsKloster))
 	&& (Npc_IsInState (self,ZS_Talk))
 		{
 			return TRUE;
@@ -323,7 +328,7 @@ func int DIA_Salandril_Verschwinde_Condition ()
 
 func void DIA_Salandril_Verschwinde_Info ()
 {
-	B_Verschwinde_Stimme13 ();
+	AI_Output (self,other,"DIA_BDT_13_STANDARD_13_01"); //Beat it!
 	AI_StopProcessInfos (self);
 };
 

@@ -20,7 +20,7 @@ func int C_NpcIsBotheredByWeapon (var C_NPC slf, var C_NPC oth)
 	
 	// ------ ToughGuy ignoriert NAHKAMF-Waffe ------
 	if (C_NpcIsToughGuy(slf))
-	&& (Npc_IsInFightMode (oth, FMODE_MELEE))
+	&& (Npc_IsInFightMode (oth, FMODE_MELEE) || Npc_IsInFightMode(oth,FMODE_FAR))
 	{
 		return FALSE;
 	};
@@ -36,7 +36,7 @@ func int C_NpcIsBotheredByWeapon (var C_NPC slf, var C_NPC oth)
 	{
 		return FALSE;
 	};
-	
+
 	// ------ Fäuste zählen nicht ------
 	if (Npc_IsInFightMode (oth, FMODE_FIST)) 														
 	{
@@ -55,8 +55,19 @@ func int C_NpcIsBotheredByWeapon (var C_NPC slf, var C_NPC oth)
 	{
 		return FALSE;
 	};	
+	
+	// ------ Salandril in monastery ------
+	if((Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Salandril)) && Npc_KnowsInfo(hero,DIA_Salandril_GehinsKloster))
+	{
+		return FALSE;
+	};
+
+	// ------ Dexter camps bandit guard ------
+	if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(BDTWache) && !Npc_KnowsInfo(hero,DIA_1061_Wache_Hallo))
+	{
+		return FALSE;
+	};
 
 	// FUNC
-	
 	return TRUE;
 };

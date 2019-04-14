@@ -431,7 +431,9 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
 		// ------ Immortal-Flags löschen ------
 
 		// ------ TAs ändern ------
-		if (Npc_GetDistToWP(Salandril,"ALTAR")<10000)
+		//if (Npc_GetDistToWP(Salandril,"ALTAR")<10000)
+		if (!Npc_IsDead(Salandril)
+		&& (MIS_Serpentes_BringSalandril_SLD == LOG_SUCCESS))
 		{
 			B_StartOtherRoutine	(Salandril,"Start");
 		};
@@ -761,8 +763,12 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_5 ()
 	B_RemoveNpc	(Xardas); 
 	B_StartOtherRoutine	(Lester,"XardasWeg"); 
 
-	if (Npc_GetDistToWP(Salandril,"ALTAR")<10000) 
-	{B_StartOtherRoutine	(Salandril,"Start"); };
+	//if (Npc_GetDistToWP(Salandril,"ALTAR")<10000)
+	if (!Npc_IsDead(Salandril)
+	&& (MIS_Serpentes_BringSalandril_SLD == LOG_SUCCESS))
+	{
+		B_StartOtherRoutine	(Salandril,"Start");
+	};
 
 	if (Npc_IsDead (Sekob) == FALSE)	
 	{ 
