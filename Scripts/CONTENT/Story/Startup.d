@@ -20,6 +20,12 @@ func void INIT_GLOBAL()
 {
 	// wird fuer jede Welt aufgerufen (vor INIT_<LevelName>)
 	Game_InitGerman();
+	
+	// Ikarus
+	//MEM_InitAll();
+
+	// LeGo
+	LeGo_Init(LeGo_Focusnames | LeGo_Bars | LeGo_Buffs | LeGo_Names);
 };
 
 
