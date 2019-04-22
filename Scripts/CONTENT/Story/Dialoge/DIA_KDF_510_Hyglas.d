@@ -506,7 +506,7 @@ FUNC VOID DIA_Hyglas_HaveBook_Info()
 	
 	IF Mis_HyglasBringBook == LOG_RUNNING
 	{
-		AI_Output (self ,other,"DIA_Hyglas_HaveBook_14_01"); //Very good, give here.
+		AI_Output (self ,other,"DIA_Hyglas_HaveBook_14_01"); //Very good, give it here.
 	}
 	else
 	{

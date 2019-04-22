@@ -136,7 +136,7 @@ instance DIA_Addon_Cavalorn_HALLO		(C_INFO)
 	condition	 = 	DIA_Addon_Cavalorn_HALLO_Condition;
 	information	 = 	DIA_Addon_Cavalorn_HALLO_Info;
 
-	description	 = 	"Are you in trouble?";
+	description	 = 	"Trouble?";
 };
 
 func int DIA_Addon_Cavalorn_HALLO_Condition ()

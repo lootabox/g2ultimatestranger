@@ -793,7 +793,7 @@ func void DIA_Neoras_DRAGONEGGDRINK_Info ()
 {
 	AI_Output			(other, self, "DIA_Neoras_DRAGONEGGDRINK_15_00"); //I've come to get that ominous dragon egg potion.
 	AI_Output			(self, other, "DIA_Neoras_DRAGONEGGDRINK_01_01"); //Yes. I have just finished it. I haven't tested it and I accept no responsibility, do you hear?
-	AI_Output			(other, self, "DIA_Neoras_DRAGONEGGDRINK_15_02"); //Give here already.
+	AI_Output			(other, self, "DIA_Neoras_DRAGONEGGDRINK_15_02"); //Give it here already.
 	AI_Output			(self, other, "DIA_Neoras_DRAGONEGGDRINK_01_03"); //All right. Hopefully, the stuff won't make your head explode.
 	CreateInvItems 		(self, ItPo_DragonEggDrinkNeoras_MIS, 1);									
 	B_GiveInvItems 		(self, other, ItPo_DragonEggDrinkNeoras_MIS, 1);					

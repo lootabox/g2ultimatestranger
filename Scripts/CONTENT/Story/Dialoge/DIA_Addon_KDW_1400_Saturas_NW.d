@@ -573,7 +573,7 @@ func void DIA_Addon_Saturas_OpenPortal_Info ()
 			
 			AI_Output	(self, other, "DIA_Addon_Saturas_OpenPortal_14_08"); //Here, take the ring. We shall gather at the portal and wait for you.
 		
-			CreateInvItems (self, ItMi_PortalRing_Addon, 1);									
+			CreateInvItems (self, ItMi_PortalRing_Addon, 1);
 			B_GiveInvItems (self, other, ItMi_PortalRing_Addon, 1);
 		
 			AI_Output	(self, other, "DIA_Addon_Saturas_OpenPortal_14_09"); //If Nefarius is right, the portal will open as soon as you insert the ring there.
