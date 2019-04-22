@@ -63,7 +63,7 @@ FUNC VOID DIA_Xardas_EXIT_Info()
 // ************************************************************
 // 			  				   Hallo 
 // ************************************************************
-var int Addon_zuerst;
+//var int Addon_zuerst;
 // ------------------------------------------------------------
 instance DIA_Xardas_Hello (C_INFO)
 {
@@ -78,7 +78,7 @@ FUNC INT DIA_Xardas_Hello_Condition()
 {	
 	return TRUE;
 };
-FUNC VOID DIA_Xardas_Hello_Info()
+/* FUNC VOID DIA_Xardas_Hello_Info()
 {	
 	AI_Output (self ,other, "DIA_Addon_Xardas_Hello_14_00"); //There you are again! (smiling) I never thought the two of us would meet again.
 	AI_Output (other, self, "DIA_Addon_Xardas_Hello_15_01"); //I feel like I spent three weeks lying under a load of rocks.
@@ -90,15 +90,15 @@ FUNC VOID DIA_Xardas_Hello_Info()
  	Info_ClearChoices	(DIA_Xardas_Hello);
 	Info_AddChoice	(DIA_Xardas_Hello, "We've got plenty of time now. The Sleeper has been vanquished.", DIA_Addon_Xardas_Hello_Dragons );
 	Info_AddChoice	(DIA_Xardas_Hello, "What NEW threat are you talking about?", DIA_Addon_Xardas_Hello_Man );
-};
+}; */
 func void DIA_Addon_Xardas_Hello_Man ()
 {
 	PlayVideo ("Intro_ADDON");
 	AI_Output (self, other, "DIA_Addon_Xardas_AddonIntro_Add_14_10"); //You must become their ally! That's the only way to stop Beliar.
 	
-	Addon_zuerst = TRUE;
+	//Addon_zuerst = TRUE;
 };
-func void DIA_Addon_Xardas_Hello_Dragons ()
+/* func void DIA_Addon_Xardas_Hello_Dragons ()
 {
 	AI_Output (other,self ,"DIA_Xardas_Hello_15_03"); //At least we have enough time now. I did it. The Sleeper...
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_04"); //... has been banned. You vanquished him, so much is true - but it is not within our power to stop the war that ensues now.
@@ -119,12 +119,34 @@ func void DIA_Addon_Xardas_Hello_Dragons ()
 	}
 	else
 	{
-		AI_Output (self ,other, "DIA_Addon_Xardas_Hello_Dragons_14_06"); //But that's not all. There is yet ANOTHER threat of which I have learned only recently.
+		AI_Output (self ,other, "DIA_Addon_Xardas_Hello_Dragons_14_06"); //But that's not all. There is ANOTHER threat of which I have learned only recently.
 		Info_ClearChoices	(DIA_Xardas_Hello);
 		Info_AddChoice	(DIA_Xardas_Hello, "What OTHER threat are you talking about?", DIA_Addon_Xardas_Hello_Man );
 	};
+}; */
+FUNC VOID DIA_Xardas_Hello_Info()
+{
+	AI_Output (self ,other, "DIA_XARDAS_HELLO_14_00"); //Finally! I've been trying to bring you here for days.
+	AI_Output (other, self, "DIA_Addon_Xardas_Hello_15_01"); //I feel like I spent three weeks lying under a load of rocks.
+	AI_Output (self ,other, "DIA_XARDAS_HELLO_14_02"); //Well, so you did. Only the magic within your armor kept you alive - but enough of this. You are bound to get all your strength back.
+
+	AI_Output (other,self ,"DIA_Xardas_Hello_15_03"); //At least we have enough time now. I did it. The Sleeper...
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_04"); //... has been banned. You vanquished him, so much is true - but it is not within our power to stop the war that ensues now.
+	AI_Output (other,self ,"DIA_Xardas_Hello_15_05"); //You're talking about the orcs?
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_06"); //I am talking about much more terrible creatures.
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_07"); //With his final, furious scream, the Sleeper has set into movement the armies of darkness.
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_08"); //It was an order to all evil creatures. A word of power that they were all bound to obey.
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_09"); //His last order was: COME! And they came. All of them. Even the dragons.
+	AI_Output (other,self ,"DIA_Xardas_Hello_15_10"); //(amazed) ... Dragons!
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_11"); //They are creatures of ancient power. I can sense their presence - even here.
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_12"); //And they have gathered an entire army of lowly servant creatures around them.
+	AI_Output (other,self ,"DIA_Xardas_Hello_15_13"); //Where's this army now?
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_14"); //The army is camped not far from here, in the Valley of Mines near Khorinis, and they are getting ready to attack.
+
+	AI_Output (self ,other, "DIA_Addon_Xardas_Hello_Dragons_14_06"); //But that's not all. There is ANOTHER threat of which I have learned only recently.
+	Info_ClearChoices	(DIA_Xardas_Hello);
+	Info_AddChoice	(DIA_Xardas_Hello, "What OTHER threat are you talking about?", DIA_Addon_Xardas_Hello_Man );
 };
-	
 ///////////////////////////////////////////////////////////////////////
 //	Info AWAY
 ///////////////////////////////////////////////////////////////////////
@@ -744,10 +766,11 @@ func void DIA_Xardas_DMTSINDDA_Info ()
 	{
 		AI_Output			(other, self, "DIA_Xardas_DMTSINDDA_15_00"); //Lester said you wanted to see me at once.
 	};
-	AI_Output			(self,other,"DIA_Xardas_Hello_14_00");	//Finally! I've been trying to bring you here for days.
+//	AI_Output			(self,other,"DIA_Xardas_Hello_14_00");	//Finally! I've been trying to bring you here for days.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_14_02"); //The enemy has learned who you really are and that you are planning to get hold of the Eye of Innos.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_14_03"); //He has recognized the threat. It has forced him to leave his cover and openly attack.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_14_04"); //The game of hide-and-seek is over. Yesterday nobody knew what the enemy's attack would look like. Now it has become only too obvious.
+	AI_Output			(self ,other,"DIA_Xardas_Hello_14_15"); //(pensively) We do not have much time left.
 
 	B_LogEntry (TOPIC_INNOSEYE, "The enemy's found it I'm looking for the Eye of Innos. It's time I found it, before it's too late.");
 	

@@ -341,6 +341,7 @@ Vino makes an attempt to run away from the ritual site if the Seekers get angry.
 Wolf will not join the crew if he gets pissed off at NH.
 Wulfgar makes comments on training of weapon skills.
 Xardas' dialog has 3 more previously unused dialogue lines.
+Xardas' first few happy dialog lines are replaced with classic Gothic II lines.
 
 
 	Random

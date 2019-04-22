@@ -337,6 +337,7 @@ func int DIA_Addon_Vatras_CavalornSentMe_Condition ()
 	if (SC_KnowsRanger == TRUE)
 	&& (SC_IsRanger == FALSE)
 	&& (Npc_KnowsInfo (other, DIA_Addon_Cavalorn_Ring))
+	&& (!Npc_KnowsInfo (other, DIA_Addon_Vatras_WannaBeRanger))
 	&& (Vatras_Why == TRUE)
 	{
 		return TRUE;
@@ -368,6 +369,8 @@ func int DIA_Addon_Vatras_TellMe_Condition ()
 	if (SC_KnowsRanger == TRUE)
 	&& (SC_IsRanger == FALSE)
 	&& (~Vatras_Explained & ((1 << 3) | (1 << 4) | (1 << 5)))
+	&& (Npc_KnowsInfo (other, DIA_Addon_Vatras_Cavalorn))
+	&& (Vatras_Why == FALSE || Npc_KnowsInfo (other, DIA_Addon_Vatras_WannaBeRanger))
 	{
 		return TRUE;
 	};
@@ -472,6 +475,7 @@ instance DIA_Addon_Vatras_WannaBeRanger		(C_INFO)
 func int DIA_Addon_Vatras_WannaBeRanger_Condition ()
 {
 	if (SC_KnowsRanger == TRUE)
+	&& (Vatras_Why == TRUE)
 	{
 		return TRUE;
 	};
@@ -888,7 +892,7 @@ func void DIA_Addon_Vatras_CloseMeeting_Info ()
 	{
 		AI_Output	(self, other, "DIA_Addon_Vatras_CloseMeeting_05_08"); //Lares will take you to him if he hasn't already delivered the ornament.
 	};
-	CreateInvItems (self, ItWr_Vatras2Saturas_FindRaven, 1);									
+	CreateInvItems (self, ItWr_Vatras2Saturas_FindRaven, 1);
 	B_GiveInvItems (self, other, ItWr_Vatras2Saturas_FindRaven, 1);	
 	AI_Output (self, other, "DIA_Addon_Vatras_CloseMeeting_05_06"); //May Adanos guide you.
 		
