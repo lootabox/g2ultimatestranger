@@ -735,7 +735,7 @@ func void DIA_Addon_Vatras_HowToJoin_WhatsGreat()
 	AI_Output (self, other, "DIA_Addon_Vatras_HowToJoin_WhatsGreat_05_07"); //I consider it a matter of utmost importance!
 	AI_Output (self, other, "DIA_Addon_Vatras_HowToJoin_WhatsGreat_05_08"); //Talk to Lord Hagen.
 	
-	B_LogEntry (TOPIC_Addon_RingOfWater,"Vatras wants me to take an important message to Lord Hagen."); 
+	B_LogEntry (TOPIC_Addon_RingOfWater,"Vatras wants me to take my message to Lord Hagen first."); 
 
 	Info_ClearChoices	(DIA_Addon_Vatras_HowToJoin);	
 };

@@ -26,6 +26,10 @@ func void INIT_GLOBAL()
 
 	// LeGo
 	LeGo_Init(LeGo_Focusnames | LeGo_Bars | LeGo_Buffs | LeGo_Names);
+
+	// Prevent alpha issues
+	MoreAlphaVobs(2048); //normal: 256
+	MoreAlphaPolys(16384); //normal: 2048
 };
 
 
@@ -2522,6 +2526,7 @@ FUNC VOID INIT_OLDWORLD ()
 		B_Kapitelwechsel (4, OLDWORLD_ZEN);
 		B_Chapter4_OneTime = TRUE;
 	};
+	stopAllSounds();
 };
 
 FUNC VOID STARTUP_OLDWORLD ()
@@ -4764,6 +4769,7 @@ FUNC VOID INIT_NewWorld()
 		B_Kapitelwechsel (5, NEWWORLD_ZEN);
 		B_Chapter5_OneTime = TRUE;
 	};
+	stopAllSounds();
 };
 
 
@@ -4800,6 +4806,7 @@ FUNC VOID INIT_AddonWorld ()
 	B_ENTER_ADDONWORLD ();
 	
 	// ------ INITS der Unter-Parts ------ 
+	stopAllSounds();
 };
 
 

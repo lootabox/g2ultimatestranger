@@ -7,7 +7,7 @@ instance DIA_Addon_Lares_Patch		(C_INFO)
 	nr		 	= 99;
 	condition	= DIA_Addon_Lares_Patch_Condition;
 	information	= DIA_Addon_Lares_Patch_Info;
-	description	= "(Ornament - Stück zurückverlangen)";
+	description	= "(Ornament - reclaim piece)";
 };
 func int DIA_Addon_Lares_Patch_Condition ()
 {
@@ -709,7 +709,7 @@ func void DIA_Addon_Lares_YourMission_Info ()
 	else
 	{
 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_03"); //I'm doing what we all do. I fulfill the tasks the Water Mages give me.
-		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_04"); //Some of the missing people where fishermen. They disappeared along with their boats.
+		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_04"); //Some of the missing people were fishermen. They disappeared along with their boats.
 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_05"); //That's why I'm standing here, watching the harbor. Maybe something will happen yet.
 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_06"); //But you could help me.
 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_07"); //Listen. I shall give you my aquamarine ring. It signifies that the bearer belongs to the 'Ring of Water'.
@@ -771,6 +771,7 @@ func void DIA_Addon_Lares_BaltramAbloese_Info ()
 		};
 	};
 	MIS_Lares_BringRangerToMe = LOG_SUCCESS;
+	B_CheckLog();
 	Lares_CanBringScToPlaces = TRUE;
 };
 
@@ -963,7 +964,7 @@ func void DIA_Addon_Lares_RangerHelp_geld ()
 	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_geld_09_02"); //Go to him and borrow whatever money you need. I'll take care of the rest. You'll find Lehmar in the harbor district, where it borders on the lower part of town.
 	DIA_Addon_Lares_RangerHelp_gilde_OneTime_geld = TRUE;
 	RangerHelp_LehmarKohle = TRUE;
-	Info_ClearChoices	(DIA_Addon_Lares_RangerHelp);
+	//Info_ClearChoices	(DIA_Addon_Lares_RangerHelp);
 };
 func void DIA_Addon_Lares_RangerHelp_nix ()
 {
@@ -1363,6 +1364,7 @@ func int DIA_Lares_OtherGuild_Condition ()
 	if (Npc_IsInState (self, ZS_Talk))
 	&& (other.guild != GIL_NONE)
 	&& (SC_IsRanger == FALSE)//ADDON
+	&& (Npc_KnowsInfo(other,DIA_Lares_HALLO))
 	{
 		return TRUE;
 	};
@@ -1489,7 +1491,7 @@ func void DIA_Lares_GoNow_GoingConditions ()
 
 func void DIA_Lares_GoNow_Info ()
 {
-	AI_Output (other, self, "DIA_Lares_GoNow_15_00"); //OK, let's go.
+	AI_Output (other, self, "DIA_Lares_GoNow_15_00"); //Okay, let's go.
 	
 	if (Lares_CanBringScToPlaces == FALSE)
 	{

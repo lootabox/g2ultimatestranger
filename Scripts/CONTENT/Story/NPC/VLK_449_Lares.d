@@ -30,7 +30,8 @@ instance VLK_449_Lares (Npc_Default)
 	
 	
 	// ------ Inventory ------
-	CreateInvItems (self, ItMw_Schwert3,1);//zur Sicherheit - bei Waffenverlust hat er 'ne neue M.F.
+	//CreateInvItems (self, ItMw_Schwert3,1);//zur Sicherheit - bei Waffenverlust hat er 'ne neue M.F.
+	EquipItem (self, ItMw_Schwert3);	
 	CreateInvItems (self, ItMi_Gold, 100);	
 	CreateInvItems (self, ItMi_OldCoin, 1);	//Joly: damit er gefunden wird, wenn er im Kampf stirbt
 	CreateInvItems (self, ItPo_Health_02, 5);	//Mattes: damit er frisch bei Taverne ankommt.								

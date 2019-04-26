@@ -1203,7 +1203,7 @@ INSTANCE Info_TA_Testmodell_GuideStart (C_INFO)
 	condition	= DIA_TA_Testmodell_GuideStart_Condition;
 	information	= DIA_TA_Testmodell_GuideStart_Info;
 	permanent	= TRUE;
-	description = "Zeig mir den Guide_Player!";
+	description = "Show me the Guide_Player!";
 };                       
 
 FUNC INT DIA_TA_Testmodell_GuideStart_Condition()
@@ -1232,7 +1232,7 @@ INSTANCE Info_TA_Testmodell_GuideEnd (C_INFO)
 	condition	= DIA_TA_Testmodell_GuideEnd_Condition;
 	information	= DIA_TA_Testmodell_GuideEnd_Info;
 	permanent	= TRUE;
-	description = "Beende den Guide_Player!";
+	description = "Finish the Guide_Player!";
 };                       
 
 FUNC INT DIA_TA_Testmodell_GuideEnd_Condition()
@@ -1261,7 +1261,7 @@ INSTANCE Info_TA_Testmodell_FollowStart (C_INFO)
 	condition	= DIA_TA_Testmodell_FollowStart_Condition;
 	information	= DIA_TA_Testmodell_FollowStart_Info;
 	permanent	= TRUE;
-	description = "Folge mir!";
+	description = "Follow me!";
 };                       
 
 FUNC INT DIA_TA_Testmodell_FollowStart_Condition()
@@ -1290,7 +1290,7 @@ INSTANCE Info_TA_Testmodell_FollowEnd (C_INFO)
 	condition	= DIA_TA_Testmodell_FollowEnd_Condition;
 	information	= DIA_TA_Testmodell_FollowEnd_Info;
 	permanent	= TRUE;
-	description = "Hör auf mir zu folgen!";
+	description = "Stop following me!";
 };                       
 
 FUNC INT DIA_TA_Testmodell_FollowEnd_Condition()
@@ -1425,9 +1425,9 @@ INSTANCE Gold(C_Item)
 FUNC VOID UseGold ()
 {
 	CreateInvItems (self,ItMi_Gold,1000);	
-	PrintScreen	("1000 Gold erhalten.", -1, 45, FONT_Screen, 2);
+	PrintScreen	("1000 Gold received.", -1, 45, FONT_Screen, 2);
 	Snd_Play ("Geldbeutel");
-	PrintScreen	("Cheater Malus: -100 EXP", -1, 55, FONT_Screen, 2);
+	PrintScreen	("Cheater penalty: -100 EXP", -1, 55, FONT_Screen, 2);
 	if hero.exp >= 100
 	{
 		hero.exp = hero.exp - 100;
@@ -1444,7 +1444,7 @@ FUNC VOID UseGold ()
 
 INSTANCE Armor(C_Item)
 {
-	name 				=	"Ein Beutel voller Rüstungen!";
+	name 				=	"A bag full of armor!";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	0;
@@ -1526,7 +1526,7 @@ FUNC VOID UseArmor ()
 // **********************
 instance Runenbrief (C_Item)
 {	
-	name 				=	"Runenbrief";
+	name 				=	"Runic letter";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION;
@@ -1537,7 +1537,7 @@ instance Runenbrief (C_Item)
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseHosh1;
 	scemeName			=	"MAP";
-	description			=   "Gibt dir alle Addon-Runen";
+	description			=   "Gives you all addon runes";
 };
 func void UseHosh1 ()
 {   
@@ -1564,7 +1564,7 @@ func void UseHosh1 ()
 
 INSTANCE EnterBanditCamp (C_Item)
 {	
-	name 				=	"Komm ins BanditCamp";
+	name 				=	"Come to BanditCamp";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION;
@@ -1575,7 +1575,7 @@ INSTANCE EnterBanditCamp (C_Item)
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseHosh2;
 	scemeName			=	"MAP";
-	description			=   "Setzt Player_HasTalkedToBanditCamp";
+	description			=   "Set Player_HasTalkedToBanditCamp";
 };
 func void UseHosh2 ()
 {   
@@ -1595,7 +1595,7 @@ INSTANCE PH (C_Item)
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UsePatrickHelper;
 	scemeName			=	"MAP";
-	description			=   "Kleine Magietestumgebung";
+	description			=   "Small magic test environment";
 };
 func void UsePatrickHelper ()
 {   
@@ -1699,7 +1699,7 @@ func void UsePatrickHelper ()
 
 INSTANCE Hosh4 (C_ITEM) 
 {	
-	name 					=	"Greg ist Back";
+	name 					=	"Greg is back";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	ITEM_MISSION;
@@ -1710,8 +1710,8 @@ INSTANCE Hosh4 (C_ITEM)
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
-	description				= 	"Tagebuch";
-	TEXT	[0]				=	"Das Tagebuch von Hoshi";
+	description				= 	"Diary";
+	TEXT	[0]				=	"The Diary of Hoshi";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
 	on_state[0]				=	UseHoshiTagebuch;

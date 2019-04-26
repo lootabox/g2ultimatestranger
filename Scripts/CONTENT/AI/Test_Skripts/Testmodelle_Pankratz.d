@@ -1,6 +1,6 @@
 INSTANCE J1 (C_Item)
 {	
-	name 				=	"Monster auffüllen Addon world";
+	name 				=	"Fill in Monster Addon world";
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION;
 	value 				=	0;
@@ -664,7 +664,7 @@ func void UseJ3 ()
 };
 INSTANCE J4 (C_Item)
 {	
-	name 				=	"ADW_PIRATES_RemovedFocus und letzte";
+	name 				=	"ADW_PIRATES_RemovedFocus and last";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION;

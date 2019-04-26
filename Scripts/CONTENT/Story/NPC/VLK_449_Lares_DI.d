@@ -28,15 +28,16 @@ instance VLK_449_Lares_DI (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_SLD_Sword); 
-	
+	//EquipItem	(self, ItMw_1h_SLD_Sword);
+	EquipItem	(self, ItMw_Schwert3);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_N_Lares, BodyTex_N,ITAR_Vlk_L);	
+	//B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_N_Lares, BodyTex_N,ITAR_Vlk_L);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_N_Lares, BodyTex_N,ITAR_RANGER_Addon);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

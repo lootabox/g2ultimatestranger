@@ -21,6 +21,7 @@ STORY\NPC_Globals.d
 STORY\svm.d
 STORY\Text.d
 
+UltimateStranger\*.d
 
 STORY\B_Story\C_NpcIsInQuarter.d
 STORY\B_Story\C_DiegoTooFar.d

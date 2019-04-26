@@ -340,5 +340,6 @@ FUNC VOID INIT_DRAGONISLAND ()
 		Npc_RemoveInvItems	(hero,	ITKE_SHIP_LEVELCHANGE_MIS,1);	//Joly: denn SHIP zen wird bei DRAGONISLAND UND NEWWORLD benutzt. Beim betreten der Insel ist die Tür wieder zu!!!!
 	};
 	B_InitNpcGlobals (); 
+	stopAllSounds();
 };
 
