@@ -242,3 +242,9 @@ INSTANCE PEPES_YWolf4	(Mst_Default_Wolf)
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
 };
 
+instance WolfTransform(Mst_Default_Wolf)
+{
+	Npc_PercEnable(self,PERC_ASSESSSURPRISE,B_TransformStop);
+	B_SetVisuals_Wolf();
+	Npc_SetToFistMode(self);
+};

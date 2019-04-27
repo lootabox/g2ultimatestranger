@@ -79,6 +79,12 @@ INSTANCE Scavenger	(Mst_Default_Scavenger)
 	CreateInvItems (self, ItFoMuttonRaw, 1);
 };
 
+instance ScavengerTransform(Mst_Default_Scavenger)
+{
+	Npc_PercEnable(self,PERC_ASSESSSURPRISE,B_TransformStop);
+	B_SetVisuals_Scavenger();
+	Npc_SetToFistMode(self);
+};
 
 
 

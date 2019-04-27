@@ -78,6 +78,7 @@ ITEMS\IT_*.d
 ITEMS\Missionitems_*.d
 
 AI\MAGIC\B_MagicHurtNpc.d
+AI\MAGIC\B_Transform.d
 
 STORY\B_Content\B_ScHasBeliarsWeapon.d
 STORY\B_Content\B_BeliarsWeaponSpecialDamage.d

@@ -47,6 +47,7 @@ When missing production items and failing to craft something, anvil gives back R
 
 	Random
 
+Cannot level up when dead.
 Increased limit for alpha vobs/polys.
 Main menu sounds are silenced after start a new game or loading one.
 
@@ -246,9 +247,11 @@ Knight 263 can be asked for a report only if NH is paladin.
 Landlord will not give more then 5 beers per chapter and only 1 per day.
 Lares can be asked for help with other issues after asking for money.
 Lares has same sword in Irdorath as in Khorinis and doesn't carry an extra sword.
+Lares has some dialog on the patch bug fix option, when retrieving the ornament from him in chapter 3.
 Lares properly closes the quest "Relief for Lares" in his dialog.
 Lares wears the armor of the 'Ring of Water' instead of citizen clothes in Irdorath.
 Lares won't comment on NH's choice of guild if he never was talked to before.
+Lares' dialog only shows options for the missing people when they are relevant.
 Lares's dialog has 5 more previously unused dialogue lines.
 Larius dialog has 2 more previously inaccessible dialogue lines.
 Lee can be told about lizard people only from chapter 4 onwards.

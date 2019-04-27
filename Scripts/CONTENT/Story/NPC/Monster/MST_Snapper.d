@@ -178,3 +178,10 @@ INSTANCE Grimbald_Snapper3	(Mst_Default_Snapper)
 	B_SetVisuals_Snapper();
 	Npc_SetToFistMode(self);
 };
+
+instance SnapperTransform(Mst_Default_Snapper)
+{
+	Npc_PercEnable(self,PERC_ASSESSSURPRISE,B_TransformStop);
+	B_SetVisuals_Snapper();
+	Npc_SetToFistMode(self);
+};

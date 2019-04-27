@@ -94,3 +94,10 @@ INSTANCE Gaans_Snapper	(Mst_Default_DragonSnapper)
 	B_SetVisuals_DragonSnapper();
 	Npc_SetToFistMode(self);
 };
+
+instance DragonSnapperTransform(Mst_Default_DragonSnapper)
+{
+	Npc_PercEnable(self,PERC_ASSESSSURPRISE,B_TransformStop);
+	B_SetVisuals_DragonSnapper();
+	Npc_SetToFistMode(self);
+};

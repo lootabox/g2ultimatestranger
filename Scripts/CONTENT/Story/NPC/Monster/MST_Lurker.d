@@ -148,3 +148,10 @@ INSTANCE BeachLurker3	(Mst_Default_Lurker)
 	B_SetVisuals_Lurker();
 	Npc_SetToFistMode(self);
 };
+
+instance LurkerTransform(Mst_Default_Lurker)
+{
+	Npc_PercEnable(self,PERC_ASSESSSURPRISE,B_TransformStop);
+	B_SetVisuals_Lurker();
+	Npc_SetToFistMode(self);
+};

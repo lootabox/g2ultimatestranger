@@ -1302,8 +1302,9 @@ INSTANCE ItSc_TrfSheep (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
-	
+	//COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfSheep;
+
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
@@ -1332,7 +1333,8 @@ INSTANCE ItSc_TrfScavenger (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	//COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfScavenger;
 
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -1362,8 +1364,9 @@ INSTANCE ItSc_TrfGiantRat (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
-	
+	//COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfGiantRat;
+
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
@@ -1392,8 +1395,9 @@ INSTANCE ItSc_TrfGiantBug (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
-	
+	//COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfGiantBug;
+
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 
@@ -1423,8 +1427,9 @@ INSTANCE ItSc_TrfWolf (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
-	
+	//COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfWolf;
+
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
@@ -1453,8 +1458,9 @@ INSTANCE ItSc_TrfWaran (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
-	
+	//COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfWaran;
+
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
@@ -1483,8 +1489,9 @@ INSTANCE ItSc_TrfSnapper (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
-	
+	//COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfSnapper;
+
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
@@ -1513,8 +1520,9 @@ INSTANCE ItSc_TrfWarg (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
-	
+	//COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfWarg;
+
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
@@ -1543,8 +1551,9 @@ INSTANCE ItSc_TrfFireWaran (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
-	
+	//COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfFireWaran;
+
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
@@ -1573,8 +1582,9 @@ INSTANCE ItSc_TrfLurker (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
-	
+	//COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfLurker;
+
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
@@ -1603,8 +1613,9 @@ INSTANCE ItSc_TrfShadowbeast (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
-	
+	//COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfShadowbeast;
+
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
@@ -1633,8 +1644,9 @@ INSTANCE ItSc_TrfDragonSnapper (C_Item)//Joly:Auf Dracheninsel in Truhe der Schw
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
-	
+	//COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	SPL_Cost_TrfDragonSnapper;
+
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };

@@ -250,3 +250,10 @@ func void Rtn_NewFarm_170()
 	TA_MM_AllScheduler(8,0,22,0,"NW_BIGMILL_FARM3_BALTHASAR");
 	TA_MM_AllScheduler(22,0,8,0,"NW_BIGMILL_FARM3_BALTHASAR");
 };
+
+instance SheepTransform(Mst_Default_Sheep)
+{
+	Npc_PercEnable(self,PERC_ASSESSSURPRISE,B_TransformStop);
+	B_SetVisuals_Sheep();
+	Npc_SetToFistMode(self);
+};

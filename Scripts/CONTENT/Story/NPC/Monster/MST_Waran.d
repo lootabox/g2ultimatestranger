@@ -91,4 +91,10 @@ INSTANCE BeachWaran2	(Mst_Default_Waran)
 };
 
 
+instance WaranTransform(Mst_Default_Waran)
+{
+	Npc_PercEnable(self,PERC_ASSESSSURPRISE,B_TransformStop);
+	B_SetVisuals_Waran();
+	Npc_SetToFistMode(self);
+};
 

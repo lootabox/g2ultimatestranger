@@ -113,3 +113,10 @@ INSTANCE BlackWolf	(Mst_Default_Warg)
 	Npc_SetToFistMode(self);
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
 };
+
+instance WargTransform(Mst_Default_Warg)
+{
+	Npc_PercEnable(self,PERC_ASSESSSURPRISE,B_TransformStop);
+	B_SetVisuals_Warg();
+	Npc_SetToFistMode(self);
+};

@@ -112,3 +112,10 @@ INSTANCE YGiant_Rat	(Mst_Default_Giant_Rat)
 	Npc_SetToFistMode(self);
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
 };
+
+instance Giant_RatTransform(Mst_Default_Giant_Rat)
+{
+	Npc_PercEnable(self,PERC_ASSESSSURPRISE,B_TransformStop);
+	B_SetVisuals_Giant_Rat();
+	Npc_SetToFistMode(self);
+};

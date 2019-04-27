@@ -1,5 +1,26 @@
 
 //************************************************
+//   Equip/unequip weapon
+//************************************************
+
+func void Equip_Item (var C_NPC slf, var int item) 
+{ 
+    if (! Npc_HasItems (slf, item)) 
+    { 
+        CreateInvItems (slf, item, 1); 
+    }; 
+
+    CALL_PtrParam (MEM_InstToPtr (item)); 
+    CALL__thiscall (MEM_InstToPtr (slf), 7545792); 
+}; 
+
+func void Unequip_Item (var C_NPC slf, var int item) 
+{ 
+    CALL_PtrParam (MEM_InstToPtr (item)); 
+    CALL__thiscall (MEM_InstToPtr (slf), 7546560); 
+};
+
+//************************************************
 //   Stop all sounds
 //************************************************
 
