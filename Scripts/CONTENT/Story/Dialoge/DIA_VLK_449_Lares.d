@@ -7,7 +7,7 @@ instance DIA_Addon_Lares_Patch		(C_INFO)
 	nr		 	= 99;
 	condition	= DIA_Addon_Lares_Patch_Condition;
 	information	= DIA_Addon_Lares_Patch_Info;
-	description	= "(Ornament - reclaim piece)";
+	description	= "I can take the ornament there for you! (patch)";
 };
 func int DIA_Addon_Lares_Patch_Condition ()
 {
@@ -19,6 +19,13 @@ func int DIA_Addon_Lares_Patch_Condition ()
 };
 func void DIA_Addon_Lares_Patch_Info ()
 {
+	AI_Output	(other, self, "DIA_Addon_Lares_OrnamentBringJob_15_00"); //I can take the ornament there for you!
+	B_Say (self, other, "$ABS_GOOD");
+	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortalInter2_09_00"); //The Water Mages are all beside themselves. They've been digging at an excavation site in the north-east for weeks. It's anybody's guess what they're trying to find there.
+	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortal_09_01"); //Here, take the ornament. The Water Mages must be in there somewhere. Take it to them.
+	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortal_09_04"); //And one more thing: Don't even think about strolling around for long with this ornament. Go DIRECTLY to Saturas.
+	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortal_09_05"); //See you.
+
 	B_GiveInvItems (self, other, ItMi_Ornament_Addon_Vatras,1);
 };
 // ************************************************************
@@ -797,8 +804,11 @@ instance DIA_Addon_Lares_PeopleMissing		(C_INFO)
 func int DIA_Addon_Lares_PeopleMissing_Condition ()
 {
 	if (Lares_RangerHelp == TRUE)
-	&& (Lares_PeopleMissing_PERM == FALSE)
-	&& ((SC_IsRanger == FALSE)||(MissingPeopleReturnedHome == TRUE))
+	//&& (Lares_PeopleMissing_PERM == FALSE)
+	&& (~Lares_PeopleMissing_PERM & (1 << 3))
+	&& (((SC_IsRanger == FALSE) && (~Lares_PeopleMissing_PERM & ((1 << 0) | (1 << 1))))
+	|| ((SC_IsRanger == FALSE) && (~Lares_PeopleMissing_PERM & (1 << 2)) && (MIS_Lares_BringRangerToMe != 0) && (SCKnowsMissingPeopleAreInAddonWorld == TRUE) && (MissingPeopleReturnedHome == FALSE))
+	|| (MissingPeopleReturnedHome == TRUE))
 	{
 		return TRUE;
 	};
@@ -809,19 +819,27 @@ func void DIA_Addon_Lares_PeopleMissing_Info ()
 	Info_ClearChoices (DIA_Addon_Lares_PeopleMissing);
 	Info_AddChoice (DIA_Addon_Lares_PeopleMissing, DIALOG_BACK, DIA_Addon_Lares_PeopleMissing_BACK);
 	if (MissingPeopleReturnedHome == TRUE)
+	// Lares_PeopleMissing_PERM in _Condition
 	{
 		Info_AddChoice (DIA_Addon_Lares_PeopleMissing, "I've been able to rescue some of the missing people.", DIA_Addon_Lares_PeopleMissing_SAVED );
 	}
 	else if (MIS_Lares_BringRangerToMe != 0)
 	&& (SCKnowsMissingPeopleAreInAddonWorld == TRUE)
 	&& (MissingPeopleReturnedHome == FALSE)
+	// Lares_PeopleMissing_PERM in _Condition
 	{
 		Info_AddChoice (DIA_Addon_Lares_PeopleMissing, "I know what became of the missing people.", DIA_Addon_Lares_PeopleMissing_Success );
 	}
 	else
 	{
-		Info_AddChoice (DIA_Addon_Lares_PeopleMissing, "Isn't this a case for the militia?", DIA_Addon_Lares_PeopleMissing_MIL );
-		Info_AddChoice (DIA_Addon_Lares_PeopleMissing, "Tell me what you know.", DIA_Addon_Lares_PeopleMissing_TellMe );
+		if (~Lares_PeopleMissing_PERM & (1 << 1))
+		{
+			Info_AddChoice (DIA_Addon_Lares_PeopleMissing, "Isn't this a case for the militia?", DIA_Addon_Lares_PeopleMissing_MIL );
+		};
+		if (~Lares_PeopleMissing_PERM & (1 << 0))
+		{
+			Info_AddChoice (DIA_Addon_Lares_PeopleMissing, "Tell me what you know.", DIA_Addon_Lares_PeopleMissing_TellMe );
+		};
 	};
 };
 func void DIA_Addon_Lares_PeopleMissing_BACK()
@@ -848,12 +866,14 @@ func void DIA_Addon_Lares_PeopleMissing_TellMe()
 
 			SC_HearedAboutMissingPeople = TRUE;
 		};
+	Lares_PeopleMissing_PERM = Lares_PeopleMissing_PERM | (1 << 0);
 };
 func void DIA_Addon_Lares_PeopleMissing_MIL()
 {
 	AI_Output (other, self, "DIA_Addon_Lares_PeopleMissing_MIL_15_00"); //Isn't this a case for the militia?
 	AI_Output (self, other, "DIA_Addon_Lares_PeopleMissing_MIL_09_01"); //The militia is pretty useless, if you ask me.
 	AI_Output (self, other, "DIA_Addon_Lares_PeopleMissing_MIL_09_02"); //They're never going to clear this up. The missing people have just vanished into thin air.
+	Lares_PeopleMissing_PERM = Lares_PeopleMissing_PERM | (1 << 1);
 };
 func void DIA_Addon_Lares_PeopleMissing_Success()
 {
@@ -865,6 +885,7 @@ func void DIA_Addon_Lares_PeopleMissing_Success()
 	AI_Output	(self, other, "DIA_Addon_Lares_PeopleMissing_Success_09_05"); //All right. But you know, whenever you need my help...
 	AI_Output	(other, self, "DIA_Addon_Lares_PeopleMissing_Success_15_06"); //... then I'll know where to find you. Understood.
 	Lares_CanBringScToPlaces = TRUE;
+	Lares_PeopleMissing_PERM = Lares_PeopleMissing_PERM | (1 << 2);
 	Info_ClearChoices (DIA_Addon_Lares_PeopleMissing);
 };
 func void DIA_Addon_Lares_PeopleMissing_SAVED ()
@@ -872,7 +893,8 @@ func void DIA_Addon_Lares_PeopleMissing_SAVED ()
 	AI_Output	(other, self, "DIA_Addon_Lares_PeopleMissing_SAVED_15_00"); //I've been able to rescue some of the missing people.
 	AI_Output	(self, other, "DIA_Addon_Lares_PeopleMissing_SAVED_09_01"); //I knew you'd succeed. Then I can finally go about my own business now.
 	B_GivePlayerXP (XP_Ambient);
-	Lares_PeopleMissing_PERM = TRUE;
+	//Lares_PeopleMissing_PERM = TRUE;
+	Lares_PeopleMissing_PERM = Lares_PeopleMissing_PERM | (1 << 3);
 	Lares_CanBringScToPlaces = TRUE;
 	Info_ClearChoices (DIA_Addon_Lares_PeopleMissing);
 };
