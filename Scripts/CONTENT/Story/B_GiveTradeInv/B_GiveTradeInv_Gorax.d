@@ -11,7 +11,7 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 	{
 		CreateInvItems	 (slf, ItMi_Gold,		100);  
 
-		CreateInvItems 	 (slf,ItKe_Innos_MIS ,1);	//Joly: damit man wieder aus dem Kloster kommt, wenn man reingeklettert ist.
+		// CreateInvItems 	 (slf,ItKe_Innos_MIS ,1);	//Joly: damit man wieder aus dem Kloster kommt, wenn man reingeklettert ist.
 
 		CreateInvItems   (slf, ItSc_Sleep,	  	1); //Joly: Für Mission benötigt!!!!
 		CreateInvItems   (slf, ItMi_Sulfur,   	2);

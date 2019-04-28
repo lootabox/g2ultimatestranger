@@ -846,6 +846,7 @@ FUNC VOID DIA_Karras_KarrasBlessedStone_Info()
 {
 	AI_Output (other,self ,"DIA_Karras_KarrasBlessedStone_15_00"); //I've got some stone here from blessed soil.
 	B_GiveInvItems (other, self, ItMi_KarrasBlessedStone_Mis,1);
+	Npc_RemoveInvItem(self,ItMi_KarrasBlessedStone_Mis);
 	AI_Output (self ,other,"DIA_Karras_KarrasBlessedStone_10_01"); //Good. I hope all the prayer shrines are still in their places.
 	AI_Output (self ,other,"DIA_Karras_KarrasBlessedStone_10_02"); //All right. I shall make you a protective amulet against the black look of the Seekers.
 	AI_Output (self ,other,"DIA_Karras_KarrasBlessedStone_10_03"); //Give me some time. I shall get right to work.

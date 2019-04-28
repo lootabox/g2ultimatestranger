@@ -202,9 +202,9 @@ FUNC VOID DIA_Addon_Huno_Armor_Info()
 	AI_Output (other, self, "DIA_Addon_Huno_Armor_15_00"); //I need better armor.
 	if (Huno_ArmorCheap == FALSE)
 	{
-		AI_Output (self, other, "DIA_Addon_Huno_Armor_06_01"); //So - you can have this. It's Esteban's fault it's so expensive.
 		if(!Npc_IsDead(Esteban))
 		{
+			AI_Output (self, other, "DIA_Addon_Huno_Armor_06_01"); //So - you can have this. It's Esteban's fault it's so expensive.
 			AI_Output (self, other, "DIA_Addon_Huno_Armor_06_02"); //That damned dog pockets his share of every piece of armor I sell.
 		};
 
@@ -229,21 +229,15 @@ func void DIA_Addon_Huno_Armor_Back()
 func void DIA_Addon_Huno_Armor_Buy()
 {
 	AI_Output (other, self, "DIA_Addon_Huno_Armor_Buy_15_00"); //Okay, I'll take the armor.
-	
 	if B_GiveInvItems (other, self, ItMi_Gold, BDT_Armor_H_Value)
 	{	
 		AI_Output (self, other, "DIA_Addon_Huno_Armor_Buy_06_01"); //Sure thing.
-		
 		B_GiveInvItems (self, other,ITAR_BDT_H,1);
+		Huno_ArmorPerm = TRUE;
 	}
 	else
 	{
 		AI_Output (self, other, "DIA_Addon_Huno_Armor_Buy_06_02"); //No gold, no armor.
-	};
-	
-	if (BDT_Armor_H_Value < 2100) //nur, wenn billliger!
-	{
-		Huno_ArmorPerm = TRUE;
 	};
 	
 	Info_ClearChoices (DIA_Addon_Huno_Armor);
@@ -455,6 +449,7 @@ FUNC VOID DIA_Addon_Huno_Paket_Info()
 {	
 	AI_Output (other, self, "DIA_Addon_Huno_Paket_15_00");//I have the steel.
 	B_GiveInvItems (other, self, ItMi_Addon_Steel_Paket,1);
+	Npc_RemoveInvItem(self,ItMi_Addon_Steel_Paket);
 	AI_Output (self, other, "DIA_Addon_Huno_Paket_06_01"); //And? Was Juan there, too?
 	AI_Output (other, self, "DIA_Addon_Huno_Paket_15_02"); //He was.
 	AI_Output (self, other, "DIA_Addon_Huno_Paket_06_03"); //I knew it. That rat Esteban was behind it.
@@ -487,7 +482,7 @@ INSTANCE DIA_Addon_Huno_Trade  (C_INFO)
 	information = DIA_Addon_Huno_Trade_Info;
 	permanent   = TRUE;
 	trade		= TRUE;
-	description = DIALOG_TRADE;
+	description = DIALOG_TRADE_3;
 };
 FUNC INT DIA_Addon_Huno_Trade_Condition()
 {		

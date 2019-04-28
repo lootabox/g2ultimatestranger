@@ -73,7 +73,7 @@ INSTANCE ItKe_MonastarySecretLibrary_Mis (C_Item)
 
 	description			= 	name;
 	
-	TEXT[0]				= 	"from the book 'The Halls of Irdorath'";
+	TEXT[0]				= 	"From the book 'The Halls of Irdorath'.";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -302,7 +302,7 @@ INSTANCE ItWr_UseLampIdiot_Mis	(C_Item)
 	on_state[0]			=   UseItWr_UseLampIdiot_Mis;
 	scemeName			=	"MAP";
 	description			= 	name;
-	TEXT[0]				=	"from the book 'The Halls of Irdorath'";
+	TEXT[0]				=	"From the book 'The Halls of Irdorath'.";
 };
 func void UseItWr_UseLampIdiot_Mis ()
 {   
@@ -409,8 +409,7 @@ INSTANCE ITWr_ForgedShipLetter_MIS	(C_Item)
 	on_state[0]			=   UseITWr_ForgedShipLetter_MIS;
 	scemeName			=	"MAP";
 	description			= 	name;
-	TEXT[3]				=	"Letter of Authorization";
-	TEXT[4]				=   "for the paladins' ship.";
+	TEXT[3]				=	"Letter of Authorization for the paladins' ship.";
 };
 func void UseITWr_ForgedShipLetter_MIS ()
 {   
@@ -596,8 +595,7 @@ INSTANCE  ItAm_AmulettOfDeath_Mis(C_Item)
 
 	description		= "The divine aura of Innos.";
 	
-	TEXT[2]			= "This amulet protects the bearer";
-	TEXT[3]			= "from all forms of damage.";
+	TEXT[2]			= "This amulet protects the bearer from all forms of damage.";
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 	

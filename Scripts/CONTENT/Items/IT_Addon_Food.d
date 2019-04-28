@@ -137,7 +137,7 @@ INSTANCE ItFo_Addon_LousHammer (C_Item)
 
 	description		= 	"Lou's Hammer";
 	
-	TEXT[1]			= 	"Effect          ???";				
+	TEXT[2]			= 	"Effects unknown.";
 	
 	
 	
@@ -174,7 +174,7 @@ INSTANCE ItFo_Addon_SchlafHammer (C_Item)
 
 	description		= 	"Double Hammer";
 	
-	TEXT[1]			= 	"Makes the toughest drinker sleepy...";				
+	TEXT[2]			= 	"Makes the toughest drinker sleepy...";
 
 	TEXT[5]			= 	NAME_Value;					
 	COUNT[5]		= 	Value_SchlafHammer;
@@ -211,8 +211,7 @@ INSTANCE ItFo_Addon_SchnellerHering(C_Item)
 
 	description		= 	"Looks dangerous!";
 	
-	TEXT[1]			= 	"Effects unknown.";				
-	TEXT[2]			=	"Probable side-effects";
+	TEXT[2]			= 	"Effects unknown. Probable side-effects.";
 	
 	TEXT[5]			= 	NAME_Value;					
 	COUNT[5]		= 	Value_SchnellerHering;
@@ -252,11 +251,8 @@ INSTANCE ItFo_Addon_Pfeffer_01	(C_Item)
 		
 	description			= 	"Red tear-pepper";
 	
-	TEXT[0]				= 	"From the southern islands";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
+	TEXT[2]				= 	"From the southern islands.";
 	TEXT[3]				= 	"CAREFUL, HOT!";
-	TEXT[4]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 //-------------------------------------------------------

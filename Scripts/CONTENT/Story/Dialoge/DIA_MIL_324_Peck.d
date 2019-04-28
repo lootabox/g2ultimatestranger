@@ -113,6 +113,11 @@ func void DIA_Peck_FOUND_PECK_Info ()
 	AI_Output (other, self, "DIA_Peck_FOUND_PECK_15_04"); //Come on, Andre's already missed you, too.
 	AI_Output (self, other, "DIA_Peck_FOUND_PECK_12_05"); //Hmpf... damn. Okay, I'm coming already - but when you report back to Andre, don't tell him I was here.
 	
+	CreateInvItems (self,ITAR_MIL_L,1);
+	AI_EquipArmor (self,ITAR_MIL_L);
+	CreateInvItems (Vanja,ITAR_VlkBabe_H,1);
+	AI_EquipArmor (Vanja,ITAR_VlkBabe_H);
+	
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine (self, "STORAGE");
 	Npc_ExchangeRoutine (Vanja, "ALONE");
@@ -158,7 +163,6 @@ func void DIA_Peck_WEAPON_Info ()
 			AI_Output (self, other, "DIA_Peck_WEAPON_12_03"); //You didn't tell Andre I was in the Red Lantern. You seem to be okay. Here, take your sword.
 			AI_Output (self ,other,"DIA_Peck_Add_12_00"); //It's the best that I have.
 			B_GiveInvItems 		(self, hero	, ItMw_Schwert1, 1); // edles Schwert 35
-	
 		}
 		else if (MIS_Andre_Peck == LOG_SUCCESS) // ist schon korrekt, das SUCCESS gilt für Andre M.F.
 		{

@@ -325,6 +325,7 @@ FUNC VOID DIA_Thorben_Schuldenbuch_Info()
 	AI_Output (other, self,"DIA_Thorben_Schuldenbuch_15_02"); //That shouldn't interest you so much as the fact that your name is in it.
 	AI_Output (self, other,"DIA_Thorben_Schuldenbuch_06_03"); //Give it to me!
 	B_GiveInvItems (other, self, ItWr_Schuldenbuch, 1);
+	Npc_RemoveInvItem(self,ItWr_Schuldenbuch);
 	AI_Output (other, self,"DIA_Thorben_Schuldenbuch_15_04"); //What will you give me, then?
 	AI_Output (self, other,"DIA_Thorben_Schuldenbuch_06_05"); //I have no money to spare and can give you nothing but my heartfelt gratitude.
 	B_GivePlayerXP (XP_Schuldenbuch);

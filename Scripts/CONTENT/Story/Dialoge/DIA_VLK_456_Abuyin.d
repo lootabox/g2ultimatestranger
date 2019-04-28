@@ -245,18 +245,21 @@ FUNC VOID DIA_Abuyin_Mischung_BACK()
 FUNC VOID DIA_Abuyin_Mischung_Sumpf ()
 {
 	B_GiveInvItems (other, self, ItMi_SumpfTabak, 1);
+	Npc_RemoveInvItems(self,ItMi_SumpfTabak, 1);
 	B_TabakProbieren();
 	Info_ClearChoices (DIA_Abuyin_Mischung);
 };
 FUNC VOID DIA_Abuyin_Mischung_Pilz ()
 {
 	B_GiveInvItems (other, self, ItMi_PilzTabak, 1);
+	Npc_RemoveInvItems(self,ItMi_PilzTabak, 1);
 	B_TabakProbieren();
 	Info_ClearChoices (DIA_Abuyin_Mischung);
 };
 FUNC VOID DIA_Abuyin_Mischung_Doppel ()
 {
 	B_GiveInvItems (other, self, ItMi_DoppelTabak, 1);
+	Npc_RemoveInvItems(self,ItMi_DoppelTabak, 1);
 	B_TabakProbieren();
 	Info_ClearChoices (DIA_Abuyin_Mischung);
 };
@@ -264,6 +267,7 @@ FUNC VOID DIA_Abuyin_Mischung_Super ()
 {
 	
 	B_GiveInvItems (other, self, ItMi_Honigtabak, 1);
+	Npc_RemoveInvItems(self,ItMi_Honigtabak, 1);
 		
 	AI_Output (self, other,"DIA_Abuyin_Mischung_Super_13_00");//Let me try your tobacco.
 	CreateInvItems (self, ItMi_Joint,1);
@@ -309,6 +313,7 @@ FUNC VOID DIA_Abuyin_Trade_Info()
 	AI_Output (other, self,"DIA_Abuyin_Trade_15_00");//I've got some honey tobacco for you.
 	
 	B_GiveInvItems (other, self, ItmI_HonigTabak, Npc_HasItems (other, Itmi_Honigtabak));
+	Npc_RemoveInvItems(self,ItMi_Honigtabak, Npc_HasItems (self, Itmi_Honigtabak));
 	B_GiveInvItems (self, other, ItmI_Gold, Abuyin_Score);
 	
 	AI_Output (self, other,"DIA_Abuyin_Trade_13_01");//It is a great pleasure doing business with you.

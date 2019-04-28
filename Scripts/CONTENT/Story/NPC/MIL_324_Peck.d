@@ -24,7 +24,7 @@ instance Mil_324_Peck (Npc_Default)
 	CreateInvItems (self,ItKe_City_Tower_05,1);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_B_Normal_Orik, BodyTex_B, ITAR_MIL_L);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_B_Normal_Orik, BodyTex_B, NO_ARMOR);	
 	Mdl_SetModelFatness	(self,2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	

@@ -199,7 +199,7 @@ FUNC VOID DIA_Addon_Lucia_Paladine_Info()
 	&& (Npc_GetTrueGuild (other) != GIL_DJG)
 	{
 		Info_ClearChoices (DIA_Addon_Lucia_Paladine);
-		Info_AddChoice (DIA_Addon_Lucia_Paladine,"End conversation.",DIA_Addon_Lucia_Paladine_BACK);
+		Info_AddChoice (DIA_Addon_Lucia_Paladine,DIALOG_BACK,DIA_Addon_Lucia_Paladine_BACK);
 		Info_AddChoice (DIA_Addon_Lucia_Paladine,"The paladins don't only fight in his name. Innos chooses his warriors.",DIA_Addon_Lucia_Paladine_WAHL);
 		Info_AddChoice (DIA_Addon_Lucia_Paladine,"The paladins are the warriors of Innos. They aren't murderers.",DIA_Addon_Lucia_Paladine_MURDER);
 		
@@ -215,7 +215,7 @@ FUNC VOID DIA_Addon_Lucia_Paladine_WAHL()
 	AI_Output (self, other, "DIA_Addon_Lucia_Paladine_WAHL_16_01");//So? I believe it's the people who choose themselves.
 	AI_Output (self, other, "DIA_Addon_Lucia_Paladine_WAHL_16_02");//Still, your words amaze me. You talk almost like you were one of them.
 	
-	Info_AddChoice (DIA_Addon_Lucia_Paladine,"Have you ever killed someone?",DIA_Addon_Lucia_Paladine_KILL);
+	Info_AddChoice (DIA_Addon_Lucia_Paladine,"Do you deny Innos then, wench?",DIA_Addon_Lucia_Paladine_WEIB);
 };
 FUNC VOID DIA_Addon_Lucia_Paladine_KILL()
 {
@@ -238,7 +238,7 @@ FUNC VOID DIA_Addon_Lucia_Paladine_MURDER()
 	AI_Output (self, other, "DIA_Addon_Lucia_Paladine_MURDER_16_01");//So? Blood sticks to their swords too - just like the weapons of the pirates or the bandits.
 	AI_Output (self, other, "DIA_Addon_Lucia_Paladine_MURDER_16_02");//The only difference is they do it in Innos' name and not because they want to survive.
 	
-	Info_AddChoice (DIA_Addon_Lucia_Paladine,"Do you deny Innos then, wench?",DIA_Addon_Lucia_Paladine_WEIB);
+	Info_AddChoice (DIA_Addon_Lucia_Paladine,"Have you ever killed someone?",DIA_Addon_Lucia_Paladine_KILL);
 };
 //---------------------------------------------------------------------
 //	Info Attentat

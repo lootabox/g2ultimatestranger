@@ -18,7 +18,7 @@ FUNC VOID B_GiveTradeInv_Engor (var C_NPC slf)
 		CreateInvItems (slf, ItFo_Stew, 5); 
 		CreateInvItems (slf, ItFo_Water, 4); 
 		// - Map -
-		CreateInvItems (slf, ItWr_Map_Oldworld, 1); 
+		// CreateInvItems (slf, ItWr_Map_Oldworld, 1); 
 		
 		CreateInvItems (slf, ItRi_Prot_Total_01, 1);
 		CreateInvItems (slf, ItAm_Prot_Fire_01, 1);		

@@ -23,7 +23,8 @@ instance BDT_1091_Addon_Lucia (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																					
-	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe8", FaceBabe_N_GreyCloth, BodyTexBabe_F, NO_ARMOR);
+	//B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe8", FaceBabe_N_GreyCloth, BodyTexBabe_F, NO_ARMOR);
+	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe", FaceBabe_N_BlondTattoo, BodyTexBabe_F, NO_ARMOR);
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 
 	

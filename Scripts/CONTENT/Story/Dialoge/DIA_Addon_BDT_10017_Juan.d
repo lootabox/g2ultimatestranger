@@ -151,7 +151,7 @@ INSTANCE DIA_Addon_Juan_Trade   (C_INFO)
 	information = DIA_Addon_Juan_Trade_Info;
 	permanent   = TRUE;
 	trade		= TRUE;
-	description = DIALOG_TRADE;
+	description = DIALOG_TRADE_3;
 };
 FUNC INT DIA_Addon_Juan_Trade_Condition()
 {	

@@ -180,6 +180,8 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		if ((Npc_IsDead(Sengrath))== FALSE)		 //Joly: Sengrath Missing in Action auf der Suche nach seiner verlorenen Armbrust.
 			{
 				B_StartOtherRoutine	(Sengrath,"ORCBARRIER");
+				AI_Teleport(Sengrath,"OW_ORCBARRIER_12");
+				B_ClearDeadTrader(Sengrath);
 				if (Npc_HasItems (Sengrath,ItRw_Mil_Crossbow))
 				{
 					Npc_RemoveInvItem	(Sengrath, ItRw_Mil_Crossbow );

@@ -243,6 +243,8 @@ func void DIA_Addon_Pedro_Statuette_Abgeben_Info ()
 {
 	AI_Output (other, self, "DIA_Addon_Pedro_Statuette_Abgeben_15_00"); //Can I just hand the statuette over to you?
 	AI_Output (self, other, "DIA_Addon_Pedro_Statuette_Abgeben_09_01"); //Of course, I shall take care of it. Thank you for this unselfish deed.
+	B_GiveInvItems(other,self,ItMi_LostInnosStatue_Daron,1);
+	Npc_RemoveInvItems(self,ItMi_LostInnosStatue_Daron,1);
 	MIS_Addon_Daron_GetStatue = LOG_SUCCESS;
 	B_GivePlayerXP (XP_Addon_ReportLostInnosStatue2Daron);
 };

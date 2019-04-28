@@ -517,6 +517,7 @@ FUNC VOID DIA_Jan_Dragonscales_Info()
 		if (Npc_HasItems (other,ItAT_Dragonscale) >= 20)
 		{
 			B_GiveInvItems (other,self ,ItAT_Dragonscale,20);
+			Npc_RemoveInvItems(self,ItAT_Dragonscale, 20);
 			AI_Output (self ,other,"DIA_JAN_Dragonscales_10_01"); //Good, something can be done with that.
 			AI_Output (self ,other,"DIA_JAN_Dragonscales_10_02"); //Come back tomorrow, the part should be finished then.
 			
@@ -747,6 +748,7 @@ func void DIA_Jan_DragonBlood_1 ()
 	DragonBloodCount = 1;
 
 	B_GiveInvItems (other, self, ItAt_DragonBlood,  DragonBloodCount);
+	Npc_RemoveInvItems(self,ItAt_DragonBlood, DragonBloodCount);
 	XP_DJG_BringDragonBloods = (DragonBloodCount * XP_AmbientKap4);
 	B_GivePlayerXP (XP_DJG_BringDragonBloods);
 	DragonBloodGeld	= (DragonBloodCount * Value_DragonBlood);	//Joly:ganzer Wert ohne Handelsmultiplier

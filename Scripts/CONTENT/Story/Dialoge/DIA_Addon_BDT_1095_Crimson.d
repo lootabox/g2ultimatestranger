@@ -137,7 +137,7 @@ INSTANCE DIA_Addon_Crimson_Gold   (C_INFO)
 	condition   = DIA_Addon_Crimson_Gold_Condition;
 	information = DIA_Addon_Crimson_Gold_Info;
 	permanent   = TRUE;
-	description = "Trade gold nuggets...";
+	description = "Let's trade...";
 };
 FUNC INT DIA_Addon_Crimson_Gold_Condition()
 {	

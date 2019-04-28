@@ -340,7 +340,7 @@ INSTANCE DIA_Addon_Scatty_trade   (C_INFO)
 	information = DIA_Addon_Scatty_trade_Info;
 	permanent   = TRUE;
 	trade		= TRUE;
-	description = DIALOG_TRADE;
+	description = DIALOG_TRADE_1;
 };
 FUNC INT DIA_Addon_Scatty_trade_Condition()
 {	

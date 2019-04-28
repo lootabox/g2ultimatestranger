@@ -37,7 +37,11 @@ INSTANCE DIA_Sengrath_Hello (C_INFO)
 
 FUNC INT DIA_Sengrath_Hello_Condition()
 {
-	return TRUE;
+	if (Npc_GetDistToWP(hero,"OC_RAMP_17") < 380)
+	|| (Npc_IsInState(self,ZS_Talk))
+	{
+		return TRUE;
+	};
 };	 
 FUNC VOID DIA_Sengrath_Hello_Info()
 {	

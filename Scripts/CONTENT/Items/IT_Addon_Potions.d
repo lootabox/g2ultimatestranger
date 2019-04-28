@@ -23,8 +23,7 @@ INSTANCE ItPo_Addon_Geist_01(C_Item)
 	
 	TEXT[2]			=   "Take PRECAUTIONS before using!";
 	
-	TEXT[3]			= 	"Can strongly influence the mind";	
-	TEXT[4]			= 	"or kill the user";
+	TEXT[3]			= 	"Can strongly influence the mind or kill the user.";
 	
 	TEXT[5]			= 	NAME_Value;					
 	COUNT[5]		= 	Value_ManaEssenz;
@@ -61,8 +60,7 @@ INSTANCE ItPo_Addon_Geist_02(C_Item)
 	
 	TEXT[2]			=   "Take PRECAUTIONS before using!";
 	
-	TEXT[3]			= 	"Can strongly influence the mind";	
-	TEXT[4]			= 	"or kill the user";
+	TEXT[3]			= 	"Can strongly influence the mind or kill the user.";
 	
 	TEXT[5]			= 	NAME_Value;					
 	COUNT[5]		= 	Value_ManaEssenz;
@@ -99,7 +97,7 @@ INSTANCE ItPo_Health_Addon_04(C_Item)
 	description		= 	"Pure life energy";
 	
 	//TEXT[1]			= 	NAME_Bonus_HP;				
-	TEXT[2]			= 	"Complete regeneration";
+	TEXT[2]			= 	"Complete regeneration.";
 	
 	TEXT[5]			= 	NAME_Value;					
 	COUNT[5]		= 	Value_HpTrunk;
@@ -133,7 +131,7 @@ INSTANCE ItPo_Mana_Addon_04(C_Item)
 	description		= 	"Pure mana";
 	
 	//TEXT[1]			= 	NAME_Bonus_Mana;				
-	TEXT[2]			= 	"Complete mana regeneration";
+	TEXT[2]			= 	"Complete mana regeneration.";
 	
 	TEXT[5]			= 	NAME_Value;					
 	COUNT[5]		= 	Value_ManaTrunk;

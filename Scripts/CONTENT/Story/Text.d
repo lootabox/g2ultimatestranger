@@ -647,7 +647,10 @@ const string NAME_Addon_Summoned_Mud	=	"Summoned Mud";
 
 CONST STRING DIALOG_ENDE		= "END";
 CONST STRING DIALOG_BACK		= "BACK";
-const string DIALOG_TRADE		= "(Trade)";
+//const string DIALOG_TRADE		= "(Trade)";
+const string DIALOG_TRADE_1		= "Let's deal.";
+const string DIALOG_TRADE_2		= "Show me your wares.";
+const string DIALOG_TRADE_3		= "Show me what you have.";
 const string DIALOG_PICKPOCKET	= "(Pickpocket)";
 
 
@@ -966,7 +969,7 @@ const string DIALOG_ADDON_ATTENTAT_CONTRA 			= "I'm looking for those guys so I 
 
 const string DIALOG_ADDON_MINE_DESCRIPTION			= "You're needed in the mine. (Give red stone)";
 const string DIALOG_ADDON_GOLD_DESCRIPTION			= "What do I need to know about mining gold?";
-const string PRINT_ADDON_KNOWSBF					= "Knowledge of stinger poison learned";	
+const string PRINT_ADDON_KNOWSBF					= "Knowledge of stinger venom learned";	
 const string PRINT_ADDON_HACKCHANCE					= "Knowledge of gold digging improved! (+";		
 const string PRINT_ADDON_STUNTBONUS					= "Stunt Bonus";
 const string PRINT_ADDON_EXPLOITBONUS				= "Exploit Penalty";	
@@ -1042,7 +1045,7 @@ const string PRINT_GotPlants					= "Some herbs found";
 const string PRINT_NoSweeping					= "It'll take ages to sweep all the chambers!";
 
 const string PRINT_Mandibles					= "The secretion isn't having any effect.";
-const string PRINT_Bloodfly						= "Tastes bitter and poisonous.";
+const string PRINT_Bloodfly						= "Tastes bitter and venomous.";
 // ***************************************************************************************
 // Abuyin Patchwork
 // ***************************************************************************************

@@ -395,6 +395,7 @@ FUNC VOID DIA_Hanna_ThisLetter_Info()
 {	
 	AI_Output (other,self ,"DIA_Hanna_ThisLetter_15_00"); //Did you mean this document?
 	B_GiveInvItems (other,self,ItWr_ShatteredGolem_Mis,1);
+	Npc_RemoveInvItems(self,ItWr_ShatteredGolem_Mis,1);
 	AI_Output (self ,other,"DIA_Hanna_ThisLetter_17_01"); //Yes, that's exactly it. Thank you.
 	AI_Output (other,self ,"DIA_Hanna_ThisLetter_15_02"); //What's my reward?
 	AI_Output (self ,other,"DIA_Hanna_ThisLetter_17_03"); //Not so fast. Here's your money.
@@ -541,6 +542,7 @@ FUNC VOID DIA_Hanna_GiveSchuldenbuch_Info()
 {	
 	AI_Output (other, self, "DIA_Hanna_Add_15_45"); //Here - take the book.
 	B_GiveInvItems (other, self, ItWr_Schuldenbuch, 1);
+	Npc_RemoveInvItem(self,ItWr_Schuldenbuch);
 	AI_Output (self, other, "DIA_Hanna_Add_17_46"); //Thanks.
 	AI_Output (self, other, "DIA_Hanna_Add_17_47"); //Take this as a reward.
 	B_GiveInvItems (self, other, ItSe_HannasBeutel, 1);

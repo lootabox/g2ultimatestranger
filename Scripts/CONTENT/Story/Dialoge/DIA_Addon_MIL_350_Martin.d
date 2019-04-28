@@ -275,7 +275,7 @@ instance DIA_Addon_Martin_Rangerhelp		(C_INFO)
 	condition	 = 	DIA_Addon_Martin_Rangerhelp_Condition;
 	information	 = 	DIA_Addon_Martin_Rangerhelp_Info;
 
-	description	 = 	"Lares sent me";
+	description	 = 	"Lares sent me. He said you could help me.";
 };
 
 func int DIA_Addon_Martin_Rangerhelp_Condition ()

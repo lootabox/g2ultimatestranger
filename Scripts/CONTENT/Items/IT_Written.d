@@ -120,8 +120,6 @@ instance ItWr_Map_NewWorld (C_Item)
 	on_state[0]	= Use_Map_NewWorld;
 
 	description	= name;
-	TEXT[0]		= "";
-	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
 	inv_rotz = 180;
@@ -162,8 +160,6 @@ instance ItWr_Map_NewWorld_City (C_Item)
 	on_state[0]	= Use_Map_NewWorld_City;
 
 	description	= name;
-	TEXT[0]		= "";
-	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
 	inv_rotz = 180;
@@ -249,8 +245,7 @@ INSTANCE ItWr_EinhandBuch (C_ITEM)
 	scemeName				=	"MAP";
 	description				= 	"Southern Defense Art";
 	
-	TEXT[2] 				=  "A book on the art of";
-	TEXT[3] 				=  "one-handed fighting.";
+	TEXT[2] 				=  "A book on the art of one-handed fighting.";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
 	on_state[0]				=	UseEinhandBuch;
@@ -316,8 +311,7 @@ INSTANCE ItWr_ZweihandBuch (C_ITEM)
 	scemeName				=	"MAP";
 	description				= 	"Double Blocks";
 	
-	TEXT[2] 				=  "A book on the art of";
-	TEXT[3] 				=  "two-handed fighting.";
+	TEXT[2] 				=  "A book on the art of two-handed fighting.";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
 	on_state[0]				=	UseZweihandBuch;

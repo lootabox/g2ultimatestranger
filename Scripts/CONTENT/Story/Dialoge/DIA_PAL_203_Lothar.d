@@ -658,40 +658,8 @@ func void DIA_Lothar_PermB4OV_Info ()
 /*
 func void B_Lothar_Blubb() //überflüsige Outputs
 {
-	AI_Output (other, self, "DIA_Lothar_Add_15_00"); //But I MUST see Lord Hagen!
-
-	AI_Output (self ,other, "DIA_Lothar_Add_01_45"); //And as I see, he accepted you into the militia.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_46"); //Hm - he must know what he's doing.
-	
-	AI_Output (other, self, "DIA_Lothar_Add_15_20"); //How many masters are there?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_21"); //I believe there are five altogether.
-		
-	AI_Output (self ,other, "DIA_Lothar_Add_01_62"); //Tell me, didn't I make myself clear? No more tales about dragons!
-	AI_Output (other, self, "DIA_Lothar_Add_15_63"); //How do you know..?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_64"); //That is NONE of your business!
-	AI_Output (self ,other, "DIA_Lothar_Add_01_65"); //That was the last time, understood?!
-
 	//AI_Output (other, self, "DIA_Lothar_Add_15_66"); //Where do I find the commander of the militia?
-	AI_Output (other, self, "DIA_Lothar_Add_15_08"); //I am now an apprentice with one of the masters!
-
-	// ------ NEWS_Modul für Unterstadt ------
 	//AI_Output (self ,other, "DIA_Lothar_Add_01_47"); //You again.
-
-	AI_Output (self ,other, "DIA_Lothar_Add_01_43"); //I have heard that you saw Lord Andre?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_44"); //I told you that you could only join the militia if you were a citizen of the town.
-
-	AI_Output (self ,other, "DIA_Lothar_Add_01_48"); //I have reported to Lord Hagen that you wish to speak to him...
-	AI_Output (other, self, "DIA_Lothar_Add_15_49"); //And? What did he say?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_50"); //He has never heard of you.
-	AI_Output (other, self, "DIA_Lothar_Add_15_51"); //Of course not. Did you tell him about the dragons?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_52"); //Didn't I tell you to STOP these stories?!
-
-	AI_Output (self ,other, "DIA_Lothar_Add_01_12"); //I have heard that you already have the approval of some of the masters.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_13"); //You're quite serious about this, aren't you?
-
-	AI_Output (self ,other, "DIA_Lothar_Add_01_01"); //You must obey the rules, just like everybody else!
-	AI_Output (self ,other, "DIA_Lothar_Add_01_02"); //Lord Hagen is not available.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_03"); //If you have something IMPORTANT to say, go to Lord Andre. He will help you!
 };
 */
 

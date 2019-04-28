@@ -324,6 +324,7 @@ func void DIA_Coragon_GiveBook_Info ()
 {
 	AI_Output (other, self,"DIA_Coragon_Add_15_18"); //Here is the book.
 	B_GiveInvItems (other, self, ItWr_Schuldenbuch, 1);
+	Npc_RemoveInvItem(self,ItWr_Schuldenbuch);
 	AI_Output (self ,other,"DIA_ADDON_NEW_Coragon_Add_09_19"); //Thanks! You saved my butt. Lehmar can get rather ugly.
 	B_GivePlayerXP (XP_Schuldenbuch);
 	B_Coragon_Bier();
@@ -458,6 +459,7 @@ func void DIA_Coragon_Ring_Info ()
 {
 	AI_Output (other, self,"DIA_Coragon_Add_15_39"); //Here - take this ring.
 	B_GiveInvItems (other, self, ItRi_ValentinosRing, 1);
+	Npc_RemoveInvItem(self,ItRi_ValentinosRing);
 	AI_Output (self ,other,"DIA_ADDON_NEW_Coragon_Add_09_40"); //What? I don't understand...
 	AI_Output (other, self,"DIA_Coragon_Add_15_41"); //It used to belong to Valentino.
 	AI_Output (other, self,"DIA_Coragon_Add_15_42"); //You're welcome to pass it on to the next person who tans his hide...

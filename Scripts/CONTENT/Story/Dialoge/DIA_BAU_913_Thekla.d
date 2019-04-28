@@ -399,7 +399,7 @@ func void DIA_Thekla_PERM_Info()
 		
 		MIS_Thekla_Paket = LOG_RUNNING;
 		
-		CreateInvItems (Sagitta,ItMi_TheklasPaket,1);
+		// CreateInvItems (Sagitta,ItMi_TheklasPaket,1);
 		
 		Log_CreateTopic (TOPIC_TheklaEintopf,LOG_MISSION);
 		Log_SetTopicStatus (TOPIC_TheklaEintopf,LOG_RUNNING);

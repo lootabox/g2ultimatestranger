@@ -435,6 +435,7 @@ func void DIA_Buster_AboutSentenza_Give()
 {
 	AI_Output (other, self,"DIA_Buster_AboutSentenza_Give_15_00"); //Here you are - 5 gold pieces.
 	B_GiveInvItems (other, self, ItMi_Gold, 5);
+	Npc_RemoveInvItems(self,ItMi_Gold,5);
 	AI_Output (self, other,"DIA_Buster_AboutSentenza_Give_13_01"); //Thanks, man. Looks like I can take a few tonight after all. I won't forget this.
 	Buster_GoldZumBrennen = TRUE;
 	Buster_Bonus = 50;
@@ -761,7 +762,7 @@ func void DIA_Buster_BringTrophyShadowbeast_Info ()
 				AI_Output		(other, self, "DIA_Buster_BringTrophyShadowbeast_15_05"); //I've got a shadowbeast horn for you.
 				B_GivePlayerXP (XP_BringBusterTrophyShadowbeast);
 				B_GiveInvItems (other, self, ItAt_ShadowHorn,1);
-				Npc_RemoveInvItem(self,ItAt_ShadowHorn);
+				Npc_RemoveInvItems(self,ItAt_ShadowHorn,1);
 				BusterTrophyShadowbeastCounter = BusterTrophyShadowbeastCounter + 1;
 			}
 			else

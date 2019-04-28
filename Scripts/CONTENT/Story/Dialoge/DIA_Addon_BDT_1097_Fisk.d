@@ -93,7 +93,7 @@ INSTANCE DIA_Addon_Fisk_Trade   (C_INFO)
 	information = DIA_Addon_Fisk_Trade_Info;
 	permanent   = TRUE;
 	trade		= TRUE;
-	description = DIALOG_TRADE;
+	description = DIALOG_TRADE_2;
 
 };
 FUNC INT DIA_Addon_Fisk_Trade_Condition()
@@ -253,6 +253,8 @@ FUNC VOID DIA_Addon_Fisk_GivePaket_Info()
 {
 	AI_Output (other, self, "DIA_Addon_Fisk_GivePaket_15_00"); //I have your package.
 	B_GiveInvItems (other, self, ItMi_Addon_Lennar_Paket, 1);
+	Npc_RemoveInvItem(self,ItMi_Addon_Lennar_Paket);
+	CreateInvItems(self,itke_lockpick,12);
 	
 	MIS_Lennar_Lockpick = LOG_SUCCESS;
 	B_GivePlayerXP (XP_Addon_LennarPaket);

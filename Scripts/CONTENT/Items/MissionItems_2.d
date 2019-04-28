@@ -123,8 +123,7 @@ INSTANCE ItKe_PrisonKey_MIS(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				= 	"The key to the dungeon";
-	TEXT[3]				= 	"in the castle.";
+	TEXT[2]				= 	"The key to the dungeon in the castle.";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -146,8 +145,7 @@ INSTANCE ItKe_OC_Store(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				= 	"The key to the store room";
-	TEXT[3]				= 	"in the castle.";
+	TEXT[2]				= 	"The key to the store room in the castle.";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -305,11 +303,7 @@ INSTANCE ItSe_Olav	(C_Item)
 	
 	description			= 	"Olav's bag";
 	
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
 	TEXT[2]				= 	"There are a few coins jingling inside.";
-	TEXT[3]				= 	"";
-	TEXT[4]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -371,7 +365,7 @@ INSTANCE ItKe_Bromor(C_Item)
 	material 			=	MAT_METAL;
 
 	description			= 	"The key to the hotel";
-	TEXT[1]				= 	"room key.";
+	TEXT[1]				= 	"Room key.";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 //********************************************
@@ -391,8 +385,7 @@ INSTANCE ITKE_RUNE_MIS(C_Item)
 
 	description			= 	"A small key to a chest.";
 	
-	TEXT[1]				= 	"The chest this key belongs to";
-	TEXT[2]				= 	"is under a bridge.";
+	TEXT[1]				= 	"The chest this key belongs to is under a bridge.";
 	TEXT[3]				= 	"It contains a runestone.";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;

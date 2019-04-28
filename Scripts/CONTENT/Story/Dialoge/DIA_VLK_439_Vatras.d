@@ -1061,6 +1061,7 @@ func void DIA_Addon_Vatras_MissingPeople_Success()
 	{	
 		AI_Output	(other, self, "DIA_Addon_Vatras_MissingPeople_Success_15_05"); //Here.
 		B_GiveInvItems(other,self,ItWr_RavensKidnapperMission_Addon,1);
+		Npc_RemoveInvItems(self,ItWr_RavensKidnapperMission_Addon,1);
 		//AI_PrintScreen (PRINT_ItemGegeben, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 		B_UseFakeScroll ();
 		//AI_PrintScreen	(PRINT_ItemErhalten, -1, YPOS_ItemTaken, FONT_ScreenSmall, 2);

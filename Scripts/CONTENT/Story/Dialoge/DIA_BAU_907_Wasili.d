@@ -144,6 +144,7 @@ func void DIA_Wasili_FirstOldCoin_Info ()
 	};
 
 	B_GiveInvItems (other, self, ItMi_OldCoin,1);
+	Npc_RemoveInvItems(self,ItMi_OldCoin, 1);
 
 	if (FirstOldCoin_angebotenXP_OneTime == FALSE)
 	{
@@ -272,6 +273,7 @@ func void DIA_Wasili_BringOldCoin_Info ()
 				AI_Output		(other, self, "DIA_Wasili_BringOldCoin_15_02"); //One.
 				B_GivePlayerXP (XP_BringOldCoin);
 				B_GiveInvItems (other, self, ItMi_OldCoin,1);
+				Npc_RemoveInvItems(self,ItMi_OldCoin, 1);
 				OldCoinCounter = OldCoinCounter + 1;
 			}
 		else
@@ -279,6 +281,7 @@ func void DIA_Wasili_BringOldCoin_Info ()
 				AI_Output		(other, self, "DIA_Wasili_BringOldCoin_15_03"); //A few.
 	
 				B_GiveInvItems (other, self, ItMi_OldCoin,  OldCoinCount);
+				Npc_RemoveInvItems(self,ItMi_OldCoin, OldCoinCount);
 	
 				XP_BringOldCoins = (OldCoinCount * XP_BringOldCoin);
 				OldCoinCounter = (OldCoinCounter + OldCoinCount); 

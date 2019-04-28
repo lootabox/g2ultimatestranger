@@ -106,9 +106,7 @@ INSTANCE ItMi_BaltramPaket(C_Item)
 	material 			=	 MAT_LEATHER;
 	
 	description			= 	name;
-	TEXT[2]				= 	"A heavy package";
-	TEXT[3]				=	"full of good things";
-	TEXT[4]				=	"from Akil the farmer.";
+	TEXT[2]				= 	"A heavy package full of goods from Akil the farmer.";
 	
 };
 
@@ -130,9 +128,7 @@ INSTANCE ItMi_Packet_Baltram4Skip_Addon (C_Item)
 	material 			=	 MAT_LEATHER;
 	
 	description			= 	name;
-	TEXT[2]				= 	"This heavy package";
-	TEXT[3]				=	"full of good things";
-	TEXT[4]				=	"is meant for the pirate Skip.";
+	TEXT[2]				= 	"This heavy package full of goods is meant for the pirate Skip.";
 	
 };
 /******************************************************************************************/
@@ -149,9 +145,7 @@ INSTANCE ItMi_BromorsGeld_Addon (C_Item)
 	material 			=	MAT_METAL;
 
 	description			= 	name;
-	TEXT[2]				= 	"The name 'Bromor' is";
-	TEXT[3]				=	"scratched into the bottom";
-	TEXT[4]				=	"of the bowl with a sharp object.";
+	TEXT[2]				= 	"The name 'Bromor' is scratched into the bottom of the bowl with a sharp object.";
 	TEXT[5]				= 	NAME_Value;	
 	COUNT[5]			= 	value;
 };
@@ -172,11 +166,8 @@ INSTANCE ItSe_ADDON_CavalornsBeutel	(C_Item)
 	
 	description			= 	name;
 	
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"It bears a tag with";
-	TEXT[2]				= 	"the name 'Cavalorn'.";
-	TEXT[3]				= 	"There is 1 lump of ore inside.";
-	TEXT[4]				= 	"";
+	TEXT[1]				= 	"It bears a tag with the name 'Cavalorn'.";
+	TEXT[3]				= 	"There is a lump of ore inside.";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -454,8 +445,7 @@ INSTANCE ItMi_Addon_Lennar_Paket(C_Item)
 	
 	description			= 	name;
 	TEXT[2]				= 	"There are lockpicks inside.";
-	TEXT[3]				=	"";
-	TEXT[4]				=	"Many lockpicks.";
+	TEXT[3]				=	"Many lockpicks.";
 	
 	TEXT[5]				= 	NAME_Value;		
 	COUNT[5]			= 	value;

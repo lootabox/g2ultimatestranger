@@ -94,9 +94,6 @@ INSTANCE ItKe_City_Tower_01(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"";
-	TEXT[3]				=   "";
-	
 };
 //****************************************************************************
 //			Turm Schlüssel City 02
@@ -115,9 +112,6 @@ INSTANCE ItKe_City_Tower_02(C_Item)
 	material 			=	MAT_METAL;
 
 	description			= 	name;
-	
-	TEXT[2]				=	"";
-	TEXT[3]				=   "";
 	
 };
 //****************************************************************************
@@ -138,9 +132,6 @@ INSTANCE ItKe_City_Tower_03(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"";
-	TEXT[3]				=   "";
-	
 };
 //****************************************************************************
 //			Turm Schlüssel City 04
@@ -159,9 +150,6 @@ INSTANCE ItKe_City_Tower_04(C_Item)
 	material 			=	MAT_METAL;
 
 	description			= 	name;
-	
-	TEXT[2]				=	"";
-	TEXT[3]				=   "";
 	
 };
 //****************************************************************************
@@ -182,9 +170,6 @@ INSTANCE ItKe_City_Tower_05(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"";
-	TEXT[3]				=   "";
-	
 };
 //****************************************************************************
 //			Turm Schlüssel City 06
@@ -203,9 +188,6 @@ INSTANCE ItKe_City_Tower_06(C_Item)
 	material 			=	MAT_METAL;
 
 	description			= 	name;
-	
-	TEXT[2]				=	"";
-	TEXT[3]				=   "";
 	
 };
 

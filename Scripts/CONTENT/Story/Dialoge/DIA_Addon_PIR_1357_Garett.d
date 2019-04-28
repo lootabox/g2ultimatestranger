@@ -397,7 +397,7 @@ INSTANCE DIA_Addon_Garett_Trade   (C_INFO)
 	condition   = DIA_Addon_Garett_Trade_Condition;
 	information = DIA_Addon_Garett_Trade_Info;
 	permanent   = TRUE;
-	description = DIALOG_TRADE;
+	description = DIALOG_TRADE_3;
 	trade		= TRUE;
 };
 FUNC INT DIA_Addon_Garett_Trade_Condition()
@@ -409,20 +409,7 @@ FUNC INT DIA_Addon_Garett_Trade_Condition()
 };
 FUNC VOID DIA_Addon_Garett_Trade_Info()
 {
-	var int Garett_Random; 	Garett_Random = Hlp_Random (3); 
-	if Garett_Random == 0
-	{
-		B_Say (other,self,"$TRADE_1");
-	}
-	else if Garett_Random == 1
-	{
-		B_Say (other,self,"$TRADE_2");
-	}
-	else
-	{
-		B_Say (other,self,"$TRADE_3");
-	};	
-		
+	B_Say (other,self,"$TRADE_3");
 	B_GiveTradeInv (self);
 	
 	Npc_RemoveInvItems	(self, ItRw_Bolt, Npc_HasItems (self,ItRw_Bolt) );

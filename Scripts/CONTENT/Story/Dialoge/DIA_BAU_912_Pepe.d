@@ -353,6 +353,7 @@ func void DIA_Pepe_BuyLiesel_Info ()
 	
 	if (B_GiveInvItems  (other, self, ItMi_Gold, 100))
 	{
+		Npc_RemoveInvItems(self,ItMi_Gold,100);
 		if (Pepe_SchafGekauft == 0)
 		{
 			AI_Output (self, other, "DIA_Pepe_BuyLiesel_03_01"); //Good. Then take Betsy - you'll find her in the pasture.

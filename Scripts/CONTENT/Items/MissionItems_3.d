@@ -206,7 +206,7 @@ INSTANCE ItKe_CHEST_SEKOB_XARDASBOOK_MIS (C_Item)
 	material 			=	MAT_METAL;
 
 	description			= 	name;
-	TEXT[0]				=   "for the chest on Sekob's farm.";
+	TEXT[0]				=   "For the chest on Sekob's farm.";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -645,8 +645,7 @@ INSTANCE ItWr_BabosDocs_MIS	(C_Item)
 	on_state[0]			=   Use_BabosDocs;
 	scemeName			=	"MAPSEALED";
 	description			= 	name;
-	TEXT[2]				=   "Several documents rolled";
-	TEXT[3]				=   "together.";
+	TEXT[2]				=   "Several documents rolled together.";
 };
 func void Use_BabosDocs ()
 {   
@@ -674,8 +673,7 @@ INSTANCE ItKe_IgarazChest_Mis(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key to a chest";
-	TEXT[3]				=   "belonging to Igaraz.";
+	TEXT[2]				=	"The key to a chest belonging to Igaraz.";
 	
 }; 
 
@@ -797,11 +795,7 @@ INSTANCE ItSe_Golemchest_Mis	(C_Item)
 	
 	description			= 	"A leather bag.";
 	
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
 	TEXT[2]				= 	"The bag is full of coins.";
-	TEXT[3]				= 	"";
-	TEXT[4]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -836,8 +830,6 @@ instance ItWr_ShatteredGolem_MIS (C_Item)
 	on_state[0]	= Use_ShatteredGolem_Mis;
 
 	description	= name;
-	TEXT[0]		= "";
-	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
 	inv_rotz = 180;
@@ -1035,8 +1027,6 @@ INSTANCE  ItAm_Prot_BlackEye_Mis (C_Item)
 
 	description		= 	name;
 	
-	TEXT[2]			= "";
-	
 	TEXT[3] 		= "Protection from the Black Look";
 	
 	TEXT[5]			= NAME_Value;
@@ -1065,10 +1055,6 @@ INSTANCE  ItMi_KarrasBlessedStone_Mis (C_Item)
 	material 		=	MAT_STONE ;
 
 	description		= 	name;
-	
-	TEXT[2]			= "";
-	
-	TEXT[3] 		= "";
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
@@ -1184,8 +1170,6 @@ instance ItWr_Map_Shrine_MIS (C_Item)
 	on_state[0]	= Use_Map_NewWorld_Shrine_MIS;
 
 	description	= name;
-	TEXT[0]		= "";
-	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
 	inv_rotz = 180;

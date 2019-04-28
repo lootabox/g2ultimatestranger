@@ -46,9 +46,6 @@ const int TwoHStonePlate 		= 7;
 const int BowStonePlate 		= 8;
 const int CrsBowStonePlate 		= 9;
 
-const string StPl_MagicAuraText = "The stone tablet has a magical aura.";
-const string StPl_StandardText 	= "";
-
 //------------------------------------------------------------------------------------------
 // 	Skill Check
 //------------------------------------------------------------------------------------------
@@ -328,7 +325,7 @@ PROTOTYPE   Prototype_StonePlate (C_ITEM)
 	inv_roty			=   0;
 	inv_rotz			=   0;
 
-	Text[2] = StPl_MagicAuraText;
+	Text[2] = "The stone tablet has a magical aura.";
 
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;

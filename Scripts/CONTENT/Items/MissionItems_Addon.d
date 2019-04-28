@@ -164,8 +164,7 @@ instance ItWr_Map_NewWorld_Ornaments_Addon (C_Item)
 
 	description	= name;
 	TEXT[0]		= "The places where Nefarius assumes the missing";
-	TEXT[1]		= "ornaments can be found are marked on this map";
-	TEXT[2]		= "";
+	TEXT[1]		= "ornaments can be found are marked on this map.";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
 	inv_rotz = 180;
@@ -213,9 +212,8 @@ instance ItWr_Map_NewWorld_Dexter (C_Item)
 	on_state[0]	= Use_Map_NewWorld_Dexter;
 
 	description	= name;
-	TEXT[0]		= "Skip has marked the place";
-	TEXT[1]		= "where I can find the bandit chief";
-	TEXT[2]		= "Dexter.";
+	TEXT[0]		= "Skip has marked the place where";
+	TEXT[1]		= "I can find the bandit chief Dexter.";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
 	inv_rotz = 180;
@@ -361,8 +359,7 @@ INSTANCE ItWr_Martin_MilizEmpfehlung_Addon		(C_Item)
 	scemeName			=	"MAP";
 	description			=  	"Letter of recommendation for Lord Andre";
 	
-	TEXT[2]				= 	"This letter should help me be";
-	TEXT[3]				= 	"accepted in the militia";
+	TEXT[2]				= 	"This letter should help me be accepted in the militia.";
 
 	
 };
@@ -411,8 +408,7 @@ INSTANCE ItWr_RavensKidnapperMission_Addon		(C_Item)
 	scemeName			=	"MAP";
 	description			=  	name;
 	
-	TEXT[2]				= 	"I took this letter from";
-	TEXT[3]				= 	"the bandit Dexter";
+	TEXT[2]				= 	"I took this letter from the bandit Dexter.";
 
 	
 };
@@ -470,9 +466,8 @@ INSTANCE ItWr_Vatras_KDFEmpfehlung_Addon		(C_Item)
 	scemeName			=	"MAP";
 	description			=  	"Vatras' letter of recommendation";
 	
-	TEXT[2]				= 	"This letter should help me get into";
-	TEXT[3]				= 	"the Fire Magicians' monastery";
-	TEXT[4]				= 	"without tribute.";
+	TEXT[2]				= 	"This letter should help me get into the";
+	TEXT[3]				= 	"Fire Magicians' monastery without tribute.";
 
 	
 };
@@ -656,7 +651,7 @@ INSTANCE ItRi_Addon_BanditTrader(C_Item)	//Händlergildenring
 
 	description				= 	"Engraved ring";
 	
-	TEXT[2]					= 	"overseas-trader guild Araxos";
+	TEXT[2]					= 	"''overseas-trader guild Araxos''";
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
@@ -685,8 +680,7 @@ INSTANCE ItWr_Addon_BanditTrader		(C_Item)
 	scemeName			=	"MAP";
 	description			=  	name;
 	
-	TEXT[2]				= 	"I found this letter with the";
-	TEXT[3]				= 	"bandits behind Sekob's farm";
+	TEXT[2]				= 	"I found this letter with the bandits behind Sekob's farm.";
 
 	
 };
@@ -959,8 +953,8 @@ INSTANCE ItMi_Addon_Steel_Paket(C_Item)
 	material 			=	 MAT_LEATHER;
 	
 	description			= 	name;
-	TEXT[2]				= 	"This package is REALLY heavy";
-	TEXT[3]				=	"It contains a fat lump of steel";
+	TEXT[2]				= 	"This package is REALLY heavy.";
+	TEXT[3]				=	"It contains a fat lump of steel.";
 	
 	TEXT[5]				= 	NAME_Value;		
 	COUNT[5]			= 	value;
@@ -990,8 +984,7 @@ instance ItWr_StonePlateCommon_Addon (C_Item)
 	inv_rotz			=   0;
 	
 	description			= 	name;
-	TEXT[2]				= 	"A gray stone tablet";
-	TEXT[3]				=	"";
+	TEXT[2]				= 	"A gray stone tablet.";
 	
 	TEXT[5]				= 	NAME_Value;		
 	COUNT[5]			= 	value_StonePlateCommon;
@@ -1069,8 +1062,7 @@ INSTANCE ItMi_Addon_Stone_01(C_Item) //Esteban und Thorus  //Joly:Die Banditen b
 	
 	
 	description			= 	name;
-	TEXT[2]				= 	"A red stone tablet";
-	TEXT[3]				=	"";
+	TEXT[2]				= 	"A red stone tablet.";
 };
 //---------------------------------------------------------------------------
 FUNC VOID Use_Addon_Stone_01()
@@ -1121,8 +1113,7 @@ INSTANCE ItMi_Addon_Stone_05(C_Item) //Valley - Totenwächter
 	inv_rotz			=   0;
 	
 	description			= 	name;
-	TEXT[2]				= 	"A yellow stone tablet";
-	TEXT[3]				=	"";
+	TEXT[2]				= 	"A yellow stone tablet.";
 };
 //---------------------------------------------------------------------------
 FUNC VOID Use_Addon_Stone_05()
@@ -1173,8 +1164,7 @@ INSTANCE ItMi_Addon_Stone_03(C_Item) //Valley - Priester
 	effect				=	"SPELLFX_WEAKGLIMMER";
 	
 	description			= 	name;
-	TEXT[2]				= 	"A blue stone tablet";
-	TEXT[3]				=	"";
+	TEXT[2]				= 	"A blue stone tablet.";
 };
 //---------------------------------------------------------------------------
 FUNC VOID Use_Addon_Stone_03()
@@ -1227,8 +1217,7 @@ INSTANCE ItMi_Addon_Stone_04(C_Item)  //DAS DING AUS DEM SENAT /SUMPF  //Joly: H
 	effect				=	"SPELLFX_WEAKGLIMMER";
 	
 	description			= 	name;
-	TEXT[2]				= 	"A green stone tablet";
-	TEXT[3]				=	"";
+	TEXT[2]				= 	"A green stone tablet.";
 };
 //---------------------------------------------------------------------------
 FUNC VOID Use_Addon_Stone_04()
@@ -1279,8 +1268,7 @@ INSTANCE ItMi_Addon_Stone_02(C_Item) //Bibliothek der Erbauer.
 	effect				=	"SPELLFX_WEAKGLIMMER";
 	
 	description			= 	name;
-	TEXT[2]				= 	"A purple stone tablet";
-	TEXT[3]				=	"";
+	TEXT[2]				= 	"A purple stone tablet.";
 };
 //---------------------------------------------------------------------------
 FUNC VOID Use_Addon_Stone_02()
@@ -1359,10 +1347,6 @@ INSTANCE ItSE_Addon_FrancisChest	(C_Item)
 	description			= 	"A treasure chest";
 	
 	TEXT[0]				= 	"The chest is very heavy.";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
-	TEXT[4]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -1554,7 +1538,6 @@ INSTANCE ITKE_Addon_Bloodwyn_01 (C_Item)
 	description			= 	"Bloodwyn's key";
 	
 	TEXT[2]				=	"Fits a chest";
-	TEXT[3]				=   "";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -1575,8 +1558,7 @@ INSTANCE ITKE_Addon_Heiler (C_Item)
 
 	description			= 	"A stone sentinel's key";
 	
-	TEXT[2]				=	"Fits a chest";
-	TEXT[3]				=   "In a strange old building in the swamp";
+	TEXT[2]				=	"Fits a chest in a strange old building in the swamp.";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -1660,7 +1642,6 @@ instance ItWR_Addon_TreasureMap (C_Item)
 	on_state[0]	= Use_TreasureMap;
 
 	description	= name;
-	TEXT[0]		= "";
 	TEXT[1]		= "Some places are marked on the map.";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
@@ -1703,7 +1684,7 @@ INSTANCE ItMi_Addon_GregsTreasureBottle_MIS	(C_Item)
 	on_state[0]			=   Use_GregsBottle;
 	scemeName			=	"MAPSEALED";
 	description			= 	name;
-	TEXT[2]				=   "There is a piece of paper in the bottle";
+	TEXT[2]				=   "There is a piece of paper in the bottle.";
 
 };
 func void Use_GregsBottle ()

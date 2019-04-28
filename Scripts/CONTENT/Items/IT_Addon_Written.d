@@ -15,7 +15,7 @@ INSTANCE ITWr_Addon_Hinweis_02		(C_Item)
 	on_state[0]			=   Use_Hinweis_02;
 	scemeName			=	"MAP";
 	description			= 	name;
-	TEXT[0]				=  "From the tavern in the bandit camp";
+	TEXT[0]				=  "From the tavern in the bandit camp.";
 };
 func void Use_Hinweis_02 ()
 {
@@ -172,7 +172,7 @@ INSTANCE ITWr_Addon_Hinweis_01		(C_Item)
 	on_state[0]			=   Use_Hinweis_01;
 	scemeName			=	"MAP";
 	description			= 	name;
-	TEXT[0]				=  "Hanging on a hut in the swamp";
+	TEXT[0]				=  "Hanging on a hut in the swamp.";
 };
 func void Use_Hinweis_01 ()
 {
@@ -342,7 +342,7 @@ INSTANCE ITWr_Addon_Joint_01		(C_Item)
 	on_state[0]			=   Use_Joint_Rezept_01;
 	scemeName			=	"MAP";
 	description			= 	name;
-	TEXT[0]				= 	"In Fortuno's chest";
+	TEXT[0]				= 	"From Fortuno's chest.";
 };
 func void Use_Joint_Rezept_01 ()
 {
@@ -386,7 +386,7 @@ INSTANCE ITWr_Addon_Lou_Rezept		(C_Item)
 	on_state[0]			=   UseLouRezept;
 	scemeName			=	"MAP";
 	description			= 	name;
-	Text[0]				= 	"Recipe for making Lou's Hammer";
+	Text[0]				= 	"Recipe for making Lou's Hammer.";
 };
 func void UseLouRezept ()
 {

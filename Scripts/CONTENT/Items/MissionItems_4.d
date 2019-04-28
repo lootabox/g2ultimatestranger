@@ -98,8 +98,7 @@ INSTANCE ItMi_KerolothsGeldbeutel_MIS(C_Item)
 	material 			=	MAT_METAL;
 	on_state[0]			=   UseKerolothsGeldbeutel;
 	description			= 	name;
-	TEXT[2]				= 	"This satchel seems to be";
-	TEXT[3]				= 	"full of gold coins.";
+	TEXT[2]				= 	"This satchel seems to be full of gold coins.";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -170,9 +169,6 @@ INSTANCE ItAt_TalbinsLurkerSkin (C_Item)
 
 	description			= 	name;
 	TEXT[0]				= 	"The name Talbin's been branded on the inside.";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -192,10 +188,7 @@ INSTANCE ItAt_DragonEgg_MIS	(C_ITEM)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[0]					=	"The egg is warm, and there's";
-	TEXT[1]					=	"a scratching noise on the inside.";
-	TEXT[2]					=	"";
-	TEXT[3]					=	"";
+	TEXT[0]					=	"The egg is warm, and there's a scratching noise on the inside.";
 	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
@@ -222,10 +215,7 @@ INSTANCE ItRi_OrcEliteRing(C_Item)
 
 	description				= 	name;
 
-	TEXT[0]					=	"The ring is rough and seems";
-	TEXT[1]					=	"strangely cold.";
-	TEXT[2]					=	"";
-	TEXT[3]					=	"";
+	TEXT[0]					=	"The ring is rough and seems strangely cold.";
 	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 
 	wear			= 	WEAR_EFFECT;
@@ -309,8 +299,6 @@ instance ItWr_Map_Orcelite_MIS (C_Item)
 	on_state[0]	= Use_Map_NewWorld_Orcelite_MIS;
 
 	description	= name;
-	TEXT[0]		= "";
-	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
 	inv_rotz = 180;
@@ -364,8 +352,6 @@ instance ItWr_Map_Caves_MIS (C_Item)
 	on_state[0]	= Use_Map_NewWorld_Caves_MIS;
 
 	description	= name;
-	TEXT[0]		= "";
-	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
 	inv_rotz = 180;

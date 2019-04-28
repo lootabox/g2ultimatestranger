@@ -83,10 +83,7 @@ INSTANCE ItAt_Meatbugflesh (C_Item)
 	on_state[0]			=	Use_Meatbugflesh;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
 	TEXT[1]				= 	NAME_Bonus_HP; COUNT[1] = 10;
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -109,10 +106,6 @@ INSTANCE ItAt_SheepFur (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -129,10 +122,6 @@ INSTANCE ItAt_WolfFur (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -149,10 +138,6 @@ INSTANCE ItAt_IceWolfFur (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -169,10 +154,6 @@ INSTANCE ItAt_BugMandibles (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -189,10 +170,6 @@ INSTANCE ItAt_Claw (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -209,10 +186,6 @@ INSTANCE ItAt_LurkerClaw (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -229,10 +202,6 @@ INSTANCE ItAt_Teeth (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -252,10 +221,8 @@ INSTANCE ItAt_CrawlerMandibles (C_Item)
 	
 	description			= 	name;
 	
-	TEXT[0]				= 	"The mandibles can be opened";
-	TEXT[1]				= 	"in order to drink the secretion inside them.";
-	TEXT[2]				= 	"This regenerates magic power.";
-	TEXT[3]				= 	"The effect fades in time.";
+	TEXT[0]				= 	"The mandibles can be opened in order to drink the secretion inside them.";
+	TEXT[2]				= 	"This regenerates magic power. The effect fades in time.";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 FUNC VOID Use_Mandibles()
@@ -286,10 +253,6 @@ INSTANCE ItAt_Wing (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -309,10 +272,7 @@ INSTANCE ItAt_Sting (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"The stinger";
-	TEXT[2]				= 	"contains a poisonous secretion.";
-	TEXT[3]				= 	"";
+	TEXT[1]				= 	"The stinger contains a venomous secretion.";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 FUNC VOID Use_Sting()
@@ -356,10 +316,6 @@ INSTANCE itat_LurkerSkin (C_Item) //REPTILE Skin
 	material 			=	MAT_LEATHER;
 
 	description			= 	"The skin of a reptile";
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -376,10 +332,6 @@ INSTANCE ItAt_WargFur (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -396,10 +348,6 @@ INSTANCE ItAt_Addon_KeilerFur (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -416,10 +364,6 @@ INSTANCE ItAt_DrgSnapperHorn (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -436,10 +380,6 @@ INSTANCE ItAt_CrawlerPlate (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -456,10 +396,6 @@ INSTANCE ItAt_ShadowFur (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -476,10 +412,6 @@ INSTANCE ItAt_SharkSkin (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -496,10 +428,6 @@ INSTANCE ItAt_TrollFur (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -517,10 +445,6 @@ INSTANCE ItAt_TrollBlackFur (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -537,10 +461,6 @@ INSTANCE ItAt_WaranFiretongue (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -557,10 +477,6 @@ INSTANCE ItAt_ShadowHorn (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -577,10 +493,6 @@ INSTANCE ItAt_SharkTeeth (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -597,10 +509,6 @@ INSTANCE ItAt_TrollTooth (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 	
 	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
@@ -686,10 +594,6 @@ INSTANCE ItAt_IceGolemHeart (C_Item)
 	material 			=	MAT_STONE;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -706,10 +610,6 @@ INSTANCE ItAt_GoblinBone (C_Item)
 	material 			=	MAT_WOOD;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -726,10 +626,6 @@ INSTANCE ItAt_SkeletonBone (C_Item)
 	material 			=	MAT_WOOD;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -746,10 +642,6 @@ INSTANCE ItAt_DemonHeart (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -769,10 +661,6 @@ INSTANCE ItAt_UndeadDragonSoulStone (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 	
 	INV_ZBIAS				= INVCAM_ENTF_MISC_STANDARD;
@@ -792,10 +680,6 @@ INSTANCE ItAt_IcedragonHeart (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -812,10 +696,6 @@ INSTANCE ItAt_RockdragonHeart (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -832,10 +712,6 @@ INSTANCE ItAt_SwampdragonHeart (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -852,10 +728,6 @@ INSTANCE ItAt_FiredragonHeart (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/
@@ -872,10 +744,6 @@ INSTANCE ItAt_DragonBlood (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 	
 	INV_ZBIAS				= INVCAM_ENTF_MISC_STANDARD;
@@ -894,10 +762,6 @@ INSTANCE ItAt_DragonScale (C_Item)
 	material 			=	MAT_STONE ;
 
 	description			= 	name;
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 /******************************************************************************************/

@@ -312,6 +312,7 @@ FUNC VOID DIA_Dar_Pilztabak_Info()
 	AI_Output (other, self, "DIA_Dar_Pilztabak_15_00"); //Have you ever tried shroom tobacco?
 	AI_Output (self, other, "DIA_Dar_Pilztabak_03_01"); //Sounds interesting. Give it here.
 	B_GiveInvItems (other, self, Itmi_Pilztabak, 1);
+	Npc_RemoveInvItems(self,Itmi_Pilztabak,1);
 	AI_Output (self, other, "DIA_Dar_Pilztabak_03_02"); //All right, here we go...
 	CreateInvItem (self, itmi_joint);
 	B_UseItem (self, itmi_joint);

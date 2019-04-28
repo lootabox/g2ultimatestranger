@@ -282,6 +282,7 @@ func void DIA_Addon_Saturas_Ornament_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Saturas_Ornament_15_00"); //I brought your ornament.
 	B_GiveInvItems (other, self, ItMi_Ornament_Addon_Vatras,1);
+	Npc_RemoveInvItems(self,ItMi_Ornament_Addon_Vatras,1);
 	AI_Output	(self, other, "DIA_Addon_Saturas_Ornament_ADD_14_00"); //What in all the world is that supposed to mean?
 
 	if (Lares_Angekommen == TRUE)
@@ -557,6 +558,8 @@ func void DIA_Addon_Saturas_OpenPortal_Info ()
 	
 			B_GiveInvItems (other, self, ItWr_Vatras2Saturas_FindRaven,(Npc_HasItems (other,ItWr_Vatras2Saturas_FindRaven)));
 			B_GiveInvItems (other, self, ItWr_Vatras2Saturas_FindRaven_opened,(Npc_HasItems (other,ItWr_Vatras2Saturas_FindRaven_opened)));
+			Npc_RemoveInvItems(self,ItWr_Vatras2Saturas_FindRaven,(Npc_HasItems (other,ItWr_Vatras2Saturas_FindRaven)));
+			Npc_RemoveInvItems(self,ItWr_Vatras2Saturas_FindRaven_opened,(Npc_HasItems (other,ItWr_Vatras2Saturas_FindRaven_opened)));
 		
 			B_UseFakeScroll ();
 			if (Vatras2Saturas_FindRaven_Open == TRUE)

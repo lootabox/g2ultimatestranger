@@ -254,6 +254,7 @@ func void DIA_Girion_DI_OrcEliteRing_geben ()
 	AI_Output			(self, other, "DIA_Girion_DI_OrcEliteRing_geben_08_01"); //Thanks. I don't think you have much use for it anyway.
 	Info_ClearChoices	(DIA_Girion_DI_OrcEliteRing);
 	B_GiveInvItems (other, self, ItRi_OrcEliteRing,1);
+	Npc_RemoveInvItems(self,ItRi_OrcEliteRing, 1);
 	B_GivePlayerXP (XP_Ambient);
 };
 

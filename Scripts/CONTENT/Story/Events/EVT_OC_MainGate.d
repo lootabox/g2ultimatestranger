@@ -49,6 +49,7 @@ func void EVT_OC_MAINGATE_FUNC_S1 ()
 	B_KillNpc     	(VLK_4103_Waffenknecht);
 	B_KillNpc     	(VLK_4104_Waffenknecht);
 	B_KillNpc     	(VLK_4105_Waffenknecht);
+	B_ClearDeadTrader(Engor);
 	B_KillNpc     	(VLK_4108_Engor);
 
 	Garond.flags = 0;

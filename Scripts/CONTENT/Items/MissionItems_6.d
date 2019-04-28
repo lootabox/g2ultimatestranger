@@ -19,11 +19,7 @@ INSTANCE ItSe_XardasNotfallBeutel_MIS	(C_Item)
 	
 	description			= 	name;
 	
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"The bag seems to";
-	TEXT[2]				= 	"contain a hard object";
-	TEXT[3]				= 	"and a document.";
-	TEXT[4]				= 	"";
+	TEXT[2]				= 	"The bag seems to contain a hard object and a document.";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -101,7 +97,7 @@ INSTANCE ItWr_Krypta_Garon		(C_Item)
 	scemeName			=	"MAP";
 	description			= 	name;
 
-	TEXT[3]				= 	"in shaky handwriting.";
+	TEXT[3]				= 	"Written in shaky handwriting.";
 };
 func void Use_Krypta_Garon ()
 {   

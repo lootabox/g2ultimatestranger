@@ -196,6 +196,7 @@ func void DIA_Sagitta_Sagitta_Herb_Info ()
 	AI_Output			(other, self, "DIA_Sagitta_Sagitta_Herb_15_00"); //I found the sun aloe.
 	AI_Output			(self, other, "DIA_Sagitta_Sagitta_Herb_17_01"); //Thank you. And now ask me whatever you want to know about brewing potions.
 	B_GiveInvItems (other,self,ItPl_Sagitta_Herb_MIS,1);
+	Npc_RemoveInvItem(self,ItPl_Sagitta_Herb_MIS);
 	Sagitta_TeachAlchemy = TRUE;	
 	MIS_Sagitta_Herb = LOG_SUCCESS;
 	B_GivePlayerXP (XP_Sagitta_Sonnenaloe);
@@ -515,8 +516,8 @@ func void DIA_Sagitta_Thekla_Info ()
 	AI_Output			(other, self, "DIA_Sagitta_Thekla_15_00"); //Thekla sent me to pick up a package for her.
 	AI_Output			(self, other, "DIA_Sagitta_Thekla_17_01"); //Ah, yes. I had actually expected her days ago.
 	AI_Output			(self, other, "DIA_Sagitta_Thekla_17_02"); //Here's the package. Take good care of it!
-	B_GivePlayerXP (XP_AmbientKap3);								
-	B_GiveInvItems (self, other, ItMi_TheklasPaket, 1);					
+	B_GivePlayerXP (XP_AmbientKap3);
+	B_GiveInvItems (self, other, ItMi_TheklasPaket, 1);
 };
 
 //#####################################################################

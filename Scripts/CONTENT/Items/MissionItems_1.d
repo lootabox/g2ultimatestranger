@@ -16,8 +16,7 @@ INSTANCE ItKe_Xardas(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"A key to a chest";
-	TEXT[3]				=   "belonging to Xardas.";
+	TEXT[2]				=	"A key to a chest belonging to Xardas.";
 	
 };
 //**********************************************************************************
@@ -117,8 +116,6 @@ INSTANCE ItMi_CoragonsSilber (C_Item)
 	material 			=	MAT_METAL;
 
 	description			= 	name;
-	TEXT[3]				= 	"";	
-	TEXT[4]				= 	"";	
 	TEXT[5]				= 	NAME_Value;	
 	COUNT[5]			= 	value;
 };
@@ -171,8 +168,7 @@ instance ItMi_MariasGoldPlate (C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The plate is engraved with the"; 
-	TEXT[3]				= 	"names Onar and Maria.";
+	TEXT[2]				=	"The plate is engraved with the names Onar and Maria.";
 	
 	TEXT[5]				= 	NAME_Value;	
 	COUNT[5]			= 	value;
@@ -245,8 +241,7 @@ INSTANCE ItKe_Dexter(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"A key to a chest";
-	TEXT[3]				=   "belonging to Dexter.";
+	TEXT[2]				=	"A key to a chest belonging to Dexter.";
 	
 };
 //**********************************************************************************
@@ -363,8 +358,7 @@ INSTANCE ItWr_Passierschein	(C_Item)
 	on_state[0]			=   UsePassierschein;
 	scemeName			=	"MAP";
 	description			= 	name;
-	TEXT[3]				=	"These papers permit me to";
-	TEXT[4]				=   "pass the city guards.";
+	TEXT[3]				=	"These papers permit me to pass the city guards.";
 };
 func void UsePassierschein ()
 {   
@@ -416,8 +410,7 @@ INSTANCE ItMi_HerbPaket(C_Item)
 	material 			=	 MAT_LEATHER;
 	
 	description			= 	name;
-	TEXT[2]				= 	"A heavy, sticky package that";
-	TEXT[3]				=	"stinks of swampweed.";
+	TEXT[2]				= 	"A heavy, sticky package that stinks of swampweed.";
 	
 	TEXT[5]				= 	NAME_Value;		
 	COUNT[5]			= 	200;
@@ -441,8 +434,7 @@ INSTANCE ItKe_Storage(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key to the harbor";
-	TEXT[3]				=   "storehouse.";
+	TEXT[2]				=	"The key to the harbor storehouse.";
 	
 };
 const int HP_Hering = 20;
@@ -636,8 +628,7 @@ INSTANCE ItWr_VatrasMessage	(C_Item)
 	on_state[0]			=   UseVatrasMessage;
 	scemeName			=	"MAPSEALED";
 	description			= 	name;
-	TEXT[2]				=   "A message from Vatras";
-	TEXT[3]				=   "for the Fire Mages.";
+	TEXT[2]				=   "A message from Vatras for the Fire Mages.";
 };
 func void UseVatrasMessage ()
 {   
@@ -679,8 +670,7 @@ INSTANCE ItWr_VatrasMessage_Open	(C_Item)
 	on_state[0]			=   UseVatrasMessageOpen;
 	scemeName			=	"MAP";
 	description			= 	name;
-	TEXT[2]				=   "A message from Vatras";
-	TEXT[3]				=   "for the Fire Mages.";
+	TEXT[2]				=   "A message from Vatras for the Fire Mages.";
 	TEXT[4]				=   "The seal has been broken.";
 };
 func void UseVatrasMessageOpen ()
@@ -721,8 +711,7 @@ INSTANCE ItKe_Hotel(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key to the hotel";
-	TEXT[3]				=   "room.";
+	TEXT[2]				=	"The key to the hotel room.";
 	
 };
 //****************************************************
@@ -782,8 +771,7 @@ INSTANCE ItKe_Innos_MIS(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key to the portal of the";
-	TEXT[3]				=   "monastery of Innos.";
+	TEXT[2]				=	"The key to the gate of the monastery of Innos.";
 	
 };
 //****************************************************************************
@@ -804,8 +792,7 @@ INSTANCE ItKe_KlosterSchatz(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key to the monastery's";
-	TEXT[3]				=   "treasury.";
+	TEXT[2]				=	"The key to the monastery's treasury.";
 	
 };
 //****************************************************************************
@@ -826,8 +813,7 @@ INSTANCE ItKe_KlosterStore(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key to the monastery's";
-	TEXT[3]				=   "larder.";
+	TEXT[2]				=	"The key to the monastery's larder.";
 	
 };
 //****************************************************************************
@@ -848,8 +834,7 @@ INSTANCE ItKe_KDFPlayer(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key to the chamber";
-	TEXT[3]				=   "in the monastery.";
+	TEXT[2]				=	"The key to the chamber in the monastery.";
 	
 };
 //****************************************************************************
@@ -870,8 +855,7 @@ INSTANCE ItKe_KlosterBibliothek(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key to the monastery's";
-	TEXT[3]				=   "library.";
+	TEXT[2]				=	"The key to the monastery's library.";
 	
 };
 //****************************************************************************
@@ -995,8 +979,7 @@ INSTANCE ItKe_MagicChest(C_Item)
 	description			= 	name;
 	
 	TEXT[2]				=	"An old iron key.";
-	TEXT[3]				=   "It could belong to a";
-	TEXT[4]				=	"padlock.";
+	TEXT[3]				=   "It could belong to a padlock.";
 };
 //****************************************************************************
 //			gefälschter Passierschein von Lee 
@@ -1016,8 +999,7 @@ INSTANCE ItWr_Passage_MIS	(C_Item)
 	on_state[0]			=   UsePassage;
 	scemeName			=	"MAP";
 	description			= 	name;
-	TEXT[3]				=	"With this note I should be able to";
-	TEXT[4]				=   "see Lord Hagen.";
+	TEXT[3]				=	"With this note I should be able to see Lord Hagen.";
 };
 func void UsePassage ()
 {   
@@ -1134,7 +1116,6 @@ INSTANCE ItWr_Poster_MIS	(C_Item)
 	scemeName			=	"MAP";
 	description			= 	name;
 	TEXT[3]				=	"A picture of me!";
-	TEXT[4]				=   "";
 	inv_rotz = 180;
 	inv_rotx = 90;
 	inv_roty = 180;
@@ -1165,8 +1146,7 @@ INSTANCE ItKe_Bandit(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key belonged";
-	TEXT[3]				=   "to a bandit.";
+	TEXT[2]				=	"The key belonged to a bandit.";
 	
 };
 
@@ -1263,9 +1243,9 @@ INSTANCE ItMi_EddasStatue (C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				= 	"Innos, Lord of Justice";
-	TEXT[3]				= 	"bless and guard me,";
-	TEXT[4]				= 	"and spare me from harm.";
+	TEXT[2]				= 	"''Innos, Lord of Justice";
+	TEXT[3]				= 	" bless and guard me,";
+	TEXT[4]				= 	" and spare me from harm.''";
 	
 	TEXT[5]				= 	NAME_Value;	
 	COUNT[5]			= 	value;
@@ -1289,7 +1269,7 @@ INSTANCE ItKe_EVT_CRYPT_01(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key from the skeleton in room 1";
+	TEXT[2]				=	"The key from the skeleton in room 1.";
 	
 };
 
@@ -1307,7 +1287,7 @@ INSTANCE ItKe_EVT_CRYPT_02(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key from the skeleton in room 2";
+	TEXT[2]				=	"The key from the skeleton in room 2.";
 	
 };
 
@@ -1325,7 +1305,7 @@ INSTANCE ItKe_EVT_CRYPT_03(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key from the skeleton in room 3";
+	TEXT[2]				=	"The key from the skeleton in room 3.";
 	
 };
 
@@ -1389,8 +1369,7 @@ INSTANCE ItKe_Valentino(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key to a chest";
-	TEXT[3]				=   "belonging to Valentino.";
+	TEXT[2]				=	"The key to a chest belonging to Valentino.";
 	
 };
 //****************************************************************************
@@ -1412,7 +1391,6 @@ INSTANCE ItKe_Buerger(C_Item)
 	description			= 	name;
 	
 	TEXT[2]				=	"It was lying around on a windowsill.";
-	TEXT[3]				=   "";
 	
 };
 //****************************************************************************
@@ -1433,8 +1411,7 @@ INSTANCE ItKe_Richter(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key to a chest";
-	TEXT[3]				=   "belonging to the judge.";
+	TEXT[2]				=	"The key to a chest belonging to the judge.";
 	
 };
 //****************************************************************************
@@ -1455,8 +1432,7 @@ INSTANCE ItKe_Salandril(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"belonging to Salandril the Alchemist.";
-	TEXT[3]				=   "";
+	TEXT[2]				=	"Key belonging to Salandril the alchemist.";
 	
 };
 
@@ -1478,8 +1454,7 @@ INSTANCE ItKe_PaladinTruhe(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"A small brass key from";
-	TEXT[3]				=   "the house of the paladins.";
+	TEXT[2]				=	"A small brass key from the house of the paladins.";
 	
 };
 //****************************************************************************
@@ -1520,8 +1495,7 @@ INSTANCE ItKe_Fingers(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"A rusty door key";
-	TEXT[3]				=   "from the sewers.";
+	TEXT[2]				=	"A rusty door key from the sewers.";
 	
 };
 //**********************************************************************************
@@ -1645,8 +1619,7 @@ INSTANCE ITKE_ORLAN_HOTELZIMMER(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"from the tavern 'The Dead Harpy'.";
-	TEXT[3]				=   "";
+	TEXT[2]				=	"From the tavern 'The Dead Harpy'.";
 	
 };
 

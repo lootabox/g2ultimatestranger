@@ -47,8 +47,7 @@ INSTANCE ItFo_Apple (C_Item)
 	TEXT[1]				= 	NAME_Bonus_HP;		
 	COUNT[1]			= 	HP_Apple;
 	
-	TEXT[3]				=    "A fresh apple,";
-	TEXT[4]				=    "firm and juicy.";
+	TEXT[3]				=    "A fresh apple, firm and juicy.";
 	TEXT[5]				= 	NAME_Value;		
 	COUNT[5]			= 	Value_Apple;
 

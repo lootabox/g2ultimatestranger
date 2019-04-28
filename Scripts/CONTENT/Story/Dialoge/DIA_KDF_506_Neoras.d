@@ -497,6 +497,7 @@ FUNC VOID DIA_Neoras_BrewForMe_Speed ()
 		B_GiveInvItems (other,self,ItMi_Gold,10);
 		Npc_RemoveInvItems(self,ItPl_Speed_Herb_01,1);
 		Npc_RemoveInvItems(self,ItPl_Temp_Herb,1);
+		Npc_RemoveInvItems(self,ItMi_Gold,10);
 		
 		AI_Output (self ,other,"DIA_Neoras_BrewForMe_Speed_01_03"); //Good, thanks. I shall give you a potion now, then you won't have to wait so long.
 	
@@ -530,6 +531,7 @@ FUNC VOID DIA_Neoras_BrewForMe_Mana ()
 		B_GiveInvItems (other,self,ItMi_Gold,10);
 		Npc_RemoveInvItems(self,ItPl_Mana_Herb_02,1);
 		Npc_RemoveInvItems(self,ItPl_Temp_Herb,1);
+		Npc_RemoveInvItems(self,ItMi_Gold,10);
 		
 		AI_Output (self ,other,"DIA_Neoras_BrewForMe_Mana_01_03"); //Good. I shall give you a potion now, then you won't have to wait so long.
 	
@@ -563,6 +565,7 @@ FUNC VOID DIA_Neoras_BrewForMe_Health ()
 		B_GiveInvItems (other,self,ItMi_Gold,10);
 		Npc_RemoveInvItems(self,ItPl_Health_Herb_02,1);
 		Npc_RemoveInvItems(self,ItPl_Temp_Herb,1);
+		Npc_RemoveInvItems(self,ItMi_Gold,10);
 		
 		AI_Output (self ,other,"DIA_Neoras_BrewForMe_Health_01_03"); //Good. I shall give you a potion now, then you won't have to wait so long.
 	

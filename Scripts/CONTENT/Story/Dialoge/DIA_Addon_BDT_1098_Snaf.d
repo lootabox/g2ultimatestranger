@@ -169,6 +169,14 @@ FUNC VOID DIA_Addon_Snaf_Booze_Info()
 	B_GiveInvItems (other, self, ItFo_Addon_LousHammer, 1);
 
 	AI_Output (self, other, "DIA_Addon_Snaf_Booze_01_01");//Excellent, then I'll finish it.
+
+	AI_GotoWP(self,"BL_INN_BAR_03");
+	AI_UseMob(self,"CAULDRON",1);
+	AI_Wait(self,1);
+	AI_UseMob(self,"CAULDRON",-1);
+	AI_Wait(self,1);
+	AI_GotoNpc(self,other);
+
 	AI_Output (self, other, "DIA_Addon_Snaf_Booze_01_02");//Here, you can try a portion right away. That'll put some strength in your arm.
 	AI_Output (self, other, "DIA_Addon_Snaf_Booze_01_03");//Oh, and if I can help you again... For you, all information is for free from now on.
 	Snaf_Tip_Kosten = 0;
@@ -418,7 +426,10 @@ FUNC VOID DIA_Addon_Snaf_People_Huno()
 {
 	AI_Output (other, self, "DIA_Addon_Snaf_People_Huno_15_00"); //What does Huno think of Esteban?
 	AI_Output (self, other, "DIA_Addon_Snaf_People_Huno_01_01"); //Ah! Huno. I know almost nothing about him.
-	AI_Output (self, other, "DIA_Addon_Snaf_People_Huno_01_02"); //(grins) That information is, of course, free.
+	if (Snaf_Tip_Kosten > 0)
+	{
+		AI_Output (self, other, "DIA_Addon_Snaf_People_Huno_01_02"); //(grins) That information is, of course, free.
+	};
 };
 FUNC VOID DIA_Addon_Snaf_People_Fisk()
 {

@@ -130,11 +130,7 @@ INSTANCE ItSe_GoldPocket25	(C_Item)
 	
 	description			= 	"A leather bag.";
 	
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
 	TEXT[2]				= 	"There are a few coins jingling inside.";
-	TEXT[3]				= 	"";
-	TEXT[4]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -159,11 +155,7 @@ INSTANCE ItSe_GoldPocket50	(C_Item)
 	
 	description			= 	"A leather bag.";
 	
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
 	TEXT[2]				= 	"The bag is full of coins.";
-	TEXT[3]				= 	"";
-	TEXT[4]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -188,11 +180,7 @@ INSTANCE ItSe_GoldPocket100	(C_Item)
 	
 	description			= 	"A leather bag.";
 	
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"A heavy bag full";
-	TEXT[3]				= 	"of gold coins.";
-	TEXT[4]				= 	"";
+	TEXT[2]				= 	"A heavy bag full of gold coins.";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -217,11 +205,7 @@ INSTANCE ItSe_HannasBeutel	(C_Item)
 	
 	description			= 	"A leather bag.";
 	
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"";
 	TEXT[2]				= 	"Hanna gave it to me.";
-	TEXT[3]				= 	"";
-	TEXT[4]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 

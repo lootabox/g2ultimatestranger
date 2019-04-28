@@ -169,6 +169,7 @@ FUNC VOID DIA_Lutero_Kralle_Info()
 	B_GivePlayerXP (XP_Ambient);
 	AI_Output (self ,other,"DIA_Lutero_Kralle_13_01"); //My customer will be happy to hear that.
 	B_GiveInvItems (other, self, ItAt_ClawLeader,1);
+	Npc_RemoveInvItem(self,ItAt_ClawLeader);
 	
 	if (other.guild == GIL_KDF)
 	{
