@@ -137,7 +137,7 @@ instance MENUITEM_AUDIO_MUSIC(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Music on/off";
-	text[1]		= "Toggle background music on/off."; // Kommentar
+	text[1]		= "Toggle background music on/off, requires restart."; // Kommentar
 
 	// Position und Dimension
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*2;
@@ -235,7 +235,7 @@ instance MENUITEM_AUDIO_PROVIDER(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
 	text[0]		= "Sound provider";
-	text[1]		= "Select sound provider, restart required."; // Kommentar
+	text[1]		= "Select sound provider, requires restart."; // Kommentar
 
 	// Position und Dimension
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*5;

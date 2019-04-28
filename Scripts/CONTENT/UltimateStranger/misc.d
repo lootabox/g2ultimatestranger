@@ -1,23 +1,54 @@
 
 //************************************************
+//   Initialize game settings for new game
+//************************************************
+
+func void InitUltimateStrangerSettings()
+{
+    var string optionsTopic; optionsTopic = "Game Options";
+    var string optionValue;
+    Log_CreateTopic(optionsTopic, LOG_NOTE);
+    Log_AddEntry(optionsTopic, "This note is created for game options that cannot be changed during a game.");
+
+    MEM_InitAll();
+    MEM_Info("Initializing Ultimate Stranger game settings for new game.");
+
+    // ---- hitpointGainPerLevel ----
+    if (!MEM_GothOptExists("ULTIMATESTRANGER", "hitpointGainPerLevel")) {
+        MEM_SetGothOpt("ULTIMATESTRANGER", "hitpointGainPerLevel", "0");
+    };
+    hitpointGainPerLevel = STR_ToInt (MEM_GetModOpt("ULTIMATESTRANGER", "hitpointGainPerLevel"));
+    if      (hitpointGainPerLevel < 0) { hitpointGainPerLevel = 0; }
+    else if (hitpointGainPerLevel > 4) { hitpointGainPerLevel = 4; };
+    if      (hitpointGainPerLevel == 0) { optionValue = "default"; }
+    else if (hitpointGainPerLevel == 1) { optionValue = "75%"; }
+    else if (hitpointGainPerLevel == 2) { optionValue = "50%"; }
+    else if (hitpointGainPerLevel == 3) { optionValue = "25%"; }
+    else if (hitpointGainPerLevel == 4) { optionValue = "none"; };
+    Log_AddEntry(optionsTopic, ConcatStrings("Hitpoint gain per level: ", optionValue));
+
+};
+
+
+//************************************************
 //   Equip/unequip weapon
 //************************************************
 
-func void Equip_Item (var C_NPC slf, var int item) 
-{ 
-    if (! Npc_HasItems (slf, item)) 
-    { 
-        CreateInvItems (slf, item, 1); 
-    }; 
+func void Equip_Item (var C_NPC slf, var int item)
+{
+    if (! Npc_HasItems (slf, item))
+    {
+        CreateInvItems (slf, item, 1);
+    };
 
-    CALL_PtrParam (MEM_InstToPtr (item)); 
-    CALL__thiscall (MEM_InstToPtr (slf), 7545792); 
-}; 
+    CALL_PtrParam (MEM_InstToPtr (item));
+    CALL__thiscall (MEM_InstToPtr (slf), 7545792);
+};
 
-func void Unequip_Item (var C_NPC slf, var int item) 
-{ 
-    CALL_PtrParam (MEM_InstToPtr (item)); 
-    CALL__thiscall (MEM_InstToPtr (slf), 7546560); 
+func void Unequip_Item (var C_NPC slf, var int item)
+{
+    CALL_PtrParam (MEM_InstToPtr (item));
+    CALL__thiscall (MEM_InstToPtr (slf), 7546560);
 };
 
 //************************************************

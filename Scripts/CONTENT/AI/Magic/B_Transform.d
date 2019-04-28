@@ -72,8 +72,8 @@ func void B_TransformStop()
 		{
 			hero.aivar[REAL_LEVEL] += PlayerLevelsDuringTransform;
 			hero.level = hero.aivar[REAL_LEVEL];
-			hero.attribute[ATR_HITPOINTS_MAX] += PlayerLevelsDuringTransform * HP_PER_LEVEL;
-			hero.attribute[ATR_HITPOINTS] += PlayerLevelsDuringTransform * HP_PER_LEVEL;
+			hero.attribute[ATR_HITPOINTS_MAX] += PlayerLevelsDuringTransform * GetHitpointGainPerLevel();
+			hero.attribute[ATR_HITPOINTS] += PlayerLevelsDuringTransform * GetHitpointGainPerLevel();
 		};
 
 		PlayerIsTransformed = FALSE;

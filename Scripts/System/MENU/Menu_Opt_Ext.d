@@ -325,7 +325,7 @@ instance MENUITEM_WEAPONTRAILS(C_MENU_ITEM_DEF)
 	dimx = 3000;
 	dimy = 750;
 	onselaction[0] = SEL_ACTION_UNDEF;
-	flags = flags | IT_EFFECTS_NEXT | IT_NEEDS_RESTART;
+	flags = flags | IT_EFFECTS_NEXT;
 };
 
 instance MENUITEM_WEAPONTRAILS_CHOICE(C_MENU_ITEM_DEF)
@@ -341,7 +341,7 @@ instance MENUITEM_WEAPONTRAILS_CHOICE(C_MENU_ITEM_DEF)
 	onchgsetoption = "zShowWeaponTrails";
 	onchgsetoptionsection = "GAME";
 	flags = flags & ~IT_SELECTABLE;
-	flags = flags | IT_TXT_CENTER;
+	flags = flags | IT_TXT_CENTER | IT_NEEDS_RESTART;
 };
 
 INSTANCE MENUITEM_GRA_SKY_EFFECTS(C_MENU_ITEM_DEF)

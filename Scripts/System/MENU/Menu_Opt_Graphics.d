@@ -130,7 +130,7 @@ INSTANCE MENUITEM_GRA_TEXQUAL(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
 	text[0]		=	"Texture detail";
-	text[1]		= 	"Select detail level of textures."; // Kommentar
+	text[1]		= 	"Select detail level of textures, requires restart."; // Kommentar
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*2;
 	dimx		=	3000;	dimy		=	750;

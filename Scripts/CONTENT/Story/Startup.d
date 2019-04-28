@@ -4705,7 +4705,10 @@ FUNC VOID INIT_NewWorld_Part_TrollArea_01 ()
 
 // ------ World -------
 FUNC VOID STARTUP_NewWorld()
-{	
+{
+	//-----Custom game options-----
+	InitUltimateStrangerSettings();
+
 	// ------ StartUps der Unter-Parts ------ 
 	STARTUP_NewWorld_Part_City_01();
 	STARTUP_NewWorld_Part_Farm_01();
@@ -4715,10 +4718,13 @@ FUNC VOID STARTUP_NewWorld()
 	STARTUP_NewWorld_Part_TrollArea_01();
 	STARTUP_NewWorld_Part_Forest_01();
 	STARTUP_NewWorld_Part_Pass_To_OW_01();
+
 	// ------ INTRO - muss ganz am Ende der Startup stehen ------
 	Kapitel = 1; //Joly: Kann hier stehen bleiben!
+	
+	stopAllSounds();
 	PlayVideo ("INTRO.BIK");
-	PlayVideo ("Addon_Title.BIK");
+	//PlayVideo ("Addon_Title.BIK");
 	
 	//-----Addon Talent Goldhacken---------
 	Hero_HackChance = 10;

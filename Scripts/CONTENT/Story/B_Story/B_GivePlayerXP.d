@@ -4,6 +4,11 @@
 
 var int PlayerLevelsDuringTransform;
 
+func int GetHitpointGainPerLevel()
+{
+	return HP_PER_LEVEL * (4 - hitpointGainPerLevel) / 4;
+};
+
 func void B_GivePlayerXP (var int add_xp)
 {
 	if (add_xp == 0) { return; };
@@ -36,8 +41,8 @@ func void B_GivePlayerXP (var int add_xp)
 				hero.aivar[REAL_LEVEL]				+= 1;
 				hero.level							+= 1;
 				hero.exp_next						+= (hero.level+1)*500;
-				hero.attribute[ATR_HITPOINTS_MAX]	+= HP_PER_LEVEL;
-				hero.attribute[ATR_HITPOINTS]		+= HP_PER_LEVEL;
+				hero.attribute[ATR_HITPOINTS_MAX]	+= GetHitpointGainPerLevel();
+				hero.attribute[ATR_HITPOINTS]		+= GetHitpointGainPerLevel();
 			};
 			hero.LP += LP_PER_LEVEL;
 			

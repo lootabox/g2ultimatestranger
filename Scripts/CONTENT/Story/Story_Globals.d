@@ -1498,3 +1498,10 @@ var int CurrentLevel; 	//Newworld_zen, Oldworld_Zen, Dragonisland_zen -> Level i
 	Vatras			Alchemy + Kreise
 	
 	*/	
+
+
+//-----------------------------
+//Custom game options
+//-----------------------------
+
+var int hitpointGainPerLevel;

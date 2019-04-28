@@ -13,7 +13,7 @@ Visual: View distance, details and user interface settings.
 Effect: Toggle visual effects on/off.
 
 Settings have been moved around to proper categories and following new settings are available:
-Ambient subtitles, Blood detail, Inventory columns, Item effects, Lock scrambling, Mouse smoothing, Play intro, Turning speed, Video scaling, Weapon trails, Window animations.
+Ambient subtitles, Blood detail, Hitpoints per level, Inventory columns, Item effects, Lock scrambling, Mouse smoothing, Play intro, Turning speed, Video scaling, Weapon trails, Window animations.
 
 Default menu option when not ingame is load game instead of new game.
 Music is changed to the installation theme.

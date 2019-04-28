@@ -25,8 +25,11 @@ INSTANCE MENU_OPT_GAME(C_MENU_DEF)
 
 	items[11]		= "MENUITEM_GAME_LOCKS";
 	items[12]		= "MENUITEM_GAME_LOCKS_CHOICE";
+
+	items[13]		= "MENUITEM_GAME_HITPOINT_GAIN";
+	items[14]		= "MENUITEM_GAME_HITPOINT_GAIN_CHOICE";
 				
-	items[13]		= "MENUITEM_GAME_BACK";
+	items[15]		= "MENUITEM_GAME_BACK";
 	
 	flags = flags | MENU_SHOW_INFO;
 };
@@ -158,7 +161,7 @@ instance MENUITEM_MROTATION(C_MENU_ITEM_DEF)
 {
 	backpic = MENU_ITEM_BACK_PIC;
 	text[0] = "Turning speed";
-	text[1] = "Select player turning speed, restart required.";
+	text[1] = "Select player turning speed, requires restart.";
 	posx = 1000;
 	posy = MENU_START_Y + (MENU_DY * 3);
 	dimx = 4000;
@@ -220,7 +223,7 @@ instance MENUITEM_GAME_LOCKS(C_MENU_ITEM_DEF)
 {
 	backpic = MENU_ITEM_BACK_PIC;
 	text[0] = "Lock scrambling";
-	text[1] = "Toggle lock combination scrambling on/off.";
+	text[1] = "Length for combinations to be scrambled, requires restart.";
 	posx = 1000;
 	posy = MENU_START_Y + (MENU_DY * 5);
 	dimx = 4000;
@@ -233,7 +236,7 @@ instance MENUITEM_GAME_LOCKS_CHOICE(C_MENU_ITEM_DEF)
 {
 	backpic = MENU_CHOICE_BACK_PIC;
 	type = MENU_ITEM_CHOICEBOX;
-	text[0] = "off|very easy|easy|medium|difficult|very difficult";
+	text[0] = "off|max 1|max 2|max 3|max 4|max 5|max 6|max 7|max 8|max 9|max 10|max 11|max 12|max 13|max 14|max 15|max 16|max 17|max 18|max 19|max 20";
 	fontname = MENU_FONT_SMALL;
 	posx = 5000;
 	posy = MENU_START_Y + (MENU_DY * 5) + MENU_CHOICE_YPLUS;
@@ -242,7 +245,36 @@ instance MENUITEM_GAME_LOCKS_CHOICE(C_MENU_ITEM_DEF)
 	onchgsetoption = "pickLockScramble";
 	onchgsetoptionsection = "GAME";
 	flags = flags & ~IT_SELECTABLE;
-	flags = flags | IT_TXT_CENTER;
+	flags = flags | IT_TXT_CENTER | IT_NEEDS_RESTART;
+};
+
+instance MENUITEM_GAME_HITPOINT_GAIN(C_MENU_ITEM_DEF)
+{
+	backpic = MENU_ITEM_BACK_PIC;
+	text[0] = "Hitpoints per level";
+	text[1] = "Toggle hitpoint gain per level, requires new game.";
+	posx = 1000;
+	posy = MENU_START_Y + (MENU_DY * 6);
+	dimx = 4000;
+	dimy = 750;
+	onselaction[0] = SEL_ACTION_UNDEF;
+	flags = flags | IT_EFFECTS_NEXT | IT_ONLY_OUT_GAME;
+};
+
+instance MENUITEM_GAME_HITPOINT_GAIN_CHOICE(C_MENU_ITEM_DEF)
+{
+	backpic = MENU_CHOICE_BACK_PIC;
+	type = MENU_ITEM_CHOICEBOX;
+	text[0] = "default|75%|50%|25%|none"; // Matching values in InitUltimateStrangerSettings
+	fontname = MENU_FONT_SMALL;
+	posx = 5000;
+	posy = MENU_START_Y + (MENU_DY * 6) + MENU_CHOICE_YPLUS;
+	dimx = MENU_CHOICE_DX;
+	dimy = MENU_CHOICE_DY;
+	onchgsetoption = "hitpointGainPerLevel";
+	onchgsetoptionsection = "ULTIMATESTRANGER";
+	flags = flags & ~IT_SELECTABLE;
+	flags = flags | IT_TXT_CENTER | IT_ONLY_OUT_GAME;
 };
 
 INSTANCE MENUITEM_GAME_BACK(C_MENU_ITEM_DEF)
