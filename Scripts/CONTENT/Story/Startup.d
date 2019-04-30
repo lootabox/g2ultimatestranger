@@ -30,6 +30,10 @@ func void INIT_GLOBAL()
 	// Prevent alpha issues
 	MoreAlphaVobs(2048); //normal: 256
 	MoreAlphaPolys(16384); //normal: 2048
+
+	// Ultimate Stranger
+	InitCustomDamageHook();
+	InitStatusScreenHook();
 };
 
 

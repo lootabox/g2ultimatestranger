@@ -95,6 +95,9 @@ instance MENU_STATUS (C_MENU_DEF)
 	// --- TakeAnimalTrophy ------------------------------------------
 	items[56]	= "MENU_ITEM_TALENT_16_TITLE";
 	items[57]	= "MENU_ITEM_TALENT_16_SKILL";
+	// --- Blunt protection ------------------------------------------
+	items[58]	= "MENU_ITEM_TALENT_19_TITLE";
+	items[59]	= "MENU_ITEM_TALENT_19_SKILL";
 	
 
 	// ------ Eigenschaften ------
@@ -342,11 +345,11 @@ INSTANCE MENU_ITEM_ARMOR_HEADING(C_MENU_ITEM_DEF)
 	flags		= (flags & ~IT_SELECTABLE)|IT_TXT_CENTER;
 };
 
-// ------ Waffen ------ (nur Edge wird angezeigt)
+// ------ Blunt ------
 INSTANCE MENU_ITEM_ARMOR_1_TITLE(C_MENU_ITEM_DEF)
 {
 	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*0;
-	text[0]		= "Weapons";
+	text[0]		= "Blunt";
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
 };
@@ -358,18 +361,24 @@ INSTANCE MENU_ITEM_ARMOR_1(C_MENU_ITEM_DEF)
 	flags 		= flags & ~IT_SELECTABLE;
 };
 
+// ----- Edge protection, handled using NPC_TALENT_C -----
+
+INSTANCE MENU_ITEM_TALENT_19_TITLE(C_MENU_ITEM_DEF)  { posx = STAT_A_X1;posy = STAT_ARM_Y + STAT_DY*1;	fontName = STAT_FONT_DEFAULT;flags=flags & ~IT_SELECTABLE; };
+instance MENU_ITEM_TALENT_19_SKILL(C_MENU_ITEM_DEF)  { posx = STAT_A_X3;posy = STAT_ARM_Y + STAT_DY*1;	fontName = STAT_FONT_DEFAULT;flags=flags & ~IT_SELECTABLE; };
+//INSTANCE MENU_ITEM_TALENT_19(C_MENU_ITEM_DEF) 	   { posx = STAT_A_X3;posy = STAT_ARM_Y + STAT_DY*1;	fontName = STAT_FONT_DEFAULT;flags=flags & ~IT_SELECTABLE; };
+
 // ------ Point ------
 instance MENU_ITEM_ARMOR_2_TITLE(C_MENU_ITEM_DEF)
 {
-	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*1;	
-	text[0]		= "Projectiles";
+	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*2;	
+	text[0]		= "Point";
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_ARMOR_2(C_MENU_ITEM_DEF)
 {
-	posx 		= STAT_A_X3; 				posy = STAT_ARM_Y + STAT_DY*1;	
+	posx 		= STAT_A_X3; 				posy = STAT_ARM_Y + STAT_DY*2;	
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
 };
@@ -377,7 +386,7 @@ INSTANCE MENU_ITEM_ARMOR_2(C_MENU_ITEM_DEF)
 // ------ Fire ------
 INSTANCE MENU_ITEM_ARMOR_3_TITLE(C_MENU_ITEM_DEF)
 {
-	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*2;
+	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*4;
 	text[0]		= "Dragon fire";
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
@@ -385,7 +394,7 @@ INSTANCE MENU_ITEM_ARMOR_3_TITLE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_ARMOR_3(C_MENU_ITEM_DEF)
 {
-	posx 		= STAT_A_X3; 				posy = STAT_ARM_Y + STAT_DY*2;
+	posx 		= STAT_A_X3; 				posy = STAT_ARM_Y + STAT_DY*4;
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
 };

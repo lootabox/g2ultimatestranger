@@ -344,10 +344,10 @@ const int REAL_TALENT_CROSSBOW				= 87;
 const int AIV_SpellLevel 					= 88;
 
 // ***************************************************
-// CUSTOM AIVAR (max 99)
+// CUSTOM AIVAR (min 90, max 99)
 // ***************************************************
 
-const int REAL_LEVEL						= 89;
+const int REAL_LEVEL						= 90;
 
 // ***************************************************
 // Globalvariablen für Petzen/Absolution/News - System

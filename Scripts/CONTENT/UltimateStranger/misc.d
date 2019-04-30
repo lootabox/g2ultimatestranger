@@ -1,4 +1,27 @@
 
+
+//************************************************
+//   Displaying blunt protection in status screen
+// https://forum.worldofplayers.de/forum/threads/1424424-Hooking-status-screen
+// https://forum.worldofplayers.de/forum/threads/1449798-Wasting-time-in-a-function
+//************************************************
+const int oCNpc__OpenScreen_Status = 7592320; //0x73D980
+const int oCNpc__CloseScreen_Status = 4714092; //0x47EE6
+
+func void StatusScreen()
+{
+    if (!Hlp_IsValidNpc(hero)) { return; };
+    var int prot; prot = hero.protection[PROT_EDGE];
+    if (prot > 200) { prot = 201; }; // 201+1 = "200+"
+    Npc_SetTalentSkill(hero, NPC_TALENT_C, prot+1);
+};
+
+func void InitStatusScreenHook()
+{
+    HookEngineF(oCNpc__OpenScreen_Status, 7, StatusScreen);
+};
+
+
 //************************************************
 //   Initialize game settings for new game
 //************************************************

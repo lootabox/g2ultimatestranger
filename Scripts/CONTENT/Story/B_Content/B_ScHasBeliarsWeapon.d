@@ -147,9 +147,12 @@ func int C_ScHasReadiedBeliarsWeapon ()
 {	
 	var C_ITEM ReadyWeap; ReadyWeap = Npc_GetReadiedWeapon(hero);
 	
-	if (C_IsItemBeliarsWeapon(ReadyWeap))
+	if (Hlp_IsValidItem(ReadyWeap))
 	{
-		return TRUE;
+		if (C_IsItemBeliarsWeapon(ReadyWeap))
+		{
+			return TRUE;
+		};
 	};
 	
 	return FALSE; //DEFAULT
@@ -162,9 +165,12 @@ func int C_ScHasEquippedBeliarsWeapon () //NUR Nahkampf!
 {	
 	var C_ITEM EquipWeap; EquipWeap = Npc_GetEquippedMeleeWeapon(hero);
 	
-	if (C_IsItemBeliarsWeapon(EquipWeap))
+	if (Hlp_IsValidItem(EquipWeap))
 	{
-		return TRUE;
+		if (C_IsItemBeliarsWeapon(EquipWeap))
+		{
+			return TRUE;
+		};
 	};
 	
 	return FALSE; //DEFAULT
