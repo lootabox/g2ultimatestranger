@@ -58,7 +58,6 @@ func void ZS_Vino_Obesession_End()
 {
 	if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Vino))
 	{
-		AI_EquipBestMeleeWeapon(self);
 		AI_StartState (self, ZS_Smoke_Joint, 0, "");
 		Vino.start_aistate = ZS_Smoke_Joint;
 	}

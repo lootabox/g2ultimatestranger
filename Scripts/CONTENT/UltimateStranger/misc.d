@@ -55,6 +55,7 @@ func void InitUltimateStrangerSettings()
 
 //************************************************
 //   Equip/unequip weapon
+// https://themodders.org/index.php?topic=21691.0
 //************************************************
 
 func void Equip_Item (var C_NPC slf, var int item)
@@ -153,6 +154,7 @@ func void MoreAlphaVobs(var int newCount) {
 
 //************************************************
 //   Alpha-Poly Fix
+// https://forum.worldofplayers.de/forum/threads/1039918-Skript-Mehr-Alpha-Vobs-und-Alpha-Polys-in-Gothic-2
 //************************************************
 
 func void MoreAlphaPolys(var int newCount) {

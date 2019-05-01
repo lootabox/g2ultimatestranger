@@ -273,6 +273,6 @@ func void InitCustomDamageHook() {
 	const int dmg = 0;
 	if (dmg) { return; };
 	HookEngineF(6736583/*0x66CAC7*/, 5, _DMG_OnDmg_Post);
-	HookEngineF(6710800, 7, _DMG_OnDmg_Pre);
+	HookEngineF(6710800/*0x666610*/, 7, _DMG_OnDmg_Pre);
 	dmg = 1;
 };

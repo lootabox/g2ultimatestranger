@@ -358,7 +358,6 @@ func void DIA_Vino_Obesessed_Info ()
 	else
 	{
 		AI_Output			(self, other, "DIA_Vino_Obesessed_05_01"); //(bellows) Damn, beat it. Otherwise, they'll kill me.
-		AI_EquipBestMeleeWeapon(self);
 		AI_StopProcessInfos (self);
 		Npc_ExchangeRoutine(self,"RunFromRitual");
 		DMT_Vino1.aivar[AIV_EnemyOverride] = FALSE;

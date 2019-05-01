@@ -409,7 +409,6 @@ func void DIA_Orlan_RUESTUNG_Buy ()
 
 			CreateInvItems 		(self, ItAr_Leather_L, 1);
 			B_GiveInvItems		(self, other, ItAr_Leather_L, 1);
-			AI_EquipBestArmor	(other);
 			DIA_Orlan_RUESTUNG_noPerm = TRUE;
 		}
 	else

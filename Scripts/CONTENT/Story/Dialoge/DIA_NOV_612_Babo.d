@@ -55,7 +55,7 @@ FUNC VOID DIA_Babo_Hello_Info()
 
 	CreateInvItems (self, ItMw_1h_Nov_Mace,1);
 	B_GiveInvItems (self,other,ITMW_1h_NOV_Mace,1);
-	AI_EquipBestMeleeWeapon (self);
+	//AI_EquipBestMeleeWeapon (self);
 	
 };
 //***********************************************************************
