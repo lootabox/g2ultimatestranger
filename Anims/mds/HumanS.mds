@@ -3446,7 +3446,129 @@ Model ("HuS")
 			ani			("t_dance_07"				1	""				0.2	0.2	M.	"Hum_Dance_07_A01.asc"	F	0	210	FPS:15)
 			ani			("t_dance_08"				1	""				0.2	0.2	M.	"Hum_Dance_08_A01.asc"	F	0	460	FPS:15)
 			ani			("t_dance_09"				1	""				0.2	0.2	M.	"Hum_Dance_09_A01.asc"	F	0	620	FPS:15)
+
+// ---------------------------------------------------------------------------------------------------------------
+// Fireplace
+			ani			("c_FP_Stand_2_S0_1"		1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		F	0	8)
+			ani			("c_FP_Stand_2_S0_2"		1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		F	20	28)
+			ani			("c_FP_Stand_2_S0_3"		1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		F	40	48)
+			aniComb		("t_FIREPLACE_Stand_2_S0"	1	"s_FIREPLACE_S0"	0.0	0.0	M.	"c_FP_STAND_2_S0_"			3)
+			{
+				*eventTag	(0	"DEF_INSERT_ITEM"	"ZS_RIGHTHAND")
+			}
+
+			ani			("c_FP_S0_1"				1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		F	9	9)
+			ani			("c_FP_S0_2"				1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		F	29	29)
+			ani			("c_FP_S0_3"				1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		F	49	49)
+			aniComb		("s_FIREPLACE_S0"			1	"s_FIREPLACE_S0"	0.0	0.0	M.	"c_FP_S0_"					3)
+
+			ani			("c_FP_S0_2_Stand_1"		1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		R	0	8)
+			ani			("c_FP_S0_2_Stand_2"		1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		R	20	28)
+			ani			("c_FP_S0_2_Stand_3"		1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		R	40	48)
+			aniComb		("t_FIREPLACE_S0_2_Stand"	1	""					0.0	0.0	M.	"c_FP_STAND_2_S0_"			3)
+			{
+				*eventTag	(0	"DEF_REMOVE_ITEM")
+			}
+
+			ani			("c_FP_S0_2_S1_1"			1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		F	10	18)
+			ani			("c_FP_S0_2_S1_2"			1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		F	30	38)
+			ani			("c_FP_S0_2_S1_3"			1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		F	50	58)
+			aniComb		("t_FIREPLACE_S0_2_S1"		1	"s_FIREPLACE_S1"	0.0	0.0	M.	"c_FP_S0_2_S1_"				3)
+
+			ani			("c_FP_S1_1"				1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		F	19	19)
+			ani			("c_FP_S1_2"				1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		F	39	39)
+			ani			("c_FP_S1_3"				1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		F	59	59)
+			aniComb		("s_FIREPLACE_S1"			1	"s_FIREPLACE_S1"	0.0	0.0	M.	"c_FP_S1_"					3)
+
+			ani			("c_FP_S1_2_Stand_1"		1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		R	0	18)
+			ani			("c_FP_S1_2_Stand_2"		1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		R	20	38)
+			ani			("c_FP_S1_2_Stand_3"		1	""					0.0	0.0	..	"Hum_FirePlace_M01.asc"		R	40	58)
+			aniComb		("t_FIREPLACE_S1_2_Stand"	1	""					0.0	0.1	M.	"c_FP_S1_2_Stand_"			3)
+			{
+				*eventTag	(0	"DEF_REMOVE_ITEM")
+			}
+
+// --------------------------------------------------------------------------------------------------------------
+// Im Fass verstecken
+		// Schwung holen
+			ani			("t_BarrelO_Stand_2_S0"		1	"s_BarrelO_S0"	0.2	0.0	M.	"Hum_BarrelHide_M01.asc"	F	1	3)
+			ani			("s_BarrelO_S0"				1	"s_BarrelO_S0"	0.0	0.0	M.	"Hum_BarrelHide_M01.asc"	F	4	4)
+			aniAlias	("t_BarrelO_S0_2_Stand"		1	""				0.0	0.2	M.	"t_BarrelO_Stand_2_S0"		R)
+		// reinklettern
+			ani			("t_BarrelO_S0_2_S1"		1	"s_BarrelO_S1"	0.0	0.0	M.	"Hum_BarrelHide_M01.asc"	F	5	34)
+			{
+				*eventTag	(7	"DEF_INV_TORCH")
+				*eventSFX	(5	"BACKPACK_HANDLE"	EMPTY_SLOT	)
+				*eventSFX	(17	"RUN_WOOD"	EMPTY_SLOT	)
+				*eventSFX	(25	"SNEAK_WOOD"	EMPTY_SLOT	)
+			}
+
+		// wo isser denn ???
+			ani			("s_BarrelO_S1"				1	"s_BarrelO_S1"	0.0	0.0	M.	"Hum_BarrelHide_M01.asc"	F	35	35)
+			aniAlias	("t_BarrelO_S1_2_S0"		1	"s_BarrelO_S0"	0.0	0.0	M.	"t_BarrelO_S0_2_S1"			R)
+
+// ---------------------------------------------------------------------------------------------------------------
+// Excalibur Mobsi (=> Sascha)
+			ani			("t_EXCALIBUR_Stand_2_S0"		1	"s_EXCALIBUR_S0"	0.1	0.0	M.	"Hum_Excalibur_M01.asc"	F	0	5)
+			ani			("s_EXCALIBUR_S0"				1	"s_EXCALIBUR_S0"	0.0	0.0	M.	"Hum_Excalibur_M01.asc"	F	5	5)
+			aniAlias	("t_EXCALIBUR_S0_2_Stand"		1	""					0.0	0.2	M.	"t_EXCALIBUR_Stand_2_S0"	R)
 			
+			ani			("t_EXCALIBUR_S0_2_S1"			1	"s_EXCALIBUR_S1"	0.0	0.0	M.	"Hum_Excalibur_M01.asc"	F	5	45)
+			{
+				*eventTag	(5	"DEF_INSERT_ITEM"	"ZS_RIGHTHAND")
+			}
+			ani			("s_EXCALIBUR_S1"				1	"s_EXCALIBUR_S1"	0.0	0.0	M.	"Hum_Excalibur_M01.asc"	F	45	45)
+			ani			("t_EXCALIBUR_S1_2_Stand"		1	""					0.0	0.2	M.	"Hum_Excalibur_M01.asc"	F	45	60)
+			{
+				*eventTag	(45	"DEF_REMOVE_ITEM")
+			}
+
+// --------------------------------------------------------------------------------------------------------------
+// S?e umwerfen
+			ani			("t_PILLAR_Stand_2_S0"		1	"s_PILLAR_S0"		0.2	0.0	M.	"Hum_Pillar_M01.asc"		F	0	4)
+			ani			("s_PILLAR_S0"				1	"s_PILLAR_S0"		0.0	0.0	M.	"Hum_Pillar_M01.asc"		F	5	5)
+			aniAlias	("t_PILLAR_S0_2_Stand"		1	""					0.0	0.2	M.	"t_PILLAR_Stand_2_S0"		R)
+
+			ani			("t_PILLAR_S0_2_S1"			1	"s_PILLAR_S1"		0.0	0.0	M.	"Hum_Pillar_M01.asc"		F	6	174	FPS:10)
+			ani			("s_PILLAR_S1"				1	"s_PILLAR_S1"		0.0	0.0	M.	"Hum_Pillar_M01.asc"		F	175	175)
+			ani			("t_PILLAR_S1_2_S0"			1	"s_PILLAR_S0"		0.0	0.0	M.	"Hum_Pillar_M01.asc"		R	6	25)
+
+			ani			("t_PILLAR_S1_2_Stand"		1	""					0.0	0.2	M.	"Hum_Pillar_M01.asc"		F	173	175)
+
+
+// --------------------------------------------------------------------------------------------------------------
+// Priest-Grave
+			ani			("t_PRIESTGRAVE_Stand_2_S0"	1	"s_PRIESTGRAVE_S0"	0.1	0.0	M.	"Hum_PriestGrave_M01.asc"	F	0	9)
+			{
+				*eventTag	(7		"DEF_INSERT_ITEM"	"ZS_RIGHTHAND")
+			}
+			ani			("s_PRIESTGRAVE_S0"			1	"s_PRIESTGRAVE_S0"	0.0	0.0	M.	"Hum_PriestGrave_M01.asc"	F	10	10)
+			ani			("t_PRIESTGRAVE_S0_2_Stand"	1	""					0.0	0.1	M.	"Hum_PriestGrave_M01.asc"	R	0	9)
+			{
+				*eventTag	(7		"DEF_REMOVE_ITEM")
+			}
+
+			ani			("t_PRIESTGRAVE_S0_2_S1"	1	"s_PRIESTGRAVE_S1"	0.0	0.0	M.	"Hum_PriestGrave_M01.asc"	F	11	40)
+			{
+				*eventTag	(25		"DEF_PLACE_ITEM")
+			}
+			ani			("s_PRIESTGRAVE_S1"			1	"s_PRIESTGRAVE_S1"	0.0	0.0	M.	"Hum_PriestGrave_M01.asc"	F	41	41)
+			ani			("t_PRIESTGRAVE_S1_2_Stand"	1	""					0.0	0.0	M.	"Hum_PriestGrave_M01.asc"	F	42	49)
+
+// --------------------------------------------------------------------------------------------------------------
+// Sleeper Portal
+			ani			("t_SPORTAL_Stand_2_S0"		1	"s_SPORTAL_S0"		0.0	0.0	M.	"Hum_SleeperPortal_M01.asc"	F	0	19)
+			ani			("s_SPORTAL_S0"				1	"s_SPORTAL_S0"		0.0	0.0	M.	"Hum_SleeperPortal_M01.asc"	F	20	20)
+			ani			("t_SPORTAL_S0_2_Stand"		1	""					0.0	0.2	M.	"Hum_SleeperPortal_M01.asc"	R	0	19)
+			ani			("t_SPORTAL_S0_2_S1"		1	"s_SPORTAL_S1"		0.0	0.0	M.	"Hum_SleeperPortal_M01.asc"	F	21	90	FPS:10)
+			{
+				*eventTag	(60	"DEF_INSERT_ITEM"	"ZS_RIGHTHAND")
+				*eventTag	(90	"DEF_PLACE_ITEM")
+			}
+			ani			("s_SPORTAL_S1"				1	"s_SPORTAL_S1"		0.0	0.0	M.	"Hum_SleeperPortal_M01.asc"	F	91	91)
+			ani			("t_SPORTAL_S1_2_Stand"		1	""					0.0	0.2	M.	"Hum_SleeperPortal_M01.asc"	F	90	100)
+
+// --------------------------------------------------------------------------------------------------------------
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
