@@ -25,11 +25,14 @@ func void INIT_GLOBAL()
 	//MEM_InitAll();
 
 	// LeGo
-	LeGo_Init(LeGo_Focusnames | LeGo_Bars | LeGo_Buffs | LeGo_Names);
+	LeGo_Init(GFA_LEGO_FLAGS | LeGo_Focusnames | LeGo_Bars | LeGo_Buffs | LeGo_Names);
 
 	// Prevent alpha issues
 	MoreAlphaVobs(2048); //normal: 256
 	MoreAlphaPolys(16384); //normal: 2048
+
+	// GFA
+	GFA_Init(GFA_ALL & ~GFA_REUSE_PROJECTILES);
 
 	// Ultimate Stranger
 	InitCustomDamageHook();

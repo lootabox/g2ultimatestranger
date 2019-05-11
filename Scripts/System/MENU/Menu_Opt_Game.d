@@ -28,8 +28,11 @@ INSTANCE MENU_OPT_GAME(C_MENU_DEF)
 
 	items[13]		= "MENUITEM_GAME_HITPOINT_GAIN";
 	items[14]		= "MENUITEM_GAME_HITPOINT_GAIN_CHOICE";
-				
-	items[15]		= "MENUITEM_GAME_BACK";
+
+	items[15]		= "MENUITEM_OPT_GFA";
+	items[16]		= "MENUITEM_OPT_GFA_CHOICE";
+	
+	items[17]		= "MENUITEM_GAME_BACK";
 	
 	flags = flags | MENU_SHOW_INFO;
 };

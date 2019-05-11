@@ -139,7 +139,7 @@ pristr = IntToString(dmg);
 			{
 				var oCNpc oCHer; oCHer = Hlp_GetNpc(hero);
 				var oCAniCtrl_Human modelState; modelState = _^(oCHer.anictrl);
-				dmg /= (5 - modelState.combonr); // 5 -> 2
+				dmg /= (10 - modelState.combonr); // 5 -> 2
 			};
 		}
 		// Fist responsibly

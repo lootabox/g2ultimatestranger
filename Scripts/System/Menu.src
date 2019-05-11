@@ -4,6 +4,8 @@ menu\menu_defines.d
 // Deklarationen
 _intern\menu.d
 
+Menu\Menu_Opt_Game_GFA.d
+
 // Menue (Spielmenue)
 menu\menu_main.d
 menu\menu_opt.d
