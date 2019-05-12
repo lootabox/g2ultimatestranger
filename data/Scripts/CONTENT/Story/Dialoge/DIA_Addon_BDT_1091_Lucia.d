@@ -138,10 +138,8 @@ FUNC VOID DIA_Addon_Lucia_Khorinis_Info()
 		AI_Output (self, other, "DIA_Addon_Lucia_Khorinis_16_06"); //I'm finished with Elvrich!
 		AI_Output (other,self , "DIA_Addon_Lucia_Khorinis_15_04"); //Why?
 		AI_Output (self, other, "DIA_Addon_Lucia_Khorinis_16_05"); //He's a wimp! When the bandits dragged me off, he didn't lift a finger to help me.
-		TOPIC_END_Lucia = TRUE;
 		B_GivePlayerXP (XP_Ambient);
 	};
-	TOPIC_END_Lucia = TRUE;
 };
 //---------------------------------------------------------------------
 //	Info Jetzt

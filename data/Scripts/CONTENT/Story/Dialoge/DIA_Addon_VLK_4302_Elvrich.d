@@ -306,7 +306,7 @@ func void DIA_Addon_Elvrich_WhereIsLucia_Info ()
 
 	Log_CreateTopic (TOPIC_Addon_Lucia, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Addon_Lucia, LOG_RUNNING);
-	B_LogEntry (TOPIC_Addon_Lucia,"Lucia was dragged off by the bandits to the woods behind Sekob's farm somewhere in the north."); 
+	B_LogEntry (TOPIC_Addon_Lucia,"Elvrich's girl Lucia was dragged off by the bandits to the woods behind Sekob's farm somewhere in the north."); 
 
 	SC_KnowsLuciaCaughtByBandits = TRUE;
 };
@@ -384,6 +384,7 @@ func void DIA_Addon_Elvrich_LuciaLetter_Info ()
 
 	B_GivePlayerXP (XP_Addon_LuciasLetter);
 	MIS_LuciasLetter = LOG_SUCCESS;
+	B_CheckLog();
 };
 
 ///////////////////////////////////////////////////////////////////////

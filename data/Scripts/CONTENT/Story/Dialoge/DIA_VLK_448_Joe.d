@@ -76,7 +76,7 @@ FUNC INT DIA_Joe_Hallo_Condition()
 FUNC VOID DIA_Joe_Hallo_Info()
 {
 	AI_Output (self, other,"DIA_Joe_Hallo_10_00");//Hey, thanks, man, I mean, thank you, really. There I was thinking I'd never get out of here...
-	TOPIC_END_Joe = TRUE;
+	//TOPIC_END_Joe = TRUE;
 	B_GivePlayerXP ((XP_Ambient*4));
 	
 	AI_Output (other, self,"DIA_Joe_Hallo_15_01");//What are you doing HERE?

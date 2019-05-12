@@ -24,8 +24,6 @@ var int			TOPIC_End_RangerHelpKDF;
 const string	TOPIC_Addon_RangerHelpSLD		=	"The simple way to the mercenaries";
 var int			TOPIC_End_RangerHelpSLD;
 const string	TOPIC_Addon_RangerHelpMIL		=	"The simple way to the militia";
-const string	TOPIC_Addon_Joe					=	"Joe";
-var int			TOPIC_END_Joe;
 const string	TOPIC_Addon_BromorsGold			=	"Bromor's golden dish";
 
 const string	TOPIC_Addon_TeleportsADW		=	"The power of the focus stones";
@@ -48,7 +46,6 @@ const string	TOPIC_Addon_BaltramSkipTrade	=	"Pirate trade";
 var int			TOPIC_END_BaltramSkipTrade; 							
 const string	TOPIC_Addon_FarimsFish			=	"Trouble with the militia"; 
 const string	TOPIC_Addon_Lucia				=	"Lucia"; 
-var int			TOPIC_END_Lucia;
 const string	TOPIC_Addon_Erol				=	"Merchant raid"; 
 
 

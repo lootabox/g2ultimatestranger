@@ -141,9 +141,9 @@ func void DIA_Addon_Hakon_MissingPeople_Info ()
 	AI_Output	(self, other, "DIA_Addon_Hakon_MissingPeople_12_07"); //I reported this to the militia. I thought that maybe he'd been caught and throughn into the dungeon.
 	AI_Output	(self, other, "DIA_Addon_Hakon_MissingPeople_12_08"); //But Lord Andre had no idea what I was talking about. He didn't even know the fellow.
 
-	Log_CreateTopic (TOPIC_Addon_Joe, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_Addon_Joe, LOG_RUNNING);
-	B_LogEntry (TOPIC_Addon_Joe,"Hakon, a trader from Khorinis, says that a man named Joe has simply vanished without a trace. He claims that Joe knows how to get into one of the city towers where the militia keep their arms."); 
+	Log_CreateTopic (TOPIC_Addon_MissingPeople, LOG_MISSION);
+	Log_SetTopicStatus(TOPIC_Addon_MissingPeople, LOG_RUNNING);
+	B_LogEntry (TOPIC_Addon_MissingPeople,"Hakon, a trader from Khorinis, says that a man named Joe has simply vanished without a trace. He claims that Joe knows how to get into one of the city towers where the militia keep their arms."); 
 
 	B_GivePlayerXP (XP_Ambient);
 };

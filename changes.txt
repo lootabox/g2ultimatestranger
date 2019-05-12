@@ -54,6 +54,12 @@ Main menu sounds are silenced after start a new game or loading one.
 Many items have their description now on one line instead of multiple lines.
 
 
+	Quests
+
+Finding Joe no longer has its own quest, since for all NH knows, he is just another missing person.
+Quest for Lucia is now just about delivering her note to Elvrich, after that she is just another missing person.
+
+
 	Monster
 
 Young Wolves at the pass are now regular Wolves.
@@ -465,13 +471,14 @@ Following events do not create overlapping messages:
 New/updated item models:
 * All potions
 * Animal trophy hearts: Dragon hearts (fire, ice, rock), Heart of a Demon, Heart of a Swamp Golem, Undead Dragon Soul Stone
+* Animal trophy skins: Boar/Warg Skin, Hide of a Black Troll, Ice Wolf Skin, Lurker Skin (Talbin's)
 * Animal trophy other: Field Raider Mandibles, Leader of the Pack's Claws, Lurker Claw, Mantis head, Minecrawler Mandibles and Plates
-* Animal trophy skins: Boarskin, Hide of a Black Troll, Ice Wolf Skin, Lurker Skin (Talbin's), Warg Skin
 * Books and documents: All maps, all books of Runemaking, 'The Halls of Irdorath', Almanac of the Possessed, Babo's pinup, Diary of the novice black magician, Message in a Bottle, NH's wanted note
 * Food and drinks: All rum and grog, Clam meat, Coragon's Beer, Fire strips, Fish Soup, Edda's Fish Soup, Herring, Honey, Milk, Sheep Sausage, Theckla's stew
-* Jewelry: All jewelery set items, Aquamarine rings, Divine Aura of Innos, Franco's amulet, Morgan's ring, Will-o'-the-wisp amulet, Ring of the Orcish Warlords, two new ring models
-* Plants: Dragonroot, King's Sorrel, Snapper Weed, Swampweed, Weed
+* Jewelry: All jewelery set items, Aquamarine rings, Divine Aura of Innos, Franco's amulet, Guild ring, Morgan's ring, Will-o'-the-wisp amulet, Ring of the Orcish Warlords, two new ring models
+* Plants: Dragonroot, King's Sorrel, Sun Aloe, Snapper Weed, Swampweed, Weed
 * Weapons: Fire and Magic ammunition, Krush Agash
+* Blood Chalice
 * Brush
 * Coragon's Silver
 * Gold/Silver Necklaces
@@ -480,6 +487,7 @@ New/updated item models:
 * Heavy Gold Plate
 * Holy Water
 * Lab Water Bottle
+* Leather bags/satchels
 * Molerat fat
 * Oblivion scroll
 * Parcel of Weed
@@ -488,7 +496,6 @@ New/updated item models:
 * Red Hot Steel
 * Scratched silver bowl
 * Stone from Blessed Soil
-* Sun Aloe
 * Treasure Chest
 * Ulthar's Holy Water
 
@@ -506,3 +513,5 @@ User Korianous@worldofgothic.com
 
 User Dimus@worldofplayers.ru
 	Insane metric ton of bug fixes and improvements. (converted manually to English code base)
+
+https://github.com/szapp/GothicFreeAim/wiki/Installation-Steps-for-Gothic-2#wiki-wrapper

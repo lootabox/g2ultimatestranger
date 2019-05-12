@@ -208,9 +208,9 @@ func void DIA_Addon_Nadja_LuciaInfo_wo ()
 	AI_Output	(self, other, "DIA_Addon_Nadja_LuciaInfo_wo_16_01"); //She used to see a lot of Elvrich, the apprentice of Thorben the carpenter from the lower part of town.
 	AI_Output	(self, other, "DIA_Addon_Nadja_LuciaInfo_wo_16_02"); //I bet she's up and left with that young man.
 
-	Log_CreateTopic (TOPIC_Addon_Lucia, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_Addon_Lucia, LOG_RUNNING);
-	B_LogEntry (TOPIC_Addon_Lucia,"Lucia the whore disappeared from Bromor's brothel overnight. They assume that she ran off with Elvrich, Thorben the carpenter's apprentice."); 
+	Log_CreateTopic (TOPIC_Addon_MissingPeople, LOG_MISSION);
+	Log_SetTopicStatus(TOPIC_Addon_MissingPeople, LOG_RUNNING);
+	B_LogEntry (TOPIC_Addon_MissingPeople,"Lucia the whore disappeared from Bromor's brothel overnight. They assume that she ran off with Elvrich, Thorben the carpenter's apprentice."); 
 
 	Info_AddChoice	(DIA_Addon_Nadja_LuciaInfo, "Where could the two of them have gone?", DIA_Addon_Nadja_LuciaInfo_Elvrich );
 };
