@@ -10,8 +10,7 @@ INSTANCE Spell_ChargeZap (C_Spell_Proto)
 {
 	time_per_mana			= 100;
 	damage_per_level		= SPL_Damage_ChargeZap;
-	damageType				= DAM_MAGIC;	
-	canTurnDuringInvest     = TRUE;
+	damageType				= DAM_MAGIC;
 };
 
 func int Spell_Logic_ChargeZap (var int manaInvested) 

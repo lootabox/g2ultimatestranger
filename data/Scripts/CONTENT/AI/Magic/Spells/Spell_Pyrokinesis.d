@@ -13,9 +13,8 @@ const int SPL_Damage_FireStorm 		= 75;
 INSTANCE Spell_Pyrokinesis (C_Spell_Proto)
 {
 	time_per_mana			= 30;
-	damage_per_level		= SPL_Damage_FireStorm;		
-	damageType				= DAM_MAGIC;				
-	canTurnDuringInvest     = TRUE;
+	damage_per_level		= SPL_Damage_FireStorm;
+	damageType				= DAM_MAGIC;
 };
 
 func int Spell_Logic_Pyrokinesis (var int manaInvested)

@@ -3,19 +3,19 @@
 // ****************
 
 const int SPL_Cost_PalLightHeal		= 10;
-const int SPL_Cost_PalMediumHeal	= 25;
-const int SPL_Cost_PalFullHeal		= 50;
+const int SPL_Cost_PalMediumHeal	= 20;
+const int SPL_Cost_PalFullHeal		= 40;
 const int SPL_Cost_LightHeal		= 10;
-const int SPL_Cost_MediumHeal		= 25;
-const int SPL_Cost_FullHeal			= 50;
+const int SPL_Cost_MediumHeal		= 20;
+const int SPL_Cost_FullHeal			= 40;
 
-const int SPL_Heal_PalLightHeal		= 200;
-const int SPL_Heal_PalMediumHeal	= 400;
-const int SPL_Heal_PalFullHeal		= 800;
+const int SPL_Heal_PalLightHeal		= 75;
+const int SPL_Heal_PalMediumHeal	= 150;
+const int SPL_Heal_PalFullHeal		= 300;
 
-const int SPL_Heal_LightHeal		= 200;
-const int SPL_Heal_MediumHeal		= 400;
-const int SPL_Heal_FullHeal			= 800;
+const int SPL_Heal_LightHeal		= 50;
+const int SPL_Heal_MediumHeal		= 100;
+const int SPL_Heal_FullHeal			= 200;
 
 // ------ Instanz für alle normalen Heal-Sprüche ------
 instance Spell_Heal (C_Spell_Proto)
@@ -23,7 +23,6 @@ instance Spell_Heal (C_Spell_Proto)
 	time_per_mana			= 0;
 	spelltype 				= SPELL_NEUTRAL;
 	targetCollectAlgo		= TARGET_COLLECT_CASTER;
-	canTurnDuringInvest		= 0;
 };
 
 
@@ -33,7 +32,6 @@ instance Spell_PalHeal (C_Spell_Proto)
 	time_per_mana			= 0;
 	spelltype 				= SPELL_NEUTRAL;
 	targetCollectAlgo		= TARGET_COLLECT_CASTER;
-	canTurnDuringInvest		= 0;
 };
 
 

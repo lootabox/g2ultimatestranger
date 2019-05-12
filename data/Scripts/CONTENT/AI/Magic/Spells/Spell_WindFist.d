@@ -11,7 +11,6 @@ INSTANCE Spell_WindFist (C_Spell_Proto)
 	time_per_mana			= 30;
 	damage_per_level		= SPL_Damage_WindFist;			//pro Level !!!
 	damageType				= DAM_FLY;
-	canTurnDuringInvest     = TRUE;
 	
 	targetCollectAlgo		= TARGET_COLLECT_FOCUS_FALLBACK_NONE;
 	targetCollectRange		= 1000;

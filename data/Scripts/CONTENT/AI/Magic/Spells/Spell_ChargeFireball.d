@@ -10,8 +10,7 @@ INSTANCE Spell_ChargeFireball (C_Spell_Proto)
 {
 	time_per_mana			= 30;
 	damage_per_level		= SPL_Damage_ChargeFireball;
-	damageType				= DAM_MAGIC;	
-	canTurnDuringInvest     = TRUE;
+	damageType				= DAM_MAGIC;
 };
 
 func int Spell_Logic_ChargeFireball (var int manaInvested) 
