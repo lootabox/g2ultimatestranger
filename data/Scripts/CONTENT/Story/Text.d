@@ -296,7 +296,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"Small Fire Storm",		// 38	SPL_Firestorm
 	"Ice Wave",					// 39	SPL_IceWave
 	"Demon",					// 40	SPL_SummonDemon
-	"Total Healing",				// 41	SPL_FullHeal
+	"Heal Heavy Wounds",				// 41	SPL_FullHeal
 
 	// Kreis 6
 	"Fire Rain",				// 42	SPL_Firerain
@@ -379,11 +379,11 @@ const string TXT_SPELLS[MAX_SPELL] =
 
 // Paladin Runen
 const string NAME_SPL_PalLight				= "Holy Light";
-const string NAME_SPL_PalLightHeal			= "Small Healing";
+const string NAME_SPL_PalLightHeal			= "Lesser Healing";
 const string NAME_SPL_PalHolyBolt			= "Holy Arrow";
 const string NAME_SPL_PalMediumHeal			= "Medium Healing";
 const string NAME_SPL_PalRepelEvil			= "Banish Evil";
-const string NAME_SPL_PalFullHeal			= "Large Healing";
+const string NAME_SPL_PalFullHeal			= "Greater Healing";
 const string NAME_SPL_PalDestroyEvil		= "Destroy Evil";
 
 // Teleport	Runen

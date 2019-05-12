@@ -46,6 +46,7 @@ func int ZS_MagicFreeze()
 	{
 		AI_PlayAniBS 		(self, "T_STAND_2_FREEZE_VICTIM", BS_UNCONSCIOUS);
 	};
+	B_ClearRuneInv(self);
 	self.aivar[AIV_FreezeStateTime] = 0;
 };
 
@@ -55,7 +56,7 @@ func int ZS_MagicFreeze_Loop ()
 {	
 	// EXIT LOOP IF...
 	
-	if (Npc_GetStateTime(self) > SPL_TIME_FREEZE)
+	if (self.aivar[AIV_FreezeStateTime] > SPL_TIME_FREEZE)
 	{
 		B_StopMagicFreeze();
 		return LOOP_END;
@@ -67,20 +68,17 @@ func int ZS_MagicFreeze_Loop ()
 		self.aivar[AIV_FreezeStateTime] = Npc_GetStateTime(self);
 	
 		// ------ Damage abziehen, aber NICHT sterben (immer mindeststens 1 LE behalten) ------
-		if (self.attribute[ATR_HITPOINTS] > (self.attribute[ATR_HITPOINTS] - SPL_FREEZE_DAMAGE))
+		if (self.attribute[ATR_HITPOINTS] > 0)
 		{
 			// feuer wesen erhalten doppelten schaden
-			if (self.guild == GIL_FIREGOLEM)
-			|| (self.aivar[AIV_MM_REAL_ID]	== 	ID_FIREWARAN)
-			|| (self.aivar[AIV_MM_REAL_ID]	== 	ID_DRAGON_FIRE)		
+			if (C_NpcIsIceBase(self))
 			{
 				B_MagicHurtNpc 		(other,	self, SPL_FREEZE_DAMAGE*2);
 				return LOOP_CONTINUE;
 			};
 			
 			// eis wesen erhalten halben schaden
-			if (self.guild == GIL_ICEGOLEM)
-			|| (self.aivar[AIV_MM_REAL_ID]==ID_DRAGON_ICE)
+			if (C_NpcIsFireBase(self))
 			{
 				B_MagicHurtNpc 		(other, self, SPL_FREEZE_DAMAGE/2);
 				return LOOP_CONTINUE;
@@ -97,5 +95,5 @@ func int ZS_MagicFreeze_Loop ()
 
 func void ZS_MagicFreeze_End()
 {
-
+	
 };

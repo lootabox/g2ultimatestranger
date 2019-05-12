@@ -145,7 +145,7 @@ pristr = IntToString(dmg);
 		// Fist responsibly
 		else if (Npc_IsInFightMode(att, FMODE_FIST))
 		{
-			dmg = att.attribute[ATR_STRENGTH] / 2 - vic.protection[PROT_BLUNT];
+			dmg = att.attribute[ATR_STRENGTH] - vic.protection[PROT_BLUNT];
 pristr = IntToString(dmg);
 		}
 		// Magic
