@@ -24,6 +24,7 @@ STORY\svm.d
 STORY\Text.d
 
 UltimateStranger\misc.d
+UltimateStranger\buff.d
 UltimateStranger\mainloop.d
 UltimateStranger\damage.d
 

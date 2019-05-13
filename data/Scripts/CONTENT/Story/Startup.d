@@ -35,6 +35,7 @@ func void INIT_GLOBAL()
 	GFA_Init(GFA_ALL & ~GFA_REUSE_PROJECTILES);
 
 	// Ultimate Stranger
+	InitBuffTalents();
 	InitCustomDamageHook();
 	InitStatusScreenHook();
 	//UltimateStrangerLoopInit();

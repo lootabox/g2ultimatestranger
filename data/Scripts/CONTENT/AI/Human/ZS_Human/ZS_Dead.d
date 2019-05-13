@@ -38,7 +38,8 @@ func void ZS_Dead ()
 	{
 		if (Npc_GetDistToNpc(self, other) < 300)
 		{
-			other.attribute[ATR_HITPOINTS] -= 50;
+			Buff_Apply(other, venom_swampdrone_explosion);
+			//other.attribute[ATR_HITPOINTS] -= 50;
 			//Npc_ChangeAttribute(other, ATR_HITPOINTS, -50);
 		};
 	};

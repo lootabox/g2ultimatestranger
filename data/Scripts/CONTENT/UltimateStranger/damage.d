@@ -248,9 +248,9 @@ Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 	{
 		if (att.level > 3)
 		{
-			//Buff_Apply(vic, venom_bloodfly);
+			Buff_Apply(vic, venom_bloodfly);
 		} else {
-			//Buff_Apply(vic, venom_small_bloodfly);
+			Buff_Apply(vic, venom_small_bloodfly);
 		};
 	};
 
