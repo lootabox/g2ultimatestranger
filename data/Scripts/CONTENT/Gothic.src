@@ -23,7 +23,9 @@ STORY\NPC_Globals.d
 STORY\svm.d
 STORY\Text.d
 
-UltimateStranger\*.d
+UltimateStranger\misc.d
+UltimateStranger\mainloop.d
+UltimateStranger\damage.d
 
 STORY\B_Story\C_NpcIsInQuarter.d
 STORY\B_Story\C_DiegoTooFar.d
@@ -149,6 +151,7 @@ AI\HUMAN\C_Human\C_NpcIsEvil.d
 AI\HUMAN\C_Human\C_NpcIsGolem.d
 AI\HUMAN\C_Human\C_NpcIsFireBase.d
 AI\HUMAN\C_Human\C_NpcIsIceBase.d
+AI\HUMAN\C_Human\C_NpcIsWaterBase.d
 AI\HUMAN\C_Human\C_NpcIsLarge.d
 AI\HUMAN\C_Human\C_RefuseTalk.d
 

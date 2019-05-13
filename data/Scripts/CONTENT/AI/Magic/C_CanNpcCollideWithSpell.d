@@ -40,7 +40,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	if (spellType == SPL_Whirlwind)
 	{
 		if (C_NpcIsDown(self))
-		|| (C_BodyStateContains(self,BS_SWIM)) 	
+		|| (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
 		|| (C_NpcIsGolem(self))
 		|| (self.guild == GIL_DEMON)
@@ -67,7 +67,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	if (spellType == SPL_Thunderstorm)
 	{
 		if (C_NpcIsDown(self))
-		|| (C_BodyStateContains(self,BS_SWIM)) 	
+		|| (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
 		{
 			return COLL_DONOTHING;
@@ -77,7 +77,6 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		{
 			return COLL_APPLYHALVEDAMAGE;
 		};
-		
 		if (C_NpcIsFireBase(self))
 		{
 			return COLL_APPLYDOUBLEDAMAGE;
@@ -98,13 +97,12 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 			return COLL_DONOTHING;
 		};
 
+		// counters each other out
 		if (C_NpcIsLarge(self))
 		&& (C_NpcIsFireBase(self))
 		{
 			return COLL_APPLYDAMAGE;
 		};
-
-		// counter each other out?
 		if (C_NpcIsFireBase(self))
 		{
 			return COLL_APPLYDOUBLEDAMAGE;
@@ -123,7 +121,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	if (spellType == SPL_EnergyBall)
 	{
 		if (C_NpcIsDown(self))
-		|| (C_BodyStateContains(self,BS_SWIM)) 	
+		|| (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
 		{
 			return COLL_DONOTHING;
@@ -143,7 +141,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	if (spellType == SPL_SuckEnergy)
 	{
 		if (C_NpcIsDown(self))
-		|| (C_BodyStateContains(self,BS_SWIM)) 	
+		|| (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
 		|| (self.guild > GIL_SEPERATOR_HUM)
 		|| (self.flags == NPC_FLAG_IMMORTAL)  
@@ -161,7 +159,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	if (spellType == SPL_GreenTentacle)
 	{
 		if (C_NpcIsDown(self))
-		|| (C_BodyStateContains(self,BS_SWIM)) 	
+		|| (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
 		|| (C_NpcIsGateGuard (self) == TRUE)
 		|| (C_NpcIsGolem(self))
@@ -184,7 +182,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	if (spellType == SPL_Swarm)
 	{
 		if (C_NpcIsDown(self))
-		|| (C_BodyStateContains(self,BS_SWIM)) 	
+		|| (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
 		|| (C_NpcIsGolem(self))
 		|| (self.guild == GIL_DEMON)
@@ -212,7 +210,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	if (spellType == SPL_Skull)
 	{
 		if (C_NpcIsDown(self))
-		|| (C_BodyStateContains(self,BS_SWIM)) 	
+		|| (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
 		|| (C_NpcIsUndead(self))
 		{
@@ -323,7 +321,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	{
 		// wenn im schwimm oder tauchmodus, bewirkt der spell nix
 		if (C_NpcIsDown(self))
-		|| (C_BodyStateContains(self,BS_SWIM)) 	
+		|| (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
 		{
 			return COLL_DONOTHING;
@@ -351,36 +349,31 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	};
 
 	//----- Blitz -----	
-	if (spellType == SPL_Zap) || (spellType == SPL_ChargeZap)
+	if (spellType == SPL_Zap)
+	|| (spellType == SPL_ChargeZap)
+	|| (spellType == SPL_LightningFlash)
 	{
 		if (C_NpcIsDown(self))
 		{
 			return COLL_DONOTHING;
 		};
 		
-		if (C_BodyStateContains(self,BS_SWIM))
+		if (C_NpcIsWaterBase(self))
+		|| (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
+		|| (GetWaterLevel(self) == WATERLEVEL_WADE)
 		{
 			return COLL_APPLYDOUBLEDAMAGE;
 		};
 		
-		return COLL_APPLYDAMAGE | COLL_DONTKILL;
-	};
-
-	if (spellType == SPL_LightningFlash)
-	{
-		if (C_NpcIsDown(self))
+		if (spellType == SPL_LightningFlash)
 		{
-			return COLL_DONOTHING;
-		};
-		
-		if (C_BodyStateContains(self,BS_SWIM))
-		|| (C_BodyStateContains(self,BS_DIVE))
+			return COLL_DOEVERYTHING;
+		}
+		else
 		{
-			return COLL_APPLYDOUBLEDAMAGE;
+			return COLL_APPLYDAMAGE | COLL_DONTKILL;
 		};
-		
-		return COLL_DOEVERYTHING;
 	};
 
 	//------ Angst -----

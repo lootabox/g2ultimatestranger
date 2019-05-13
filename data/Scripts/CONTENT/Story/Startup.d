@@ -37,6 +37,7 @@ func void INIT_GLOBAL()
 	// Ultimate Stranger
 	InitCustomDamageHook();
 	InitStatusScreenHook();
+	//UltimateStrangerLoopInit();
 };
 
 

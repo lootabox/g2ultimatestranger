@@ -1,5 +1,5 @@
-/* 
-var int timerTickRate; timerTickRate = 1000;
+/*
+const int timerTickRate = 1000;
 
 func void UltimateStrangerLoop() {
 	// Only run ingame
@@ -11,10 +11,11 @@ func void UltimateStrangerLoop() {
 	if (timer < timerTickRate) { return; };
 	timer = 0;
 
+	//Print(IntToString(GetWaterLevel(hero)));
 };
 
 func void UltimateStrangerLoopInit() {
 	MEM_InitAll();
 	HookEngineF(oCGame__Render, 7, UltimateStrangerLoop);
 };
- */
+*/

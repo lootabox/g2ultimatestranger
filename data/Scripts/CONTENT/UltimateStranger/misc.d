@@ -1,6 +1,21 @@
 
 
 //************************************************
+//   Check whether creature is standing in water
+// https://forum.worldofplayers.de/forum/threads/994505-Abfrage-Ob-Held-im-Wasser-steht?p=16075800&viewfull=1#post16075800
+//************************************************
+const int WATERLEVEL_NONE = 0; //Npc can run normally
+const int WATERLEVEL_WADE = 1; //Npc must wade
+const int WATERLEVEL_SWIM = 2; //Npc must swim
+func int GetWaterLevel(var C_NPC slf) {
+    var oCNpc ocslf;
+    ocslf = Hlp_GetNpc(slf);
+    var zCAIPlayer aip;
+    aip = MEM_PtrToInst(ocslf.anictrl);
+    return aip.waterLevel;
+};
+
+//************************************************
 //   Displaying blunt protection in status screen
 // https://forum.worldofplayers.de/forum/threads/1424424-Hooking-status-screen
 // https://forum.worldofplayers.de/forum/threads/1449798-Wasting-time-in-a-function
