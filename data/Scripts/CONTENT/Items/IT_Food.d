@@ -586,6 +586,7 @@ INSTANCE ItFo_Milk (C_Item)
 	on_state[0]			=	Use_Milk;
 
 	description			= 	name;
+	TEXT[0]				=	"Cures all venom and poison effects.";
 	TEXT[1]				= 	NAME_Bonus_HP;		COUNT[1]	= HP_Milk;
 	TEXT[2]				= 	NAME_Bonus_Mana;	COUNT[2]	= Mana_Milk;
 	TEXT[5]				= 	NAME_Value;		COUNT[5]	= Value_Milk;
@@ -595,6 +596,10 @@ INSTANCE ItFo_Milk (C_Item)
 	FUNC VOID Use_Milk()
 	{
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Milk);
-		Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Milk);	 
+		Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Milk);
+
+		Buff_RemoveAll(self, venom_small_bloodfly);
+		Buff_RemoveAll(self, venom_bloodfly);
+		Buff_RemoveAll(self, venom_swampdrone_explosion);
 	};
 

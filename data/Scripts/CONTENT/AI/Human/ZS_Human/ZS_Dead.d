@@ -16,9 +16,9 @@ func void ZS_Dead ()
 		
 	// ------ XP ------
 	if ( Npc_IsPlayer(other) || (other.aivar[AIV_PARTYMEMBER]==TRUE) )
-	&& (self.aivar[AIV_VictoryXPGiven] == FALSE)							
+	&& (self.aivar[AIV_VictoryXPGiven] == FALSE)
 	{
-		B_GivePlayerXP (self.level * XP_PER_VICTORY);			
+		B_GivePlayerXP (self.level * XP_PER_VICTORY);
 		
 		self.aivar[AIV_VictoryXPGiven] = TRUE;
 	};

@@ -23,6 +23,14 @@ STORY\NPC_Globals.d
 STORY\svm.d
 STORY\Text.d
 
+AI\HUMAN\C_Human\C_NpcIsUndead.d
+AI\HUMAN\C_Human\C_NpcIsEvil.d
+AI\HUMAN\C_Human\C_NpcIsGolem.d
+AI\HUMAN\C_Human\C_NpcIsFireBase.d
+AI\HUMAN\C_Human\C_NpcIsIceBase.d
+AI\HUMAN\C_Human\C_NpcIsWaterBase.d
+AI\HUMAN\C_Human\C_NpcIsLarge.d
+
 UltimateStranger\misc.d
 UltimateStranger\buff.d
 UltimateStranger\mainloop.d
@@ -147,13 +155,6 @@ AI\HUMAN\C_Human\C_NpcBelongsTo.d
 AI\HUMAN\C_Human\C_DropUnconscious.d
 AI\HUMAN\C_Human\C_NpcRansacksAlways.d
 AI\HUMAN\C_Human\C_NpcIsHero.d
-AI\HUMAN\C_Human\C_NpcIsUndead.d
-AI\HUMAN\C_Human\C_NpcIsEvil.d
-AI\HUMAN\C_Human\C_NpcIsGolem.d
-AI\HUMAN\C_Human\C_NpcIsFireBase.d
-AI\HUMAN\C_Human\C_NpcIsIceBase.d
-AI\HUMAN\C_Human\C_NpcIsWaterBase.d
-AI\HUMAN\C_Human\C_NpcIsLarge.d
 AI\HUMAN\C_Human\C_RefuseTalk.d
 
 AI\HUMAN\B_Human\B_GetTotalPetzCounter.d

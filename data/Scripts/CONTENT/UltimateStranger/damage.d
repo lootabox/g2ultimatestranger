@@ -222,14 +222,29 @@ pristr = IntToString(dmg);
 
 			// Reduce magic protection
 			dmg -= vic.protection[PROT_MAGIC];
-
-			// Handle enemy weaknesses
-			/* if (isSpellFire && C_NpcIsWeakToFire(vic))
-			|| (isSpellIce && C_NpcIsWeakToIce(vic))
-			|| (isSpellLightning && ( C_NpcIsWeakToLightning(vic) || C_BodyStateContains(vic,BS_SWIM) || C_BodyStateContains(vic,BS_DIVE) ))
+			
+			// Apply ice cube dot, add remainder to main damage
+			if ((Npc_GetLastHitSpellID(vic) == SPL_IceCube)
+			|| (Npc_GetLastHitSpellID(vic) == SPL_IceWave))
+			&& (!C_NpcIsFireBase(vic)) // firebase immune to freeze
+			&& (!C_NpcIsIceBase(vic)) // icebase immune to freeze
 			{
-				dmg += dmg/2;
-			}; */
+				dmg += (SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE);
+				if (dmg >= SPL_FREEZE_DAMAGE)
+				{
+					if		(dmg >= 10 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_10_dot); Buff_Apply(vic, icecube_10_dot); }
+					else if	(dmg >= 9 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_9_dot); Buff_Apply(vic, icecube_9_dot); }
+					else if	(dmg >= 8 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_8_dot); Buff_Apply(vic, icecube_8_dot); }
+					else if	(dmg >= 7 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_7_dot); Buff_Apply(vic, icecube_7_dot); }
+					else if	(dmg >= 6 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_6_dot); Buff_Apply(vic, icecube_6_dot); }
+					else if	(dmg >= 5 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_5_dot); Buff_Apply(vic, icecube_5_dot); }
+					else if	(dmg >= 4 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_4_dot); Buff_Apply(vic, icecube_4_dot); }
+					else if	(dmg >= 3 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_3_dot); Buff_Apply(vic, icecube_3_dot); }
+					else if	(dmg >= 2 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_2_dot); Buff_Apply(vic, icecube_2_dot); }
+					else if	(dmg >= 1 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_1_dot); Buff_Apply(vic, icecube_1_dot); };
+				};
+				dmg -= (SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE);
+			};
 		};
 
 		// Apply minimum damage of 5 only for NPCs
