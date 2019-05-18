@@ -218,10 +218,16 @@ func void DIA_Marduk_TEACH_Info ()
 			Info_AddChoice 		(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_Zap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Zap)),DIA_Marduk_TEACH_ZAP);
 			abletolearn = (abletolearn +1);
 		};
-		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
+		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 1)
 		&& (PLAYER_TALENT_RUNES [SPL_Icebolt] == FALSE)
 		{
 			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,DIA_Marduk_TEACH_Icebolt);
+			abletolearn = (abletolearn +1);
+		};
+		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
+		&& (PLAYER_TALENT_RUNES [SPL_Icelance] == FALSE)
+		{
+			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_Icelance, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icelance)) ,DIA_Marduk_TEACH_Icelance);
 			abletolearn = (abletolearn +1);
 		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3) 
@@ -269,6 +275,10 @@ FUNC VOID DIA_Marduk_TEACH_ZAP()
 FUNC VOID DIA_Marduk_TEACH_Icebolt()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_Icebolt);	
+};
+FUNC VOID DIA_Marduk_TEACH_Icelance()
+{
+	B_TeachPlayerTalentRunes (self, other, SPL_Icelance);	
 };
 FUNC VOID DIA_Marduk_TEACH_LightningFlash()
 {

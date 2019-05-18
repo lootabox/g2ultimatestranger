@@ -248,8 +248,10 @@ FUNC VOID Use_Bookstand_Kreise_02_S1()
 					Doc_PrintLine	( nDocID,  0, "Coal");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Sleep");
-					Doc_PrintLine	( nDocID,  0, "Swampweed");
+					//Doc_PrintLine	( nDocID,  0, "Sleep");
+					//Doc_PrintLine	( nDocID,  0, "Swampweed");
+					Doc_PrintLine	( nDocID,  0, "");
+					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
@@ -305,8 +307,10 @@ FUNC VOID Use_Bookstand_Kreise_03_S1()
 					Doc_PrintLine	( nDocID,  0, "Skeleton's Bone");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Fear");
-					Doc_PrintLine	( nDocID,  0, "Black Pearl");
+					//Doc_PrintLine	( nDocID,  0, "Fear");
+					//Doc_PrintLine	( nDocID,  0, "Black Pearl");
+					Doc_PrintLine	( nDocID,  0, "");
+					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					Doc_PrintLine	( nDocID,  0, "Ice Block");

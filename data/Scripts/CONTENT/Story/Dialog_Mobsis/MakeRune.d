@@ -75,13 +75,13 @@ FUNC VOID PC_Circle_01_Info()
 	Info_ClearChoices (PC_Circle_01);
 	
 	Info_AddChoice 	  (PC_Circle_01,DIALOG_BACK,PC_Circle_01_BACK);
-	if (PLAYER_TALENT_RUNES[SPL_LIGHT] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_01,NAME_SPL_LIGHT,PC_ItRu_Light_Info);
-	};
 	if (PLAYER_TALENT_RUNES[SPL_Firebolt] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Circle_01,NAME_SPL_Firebolt,PC_ItRu_Firebolt_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Icebolt] == TRUE)
+	{
+		Info_AddChoice 	  (PC_Circle_01,NAME_SPL_Icebolt,PC_ItRu_Icebolt_Info);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_Zap] == TRUE)
 	{
@@ -91,11 +91,14 @@ FUNC VOID PC_Circle_01_Info()
 	{
 		Info_AddChoice 	  (PC_Circle_01,NAME_SPL_LightHeal,PC_ItRu_LightHeal_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_SummonGoblinSkeleton] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_SummonWolf] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_01,NAME_SPL_SummonGoblinSkeleton,PC_ItRu_SumGobSkel_Info);
+		Info_AddChoice 	  (PC_Circle_01,NAME_SPL_SummonWolf,PC_ItRu_SumWolf_Info);
 	};
-	
+	if (PLAYER_TALENT_RUNES[SPL_LIGHT] == TRUE)
+	{
+		Info_AddChoice 	  (PC_Circle_01,NAME_SPL_LIGHT,PC_ItRu_Light_Info);
+	};
 };
 FUNC VOID PC_Circle_01_BACK()
 {
@@ -133,29 +136,25 @@ FUNC VOID PC_Circle_02_Info()
 	{
 		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_InstantFireball,PC_ItRu_InstFireball_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_Icebolt] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_IceLance] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_Icebolt,PC_ItRu_Icebolt_Info);
+		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_IceLance,PC_ItRu_Icelance_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_SummonWolf] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_SummonGoblinSkeleton] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_SummonWolf,PC_ItRu_SumWolf_Info);
-	};
-	if (PLAYER_TALENT_RUNES[SPL_WINDFIST] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_WINDFIST,PC_ItRu_Windfist_Info);
+		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_SummonGoblinSkeleton,PC_ItRu_SumGobSkel_Info);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_Sleep] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_Sleep,PC_ItRu_Sleep_Info);
 	};
+	if (PLAYER_TALENT_RUNES[SPL_WINDFIST] == TRUE)
+	{
+		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_WINDFIST,PC_ItRu_Windfist_Info);
+	};
 	if (PLAYER_TALENT_RUNES[SPL_Whirlwind] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_Whirlwind,PC_ItRu_Whirlwind_Info);
-	};
-	if (PLAYER_TALENT_RUNES[SPL_IceLance] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_IceLance,PC_ItRu_Icelance_Info);
 	};
 };
 FUNC VOID PC_Circle_02_BACK()

@@ -243,15 +243,15 @@ func void DIA_Karras_TEACH_Info ()
 		Info_ClearChoices   (DIA_Karras_TEACH);
 		
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 1)
-		&& (PLAYER_TALENT_RUNES [SPL_SummonGoblinSkeleton] == FALSE) 
-		{
-			Info_AddChoice 		(DIA_Karras_TEACH,B_BuildLearnString (NAME_SPL_SummonGoblinSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGoblinSkeleton)),DIA_Karras_TEACH_SUMGOBL);
-			abletolearn = (abletolearn +1);
-		};
-		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
 		&& (PLAYER_TALENT_RUNES [SPL_SummonWolf] == FALSE) 
 		{
 			Info_AddChoice	    (DIA_Karras_TEACH, B_BuildLearnString (NAME_SPL_SummonWolf, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonWolf)) ,DIA_Karras_TEACHSummonWolf);
+			abletolearn = (abletolearn +1);
+		};
+		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
+		&& (PLAYER_TALENT_RUNES [SPL_SummonGoblinSkeleton] == FALSE) 
+		{
+			Info_AddChoice 		(DIA_Karras_TEACH,B_BuildLearnString (NAME_SPL_SummonGoblinSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGoblinSkeleton)),DIA_Karras_TEACH_SUMGOBL);
 			abletolearn = (abletolearn +1);
 		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)

@@ -23,11 +23,11 @@ const	int	Value_Ru_Light				=	500;// Lehrer Parlan
 const	int	Value_Ru_Firebolt			=	500;// Lehrer Hyglas 
 const	int	Value_Ru_Zap				=	500;// Lehrer Marduk
 const	int	Value_Ru_LightHeal			=	500;// Lehrer Parlan
-const	int	Value_Ru_SumGobSkel			=	500;// Lehrer Karras
+const	int	Value_Ru_Icebolt			=	500;// Lehrer Marduk
+const	int	Value_Ru_SumWolf			=	500;// Lehrer Karras
 // Kreis 2	
 const	int	Value_Ru_InstantFireball	=	1000;// Lehrer Hyglas
-const	int	Value_Ru_Icebolt			=	1000;// Lehrer Marduk
-const	int	Value_Ru_SumWolf			=	1000;// Lehrer Karras
+const	int	Value_Ru_SumGobSkel			=	1000;// Lehrer Karras
 const	int	Value_Ru_Windfist			=	1000;
 const	int	Value_Ru_Sleep				=	1000;
 // Kreis 3

@@ -1044,24 +1044,24 @@ func void DIA_Parlan_TEACH_Info ()
 		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_WINDFIST, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_WINDFIST)) ,DIA_Parlan_TEACH_WINDFIST);
 		abletolearn = (abletolearn +1);
 	};
-	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
+	/* if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
 	&& (PLAYER_TALENT_RUNES [SPL_Sleep] == FALSE) 
 	{
 		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_Sleep, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Sleep)) ,DIA_Parlan_TEACH_Sleep);
 		abletolearn = (abletolearn +1);
-	};
+	}; */
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
 	&& (PLAYER_TALENT_RUNES [SPL_MediumHeal] == FALSE) 
 	{
 		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_MediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MediumHeal)) ,DIA_Parlan_TEACH_MediumHeal);
 		abletolearn = (abletolearn +1);
 	};
-	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
+/* 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
 	&& (PLAYER_TALENT_RUNES [SPL_Fear] == FALSE) 
 	{
 		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_Fear, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Fear)) ,DIA_Parlan_TEACH_Fear);
 		abletolearn = (abletolearn +1);
-	};
+	}; */
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4)
 	&& (PLAYER_TALENT_RUNES [SPL_DestroyUndead] == FALSE) 
 	{

@@ -466,6 +466,9 @@ FUNC INT DIA_MiltenOW_Teach_Condition()
 	if (other.guild == GIL_KDF)
 	&& Npc_KnowsInfo (other,DIA_MiltenOW_Lehren)
 	&& (Kapitel == 2)
+	&& ((PLAYER_TALENT_RUNES [SPL_WINDFIST] == FALSE)
+	|| (PLAYER_TALENT_RUNES [SPL_ICELANCE] == FALSE)
+	|| (PLAYER_TALENT_RUNES [SPL_InstantFireball] == FALSE))
 	{
 		return TRUE;
 	};
@@ -483,14 +486,18 @@ FUNC VOID DIA_MiltenOW_Teach_Info()
 		{
 			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_WINDFIST, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_WINDFIST)) ,DIA_MiltenOW_Teach_Windfist);
 		};
+		if (PLAYER_TALENT_RUNES [SPL_ICELANCE] == FALSE) 
+		{
+			Info_AddChoice	(DIA_MiltenNW_Teach, B_BuildLearnString (NAME_SPL_ICELANCE, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ICELANCE)) ,DIA_MiltenOW_Teach_Icelance);
+		};	
 		if (PLAYER_TALENT_RUNES [SPL_InstantFireball] == FALSE) 
 		{
 			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_Feuerball);
 		};
-		if (PLAYER_TALENT_RUNES [SPL_Icebolt] == FALSE) 
+		/* if (PLAYER_TALENT_RUNES [SPL_Icebolt] == FALSE) 
 		{
 			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,DIA_MiltenOW_Teach_Eispfeil);
-		};
+		}; */
 	}
 	else
 	{
@@ -509,9 +516,13 @@ FUNC VOID DIA_MiltenOW_Teach_Feuerball()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_InstantFireball);	
 };
-FUNC VOID DIA_MiltenOW_Teach_Eispfeil()
+/* FUNC VOID DIA_MiltenOW_Teach_Eispfeil()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_Icebolt);	
+	B_TeachPlayerTalentRunes (self, other, SPL_Icebolt);
+}; */
+FUNC VOID DIA_MiltenOW_Teach_Icelance()
+{
+	B_TeachPlayerTalentRunes (self, other, SPL_ICELANCE);
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info TEACH
