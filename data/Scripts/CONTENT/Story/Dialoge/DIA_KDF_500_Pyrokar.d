@@ -861,17 +861,17 @@ func void DIA_Pyrokar_SPELLS_Info ()
 	
 	if (PLAYER_TALENT_RUNES [SPL_Firerain] == FALSE)
 	{
-		Info_AddChoice	(DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,DIA_Pyrokar_SPELLS_Firerain);
+		Info_AddChoice	(DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,TeachPlayerTalentRunes_SPL_Firerain);
 		abletolearn = (abletolearn +1);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_BreathOfDeath] == FALSE)
 	{
-		Info_AddChoice	(DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_BreathOfDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_BreathOfDeath)) ,DIA_Pyrokar_SPELLS_BreathOfDeath);
+		Info_AddChoice	(DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_BreathOfDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_BreathOfDeath)) ,TeachPlayerTalentRunes_SPL_BreathOfDeath);
 		abletolearn = (abletolearn +1);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_MassDeath] == FALSE)
 	{
-		Info_AddChoice	(DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_MassDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MassDeath)) ,DIA_Pyrokar_SPELLS_MassDeath);
+		Info_AddChoice	(DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_MassDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MassDeath)) ,TeachPlayerTalentRunes_SPL_MassDeath);
 		abletolearn = (abletolearn +1);
 	};
 	if (abletolearn < 1)
@@ -882,18 +882,6 @@ func void DIA_Pyrokar_SPELLS_Info ()
 FUNC VOID DIA_Pyrokar_SPELLS_BACK()
 {
 	Info_ClearChoices 	(DIA_Pyrokar_SPELLS);
-};
-FUNC VOID DIA_Pyrokar_SPELLS_Firerain()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Firerain);	
-};
-FUNC VOID DIA_Pyrokar_SPELLS_BreathOfDeath()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_BreathOfDeath);	
-};
-FUNC VOID DIA_Pyrokar_SPELLS_MassDeath()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_MassDeath);	
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Parlan

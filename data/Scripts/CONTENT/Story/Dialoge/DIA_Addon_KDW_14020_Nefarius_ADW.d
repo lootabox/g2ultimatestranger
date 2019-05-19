@@ -281,27 +281,27 @@ FUNC VOID DIA_Addon_Nefarius_ADW_Runen_1 ()
 	
 	if (PLAYER_TALENT_RUNES [SPL_Firebolt] == FALSE)
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Firebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firebolt)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_1_SPL_Firebolt);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Firebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firebolt)) ,TeachPlayerTalentRunes_SPL_Firebolt);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Icebolt] == FALSE)
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_1_SPL_Icebolt);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,TeachPlayerTalentRunes_SPL_Icebolt);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Zap] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Zap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Zap)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_1_SPL_Zap);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Zap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Zap)) ,TeachPlayerTalentRunes_SPL_Zap);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_LightHeal] == FALSE)
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_LightHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightHeal)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_1_SPL_LightHeal);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_LightHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightHeal)) ,TeachPlayerTalentRunes_SPL_LightHeal);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_SummonWolf] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_SummonWolf, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonWolf)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_1_SPL_SummonWolf);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_SummonWolf, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonWolf)) ,TeachPlayerTalentRunes_SPL_SummonWolf);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_LIGHT] == FALSE)
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_LIGHT, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LIGHT)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_1_SPL_LIGHT);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_LIGHT, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LIGHT)) ,TeachPlayerTalentRunes_SPL_LIGHT);
 	};
 };
 
@@ -316,27 +316,27 @@ FUNC VOID DIA_Addon_Nefarius_ADW_Runen_2()
 	
 	if (PLAYER_TALENT_RUNES [SPL_InstantFireball] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_2_SPL_InstantFireball);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,TeachPlayerTalentRunes_SPL_InstantFireball);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_ICELANCE] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_ICELANCE, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ICELANCE)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_2_SPL_ICELANCE);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_ICELANCE, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ICELANCE)) ,TeachPlayerTalentRunes_SPL_ICELANCE);
 	};	
 	if	(PLAYER_TALENT_RUNES [SPL_SummonGoblinSkeleton] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_SummonGoblinSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGoblinSkeleton)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_2_SPL_SummonGoblinSkeleton);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_SummonGoblinSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGoblinSkeleton)) ,TeachPlayerTalentRunes_SPL_SummonGoblinSkeleton);
 	};
 	/* if (PLAYER_TALENT_RUNES [SPL_Sleep] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Sleep, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Sleep)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_2_SPL_Sleep);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Sleep, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Sleep)) ,TeachPlayerTalentRunes_SPL_Sleep);
 	}; */
 	if (PLAYER_TALENT_RUNES [SPL_Whirlwind] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Whirlwind, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Whirlwind)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_2_SPL_Whirlwind);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Whirlwind, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Whirlwind)) ,TeachPlayerTalentRunes_SPL_Whirlwind);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_WINDFIST] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_WINDFIST, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_WINDFIST)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_2_SPL_WINDFIST);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_WINDFIST, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_WINDFIST)) ,TeachPlayerTalentRunes_SPL_WINDFIST);
 	};
 };
 
@@ -351,38 +351,34 @@ FUNC VOID DIA_Addon_Nefarius_ADW_Runen_3()
 	
 	if (PLAYER_TALENT_RUNES [SPL_MediumHeal] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_MediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MediumHeal)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_MediumHeal);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_MediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MediumHeal)) ,TeachPlayerTalentRunes_SPL_MediumHeal);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_ChargeZap] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_ChargeZap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeZap)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_ThunderBall);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_ChargeZap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeZap)) ,TeachPlayerTalentRunes_SPL_ChargeZap);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Firestorm] == FALSE)
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Firestorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firestorm)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_Firestorm);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Firestorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firestorm)) ,TeachPlayerTalentRunes_SPL_Firestorm);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_SummonSkeleton] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_SummonSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonSkeleton)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_SummonSkeleton);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_SummonSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonSkeleton)) ,TeachPlayerTalentRunes_SPL_SummonSkeleton);
 	};
 /* 	if (PLAYER_TALENT_RUNES [SPL_Fear] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Fear, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Fear)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_Fear);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Fear, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Fear)) ,TeachPlayerTalentRunes_SPL_Fear);
 	}; */
 	if (PLAYER_TALENT_RUNES [SPL_IceCube] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_IceCube, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceCube)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_IceCube);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_IceCube, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceCube)) ,TeachPlayerTalentRunes_SPL_IceCube);
 	};
 	
 //------------------ Addon -------------------
 
-	if (PLAYER_TALENT_RUNES [SPL_Thunderstorm] == FALSE) 
-	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Thunderstorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Thunderstorm)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_Thunderstorm);
-	};
 	if (PLAYER_TALENT_RUNES [SPL_Geyser] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Geyser, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Geyser)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_Geyser);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Geyser, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Geyser)) ,TeachPlayerTalentRunes_SPL_Geyser);
 	};	
 };
 
@@ -396,27 +392,31 @@ FUNC VOID DIA_Addon_Nefarius_ADW_Runen_4()
 	Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, DIALOG_BACK, DIA_Addon_Nefarius_ADW_Runen_BACK);
 	
 	
+	if (PLAYER_TALENT_RUNES [SPL_Thunderstorm] == FALSE) 
+	{
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Thunderstorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Thunderstorm)) ,TeachPlayerTalentRunes_SPL_Thunderstorm);
+	};
 	if (PLAYER_TALENT_RUNES [SPL_SummonGolem] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_SummonGolem, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGolem)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_4_SPL_SummonGolem);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_SummonGolem, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGolem)) ,TeachPlayerTalentRunes_SPL_SummonGolem);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_DestroyUndead] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_DestroyUndead, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_DestroyUndead)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_4_SPL_DestroyUndead);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_DestroyUndead, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_DestroyUndead)) ,TeachPlayerTalentRunes_SPL_DestroyUndead);
 	};
 	
 	if (PLAYER_TALENT_RUNES [SPL_LightningFlash] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_LightningFlash, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightningFlash)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_4_SPL_LightningFlash);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_LightningFlash, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightningFlash)) ,TeachPlayerTalentRunes_SPL_LightningFlash);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_ChargeFireball] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_ChargeFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeFireball)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_4_SPL_ChargeFireball);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_ChargeFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeFireball)) ,TeachPlayerTalentRunes_SPL_ChargeFireball);
 	};
 	
 	if (PLAYER_TALENT_RUNES [SPL_Waterfist] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Waterfist, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Waterfist)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_4_SPL_Waterfist);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Waterfist, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Waterfist)) ,TeachPlayerTalentRunes_SPL_Waterfist);
 	};
 };
 
@@ -432,23 +432,23 @@ FUNC VOID DIA_Addon_Nefarius_ADW_Runen_5()
 	
 	if (PLAYER_TALENT_RUNES [SPL_IceWave] == FALSE)
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_IceWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceWave)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_5_SPL_IceWave);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_IceWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceWave)) ,TeachPlayerTalentRunes_SPL_IceWave);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_SummonDemon] == FALSE)
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_SummonDemon, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonDemon)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_5_SPL_SummonDemon);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_SummonDemon, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonDemon)) ,TeachPlayerTalentRunes_SPL_SummonDemon);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_FullHeal] == FALSE)
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_FullHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FullHeal)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_5_SPL_FullHeal);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_FullHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FullHeal)) ,TeachPlayerTalentRunes_SPL_FullHeal);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Pyrokinesis] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_5_SPL_Pyrokinesis);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)) ,TeachPlayerTalentRunes_SPL_Pyrokinesis);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Shrink] == FALSE)
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Shrink, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Shrink)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_5_SPL_Shrink);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Shrink, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Shrink)) ,TeachPlayerTalentRunes_SPL_Shrink);
 	};
 };
 
@@ -463,188 +463,18 @@ FUNC VOID DIA_Addon_Nefarius_ADW_Runen_6()
 	
 	if (PLAYER_TALENT_RUNES [SPL_Firerain] == FALSE)
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_6_SPL_Firerain);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,TeachPlayerTalentRunes_SPL_Firerain);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_BreathOfDeath] == FALSE)
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_BreathOfDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_BreathOfDeath)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_6_SPL_BreathOfDeath);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_BreathOfDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_BreathOfDeath)) ,TeachPlayerTalentRunes_SPL_BreathOfDeath);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_MassDeath] == FALSE)
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_MassDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MassDeath)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_6_SPL_MassDeath);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_MassDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MassDeath)) ,TeachPlayerTalentRunes_SPL_MassDeath);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_ArmyOfDarkness] == FALSE)
 	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_ArmyOfDarkness, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ArmyOfDarkness)) ,DIA_Addon_Nefarius_ADW_Runen_Circle_6_SPL_ArmyOfDarkness);
+		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_ArmyOfDarkness, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ArmyOfDarkness)) ,TeachPlayerTalentRunes_SPL_ArmyOfDarkness);
 	};
 };
-
-//##########################################################
-//			LERNEN
-//##########################################################
-
-
-//********	Kreis 1 **********
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_1_SPL_LIGHT()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_LIGHT);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_1_SPL_Firebolt()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Firebolt);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_1_SPL_Zap()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Zap);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_1_SPL_LightHeal()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_LightHeal);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_1_SPL_SummonWolf()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonWolf);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_1_SPL_Icebolt()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Icebolt);	
-};
-
-//******* Kreis 2 **********
-
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_2_SPL_Whirlwind ()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Whirlwind);
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_2_SPL_ICELANCE ()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ICELANCE);
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_2_SPL_InstantFireball()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_InstantFireball);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_2_SPL_SummonGoblinSkeleton()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonGoblinSkeleton);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_2_SPL_WINDFIST()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_WINDFIST);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_2_SPL_Sleep()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Sleep);		
-};
-
-//*********** Kreis 3 **********
-
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_Thunderstorm()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Thunderstorm);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_Geyser()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Geyser);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_MediumHeal()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_MediumHeal);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_SummonSkeleton()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonSkeleton);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_Fear()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Fear);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_IceCube()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_IceCube);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_ThunderBall()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ChargeZap);		
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_3_SPL_Firestorm()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Firestorm);	
-};
-
-//************** Kreis 4 *********
-
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_4_SPL_LightningFlash()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_LightningFlash);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_4_SPL_ChargeFireball()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ChargeFireball);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_4_SPL_Waterfist()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Waterfist);		
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_4_SPL_SummonGolem()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonGolem);		
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_4_SPL_DestroyUndead()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_DestroyUndead);		
-};
-
-//*********** Kreis 5 ************
-
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_5_SPL_Pyrokinesis()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Pyrokinesis);		
-};
-
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_5_SPL_IceWave()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_IceWave);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_5_SPL_SummonDemon()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonDemon);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_5_SPL_FullHeal()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_FullHeal);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_5_SPL_Shrink()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Shrink);	
-};
-
-//************* Kreis 6 ************
-
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_6_SPL_Firerain()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Firerain);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_6_SPL_BreathOfDeath()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_BreathOfDeath);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_6_SPL_MassDeath()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_MassDeath);	
-};
-FUNC VOID DIA_Addon_Nefarius_ADW_Runen_Circle_6_SPL_ArmyOfDarkness()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ArmyOfDarkness);	
-};
-
-
-
-
-
-
-
-
-
-
-

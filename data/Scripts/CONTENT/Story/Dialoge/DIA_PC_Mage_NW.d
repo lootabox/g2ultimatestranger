@@ -753,19 +753,19 @@ FUNC VOID DIA_MiltenNW_Teach_Info()
 		
 		if (PLAYER_TALENT_RUNES [SPL_WINDFIST] == FALSE) 
 		{
-			Info_AddChoice	(DIA_MiltenNW_Teach, B_BuildLearnString (NAME_SPL_WINDFIST, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_WINDFIST)) ,DIA_MiltenNW_Teach_Windfist);
+			Info_AddChoice	(DIA_MiltenNW_Teach, B_BuildLearnString (NAME_SPL_WINDFIST, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_WINDFIST)) ,TeachPlayerTalentRunes_SPL_Windfist);
 		};
 		if (PLAYER_TALENT_RUNES [SPL_ICELANCE] == FALSE) 
 		{
-			Info_AddChoice	(DIA_MiltenNW_Teach, B_BuildLearnString (NAME_SPL_ICELANCE, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ICELANCE)) ,DIA_MiltenNW_Teach_Icelance);
+			Info_AddChoice	(DIA_MiltenNW_Teach, B_BuildLearnString (NAME_SPL_ICELANCE, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ICELANCE)) ,TeachPlayerTalentRunes_SPL_Icelance);
 		};	
 		if (PLAYER_TALENT_RUNES [SPL_InstantFireball] == FALSE) 
 		{
-			Info_AddChoice	(DIA_MiltenNW_Teach, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenNW_Teach_Feuerball);
+			Info_AddChoice	(DIA_MiltenNW_Teach, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,TeachPlayerTalentRunes_SPL_InstantFireball);
 		};
 		/* if (PLAYER_TALENT_RUNES [SPL_Icebolt] == FALSE) 
 		{
-			Info_AddChoice	(DIA_MiltenNW_Teach, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,DIA_MiltenNW_Teach_Eispfeil);
+			Info_AddChoice	(DIA_MiltenNW_Teach, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,TeachPlayerTalentRunes_SPL_Icebolt);
 		}; */
 	}
 	else
@@ -776,22 +776,6 @@ FUNC VOID DIA_MiltenNW_Teach_Info()
 FUNC VOID DIA_MiltenNW_Teach_BACK()
 {
 	Info_ClearChoices (DIA_MiltenNW_Teach);
-};
-FUNC VOID DIA_MiltenNW_Teach_WINDFIST()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_WINDFIST);	
-};
-FUNC VOID DIA_MiltenNW_Teach_Feuerball()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_InstantFireball);	
-};
-/* FUNC VOID DIA_MiltenNW_Teach_Eispfeil()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Icebolt);
-}; */
-FUNC VOID DIA_MiltenNW_Teach_Icelance()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ICELANCE);
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info TEACH

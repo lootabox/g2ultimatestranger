@@ -2037,53 +2037,28 @@ FUNC VOID DIA_CH_Runen_1 ()
 	
 	if (PLAYER_TALENT_RUNES [SPL_Icebolt] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,CH_Training_Runen_Circle_1_SPL_Icebolt);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,TeachPlayerTalentRunes_SPL_Icebolt);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_SummonWolf] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonWolf, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonWolf)) ,CH_Training_Runen_Circle_1_SPL_SummonWolf);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonWolf, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonWolf)) ,TeachPlayerTalentRunes_SPL_SummonWolf);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_LightHeal] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_LightHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightHeal)) ,CH_Training_Runen_Circle_1_SPL_LightHeal);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_LightHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightHeal)) ,TeachPlayerTalentRunes_SPL_LightHeal);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Zap] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Zap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Zap)) ,CH_Training_Runen_Circle_1_SPL_Zap);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Zap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Zap)) ,TeachPlayerTalentRunes_SPL_Zap);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Firebolt] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Firebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firebolt)) ,CH_Training_Runen_Circle_1_SPL_Firebolt);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Firebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firebolt)) ,TeachPlayerTalentRunes_SPL_Firebolt);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_LIGHT] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_LIGHT, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LIGHT)) ,CH_Training_Runen_Circle_1_SPL_LIGHT);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_LIGHT, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LIGHT)) ,TeachPlayerTalentRunes_SPL_LIGHT);
 	};
-};
-//**********************************************************
-FUNC VOID CH_Training_Runen_Circle_1_SPL_LIGHT()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_LIGHT);	
-};
-FUNC VOID CH_Training_Runen_Circle_1_SPL_Firebolt()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Firebolt);	
-};
-FUNC VOID CH_Training_Runen_Circle_1_SPL_Zap()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Zap);	
-};
-FUNC VOID CH_Training_Runen_Circle_1_SPL_LightHeal()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_LightHeal);	
-};
-FUNC VOID CH_Training_Runen_Circle_1_SPL_SummonWolf()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonWolf);	
-};
-FUNC VOID CH_Training_Runen_Circle_1_SPL_Icebolt()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Icebolt);	
 };
 //**********************************************************
 // Zweiter Kreis 
@@ -2096,46 +2071,24 @@ FUNC VOID DIA_CH_Runen_2()
 	
 	if (PLAYER_TALENT_RUNES [SPL_InstantFireball] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,CH_Training_Runen_Circle_2_SPL_InstantFireball);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,TeachPlayerTalentRunes_SPL_InstantFireball);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_IceLance] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_IceLance, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceLance)) ,CH_Training_Runen_Circle_2_SPL_IceLance);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_IceLance, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceLance)) ,TeachPlayerTalentRunes_SPL_IceLance);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_WINDFIST] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_WINDFIST, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_WINDFIST)) ,CH_Training_Runen_Circle_2_SPL_WINDFIST);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_WINDFIST, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_WINDFIST)) ,TeachPlayerTalentRunes_SPL_WINDFIST);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Sleep] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Sleep, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Sleep)) ,CH_Training_Runen_Circle_2_SPL_Sleep);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Sleep, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Sleep)) ,TeachPlayerTalentRunes_SPL_Sleep);
 	};
 	if	(PLAYER_TALENT_RUNES [SPL_SummonGoblinSkeleton] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonGoblinSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGoblinSkeleton)) ,CH_Training_Runen_Circle_2_SPL_SummonGoblinSkeleton);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonGoblinSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGoblinSkeleton)) ,TeachPlayerTalentRunes_SPL_SummonGoblinSkeleton);
 	};
-};
-//**********************************************************
-
-FUNC VOID CH_Training_Runen_Circle_2_SPL_InstantFireball()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_InstantFireball);	
-};
-FUNC VOID CH_Training_Runen_Circle_2_SPL_IceLance()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_IceLance);	
-};
-FUNC VOID CH_Training_Runen_Circle_2_SPL_WINDFIST()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_WINDFIST);	
-};
-FUNC VOID CH_Training_Runen_Circle_2_SPL_Sleep()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Sleep);	
-};
-FUNC VOID CH_Training_Runen_Circle_2_SPL_SummonGoblinSkeleton()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonGoblinSkeleton);	
 };
 //**********************************************************
 // Dritter Kreis 
@@ -2148,59 +2101,28 @@ FUNC VOID DIA_CH_Runen_3()
 	
 	if (PLAYER_TALENT_RUNES [SPL_MediumHeal] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_MediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MediumHeal)) ,CH_Training_Runen_Circle_3_SPL_MediumHeal);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_MediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MediumHeal)) ,TeachPlayerTalentRunes_SPL_MediumHeal);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_ChargeZap] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_ChargeZap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeZap)) ,CH_Training_Runen_Circle_4_SPL_ThunderBall);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_ChargeZap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeZap)) ,TeachPlayerTalentRunes_SPL_ChargeZap);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Firestorm] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Firestorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firestorm)) ,CH_Training_Runen_Circle_5_SPL_Firestorm);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Firestorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firestorm)) ,TeachPlayerTalentRunes_SPL_Firestorm);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_SummonSkeleton] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonSkeleton)) ,CH_Training_Runen_Circle_3_SPL_SummonSkeleton);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonSkeleton)) ,TeachPlayerTalentRunes_SPL_SummonSkeleton);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Fear] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Fear, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Fear)) ,CH_Training_Runen_Circle_3_SPL_Fear);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Fear, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Fear)) ,TeachPlayerTalentRunes_SPL_Fear);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_IceCube] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_IceCube, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceCube)) ,CH_Training_Runen_Circle_3_SPL_IceCube);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_IceCube, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceCube)) ,TeachPlayerTalentRunes_SPL_IceCube);
 	};
-};
-//**********************************************************
-FUNC VOID CH_Training_Runen_Circle_3_SPL_MediumHeal()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_MediumHeal);	
-	
-};
-FUNC VOID CH_Training_Runen_Circle_3_SPL_LightningFlash()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_LightningFlash);	
-	
-};
-FUNC VOID CH_Training_Runen_Circle_3_SPL_ChargeFireball()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ChargeFireball);	
-	
-};
-FUNC VOID CH_Training_Runen_Circle_3_SPL_SummonSkeleton()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonSkeleton);	
-	
-};
-FUNC VOID CH_Training_Runen_Circle_3_SPL_Fear()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Fear);	
-	
-};
-FUNC VOID CH_Training_Runen_Circle_3_SPL_IceCube()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_IceCube);	
-
 };
 //**********************************************************
 // Vierter Kreis 
@@ -2214,38 +2136,25 @@ FUNC VOID DIA_CH_Runen_4()
 	
 	if (PLAYER_TALENT_RUNES [SPL_SummonGolem] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonGolem, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGolem)) ,CH_Training_Runen_Circle_4_SPL_SummonGolem);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonGolem, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGolem)) ,TeachPlayerTalentRunes_SPL_SummonGolem);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_DestroyUndead] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_DestroyUndead, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_DestroyUndead)) ,CH_Training_Runen_Circle_4_SPL_DestroyUndead);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_DestroyUndead, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_DestroyUndead)) ,TeachPlayerTalentRunes_SPL_DestroyUndead);
 	};
 	
 	if (PLAYER_TALENT_RUNES [SPL_LightningFlash] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_LightningFlash, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightningFlash)) ,CH_Training_Runen_Circle_3_SPL_LightningFlash);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_LightningFlash, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightningFlash)) ,TeachPlayerTalentRunes_SPL_LightningFlash);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_ChargeFireball] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_ChargeFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeFireball)) ,CH_Training_Runen_Circle_3_SPL_ChargeFireball);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_ChargeFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeFireball)) ,TeachPlayerTalentRunes_SPL_ChargeFireball);
 	};
-};
-//**********************************************************
-FUNC VOID CH_Training_Runen_Circle_4_SPL_ThunderBall()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ChargeZap);		
-};
-FUNC VOID CH_Training_Runen_Circle_4_SPL_SummonGolem()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonGolem);		
-};
-FUNC VOID CH_Training_Runen_Circle_4_SPL_DestroyUndead()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_DestroyUndead);		
-};
-FUNC VOID CH_Training_Runen_Circle_4_SPL_Pyrokinesis()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Pyrokinesis);		
+	if (PLAYER_TALENT_RUNES [SPL_Thunderstorm] == FALSE) 
+	{
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Thunderstorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Thunderstorm)) ,TeachPlayerTalentRunes_SPL_Thunderstorm);
+	};
 };
 //**********************************************************
 // Fünfter Kreis 
@@ -2259,45 +2168,24 @@ FUNC VOID DIA_CH_Runen_5()
 	
 	if (PLAYER_TALENT_RUNES [SPL_IceWave] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_IceWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceWave)) ,CH_Training_Runen_Circle_5_SPL_IceWave);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_IceWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceWave)) ,TeachPlayerTalentRunes_SPL_IceWave);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_SummonDemon] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonDemon, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonDemon)) ,CH_Training_Runen_Circle_5_SPL_SummonDemon);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonDemon, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonDemon)) ,TeachPlayerTalentRunes_SPL_SummonDemon);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_FullHeal] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_FullHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FullHeal)) ,CH_Training_Runen_Circle_5_SPL_FullHeal);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_FullHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FullHeal)) ,TeachPlayerTalentRunes_SPL_FullHeal);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Pyrokinesis] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)) ,CH_Training_Runen_Circle_4_SPL_Pyrokinesis);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)) ,TeachPlayerTalentRunes_SPL_Pyrokinesis);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Shrink] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Shrink, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Shrink)) ,CH_Training_Runen_Circle_5_SPL_Shrink);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Shrink, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Shrink)) ,TeachPlayerTalentRunes_SPL_Shrink);
 	};
-};
-//**********************************************************
-FUNC VOID CH_Training_Runen_Circle_5_SPL_Firestorm()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Firestorm);	
-};
-FUNC VOID CH_Training_Runen_Circle_5_SPL_IceWave()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_IceWave);	
-};
-FUNC VOID CH_Training_Runen_Circle_5_SPL_SummonDemon()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonDemon);	
-};
-FUNC VOID CH_Training_Runen_Circle_5_SPL_FullHeal()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_FullHeal);	
-};
-FUNC VOID CH_Training_Runen_Circle_5_SPL_Shrink()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Shrink);	
 };
 //**********************************************************
 // Sechster Kreis 
@@ -2310,39 +2198,21 @@ FUNC VOID DIA_CH_Runen_6()
 	
 	if (PLAYER_TALENT_RUNES [SPL_Firerain] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,CH_Training_Runen_Circle_6_SPL_Firerain);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,TeachPlayerTalentRunes_SPL_Firerain);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_BreathOfDeath] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_BreathOfDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_BreathOfDeath)) ,CH_Training_Runen_Circle_6_SPL_BreathOfDeath);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_BreathOfDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_BreathOfDeath)) ,TeachPlayerTalentRunes_SPL_BreathOfDeath);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_MassDeath] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_MassDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MassDeath)) ,CH_Training_Runen_Circle_6_SPL_MassDeath);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_MassDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MassDeath)) ,TeachPlayerTalentRunes_SPL_MassDeath);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_ArmyOfDarkness] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_ArmyOfDarkness, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ArmyOfDarkness)) ,CH_Training_Runen_Circle_6_SPL_ArmyOfDarkness);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_ArmyOfDarkness, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ArmyOfDarkness)) ,TeachPlayerTalentRunes_SPL_ArmyOfDarkness);
 	};
 };
-//**********************************************************
-FUNC VOID CH_Training_Runen_Circle_6_SPL_Firerain()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Firerain);	
-};
-FUNC VOID CH_Training_Runen_Circle_6_SPL_BreathOfDeath()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_BreathOfDeath);	
-};
-FUNC VOID CH_Training_Runen_Circle_6_SPL_MassDeath()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_MassDeath);	
-};
-FUNC VOID CH_Training_Runen_Circle_6_SPL_ArmyOfDarkness()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ArmyOfDarkness);	
-};
-
 //***************************************************************************************************************************************
 // Kampftalente
 //***************************************************************************************************************************************
@@ -3871,7 +3741,7 @@ INSTANCE DIA_CH_Misc_PalHeal (C_INFO)
 	information	= DIA_CH_Misc_PalHeal_Info;
 	permanent	= TRUE;
 	description = "Light and Healing spells";
-};                       
+};
 
 FUNC INT DIA_CH_Misc_PalHeal_Condition()
 {
@@ -3887,42 +3757,24 @@ FUNC VOID DIA_CH_Misc_PalHeal_Info()
 	
 	if (PLAYER_TALENT_RUNES [SPL_PalFullHeal] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Misc_PalHeal, B_BuildLearnString (NAME_SPL_PalFullHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalFullHeal)) ,CH_Training_Runen_Paladin_SPL_PalFullHeal);
+		Info_AddChoice	(DIA_CH_Misc_PalHeal, B_BuildLearnString (NAME_SPL_PalFullHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalFullHeal)) ,TeachPlayerTalentRunes_SPL_PalFullHeal);
 	};
 	if 	(PLAYER_TALENT_RUNES [SPL_PalMediumHeal] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Misc_PalHeal, B_BuildLearnString (NAME_SPL_PalMediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalMediumHeal)) ,CH_Training_Runen_Paladin_SPL_PalMediumHeal);
+		Info_AddChoice	(DIA_CH_Misc_PalHeal, B_BuildLearnString (NAME_SPL_PalMediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalMediumHeal)) ,TeachPlayerTalentRunes_SPL_PalMediumHeal);
 	};
 	if	(PLAYER_TALENT_RUNES [SPL_PalLightHeal] == FALSE)
 	{ 
-		Info_AddChoice	(DIA_CH_Misc_PalHeal, B_BuildLearnString (NAME_SPL_PalLightHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalLightHeal)) ,CH_Training_Runen_Paladin_SPL_PalLightHeal);
+		Info_AddChoice	(DIA_CH_Misc_PalHeal, B_BuildLearnString (NAME_SPL_PalLightHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalLightHeal)) ,TeachPlayerTalentRunes_SPL_PalLightHeal);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_PalLight] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Misc_PalHeal, B_BuildLearnString (NAME_SPL_PalLight, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalLight)) ,CH_Training_Runen_Paladin_SPL_PalLight);
+		Info_AddChoice	(DIA_CH_Misc_PalHeal, B_BuildLearnString (NAME_SPL_PalLight, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalLight)) ,TeachPlayerTalentRunes_SPL_PalLight);
 	};
 };
 FUNC VOID DIA_CH_Misc_PalHeal_BACK()
 {
 	Info_ClearChoices (DIA_CH_Misc_PalHeal);
-};
-FUNC VOID CH_Training_Runen_Paladin_SPL_PalLight()
-{
-	B_TeachPlayerTalentRunes	(self, other,SPL_PalLight);  
-	
-};
-FUNC VOID CH_Training_Runen_Paladin_SPL_PalLightHeal()
-{
-	B_TeachPlayerTalentRunes	(self, other,SPL_PalLightHeal);  
-};
-FUNC VOID CH_Training_Runen_Paladin_SPL_PalMediumHeal()
-{
-	B_TeachPlayerTalentRunes	(self, other,SPL_PalMediumHeal);  
-};
-FUNC VOID CH_Training_Runen_Paladin_SPL_PalFullHeal()
-{
-	B_TeachPlayerTalentRunes	(self, other,SPL_PalFullHeal);  
-	
 };
 //***************************************************************************
 // Paladin Kampf
@@ -3935,7 +3787,7 @@ INSTANCE DIA_CH_Misc_PalKampf (C_INFO)
 	information	= DIA_CH_Misc_PalKampf_Info;
 	permanent	= TRUE;
 	description = "Battle spells";
-};                       
+};
 
 FUNC INT DIA_CH_Misc_PalKampf_Condition()
 {
@@ -3951,15 +3803,15 @@ FUNC VOID DIA_CH_Misc_PalKampf_Info()
 	
 	if (PLAYER_TALENT_RUNES [SPL_PalDestroyEvil] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Misc_PalKampf, B_BuildLearnString (NAME_SPL_PalDestroyEvil, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalDestroyEvil)) ,CH_Training_Runen_Paladin_SPL_PalDestroyEvil);
+		Info_AddChoice	(DIA_CH_Misc_PalKampf, B_BuildLearnString (NAME_SPL_PalDestroyEvil, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalDestroyEvil)) ,TeachPlayerTalentRunes_SPL_PalDestroyEvil);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_PalRepelEvil] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Misc_PalKampf, B_BuildLearnString (NAME_SPL_PalRepelEvil, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalRepelEvil)) ,CH_Training_Runen_Paladin_SPL_PalRepelEvil);
+		Info_AddChoice	(DIA_CH_Misc_PalKampf, B_BuildLearnString (NAME_SPL_PalRepelEvil, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalRepelEvil)) ,TeachPlayerTalentRunes_SPL_PalRepelEvil);
 	};
 	if	(PLAYER_TALENT_RUNES [SPL_PalHolyBolt] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Misc_PalKampf, B_BuildLearnString (NAME_SPL_PalHolyBolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalHolyBolt)) ,CH_Training_Runen_Paladin_SPL_PalHolyBolt);
+		Info_AddChoice	(DIA_CH_Misc_PalKampf, B_BuildLearnString (NAME_SPL_PalHolyBolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalHolyBolt)) ,TeachPlayerTalentRunes_SPL_PalHolyBolt);
 	};
 };
 //***************************************************************************
@@ -3967,19 +3819,6 @@ FUNC VOID DIA_CH_Misc_PalKampf_BACK()
 {
 	Info_ClearChoices (DIA_CH_Misc_PalKampf);
 };
-FUNC VOID CH_Training_Runen_Paladin_SPL_PalHolyBolt()
-{
-	B_TeachPlayerTalentRunes	(self, other,SPL_PalHolyBolt);  
-};
-FUNC VOID CH_Training_Runen_Paladin_SPL_PalRepelEvil()
-{
-	B_TeachPlayerTalentRunes	(self, other,SPL_PalRepelEvil);  
-};
-FUNC VOID CH_Training_Runen_Paladin_SPL_PalDestroyEvil()
-{
-	B_TeachPlayerTalentRunes	(self, other,SPL_PalDestroyEvil);  
-};
-
 
 
 

@@ -30,7 +30,7 @@ FUNC VOID B_GiveTradeInv_Ignaz (var C_NPC slf)
 		CreateInvItems (slf,ItSc_TrfShadowbeast ,1);
 		CreateInvItems (slf,ItSc_TrfDragonSnapper ,1);	
 		CreateInvItems (slf,ItSc_TrfFireWaran 	,1);
-		CreateInvItems (slf,ITSC_Charm			,5);
+		CreateInvItems (slf,ITSC_Charm			,3);
 		CreateInvItems (slf,ITSC_Sleep			,1);
 		
 		Ignaz_ItemsGiven_Chapter_1 = TRUE;
@@ -45,7 +45,7 @@ FUNC VOID B_GiveTradeInv_Ignaz (var C_NPC slf)
 		CreateInvItems (slf,ItPo_Mana_01 	, 2); 
 		CreateInvItems (slf,ItPo_Health_01	, 2);
 		CreateInvItems (slf,ItPo_Speed 		, 2); 
-		CreateInvItems (slf,ITSC_Charm		, 5);	
+		CreateInvItems (slf,ITSC_Charm		, 3);	
 		CreateInvItems (slf,ITMI_Flask		,10);	
 		
 		Ignaz_ItemsGiven_Chapter_2 = TRUE;
@@ -60,7 +60,7 @@ FUNC VOID B_GiveTradeInv_Ignaz (var C_NPC slf)
 		CreateInvItems (slf,ItPo_Mana_01 	, 3); 
 		CreateInvItems (slf,ItPo_Health_01	, 3);
 		CreateInvItems (slf,ItPo_Speed 		, 3); 
-		CreateInvItems (slf,ITSC_Charm		, 5);	
+		CreateInvItems (slf,ITSC_Charm		, 3);	
 		CreateInvItems (slf,ITMI_Flask		,10);	
 				
 		Ignaz_ItemsGiven_Chapter_3 = TRUE;
@@ -76,7 +76,7 @@ FUNC VOID B_GiveTradeInv_Ignaz (var C_NPC slf)
 		CreateInvItems (slf,ItPo_Mana_01 	, 4); 
 		CreateInvItems (slf,ItPo_Health_01	, 4);
 		CreateInvItems (slf,ItPo_Speed 		, 4); 
-		CreateInvItems (slf,ITSC_Charm		, 5);	
+		CreateInvItems (slf,ITSC_Charm		, 3);	
 		CreateInvItems (slf,ITMI_Flask		,10);	
 		
 
@@ -90,7 +90,7 @@ FUNC VOID B_GiveTradeInv_Ignaz (var C_NPC slf)
 		CreateInvItems (slf,ItPo_Mana_01 	, 5); 
 		CreateInvItems (slf,ItPo_Health_01	, 5);
 		CreateInvItems (slf,ItPo_Speed 		, 5); 
-		CreateInvItems (slf,ITSC_Charm		, 5);	
+		CreateInvItems (slf,ITSC_Charm		, 3);	
 		CreateInvItems (slf,ITMI_Flask		,10);	
 		
 		Ignaz_ItemsGiven_Chapter_5 = TRUE;

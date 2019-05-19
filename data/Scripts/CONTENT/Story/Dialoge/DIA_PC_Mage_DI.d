@@ -328,37 +328,21 @@ FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4()
 	
 	if (PLAYER_TALENT_RUNES [SPL_SummonGolem] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_SummonGolem, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGolem)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_SummonGolem);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_SummonGolem, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGolem)) ,TeachPlayerTalentRunes_SPL_SummonGolem);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_DestroyUndead] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_DestroyUndead, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_DestroyUndead)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_DestroyUndead);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_DestroyUndead, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_DestroyUndead)) ,TeachPlayerTalentRunes_SPL_DestroyUndead);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_LightningFlash] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_LightningFlash, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightningFlash)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_LightningFlash);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_LightningFlash, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightningFlash)) ,TeachPlayerTalentRunes_SPL_LightningFlash);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_ChargeFireball] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_ChargeFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeFireball)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_ChargeFireball);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_ChargeFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeFireball)) ,TeachPlayerTalentRunes_SPL_ChargeFireball);
 	};
 	
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_ChargeFireball()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ChargeFireball);		
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_SummonGolem()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonGolem);		
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_DestroyUndead()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_DestroyUndead);		
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_LightningFlash()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_LightningFlash);		
 };
 //**********************************************************
 // Fünfter Kreis 
@@ -372,45 +356,24 @@ FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5()
 	
 	if (PLAYER_TALENT_RUNES [SPL_IceWave] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_IceWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceWave)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_IceWave);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_IceWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceWave)) ,TeachPlayerTalentRunes_SPL_IceWave);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_SummonDemon] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_SummonDemon, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonDemon)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_SummonDemon);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_SummonDemon, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonDemon)) ,TeachPlayerTalentRunes_SPL_SummonDemon);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_FullHeal] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_FullHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FullHeal)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_FullHeal);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_FullHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FullHeal)) ,TeachPlayerTalentRunes_SPL_FullHeal);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Pyrokinesis] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_Pyrokinesis);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)) ,TeachPlayerTalentRunes_SPL_Pyrokinesis);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_Shrink] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Shrink, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Shrink)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_Shrink);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Shrink, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Shrink)) ,TeachPlayerTalentRunes_SPL_Shrink);
 	};
-};
-
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_Pyrokinesis()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Pyrokinesis);
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_IceWave()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_IceWave);
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_SummonDemon()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonDemon);
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_FullHeal()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_FullHeal);
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_Shrink()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Shrink);
 };
 //**********************************************************
 // Sechster Kreis 
@@ -423,37 +386,20 @@ FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6()
 
 	if (PLAYER_TALENT_RUNES [SPL_Firerain] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_Firerain);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,TeachPlayerTalentRunes_SPL_Firerain);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_BreathOfDeath] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_BreathOfDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_BreathOfDeath)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_BreathOfDeath);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_BreathOfDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_BreathOfDeath)) ,TeachPlayerTalentRunes_SPL_BreathOfDeath);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_MassDeath] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_MassDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MassDeath)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_MassDeath);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_MassDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MassDeath)) ,TeachPlayerTalentRunes_SPL_MassDeath);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_ArmyOfDarkness] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_ArmyOfDarkness, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ArmyOfDarkness)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_ArmyOfDarkness);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_ArmyOfDarkness, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ArmyOfDarkness)) ,TeachPlayerTalentRunes_SPL_ArmyOfDarkness);
 	};
-};
-
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_Firerain()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Firerain);	
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_BreathOfDeath()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_BreathOfDeath);	
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_MassDeath()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_MassDeath);	
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_ArmyOfDarkness()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ArmyOfDarkness);	
 };
 
 FUNC VOID DIA_Milten_DI_TeachMagic_BACK()

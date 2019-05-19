@@ -171,14 +171,14 @@ FUNC VOID DIA_Albrecht_TEACHPalRunes_Heal()
 	{
 		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
 		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
-		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalLightHeal,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalLightHeal)) ,DIA_Albrecht_TEACHPalRunes_PalLightHeal);
+		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalLightHeal,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalLightHeal)) ,TeachPlayerTalentRunes_SPL_PalLightHeal);
 	}
 	else if 	(PLAYER_TALENT_RUNES [SPL_PalMediumHeal] == FALSE)
 	&&	(Kapitel >= 5)
 	{
 		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
 		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
-		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalMediumHeal,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalMediumHeal)) ,DIA_Albrecht_TEACHPalRunes_PalMediumHeal);
+		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalMediumHeal,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalMediumHeal)) ,TeachPlayerTalentRunes_SPL_PalMediumHeal);
 	}
 	else
 	{
@@ -195,41 +195,20 @@ FUNC VOID DIA_Albrecht_TEACHPalRunes_Combat()
 	{
 		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
 		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
-		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalHolyBolt,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalHolyBolt)) ,DIA_Albrecht_TEACHPalRunes_PalHolyBolt);
+		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalHolyBolt,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalHolyBolt)) ,TeachPlayerTalentRunes_SPL_PalHolyBolt);
 	}
 	else if (PLAYER_TALENT_RUNES [SPL_PalRepelEvil] == FALSE)
 	&&	(Kapitel >= 5)
 	{
 		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
 		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
-		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalRepelEvil,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalRepelEvil)) ,DIA_Albrecht_TEACHPalRunes_PalRepelEvil);
+		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalRepelEvil,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalRepelEvil)) ,TeachPlayerTalentRunes_SPL_PalRepelEvil);
 	}
 	else
 	{
 		B_Albrecht_YouAreNotWorthy ();
 	};
 };
-
-func void DIA_Albrecht_TEACHPalRunes_PalLightHeal()
-{
-	B_TeachPlayerTalentRunes(self,other,SPL_PalLightHeal);
-};
-
-func void DIA_Albrecht_TEACHPalRunes_PalMediumHeal()
-{
-	B_TeachPlayerTalentRunes(self,other,SPL_PalMediumHeal);
-};
-
-func void DIA_Albrecht_TEACHPalRunes_PalHolyBolt()
-{
-	B_TeachPlayerTalentRunes(self,other,SPL_PalHolyBolt);
-};
-
-func void DIA_Albrecht_TEACHPalRunes_PalRepelEvil()
-{
-	B_TeachPlayerTalentRunes(self,other,SPL_PalRepelEvil);
-};
-
 
 
 ///////////////////////////////////////////////////////////////////////

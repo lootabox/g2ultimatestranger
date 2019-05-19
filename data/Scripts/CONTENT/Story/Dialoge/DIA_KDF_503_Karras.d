@@ -245,37 +245,37 @@ func void DIA_Karras_TEACH_Info ()
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 1)
 		&& (PLAYER_TALENT_RUNES [SPL_SummonWolf] == FALSE) 
 		{
-			Info_AddChoice	    (DIA_Karras_TEACH, B_BuildLearnString (NAME_SPL_SummonWolf, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonWolf)) ,DIA_Karras_TEACHSummonWolf);
+			Info_AddChoice	    (DIA_Karras_TEACH, B_BuildLearnString (NAME_SPL_SummonWolf, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonWolf)) ,TeachPlayerTalentRunes_SPL_SummonWolf);
 			abletolearn = (abletolearn +1);
 		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
 		&& (PLAYER_TALENT_RUNES [SPL_SummonGoblinSkeleton] == FALSE) 
 		{
-			Info_AddChoice 		(DIA_Karras_TEACH,B_BuildLearnString (NAME_SPL_SummonGoblinSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGoblinSkeleton)),DIA_Karras_TEACH_SUMGOBL);
+			Info_AddChoice 		(DIA_Karras_TEACH,B_BuildLearnString (NAME_SPL_SummonGoblinSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGoblinSkeleton)),TeachPlayerTalentRunes_SPL_SummonGoblinSkeleton);
 			abletolearn = (abletolearn +1);
 		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
 		&& (PLAYER_TALENT_RUNES [SPL_SummonSkeleton] == FALSE) 
 		{
-			Info_AddChoice	(DIA_Karras_TEACH, B_BuildLearnString (NAME_SPL_SummonSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonSkeleton)) ,DIA_Karras_TEACH_SummonSkeleton);
+			Info_AddChoice	(DIA_Karras_TEACH, B_BuildLearnString (NAME_SPL_SummonSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonSkeleton)) ,TeachPlayerTalentRunes_SPL_SummonSkeleton);
 			abletolearn = (abletolearn +1);
 		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4)
 		&& (PLAYER_TALENT_RUNES [SPL_SummonGolem] == FALSE) 
 		{
-			Info_AddChoice	(DIA_Karras_TEACH, B_BuildLearnString (NAME_SPL_SummonGolem, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGolem)) ,DIA_Karras_TEACH_SummonGolem);
+			Info_AddChoice	(DIA_Karras_TEACH, B_BuildLearnString (NAME_SPL_SummonGolem, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGolem)) ,TeachPlayerTalentRunes_SPL_SummonGolem);
 			abletolearn = (abletolearn +1);
 		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 5)
 		&& (PLAYER_TALENT_RUNES [SPL_SummonDemon] == FALSE)
 		{
-			Info_AddChoice	(DIA_Karras_TEACH, B_BuildLearnString (NAME_SPL_SummonDemon, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonDemon)) ,DIA_Karras_TEACH_SummonDemon);
+			Info_AddChoice	(DIA_Karras_TEACH, B_BuildLearnString (NAME_SPL_SummonDemon, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonDemon)) ,TeachPlayerTalentRunes_SPL_SummonDemon);
 			abletolearn = (abletolearn +1);
 		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 6)
 		&& (PLAYER_TALENT_RUNES [SPL_ArmyOfDarkness] == FALSE)
 		{
-			Info_AddChoice	(DIA_Karras_TEACH, B_BuildLearnString (NAME_SPL_ArmyOfDarkness, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ArmyOfDarkness)) ,DIA_Karras_TEACH_ArmyOfDarkness);
+			Info_AddChoice	(DIA_Karras_TEACH, B_BuildLearnString (NAME_SPL_ArmyOfDarkness, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ArmyOfDarkness)) ,TeachPlayerTalentRunes_SPL_ArmyOfDarkness);
 			abletolearn = (abletolearn +1);
 		};
 		if 	(abletolearn < 1)
@@ -291,30 +291,6 @@ func void DIA_Karras_TEACH_Info ()
 FUNC VOID DIA_Karras_TEACH_BACK()
 {
 	Info_ClearChoices   (DIA_Karras_TEACH);
-};
-FUNC VOID DIA_Karras_TEACH_SUMGOBL()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonGoblinSkeleton);	
-};
-FUNC VOID DIA_Karras_TEACHSummonWolf()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonWolf);	
-};
-FUNC VOID DIA_Karras_TEACH_SummonSkeleton()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonSkeleton);	
-};
-FUNC VOID DIA_Karras_TEACH_SummonGolem()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonGolem);	
-};
-FUNC VOID DIA_Karras_TEACH_SummonDemon()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonDemon);	
-};
-FUNC VOID DIA_Karras_TEACH_ArmyOfDarkness()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ArmyOfDarkness);	
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info TEACH

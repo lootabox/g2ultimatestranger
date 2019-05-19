@@ -187,7 +187,7 @@ func void DIA_Hyglas_TALENT_FIREBOLT_Info ()
 {
 	AI_Output (other, self, "DIA_Hyglas_TALENT_FIREBOLT_15_00"); //Teach me to create the FIRE ARROW rune.
 	
-	if (B_TeachPlayerTalentRunes (self, other, SPL_Firebolt))	
+	if (TeachPlayerTalentRunes_SPL_Firebolt())
 	{
 		AI_Output (self, other, "DIA_Hyglas_TALENT_FIREBOLT_14_01"); //In order to create a fire arrow rune, you need to join the sulphur with the runestone at the rune table.
 		AI_Output (self, other, "DIA_Hyglas_TALENT_FIREBOLT_14_02"); //The power of the fire arrow spell scroll will flow into the rune, and you will possess a tool of Innos.
@@ -284,20 +284,20 @@ func void DIA_Hyglas_TEACH_Info ()
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2) 
 	&& (PLAYER_TALENT_RUNES [SPL_InstantFireball] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_Hyglas_TEACH_InstantFireball);
+		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,TeachPlayerTalentRunes_SPL_InstantFireball);
 		abletolearn = (abletolearn +1);
 	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3) 
 	&& (PLAYER_TALENT_RUNES [SPL_Firestorm] == FALSE)
 	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Firestorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firestorm)) ,DIA_Hyglas_TEACH_Firestorm);
+		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Firestorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firestorm)) ,TeachPlayerTalentRunes_SPL_Firestorm);
 		abletolearn = (abletolearn +1);
 	};
 	
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4) 
 	&& (PLAYER_TALENT_RUNES [SPL_ChargeFireball] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_ChargeFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeFireball)) ,DIA_Hyglas_TEACH_ChargeFireball);
+		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_ChargeFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeFireball)) ,TeachPlayerTalentRunes_SPL_ChargeFireball);
 		abletolearn = (abletolearn +1);
 	};
 	
@@ -305,13 +305,13 @@ func void DIA_Hyglas_TEACH_Info ()
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 5) 
 	&& (PLAYER_TALENT_RUNES [SPL_Pyrokinesis] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)) ,DIA_Hyglas_TEACH_Pyrokinesis);
+		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)) ,TeachPlayerTalentRunes_SPL_Pyrokinesis);
 		abletolearn = (abletolearn +1);
 	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 6) 
 	&& (PLAYER_TALENT_RUNES [SPL_Firerain] == FALSE)
 	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,DIA_Hyglas_TEACH_Firerain);
+		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,TeachPlayerTalentRunes_SPL_Firerain);
 		abletolearn = (abletolearn +1);
 	};
 	if (abletolearn < 1)
@@ -323,26 +323,6 @@ func void DIA_Hyglas_TEACH_Info ()
 FUNC VOID DIA_Hyglas_TEACH_BACK ()
 {
 	Info_ClearChoices (DIA_Hyglas_TEACH);
-};
-FUNC VOID DIA_Hyglas_TEACH_InstantFireball()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_InstantFireball);	
-};
-FUNC VOID DIA_Hyglas_TEACH_ChargeFireball()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ChargeFireball);	
-};
-FUNC VOID DIA_Hyglas_TEACH_Pyrokinesis()
-{	
-	B_TeachPlayerTalentRunes (self, other, SPL_Pyrokinesis);	
-};
-FUNC VOID DIA_Hyglas_TEACH_Firestorm()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Firestorm);	
-};
-FUNC VOID DIA_Hyglas_TEACH_Firerain()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Firerain);	
 };
 
 //#######################################

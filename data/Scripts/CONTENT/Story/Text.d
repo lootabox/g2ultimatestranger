@@ -479,7 +479,7 @@ const string NAME_SPL_Reserved_68			= "NAME_SPL_RESERVED_68";
 const string NAME_SPL_Reserved_69			= "NAME_SPL_RESERVED_69";
 
 // Magick (Wasser)
-const string NAME_SPL_Thunderstorm			= "Storm";
+const string NAME_SPL_Thunderstorm			= "Ice Storm";
 const string NAME_SPL_Whirlwind				= "Dust Devil";
 const string NAME_SPL_WaterFist				= "Waterfist";
 const string NAME_SPL_IceLance				= "Ice Lance";

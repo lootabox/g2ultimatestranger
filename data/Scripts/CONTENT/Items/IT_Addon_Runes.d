@@ -6,7 +6,7 @@
 // Kreis des Wassers
 const	int	Value_Ru_Icelance			=	1000;
 const	int	Value_Ru_Whirlwind			=	1000;
-const	int	Value_Ru_Thunderstorm		=	1500;
+const	int	Value_Ru_Thunderstorm		=	2000;
 const	int	Value_Ru_Geyser				=	1500;
 const	int	Value_Ru_Waterfist			=	2000;
 

@@ -219,10 +219,6 @@ FUNC VOID PC_Circle_03_Info()
 	{
 		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_Geyser,PC_ItRu_Geyser_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_Thunderstorm] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_Thunderstorm,PC_ItRu_thunderstorm_Info);
-	};
 };
 	
 FUNC VOID PC_Circle_03_BACK()
@@ -275,7 +271,11 @@ FUNC VOID PC_Circle_04_Info()
 	if (PLAYER_TALENT_RUNES[SPL_Waterfist] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Circle_04,NAME_SPL_Waterfist,PC_ItRu_Waterfist_Info);
-	};	
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Thunderstorm] == TRUE)
+	{
+		Info_AddChoice 	  (PC_Circle_04,NAME_SPL_Thunderstorm,PC_ItRu_thunderstorm_Info);
+	};
 };
 FUNC VOID PC_Circle_04_BACK()
 {

@@ -44,7 +44,7 @@ FUNC VOID B_GiveTradeInv_Isgaroth (var C_NPC slf)
 		CreateInvItems   (slf, ItSc_InstantFireball, 5);
 		CreateInvItems   (slf, ItSc_SumWolf, 5);
 		CreateInvItems   (slf, ItSc_Windfist,4);
-		CreateInvItems   (slf, ItSc_Sleep, 2);
+		CreateInvItems   (slf, ItSc_Sleep, 1);
 		CreateInvItems   (slf, ItSc_Icebolt, 5);
 		
 		//***********************************
@@ -72,7 +72,7 @@ FUNC VOID B_GiveTradeInv_Isgaroth (var C_NPC slf)
 		
 		CreateInvItems   (slf, ItSc_Firestorm,	5);
 		CreateInvItems   (slf, ItSc_SumSkel,3);
-		CreateInvItems   (slf, ItSc_Fear, 2);	
+		CreateInvItems   (slf, ItSc_Fear, 1);	
 		CreateInvItems   (slf, ItSc_IceCube, 3);	
 		CreateInvItems   (slf, ItSc_ThunderBall,	5);
 		CreateInvItems   (slf, ItSc_TrfScavenger, 1);

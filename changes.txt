@@ -109,6 +109,7 @@ Removed visual transforming to Seekers of possessed NPCs.
 
 	NPCs Traders
 
+Cronos does not sell Pitch, Sulfur, Tongues of Fire, fire runebooks or any fire spell scrolls, he has some more ice/water spell scrolls for sale.
 Matteo only sells his leather armor until beginning of chapter 3, dialogue adjusted accordingly.
 Samuel gets a ring he was supposed to have in his trade inventory.
 

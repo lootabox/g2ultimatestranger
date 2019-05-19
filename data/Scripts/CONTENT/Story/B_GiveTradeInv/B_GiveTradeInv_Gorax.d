@@ -59,7 +59,7 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 	
 		CreateInvItems   (slf, ItSc_SumWolf, 5);
 		CreateInvItems   (slf, ItSc_Windfist,4);
-		CreateInvItems   (slf, ItSc_Sleep, 2);
+		CreateInvItems   (slf, ItSc_Sleep, 1);
 
 		CreateInvItems   (slf, ItAm_Prot_Edge_01, 1);
 		
@@ -95,7 +95,7 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems   (slf, ItSc_Firestorm, 4);
 		CreateInvItems   (slf, ItSc_Thunderball, 2);
 		CreateInvItems   (slf, ItSc_SumSkel,3);
-		CreateInvItems   (slf, ItSc_Fear, 2);	
+		CreateInvItems   (slf, ItSc_Fear, 1);	
 		CreateInvItems   (slf, ItSc_IceCube, 3);	
 
 	 

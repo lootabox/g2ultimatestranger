@@ -215,43 +215,43 @@ func void DIA_Marduk_TEACH_Info ()
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 1)
 		&& (PLAYER_TALENT_RUNES [SPL_Zap] == FALSE) 
 		{
-			Info_AddChoice 		(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_Zap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Zap)),DIA_Marduk_TEACH_ZAP);
+			Info_AddChoice 		(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_Zap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Zap)),TeachPlayerTalentRunes_SPL_Zap);
 			abletolearn = (abletolearn +1);
 		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 1)
 		&& (PLAYER_TALENT_RUNES [SPL_Icebolt] == FALSE)
 		{
-			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,DIA_Marduk_TEACH_Icebolt);
+			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,TeachPlayerTalentRunes_SPL_Icebolt);
 			abletolearn = (abletolearn +1);
 		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
 		&& (PLAYER_TALENT_RUNES [SPL_Icelance] == FALSE)
 		{
-			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_Icelance, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icelance)) ,DIA_Marduk_TEACH_Icelance);
+			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_Icelance, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icelance)) ,TeachPlayerTalentRunes_SPL_Icelance);
 			abletolearn = (abletolearn +1);
 		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3) 
 		&& (PLAYER_TALENT_RUNES [SPL_IceCube] == FALSE) 
 		{
-			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_IceCube, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceCube)) ,DIA_Marduk_TEACH_IceCube);
+			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_IceCube, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceCube)) ,TeachPlayerTalentRunes_SPL_IceCube);
 			abletolearn = (abletolearn +1);
 		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
 		&& (PLAYER_TALENT_RUNES [SPL_ChargeZap] == FALSE) 
 		{
-			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_ChargeZap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeZap)) ,DIA_Marduk_TEACH_ThunderBall);
+			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_ChargeZap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeZap)) ,TeachPlayerTalentRunes_SPL_ChargeZap);
 			abletolearn = (abletolearn +1);
 		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4) 
 		&& (PLAYER_TALENT_RUNES [SPL_LightningFlash] == FALSE) 
 		{
-			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_LightningFlash, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightningFlash)) ,DIA_Marduk_TEACH_LightningFlash);
+			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_LightningFlash, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightningFlash)) ,TeachPlayerTalentRunes_SPL_LightningFlash);
 			abletolearn = (abletolearn +1);
 		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 5)
 		&& (PLAYER_TALENT_RUNES [SPL_IceWave] == FALSE)
 		{
-			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_IceWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceWave)) ,DIA_Marduk_TEACH_IceWave);
+			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_IceWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceWave)) ,TeachPlayerTalentRunes_SPL_IceWave);
 			abletolearn = (abletolearn +1);
 		};
 		if (abletolearn < 1)
@@ -265,38 +265,6 @@ FUNC VOID DIA_Marduk_TEACH_BACK()
 {
 	Info_ClearChoices 	(DIA_Marduk_TEACH);
 };
-///////////////////////////////////////////////////////////////////////
-//	MAGIER ZAUBER 
-///////////////////////////////////////////////////////////////////////
-FUNC VOID DIA_Marduk_TEACH_ZAP()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Zap);	
-};
-FUNC VOID DIA_Marduk_TEACH_Icebolt()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Icebolt);	
-};
-FUNC VOID DIA_Marduk_TEACH_Icelance()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Icelance);	
-};
-FUNC VOID DIA_Marduk_TEACH_LightningFlash()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_LightningFlash);	
-};
-FUNC VOID DIA_Marduk_TEACH_IceCube()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_IceCube);	
-};
-FUNC VOID DIA_Marduk_TEACH_ThunderBall()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ChargeZap);	
-};
-FUNC VOID DIA_Marduk_TEACH_IceWave()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_IceWave);	
-};
-
 
 //#####################################################################
 //##

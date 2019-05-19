@@ -1029,19 +1029,19 @@ func void DIA_Parlan_TEACH_Info ()
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 1)
 	&& (PLAYER_TALENT_RUNES [SPL_LightHeal] == FALSE)
 	{
-		Info_AddChoice 	  (DIA_Parlan_TEACH,B_BuildLearnString (NAME_SPL_LightHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightHeal)),DIA_Parlan_TEACH_LIGHT_HEAL);
+		Info_AddChoice 	  (DIA_Parlan_TEACH,B_BuildLearnString (NAME_SPL_LightHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightHeal)),TeachPlayerTalentRunes_SPL_LightHeal);
 		abletolearn = (abletolearn +1);
 	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 1)
 	&& (PLAYER_TALENT_RUNES [SPL_LIGHT] == FALSE)
 	{
-		Info_AddChoice 	  (DIA_Parlan_TEACH,B_BuildLearnString (NAME_SPL_LIGHT, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LIGHT)),DIA_Parlan_TEACH_LIGHT);
+		Info_AddChoice 	  (DIA_Parlan_TEACH,B_BuildLearnString (NAME_SPL_LIGHT, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LIGHT)),TeachPlayerTalentRunes_SPL_Light);
 		abletolearn = (abletolearn +1);
 	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
 	&& (PLAYER_TALENT_RUNES [SPL_WINDFIST] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_WINDFIST, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_WINDFIST)) ,DIA_Parlan_TEACH_WINDFIST);
+		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_WINDFIST, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_WINDFIST)) ,TeachPlayerTalentRunes_SPL_WindFist);
 		abletolearn = (abletolearn +1);
 	};
 	/* if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
@@ -1053,7 +1053,7 @@ func void DIA_Parlan_TEACH_Info ()
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
 	&& (PLAYER_TALENT_RUNES [SPL_MediumHeal] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_MediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MediumHeal)) ,DIA_Parlan_TEACH_MediumHeal);
+		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_MediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MediumHeal)) ,TeachPlayerTalentRunes_SPL_MediumHeal);
 		abletolearn = (abletolearn +1);
 	};
 /* 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
@@ -1065,19 +1065,19 @@ func void DIA_Parlan_TEACH_Info ()
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4)
 	&& (PLAYER_TALENT_RUNES [SPL_DestroyUndead] == FALSE) 
 	{
-		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_DestroyUndead, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_DestroyUndead)) ,DIA_Parlan_TEACH_DestroyUndead);
+		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_DestroyUndead, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_DestroyUndead)) ,TeachPlayerTalentRunes_SPL_DestroyUndead);
 		abletolearn = (abletolearn +1);
 	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 5)
 	&& (PLAYER_TALENT_RUNES [SPL_FullHeal] == FALSE)
 	{
-		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_FullHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FullHeal)) ,DIA_Parlan_TEACH_FullHeal);
+		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_FullHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FullHeal)) ,TeachPlayerTalentRunes_SPL_FullHeal);
 		abletolearn = (abletolearn +1);
 	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 5)
 	&& (PLAYER_TALENT_RUNES [SPL_Shrink] == FALSE)
 	{
-		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_Shrink, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Shrink)) ,DIA_Parlan_TEACH_Shrink);
+		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_Shrink, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Shrink)) ,TeachPlayerTalentRunes_SPL_Shrink);
 		abletolearn = (abletolearn +1);
 	};
 	if (abletolearn < 1)
@@ -1088,42 +1088,6 @@ func void DIA_Parlan_TEACH_Info ()
 FUNC VOID DIA_Parlan_TEACH_BACK()
 {
 	Info_ClearChoices (DIA_Parlan_TEACH);
-};
-FUNC VOID DIA_Parlan_TEACH_LIGHT_HEAL()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_LightHeal);
-};
-FUNC VOID DIA_Parlan_TEACH_LIGHT()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_LIGHT);
-};
-FUNC VOID DIA_Parlan_TEACH_WINDFIST()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_WINDFIST);
-};
-FUNC VOID DIA_Parlan_TEACH_Sleep()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Sleep);
-};
-FUNC VOID DIA_Parlan_TEACH_MediumHeal()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_MediumHeal);
-};
-FUNC VOID DIA_Parlan_TEACH_Fear()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Fear);
-};
-FUNC VOID DIA_Parlan_TEACH_DestroyUndead()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_DestroyUndead);
-};
-FUNC VOID DIA_Parlan_TEACH_FullHeal()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_FullHeal);
-};
-FUNC VOID DIA_Parlan_TEACH_Shrink()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Shrink);
 };
 
 //###########################################
