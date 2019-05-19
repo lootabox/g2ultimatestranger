@@ -5,30 +5,30 @@
 //------------------------------------------------------------------------------------------
 
 // Tuning
-const int	STR_StPlLevel1		=	2;                                                        
-const int	STR_StPlLevel2		=	4;                                                        
-const int	STR_StPlLevel3		=	6;                                                        
-const int	DEX_StPlLevel1		=	2;                                                        
-const int	DEX_StPlLevel2		=	4;                                                        
-const int	DEX_StPlLevel3		=	6;                                                        
-const int	HPMax_StPlLevel1	=	5;                                                       
-const int	HPMax_StPlLevel2	=	10;                                                       
-const int	HPMax_StPlLevel3	=	15;                                                      
-const int	ManaMax_StPlLevel1	=	2;                                                       
-const int	ManaMax_StPlLevel2	=	4;                                                       
-const int	ManaMax_StPlLevel3	=	6;                                                      
-const int	OneH_StPlLevel1		=	2;                                                       
-const int	OneH_StPlLevel2		=	4;                                                       
-const int	OneH_StPlLevel3		=	6;                                                      
-const int	TwoH_StPlLevel1		=	2;                                                       
-const int	TwoH_StPlLevel2		=	4;                                                       
-const int	TwoH_StPlLevel3		=	6;                                                      
-const int	Bow_StPlLevel1		=	2;                                                       
-const int	Bow_StPlLevel2		=	4;                                                       
-const int	Bow_StPlLevel3		=	6;                                                      
-const int	CrsBow_StPlLevel1	=	2;                                                       
-const int	CrsBow_StPlLevel2	=	4;                                                       
-const int	CrsBow_StPlLevel3	=	6;                                                      
+const int	STR_StPlLevel1		=	1;
+const int	STR_StPlLevel2		=	2;
+const int	STR_StPlLevel3		=	3;
+const int	DEX_StPlLevel1		=	1;
+const int	DEX_StPlLevel2		=	2;
+const int	DEX_StPlLevel3		=	3;
+const int	HPMax_StPlLevel1	=	2;
+const int	HPMax_StPlLevel2	=	4;
+const int	HPMax_StPlLevel3	=	6;
+const int	ManaMax_StPlLevel1	=	1;
+const int	ManaMax_StPlLevel2	=	2;
+const int	ManaMax_StPlLevel3	=	3;
+const int	OneH_StPlLevel1		=	1;
+const int	OneH_StPlLevel2		=	2;
+const int	OneH_StPlLevel3		=	3;
+const int	TwoH_StPlLevel1		=	1;
+const int	TwoH_StPlLevel2		=	2;
+const int	TwoH_StPlLevel3		=	3;
+const int	Bow_StPlLevel1		=	1;
+const int	Bow_StPlLevel2		=	2;
+const int	Bow_StPlLevel3		=	3;
+const int	CrsBow_StPlLevel1	=	1;
+const int	CrsBow_StPlLevel2	=	2;
+const int	CrsBow_StPlLevel3	=	3;
     
 const int	Value_StonePlateMagic	= 100;
 

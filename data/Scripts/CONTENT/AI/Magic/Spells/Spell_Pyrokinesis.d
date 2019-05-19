@@ -2,8 +2,7 @@
 // SPL_Pyrokinesis  ALIAS  ChargeFireStorm
 // ***************
 
-const int SPL_Cost_FireStorm		= 200; //4*50
-const int STEP_Firestorm			= 50;
+const int SPL_Cost_Firestorm		= 50; //*4
 const int SPL_Damage_FireStorm 		= 75;
 
 	// obsolete:
@@ -19,7 +18,7 @@ INSTANCE Spell_Pyrokinesis (C_Spell_Proto)
 
 func int Spell_Logic_Pyrokinesis (var int manaInvested)
 {
-	return Spell_ProcessManaTier(self, manaInvested, STEP_Firestorm);
+	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_Firestorm, 4);
 };
 
 func void Spell_Cast_Pyrokinesis(var int spellLevel)

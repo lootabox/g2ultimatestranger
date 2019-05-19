@@ -20,7 +20,7 @@ INSTANCE ItSc_Geyser (C_Item)
 
 	spell				= 	SPL_Geyser;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_Geyser);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -30,7 +30,7 @@ INSTANCE ItSc_Geyser (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Geyser);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Geyser;
@@ -53,7 +53,7 @@ INSTANCE ItSc_Icelance (C_Item)
 
 	spell				= 	SPL_Icelance;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_Icelance);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -63,7 +63,7 @@ INSTANCE ItSc_Icelance (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Icelance);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Icelance;
@@ -86,7 +86,7 @@ INSTANCE ItSc_Waterfist (C_Item)
 
 	spell				= 	SPL_Waterfist;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_Waterfist);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -96,7 +96,7 @@ INSTANCE ItSc_Waterfist (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Waterfist);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Waterfist;
@@ -119,7 +119,7 @@ INSTANCE ItSc_Thunderstorm (C_Item)
 
 	spell				= 	SPL_Thunderstorm;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Thunderstorm);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -129,7 +129,7 @@ INSTANCE ItSc_Thunderstorm (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Thunderstorm);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;			
 	COUNT	[2]			=	SPL_DAMAGE_Thunderstorm;
@@ -152,7 +152,7 @@ INSTANCE ItSc_Whirlwind (C_Item)
 
 	spell				= 	SPL_Whirlwind;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_Whirlwind);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -162,7 +162,7 @@ INSTANCE ItSc_Whirlwind (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Whirlwind);
 	
 	TEXT	[2]			=	NAME_Sec_Duration;				
 	COUNT	[2]			=	SPL_TIME_WHIRLWIND;
@@ -187,7 +187,7 @@ INSTANCE ItSc_Water06 (C_Item)
 
 	spell				= 	SPL_LIGHT;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Light);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -197,7 +197,7 @@ INSTANCE ItSc_Water06 (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
 	TEXT	[2]			=	NAME_Duration;		
 	COUNT	[2]			=	SPL_Duration_LIGHT;
@@ -220,7 +220,7 @@ INSTANCE ItSc_Water07 (C_Item)
 
 	spell				= 	SPL_LIGHT;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Light);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -230,7 +230,7 @@ INSTANCE ItSc_Water07 (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
 	TEXT	[2]			=	NAME_Duration;		
 	COUNT	[2]			=	SPL_Duration_LIGHT;
@@ -253,7 +253,7 @@ INSTANCE ItSc_Water08 (C_Item)
 
 	spell				= 	SPL_LIGHT;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Light);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -263,7 +263,7 @@ INSTANCE ItSc_Water08 (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
 	TEXT	[2]			=	NAME_Duration;		
 	COUNT	[2]			=	SPL_Duration_LIGHT;
@@ -286,7 +286,7 @@ INSTANCE ItSc_Water09 (C_Item)
 
 	spell				= 	SPL_LIGHT;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Light);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -296,7 +296,7 @@ INSTANCE ItSc_Water09 (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
 	TEXT	[2]			=	NAME_Duration;		
 	COUNT	[2]			=	SPL_Duration_LIGHT;
@@ -319,7 +319,7 @@ INSTANCE ItSc_Water10 (C_Item)
 
 	spell				= 	SPL_LIGHT;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Light);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -329,7 +329,7 @@ INSTANCE ItSc_Water10 (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
 	TEXT	[2]			=	NAME_Duration;		
 	COUNT	[2]			=	SPL_Duration_LIGHT;
@@ -352,7 +352,7 @@ INSTANCE ItSc_Water11 (C_Item)
 
 	spell				= 	SPL_LIGHT;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Light);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -362,7 +362,7 @@ INSTANCE ItSc_Water11 (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
 	TEXT	[2]			=	NAME_Duration;		
 	COUNT	[2]			=	SPL_Duration_LIGHT;
@@ -385,7 +385,7 @@ INSTANCE ItSc_Water12 (C_Item)
 
 	spell				= 	SPL_LIGHT;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Light);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -395,7 +395,7 @@ INSTANCE ItSc_Water12 (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
 	TEXT	[2]			=	NAME_Duration;		
 	COUNT	[2]			=	SPL_Duration_LIGHT;
@@ -418,7 +418,7 @@ INSTANCE ItSc_Water13 (C_Item)
 
 	spell				= 	SPL_LIGHT;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Light);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -428,7 +428,7 @@ INSTANCE ItSc_Water13 (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
 	TEXT	[2]			=	NAME_Duration;		
 	COUNT	[2]			=	SPL_Duration_LIGHT;
@@ -451,7 +451,7 @@ INSTANCE ItSc_Water14 (C_Item)
 
 	spell				= 	SPL_LIGHT;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Light);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -461,7 +461,7 @@ INSTANCE ItSc_Water14 (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
 	TEXT	[2]			=	NAME_Duration;		
 	COUNT	[2]			=	SPL_Duration_LIGHT;
@@ -484,7 +484,7 @@ INSTANCE ItSc_Water15 (C_Item)
 
 	spell				= 	SPL_LIGHT;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Light);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -494,7 +494,7 @@ INSTANCE ItSc_Water15 (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
 	TEXT	[2]			=	NAME_Duration;		
 	COUNT	[2]			=	SPL_Duration_LIGHT;
@@ -517,7 +517,7 @@ INSTANCE ItSc_Water16 (C_Item)
 
 	spell				= 	SPL_LIGHT;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Light);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -527,7 +527,7 @@ INSTANCE ItSc_Water16 (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;		
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
 	TEXT	[2]			=	NAME_Duration;		
 	COUNT	[2]			=	SPL_Duration_LIGHT;

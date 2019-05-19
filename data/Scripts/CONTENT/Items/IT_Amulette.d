@@ -2,7 +2,7 @@
 
 // Schutzamulette
  
-const int Value_Am_ProtFire 		= 600;	const int Am_ProtFire		= 10; 
+const int Value_Am_ProtFire 		= 600;	const int Am_ProtFire		= 10;
 const int Value_Am_ProtEdge 		= 800;	const int Am_ProtEdge		= 10;
 const int Value_Am_ProtMage 		= 700;	const int Am_ProtMage		= 10;
 const int Value_Am_ProtPoint 		= 500;	const int Am_ProtPoint		= 10;
@@ -13,16 +13,16 @@ const int Value_Am_ProtTotal 		= 1000;	const int Am_TProtFire		= 8; // Schutzamu
 											const int Am_TProtPoint		= 8;
 // Andere Amulette
 
-const int Value_Am_Dex 				= 1000;	const int Am_Dex			= 10; 
+const int Value_Am_Dex 				= 1000;	const int Am_Dex			= 10;
 const int Value_Am_Mana 			= 1000;	const int Am_Mana			= 10; //ITAM_HP
-const int Value_Am_Strg 			= 1000;	const int Am_Strg			= 10; 
-const int Value_Am_Hp 				= 400;	const int Am_Hp				= 40; 
+const int Value_Am_Strg 			= 1000;	const int Am_Strg			= 10;
+const int Value_Am_Hp 				= 400;	const int Am_Hp				= 40;
 
 const int Value_Am_HpMana 			= 1300;	const int Am_HpMana_Hp		= 30; // Mana + Hp Amulett
-											const int Am_HpMana_Mana	= 10; 
+											const int Am_HpMana_Mana	= 10;
 
 const int Value_Am_DexStrg 			= 1600;	const int Am_DexStrg_Dex	= 8; // Strg + Dex Amulett
-											const int Am_DexStrg_Strg	= 8; 
+											const int Am_DexStrg_Strg	= 8;
 /******************************************************************************************/
 INSTANCE  ItAm_Prot_Fire_01(C_Item)
 {

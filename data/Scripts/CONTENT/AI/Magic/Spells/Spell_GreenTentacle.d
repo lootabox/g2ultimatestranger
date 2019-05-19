@@ -16,31 +16,11 @@ INSTANCE Spell_Greententacle (C_Spell_Proto)
 
 func int Spell_Logic_Greententacle (var int manaInvested)
 {	
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Greententacle)
-	{	
-		return SPL_SENDCAST;
-	}
-	else //nicht genug Mana
-	{
-		return SPL_SENDSTOP;
-	};
+	return Spell_Logic_Basic(self, SPL_Cost_Greententacle);
 };
 
 
 func void Spell_Cast_Greententacle()
 {
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Greententacle;
-	};
-	
-	self.aivar[AIV_SelectSpell] += 1;
+	Spell_Cast_Basic(self, SPL_Cost_Greententacle);
 };

@@ -17,14 +17,14 @@ INSTANCE ItSe_ErzFisch (C_Item)
 	on_state[0]			=	Use_ErzFisch;
 
 	description			= 	name;
-	TEXT[2]				= 	"Something is hidden inside this fish.";		
+	TEXT[2]				= 	"Something is hidden inside this fish.";
 	
 };
 
-	FUNC VOID Use_ErzFisch()
-	{
-		B_PlayerFindItem (ItMi_Nugget,1);
-	};
+FUNC VOID Use_ErzFisch()
+{
+	B_PlayerFindItem (ItMi_Nugget,1);
+};
 //****************************************************************************
 //				Goldfisch  (Halvor)
 //			---------------------------------------------
@@ -44,14 +44,14 @@ INSTANCE ItSe_GoldFisch (C_Item)
 	on_state[0]			=	Use_GoldFisch;
 
 	description			= 	name;
-	TEXT[2]				= 	"Something is hidden inside this fish.";		
+	TEXT[2]				= 	"Something is hidden inside this fish.";
 	
 };
 
-	FUNC VOID Use_GoldFisch()
-	{
-		B_PlayerFindItem (ItMI_Gold,50);
-	};	
+FUNC VOID Use_GoldFisch()
+{
+	B_PlayerFindItem (ItMI_Gold,50);
+};	
 //****************************************************************************
 //				Ringfisch  (Halvor) (Protcetion Fire Ring)
 //			---------------------------------------------
@@ -71,14 +71,14 @@ INSTANCE ItSe_Ringfisch (C_Item)
 	on_state[0]			=	Use_Ringfisch;
 
 	description			= 	name;
-	TEXT[2]				= 	"Something is hidden inside this fish.";		
+	TEXT[2]				= 	"Something is hidden inside this fish.";
 	
 };
 
-	FUNC VOID Use_Ringfisch()
-	{
-		B_PlayerFindItem (ItRi_Prot_Fire_01,1);
-	};	
+FUNC VOID Use_Ringfisch()
+{
+	B_PlayerFindItem (ItRi_Prot_Fire_01,1);
+};
 //****************************************************************************
 //				Lockpickfisch  (Halvor)
 //			---------------------------------------------
@@ -98,14 +98,14 @@ INSTANCE ItSe_LockpickFisch (C_Item)
 	on_state[0]			=	Use_LockpickFisch;
 
 	description			= 	name;
-	TEXT[2]				= 	"Something is hidden inside this fish.";		
+	TEXT[2]				= 	"Something is hidden inside this fish.";
 	
 };
 
-	FUNC VOID Use_LockpickFisch()
-	{
-		B_PlayerFindItem (ITKE_Lockpick,3);
-	};
+FUNC VOID Use_LockpickFisch()
+{
+	B_PlayerFindItem (ITKE_Lockpick,3);
+};
 
 
 //****************************************************************************
@@ -136,7 +136,7 @@ INSTANCE ItSe_GoldPocket25	(C_Item)
 
 FUNC VOID GoldPocket25 ()
 {
-		B_PlayerFindItem (ItMI_Gold,25);	
+	B_PlayerFindItem (ItMI_Gold,25);	
 };
 //------------- 50 Gold -----------------------
 INSTANCE ItSe_GoldPocket50	(C_Item)
@@ -161,7 +161,7 @@ INSTANCE ItSe_GoldPocket50	(C_Item)
 
 FUNC VOID GoldPocket50 ()
 {
-		B_PlayerFindItem (ItMI_Gold,50);
+	B_PlayerFindItem (ItMI_Gold,50);
 };
 //------------- 100 Gold -----------------------
 INSTANCE ItSe_GoldPocket100	(C_Item)
@@ -186,8 +186,8 @@ INSTANCE ItSe_GoldPocket100	(C_Item)
 
 FUNC VOID GoldPocket100 ()
 {
-		B_PlayerFindItem (ItMI_Gold,100);
-};	
+	B_PlayerFindItem (ItMI_Gold,100);
+};
 //------------- Hannas Beutel -----------------------
 INSTANCE ItSe_HannasBeutel	(C_Item)
 {
@@ -211,10 +211,10 @@ INSTANCE ItSe_HannasBeutel	(C_Item)
 
 FUNC VOID HannasBeutel ()
 {
-		CreateInvItems (hero,ITKE_Lockpick,10);
-		CreateInvItems (hero,ItKe_ThiefTreasure,1);
-		Print (PRINT_HannasBeutel);
-};	
+	CreateInvItems (hero,ITKE_Lockpick,10);
+	CreateInvItems (hero,ItKe_ThiefTreasure,1);
+	Print (PRINT_HannasBeutel);
+};
 
 
 

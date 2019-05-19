@@ -1,53 +1,53 @@
 //------------------------------------------------------------------------------------------
 //Amulette 
 //------------------------------------------------------------------------------------------
-//Constanten 									
+//Constanten
 
-const int Value_ItAm_Addon_Franco		= 1200;	
+const int Value_ItAm_Addon_Franco		= 1200;
 const int HP_ItAm_Addon_Franco			= 40;
 const int STR_Franco					= 4;
 const int DEX_Franco					= 4;
 //------------------------------------------------------------------------------------------
 const int Value_ItRi_Addon_Health_01  	  = 400;
 const int Value_ItAm_Addon_Health 		  = 800;
-                                                                                                                
+
 const int Value_ItRi_Addon_Mana_01  	  = 1000;
 const int Value_ItAm_Addon_Mana 		  = 2000;	
-														
+
 const int Value_ItRi_Addon_STR_01  		  = 500;	
-const int Value_ItAm_Addon_STR 			  = 1000;																
-                                           
+const int Value_ItAm_Addon_STR 			  = 1000;
+
 //------------------------------------------------------------------------------------------
-//	Artefakt Set der Heiler                                                                                            													
+//	Artefakt Set der Heiler
 //------------------------------------------------------------------------------------------
 const int  HP_Ring_Solo_Bonus			=	20; //EIN Ring alleine 
 const int  HP_Ring_Double_Bonus			=   60; //ZWEITER RING
-  		                                                                                    
-const int  HP_Amulett_Solo_Bonus		=   40;	//Amulett alleine                  
-const int  HP_Amulett_EinRing_Bonus		=   80;	//wenn schon ein Ring equipped ist 
-const int  HP_Amulett_Artefakt_Bonus	=  160; //wenn schon beide Ringe equipped sind 	
+
+const int  HP_Amulett_Solo_Bonus		=   40;	//Amulett alleine
+const int  HP_Amulett_EinRing_Bonus		=   80;	//wenn schon ein Ring equipped ist
+const int  HP_Amulett_Artefakt_Bonus	=  160; //wenn schon beide Ringe equipped sind
 
 //------------------------------------------------------------------------------------------
-//	Artefakt Set der Priester                                   													
-//------------------------------------------------------------------------------------------                                                               
-const int  MA_Ring_Solo_Bonus			=	5;  //EIN Ring alleine                           
-const int  MA_Ring_Double_Bonus			=   15; //ZWEITER RING                       		
-  		                                                                                    
+//	Artefakt Set der Priester
+//------------------------------------------------------------------------------------------
+const int  MA_Ring_Solo_Bonus			=	5;  //EIN Ring alleine
+const int  MA_Ring_Double_Bonus			=   15; //ZWEITER RING
+
 const int  MA_Amulett_Solo_Bonus		=   10;	//Amulett alleine
 const int  MA_Amulett_EinRing_Bonus		=   20;	//wenn schon ein Ring equipped ist
 const int  MA_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped sind
 
 //------------------------------------------------------------------------------------------
-//	Artefakt Set der Krieger                                   													
-//------------------------------------------------------------------------------------------                                                               
+//	Artefakt Set der Krieger
+//------------------------------------------------------------------------------------------
 
 
-const int  STR_Ring_Solo_Bonus			=	5;  //EIN Ring alleine                           
-const int  STR_Ring_Double_Bonus		=   15; //ZWEITER RING                       		
-  		                                                                                    
-const int  STR_Amulett_Solo_Bonus		=   10;	//Amulett alleine                          
-const int  STR_Amulett_EinRing_Bonus	=   20;	//wenn schon ein Ring equipped ist         
-const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped sind 	
+const int  STR_Ring_Solo_Bonus			=	5;  //EIN Ring alleine
+const int  STR_Ring_Double_Bonus		=   15; //ZWEITER RING
+
+const int  STR_Amulett_Solo_Bonus		=   10;	//Amulett alleine
+const int  STR_Amulett_EinRing_Bonus	=   20;	//wenn schon ein Ring equipped ist
+const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped sind
 
 //------------------------------------------------------------------------------------------
 // Items 

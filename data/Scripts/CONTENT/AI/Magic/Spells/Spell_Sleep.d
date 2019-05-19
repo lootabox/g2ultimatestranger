@@ -15,17 +15,10 @@ instance Spell_Sleep (C_Spell_Proto)
 
 func int Spell_Logic_Sleep (var int manaInvested) //Parameter manaInvested wird hier nicht benutzt
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
-	|| (self.attribute[ATR_MANA] >= SPL_Cost_Sleep)
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Sleep);
+	if (logicResult == SPL_SENDCAST)
 	{
-		if (Npc_GetActiveSpellIsScroll(self))
-		{
-			self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-		}
-		else
-		{
-			self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Sleep;
-		};
+		Spell_Cast_Basic(self, SPL_Cost_Sleep);
 
 		if (!C_BodyStateContains(other, BS_SWIM))
 		&& (!C_BodyStateContains(other, BS_DIVE))
@@ -51,12 +44,9 @@ func int Spell_Logic_Sleep (var int manaInvested) //Parameter manaInvested wird 
 			B_ClearPerceptions	(other);
 			AI_StartState		(other, ZS_MagicSleep, 0, "");
 		};
-		return SPL_SENDCAST; //Spell wird auch gecasted, wenn keine Auswirkungen (other geht nicht in ZS) Mana is dann weg - Pech gehabt! (soll so sein!)
-	}
-	else //nicht genug Mana
-	{
-		return SPL_SENDSTOP;
+		//Spell wird auch gecasted, wenn keine Auswirkungen (other geht nicht in ZS) Mana is dann weg - Pech gehabt! (soll so sein!)
 	};
+	return logicResult;
 };
 
 

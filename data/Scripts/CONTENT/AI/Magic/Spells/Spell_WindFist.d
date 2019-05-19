@@ -2,8 +2,7 @@
 // SPL_WindFist
 // ************
 
-const int SPL_Cost_WindFist				= 80; //4*20
-const int STEP_WindFist					= 20;
+const int SPL_Cost_WindFist				= 20; //*4
 const int SPL_Damage_WindFist			= 50;
 
 INSTANCE Spell_WindFist (C_Spell_Proto)
@@ -19,7 +18,7 @@ INSTANCE Spell_WindFist (C_Spell_Proto)
 
 func int Spell_Logic_WindFist (var int manaInvested)
 {
-	return Spell_ProcessManaTier(self, manaInvested, STEP_WindFist);
+	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_WindFist, 4);
 };
 
 func void Spell_Cast_WindFist(var int spellLevel)

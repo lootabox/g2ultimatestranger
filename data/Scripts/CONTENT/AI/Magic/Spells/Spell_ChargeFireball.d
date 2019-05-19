@@ -2,8 +2,7 @@
 // SPL_ChargeFireball
 // ******************
 
-const int SPL_Cost_ChargeFireball		= 160; //4*40
-const int STEP_ChargeFireball			= 40;
+const int SPL_Cost_ChargeFireball		= 40; //*4
 const int SPL_Damage_ChargeFireball 	= 75;
 
 INSTANCE Spell_ChargeFireball (C_Spell_Proto)
@@ -15,7 +14,7 @@ INSTANCE Spell_ChargeFireball (C_Spell_Proto)
 
 func int Spell_Logic_ChargeFireball (var int manaInvested) 
 {
-	return Spell_ProcessManaTier(self, manaInvested, STEP_ChargeFireball);
+	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_ChargeFireball, 4);
 };
 
 func void Spell_Cast_ChargeFireball(var int spellLevel)

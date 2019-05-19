@@ -17,31 +17,11 @@ INSTANCE Spell_Shrink (C_Spell_Proto)
 
 func int Spell_Logic_Shrink	(var int manaInvested) 	//Parameter manaInvested wird hier nicht benutzt
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Shrink)
-	{
-		return SPL_SENDCAST;
-	}
-	else //nicht genug Mana
-	{
-		return SPL_SENDSTOP;
-	};
+	return Spell_Logic_Basic(self, SPL_Cost_Shrink);
 };
 
 func void Spell_Cast_Shrink()
 {
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Shrink;
-	};
-	
 	if (other.flags != NPC_FLAG_IMMORTAL)		//nicht auf Immortals
 	&& (!C_NpcIsUndead(other)) 					//nicht auf Untote
 	&& (other.guild > GIL_SEPERATOR_HUM)		//nicht auf Humans
@@ -52,5 +32,5 @@ func void Spell_Cast_Shrink()
 		AI_StartState		(other, ZS_MagicShrink, 0, "");
 	};
 	
-	self.aivar[AIV_SelectSpell] += 1;
+	Spell_Cast_Basic(self, SPL_Cost_Shrink);
 };

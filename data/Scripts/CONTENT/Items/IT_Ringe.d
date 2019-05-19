@@ -1,12 +1,12 @@
 //Ringe//
 
 //Schutzringe
-const int Value_Ri_ProtFire 		= 250;	const int Ri_ProtFire		= 3; 
+const int Value_Ri_ProtFire 		= 250;	const int Ri_ProtFire		= 3;
 const int Value_Ri_ProtEdge 		= 250;	const int Ri_ProtEdge		= 3;
 const int Value_Ri_ProtMage 		= 250;	const int Ri_ProtMage		= 3;
 const int Value_Ri_ProtPoint 		= 250;	const int Ri_ProtPoint		= 3;
 
-const int Value_Ri_ProtFire02 		= 500;	const int Ri_ProtFire02		= 5; 
+const int Value_Ri_ProtFire02 		= 500;	const int Ri_ProtFire02		= 5;
 const int Value_Ri_ProtEdge02 		= 500;	const int Ri_ProtEdge02		= 5;
 const int Value_Ri_ProtMage02 		= 500;	const int Ri_ProtMage02		= 5;
 const int Value_Ri_ProtPoint02 		= 500;	const int Ri_ProtPoint02	= 5;
@@ -23,16 +23,16 @@ const int Value_Ri_ProtTotal02 		= 1000;	const int Ri_TProtFire02	= 3; // Schutz
 
 // Andere Ringe
 
-const int Value_Ri_Dex 				= 300;	const int Ri_Dex			=  3; 
-const int Value_Ri_Dex02 			= 500;	const int Ri_Dex02			=  5; 
+const int Value_Ri_Dex 				= 300;	const int Ri_Dex			=  3;
+const int Value_Ri_Dex02 			= 500;	const int Ri_Dex02			=  5;
 
-const int Value_Ri_Mana 			= 500;	const int Ri_Mana			=  5;   
-const int Value_Ri_Mana02 			= 1000;	const int Ri_Mana02			=  10; 
+const int Value_Ri_Mana 			= 500;	const int Ri_Mana			=  5;
+const int Value_Ri_Mana02 			= 1000;	const int Ri_Mana02			=  10;
 
-const int Value_Ri_Strg 			= 300;	const int Ri_Strg			=  3; 
-const int Value_Ri_Strg02 			= 500;	const int Ri_Strg02			=  5; 
+const int Value_Ri_Strg 			= 300;	const int Ri_Strg			=  3;
+const int Value_Ri_Strg02 			= 500;	const int Ri_Strg02			=  5;
 
-const int Value_Ri_Hp 				= 200;	const int Ri_Hp				= 20; 
+const int Value_Ri_Hp 				= 200;	const int Ri_Hp				= 20;
 const int Value_Ri_Hp02 			= 400;	const int Ri_Hp02			= 40;
 
 const int Value_Ri_HpMana 			= 1300;	const int Ri_HpMana_Hp		= 30;

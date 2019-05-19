@@ -222,3 +222,16 @@ func void MoreAlphaPolys(var int newCount) {
         MEM_WriteByte(ptr, 144); //0x90 = nop
     };
 };
+
+//************************************************
+//   Scroll mana cost
+//************************************************
+func int C_GetScrollCost(var int cost)
+{
+    Print(IntToString(cost));
+	if (cost < 10)
+	{
+		return 5;
+	};
+	return (cost / 10) * 5;
+};

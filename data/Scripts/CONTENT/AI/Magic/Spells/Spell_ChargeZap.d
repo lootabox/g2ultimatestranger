@@ -2,8 +2,7 @@
 // SPL_ChargeZap
 // ******************
 
-const int SPL_Cost_ChargeZap		= 40; //4*10
-const int STEP_ChargeZap			= 10;
+const int SPL_Cost_ChargeZap		= 10; //*4
 const int SPL_Damage_ChargeZap 		= 30;
 
 INSTANCE Spell_ChargeZap (C_Spell_Proto)
@@ -15,7 +14,7 @@ INSTANCE Spell_ChargeZap (C_Spell_Proto)
 
 func int Spell_Logic_ChargeZap (var int manaInvested) 
 {
-	return Spell_ProcessManaTier(self, manaInvested, STEP_ChargeZap);
+	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_ChargeZap, 4);
 };
 
 func void Spell_Cast_ChargeZap(var int spellLevel)

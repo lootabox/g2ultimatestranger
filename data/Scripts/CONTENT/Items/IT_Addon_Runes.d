@@ -43,6 +43,8 @@ INSTANCE ItRu_Thunderstorm (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Thunderstorm;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Thunderstorm;
 	mag_circle			=	3;
 
 	wear				= 	WEAR_EFFECT;
@@ -77,6 +79,8 @@ INSTANCE ItRu_Whirlwind (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Whirlwind;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Whirlwind;	
 	mag_circle			=	2;
 
 	wear				= 	WEAR_EFFECT;
@@ -111,6 +115,8 @@ INSTANCE ItRu_Geyser (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	3;
 
 	wear				= 	WEAR_EFFECT;
@@ -144,6 +150,8 @@ INSTANCE ItRu_Waterfist	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Waterfist;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Waterfist;	
 	mag_circle			=	4;
 
 	wear				= 	WEAR_EFFECT;
@@ -178,6 +186,8 @@ INSTANCE ItRu_Icelance	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Icelance;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Icelance;	
 	mag_circle			=	2;
 
 	wear				= 	WEAR_EFFECT;
@@ -217,6 +227,8 @@ INSTANCE ItRu_BeliarsRage	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Energyball;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Energyball;	
 	mag_circle			=	3;
 
 	wear				= 	WEAR_EFFECT;
@@ -251,6 +263,8 @@ INSTANCE ItRu_SuckEnergy	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SuckEnergy;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_SuckEnergy;	
 	mag_circle			=	2;
 
 	wear				= 	WEAR_EFFECT;
@@ -288,6 +302,8 @@ INSTANCE ItRu_GreenTentacle (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Greententacle;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Greententacle;	
 	mag_circle			=	1;
 
 	wear				= 	WEAR_EFFECT;
@@ -322,6 +338,8 @@ INSTANCE ItRu_Swarm	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Swarm;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Swarm;	
 	mag_circle			=	4;
 
 	wear				= 	WEAR_EFFECT;
@@ -359,6 +377,8 @@ INSTANCE ItRu_Skull	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Skull;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Skull;	
 	mag_circle			=	5;
 
 	wear				= 	WEAR_EFFECT;
@@ -396,6 +416,8 @@ INSTANCE ItRu_SummonZombie	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SummonZombie;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_SummonZombie;	
 	mag_circle			=	4;
 
 	wear				= 	WEAR_EFFECT;
@@ -427,6 +449,8 @@ INSTANCE ItRu_SummonGuardian	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SummonGuardian;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_SummonGuardian;	
 	mag_circle			=	3;
 
 	wear				= 	WEAR_EFFECT;
@@ -469,6 +493,8 @@ INSTANCE ItRu_Water06 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -499,6 +525,8 @@ INSTANCE ItRu_Water07 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -529,6 +557,8 @@ INSTANCE ItRu_Water08 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -559,6 +589,8 @@ INSTANCE ItRu_Water09 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -589,6 +621,8 @@ INSTANCE ItRu_Water10 (C_Item)
 	material			=	MAT_STONE;
  
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -619,6 +653,8 @@ INSTANCE ItRu_Water11 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -649,6 +685,8 @@ INSTANCE ItRu_Water12 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -679,6 +717,8 @@ INSTANCE ItRu_Water13 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -709,6 +749,8 @@ INSTANCE ItRu_Water14 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -739,6 +781,8 @@ INSTANCE ItRu_Water15 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -769,6 +813,8 @@ INSTANCE ItRu_Water16 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -799,6 +845,8 @@ INSTANCE ItRu_Beliar08 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -829,6 +877,8 @@ INSTANCE ItRu_Beliar09 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -859,6 +909,8 @@ INSTANCE ItRu_Beliar10 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -889,6 +941,8 @@ INSTANCE ItRu_Beliar11 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Geyser;	
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;

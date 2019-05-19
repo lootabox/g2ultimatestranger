@@ -19,7 +19,7 @@ instance ItSc_SummonMud(C_Item)
 
 	spell				= 	SPL_SummonMud;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_SummonMud);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -28,10 +28,10 @@ instance ItSc_SummonMud(C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll;
 	
-	TEXT	[1]			=	NAME_Mana_Needed;			
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	TEXT	[1]			=	NAME_Mana_Needed;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonMud);
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 

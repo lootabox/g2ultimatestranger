@@ -21,7 +21,7 @@ const int	Value_MegaDrink			=	1800;		const int	STRorDEX_MegaDrink = 15; //Joly: 
 const int	Value_Speed				=	200;		const int	Time_Speed		=	300000;	// 5 min
 
 //ADDON
-const int 	Value_ManaTrunk			=   200;		
+const int 	Value_ManaTrunk			=   200;
 const int 	Value_HpTrunk			=   150;
 
 /******************************************************************************************/
@@ -34,7 +34,7 @@ INSTANCE ItPo_Mana_01(C_Item)
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
 
-	value 			=	Value_ManaEssenz;	
+	value 			=	Value_ManaEssenz;
 
 	visual 			=	"ItPo_Mana_01.3ds";
 	material 		=	MAT_GLAS;
@@ -47,19 +47,18 @@ INSTANCE ItPo_Mana_01(C_Item)
 
 	description		= 	"Mana Essence";
 	
-	TEXT[1]			= 	NAME_Bonus_Mana;				
+	TEXT[1]			= 	NAME_Bonus_Mana;
 	COUNT[1]		= 	Mana_Essenz;
 
-	TEXT[5]			= 	NAME_Value;					
+	TEXT[5]			= 	NAME_Value;
 	COUNT[5]		= 	Value_ManaEssenz;
 
 };
 
-	FUNC VOID UseItPo_Mana_01()
-	{
-		
-		Npc_ChangeAttribute	(self,	ATR_MANA, Mana_Essenz);
-	};
+FUNC VOID UseItPo_Mana_01()
+{
+	Npc_ChangeAttribute	(self,	ATR_MANA, Mana_Essenz);
+};
 
 /******************************************************************************************/
 INSTANCE ItPo_Mana_02(C_Item)
@@ -81,19 +80,18 @@ INSTANCE ItPo_Mana_02(C_Item)
 
 	description		= 	"Mana Extract";
 	
-	TEXT[1]			= 	NAME_Bonus_Mana;			
+	TEXT[1]			= 	NAME_Bonus_Mana;
 	COUNT[1]		= 	Mana_Extrakt;
 	
-	TEXT[5]			= 	NAME_Value;					
+	TEXT[5]			= 	NAME_Value;
 	COUNT[5]		= 	Value_ManaExtrakt;
 
 };
 
-	FUNC VOID UseItPo_Mana_02()
-	{
-		
-		Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Extrakt);
-	};
+FUNC VOID UseItPo_Mana_02()
+{
+	Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Extrakt);
+};
 
 /******************************************************************************************/
 INSTANCE ItPo_Mana_03(C_Item)
@@ -115,18 +113,17 @@ INSTANCE ItPo_Mana_03(C_Item)
 
 	description		= 	"Mana Elixir";
 	
-	TEXT[1]			= 	NAME_Bonus_Mana;				
+	TEXT[1]			= 	NAME_Bonus_Mana;
 	COUNT[1]		= 	Mana_Elixier;
 	
-	TEXT[5]			= 	NAME_Value;					
+	TEXT[5]			= 	NAME_Value;
 	COUNT[5]		= 	Value_ManaElixier;
 };
 
-	FUNC VOID UseItPo_Mana_03()
-	{
-		
-		Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Elixier);
-	};
+FUNC VOID UseItPo_Mana_03()
+{
+	Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Elixier);
+};
 /******************************************************************************************/
 //	HEILTRÄNKE																			//
 /******************************************************************************************/
@@ -149,18 +146,17 @@ INSTANCE ItPo_Health_01(C_Item)
 
 	description		= 	"Essence of Healing";
 	
-	TEXT[1]			= 	NAME_Bonus_HP;				
+	TEXT[1]			= 	NAME_Bonus_HP;
 	COUNT[1]		= 	HP_Essenz;
 	
-	TEXT[5]			= 	NAME_Value;					
+	TEXT[5]			= 	NAME_Value;
 	COUNT[5]		= 	Value_HpEssenz;
 };
 
-	FUNC VOID UseItPo_Health_01()
-	{
-		
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Essenz);
-	};
+FUNC VOID UseItPo_Health_01()
+{
+	Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Essenz);
+};
 
 /******************************************************************************************/	
 INSTANCE ItPo_Health_02(C_Item)
@@ -182,18 +178,17 @@ INSTANCE ItPo_Health_02(C_Item)
 
 	description		= 	"Extract of Healing";
 	
-	TEXT[1]			= 	NAME_Bonus_HP;				
+	TEXT[1]			= 	NAME_Bonus_HP;
 	COUNT[1]		= 	HP_Extrakt;
 	
-	TEXT[5]			= 	NAME_Value;					
+	TEXT[5]			= 	NAME_Value;
 	COUNT[5]		= 	Value_HpExtrakt;
 };
 
-	FUNC VOID UseItPo_Health_02()
-	{
-		
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Extrakt);
-	};
+FUNC VOID UseItPo_Health_02()
+{
+	Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Extrakt);
+};
 
 /******************************************************************************************/	
 INSTANCE ItPo_Health_03(C_Item)
@@ -215,18 +210,17 @@ INSTANCE ItPo_Health_03(C_Item)
 
 	description		= 	"Elixir of Healing";
 	
-	TEXT[1]			= 	NAME_Bonus_HP;				
+	TEXT[1]			= 	NAME_Bonus_HP;
 	COUNT[1]		= 	HP_Elixier;
 	
-	TEXT[5]			= 	NAME_Value;					
+	TEXT[5]			= 	NAME_Value;
 	COUNT[5]		= 	Value_HpElixier;
 };
 
-	FUNC VOID UseItPo_Health_03()
-	{
-		
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Elixier);
-	};
+FUNC VOID UseItPo_Health_03()
+{
+	Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Elixier);
+};
 /******************************************************************************************/
 // TRÄNKE FÜR PERMANENTE ATTRIBUT-ÄNDERUNGEN!
 /******************************************************************************************/
@@ -249,17 +243,17 @@ INSTANCE ItPo_Perm_STR(C_Item)
 
 	description		= 	"Elixir of Strength";
 	
-	TEXT[1]			= 	NAME_Bonus_Str;				
+	TEXT[1]			= 	NAME_Bonus_Str;
 	COUNT[1]		= 	STR_Elixier;
 	
-	TEXT[5]			= 	NAME_Value;					
+	TEXT[5]			= 	NAME_Value;
 	COUNT[5]		= 	Value_StrElixier;
 };
 
-	FUNC VOID UseItPo_Perm_STR()
-	{ 
-		B_RaiseAttribute	(self, ATR_STRENGTH,	STR_Elixier);
-	};
+FUNC VOID UseItPo_Perm_STR()
+{ 
+	B_RaiseAttribute	(self, ATR_STRENGTH,	STR_Elixier);
+};
 /******************************************************************************************/		
 INSTANCE ItPo_Perm_DEX(C_Item)
 {
@@ -281,13 +275,13 @@ INSTANCE ItPo_Perm_DEX(C_Item)
 	description		= 	"Elixir of Dexterity";
 	TEXT[1]			= 	NAME_Bonus_Dex;
 	COUNT[1]		= 	DEX_Elixier;
-	TEXT[5]			= 	NAME_Value;					
+	TEXT[5]			= 	NAME_Value;
 	COUNT[5]		= 	Value_DexElixier;
 };
-	FUNC VOID UseItPo_Perm_DEX()
-	{ 
-		B_RaiseAttribute	(self, ATR_DEXTERITY,	DEX_Elixier);
-	};
+FUNC VOID UseItPo_Perm_DEX()
+{ 
+	B_RaiseAttribute	(self, ATR_DEXTERITY,	DEX_Elixier);
+};
 /******************************************************************************************/
 INSTANCE ItPo_Perm_Health(C_Item)
 {
@@ -308,19 +302,18 @@ INSTANCE ItPo_Perm_Health(C_Item)
 
 	description		= 	"Elixir of Life";
 	
-	TEXT[1]			= 	NAME_Bonus_HpMax;				
+	TEXT[1]			= 	NAME_Bonus_HpMax;
 	COUNT[1]		= 	HPMax_Elixier;
 	
-	TEXT[5]			= 	NAME_Value;					
+	TEXT[5]			= 	NAME_Value;
 	COUNT[5]		= 	Value_HpMaxElixier;
 };
 
-	FUNC VOID UseItPo_Perm_Health()
-	{
-		B_RaiseAttribute	(self, ATR_HITPOINTS_MAX,	HPMax_Elixier);	
-		Npc_ChangeAttribute	(self, ATR_HITPOINTS,	HPMax_Elixier);
-	
-	};
+FUNC VOID UseItPo_Perm_Health()
+{
+	B_RaiseAttribute	(self, ATR_HITPOINTS_MAX,	HPMax_Elixier);	
+	Npc_ChangeAttribute	(self, ATR_HITPOINTS,	HPMax_Elixier);
+};
 /******************************************************************************************/
 INSTANCE ItPo_Perm_Mana(C_Item)
 {
@@ -342,15 +335,15 @@ INSTANCE ItPo_Perm_Mana(C_Item)
 	description		= 	"Elixir of Spirit";
 	TEXT[1]			= 	NAME_Bonus_ManaMax;			
 	COUNT[1]		= 	ManaMax_Elixier;
-	TEXT[5]			= 	NAME_Value;					
+	TEXT[5]			= 	NAME_Value;
 	COUNT[5]		= 	Value_ManaMaxElixier;
 };
 
-	FUNC VOID UseItPo_Perm_Mana()
-	{
-		B_RaiseAttribute	(self, ATR_MANA_MAX,	ManaMax_Elixier);
-		Npc_ChangeAttribute	(self, ATR_MANA,	ManaMax_Elixier);
-	};
+FUNC VOID UseItPo_Perm_Mana()
+{
+	B_RaiseAttribute	(self, ATR_MANA_MAX,	ManaMax_Elixier);
+	Npc_ChangeAttribute	(self, ATR_MANA,	ManaMax_Elixier);
+};
 
 /******************************************************************************************/
 //	SPEED-POTIONS																	      //
@@ -375,19 +368,19 @@ INSTANCE ItPo_Speed(C_Item)
 	description		= 	"Speed Potion";
 	TEXT[1]			= 	"Temporarily boosts speed.";
 	
-	TEXT[3]			= 	NAME_Duration;				
+	TEXT[3]			= 	NAME_Duration;
 	COUNT[3]		= 	Time_Speed/60000;
 	
-	TEXT[5]			= 	NAME_Value;					
+	TEXT[5]			= 	NAME_Value;
 	COUNT[5]		= 	value;
 };
 
-	FUNC VOID UseItPo_Speed()
-	{
-		Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", Time_Speed);
-		
-	};
+FUNC VOID UseItPo_Speed()
+{
+	Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", Time_Speed);
 	
+};
+
 /******************************************************************************************/
 //	MegaDrink	Kapitel 6																      //
 /******************************************************************************************/
@@ -412,22 +405,22 @@ INSTANCE ItPo_MegaDrink (C_Item)	//Joly: Megatrank aus Dracheneiern auf der Drac
 
 	description		= 	name;
 	
-	TEXT[3]			= 	"Effects unknown.";				
+	TEXT[3]			= 	"Effects unknown.";
 
-	TEXT[5]			= 	NAME_Value;					
+	TEXT[5]			= 	NAME_Value;
 	COUNT[5]		= 	value;
 };
 
-	FUNC VOID UseItPo_MegaDrink()
-		{
-			if (self.attribute[ATR_STRENGTH] < self.attribute[ATR_DEXTERITY])
-				{
-					B_RaiseAttribute	(self, ATR_DEXTERITY,	STRorDEX_MegaDrink);
-				}
-			else
-				{
-					B_RaiseAttribute	(self, ATR_STRENGTH,	STRorDEX_MegaDrink);
-				};
-			self.attribute[ATR_MANA] = 0;
-			Snd_Play ("DEM_Warn");
-		};
+FUNC VOID UseItPo_MegaDrink()
+	{
+		if (self.attribute[ATR_STRENGTH] < self.attribute[ATR_DEXTERITY])
+			{
+				B_RaiseAttribute	(self, ATR_DEXTERITY,	STRorDEX_MegaDrink);
+			}
+		else
+			{
+				B_RaiseAttribute	(self, ATR_STRENGTH,	STRorDEX_MegaDrink);
+			};
+		self.attribute[ATR_MANA] = 0;
+		Snd_Play ("DEM_Warn");
+	};

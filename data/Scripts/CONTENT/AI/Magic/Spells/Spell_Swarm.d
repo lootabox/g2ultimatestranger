@@ -15,16 +15,13 @@ instance Spell_Swarm (C_Spell_Proto)
 
 func int Spell_Logic_Swarm (var int manaInvested) //Parameter manaInvested wird hier nicht benutzt
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
-	|| (self.attribute[ATR_MANA] >= SPL_Cost_Swarm)
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Sleep);
+	if (logicResult == SPL_SENDCAST)
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Swarm;
-		return SPL_SENDCAST; //Spell wird auch gecasted, wenn keine Auswirkungen (other geht nicht in ZS) Mana is dann weg - Pech gehabt! (soll so sein!)
-	}
-	else //nicht genug Mana
-	{
-		return SPL_SENDSTOP;
+		//Spell wird auch gecasted, wenn keine Auswirkungen (other geht nicht in ZS) Mana is dann weg - Pech gehabt! (soll so sein!)
 	};
+	return logicResult;
 };
 
 

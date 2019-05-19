@@ -17,7 +17,7 @@ const string FONT_BookHeadline				= "FONT_20_BOOK.TGA";
 // ****************************
 // Spellkosten für ALLE SCrolls
 // ****************************
-const int SPL_Cost_Scroll = 5;
+// const int SPL_Cost_Scroll = 5; // Spell scrolls have their own mana costs
 
 
 // MH: 19.11.01 Gildennamen geändert --> Änderungen in Text.d (Character-Screen Gildenbezeichnungen) und Species.d (Gildenanhängige Bewegungswerte wie z.B Kletterhöhe)

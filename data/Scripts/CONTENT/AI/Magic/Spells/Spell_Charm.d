@@ -2,7 +2,7 @@
 // SPL_Charm
 // *********
 
-const int SPL_Cost_Charm		= 50;
+const int SPL_Cost_Charm		= 5;
 const int SPL_Damage_Charm 		= 0;
 
 
@@ -16,8 +16,8 @@ INSTANCE Spell_Charm(C_Spell_Proto)
 
 func int Spell_Logic_Charm(var int manaInvested)
 {
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
-	|| (self.attribute[ATR_MANA] >= SPL_Cost_Charm)
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Charm);
+	if (logicResult == SPL_SENDCAST)
 	{
 		//---STORY: Ignaz-Mission-----------------------------
 		if (other.aivar[AIV_NpcSawPlayerCommit] != CRIME_NONE)
@@ -42,25 +42,11 @@ func int Spell_Logic_Charm(var int manaInvested)
 				Npc_SetTempAttitude(other, Wld_GetGuildAttitude(other.guild, self.guild));
 			};
 		};
- 		
-		return SPL_SENDCAST;
-	}
-	else //nicht genug Mana
-	{
-		return SPL_SENDSTOP;
 	};
+	return logicResult;
 };
 
 func void Spell_Cast_Charm()
 {
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Charm;
-	};
-	
-	self.aivar[AIV_SelectSpell] += 1;
+	Spell_Cast_Basic(self, SPL_Cost_Charm);
 };

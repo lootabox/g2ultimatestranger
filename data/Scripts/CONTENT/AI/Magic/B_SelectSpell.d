@@ -80,7 +80,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 				if 		(dK_Mega <= 2)	{	B_ReadySpell (slf, SPL_Firerain , SPL_Cost_Firerain); 				return TRUE; }
 				else if (dK_Mega <= 5)	{	B_ReadySpell (slf, SPL_Thunderstorm, SPL_Cost_Thunderstorm);		return TRUE; }
 				else if (dK_Mega <= 10)	{	B_ReadySpell (slf, SPL_LightningFlash, SPL_Cost_LightningFlash);	return TRUE; }
-				else /*11-99*/			{	B_ReadySpell (slf, SPL_Firestorm, SPL_Cost_Firestorm);				return TRUE; };
+				else /*11-99*/			{	B_ReadySpell (slf, SPL_Firestorm, SPL_Cost_Firestorm*4);				return TRUE; };
 			}
 			else if (slf.aivar[AIV_SelectSpell] == 12)	// neuer spell erst wenn der alte abgeschossen wurde
 			{	
@@ -367,12 +367,12 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	{
 		if(!Npc_IsInState(oth,ZS_MagicFreeze) && Npc_HasItems(slf,ItSc_IceCube))
 		{
-			B_ReadySpell(slf,SPL_IceCube,SPL_Cost_Scroll);
+			B_ReadySpell(slf,SPL_IceCube,C_GetScrollCost(SPL_Cost_IceCube));
 			return TRUE;
 		}
 		else if(Npc_HasItems(slf,ItSc_Firestorm))
 		{
-			B_ReadySpell(slf,SPL_Firestorm,SPL_Cost_Scroll);
+			B_ReadySpell(slf,SPL_Firestorm,C_GetScrollCost(SPL_Cost_Firestorm*4));
 			return TRUE;
 		}
 		else

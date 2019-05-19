@@ -5,7 +5,7 @@
 //Joly: Macht die Runen nicht zu teuer, es sind Produktionsitems -> EXPLOID!!!!!!!!!!!
 //********************************************************************************************
 
-const 	string 	Name_PaladinSpell		=	"Paladin Rune"; 	
+const 	string 	Name_PaladinSpell		=	"Paladin Rune";
 const	int	Value_Ru_PalLight			=	500;
 const	int	Value_Ru_PalLightHeal		=	500;
 const	int	Value_Ru_PalHolyBolt		=	500;
@@ -82,7 +82,8 @@ INSTANCE ItRu_PalLight (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_PalLight;
-	
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_PalLight;	
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -114,7 +115,8 @@ INSTANCE ItRu_PalLightHeal (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_PalLightHeal;
-	
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_PalLightHeal;	
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -146,7 +148,8 @@ INSTANCE ItRu_PalMediumHeal (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_PalMediumHeal;
-	
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_PalMediumHeal;	
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -178,7 +181,8 @@ INSTANCE ItRu_PalFullHeal (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_PalFullHeal;
-	
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_PalFullHeal;	
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -210,7 +214,8 @@ INSTANCE ItRu_PalHolyBolt (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_PalHolyBolt;
-	
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_PalHolyBolt;	
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -243,7 +248,8 @@ INSTANCE ItRu_PalRepelEvil (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_PalRepelEvil;
-	
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_PalRepelEvil;	
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -275,7 +281,8 @@ INSTANCE ItRu_PalDestroyEvil (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_PalDestroyEvil;
-	
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_PalDestroyEvil;	
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -307,7 +314,8 @@ INSTANCE ItRu_PalTeleportSecret (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_PalTeleportSecret;
-
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_TELEPORT;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -335,7 +343,8 @@ INSTANCE ItRu_TeleportSeaport (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportSeaport;
-
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_TELEPORT;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -363,7 +372,8 @@ INSTANCE ItRu_TeleportMonastery (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportMonastery;
-
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_TELEPORT;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -390,7 +400,8 @@ INSTANCE ItRu_TeleportFarm (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportFarm;
-
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_TELEPORT;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -417,7 +428,8 @@ INSTANCE ItRu_TeleportXardas (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportXardas;
-
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_TELEPORT;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -444,7 +456,8 @@ INSTANCE ItRu_TeleportPassNW (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportPassNW;
-
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_TELEPORT;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -471,7 +484,8 @@ INSTANCE ItRu_TeleportPassOW (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportPassOW;
-
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_TELEPORT;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -497,7 +511,8 @@ INSTANCE ItRu_TeleportOC (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportOC;
-
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_TELEPORT;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -525,7 +540,8 @@ INSTANCE ItRu_TeleportOWDemonTower (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportOWDemonTower;
-
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_TELEPORT;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -551,7 +567,8 @@ INSTANCE ItRu_TeleportTaverne (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportTaverne;
-
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_TELEPORT;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -577,7 +594,8 @@ INSTANCE ItRu_Teleport_3 (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Teleport_3;
-
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_TELEPORT;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -604,6 +622,8 @@ INSTANCE ItRu_Light (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_LIGHT;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_LIGHT;
 	mag_circle			=	1;
 
 	wear				= 	WEAR_EFFECT;
@@ -637,6 +657,8 @@ INSTANCE ItRu_FireBolt (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_FIREBOLT;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_FIREBOLT;
 	mag_circle			=	1;
 
 	wear				= 	WEAR_EFFECT;
@@ -669,9 +691,10 @@ INSTANCE ItRu_Zap (C_Item)
 	visual				=	"ItRu_Zap.3DS";
 	material			=	MAT_STONE;
 	
-	mag_circle			=	1;
 	spell				= 	SPL_Zap;
-	
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_Zap;	
+	mag_circle			=	1;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -703,6 +726,8 @@ INSTANCE ItRu_LightHeal (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_LightHeal;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_LightHeal;
 	mag_circle			= 	1;
 
 	wear				= 	WEAR_EFFECT;
@@ -736,9 +761,10 @@ INSTANCE ItRu_SumGobSkel (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SummonGoblinSkeleton;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_SummonGoblinSkeleton;
 	mag_circle			= 	1;
 	
-
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
@@ -770,9 +796,10 @@ INSTANCE ItRu_InstantFireball (C_Item)
 	visual				=	"ItRu_InstantFireball.3DS";
 	material			=	MAT_STONE;
 	
-	mag_circle			= 	2;
 	spell				= 	SPL_InstantFireball;
-	
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_InstantFireball;	
+	mag_circle			= 	2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_YELLOW";
@@ -805,8 +832,9 @@ INSTANCE ItRu_Icebolt (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Icebolt;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_Icebolt;
 	mag_circle 			=	2;
-
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_BLUE";
@@ -840,6 +868,8 @@ INSTANCE ItRu_SumWolf (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SummonWolf;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_SummonWolf;
 	mag_circle			= 	2;
 	
 
@@ -871,6 +901,8 @@ INSTANCE ItRu_Windfist (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_WINDFIST;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_WINDFIST;
 	mag_circle 			=	2;
 
 	wear				= 	WEAR_EFFECT;
@@ -882,7 +914,7 @@ INSTANCE ItRu_Windfist (C_Item)
 	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
-	COUNT	[1]			=	STEP_WindFist;
+	COUNT	[1]			=	SPL_Cost_WindFist;
 	
 	TEXT	[2]			=	"Wind damage per tier:";
 	count 	[2]			=   SPL_Damage_Windfist;
@@ -905,6 +937,8 @@ INSTANCE ItRu_Sleep (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SLEEP;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_SLEEP;
 	mag_circle 			=	2;
 
 	wear				= 	WEAR_EFFECT;
@@ -938,6 +972,8 @@ INSTANCE ItRu_MediumHeal (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_MediumHeal;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_MediumHeal;
 	mag_circle			=	3;
 
 	wear				= 	WEAR_EFFECT;
@@ -970,8 +1006,10 @@ INSTANCE ItRu_LightningFlash (C_Item)
 	visual				=	"ItRu_LightningFlash.3DS";
 	material			=	MAT_STONE;
 	
-	mag_circle			=	4;
 	spell				= 	SPL_LightningFlash;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_LightningFlash;
+	mag_circle			=	4;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1003,9 +1041,10 @@ INSTANCE ItRu_ChargeFireball (C_Item)
 	visual				=	"ItRu_ChargeFireball.3DS";
 	material			=	MAT_STONE;
 	
-	mag_circle			= 	4;
-	
 	spell				= 	SPL_ChargeFireball;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_ChargeFireball;
+	mag_circle			= 	4;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_YELLOW";
@@ -1017,7 +1056,7 @@ INSTANCE ItRu_ChargeFireball (C_Item)
 	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
-	COUNT	[1]			=	STEP_ChargeFireball;
+	COUNT	[1]			=	SPL_Cost_ChargeFireball;
 	
 	TEXT	[2]			=	NAME_DamagePerCharge;
 	count 	[2]			=   SPL_Damage_ChargeFireball;
@@ -1039,6 +1078,8 @@ INSTANCE ItRu_SumSkel (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SUMMONSKELETON;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_SUMMONSKELETON;
 	mag_circle			= 	3;
 
 	wear				= 	WEAR_EFFECT;
@@ -1067,9 +1108,11 @@ INSTANCE ItRu_Fear (C_Item)
 
 	visual				=	"ItRu_Fear.3DS";
 	material			=	MAT_STONE;
-	mag_circle			= 	3;
-	
+
 	spell				= 	SPL_FEAR;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_FEAR;
+	mag_circle			= 	3;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1102,6 +1145,8 @@ INSTANCE ItRu_IceCube (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_ICECUBE;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_ICECUBE;
 	mag_circle 			=	3;
 
 	wear				= 	WEAR_EFFECT;
@@ -1142,6 +1187,8 @@ INSTANCE ItRu_ThunderBall (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_ChargeZap;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_ChargeZap;
 	mag_circle 			=	3;
 
 	wear				= 	WEAR_EFFECT;
@@ -1154,7 +1201,7 @@ INSTANCE ItRu_ThunderBall (C_Item)
 	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
-	COUNT	[1]			=	STEP_ChargeZap;
+	COUNT	[1]			=	SPL_Cost_ChargeZap;
 	
 	TEXT	[2]			=	NAME_DamagePerCharge;
 	count 	[2]			=   SPL_Damage_ChargeZap;
@@ -1177,6 +1224,8 @@ INSTANCE ItRu_SumGol (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SummonGolem;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_SummonGolem;
 	mag_circle			= 	4;
 	
 
@@ -1208,6 +1257,8 @@ INSTANCE ItRu_HarmUndead (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_DESTROYUNDEAD;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_DESTROYUNDEAD;
 	mag_circle			= 	4;
 
 	wear				= 	WEAR_EFFECT;
@@ -1241,6 +1292,8 @@ INSTANCE ItRu_Pyrokinesis (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_PYROKINESIS;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_Firestorm;
 	mag_circle 			=	5;
 
 	wear				= 	WEAR_EFFECT;
@@ -1252,7 +1305,7 @@ INSTANCE ItRu_Pyrokinesis (C_Item)
 	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
-	COUNT	[1]			=	STEP_Firestorm;
+	COUNT	[1]			=	SPL_Cost_Firestorm;
 	
 	TEXT	[2]			=	NAME_DamagePerCharge;
 	count 	[2]			=   SPL_Damage_Firestorm;
@@ -1276,6 +1329,8 @@ INSTANCE ItRu_Firestorm (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_FIRESTORM;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_Cost_InstantFirestorm;
 	mag_circle 			=	3;
 
 	wear				= 	WEAR_EFFECT;
@@ -1309,6 +1364,8 @@ INSTANCE ItRu_IceWave (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_ICEWAVE;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_ICEWAVE;
 	mag_circle 			=	5;
 
 	wear				= 	WEAR_EFFECT;
@@ -1348,6 +1405,8 @@ INSTANCE ItRu_SumDemon (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SUMMONDEMON;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_SUMMONDEMON;
 	mag_circle			=	5;
 
 	wear				= 	WEAR_EFFECT;
@@ -1378,6 +1437,8 @@ INSTANCE ItRu_FullHeal (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_FullHeal;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_FullHeal;
 	mag_circle			=	5;
 
 	wear				= 	WEAR_EFFECT;
@@ -1412,6 +1473,8 @@ INSTANCE ItRu_Firerain (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_FIRERAIN;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_FIRERAIN;
 	mag_circle 			= 	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -1445,6 +1508,8 @@ INSTANCE ItRu_BreathOfDeath (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_BREATHOFDEATH;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_BREATHOFDEATH;
 	mag_circle 			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -1479,6 +1544,8 @@ INSTANCE ItRu_MassDeath (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_MASSDEATH;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_MASSDEATH;
 	mag_circle 			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -1513,6 +1580,8 @@ INSTANCE ItRu_MasterOfDisaster	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_MasterOfDisaster;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_MasterOfDisaster;
 	mag_circle 			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -1546,6 +1615,8 @@ INSTANCE ItRu_ArmyOfDarkness (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_ARMYOFDARKNESS;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_ARMYOFDARKNESS;
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -1575,6 +1646,8 @@ INSTANCE ItRu_Shrink (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SHRINK;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_SHRINK;
 	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -1613,6 +1686,8 @@ INSTANCE ItRu_Deathbolt	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Deathbolt;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_Deathbolt;
 	mag_circle 			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -1646,6 +1721,8 @@ INSTANCE ItRu_Deathball	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Deathball;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_Deathball;
 	mag_circle 			=	6;
 
 	wear				= 	WEAR_EFFECT;
@@ -1679,6 +1756,8 @@ INSTANCE ItRu_Concussionbolt	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Concussionbolt;
+	cond_atr[2]			=	ATR_MANA_MAX;
+	cond_value[2]		=	SPL_COST_Concussionbolt;
 	mag_circle 			=	6;
 
 	wear				= 	WEAR_EFFECT;

@@ -1596,8 +1596,9 @@ FUNC VOID Use_Sagitta_Herb_MIS ()
 {
 	Print ( "Too disgusting to eat." );
 	CreateInvItem (self, ItPl_Sagitta_Herb_MIS);
-	if (Hlp_Random(100) > 50)	{ B_Say( hero, hero, "$AARGH_1"); }
-	else						{ B_Say( hero, hero, "$AARGH_3"); };
+	if (Hlp_Random(100) > 66)		{ B_Say( hero, hero, "$AARGH_1"); }
+	else if (Hlp_Random(100) > 50)	{ B_Say( hero, hero, "$AARGH_2"); }
+	else							{ B_Say( hero, hero, "$AARGH_3"); };
 };
 
 

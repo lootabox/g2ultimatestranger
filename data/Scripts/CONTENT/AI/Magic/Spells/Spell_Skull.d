@@ -16,30 +16,18 @@ INSTANCE Spell_Skull	(C_Spell_Proto)
 
 func int Spell_Logic_Skull (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Skull)
-	{	
-		return SPL_SENDCAST;
-	}
-	else //nicht genug Mana
-	{
-		return SPL_SENDSTOP;
-	};
+	return Spell_Logic_Basic(self, SPL_Cost_Skull);
 };
 
 func void Spell_Cast_Skull()
 {
 	if (Npc_GetActiveSpellIsScroll(self))
 	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
+		self.attribute[ATR_MANA] -= C_GetScrollCost(SPL_Cost_Skull);
 	}
 	else
 	{
-		self.attribute[ATR_MANA] = 0; //kostet alles, mindestens 250
+		self.attribute[ATR_MANA] = 0;
 	};
-	
 	self.aivar[AIV_SelectSpell] += 1;
 };

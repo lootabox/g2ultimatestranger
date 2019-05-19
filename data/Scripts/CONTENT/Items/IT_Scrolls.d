@@ -78,7 +78,7 @@ INSTANCE ItSc_PalLight (C_Item)
 
 	spell				= 	SPL_PalLight;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_PalLight);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -88,7 +88,7 @@ INSTANCE ItSc_PalLight (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalLight);
 	
 	TEXT	[2]			=	NAME_Duration;
 	COUNT	[2]			=	SPL_Duration_PalLIGHT;
@@ -111,7 +111,7 @@ INSTANCE ItSc_PalLightHeal (C_Item)
 
 	spell				= 	SPL_PalLightHeal;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_PalLightHeal);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -121,7 +121,7 @@ INSTANCE ItSc_PalLightHeal (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalLightHeal);
 	
 	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_PalLightHeal;
@@ -144,7 +144,7 @@ INSTANCE ItSc_PalHolyBolt (C_Item)
 
 	spell				= 	SPL_PalHolyBolt;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_PalHolyBolt);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -155,7 +155,7 @@ INSTANCE ItSc_PalHolyBolt (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalHolyBolt);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_PalHolyBolt;
@@ -178,7 +178,7 @@ INSTANCE ItSc_PalMediumHeal (C_Item)
 
 	spell				= 	SPL_PalMediumHeal;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_PalMediumHeal);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -188,7 +188,7 @@ INSTANCE ItSc_PalMediumHeal (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalMediumHeal);
 	
 	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_PalMediumHeal;
@@ -211,7 +211,7 @@ INSTANCE ItSc_PalRepelEvil (C_Item)
 
 	spell				= 	SPL_PalRepelEvil;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_PalRepelEvil);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -220,7 +220,7 @@ INSTANCE ItSc_PalRepelEvil (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalRepelEvil);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_PalRepelEvil;
@@ -243,7 +243,7 @@ INSTANCE ItSc_PalFullHeal (C_Item)
 
 	spell				= 	SPL_PalFullHeal;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_PalFullHeal);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -252,7 +252,7 @@ INSTANCE ItSc_PalFullHeal (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalFullHeal);
 	
 	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_PalFullHeal;
@@ -275,7 +275,7 @@ INSTANCE ItSc_PalDestroyEvil (C_Item)
 
 	spell				= 	SPL_PalDestroyEvil;
 	cond_atr[2]   			=	ATR_MANA_MAX;
-	cond_value[2]  			=	SPL_Cost_Scroll;
+	cond_value[2]  			=	C_GetScrollCost(SPL_Cost_PalDestroyEvil);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -284,7 +284,7 @@ INSTANCE ItSc_PalDestroyEvil (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalDestroyEvil);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_PalDestroyEvil;
@@ -310,7 +310,7 @@ instance ItSc_Light (C_Item)
 
 	spell				= 	SPL_LIGHT;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Light);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -320,7 +320,7 @@ instance ItSc_Light (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
 	TEXT	[2]			=	NAME_Duration;
 	COUNT	[2]			=	SPL_Duration_LIGHT;
@@ -343,7 +343,7 @@ INSTANCE ItSc_Firebolt (C_Item)
 
 	spell				= 	SPL_FIREBOLT;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_Firebolt);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -353,7 +353,7 @@ INSTANCE ItSc_Firebolt (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Firebolt);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_FIREBOLT;
@@ -376,7 +376,7 @@ INSTANCE ItSc_Icebolt (C_Item)
 
 	spell				= 	SPL_Icebolt;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_Icebolt);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_BLUE";
@@ -386,7 +386,7 @@ INSTANCE ItSc_Icebolt (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Icebolt);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_Icebolt;
@@ -409,7 +409,7 @@ INSTANCE ItSc_LightHeal (C_Item)
 
 	spell				= 	SPL_LightHeal;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_LightHeal);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -419,7 +419,7 @@ INSTANCE ItSc_LightHeal (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_LightHeal);
 	
 	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_LightHeal;
@@ -443,7 +443,7 @@ INSTANCE ItSc_SumGobSkel (C_Item)
 
 	spell				= 	SPL_SummonGoblinSkeleton;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_SummonGoblinSkeleton);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -453,7 +453,7 @@ INSTANCE ItSc_SumGobSkel (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonGoblinSkeleton);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -473,7 +473,7 @@ INSTANCE ItSc_InstantFireball (C_Item)
 
 	spell				= 	SPL_InstantFireball;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_InstantFireball);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_YELLOW";
@@ -483,7 +483,7 @@ INSTANCE ItSc_InstantFireball (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_InstantFireball);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_InstantFireball;
@@ -505,7 +505,8 @@ INSTANCE ItSc_Zap (C_Item)
 	material			=	MAT_LEATHER;
 
 	spell				= 	SPL_Zap;
-	
+	cond_atr[2]   		= 	ATR_MANA_MAX;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_Zap);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -515,7 +516,7 @@ INSTANCE ItSc_Zap (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Zap);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_ZAP;
@@ -538,7 +539,7 @@ INSTANCE ItSc_SumWolf (C_Item)
 
 	spell				= 	SPL_SummonWolf;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_SummonWolf);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -548,7 +549,7 @@ INSTANCE ItSc_SumWolf (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonWolf);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -568,7 +569,7 @@ INSTANCE ItSc_Windfist (C_Item)
 
 	spell				= 	SPL_WINDFIST;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	STEP_WINDFIST;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_WindFist);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -578,7 +579,7 @@ INSTANCE ItSc_Windfist (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_WindFist);
 	
 	TEXT	[2]			=	"Wind damage per tier:";
 	count 	[2]			=   SPL_Damage_Windfist;
@@ -601,7 +602,7 @@ INSTANCE ItSc_Sleep (C_Item)
 
 	spell				= 	SPL_SLEEP;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_Sleep);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -611,7 +612,7 @@ INSTANCE ItSc_Sleep (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Sleep);
 	
 	TEXT	[2]			=	NAME_Sec_Duration;
 	COUNT	[2]			=	SPL_TIME_Sleep;
@@ -636,7 +637,7 @@ INSTANCE ItSc_Charm(C_Item)
 
 	spell				= 	SPL_CHARM;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_Charm);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -646,7 +647,7 @@ INSTANCE ItSc_Charm(C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Charm);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -667,7 +668,7 @@ INSTANCE ItSc_MediumHeal (C_Item)
 
 	spell				= 	SPL_MediumHeal;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_MediumHeal);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -677,7 +678,7 @@ INSTANCE ItSc_MediumHeal (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_MediumHeal);
 	
 	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_MediumHeal;
@@ -700,7 +701,7 @@ INSTANCE ItSc_LightningFlash (C_Item)
 
 	spell				= 	SPL_LightningFlash;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_LightningFlash);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -710,7 +711,7 @@ INSTANCE ItSc_LightningFlash (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_LightningFlash);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_LightningFlash;
@@ -733,7 +734,7 @@ INSTANCE ItSc_ChargeFireball (C_Item)
 
 	spell				= 	SPL_ChargeFireball;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	STEP_CHARGEFIREBALL;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_ChargeFireball);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_YELLOW";
@@ -743,7 +744,7 @@ INSTANCE ItSc_ChargeFireball (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_ChargeFireball);
 	
 	TEXT	[2]			=	NAME_DamagePerCharge;
 	count 	[2]			=   SPL_Damage_ChargeFireball;
@@ -766,7 +767,7 @@ INSTANCE ItSc_SumSkel (C_Item)
 
 	spell				= 	SPL_SUMMONSKELETON;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_SummonSkeleton);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -776,7 +777,7 @@ INSTANCE ItSc_SumSkel (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonSkeleton);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -796,7 +797,7 @@ INSTANCE ItSc_Fear (C_Item)
 
 	spell				= 	SPL_FEAR;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_Fear);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -806,7 +807,7 @@ INSTANCE ItSc_Fear (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Fear);
 	
 	TEXT	[2]			=	NAME_Sec_Duration;
 	COUNT	[2]			=	SPL_TIME_Fear;
@@ -829,7 +830,7 @@ INSTANCE ItSc_IceCube (C_Item)
 
 	spell				= 	SPL_ICECUBE;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_IceCube);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_BLUE";
@@ -839,7 +840,7 @@ INSTANCE ItSc_IceCube (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_IceCube);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_IceCube;
@@ -869,7 +870,7 @@ INSTANCE ItSc_ThunderBall (C_Item)
 	spell				= 	SPL_ChargeZap;
 	
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	STEP_CHARGEZAP;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_ChargeZap);
 	
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -879,7 +880,7 @@ INSTANCE ItSc_ThunderBall (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_ChargeZap);
 	
 	TEXT	[2]			=	NAME_DamagePerCharge;
 	count 	[2]			=   SPL_Damage_ChargeZap;
@@ -902,7 +903,7 @@ INSTANCE ItSc_SumGol (C_Item)
 
 	spell				= 	SPL_SUMMONGOLEM;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_SummonGolem);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -912,7 +913,7 @@ INSTANCE ItSc_SumGol (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonGolem);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -932,7 +933,7 @@ INSTANCE ItSc_HarmUndead (C_Item)
 
 	spell				= 	SPL_DESTROYUNDEAD;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_DestroyUndead);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -942,7 +943,7 @@ INSTANCE ItSc_HarmUndead (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_DestroyUndead);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_DESTROYUNDEAD;
@@ -965,7 +966,7 @@ INSTANCE ItSc_Pyrokinesis (C_Item)
 
 	spell				= 	SPL_PYROKINESIS;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	STEP_Firestorm;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_Firestorm);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_YELLOW";
@@ -975,7 +976,7 @@ INSTANCE ItSc_Pyrokinesis (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Firestorm);
 	
 	TEXT	[2]			=	NAME_DamagePerCharge;
 	count 	[2]			=   SPL_Damage_Firestorm;
@@ -998,7 +999,7 @@ INSTANCE ItSc_Firestorm (C_Item)
 
 	spell				= 	SPL_FIRESTORM;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_InstantFirestorm);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_YELLOW";
@@ -1008,7 +1009,7 @@ INSTANCE ItSc_Firestorm (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_InstantFirestorm);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_INSTANTFIRESTORM;
@@ -1031,7 +1032,7 @@ INSTANCE ItSc_IceWave (C_Item)
 
 	spell				= 	SPL_ICEWAVE;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_IceWave);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_BLUE";
@@ -1041,7 +1042,7 @@ INSTANCE ItSc_IceWave (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_IceWave);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_IceCube;
@@ -1070,7 +1071,7 @@ INSTANCE ItSc_SumDemon (C_Item)
 
 	spell				= 	SPL_SUMMONDEMON;
 	cond_atr[2]   			=	ATR_MANA_MAX;
-	cond_value[2]  			=	SPL_Cost_Scroll;
+	cond_value[2]  			=	C_GetScrollCost(SPL_Cost_SummonDemon);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1080,7 +1081,7 @@ INSTANCE ItSc_SumDemon (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonDemon);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1101,7 +1102,7 @@ INSTANCE ItSc_FullHeal (C_Item)
 
 	spell				= 	SPL_FullHeal;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_FullHeal);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1111,7 +1112,7 @@ INSTANCE ItSc_FullHeal (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_FullHeal);
 	
 	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_FullHeal;
@@ -1134,7 +1135,7 @@ INSTANCE ItSc_Firerain (C_Item)
 
 	spell				= 	SPL_FIRERAIN;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	SPL_Cost_Scroll;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_FireRain);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_YELLOW";
@@ -1144,7 +1145,7 @@ INSTANCE ItSc_Firerain (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_FireRain);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_FIRERAIN;
@@ -1166,7 +1167,8 @@ INSTANCE ItSc_BreathOfDeath (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarz
 	material			=	MAT_LEATHER;
 
 	spell				= 	SPL_BREATHOFDEATH;
-	
+	cond_atr[2]   			= 	ATR_MANA_MAX;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_BreathOfDeath);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -1176,7 +1178,7 @@ INSTANCE ItSc_BreathOfDeath (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarz
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_BreathOfDeath);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_BREATHOFDEATH;
@@ -1198,7 +1200,8 @@ INSTANCE ItSc_MassDeath (C_Item)
 	material			=	MAT_LEATHER;
 
 	spell				= 	SPL_MASSDEATH;
-	
+	cond_atr[2]   			= 	ATR_MANA_MAX;
+	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_MassDeath);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -1208,7 +1211,7 @@ INSTANCE ItSc_MassDeath (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_MassDeath);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_MASSDEATH;
@@ -1231,7 +1234,7 @@ INSTANCE ItSc_ArmyOfDarkness (C_Item)
 
 	spell				= 	SPL_ARMYOFDARKNESS;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_ArmyOfDarkness);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -1241,7 +1244,7 @@ INSTANCE ItSc_ArmyOfDarkness (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_ArmyOfDarkness);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1262,7 +1265,7 @@ INSTANCE ItSc_Shrink (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarzmagiern
 
 	spell				= 	SPL_SHRINK;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_Shrink);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1272,7 +1275,7 @@ INSTANCE ItSc_Shrink (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarzmagiern
 	TEXT	[0]			=	Name_MageScroll;
 	
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Shrink);
 
 	TEXT	[2]			=	NAME_Shrink_Penalty;
 	COUNT	[2]			=	SPL_Shrink_Penalty;
@@ -1295,7 +1298,7 @@ INSTANCE ItSc_TrfSheep (C_Item)
 
 	spell			    = 	SPL_TrfSheep;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
+	cond_value[2]  		= 	SPL_Cost_TrfSheep;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1305,7 +1308,6 @@ INSTANCE ItSc_TrfSheep (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;
-	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfSheep;
 
 	TEXT	[5]			=	NAME_Value;
@@ -1326,7 +1328,7 @@ INSTANCE ItSc_TrfScavenger (C_Item)
 
 	spell				= 	SPL_TrfScavenger;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_TrfScavenger;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1336,7 +1338,6 @@ INSTANCE ItSc_TrfScavenger (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;
-	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfScavenger;
 
 	TEXT	[5]			=	NAME_Value;
@@ -1357,7 +1358,7 @@ INSTANCE ItSc_TrfGiantRat (C_Item)
 
 	spell				= 	SPL_TrfGiantRat;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_TrfGiantRat;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1367,7 +1368,6 @@ INSTANCE ItSc_TrfGiantRat (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;
-	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfGiantRat;
 
 	TEXT	[5]			=	NAME_Value;
@@ -1388,7 +1388,7 @@ INSTANCE ItSc_TrfGiantBug (C_Item)
 
 	spell				= 	SPL_TrfGiantBug;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_TrfGiantBug;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1398,7 +1398,6 @@ INSTANCE ItSc_TrfGiantBug (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;
-	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfGiantBug;
 
 	TEXT	[5]			=	NAME_Value;
@@ -1420,7 +1419,7 @@ INSTANCE ItSc_TrfWolf (C_Item)
 
 	spell				= 	SPL_TrfWolf;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_TrfWolf;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1430,7 +1429,6 @@ INSTANCE ItSc_TrfWolf (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;
-	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfWolf;
 
 	TEXT	[5]			=	NAME_Value;
@@ -1451,7 +1449,7 @@ INSTANCE ItSc_TrfWaran (C_Item)
 
 	spell				= 	SPL_TrfWaran;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_TrfWaran;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1461,7 +1459,6 @@ INSTANCE ItSc_TrfWaran (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;
-	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfWaran;
 
 	TEXT	[5]			=	NAME_Value;
@@ -1482,7 +1479,7 @@ INSTANCE ItSc_TrfSnapper (C_Item)
 
 	spell				= 	SPL_TrfSnapper;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_TrfSnapper;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1492,7 +1489,6 @@ INSTANCE ItSc_TrfSnapper (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;
-	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfSnapper;
 
 	TEXT	[5]			=	NAME_Value;
@@ -1513,7 +1509,7 @@ INSTANCE ItSc_TrfWarg (C_Item)
 
 	spell				= 	SPL_TrfWarg;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_TrfWarg;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1523,7 +1519,6 @@ INSTANCE ItSc_TrfWarg (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;
-	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfWarg;
 
 	TEXT	[5]			=	NAME_Value;
@@ -1544,7 +1539,7 @@ INSTANCE ItSc_TrfFireWaran (C_Item)
 
 	spell				= 	SPL_TrfFireWaran;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_TrfFireWaran;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1554,7 +1549,6 @@ INSTANCE ItSc_TrfFireWaran (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;
-	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfFireWaran;
 
 	TEXT	[5]			=	NAME_Value;
@@ -1575,7 +1569,7 @@ INSTANCE ItSc_TrfLurker (C_Item)
 
 	spell				= 	SPL_TrfLurker;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_TrfLurker;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1585,7 +1579,6 @@ INSTANCE ItSc_TrfLurker (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;
-	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfLurker;
 
 	TEXT	[5]			=	NAME_Value;
@@ -1606,7 +1599,7 @@ INSTANCE ItSc_TrfShadowbeast (C_Item)
 
 	spell				= 	SPL_TrfShadowbeast;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_TrfShadowbeast;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1616,7 +1609,6 @@ INSTANCE ItSc_TrfShadowbeast (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;
-	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfShadowbeast;
 
 	TEXT	[5]			=	NAME_Value;
@@ -1637,7 +1629,7 @@ INSTANCE ItSc_TrfDragonSnapper (C_Item)//Joly:Auf Dracheninsel in Truhe der Schw
 
 	spell				= 	SPL_TrfDragonSnapper;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	SPL_Cost_TrfDragonSnapper;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1647,7 +1639,6 @@ INSTANCE ItSc_TrfDragonSnapper (C_Item)//Joly:Auf Dracheninsel in Truhe der Schw
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;
-	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfDragonSnapper;
 
 	TEXT	[5]			=	NAME_Value;
@@ -1668,7 +1659,7 @@ INSTANCE ItSc_Teleport_Maya (C_Item)
 
 	spell				= 	SPL_Teleport_Maya;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	SPL_Cost_Scroll;
+	cond_value[2]  		=	C_GetScrollCost(SPL_COST_TELEPORT);
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1678,7 +1669,7 @@ INSTANCE ItSc_Teleport_Maya (C_Item)
 	TEXT	[0]			=	Name_MageScroll	;
 
 	TEXT	[1]			=	NAME_Mana_needed;
-	COUNT	[1]			=	SPL_Cost_Scroll;
+	COUNT	[1]			=	C_GetScrollCost(SPL_COST_TELEPORT);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

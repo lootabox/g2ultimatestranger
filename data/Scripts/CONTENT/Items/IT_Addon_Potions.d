@@ -96,8 +96,7 @@ INSTANCE ItPo_Health_Addon_04(C_Item)
 
 	description		= 	"Pure life energy";
 	
-	//TEXT[1]			= 	NAME_Bonus_HP;				
-	TEXT[2]			= 	"Complete regeneration.";
+	TEXT[1]			= 	"Complete life regeneration.";
 	
 	TEXT[5]			= 	NAME_Value;					
 	COUNT[5]		= 	Value_HpTrunk;
@@ -130,8 +129,7 @@ INSTANCE ItPo_Mana_Addon_04(C_Item)
 
 	description		= 	"Pure mana";
 	
-	//TEXT[1]			= 	NAME_Bonus_Mana;				
-	TEXT[2]			= 	"Complete mana regeneration.";
+	TEXT[1]			= 	"Complete mana regeneration.";
 	
 	TEXT[5]			= 	NAME_Value;					
 	COUNT[5]		= 	Value_ManaTrunk;

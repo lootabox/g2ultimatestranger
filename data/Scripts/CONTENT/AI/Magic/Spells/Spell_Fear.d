@@ -14,18 +14,7 @@ INSTANCE Spell_Fear (C_Spell_Proto)
 
 func int Spell_Logic_Fear (var int manaInvested)
 {	
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Fear)
-	{	
-		return SPL_SENDCAST;
-	}
-	else //nicht genug Mana
-	{
-		return SPL_SENDSTOP;
-	};
+	return Spell_Logic_Basic(self, SPL_Cost_Fear);
 };
 
 
@@ -33,14 +22,5 @@ func void Spell_Cast_Fear()
 {
 	AI_SetNpcsToState (self, ZS_MagicFlee, 1000); //-kairo
 
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Fear;
-	};
-	
-	self.aivar[AIV_SelectSpell] += 1;
+	Spell_Cast_Basic(self, SPL_Cost_Fear);
 };

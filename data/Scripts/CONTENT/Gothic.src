@@ -224,7 +224,7 @@ AI\MAGIC\C_Spell_Proto.d
 
 AI\MAGIC\B_AssessMagic.d
 AI\MAGIC\C_CanNpcCollideWithSpell.d
-AI\MAGIC\Spell_ProcessManaTier.d
+AI\MAGIC\Spell_Common.d
 
 AI\MAGIC\Spells\Spell_*.d
 

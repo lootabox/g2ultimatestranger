@@ -33,15 +33,8 @@ INSTANCE Spell_Teleport (C_Spell_Proto)
 // ------ zum Paladin-Secret ------
 func int Spell_Logic_PalTeleportSecret (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
-	{
-		return SPL_SENDCAST;
-	};
-	
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Teleport);
+	if (logicResult == SPL_SENDCAST)	{ return SPL_SENDCAST; };
 	return SPL_NEXTLEVEL;
 };
 
@@ -49,14 +42,7 @@ func void Spell_Cast_PalTeleportSecret()
 {
 	B_PrintTeleportTooFarAway (NEWWORLD_ZEN);
 	
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
-	};
+	Spell_Cast_Basic(self, SPL_Cost_Teleport);
 
 	AI_Teleport		(self, "NW_PAL_SECRETCHAMBER");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
@@ -66,15 +52,8 @@ func void Spell_Cast_PalTeleportSecret()
 // ------ zur Hafen-Stadt ------
 func int Spell_Logic_TeleportSeaport (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
-	{
-		return SPL_SENDCAST;
-	};
-	
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Teleport);
+	if (logicResult == SPL_SENDCAST)	{ return SPL_SENDCAST; };
 	return SPL_NEXTLEVEL;
 };
 
@@ -82,14 +61,7 @@ func void Spell_Cast_TeleportSeaport()
 {
 	B_PrintTeleportTooFarAway (NEWWORLD_ZEN);
 	
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
-	};
+	Spell_Cast_Basic(self, SPL_Cost_Teleport);
 
 	AI_Teleport		(self, "HAFEN");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
@@ -98,15 +70,8 @@ func void Spell_Cast_TeleportSeaport()
 // ------ zum Kloster ------
 func int Spell_Logic_TeleportMonastery (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
-	{
-		return SPL_SENDCAST;
-	};
-	
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Teleport);
+	if (logicResult == SPL_SENDCAST)	{ return SPL_SENDCAST; };
 	return SPL_NEXTLEVEL;
 };
 
@@ -114,14 +79,7 @@ func void Spell_Cast_TeleportMonastery()
 {
 	B_PrintTeleportTooFarAway (NEWWORLD_ZEN);
 	
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
-	};
+	Spell_Cast_Basic(self, SPL_Cost_Teleport);
 
 	AI_Teleport		(self, "KLOSTER");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
@@ -130,15 +88,8 @@ func void Spell_Cast_TeleportMonastery()
 // ------ zum Bauernhof ------
 func int Spell_Logic_TeleportFarm (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
-	{
-		return SPL_SENDCAST;
-	};
-	
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Teleport);
+	if (logicResult == SPL_SENDCAST)	{ return SPL_SENDCAST; };
 	return SPL_NEXTLEVEL;
 };
 
@@ -146,14 +97,7 @@ func void Spell_Cast_TeleportFarm()
 {
 	B_PrintTeleportTooFarAway (NEWWORLD_ZEN);
 	
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
-	};
+	Spell_Cast_Basic(self, SPL_Cost_Teleport);
 
 	AI_Teleport		(self, "BIGFARM");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
@@ -162,30 +106,16 @@ func void Spell_Cast_TeleportFarm()
 // ------ zu Xardas ------
 func int Spell_Logic_TeleportXardas (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
-	{
-		return SPL_SENDCAST;
-	};
-	
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Teleport);
+	if (logicResult == SPL_SENDCAST)	{ return SPL_SENDCAST; };
 	return SPL_NEXTLEVEL;
 };
 
 func void Spell_Cast_TeleportXardas()
 {
 	B_PrintTeleportTooFarAway (NEWWORLD_ZEN);
-
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
-	};
+	
+	Spell_Cast_Basic(self, SPL_Cost_Teleport);
 
 	AI_Teleport		(self, "XARDAS"); 
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
@@ -194,15 +124,8 @@ func void Spell_Cast_TeleportXardas()
 // ------ zum Pass in der NW ------
 func int Spell_Logic_TeleportPassNW (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
-	{
-		return SPL_SENDCAST;
-	};
-	
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Teleport);
+	if (logicResult == SPL_SENDCAST)	{ return SPL_SENDCAST; };
 	return SPL_NEXTLEVEL;
 };
 
@@ -210,14 +133,7 @@ func void Spell_Cast_TeleportPassNW()
 {
 	B_PrintTeleportTooFarAway (NEWWORLD_ZEN);
 	
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
-	};
+	Spell_Cast_Basic(self, SPL_Cost_Teleport);
 
 	AI_Teleport		(self, "LEVELCHANGE");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
@@ -226,15 +142,8 @@ func void Spell_Cast_TeleportPassNW()
 // ------ zum Pass in der OW ------
 func int Spell_Logic_TeleportPassOW (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
-	{
-		return SPL_SENDCAST;
-	};
-	
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Teleport);
+	if (logicResult == SPL_SENDCAST)	{ return SPL_SENDCAST; };
 	return SPL_NEXTLEVEL;
 };
 
@@ -243,14 +152,7 @@ func void Spell_Cast_TeleportPassOW()
 {
 	B_PrintTeleportTooFarAway (OLDWORLD_ZEN);
 	
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
-	};
+	Spell_Cast_Basic(self, SPL_Cost_Teleport);
 
 	AI_Teleport		(self, "SPAWN_MOLERAT02_SPAWN01");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
@@ -259,30 +161,16 @@ func void Spell_Cast_TeleportPassOW()
 // ------ zum Old Camp ------
 func int Spell_Logic_TeleportOC (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
-	{
-		return SPL_SENDCAST;
-	};
-	
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Teleport);
+	if (logicResult == SPL_SENDCAST)	{ return SPL_SENDCAST; };
 	return SPL_NEXTLEVEL;
 };
 
 func void Spell_Cast_TeleportOC()
 {
 	B_PrintTeleportTooFarAway (OLDWORLD_ZEN);
-
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
-	};
+	
+	Spell_Cast_Basic(self, SPL_Cost_Teleport);
 
 	AI_Teleport		(self, "OC_MAGE_CENTER");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
@@ -291,30 +179,16 @@ func void Spell_Cast_TeleportOC()
 // ------ in den OW Dämonentower ------
 func int Spell_Logic_TeleportOWDemonTower (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
-	{
-		return SPL_SENDCAST;
-	};
-	
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Teleport);
+	if (logicResult == SPL_SENDCAST)	{ return SPL_SENDCAST; };
 	return SPL_NEXTLEVEL;
 };
 
 func void Spell_Cast_TeleportOWDemonTower()
 {
 	B_PrintTeleportTooFarAway (OLDWORLD_ZEN);
-
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
-	};
+	
+	Spell_Cast_Basic(self, SPL_Cost_Teleport);
 
 	AI_Teleport		(self, "DT_E3_03");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
@@ -323,30 +197,16 @@ func void Spell_Cast_TeleportOWDemonTower()
 // ------ Zur Taverne ------
 func int Spell_Logic_TeleportTaverne (var int manaInvested)
 {
-	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
-	{
-		return SPL_SENDCAST;
-	};
-	
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Teleport);
+	if (logicResult == SPL_SENDCAST)	{ return SPL_SENDCAST; };
 	return SPL_NEXTLEVEL;
 };
 
 func void Spell_Cast_TeleportTaverne ()
 {
 	B_PrintTeleportTooFarAway (NEWWORLD_ZEN);
-
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
-	};
+	
+	Spell_Cast_Basic(self, SPL_Cost_Teleport);
 
 	AI_Teleport		(self, "NW_TAVERNE_04");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
@@ -359,30 +219,17 @@ func int Spell_Logic_Teleport_Maya (var int manaInvested)
 	{
 		B_Say_Overlay(self,self,"$ADDON_ANCIENTGHOST_NOTNEAR");
 		return SPL_SENDSTOP;
-	}
-	else if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
-	{
-		return SPL_SENDCAST;
-	}
-	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
-	{
-		return SPL_SENDCAST;
 	};
+	var int logicResult; logicResult = Spell_Logic_Basic(self, SPL_Cost_Teleport);
+	if (logicResult == SPL_SENDCAST)	{ return SPL_SENDCAST; };
 	return SPL_NEXTLEVEL;
 };
 
 func void Spell_Cast_Teleport_Maya ()
 {
 	B_PrintTeleportTooFarAway(ADDONWORLD_ZEN);
-
-	if (Npc_GetActiveSpellIsScroll(self))
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Scroll;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
-	};
+	
+	Spell_Cast_Basic(self, SPL_Cost_Teleport);
 
 	AI_Teleport		(self, "ADW_VALLEY_PATH_054_G");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
