@@ -61,29 +61,6 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		
 		return COLL_DOEVERYTHING;
 	};
-		
-	// ---- Thunderstorm ----	
-
-	if (spellType == SPL_Thunderstorm)
-	{
-		if (C_NpcIsDown(self))
-		|| (C_BodyStateContains(self,BS_SWIM))
-		|| (C_BodyStateContains(self,BS_DIVE))
-		{
-			return COLL_DONOTHING;
-		};
-		
-		if (C_NpcIsIceBase(self))
-		{
-			return COLL_APPLYHALVEDAMAGE;
-		};
-		if (C_NpcIsFireBase(self))
-		{
-			return COLL_APPLYDOUBLEDAMAGE;
-		};
-
-		return COLL_DOEVERYTHING;
-	};	
 
 	//----- Geyser -----
 	//----- Waterfist -----
@@ -273,8 +250,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		};
 	};
 
-	//----- Feuer -----	
-
+	//----- Feuer ------
 	if (spellType 	== SPL_ChargeFireball)
 	|| (spellType  	== SPL_InstantFireball)
 	|| (spellType  	== SPL_Firerain)
@@ -313,11 +289,11 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	};
 	
 	//----- Eis -----
-
 	if (spellType == SPL_IceCube)
 	|| (spellTYpe == SPL_IceWave)
 	|| (spellType == SPL_Icebolt)
 	|| (spellType == SPL_Icelance)
+	|| (spellType == SPL_Thunderstorm)
 	{
 		// wenn im schwimm oder tauchmodus, bewirkt der spell nix
 		if (C_NpcIsDown(self))
@@ -391,7 +367,6 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		}; */
 
 	// ---- Untote vernichten ----
-
 	if (spellType == SPL_DestroyUndead)
 	{
 		if (C_NpcIsUndead(self))
