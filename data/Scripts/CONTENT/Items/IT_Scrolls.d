@@ -3,7 +3,7 @@
 //*****************************************************************************
 
 // Paladin Scrolls
-const 	string Name_PaladinScroll		=	"Paladin Scroll"; 	
+const 	string Name_PaladinScroll		=	"Paladin Scroll";
 const	int	Value_Sc_PalLight			=	50;
 const	int	Value_Sc_PalLightHeal		=	100;
 const	int	Value_Sc_PalHolyBolt		=	200;
@@ -13,10 +13,10 @@ const	int	Value_Sc_PalFullHeal		=	800;
 const	int	Value_Sc_PalDestroyEvil		=	1000;
 
 // Magier Scrolls
-const int 	Value_Sc_Light				=  	10;		
+const int 	Value_Sc_Light				=  	10;
 const int 	Value_Sc_Firebolt			=	25;
 const int 	Value_Sc_Charm				=   100;
-const int 	Value_Sc_Icebolt			=	25;	
+const int 	Value_Sc_Icebolt			=	25;
 const int 	Value_Sc_LightHeal			=	25;
 const int 	Value_Sc_SumGobSkel			=  	75;
 const int 	Value_Sc_InstantFireball	=	50;
@@ -41,12 +41,12 @@ const int 	Value_Sc_Firestorm			=	100;
 const int 	Value_Sc_IceWave			=	200;
 const int 	Value_Sc_SumDemon			=	200;
 const int 	Value_Sc_FullHeal			=	200;
+const int 	Value_Sc_Shrink				=	200;
 
 const int 	Value_Sc_Firerain			=	250;
 const int 	Value_Sc_BreathOfDeath		=	250;
 const int 	Value_Sc_MassDeath			=	250;
 const int 	Value_Sc_ArmyOfDarkness		=	250;
-const int 	Value_Sc_Shrink				=	250;
 
 const int 	Value_Sc_TrfSheep			= 25;
 const int 	Value_Sc_TrfScavenger		= 50;
@@ -87,13 +87,13 @@ INSTANCE ItSc_PalLight (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;		
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Duration;		
+	TEXT	[2]			=	NAME_Duration;
 	COUNT	[2]			=	SPL_Duration_PalLIGHT;
 	
-	TEXT	[5]			=	NAME_Value;				
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -120,13 +120,13 @@ INSTANCE ItSc_PalLightHeal (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_HealingPerCast;		
+	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_PalLightHeal;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -154,13 +154,13 @@ INSTANCE ItSc_PalHolyBolt (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;		
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;			
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_PalHolyBolt;
 	
-	TEXT	[5]			=	NAME_Value;				
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -187,13 +187,13 @@ INSTANCE ItSc_PalMediumHeal (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_HealingPerCast;		
+	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_PalMediumHeal;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -219,13 +219,13 @@ INSTANCE ItSc_PalRepelEvil (C_Item)
 	description			=	NAME_SPL_PalRepelEvil;
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_PalRepelEvil;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -248,16 +248,16 @@ INSTANCE ItSc_PalFullHeal (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
-	description			=	NAME_SPL_PalFullHeal;		
+	description			=	NAME_SPL_PalFullHeal;
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_HealingPerCast;		
+	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_PalFullHeal;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -283,13 +283,13 @@ INSTANCE ItSc_PalDestroyEvil (C_Item)
 	description			=	NAME_SPL_PalDestroyEvil;
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_PalDestroyEvil;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 
@@ -319,13 +319,13 @@ instance ItSc_Light (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;		
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Duration;		
+	TEXT	[2]			=	NAME_Duration;
 	COUNT	[2]			=	SPL_Duration_LIGHT;
 	
-	TEXT	[5]			=	NAME_Value;				
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -352,13 +352,13 @@ INSTANCE ItSc_Firebolt (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;		
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;			
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_FIREBOLT;
 	
-	TEXT	[5]			=	NAME_Value;				
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -385,13 +385,13 @@ INSTANCE ItSc_Icebolt (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_Icebolt;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -418,13 +418,13 @@ INSTANCE ItSc_LightHeal (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_HealingPerCast;		
+	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_LightHeal;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 
@@ -452,10 +452,10 @@ INSTANCE ItSc_SumGobSkel (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -482,13 +482,13 @@ INSTANCE ItSc_InstantFireball (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;							
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;	
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_InstantFireball;
 	
-	TEXT	[5]			=	NAME_Value;									
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -514,13 +514,13 @@ INSTANCE ItSc_Zap (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;			
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_ZAP;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -547,10 +547,10 @@ INSTANCE ItSc_SumWolf (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -577,13 +577,13 @@ INSTANCE ItSc_Windfist (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_ManaCostPerCharge;							
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
 	TEXT	[2]			=	"Wind damage per tier:";
 	count 	[2]			=   SPL_Damage_Windfist;
 	
-	TEXT	[5]			=	NAME_Value;									
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -610,13 +610,13 @@ INSTANCE ItSc_Sleep (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Sec_Duration;			
+	TEXT	[2]			=	NAME_Sec_Duration;
 	COUNT	[2]			=	SPL_TIME_Sleep;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 
@@ -645,10 +645,10 @@ INSTANCE ItSc_Charm(C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 
@@ -676,13 +676,13 @@ INSTANCE ItSc_MediumHeal (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;		
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_HealingPerCast;		
+	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_MediumHeal;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -709,13 +709,13 @@ INSTANCE ItSc_LightningFlash (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;		
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;			
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_LightningFlash;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -748,7 +748,7 @@ INSTANCE ItSc_ChargeFireball (C_Item)
 	TEXT	[2]			=	NAME_DamagePerCharge;
 	count 	[2]			=   SPL_Damage_ChargeFireball;
 	
-	TEXT	[5]			=	NAME_Value;									
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -775,10 +775,10 @@ INSTANCE ItSc_SumSkel (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -805,13 +805,13 @@ INSTANCE ItSc_Fear (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Sec_Duration;				
+	TEXT	[2]			=	NAME_Sec_Duration;
 	COUNT	[2]			=	SPL_TIME_Fear;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -838,19 +838,19 @@ INSTANCE ItSc_IceCube (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;			
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_IceCube;
 	
-	TEXT	[3]			=	NAME_Sec_Duration;				
-	COUNT	[3]			=	SPL_TIME_FREEZE;
+	TEXT	[3]			=	NAME_Dam_MagicDotFreeze;
+	COUNT	[3]			=	SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE;
 	
-	TEXT	[4]			=	NAME_DamagePerSec;				
+	TEXT	[4]			=	NAME_DamagePerSec;
 	COUNT	[4]			=	SPL_FREEZE_DAMAGE;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -884,7 +884,7 @@ INSTANCE ItSc_ThunderBall (C_Item)
 	TEXT	[2]			=	NAME_DamagePerCharge;
 	count 	[2]			=   SPL_Damage_ChargeZap;
 	
-	TEXT	[5]			=	NAME_Value;									
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -911,10 +911,10 @@ INSTANCE ItSc_SumGol (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[5]			=	NAME_Value;				
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -941,13 +941,13 @@ INSTANCE ItSc_HarmUndead (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_DESTROYUNDEAD;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -980,7 +980,7 @@ INSTANCE ItSc_Pyrokinesis (C_Item)
 	TEXT	[2]			=	NAME_DamagePerCharge;
 	count 	[2]			=   SPL_Damage_Firestorm;
 	
-	TEXT	[5]			=	NAME_Value;									
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1007,13 +1007,13 @@ INSTANCE ItSc_Firestorm (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;							
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;	
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_INSTANTFIRESTORM;
 	
-	TEXT	[5]			=	NAME_Value;									
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1040,19 +1040,19 @@ INSTANCE ItSc_IceWave (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;			
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_IceCube;
 	
-	TEXT	[3]			=	NAME_Sec_Duration;				
-	COUNT	[3]			=	SPL_TIME_FREEZE;
+	TEXT	[3]			=	NAME_Dam_MagicDotFreeze;
+	COUNT	[3]			=	SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE;
 	
-	TEXT	[4]			=	NAME_DamagePerSec;				
+	TEXT	[4]			=	NAME_DamagePerSec;
 	COUNT	[4]			=	SPL_FREEZE_DAMAGE;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1079,10 +1079,10 @@ INSTANCE ItSc_SumDemon (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1110,13 +1110,13 @@ INSTANCE ItSc_FullHeal (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;		
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_HealingPerCast;		
+	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_FullHeal;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1143,13 +1143,13 @@ INSTANCE ItSc_Firerain (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_FIRERAIN;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1175,13 +1175,13 @@ INSTANCE ItSc_BreathOfDeath (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarz
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_BREATHOFDEATH;
 
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1207,13 +1207,13 @@ INSTANCE ItSc_MassDeath (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_MASSDEATH;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1240,10 +1240,10 @@ INSTANCE ItSc_ArmyOfDarkness (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1269,12 +1269,15 @@ INSTANCE ItSc_Shrink (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarzmagiern
 
 	description			=	NAME_SPL_Shrink;
 	
-	TEXT	[0]			=	Name_MageScroll	;
+	TEXT	[0]			=	Name_MageScroll;
 	
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
+
+	TEXT	[2]			=	NAME_Shrink_Penalty;
+	COUNT	[2]			=	SPL_Shrink_Penalty;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1301,11 +1304,11 @@ INSTANCE ItSc_TrfSheep (C_Item)
 
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfSheep;
 
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1332,11 +1335,11 @@ INSTANCE ItSc_TrfScavenger (C_Item)
 
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfScavenger;
 
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1363,11 +1366,11 @@ INSTANCE ItSc_TrfGiantRat (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfGiantRat;
 
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1394,11 +1397,11 @@ INSTANCE ItSc_TrfGiantBug (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfGiantBug;
 
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 
 };
@@ -1426,11 +1429,11 @@ INSTANCE ItSc_TrfWolf (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfWolf;
 
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1457,11 +1460,11 @@ INSTANCE ItSc_TrfWaran (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfWaran;
 
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1488,11 +1491,11 @@ INSTANCE ItSc_TrfSnapper (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfSnapper;
 
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1519,11 +1522,11 @@ INSTANCE ItSc_TrfWarg (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfWarg;
 
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1550,11 +1553,11 @@ INSTANCE ItSc_TrfFireWaran (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfFireWaran;
 
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1581,11 +1584,11 @@ INSTANCE ItSc_TrfLurker (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfLurker;
 
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1612,11 +1615,11 @@ INSTANCE ItSc_TrfShadowbeast (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfShadowbeast;
 
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1643,11 +1646,11 @@ INSTANCE ItSc_TrfDragonSnapper (C_Item)//Joly:Auf Dracheninsel in Truhe der Schw
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	//COUNT	[1]			=	SPL_Cost_Scroll;
 	COUNT	[1]			=	SPL_Cost_TrfDragonSnapper;
 
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1674,10 +1677,10 @@ INSTANCE ItSc_Teleport_Maya (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;			
+	TEXT	[1]			=	NAME_Mana_needed;
 	COUNT	[1]			=	SPL_Cost_Scroll;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/

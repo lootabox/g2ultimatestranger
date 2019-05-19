@@ -6,7 +6,7 @@
 //********************************************************************************************
 
 const 	string 	Name_PaladinSpell		=	"Paladin Rune"; 	
-const	int	Value_Ru_PalLight			=	500;	
+const	int	Value_Ru_PalLight			=	500;
 const	int	Value_Ru_PalLightHeal		=	500;
 const	int	Value_Ru_PalHolyBolt		=	500;
 const	int	Value_Ru_PalMediumHeal		=	2000;
@@ -47,13 +47,13 @@ const	int	Value_Ru_IceWave			=	2500;// Lehrer Marduk
 const	int	Value_Ru_SumDemon			=	2500;// Lehrer Karras
 const	int	Value_Ru_FullHeal			=	2500;// Lehrer Parlan
 const	int	Value_Ru_Pyrokinesis		=	2500;// Lehrer Hyglas
+const	int	Value_Ru_Shrink				=	2500;
 // Kreis 6 		
 const	int	Value_Ru_Firerain			=	3000;// Lehrer Hyglas
 const	int	Value_Ru_BreathOfDeath		=	3000;
 const	int	Value_Ru_MassDeath			=	3000;
 const	int	Value_Ru_MasterOfDisaster	=	3000;
 const	int	Value_Ru_ArmyOfDarkness		=	3000;// Lehrer Karras
-const	int	Value_Ru_Shrink				=	3000;
 
 //TeleportRunen
 const int	Value_Ru_PalTeleportSecret		=	500;
@@ -91,13 +91,13 @@ INSTANCE ItRu_PalLight (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinSpell	;
 	
-	TEXT	[1]			=	NAME_Manakosten;		
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_PalLight;
 	
-	TEXT	[2]			=	NAME_Duration;		
+	TEXT	[2]			=	NAME_Duration;
 	COUNT	[2]			=	SPL_Duration_PalLIGHT;
 	
-	TEXT	[5]			=	NAME_Value;				
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 }; 
 /*******************************************************************************************/
@@ -123,13 +123,13 @@ INSTANCE ItRu_PalLightHeal (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinSpell	;
 	
-	TEXT	[1]			=	NAME_Manakosten;		
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_PalLightHeal;
 	
-	TEXT	[2]			=	NAME_HealingPerCast;		
+	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_PalLightHeal;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -155,13 +155,13 @@ INSTANCE ItRu_PalMediumHeal (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinSpell	;
 	
-	TEXT	[1]			=	NAME_Manakosten;		
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_PalMediumHeal;
 	
-	TEXT	[2]			=	NAME_HealingPerCast;		
+	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_PalMediumHeal;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -187,13 +187,13 @@ INSTANCE ItRu_PalFullHeal (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinSpell	;
 	
-	TEXT	[1]			=	NAME_Manakosten;		
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_PalFullHeal;
 	
-	TEXT	[2]			=	NAME_HealingPerCast;		
+	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_PalFullHeal;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -219,13 +219,13 @@ INSTANCE ItRu_PalHolyBolt (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinSpell	;
 	
-	TEXT	[1]			=	NAME_Manakosten;		
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_PalHolyBolt;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;			
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_PalHolyBolt;
 	
-	TEXT	[5]			=	NAME_Value;				
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -252,13 +252,13 @@ INSTANCE ItRu_PalRepelEvil (C_Item)
 
 	TEXT	[0]			=	Name_PaladinSpell	;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_PalRepelEvil;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_PalRepelEvil;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -284,13 +284,13 @@ INSTANCE ItRu_PalDestroyEvil (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinSpell	;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_PalDestroyEvil;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_PalDestroyEvil;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -303,7 +303,7 @@ INSTANCE ItRu_PalTeleportSecret (C_Item)
 	
 	value				=	Value_Ru_PalTeleportSecret;
 	
-	visual				=	"ItRu_PalTeleportSecret.3DS";	
+	visual				=	"ItRu_PalTeleportSecret.3DS";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_PalTeleportSecret;
@@ -316,9 +316,9 @@ INSTANCE ItRu_PalTeleportSecret (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinSpell	;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_TELEPORT;
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -331,7 +331,7 @@ INSTANCE ItRu_TeleportSeaport (C_Item)
 	
 	value 				=	Value_Ru_TeleportSeaport;
 	
-	visual				=	"ItRu_TeleportSeaport.3ds";	
+	visual				=	"ItRu_TeleportSeaport.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportSeaport;
@@ -343,9 +343,9 @@ INSTANCE ItRu_TeleportSeaport (C_Item)
 	description			= 	NAME_SPL_TeleportSeaport;
 	
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_TELEPORT;
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -359,7 +359,7 @@ INSTANCE ItRu_TeleportMonastery (C_Item)
 	value 				=	Value_Ru_TeleportMonastery;
 
 	
-	visual				=	"ItRu_TeleportMonastery.3ds";	
+	visual				=	"ItRu_TeleportMonastery.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportMonastery;
@@ -371,9 +371,9 @@ INSTANCE ItRu_TeleportMonastery (C_Item)
 	description			= 	NAME_SPL_TeleportMonastery;
 	
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_TELEPORT;
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -386,7 +386,7 @@ INSTANCE ItRu_TeleportFarm (C_Item)
 	
 	value 				=	Value_Ru_TeleportFarm;
 	
-	visual				=	"ItRu_TeleportFarm.3ds";	
+	visual				=	"ItRu_TeleportFarm.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportFarm;
@@ -398,9 +398,9 @@ INSTANCE ItRu_TeleportFarm (C_Item)
 	description			= 	NAME_SPL_TeleportFarm;
 	
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_TELEPORT;
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -413,7 +413,7 @@ INSTANCE ItRu_TeleportXardas (C_Item)
 	
 	value 				=	Value_Ru_TeleportXardas;
 	
-	visual				=	"ItRu_TeleportXardas.3ds";	
+	visual				=	"ItRu_TeleportXardas.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportXardas;
@@ -425,9 +425,9 @@ INSTANCE ItRu_TeleportXardas (C_Item)
 	description			= 	NAME_SPL_TeleportXardas;
 	
 
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_TELEPORT;
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -440,7 +440,7 @@ INSTANCE ItRu_TeleportPassNW (C_Item)
 	
 	value 				=	Value_Ru_TeleportPassNW;
 	
-	visual				=	"ItRu_TeleportPassNW.3ds";	
+	visual				=	"ItRu_TeleportPassNW.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportPassNW;
@@ -452,9 +452,9 @@ INSTANCE ItRu_TeleportPassNW (C_Item)
 	description			= 	NAME_SPL_TeleportPassNW;
 	
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_TELEPORT;
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -467,7 +467,7 @@ INSTANCE ItRu_TeleportPassOW (C_Item)
 	
 	value 				=	Value_Ru_TeleportPassOW;
 	
-	visual				=	"ItRu_TeleportPassOW.3ds";	
+	visual				=	"ItRu_TeleportPassOW.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportPassOW;
@@ -478,9 +478,9 @@ INSTANCE ItRu_TeleportPassOW (C_Item)
 
 	description			= 	NAME_SPL_TeleportPassOW;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_TELEPORT;
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -493,7 +493,7 @@ INSTANCE ItRu_TeleportOC (C_Item)
 	
 	value 				=	Value_Ru_TeleportOC;
 	
-	visual				=	"ItRu_TeleportOC.3ds";	
+	visual				=	"ItRu_TeleportOC.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportOC;
@@ -504,9 +504,9 @@ INSTANCE ItRu_TeleportOC (C_Item)
 
 	description			= 	NAME_SPL_TeleportOC;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_TELEPORT;
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 
@@ -521,7 +521,7 @@ INSTANCE ItRu_TeleportOWDemonTower (C_Item)
 	
 	value				=	Value_Ru_TeleportOWDemonTower;
 	
-	visual				=	"ItRu_Teleport_2.3ds";	
+	visual				=	"ItRu_Teleport_2.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportOWDemonTower;
@@ -532,9 +532,9 @@ INSTANCE ItRu_TeleportOWDemonTower (C_Item)
 
 	description			= 	NAME_SPL_TeleportOWDemonTower;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_TELEPORT;
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 
@@ -547,7 +547,7 @@ INSTANCE ItRu_TeleportTaverne (C_Item)
 	
 	value				=	Value_Ru_TeleportTaverne;
 	
-	visual				=	"ItRu_Teleport_2.3ds";	
+	visual				=	"ItRu_Teleport_2.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportTaverne;
@@ -558,9 +558,9 @@ INSTANCE ItRu_TeleportTaverne (C_Item)
 
 	description			= 	NAME_SPL_TeleportTaverne;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_TELEPORT;
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -573,7 +573,7 @@ INSTANCE ItRu_Teleport_3 (C_Item)
 	
 	value 				=	Value_Ru_Teleport_3;
 	
-	visual				=	"ItRu_Teleport_3.3ds";	
+	visual				=	"ItRu_Teleport_3.3ds";
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Teleport_3;
@@ -584,9 +584,9 @@ INSTANCE ItRu_Teleport_3 (C_Item)
 
 	description			= 	NAME_SPL_Teleport_3;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_TELEPORT;
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -611,16 +611,16 @@ INSTANCE ItRu_Light (C_Item)
 
 	description			=	NAME_SPL_LIGHT;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;		
+	TEXT	[0]			=	NAME_Mag_Circle;
+	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;		
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_LIGHT;
 	
-	TEXT	[2]			=	NAME_Duration;		
+	TEXT	[2]			=	NAME_Duration;
 	COUNT	[2]			=	SPL_Duration_LIGHT;
 	
-	TEXT	[5]			=	NAME_Value;				
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 }; 
 /*******************************************************************************************/
@@ -644,16 +644,16 @@ INSTANCE ItRu_FireBolt (C_Item)
 
 	description			=	NAME_SPL_Firebolt;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 			
-	TEXT	[1]			=	NAME_Manakosten;		
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_FIREBOLT;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;			
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_FIREBOLT;
 	
-	TEXT	[5]			=	NAME_Value;				
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -677,16 +677,16 @@ INSTANCE ItRu_Zap (C_Item)
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
 	description			=	NAME_SPL_Zap;
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_Zap;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;			
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_ZAP;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -710,16 +710,16 @@ INSTANCE ItRu_LightHeal (C_Item)
 
 	description			=	NAME_SPL_LightHeal;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;		
+	TEXT	[0]			=	NAME_Mag_Circle;
+	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;		
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_LightHeal;
 	
-	TEXT	[2]			=	NAME_HealingPerCast;		
+	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_LightHeal;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -744,16 +744,16 @@ INSTANCE ItRu_SumGobSkel (C_Item)
 
 	description			=	NAME_SPL_SummonGoblinSkeleton;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_SummonGoblinSkeleton;
 	
 	TEXT 	[2]			=   "The wandering bones";
 	TEXT 	[3]			=   "of dead goblins.";
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -779,16 +779,16 @@ INSTANCE ItRu_InstantFireball (C_Item)
 
 	description			= 	NAME_SPL_InstantFireball;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;		
+	TEXT	[0]			=	NAME_Mag_Circle;
+	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;							
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_InstantFireball;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;	
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_InstantFireball;
 	
-	TEXT	[5]			=	NAME_Value;									
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -813,16 +813,16 @@ INSTANCE ItRu_Icebolt (C_Item)
 
 	description			=	NAME_SPL_Icebolt;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_Icebolt;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_Icebolt;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 
@@ -848,13 +848,13 @@ INSTANCE ItRu_SumWolf (C_Item)
 
 	description			=	NAME_SPL_SummonWolf;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;		
+	TEXT	[0]			=	NAME_Mag_Circle;
+	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_SummonWolf;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -878,16 +878,16 @@ INSTANCE ItRu_Windfist (C_Item)
 
 	description			=	NAME_SPL_WINDFIST;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;						
+	TEXT	[0]			=	NAME_Mag_Circle;
+	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_ManaCostPerCharge;							
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	STEP_WindFist;
 	
 	TEXT	[2]			=	"Wind damage per tier:";
 	count 	[2]			=   SPL_Damage_Windfist;
 	
-	TEXT	[5]			=	NAME_Value;									
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 
@@ -911,16 +911,16 @@ INSTANCE ItRu_Sleep (C_Item)
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
 	description			=	NAME_SPL_Sleep;
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_SLEEP;
 	
-	TEXT	[2]			=	NAME_SEC_Duration;			
+	TEXT	[2]			=	NAME_SEC_Duration;
 	COUNT	[2]			=	SPL_TIME_Sleep;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -945,16 +945,16 @@ INSTANCE ItRu_MediumHeal (C_Item)
 
 	description			=	NAME_SPL_MediumHeal;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;		
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_MediumHeal;
 	
-	TEXT	[2]			=	NAME_HealingPerCast;		
+	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_MediumHeal;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -978,16 +978,16 @@ INSTANCE ItRu_LightningFlash (C_Item)
 	
 	description			=	NAME_SPL_LightningFlash;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;		
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_LightningFlash;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;			
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_LightningFlash;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/	
@@ -1013,8 +1013,8 @@ INSTANCE ItRu_ChargeFireball (C_Item)
 	description			= 	NAME_SPL_ChargeFireball;
 	
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;						
+	TEXT	[0]			=	NAME_Mag_Circle;
+	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	STEP_ChargeFireball;
@@ -1022,7 +1022,7 @@ INSTANCE ItRu_ChargeFireball (C_Item)
 	TEXT	[2]			=	NAME_DamagePerCharge;
 	count 	[2]			=   SPL_Damage_ChargeFireball;
 	
-	TEXT	[5]			=	NAME_Value;									
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/	
@@ -1046,13 +1046,13 @@ INSTANCE ItRu_SumSkel (C_Item)
 
 	description			=	NAME_SPL_SummonSkeleton;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_SUMMONSKELETON;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/	
@@ -1076,16 +1076,16 @@ INSTANCE ItRu_Fear (C_Item)
 	
 	description			=	NAME_SPL_Fear;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_FEAR;
 	
-	TEXT	[2]			=	NAME_Sec_Duration;				
+	TEXT	[2]			=	NAME_Sec_Duration;
 	COUNT	[2]			=	SPL_TIME_Fear;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/	
@@ -1109,22 +1109,22 @@ INSTANCE ItRu_IceCube (C_Item)
 
 	description			=	NAME_SPL_IceCube;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_ICECUBE;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;			
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_IceCube;
+
+	TEXT	[3]			=	NAME_Dam_MagicDotFreeze;
+	COUNT	[3]			=	SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE;
 	
-	TEXT	[3]			=	NAME_Sec_Duration;				
-	COUNT	[3]			=	SPL_TIME_FREEZE;
-	
-	TEXT	[4]			=	NAME_DamagePerSec;				
+	TEXT	[4]			=	NAME_DamagePerSec;
 	COUNT	[4]			=	SPL_FREEZE_DAMAGE;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/	
@@ -1142,7 +1142,7 @@ INSTANCE ItRu_ThunderBall (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_ChargeZap;
-	mag_circle 			=	3;		
+	mag_circle 			=	3;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1150,8 +1150,8 @@ INSTANCE ItRu_ThunderBall (C_Item)
 	description			=	NAME_SPL_ChargeZap;
 	
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;						
+	TEXT	[0]			=	NAME_Mag_Circle;
+	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	STEP_ChargeZap;
@@ -1159,7 +1159,7 @@ INSTANCE ItRu_ThunderBall (C_Item)
 	TEXT	[2]			=	NAME_DamagePerCharge;
 	count 	[2]			=   SPL_Damage_ChargeZap;
 	
-	TEXT	[5]			=	NAME_Value;									
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 
@@ -1185,13 +1185,13 @@ INSTANCE ItRu_SumGol (C_Item)
 
 	description			=	NAME_SPL_SummonGolem;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_SummonGolem;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1215,16 +1215,16 @@ INSTANCE ItRu_HarmUndead (C_Item)
 
 	description			=	NAME_SPL_DestroyUndead;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_DESTROYUNDEAD;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_DESTROYUNDEAD;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1248,8 +1248,8 @@ INSTANCE ItRu_Pyrokinesis (C_Item)
 
 	description			=	NAME_SPL_Pyrokinesis;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;						
+	TEXT	[0]			=	NAME_Mag_Circle;
+	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	STEP_Firestorm;
@@ -1257,7 +1257,7 @@ INSTANCE ItRu_Pyrokinesis (C_Item)
 	TEXT	[2]			=	NAME_DamagePerCharge;
 	count 	[2]			=   SPL_Damage_Firestorm;
 	
-	TEXT	[5]			=	NAME_Value;									
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 
@@ -1283,16 +1283,16 @@ INSTANCE ItRu_Firestorm (C_Item)
 
 	description			= 	NAME_SPL_Firestorm;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;							
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;							
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_INSTANTFIRESTORM;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;	
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_INSTANTFIRESTORM;
 	
-	TEXT	[5]			=	NAME_Value;									
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1316,22 +1316,22 @@ INSTANCE ItRu_IceWave (C_Item)
 
 	description			=	NAME_SPL_IceWave;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_IceWave;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;			
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_IceCube;
+
+	TEXT	[3]			=	NAME_Dam_MagicDotFreeze;
+	COUNT	[3]			=	SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE;
 	
-	TEXT	[3]			=	NAME_Sec_Duration;				
-	COUNT	[3]			=	SPL_TIME_FREEZE;
-	
-	TEXT	[4]			=	NAME_DamagePerSec;				
+	TEXT	[4]			=	NAME_DamagePerSec;
 	COUNT	[4]			=	SPL_FREEZE_DAMAGE;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1358,10 +1358,10 @@ INSTANCE ItRu_SumDemon (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_SUMMONDEMON;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1386,15 +1386,15 @@ INSTANCE ItRu_FullHeal (C_Item)
 	description			=	NAME_SPL_FullHeal;
 	
 	TEXT	[0]			=	NAME_Mag_Circle;
-	COUNT	[0]			=	mag_circle;	
+	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;		
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_FullHeal;
 	
-	TEXT	[2]			=	NAME_HealingPerCast;		
+	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_FullHeal;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1419,16 +1419,16 @@ INSTANCE ItRu_Firerain (C_Item)
 
 	description			=	NAME_SPL_Firerain;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_FIRERAIN;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_FIRERAIN;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1452,16 +1452,16 @@ INSTANCE ItRu_BreathOfDeath (C_Item)
 
 	description			=	NAME_SPL_BreathOfDeath;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;			
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_BREATHOFDEATH;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_BREATHOFDEATH;
 		
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1489,13 +1489,13 @@ INSTANCE ItRu_MassDeath (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_MASSDEATH;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_MASSDEATH;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1523,13 +1523,13 @@ INSTANCE ItRu_MasterOfDisaster	(C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_MasterOfDisaster;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_MasterOfDisaster;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1552,13 +1552,13 @@ INSTANCE ItRu_ArmyOfDarkness (C_Item)
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
 
 	description			=	NAME_SPL_ArmyOfDarkness;
-	TEXT	[0]			=	NAME_Mag_Circle;		
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_ARMYOFDARKNESS;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1582,13 +1582,16 @@ INSTANCE ItRu_Shrink (C_Item)
 
 	description			=	NAME_SPL_Shrink;
 	
-	TEXT	[0]			=	NAME_Mag_Circle;		
+	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_SHRINK;
+
+	TEXT	[2]			=	NAME_Shrink_Penalty;
+	COUNT	[2]			=	SPL_Shrink_Penalty;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
@@ -1620,13 +1623,13 @@ INSTANCE ItRu_Deathbolt	(C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_Deathbolt;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_Deathbolt;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 
@@ -1653,13 +1656,13 @@ INSTANCE ItRu_Deathball	(C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_Deathball;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_Deathball;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 
@@ -1686,13 +1689,13 @@ INSTANCE ItRu_Concussionbolt	(C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;			
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_Concussionbolt;
 	
-	TEXT	[2]			=	NAME_Dam_Magic;				
+	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_Concussionbolt;
 	
-	TEXT	[5]			=	NAME_Value;					
+	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
 

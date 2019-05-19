@@ -2035,9 +2035,13 @@ FUNC VOID DIA_CH_Runen_1 ()
 	Info_ClearChoices (DIA_CH_Runen);
 	Info_AddChoice	(DIA_CH_Runen, DIALOG_BACK, DIA_CH_Runen_BACK);
 	
-	if	(PLAYER_TALENT_RUNES [SPL_SummonGoblinSkeleton] == FALSE) 
+	if (PLAYER_TALENT_RUNES [SPL_Icebolt] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonGoblinSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGoblinSkeleton)) ,CH_Training_Runen_Circle_1_SPL_SummonGoblinSkeleton);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,CH_Training_Runen_Circle_1_SPL_Icebolt);
+	};
+	if (PLAYER_TALENT_RUNES [SPL_SummonWolf] == FALSE) 
+	{
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonWolf, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonWolf)) ,CH_Training_Runen_Circle_1_SPL_SummonWolf);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_LightHeal] == FALSE)
 	{
@@ -2060,12 +2064,10 @@ FUNC VOID DIA_CH_Runen_1 ()
 FUNC VOID CH_Training_Runen_Circle_1_SPL_LIGHT()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_LIGHT);	
-	
 };
 FUNC VOID CH_Training_Runen_Circle_1_SPL_Firebolt()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_Firebolt);	
-	
 };
 FUNC VOID CH_Training_Runen_Circle_1_SPL_Zap()
 {
@@ -2074,12 +2076,14 @@ FUNC VOID CH_Training_Runen_Circle_1_SPL_Zap()
 FUNC VOID CH_Training_Runen_Circle_1_SPL_LightHeal()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_LightHeal);	
-
 };
-FUNC VOID CH_Training_Runen_Circle_1_SPL_SummonGoblinSkeleton()
+FUNC VOID CH_Training_Runen_Circle_1_SPL_SummonWolf()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonGoblinSkeleton);	
-	
+	B_TeachPlayerTalentRunes (self, other, SPL_SummonWolf);	
+};
+FUNC VOID CH_Training_Runen_Circle_1_SPL_Icebolt()
+{
+	B_TeachPlayerTalentRunes (self, other, SPL_Icebolt);	
 };
 //**********************************************************
 // Zweiter Kreis 
@@ -2094,13 +2098,9 @@ FUNC VOID DIA_CH_Runen_2()
 	{
 		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,CH_Training_Runen_Circle_2_SPL_InstantFireball);
 	};
-	if (PLAYER_TALENT_RUNES [SPL_Icebolt] == FALSE)
+	if (PLAYER_TALENT_RUNES [SPL_IceLance] == FALSE) 
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,CH_Training_Runen_Circle_2_SPL_Icebolt);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_SummonWolf] == FALSE) 
-	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonWolf, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonWolf)) ,CH_Training_Runen_Circle_2_SPL_SummonWolf);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_IceLance, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceLance)) ,CH_Training_Runen_Circle_2_SPL_IceLance);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_WINDFIST] == FALSE) 
 	{
@@ -2110,6 +2110,10 @@ FUNC VOID DIA_CH_Runen_2()
 	{
 		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Sleep, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Sleep)) ,CH_Training_Runen_Circle_2_SPL_Sleep);
 	};
+	if	(PLAYER_TALENT_RUNES [SPL_SummonGoblinSkeleton] == FALSE) 
+	{
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_SummonGoblinSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGoblinSkeleton)) ,CH_Training_Runen_Circle_2_SPL_SummonGoblinSkeleton);
+	};
 };
 //**********************************************************
 
@@ -2117,24 +2121,21 @@ FUNC VOID CH_Training_Runen_Circle_2_SPL_InstantFireball()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_InstantFireball);	
 };
-FUNC VOID CH_Training_Runen_Circle_2_SPL_Icebolt()
+FUNC VOID CH_Training_Runen_Circle_2_SPL_IceLance()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_Icebolt);	
-};
-FUNC VOID CH_Training_Runen_Circle_2_SPL_SummonWolf()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonWolf);	
-
+	B_TeachPlayerTalentRunes (self, other, SPL_IceLance);	
 };
 FUNC VOID CH_Training_Runen_Circle_2_SPL_WINDFIST()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_WINDFIST);	
-
 };
 FUNC VOID CH_Training_Runen_Circle_2_SPL_Sleep()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_Sleep);	
-	
+};
+FUNC VOID CH_Training_Runen_Circle_2_SPL_SummonGoblinSkeleton()
+{
+	B_TeachPlayerTalentRunes (self, other, SPL_SummonGoblinSkeleton);	
 };
 //**********************************************************
 // Dritter Kreis 
@@ -2272,6 +2273,10 @@ FUNC VOID DIA_CH_Runen_5()
 	{
 		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)) ,CH_Training_Runen_Circle_4_SPL_Pyrokinesis);
 	};
+	if (PLAYER_TALENT_RUNES [SPL_Shrink] == FALSE)
+	{
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Shrink, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Shrink)) ,CH_Training_Runen_Circle_5_SPL_Shrink);
+	};
 };
 //**********************************************************
 FUNC VOID CH_Training_Runen_Circle_5_SPL_Firestorm()
@@ -2289,6 +2294,10 @@ FUNC VOID CH_Training_Runen_Circle_5_SPL_SummonDemon()
 FUNC VOID CH_Training_Runen_Circle_5_SPL_FullHeal()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_FullHeal);	
+};
+FUNC VOID CH_Training_Runen_Circle_5_SPL_Shrink()
+{
+	B_TeachPlayerTalentRunes (self, other, SPL_Shrink);	
 };
 //**********************************************************
 // Sechster Kreis 
@@ -2315,10 +2324,6 @@ FUNC VOID DIA_CH_Runen_6()
 	{
 		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_ArmyOfDarkness, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ArmyOfDarkness)) ,CH_Training_Runen_Circle_6_SPL_ArmyOfDarkness);
 	};
-	if (PLAYER_TALENT_RUNES [SPL_Shrink] == FALSE)
-	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Shrink, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Shrink)) ,CH_Training_Runen_Circle_6_SPL_Shrink);
-	};
 };
 //**********************************************************
 FUNC VOID CH_Training_Runen_Circle_6_SPL_Firerain()
@@ -2336,10 +2341,6 @@ FUNC VOID CH_Training_Runen_Circle_6_SPL_MassDeath()
 FUNC VOID CH_Training_Runen_Circle_6_SPL_ArmyOfDarkness()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_ArmyOfDarkness);	
-};
-FUNC VOID CH_Training_Runen_Circle_6_SPL_Shrink()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Shrink);	
 };
 
 //***************************************************************************************************************************************

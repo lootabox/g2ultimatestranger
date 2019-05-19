@@ -1074,6 +1074,12 @@ func void DIA_Parlan_TEACH_Info ()
 		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_FullHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FullHeal)) ,DIA_Parlan_TEACH_FullHeal);
 		abletolearn = (abletolearn +1);
 	};
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 5)
+	&& (PLAYER_TALENT_RUNES [SPL_Shrink] == FALSE)
+	{
+		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_Shrink, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Shrink)) ,DIA_Parlan_TEACH_Shrink);
+		abletolearn = (abletolearn +1);
+	};
 	if (abletolearn < 1)
 	{
 		AI_Output (self, other, "DIA_Parlan_TEACH_05_01"); //I cannot teach you more formulas at the moment.
@@ -1085,35 +1091,39 @@ FUNC VOID DIA_Parlan_TEACH_BACK()
 };
 FUNC VOID DIA_Parlan_TEACH_LIGHT_HEAL()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_LightHeal);	
+	B_TeachPlayerTalentRunes (self, other, SPL_LightHeal);
 };
 FUNC VOID DIA_Parlan_TEACH_LIGHT()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_LIGHT);	
+	B_TeachPlayerTalentRunes (self, other, SPL_LIGHT);
 };
 FUNC VOID DIA_Parlan_TEACH_WINDFIST()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_WINDFIST);	
+	B_TeachPlayerTalentRunes (self, other, SPL_WINDFIST);
 };
 FUNC VOID DIA_Parlan_TEACH_Sleep()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_Sleep);	
+	B_TeachPlayerTalentRunes (self, other, SPL_Sleep);
 };
 FUNC VOID DIA_Parlan_TEACH_MediumHeal()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_MediumHeal);	
+	B_TeachPlayerTalentRunes (self, other, SPL_MediumHeal);
 };
 FUNC VOID DIA_Parlan_TEACH_Fear()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_Fear);	
+	B_TeachPlayerTalentRunes (self, other, SPL_Fear);
 };
 FUNC VOID DIA_Parlan_TEACH_DestroyUndead()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_DestroyUndead);	
+	B_TeachPlayerTalentRunes (self, other, SPL_DestroyUndead);
 };
 FUNC VOID DIA_Parlan_TEACH_FullHeal()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_FullHeal);	
+	B_TeachPlayerTalentRunes (self, other, SPL_FullHeal);
+};
+FUNC VOID DIA_Parlan_TEACH_Shrink()
+{
+	B_TeachPlayerTalentRunes (self, other, SPL_Shrink);
 };
 
 //###########################################

@@ -699,16 +699,18 @@ const string NAME_Mag_Circle	= "Circle:";
 const string NAME_Manakosten	= "Mana cost:";
 const string NAME_MinManakosten = "Mana cost (min):";
 //const string NAME_ManakostenMax	= "Mana cost (max):";
-const string NAME_ManaPerSec	= "Mana per sec.:";
-const string NAME_Duration		= "Duration (mins):";
-const string NAME_Sec_Duration	= "Duration (secs):";
+//const string NAME_ManaPerSec	= "Mana per sec.:";
+const string NAME_Duration		= "Duration (minutes):";
+const string NAME_Sec_Duration	= "Duration (seconds):";
 
 const string NAME_Mana_needed	= "Mana required:";
 const string NAME_Str_needed	= "Strength required:";
 const string NAME_Dex_needed	= "Dexterity required:";
 
-const string NAME_Spell_Load	= "Boostable spell";
-const string NAME_Spell_Invest	= "Sustainable spell";
+//const string NAME_Spell_Load	= "Boostable spell";
+//const string NAME_Spell_Invest	= "Sustainable spell";
+const string NAME_Spell_Freeze	= "Freezes enemies while dealing damage over time.";
+const string NAME_Shrink_Penalty= "Attribute and protection reduction (percentage):";
 
 const string NAME_Dam_Blunt		= "Blunt damage:";
 const string NAME_Dam_Edge		= "Edge damage:";
@@ -717,10 +719,13 @@ const string NAME_Dam_Fire		= "Fire damage:";
 const string NAME_Dam_Magic		= "Magic damage:";
 const string NAME_Dam_Fly		= "Wind damage:";
 
+const string NAME_Dam_MagicDot			= "Magic damage over time:";
+const string NAME_Dam_MagicDotFreeze	= "Magic damage over time (freezes targets):";
+
 //const string NAME_Damage		= "Damage:";
 //const string NAME_Damage_Max	= "Maximum damage:";
 //const string NAME_PerMana		= " (per mana)";
-const string NAME_DamagePerSec	= "Damage per sec.:";
+const string NAME_DamagePerSec	= "Damage per second:";
 
 const string NAME_Prot_Blunt	= "Blunt protection:";
 const string NAME_Prot_Edge		= "Edge protection:";
@@ -740,7 +745,7 @@ const string NAME_Bonus_Str		= "Strength bonus:";
 const string NAME_OneHanded		= "One-handed weapon";
 const string NAME_TwoHanded		= "Two-handed weapon";
 
-const string NAME_HealingPerMana = "Healing per Mana:";
+//const string NAME_HealingPerMana = "Healing per Mana:";
 const string NAME_HealingPerCast = "Healing:";
 
 const string NAME_Addon_NostalgieBonus = "Nostalgia Bonus: ";

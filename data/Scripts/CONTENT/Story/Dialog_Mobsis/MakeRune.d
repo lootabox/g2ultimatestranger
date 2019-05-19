@@ -323,6 +323,10 @@ FUNC VOID PC_Circle_05_Info()
 	{
 		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_Pyrokinesis,PC_ItRu_Pyrokinesis_Info);
 	};
+	if (PLAYER_TALENT_RUNES[SPL_Shrink] == TRUE)
+	{
+		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_Shrink,PC_ItRu_Shrink_Info);
+	};
 };			
 FUNC VOID PC_Circle_05_BACK()
 {
@@ -370,10 +374,6 @@ FUNC VOID PC_Circle_06_Info()
 	if (PLAYER_TALENT_RUNES[SPL_ArmyOfDarkness] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Circle_06,NAME_SPL_ArmyOfDarkness,PC_ItRu_ArmyOfDarkness_Info);
-	};
-	if (PLAYER_TALENT_RUNES[SPL_Shrink] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_06,NAME_SPL_Shrink,PC_ItRu_Shrink_Info);
 	};
 };	
 FUNC VOID PC_Circle_06_BACK()
