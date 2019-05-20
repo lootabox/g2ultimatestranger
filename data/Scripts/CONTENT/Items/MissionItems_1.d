@@ -1321,8 +1321,8 @@ INSTANCE ITAR_PAL_SKEL (C_Item)
 	protection [PROT_EDGE]	=	100;
 	protection [PROT_BLUNT] = 	100;
 	protection [PROT_POINT] = 	100;
-	protection [PROT_FIRE] 	= 	50;
-	protection [PROT_MAGIC] = 	50;
+	protection [PROT_FIRE] 	= 	65;
+	protection [PROT_MAGIC] = 	100;
 
 	value 					=	VALUE_ITAR_PAL_SKEL;
 

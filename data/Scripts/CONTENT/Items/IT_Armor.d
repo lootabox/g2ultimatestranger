@@ -155,10 +155,10 @@ INSTANCE ITAR_SMITH (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	15;
-	protection [PROT_BLUNT] = 	15;
-	protection [PROT_POINT] = 	15;
-	protection [PROT_FIRE] 	= 	5;
+	protection [PROT_EDGE]	=	10;
+	protection [PROT_BLUNT] = 	10;
+	protection [PROT_POINT] = 	10;
+	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
 	value 					=	VALUE_ITAR_SMITH;
@@ -502,8 +502,8 @@ INSTANCE ITAR_MIL_L (C_Item)
 	protection [PROT_EDGE]	=	40;
 	protection [PROT_BLUNT] = 	40;
 	protection [PROT_POINT] = 	40;
-	protection [PROT_FIRE] 	= 	0;
-	protection [PROT_MAGIC] = 	0;
+	protection [PROT_FIRE] 	= 	5;
+	protection [PROT_MAGIC] = 	5;
 
 	value 					=	VALUE_ITAR_MIL_L;
 
@@ -577,9 +577,9 @@ INSTANCE ITAR_MIL_M (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	70;
-	protection [PROT_BLUNT] = 	70;
-	protection [PROT_POINT] = 	70;
+	protection [PROT_EDGE]	=	60;
+	protection [PROT_BLUNT] = 	60;
+	protection [PROT_POINT] = 	60;
 	protection [PROT_FIRE] 	= 	10;
 	protection [PROT_MAGIC] = 	10;
 
@@ -655,10 +655,10 @@ INSTANCE ITAR_PAL_M (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	100;
-	protection [PROT_BLUNT] = 	100;
-	protection [PROT_POINT] = 	100;
-	protection [PROT_FIRE] 	= 	50;
+	protection [PROT_EDGE]	=	80;
+	protection [PROT_BLUNT] = 	80;
+	protection [PROT_POINT] = 	80;
+	protection [PROT_FIRE] 	= 	25;
 	protection [PROT_MAGIC] = 	25;
 	
 	value 					=	VALUE_ITAR_PAL_M;
@@ -698,10 +698,10 @@ INSTANCE ITAR_PAL_H (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	150;
-	protection [PROT_BLUNT] = 	150;
-	protection [PROT_POINT] = 	150;
-	protection [PROT_FIRE] 	= 	100;
+	protection [PROT_EDGE]	=	100;
+	protection [PROT_BLUNT] = 	100;
+	protection [PROT_POINT] = 	100;
+	protection [PROT_FIRE] 	= 	50;
 	protection [PROT_MAGIC] = 	50;
 
 	value 					=	VALUE_ITAR_PAL_H;
@@ -992,11 +992,11 @@ INSTANCE ITAR_SLD_M (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	50;
-	protection [PROT_BLUNT] = 	50;
-	protection [PROT_POINT] = 	50;
-	protection [PROT_FIRE] 	= 	0;
-	protection [PROT_MAGIC] = 	5;
+	protection [PROT_EDGE]	=	45;
+	protection [PROT_BLUNT] = 	45;
+	protection [PROT_POINT] = 	45;
+	protection [PROT_FIRE] 	= 	5;
+	protection [PROT_MAGIC] = 	0;
 
 	value 					=	VALUE_ITAR_SLD_M;
 
@@ -1070,10 +1070,10 @@ INSTANCE ITAR_SLD_H (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	80;
-	protection [PROT_BLUNT] = 	80;
-	protection [PROT_POINT] = 	80;
-	protection [PROT_FIRE] 	= 	5;
+	protection [PROT_EDGE]	=	60;
+	protection [PROT_BLUNT] = 	60;
+	protection [PROT_POINT] = 	60;
+	protection [PROT_FIRE] 	= 	10;
 	protection [PROT_MAGIC] = 	10;
 
 	value 					=	VALUE_ITAR_SLD_H;
@@ -1148,11 +1148,11 @@ INSTANCE ITAR_DJG_Crawler (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	70;
-	protection [PROT_BLUNT] = 	70;
-	protection [PROT_POINT] = 	70;
-	protection [PROT_FIRE] 	= 	15;
-	protection [PROT_MAGIC] = 	0;
+	protection [PROT_EDGE]	=	55;
+	protection [PROT_BLUNT] = 	55;
+	protection [PROT_POINT] = 	50;
+	protection [PROT_FIRE] 	= 	20;
+	protection [PROT_MAGIC] = 	15;
 
 	value 					=	VALUE_ITAR_DJG_Crawler;
 
@@ -1226,11 +1226,11 @@ INSTANCE ITAR_DJG_L (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	100;
-	protection [PROT_BLUNT] = 	100;
-	protection [PROT_POINT] = 	100;
-	protection [PROT_FIRE] 	= 	50;
-	protection [PROT_MAGIC] = 	25;
+	protection [PROT_EDGE]	=	70;
+	protection [PROT_BLUNT] = 	70;
+	protection [PROT_POINT] = 	70;
+	protection [PROT_FIRE] 	= 	40;
+	protection [PROT_MAGIC] = 	20;
 
 	value 					=	VALUE_ITAR_DJG_L;
 
@@ -1269,11 +1269,11 @@ INSTANCE ITAR_DJG_M (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	120;
-	protection [PROT_BLUNT]	= 	120;
-	protection [PROT_POINT] = 	120;
-	protection [PROT_FIRE] 	= 	75;
-	protection [PROT_MAGIC] = 	35;
+	protection [PROT_EDGE]	=	80;
+	protection [PROT_BLUNT]	= 	80;
+	protection [PROT_POINT] = 	80;
+	protection [PROT_FIRE] 	= 	50;
+	protection [PROT_MAGIC] = 	30;
 
 	value 					=	VALUE_ITAR_DJG_M;
 
@@ -1312,11 +1312,11 @@ INSTANCE ITAR_DJG_H (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	150;
-	protection [PROT_BLUNT] = 	150;
-	protection [PROT_POINT] = 	150;
-	protection [PROT_FIRE] 	= 	100;
-	protection [PROT_MAGIC] = 	50;
+	protection [PROT_EDGE]	=	90;
+	protection [PROT_BLUNT] = 	90;
+	protection [PROT_POINT] = 	90;
+	protection [PROT_FIRE] 	= 	60;
+	protection [PROT_MAGIC] = 	40;
 
 	value 					=	VALUE_ITAR_DJG_H;
 
@@ -1401,8 +1401,8 @@ INSTANCE ITAR_NOV_L (C_Item)
 	protection [PROT_EDGE]	=	25;
 	protection [PROT_BLUNT] = 	25;
 	protection [PROT_POINT] = 	25;
-	protection [PROT_FIRE] 	= 	0;
-	protection [PROT_MAGIC] = 	10;
+	protection [PROT_FIRE] 	= 	10;
+	protection [PROT_MAGIC] = 	0;
 
 	value 					=	VALUE_ITAR_NOV_L;
 
@@ -1555,11 +1555,11 @@ INSTANCE ITAR_KDF_H (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	100;
-	protection [PROT_BLUNT] = 	100;
-	protection [PROT_POINT] = 	100;
-	protection [PROT_FIRE] 	= 	50;
-	protection [PROT_MAGIC] = 	50;
+	protection [PROT_EDGE]	=	80;
+	protection [PROT_BLUNT] = 	80;
+	protection [PROT_POINT] = 	80;
+	protection [PROT_FIRE] 	= 	40;
+	protection [PROT_MAGIC] = 	40;
 
 	value 					=	VALUE_ITAR_KDF_H;
 
@@ -1636,7 +1636,7 @@ INSTANCE ITAR_Leather_L (C_Item)
 	protection [PROT_EDGE]	=	25;
 	protection [PROT_BLUNT] = 	25;
 	protection [PROT_POINT] = 	20;
-	protection [PROT_FIRE] 	= 	 0;
+	protection [PROT_FIRE] 	= 	 5;
 	protection [PROT_MAGIC] = 	 0;
 
 	value 					=	VALUE_ITAR_Leather_L;
@@ -1756,9 +1756,9 @@ INSTANCE ITAR_BDT_H (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	50;
-	protection [PROT_BLUNT] = 	50;
-	protection [PROT_POINT] = 	50;
+	protection [PROT_EDGE]	=	45;
+	protection [PROT_BLUNT] = 	45;
+	protection [PROT_POINT] = 	45;
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
@@ -1930,11 +1930,11 @@ INSTANCE ITAR_CorAngar (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	100;
-	protection [PROT_BLUNT] = 	100;
-	protection [PROT_POINT] = 	100;
-	protection [PROT_FIRE] 	= 	50;
-	protection [PROT_MAGIC] = 	25;
+	protection [PROT_EDGE]	=	70;
+	protection [PROT_BLUNT] = 	70;
+	protection [PROT_POINT] = 	70;
+	protection [PROT_FIRE] 	= 	35;
+	protection [PROT_MAGIC] = 	0;
 
 	value 					=	VALUE_ITAR_CorAngar;
 
@@ -1973,11 +1973,11 @@ INSTANCE ITAR_Dementor (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	130;
-	protection [PROT_BLUNT] = 	130;
-	protection [PROT_POINT] = 	130;
-	protection [PROT_FIRE] 	= 	65;
-	protection [PROT_MAGIC] = 	65;
+	protection [PROT_EDGE]	=	15;
+	protection [PROT_BLUNT] = 	15;
+	protection [PROT_POINT] = 	40;
+	protection [PROT_FIRE] 	= 	15;
+	protection [PROT_MAGIC] = 	15;
 
 	value 					=	VALUE_ITAR_Dementor;
 
@@ -2016,11 +2016,11 @@ INSTANCE ITAR_KDW_H (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	100;
-	protection [PROT_BLUNT] = 	100;
-	protection [PROT_POINT] = 	100;
-	protection [PROT_FIRE] 	= 	50;
-	protection [PROT_MAGIC] = 	50;
+	protection [PROT_EDGE]	=	80;
+	protection [PROT_BLUNT] = 	80;
+	protection [PROT_POINT] = 	80;
+	protection [PROT_FIRE] 	= 	40;
+	protection [PROT_MAGIC] = 	40;
 
 	value 					=	VALUE_ITAR_KDW_H;
 

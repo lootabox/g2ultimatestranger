@@ -994,7 +994,7 @@ func void DIA_Addon_Cavalorn_Triggered_OBack ()
 	AI_UnequipArmor	(self);
 	CreateInvItems (self, ITAR_BAU_L, 1);	
 	Npc_RemoveInvItems	(self, ITAR_RANGER_Addon,	Npc_HasItems (self, ITAR_RANGER_Addon ) );
-	Npc_RemoveInvItems	(self, ITAR_Fake_RANGER,	Npc_HasItems (self, ITAR_Fake_RANGER ) );
+	Npc_RemoveInvItems	(self, ITAR_RANGER_Addon_Broken,	Npc_HasItems (self, ITAR_RANGER_Addon_Broken ) );
 	AI_EquipBestArmor (self); 
 	AI_Output			(other, self, "DIA_Addon_Cavalorn_Triggered_OBack_15_00"); //Then I'll go to them and demand the ornament back.
 	AI_Output			(self, other, "DIA_Addon_Cavalorn_Triggered_OBack_08_01"); //All right.
@@ -1006,7 +1006,7 @@ func void DIA_Addon_Cavalorn_Triggered_Pal ()
 	AI_UnequipArmor	(self);
 	CreateInvItems (self, ITAR_BAU_L, 1);	
 	Npc_RemoveInvItems	(self, ITAR_RANGER_Addon,	Npc_HasItems (self, ITAR_RANGER_Addon ) );
-	Npc_RemoveInvItems	(self, ITAR_Fake_RANGER,	Npc_HasItems (self, ITAR_Fake_RANGER ) );
+	Npc_RemoveInvItems	(self, ITAR_RANGER_Addon_Broken,	Npc_HasItems (self, ITAR_RANGER_Addon_Broken ) );
 	AI_EquipBestArmor (self); 
 	AI_Output			(other, self, "DIA_Addon_Cavalorn_Triggered_Pal_15_00"); //Then one of us has to get into the upper quarter of the city.
 	AI_Output			(self, other, "DIA_Addon_Cavalorn_Triggered_Pal_08_01"); //I don't have any time for that. You'll have to do it.

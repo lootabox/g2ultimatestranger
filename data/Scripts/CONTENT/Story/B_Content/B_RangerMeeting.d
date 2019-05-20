@@ -2,17 +2,17 @@
 
 func void B_MakeRangerReadyForMeeting (VAR C_NPC Ranger)	
 {				
-	CreateInvItems 	(Ranger, ITAR_Fake_RANGER, 1 );	
+	CreateInvItems 	(Ranger, ITAR_RANGER_Addon_Broken, 1 );	
 	AI_UnequipArmor	(Ranger);
-	AI_EquipArmor 	(Ranger, ITAR_Fake_RANGER);
+	AI_EquipArmor 	(Ranger, ITAR_RANGER_Addon_Broken);
 	Ranger.npctype		= NPCTYPE_FRIEND;
 };
 func void B_MakeRangerReadyToLeaveMeeting (VAR C_NPC Ranger)	
 {				
 	AI_UnequipArmor	(Ranger);
 	Npc_RemoveInvItems	(Ranger, ITAR_RANGER_Addon,	Npc_HasItems (Ranger, ITAR_RANGER_Addon ) );
-	Npc_RemoveInvItems	(Ranger, ITAR_Fake_RANGER,	Npc_HasItems (Ranger, ITAR_Fake_RANGER ) );
-	AI_EquipBestArmor (Ranger); //Joly:ITAR_Fake_RANGER wegen diesem hier, falls die Armor nicht gelöscht wurde.
+	Npc_RemoveInvItems	(Ranger, ITAR_RANGER_Addon_Broken,	Npc_HasItems (Ranger, ITAR_RANGER_Addon_Broken ) );
+	AI_EquipBestArmor (Ranger); //Joly:ITAR_RANGER_Addon_Broken wegen diesem hier, falls die Armor nicht gelöscht wurde.
 };
 func void B_MakeRangerReadyForMeetingALL ()
 {

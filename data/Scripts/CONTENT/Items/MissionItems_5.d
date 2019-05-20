@@ -605,11 +605,11 @@ INSTANCE  ItAm_AmulettOfDeath_Mis(C_Item)
 
 	FUNC VOID Equip_ItAm_AmulettOfDeath_Mis()
 	{
-	 	self.protection [PROT_EDGE]   += 30;
-		self.protection [PROT_BLUNT]  += 30;
-		self.protection [PROT_POINT]  += 30;
-		self.protection [PROT_FIRE]   += 30;
-		self.protection [PROT_MAGIC]  += 30;
+	 	self.protection [PROT_EDGE]   += 20;
+		self.protection [PROT_BLUNT]  += 20;
+		self.protection [PROT_POINT]  += 20;
+		self.protection [PROT_FIRE]   += 20;
+		self.protection [PROT_MAGIC]  += 20;
 		Wld_PlayEffect("spellFX_LIGHTSTAR_WHITE",  self, self, 0, 0, 0, FALSE );
 		Wld_PlayEffect("FX_EarthQuake",  self, self, 0, 0, 0, FALSE );
 		Wld_PlayEffect("spellFX_INCOVATION_WHITE",  self, self, 0, 0, 0, FALSE );
@@ -620,11 +620,11 @@ INSTANCE  ItAm_AmulettOfDeath_Mis(C_Item)
 
 	FUNC VOID UnEquip_ItAm_AmulettOfDeath_Mis()
 	{
-		self.protection [PROT_EDGE]   -= 30;
-		self.protection [PROT_BLUNT]  -= 30;
-		self.protection [PROT_POINT]  -= 30;
-		self.protection [PROT_FIRE]   -= 30;
-		self.protection [PROT_MAGIC]  -= 30;
+		self.protection [PROT_EDGE]   -= 20;
+		self.protection [PROT_BLUNT]  -= 20;
+		self.protection [PROT_POINT]  -= 20;
+		self.protection [PROT_FIRE]   -= 20;
+		self.protection [PROT_MAGIC]  -= 20;
 	};
 	
 /******************************************************************************************/

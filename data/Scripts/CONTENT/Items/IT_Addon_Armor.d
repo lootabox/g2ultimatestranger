@@ -61,9 +61,9 @@ INSTANCE ITAR_PIR_M_Addon (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	55;
-	protection [PROT_BLUNT] = 	55;
-	protection [PROT_POINT] = 	55;
+	protection [PROT_EDGE]	=	50;
+	protection [PROT_BLUNT] = 	50;
+	protection [PROT_POINT] = 	50;
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
@@ -105,9 +105,9 @@ INSTANCE ITAR_PIR_H_Addon (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	60;
-	protection [PROT_BLUNT] = 	60;
-	protection [PROT_POINT] = 	60;
+	protection [PROT_EDGE]	=	55;
+	protection [PROT_BLUNT] = 	55;
+	protection [PROT_POINT] = 	55;
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
@@ -149,9 +149,9 @@ INSTANCE ITAR_Thorus_Addon (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	70;
-	protection [PROT_BLUNT] = 	70;
-	protection [PROT_POINT] = 	70;
+	protection [PROT_EDGE]	=	60;
+	protection [PROT_BLUNT] = 	60;
+	protection [PROT_POINT] = 	60;
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
@@ -195,11 +195,11 @@ INSTANCE ITAR_Raven_Addon (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	100;
-	protection [PROT_BLUNT] = 	100;
-	protection [PROT_POINT] = 	100;
-	protection [PROT_FIRE] 	= 	100;
-	protection [PROT_MAGIC] = 	100;
+	protection [PROT_EDGE]	=	70;
+	protection [PROT_BLUNT] = 	70;
+	protection [PROT_POINT] = 	70;
+	protection [PROT_FIRE] 	= 	50;
+	protection [PROT_MAGIC] = 	50;
 
 	value 					=	VALUE_ITAR_Raven_Addon;
 
@@ -239,9 +239,9 @@ INSTANCE ITAR_OreBaron_Addon (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	70;
-	protection [PROT_BLUNT] = 	70;
-	protection [PROT_POINT] = 	70;
+	protection [PROT_EDGE]	=	60;
+	protection [PROT_BLUNT] = 	60;
+	protection [PROT_POINT] = 	60;
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
@@ -276,19 +276,13 @@ INSTANCE ITAR_OreBaron_Addon (C_Item)
 };
 
 // ******************************************************
-INSTANCE ITAR_RANGER_Addon (C_Item)
+PROTOTYPE ITAR_RANGER_Prototype (C_Item)
 {
 	name 					=	"Armor of the 'Ring of Water'";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	50;
-	protection [PROT_BLUNT] = 	50;
-	protection [PROT_POINT] = 	50;
-	protection [PROT_FIRE] 	= 	0;
-	protection [PROT_MAGIC] = 	10;
-
 	value 					=	VALUE_ITAR_Ranger_Addon;
 
 	wear 					=	WEAR_TORSO;
@@ -300,53 +294,72 @@ INSTANCE ITAR_RANGER_Addon (C_Item)
 
 	description				=	name;
 
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
-	/* 
-	TEXT[4] 				=	NAME_Prot_Fire;			
-	COUNT[4]				= 	protection	[PROT_FIRE];
-	 */
-	TEXT[3]					=	NAME_Prot_Magic;		
-	COUNT[3]				= 	protection	[PROT_MAGIC];
-	
-	TEXT[5]					=	NAME_Value;			
+	TEXT[5]					=	NAME_Value;
 	COUNT[5]				= 	value;
 };
 
+INSTANCE ITAR_RANGER_Addon (ITAR_RANGER_Prototype)
+{
+	protection [PROT_EDGE]	=	40;
+	protection [PROT_BLUNT] = 	40;
+	protection [PROT_POINT] = 	40;
+	protection [PROT_FIRE] 	= 	0;
+	protection [PROT_MAGIC] = 	15;
+
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
+	TEXT[1]					=	NAME_Prot_Edge;
+	COUNT[1]				= 	protection	[PROT_EDGE];
+	
+	TEXT[2]					=	NAME_Prot_Point;
+	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;
+	COUNT[4]				= 	protection	[PROT_FIRE];
+	 */
+	TEXT[3]					=	NAME_Prot_Magic;
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+};
+
+INSTANCE ITAR_RANGER_Addon_Damaged (ITAR_RANGER_Prototype)
+{
+	protection [PROT_EDGE]	=	30;
+	protection [PROT_BLUNT] = 	30;
+	protection [PROT_POINT] = 	30;
+	protection [PROT_FIRE] 	= 	0;
+	protection [PROT_MAGIC] = 	0;
+
+	TEXT[4]					=	"The armor was scorched by the portal.";
+
+	TEXT[0]					=	NAME_Prot_Blunt;
+	COUNT[0]				=	protection	[PROT_BLUNT];
+	
+	TEXT[1]					=	NAME_Prot_Edge;
+	COUNT[1]				= 	protection	[PROT_EDGE];
+	
+	TEXT[2]					=	NAME_Prot_Point;
+	COUNT[2]				= 	protection	[PROT_POINT];
+	/* 
+	TEXT[4] 				=	NAME_Prot_Fire;
+	COUNT[4]				= 	protection	[PROT_FIRE];
+	
+	TEXT[3]					=	NAME_Prot_Magic;
+	COUNT[3]				= 	protection	[PROT_MAGIC];
+	*/
+};
+
 // ******************************************************
-INSTANCE ITAR_Fake_RANGER (C_Item)
+INSTANCE ITAR_RANGER_Addon_Broken (ITAR_RANGER_Prototype)
 {
 	name 					=	"Broken Armor";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
+	description				=	name;
 
 	protection [PROT_EDGE]	=	0;
 	protection [PROT_BLUNT] = 	0;
 	protection [PROT_POINT] = 	0;
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
-
-	value 					=	VALUE_ITAR_Ranger_Addon;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"ItAr_Ranger_ADDON.3ds";
-	visual_change 			=	"Armor_Ranger_ADDON.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
-
-	description				=	name;
-
-
-	TEXT[5]					=	NAME_Value;			
-	COUNT[5]				= 	value;
 };
 
 // ******************************************************
@@ -401,9 +414,9 @@ INSTANCE ITAR_Bloodwyn_Addon (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	70;
-	protection [PROT_BLUNT] = 	70;
-	protection [PROT_POINT] = 	70;
+	protection [PROT_EDGE]	=	60;
+	protection [PROT_BLUNT] = 	60;
+	protection [PROT_POINT] = 	60;
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
@@ -445,11 +458,11 @@ INSTANCE ITAR_MayaZombie_Addon (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	50;
-	protection [PROT_BLUNT] = 	50;
-	protection [PROT_POINT] = 	50;
-	protection [PROT_FIRE] 	= 	50;
-	protection [PROT_MAGIC] = 	50;
+	protection [PROT_EDGE]	=	45;
+	protection [PROT_BLUNT] = 	45;
+	protection [PROT_POINT] = 	45;
+	protection [PROT_FIRE] 	= 	45;
+	protection [PROT_MAGIC] = 	45;
 
 	value 					=	0;
 

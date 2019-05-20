@@ -796,7 +796,7 @@ instance ItRw_Addon_FireBow (C_Item)
 	visual 				=	"ItRw_Bow_H_04.mms";
 
 	description			= name;
-	TEXT[2]				= NAME_Dam_Fire;				COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Dam_Magic;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
