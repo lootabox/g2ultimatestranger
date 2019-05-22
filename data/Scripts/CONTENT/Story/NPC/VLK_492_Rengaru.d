@@ -19,8 +19,7 @@ instance VLK_492_Rengaru (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																
-	//EquipItem (self, ItMw_1h_Vlk_Sword);
-	EquipItem (self, ItMw_1h_Sld_Sword);
+	EquipItem (self, ItMw_1h_Sld_Sword);//ItMw_1h_Vlk_Sword
 	
 	// ------ Inventory ------
 	CreateInvItems (self, ItMi_Gold, 50); //hat er Nagur geklaut! Muss genau 50 im Inv haben M.F. 

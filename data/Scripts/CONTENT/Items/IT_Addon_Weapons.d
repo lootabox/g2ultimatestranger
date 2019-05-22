@@ -70,7 +70,7 @@ INSTANCE ItMW_Addon_Knife01 (C_Item)
 // *****************************************************
 INSTANCE ItMW_Addon_Stab01 (C_Item)
 {	
-	name 				=	"Magician's staff";  
+	name 				=	"Staff of Fire";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -101,7 +101,7 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 // *****************************************************
 INSTANCE ItMW_Addon_Stab02 (C_Item)
 {	
-	name 				=	"Magic staff";  
+	name 				=	"Staff of Magic";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;

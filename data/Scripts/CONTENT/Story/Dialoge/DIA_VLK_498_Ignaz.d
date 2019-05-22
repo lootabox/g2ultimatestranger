@@ -244,7 +244,7 @@ FUNC VOID DIA_Ignaz_Danach_Info()
 	B_GivePlayerXP (XP_MIS_Ignaz_Charm);
 	
 	//PATCH fallls alle Scrolls aufgekauft oder geplündert wurden
-	CreateInvItems (self,ITSC_Charm		, 3);
+	CreateInvItems (self,ITSC_Charm		, 2);
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Trade

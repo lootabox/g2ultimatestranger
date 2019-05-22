@@ -95,7 +95,7 @@ const int Condition_Alrik				= 20;
 const int Range_Alrik					= 70;
 const int Value_Alrik					= 50; //wegen Sprache 
 //Wolfsklinge - ItMw_1H_Sword_L_03
-const int Damage_Wolfsklinge 			= 5; 
+const int Damage_Wolfsklinge 			= 12; 
 const int Condition_Wolfsklinge			= 0;
 const int Range_Wolfsklinge				= 30;
 const int Value_Wolfsklinge				= 250;

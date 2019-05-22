@@ -45,7 +45,10 @@ FUNC VOID B_GiveTradeInv_Addon_Cronos_ADW (var C_NPC slf)
 		
 		//Joly: RUNENROHLING!!  NICHT ZU VIELE !!!
 		//***********************************
-		CreateInvItems   (slf, ItMi_RuneBlank, 2);
+		if((hero.guild == GIL_NOV) || (hero.guild == GIL_KDF))
+		{
+			CreateInvItems(slf,ItMi_RuneBlank,2);
+		};
 		//***********************************
 		
 		// ------ Scrolls ------
@@ -106,7 +109,10 @@ FUNC VOID B_GiveTradeInv_Addon_Cronos_ADW (var C_NPC slf)
 	 
 		//Joly: RUNENROHLING!!  NICHT ZU VIELE !!!
 		//***********************************
-		CreateInvItems   (slf, ItMi_RuneBlank, 2);
+		if((hero.guild == GIL_NOV) || (hero.guild == GIL_KDF))
+		{
+			CreateInvItems(slf,ItMi_RuneBlank,2);
+		};
 		//***********************************
 
 		CreateInvItems   (slf, ItSc_TrfGiantBug, 1);
@@ -188,7 +194,10 @@ FUNC VOID B_GiveTradeInv_Addon_Cronos_ADW (var C_NPC slf)
 
 		//Joly: RUNENROHLING!!  NICHT ZU VIELE !!!
 		//***********************************
-		CreateInvItems   (slf, ItMi_RuneBlank, 1);
+		if((hero.guild == GIL_NOV) || (hero.guild == GIL_KDF))
+		{
+			CreateInvItems(slf,ItMi_RuneBlank,1);
+		};
 		//***********************************
 	
 		CreateInvItems   (slf, ItSc_TrfLurker, 1);

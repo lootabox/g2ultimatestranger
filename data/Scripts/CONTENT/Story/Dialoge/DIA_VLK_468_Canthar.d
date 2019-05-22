@@ -544,15 +544,12 @@ func void DIA_Canthar_Success_Info ()
 	if (Kapitel == 1)
 	{
 		CreateInvItems (self,ItMw_ShortSword3 , 1); 
-		//CreateInvItems (slf, ItMw_ShortSword4 , 1);
-		CreateInvItems (self, ItMw_ShortSword1 , 1);
+		CreateInvItems (self, ItMw_ShortSword1 , 1);//ItMw_ShortSword4
 		CreateInvItems (self,ItMw_ShortSword5 , 1);
 		CreateInvItems (self,ItMw_Kriegshammer1, 1); 
 		
-		//CreateInvItems (self, ItMw_1h_Vlk_Sword, 1); 
-		CreateInvItems (self, ItMw_1h_Sld_Sword, 1); 
-		//CreateInvItems (self, ItMw_1h_Nov_Mace, 1); 
-		CreateInvItems (self, ItMw_2h_Bau_Axe, 1); 
+		CreateInvItems (self, ItMw_1h_Sld_Sword, 1);//ItMw_1h_Vlk_Sword
+		CreateInvItems (self, ItMw_2h_Bau_Axe, 1);//ItMw_1h_Nov_Mace
 	};
 	if (Kapitel == 2)
 	{

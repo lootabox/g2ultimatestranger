@@ -1300,8 +1300,7 @@ instance PC_Hero (NPC_DEFAULT)
 	CreateInvItems (self, itmi_gold, 100);
 	CreateInvItems (self, itrw_bolt, 100);
 	
-	//EquipItem (self, ItMw_1h_Vlk_Sword);
-	EquipItem (self, ItMw_1h_Sld_Sword);
+	EquipItem (self, ItMw_1h_Sld_Sword);//ItMw_1h_Vlk_Sword
 	EquipItem (self, ItRw_Crossbow_L_01);
 
 	// ------ Inventory ------
@@ -1348,8 +1347,7 @@ instance PC_Hero (NPC_DEFAULT)
 	CreateInvItems (self, itmi_gold, 100);
 	CreateInvItems (self, itrw_bolt, 100);
 	
-	//EquipItem (self, ItMw_1h_Vlk_Sword);
-	EquipItem (self, ItMw_1h_Sld_Sword);
+	EquipItem (self, ItMw_1h_Sld_Sword);//ItMw_1h_Vlk_Sword
 	EquipItem (self, ItRw_Crossbow_L_01);
 
 	// ------ Inventory ------
@@ -1396,8 +1394,7 @@ instance PC_Hero (NPC_DEFAULT)
 	CreateInvItems (self, itmi_gold, 100);
 	CreateInvItems (self, itrw_bolt, 100);
 	
-	//EquipItem (self, ItMw_1h_Vlk_Sword);
-	EquipItem (self, ItMw_1h_Sld_Sword);
+	EquipItem (self, ItMw_1h_Sld_Sword);//ItMw_1h_Vlk_Sword
 	EquipItem (self, ItRw_Crossbow_L_01);
 
 	// ------ Inventory ------
