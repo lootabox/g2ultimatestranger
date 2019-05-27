@@ -10,32 +10,42 @@ FUNC VOID B_GiveTradeInv_Addon_Garett (var C_NPC slf)
 	&& (Garett_ItemsGiven_Chapter_1 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 10); 
-		CreateInvItems (slf, ItFo_Addon_Rum,1);
+		CreateInvItems (slf, Itfo_Wine,4);//CreateInvItems (slf, ItFo_Addon_Rum,1);
+		CreateInvItems (slf, ItFo_Bacon,2);
+		CreateInvItems (slf, ItFo_Bread,3);
+		CreateInvItems (slf, ItFo_FishSoup,6);
+		CreateInvItems (slf, ItFoMutton,3);
+		
+		CreateInvItems (slf,ItFo_Addon_Pfeffer_01,1);
+		
 		CreateInvItems (slf, ItPo_Health_Addon_04,1);
 		
 		// ------ Waffen ------
-		CreateInvItems (slf, ItMw_ShortSword3, 1);
+		//CreateInvItems (slf, ItMw_ShortSword3, 1);
 		CreateInvItems (slf, itmw_2h_Axe_L_01,1);
 		CreateInvItems (slf, ItMw_Schiffsaxt,1);
-		CreateInvItems (slf, ItMw_Streitaxt1,1);
-		CreateInvItems (slf, ItMw_Zweihaender4,1);
-		CreateInvItems (slf, ItMw_Orkschlaechter,1);
-		CreateInvItems (slf, ItMW_Addon_Hacker_1h_01,1);
-		CreateInvItems (slf, ItMW_Addon_Hacker_1h_02,1);		
-		CreateInvItems (slf, ItMW_Addon_Hacker_2h_01,1);
-		CreateInvItems (slf, ItMW_Addon_Hacker_2h_02,1);		
+		//CreateInvItems (slf, ItMw_Streitaxt1,1);
+		//CreateInvItems (slf, ItMw_Zweihaender4,1);
+		//CreateInvItems (slf, ItMw_Orkschlaechter,1);
+		CreateInvItems (slf, ItMW_Addon_Hacker_1h_02,1);
+		CreateInvItems (slf, ItMW_Addon_Hacker_2h_02,1); 
 		
-		CreateInvItems (slf, ItRw_Crossbow_M_01,1);
-		CreateInvItems (slf, ItRw_Crossbow_H_01,1);
+		CreateInvItems (slf, ItMw_Addon_PIR1hAxe,1);
+		CreateInvItems (slf, ItMw_Addon_PIR2hAxe,1);
+		CreateInvItems (slf, ItMw_Addon_PIR1hSword,1);
+		CreateInvItems (slf, ItMw_Addon_PIR2hSword,1);
+		
+		CreateInvItems (slf, ItRw_Crossbow_L_02,1);//CreateInvItems (slf, ItRw_Crossbow_H_01,1);
+		CreateInvItems (slf, ItRw_Bolt,50);
 			
 		// ------ Ringe / Amulette ------
-		CreateInvItems (slf, ItAm_Prot_Fire_01,1);
-		CreateInvItems (slf, ItRi_Prot_Mage_02,1);
+		//CreateInvItems (slf, ItAm_Prot_Fire_01,1);
+		//CreateInvItems (slf, ItRi_Prot_Mage_02,1);
 						
 		Garett_ItemsGiven_Chapter_1 = TRUE;
 	};
 	
-	if ((Kapitel >= 2)
+ 	if ((Kapitel >= 2)
 	&& (Garett_ItemsGiven_Chapter_2 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 20); 
@@ -43,6 +53,12 @@ FUNC VOID B_GiveTradeInv_Addon_Garett (var C_NPC slf)
 		CreateInvItems (slf, ItMiSwordraw, 2); 
 		CreateInvItems (slf, ItMi_DarkPearl,1);
 				
+		CreateInvItems (slf, ItMW_Addon_Hacker_1h_01,1);
+		CreateInvItems (slf, ItMW_Addon_Hacker_2h_01,1);
+		CreateInvItems (slf, ItMw_Piratensaebel,1);
+		CreateInvItems (slf, ItRw_Crossbow_M_01,1);
+		CreateInvItems (slf, ItRw_Bolt,40);
+
 		Garett_ItemsGiven_Chapter_2 = TRUE;
 	};
 
@@ -50,6 +66,7 @@ FUNC VOID B_GiveTradeInv_Addon_Garett (var C_NPC slf)
 	&& (Garett_ItemsGiven_Chapter_3 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 50); 
+		CreateInvItems (slf, ItRw_Bolt,40);
 
 		Garett_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -58,6 +75,7 @@ FUNC VOID B_GiveTradeInv_Addon_Garett (var C_NPC slf)
 	&& (Garett_ItemsGiven_Chapter_4 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 100);
+		CreateInvItems (slf, ItRw_Bolt,40);
 		
 		Garett_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -66,6 +84,7 @@ FUNC VOID B_GiveTradeInv_Addon_Garett (var C_NPC slf)
 	&& (Garett_ItemsGiven_Chapter_5 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 200); 
+		CreateInvItems (slf, ItRw_Bolt,40);
 	
 		Garett_ItemsGiven_Chapter_5 = TRUE;
 	};

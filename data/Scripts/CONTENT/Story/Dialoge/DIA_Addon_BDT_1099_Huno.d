@@ -264,7 +264,7 @@ FUNC INT DIA_Addon_Huno_Attentat_Condition()
 };
 FUNC VOID DIA_Addon_Huno_Attentat_Info()
 {	
-	B_Say (other, self, "$ATTENTAT_ADDON_DESCRIPTION2"); //Wegen des Attentast auf Esteban
+	B_Say (other, self, "$ATTENTAT_ADDON_DESCRIPTION2"); //About the attack on Esteban...
 	AI_Output (self, other, "DIA_Addon_Huno_Attentat_06_00"); //(dangerously) What do you want from me?
 	AI_Output (other, self, "DIA_Addon_Huno_Attentat_15_01"); //I'm looking for the person behind the attack...
 	AI_Output (self, other, "DIA_Addon_Huno_Attentat_06_02"); //And why are you coming to me about that?

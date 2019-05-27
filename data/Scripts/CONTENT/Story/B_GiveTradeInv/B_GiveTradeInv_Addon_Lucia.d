@@ -13,9 +13,9 @@ FUNC VOID B_GiveTradeInv_Addon_Lucia (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Booze , 5);
 		CreateInvItems (slf,ItFo_Addon_Rum , 10);
 		CreateInvItems (slf,ItFo_Addon_Grog , 10);
-		CreateInvItems (slf,ItMi_Flask, 20);
+		CreateInvItems (slf,ItMi_Flask, 10);
 		
-		CreateInvItems (slf,ItRi_Dex_02, 1);
+		//CreateInvItems (slf,ItRi_Dex_02, 1);
 		
 		Lucia_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -27,7 +27,7 @@ FUNC VOID B_GiveTradeInv_Addon_Lucia (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Addon_Rum , 10);
 		CreateInvItems (slf,ItFo_Addon_Grog , 10);
 		CreateInvItems (slf,ItFo_Beer , 4);
-		CreateInvItems (slf,ItMi_Flask , 20);
+		CreateInvItems (slf,ItMi_Flask , 10);
 		
 		Lucia_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -40,7 +40,7 @@ FUNC VOID B_GiveTradeInv_Addon_Lucia (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Addon_Grog , 10);
 		CreateInvItems (slf,ItFo_Beer , 4);
 		
-		CreateInvItems (slf,ItMi_Flask , 10);
+		CreateInvItems (slf,ItMi_Flask , 5);
 		
 		Lucia_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -53,7 +53,7 @@ FUNC VOID B_GiveTradeInv_Addon_Lucia (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Addon_Grog , 10);
 		CreateInvItems (slf,ItFo_Beer , 4);
 		
-		CreateInvItems (slf,ItMi_Flask , 10);
+		CreateInvItems (slf,ItMi_Flask , 5);
 		
 		Lucia_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -66,7 +66,7 @@ FUNC VOID B_GiveTradeInv_Addon_Lucia (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Addon_Grog , 10);
 		CreateInvItems (slf,ItFo_Beer , 4);
 		
-		CreateInvItems (slf,ItMi_Flask , 10);
+		CreateInvItems (slf,ItMi_Flask , 5);
 		
 		Lucia_ItemsGiven_Chapter_5 = TRUE;
 	};

@@ -20,19 +20,19 @@ FUNC VOID B_GiveTradeInv_Addon_Scatty (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Water , 5);
 		CreateInvItems (slf,ItFo_Stew , 5);
 		//Tränke
-		CreateInvItems (slf,ItPo_Mana_02 	, 4); 
-		CreateInvItems (slf,ItPo_Health_02	, 4);
+		CreateInvItems (slf,ItPo_Mana_01 	, 4); 
+		CreateInvItems (slf,ItPo_Health_01	, 2);
 		
 		//Muni
-		CreateInvItems (slf, ItRw_Arrow, 50); 
-		CreateInvItems (slf, ItRw_Bolt,  50); 
+		//CreateInvItems (slf, ItRw_Arrow, 50); 
+		//CreateInvItems (slf, ItRw_Bolt,  50); 
 		
-		CreateInvItems (slf, ItMw_Schwert2,1);
-		CreateInvItems (slf, ItMw_Zweihaender1,1);
-		CreateInvItems (slf, ItRw_Crossbow_L_02,1);
-		CreateInvItems (slf, ItMw_Schwert5,1);
-		CreateInvItems (slf, ItMw_Streitaxt2,1);
-		CreateInvItems (slf, ItMw_Inquisitor,1);
+		//CreateInvItems (slf, ItMw_Schwert2,1);
+		//CreateInvItems (slf, ItMw_Zweihaender1,1);
+		//CreateInvItems (slf, ItRw_Crossbow_L_02,1);
+		//CreateInvItems (slf, ItMw_Schwert5,1);
+		//CreateInvItems (slf, ItMw_Streitaxt2,1);
+		//CreateInvItems (slf, ItMw_Inquisitor,1);
 		
 		Scatty_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -49,11 +49,11 @@ FUNC VOID B_GiveTradeInv_Addon_Scatty (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Stew , 5);
 		//Tränke
 		CreateInvItems (slf,ItPo_Mana_02 	, 4); 
-		CreateInvItems (slf,ItPo_Health_02	, 4);
+		CreateInvItems (slf,ItPo_Health_02	, 2);
 		
 		//Muni
-		CreateInvItems (slf, ItRw_Arrow, 50); 
-		CreateInvItems (slf, ItRw_Bolt,  50); 
+		//CreateInvItems (slf, ItRw_Arrow, 50); 
+		//CreateInvItems (slf, ItRw_Bolt,  50); 
 
 		Scatty_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -69,12 +69,12 @@ FUNC VOID B_GiveTradeInv_Addon_Scatty (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Water , 5);
 		CreateInvItems (slf,ItFo_Stew , 5);
 		//Tränke
-		CreateInvItems (slf,ItPo_Mana_02 	, 4); 
-		CreateInvItems (slf,ItPo_Health_02	, 4);
+		CreateInvItems (slf,ItPo_Mana_01 	, 4); 
+		CreateInvItems (slf,ItPo_Health_01	, 2);
 		
 		//Muni
-		CreateInvItems (slf, ItRw_Arrow, 50); 
-		CreateInvItems (slf, ItRw_Bolt,  50); 
+		//CreateInvItems (slf, ItRw_Arrow, 50); 
+		//CreateInvItems (slf, ItRw_Bolt,  50); 
 
 		Scatty_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -92,11 +92,11 @@ FUNC VOID B_GiveTradeInv_Addon_Scatty (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Stew , 5);
 		//Tränke
 		CreateInvItems (slf,ItPo_Mana_02 	, 4); 
-		CreateInvItems (slf,ItPo_Health_02	, 4);
+		CreateInvItems (slf,ItPo_Health_02	, 2);
 		
 		//Muni
-		CreateInvItems (slf, ItRw_Arrow, 50); 
-		CreateInvItems (slf, ItRw_Bolt,  50); 
+		//CreateInvItems (slf, ItRw_Arrow, 50); 
+		//CreateInvItems (slf, ItRw_Bolt,  50); 
 		
 		Scatty_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -113,12 +113,12 @@ FUNC VOID B_GiveTradeInv_Addon_Scatty (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Water , 5);
 		CreateInvItems (slf,ItFo_Stew , 5);
 		//Tränke
-		CreateInvItems (slf,ItPo_Mana_02 	, 4); 
-		CreateInvItems (slf,ItPo_Health_02	, 4);
+		CreateInvItems (slf,ItPo_Mana_01 	, 4); 
+		CreateInvItems (slf,ItPo_Health_01	, 2);
 		
 		//Muni
-		CreateInvItems (slf, ItRw_Arrow, 50); 
-		CreateInvItems (slf, ItRw_Bolt,  50); 
+		//CreateInvItems (slf, ItRw_Arrow, 50); 
+		//CreateInvItems (slf, ItRw_Bolt,  50); 
 
 		Scatty_ItemsGiven_Chapter_5 = TRUE;
 	};

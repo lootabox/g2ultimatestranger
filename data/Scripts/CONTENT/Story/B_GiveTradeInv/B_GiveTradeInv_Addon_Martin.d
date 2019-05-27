@@ -11,21 +11,20 @@ FUNC VOID B_GiveTradeInv_Addon_Martin (var C_NPC slf)
 	&& (Martin_ItemsGiven_Chapter_1 == FALSE))
 	{
 		CreateInvItems (slf,ItSc_PalHolyBolt ,  2); 
-		CreateInvItems (slf,ItSc_PalMediumHeal , 1);
-		CreateInvItems (slf,ItSc_PalLight, 10); 
-		CreateInvItems (slf,ItMi_Moleratlubric_MIS , 1); 
+		CreateInvItems (slf,ItSc_PalLightHeal , 2);
+		CreateInvItems (slf,ItSc_PalLight, 2); 
+	
 
 		// ------ Waffen ------
 		CreateInvItems (slf,ItMw_ShortSword1 , 3); 
-		CreateInvItems (slf,ItMw_Schwert2 , 2); 
 		//CreateInvItems (slf,ItMW_Addon_Hacker_1h_01, 1);
 		//CreateInvItems (slf,ItMW_Addon_Hacker_2h_01, 1);
 		//CreateInvItems (slf,ItMw_Meisterdegen, 1);
 		CreateInvItems (slf,ItMw_ShortSword5 , 1); 
-		CreateInvItems (slf,ItMw_Schwert4 , 1); 
-		CreateInvItems (slf,ItMw_Runenschwert , 1); 
+		//CreateInvItems (slf,ItMw_Runenschwert , 1); 
 		
-		CreateInvItems (slf,ItRi_Mana_01, 1); 
+		//CreateInvItems (slf,ItRi_Mana_01, 1); 
+		CreateInvItems (slf,ItMi_Moleratlubric_MIS , 1); 
 		
 		Martin_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -34,9 +33,13 @@ FUNC VOID B_GiveTradeInv_Addon_Martin (var C_NPC slf)
 	&& (Martin_ItemsGiven_Chapter_2 == FALSE))
 	{
 		CreateInvItems (slf,ItSc_PalHolyBolt ,  2); 
+		CreateInvItems (slf,ItSc_PalLightHeal , 2);
+		CreateInvItems (slf,ItSc_PalLight, 2); 
 		CreateInvItems (slf,ItSc_PalMediumHeal , 1);
 		CreateInvItems (slf,ItSc_PalRepelEvil , 1);
-		CreateInvItems (slf,ItSc_PalFullHeal , 1);
+
+		CreateInvItems (slf,ItMw_Schwert2 , 2); 
+		CreateInvItems (slf,ItMw_Schwert4 , 1); 
 	
 		Martin_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -46,9 +49,11 @@ FUNC VOID B_GiveTradeInv_Addon_Martin (var C_NPC slf)
 	{
 	
 		CreateInvItems (slf,ItSc_PalHolyBolt ,  2); 
+		CreateInvItems (slf,ItSc_PalLightHeal , 2);
+		CreateInvItems (slf,ItSc_PalLight, 2); 
 		CreateInvItems (slf,ItSc_PalMediumHeal , 1);
 		CreateInvItems (slf,ItSc_PalRepelEvil , 1);
-		CreateInvItems (slf,ItSc_PalFullHeal , 2);
+		CreateInvItems (slf,ItSc_PalFullHeal , 1);
 
 		Martin_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -56,12 +61,13 @@ FUNC VOID B_GiveTradeInv_Addon_Martin (var C_NPC slf)
 	if ((Kapitel >= 4)
 	&& (Martin_ItemsGiven_Chapter_4 == FALSE))
 	{
-		CreateInvItems (slf,ItSc_PalHolyBolt ,  2); 
-		CreateInvItems (slf,ItSc_PalMediumHeal , 1);
-		CreateInvItems (slf,ItMi_Nugget, 1); 
-		CreateInvItems (slf,ItSc_PalDestroyEvil , 1);
+		CreateInvItems (slf,ItSc_PalHolyBolt ,  4); 
+		CreateInvItems (slf,ItSc_PalLightHeal , 4);
+		CreateInvItems (slf,ItSc_PalLight, 4); 
+		CreateInvItems (slf,ItSc_PalMediumHeal , 2);
 		CreateInvItems (slf,ItSc_PalRepelEvil , 2);
-		CreateInvItems (slf,ItSc_PalFullHeal , 3);
+		CreateInvItems (slf,ItSc_PalFullHeal , 1);
+		CreateInvItems (slf,ItSc_PalDestroyEvil , 1);
 
 		Martin_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -69,11 +75,13 @@ FUNC VOID B_GiveTradeInv_Addon_Martin (var C_NPC slf)
 	if ((Kapitel >= 5)
 	&& (Martin_ItemsGiven_Chapter_5 == FALSE))
 	{
-		CreateInvItems (slf,ItSc_PalHolyBolt ,  2); 
-		CreateInvItems (slf,ItSc_PalMediumHeal , 1);
-		CreateInvItems (slf,ItSc_PalDestroyEvil , 2);
-		CreateInvItems (slf,ItSc_PalRepelEvil , 3);
-		CreateInvItems (slf,ItSc_PalFullHeal , 2);
+		CreateInvItems (slf,ItSc_PalHolyBolt ,  4); 
+		CreateInvItems (slf,ItSc_PalLightHeal , 4);
+		CreateInvItems (slf,ItSc_PalLight, 4); 
+		CreateInvItems (slf,ItSc_PalMediumHeal , 2);
+		CreateInvItems (slf,ItSc_PalRepelEvil , 2);
+		CreateInvItems (slf,ItSc_PalFullHeal , 1);
+		CreateInvItems (slf,ItSc_PalDestroyEvil , 1);
 	
 		Martin_ItemsGiven_Chapter_5 = TRUE;
 	};

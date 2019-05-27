@@ -20,7 +20,8 @@ instance BDT_10017_Addon_Juan (Npc_Default)
 	// ------ Inventory ------
 	CreateInvItems (self,ItMi_Addon_Steel_Paket,1);
 	CreateInvItems (self,ItMi_Addon_Lennar_Paket,1);
-	CreateInvItems (self,Itfo_Addon_Grog, 20);	
+	CreateInvItems (self,Itfo_Addon_Grog, 20);
+	CreateInvItems (self,ItFo_Addon_Pfeffer_01,1);//FÜR Mission fortuno
 	B_CreateAmbientInv (self); 	
 	
 	// ------ visuals ------																		

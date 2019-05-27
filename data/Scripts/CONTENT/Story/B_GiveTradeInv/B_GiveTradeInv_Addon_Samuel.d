@@ -16,13 +16,13 @@ FUNC VOID B_GiveTradeInv_Addon_Samuel (var C_NPC slf)
 		CreateInvItems (slf, ItFo_Addon_Rum,2);
 		CreateInvItems (slf, ItFo_Booze,3);
 		CreateInvItems (slf, ItFo_Beer,6);
-		CreateInvItems (slf, Itfo_Wine,2);
-		CreateInvItems (slf, ItFo_Bacon,2);
+		//CreateInvItems (slf, Itfo_Wine,2);
+		//CreateInvItems (slf, ItFo_Bacon,2);
 		CreateInvItems (slf, ItMi_Flask,4);
 		CreateInvItems (slf, ItPl_SwampHerb,4);
 		CreateInvItems (slf, ItMi_Joint,1);
 		
-		CreateInvItems (slf, ItRi_Prot_Fire_02,1);
+		//CreateInvItems (slf, ItRi_Prot_Fire_02,1);
 						
 		Samuel_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -36,8 +36,8 @@ FUNC VOID B_GiveTradeInv_Addon_Samuel (var C_NPC slf)
 		CreateInvItems (slf, ItFo_Addon_Rum,2);
 		CreateInvItems (slf, ItFo_Booze,3);
 		CreateInvItems (slf, ItFo_Beer,6);
-		CreateInvItems (slf, Itfo_Wine,2);
-		CreateInvItems (slf, ItFo_Bacon,2);
+		//CreateInvItems (slf, Itfo_Wine,2);
+		//CreateInvItems (slf, ItFo_Bacon,2);
 		CreateInvItems (slf, ItMi_Flask,4);
 		CreateInvItems (slf, ItPl_SwampHerb,4);
 		CreateInvItems (slf, ItMi_Joint,1);
@@ -53,8 +53,8 @@ FUNC VOID B_GiveTradeInv_Addon_Samuel (var C_NPC slf)
 		CreateInvItems (slf, ItFo_Addon_Rum,2);
 		CreateInvItems (slf, ItFo_Booze,3);
 		CreateInvItems (slf, ItFo_Beer,6);
-		CreateInvItems (slf, Itfo_Wine,2);
-		CreateInvItems (slf, ItFo_Bacon,2);
+		//CreateInvItems (slf, Itfo_Wine,2);
+		//CreateInvItems (slf, ItFo_Bacon,2);
 		CreateInvItems (slf, ItMi_Flask,4);
 		CreateInvItems (slf, ItPl_SwampHerb,4);
 		CreateInvItems (slf, ItMi_Joint,1);
@@ -70,8 +70,8 @@ FUNC VOID B_GiveTradeInv_Addon_Samuel (var C_NPC slf)
 		CreateInvItems (slf, ItFo_Addon_Rum,2);
 		CreateInvItems (slf, ItFo_Booze,3);
 		CreateInvItems (slf, ItFo_Beer,6);
-		CreateInvItems (slf, Itfo_Wine,2);
-		CreateInvItems (slf, ItFo_Bacon,2);
+		//CreateInvItems (slf, Itfo_Wine,2);
+		//CreateInvItems (slf, ItFo_Bacon,2);
 		CreateInvItems (slf, ItMi_Flask,4);
 		CreateInvItems (slf, ItPl_SwampHerb,4);
 		CreateInvItems (slf, ItMi_Joint,1);
@@ -87,8 +87,8 @@ FUNC VOID B_GiveTradeInv_Addon_Samuel (var C_NPC slf)
 		CreateInvItems (slf, ItFo_Addon_Rum,2);
 		CreateInvItems (slf, ItFo_Booze,3);
 		CreateInvItems (slf, ItFo_Beer,6);
-		CreateInvItems (slf, Itfo_Wine,2);
-		CreateInvItems (slf, ItFo_Bacon,2);
+		//CreateInvItems (slf, Itfo_Wine,2);
+		//CreateInvItems (slf, ItFo_Bacon,2);
 		CreateInvItems (slf, ItMi_Flask,4);
 		CreateInvItems (slf, ItPl_SwampHerb,4);
 		CreateInvItems (slf, ItMi_Joint,1);

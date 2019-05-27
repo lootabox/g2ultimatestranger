@@ -11,19 +11,20 @@ FUNC VOID B_GiveTradeInv_Addon_Cronos_ADW (var C_NPC slf)
 	&& (Cronos_ADW_ItemsGiven_Chapter_2 == FALSE))
 	{
 		
-		CreateInvItems   (slf, ItMW_Addon_Stab03, 	1);
-		CreateInvItems   (slf, ItMW_Addon_Stab05, 	1);
+		//CreateInvItems   (slf, ItMW_Addon_Stab03, 	1);
+		//CreateInvItems   (slf, ItMW_Addon_Stab05, 	1);
 		
 		//CreateInvItems   (slf, ItMi_Sulfur, 	2);
 		CreateInvItems   (slf, ItMi_Quartz, 	2);
 		//CreateInvItems   (slf, ItMi_Pitch, 	    1);
 		
-		CreateInvItems   (slf, ItPo_Health_01,  7);
-		CreateInvItems   (slf, ItPo_Health_02,  2);
-		CreateInvItems   (slf, ItPo_Mana_01,	14);
+		CreateInvItems   (slf, ItPo_Health_01,  6);
+		CreateInvItems   (slf, ItPo_Health_02,  3);
+		CreateInvItems   (slf, ItPo_Mana_01,	9);
+		CreateInvItems   (slf, ItPo_Mana_02,	6);
 		
-		CreateInvItems   (slf, ItPo_Health_Addon_04,	2);
-		CreateInvItems   (slf, ItPo_Mana_Addon_04,		5);
+		//CreateInvItems   (slf, ItPo_Health_Addon_04,	2);
+		//CreateInvItems   (slf, ItPo_Mana_Addon_04,		5);
 		
 		CreateInvItems	 (slf, ItMi_Flask,		15); 
 		 
@@ -88,8 +89,8 @@ FUNC VOID B_GiveTradeInv_Addon_Cronos_ADW (var C_NPC slf)
 		CreateInvItems   (slf, ItPo_Health_03,  6);
 		CreateInvItems   (slf, ItPo_Mana_01,	30);
 		
-		CreateInvItems   (slf, ItPo_Health_Addon_04,	2);
-		CreateInvItems   (slf, ItPo_Mana_Addon_04,		5);
+		//CreateInvItems   (slf, ItPo_Health_Addon_04,	2);
+		//CreateInvItems   (slf, ItPo_Mana_Addon_04,		5);
 		
 		CreateInvItems   (slf, ItSc_MediumHeal,	5);
 		//CreateInvItems   (slf, ItSc_Firestorm, 4);
@@ -135,8 +136,8 @@ FUNC VOID B_GiveTradeInv_Addon_Cronos_ADW (var C_NPC slf)
 		//CreateInvItems   (slf, ItMi_Pitch, 	    1);
 		CreateInvItems	 (slf, ItMi_Flask,		10);  
 			
-		CreateInvItems   (slf, ItPo_Health_Addon_04,	5);
-		CreateInvItems   (slf, ItPo_Mana_Addon_04,		10);
+		//CreateInvItems   (slf, ItPo_Health_Addon_04,	5);
+		//CreateInvItems   (slf, ItPo_Mana_Addon_04,		10);
 		
 		CreateInvItems   (slf, ItPo_Health_02,  15);
 		CreateInvItems   (slf, ItPo_Health_03,  10);
