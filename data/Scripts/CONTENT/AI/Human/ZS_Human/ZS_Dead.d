@@ -70,13 +70,6 @@ func void ZS_Dead ()
 			MIS_Kervo_KillLurker = LOG_FAILED;
 		};
 	};
-	if(self.guild == GIL_GOBBO || self.guild == GIL_GOBBO_SKELETON || self.guild == GIL_SUMMONED_GOBBO_SKELETON || self.guild == GIL_SUMMONED_SKELETON)
-	{
-		Npc_RemoveInvItems(self,ItMw_1h_Bau_Mace,Npc_HasItems(self,ItMw_1h_Bau_Mace));
-		Npc_RemoveInvItems(self,ItMw_1h_MISC_Sword,Npc_HasItems(self,ItMw_1h_MISC_Sword));
-		Npc_RemoveInvItems(self,ItMw_1h_Misc_Axe,Npc_HasItems(self,ItMw_1h_Misc_Axe));
-		Npc_RemoveInvItems(self,ItMw_2H_Sword_M_01,Npc_HasItems(self,ItMw_2H_Sword_M_01));
-	};
 	
 	if (Npc_IsPlayer(other))
 	{
@@ -157,6 +150,16 @@ func void ZS_Dead ()
 	AI_UnequipWeapons (self);
 	
 	self.aivar[AIV_TAPOSITION] = FALSE;
+	
+	if(self.guild == GIL_GOBBO || self.guild == GIL_GOBBO_SKELETON || self.guild == GIL_SUMMONED_GOBBO_SKELETON || self.guild == GIL_SUMMONED_SKELETON)
+	{
+		// Remove duplicate weapons from e.g. goblin/skeleton
+		Npc_SetToFistMode(self);
+		Npc_RemoveInvItems(self,ItMw_1h_Bau_Mace,Npc_HasItems(self,ItMw_1h_Bau_Mace));
+		Npc_RemoveInvItems(self,ItMw_1h_MISC_Sword,Npc_HasItems(self,ItMw_1h_MISC_Sword));
+		Npc_RemoveInvItems(self,ItMw_1h_Misc_Axe,Npc_HasItems(self,ItMw_1h_Misc_Axe));
+		Npc_RemoveInvItems(self,ItMw_2H_Sword_M_01,Npc_HasItems(self,ItMw_2H_Sword_M_01));
+	};
 };
 
 func int ZS_Dead_loop ()
