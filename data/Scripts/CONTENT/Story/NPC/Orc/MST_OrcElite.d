@@ -122,10 +122,10 @@ INSTANCE OrkElite_AntiPaladinOrkOberst (Mst_Default_OrcElite)
 {
 	name		=	"Orc Colonel";
 	//----- Attribute -----	
-	attribute	[ATR_STRENGTH]		=	140;
-	attribute	[ATR_DEXTERITY]		=	120;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
+	attribute	[ATR_STRENGTH]		=	150;
+	attribute	[ATR_DEXTERITY]		=	150;
+	attribute	[ATR_HITPOINTS_MAX]	=	450;
+	attribute	[ATR_HITPOINTS]		=	450;
 
 	// ------ visuals ------
 	B_SetVisuals_OrcElite();

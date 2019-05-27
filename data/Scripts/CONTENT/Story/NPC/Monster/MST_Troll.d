@@ -108,7 +108,7 @@ INSTANCE Maya_Troll	(Mst_Default_Troll)
 //*********************************
 INSTANCE Troll_DI	(Mst_Default_Troll)
 {
-	name		=	"Cave Troll";
+	name		=	"Troll";
 
 	aivar[AIV_MaxDistToWp]			= 300;
 	aivar[AIV_OriginalFightTactic] 	= FAI_TROLL;

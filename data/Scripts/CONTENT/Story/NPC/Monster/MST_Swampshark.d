@@ -80,7 +80,7 @@ INSTANCE Swampshark	(Mst_Default_Swampshark)
 *************************************************************************/
 INSTANCE MIS_Addon_Swampshark_01	(Mst_Default_Swampshark)
 {
-	
+	/* 
 	level							=	20;
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	100;
@@ -92,13 +92,14 @@ INSTANCE MIS_Addon_Swampshark_01	(Mst_Default_Swampshark)
 	protection	[PROT_BLUNT]		=	100;
 	protection	[PROT_EDGE]			=	100;
 	protection	[PROT_POINT]		=	100;
-	
+	 */
 	B_SetVisuals_Swampshark();
 	Npc_SetToFistMode(self);
 	
 };
 INSTANCE MIS_Addon_Swampshark_02	(Mst_Default_Swampshark)
 {
+	/* 
 	level							=	20;
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	100;
@@ -110,12 +111,13 @@ INSTANCE MIS_Addon_Swampshark_02	(Mst_Default_Swampshark)
 	protection	[PROT_BLUNT]		=	100;
 	protection	[PROT_EDGE]			=	100;
 	protection	[PROT_POINT]		=	100;
-	
+	 */
 	B_SetVisuals_Swampshark();
 	Npc_SetToFistMode(self);
 };
 INSTANCE MIS_Addon_Swampshark_03	(Mst_Default_Swampshark)
 {
+	/* 
 	level							=	20;
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	100;
@@ -127,7 +129,7 @@ INSTANCE MIS_Addon_Swampshark_03	(Mst_Default_Swampshark)
 	protection	[PROT_BLUNT]		=	100;
 	protection	[PROT_EDGE]			=	100;
 	protection	[PROT_POINT]		=	100;
-	
+	 */
 	B_SetVisuals_Swampshark();
 	Npc_SetToFistMode(self);
 };
