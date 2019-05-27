@@ -199,7 +199,7 @@ const int Value_PIR1hSword				= 600;
 //Paladinschwert - NUR PALADIN - ItMw_1h_Pal_Sword
 const int Damage_PalSchwert 			= 30; 
 const int Condition_PalSchwert			= 30;
-const int Range_PalSchwert				= 70;
+const int Range_PalSchwert				= 90;
 const int Value_PalSchwert				= 600;
 //Paladin Zweihänder - NUR PALADIN - ItMw_2h_Pal_Sword
 const int Damage_PalZweihaender			= 40;
@@ -328,7 +328,7 @@ const int Value_Schwert				= 650;
 //selbstgeschmiedetes Schwert - ItMw_1H_Common_01
 const int Damage_Common1			= 30; //+5%
 const int Condition_Common1			= 20;
-const int Range_Common1				= 90;
+const int Range_Common1				= 70;
 const int Value_Common1				= 450;
 
 // *******************

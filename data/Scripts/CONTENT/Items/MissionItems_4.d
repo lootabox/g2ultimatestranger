@@ -60,7 +60,7 @@ const int Value_OrcEliteRing 	= 130;//Joly: nicht ändern
 
 INSTANCE ItMW_1H_FerrosSword_Mis (C_Item) 
 {	
-	name 				=	"Feros' Sword";
+	name 				=	"Feros' Broadsword";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD|ITEM_MISSION;

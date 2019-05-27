@@ -717,7 +717,7 @@ INSTANCE ItMw_2h_Sld_Sword (C_Item)
 // *****************************************************
 INSTANCE ItMw_1h_Pal_Sword (C_Item)
 {	
-	name 				=	"Paladin's Sword";  //NUR PALADIN 
+	name 				=	"Paladin's Broadsword";  //NUR PALADIN 
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -731,7 +731,8 @@ INSTANCE ItMw_1h_Pal_Sword (C_Item)
 
 	cond_atr[2]   		=	ATR_STRENGTH;
 	cond_value[2]  		=	Condition_PalSchwert;
-	visual 				=	"ItMw_030_1h_PAL_Sword_02.3DS";
+	//visual 				=	"ItMw_030_1h_PAL_Sword_02.3DS";
+	visual 				=	"ItMw_030_1h_Common_Sword_01.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
@@ -1299,7 +1300,8 @@ INSTANCE ItMw_1H_Common_01 (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	Condition_Common1;
-	visual 				=	"ItMw_030_1h_Common_Sword_01.3DS";
+	//visual 				=	"ItMw_030_1h_Common_Sword_01.3DS";
+	visual 				=	"ItMw_030_1h_PAL_Sword_02.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
@@ -1859,7 +1861,7 @@ INSTANCE ItMw_Rabenschnabel (C_Item)
 /********************************************************************************/
 INSTANCE ItMw_Schwert5 (C_Item)
 {	
-	name 				=	"Fine Bastard Sword";  
+	name 				=	"Bastard Sword";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1983,7 +1985,8 @@ INSTANCE ItMw_1H_Special_02 (C_Item)
 		
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	Condition_Special_1H_2;
-	visual 				=	"ItMw_060_1h_Sword_smith_03.3DS";
+//	visual 				=	"ItMw_060_1h_Sword_smith_03.3DS";
+	visual 				=	"ItMw_045_1h_Sword_smith_02.3DS";
 
 	description			= name;
 	
