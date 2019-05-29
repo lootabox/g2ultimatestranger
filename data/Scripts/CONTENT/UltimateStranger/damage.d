@@ -151,11 +151,6 @@ pristr = IntToString(dmg);
 		// Magic
 		else if (dmgDesc.spellID >= 0)
 		{
-			// Get base magic damage
-			dmg = dmgDesc.dmgArray[DAM_INDEX_MAGIC];
-			if (dmgDesc.spellID == SPL_WindFist) { dmg = dmgDesc.dmgArray[DAM_INDEX_FLY]; };
-
-pristr = IntToString(dmg);
 			// Get base type for spell
 			var int isSpellIce; isSpellIce = (
 					(dmgDesc.spellID == SPL_Icebolt)
@@ -180,7 +175,14 @@ pristr = IntToString(dmg);
 				||	(dmgDesc.spellID == SPL_LightningFlash)
 				||	(dmgDesc.spellID == SPL_Thunderstorm)
 			);
+			var int isSpellWind; isSpellWind = (
+					(dmgDesc.spellID == SPL_WindFist)
+			);
 			
+			// Get base magic damage
+			dmg = dmgDesc.dmgArray[DAM_INDEX_MAGIC];
+			if (isSpellWind) { dmg = dmgDesc.dmgArray[DAM_INDEX_FLY]; };
+pristr = IntToString(dmg);
 			// Get equipped staff
 			/* wpn = Npc_GetEquippedMeleeWeapon(att);
 			if (Hlp_IsValidItem(wpn))
@@ -220,8 +222,9 @@ pristr = IntToString(dmg);
 				};
 			}; */
 
-			// Reduce magic protection
-			dmg -= vic.protection[PROT_MAGIC];
+			// Handle protection
+			if (att.guild == GIL_DRAGON)			{ dmg -= vic.protection[PROT_FIRE]; }
+			else									{ dmg -= vic.protection[PROT_MAGIC]; };
 			
 			// Apply ice cube dot, add remainder to main damage
 			if ((Npc_GetLastHitSpellID(vic) == SPL_IceCube)
@@ -251,11 +254,6 @@ pristr = IntToString(dmg);
 		if (!Npc_IsPlayer(att) && dmg < 5)	{ dmg = 5; }
 		else if (dmg < 0)					{ dmg = 0; };
 Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
-	};
-
-	// Unfreeze on damage taken
-	if (vic.aivar[AIV_FreezeStateTime] < SPL_TIME_FREEZE) && (dmg > SPL_FREEZE_DAMAGE*2) {
-		vic.aivar[AIV_FreezeStateTime] = SPL_TIME_FREEZE + 1;
 	};
 
 	// Monster specials

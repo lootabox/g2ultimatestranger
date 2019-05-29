@@ -348,6 +348,8 @@ const int AIV_SpellLevel 					= 88;
 // ***************************************************
 
 const int REAL_LEVEL						= 90;
+const int AIV_RageStateTime                 = 91;
+const int AIV_CageStateTime                 = 92;
 
 // ***************************************************
 // Globalvariablen für Petzen/Absolution/News - System

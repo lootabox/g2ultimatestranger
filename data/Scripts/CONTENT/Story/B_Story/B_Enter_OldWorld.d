@@ -122,6 +122,10 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_3 ()
 		Wld_InsertNpc	(DMT_DementorAmbient,"DT");
 		Wld_InsertNpc	(DMT_DementorAmbient,"OW_PATH_133");
 		Wld_InsertNpc	(DMT_DementorAmbient,"OW_PATH_128");
+		Wld_InsertNpc	(DMT_DementorAmbient,"PSI_TEMPLE_SITTING_PRIEST");
+		Wld_InsertNpc	(DMT_DementorAmbient,"PSI_TEMPLE_IN_05");
+		Wld_InsertNpc	(DMT_DementorAmbient,"PSI_TEMPLE_LEFTCORNER");
+		Wld_InsertNpc	(DMT_DementorAmbient,"PSI_TEMPLE_RIGHTCORNER");
 		
 		Wld_InsertItem 	(ItRu_Fear,"FP_ITEM_XARDASALTERTURM_01");
 
@@ -149,15 +153,15 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		
 		// ------ Immortal-Flags löschen ------
 		if ((Npc_IsDead(Engrom)) == FALSE)
-			{
+		{
 			B_StartOtherRoutine (Engrom,"Obsessed");
 			CreateInvItems 	(Engrom, ItAt_TalbinsLurkerSkin, 1);
 			if (hero.guild == GIL_KDF){CreateInvItems (Engrom,ITWR_DementorObsessionBook_MIS,1);	}
 			else {B_KillNpc  (Engrom);	};
 			EngromIsGone = TRUE;
-			};
-				
-				
+		};
+			
+			
 		// ------ Tote NSCs ------ 
 		//B_RemoveNpc		(STRF_1115_Geppert); 	//Joly: Platz machen im DJG Vorposten		
 		//B_RemoveNpc		(STRF_1116_Kervo); 		
@@ -178,18 +182,18 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		//Sengrath
 		//--------
 		if ((Npc_IsDead(Sengrath))== FALSE)		 //Joly: Sengrath Missing in Action auf der Suche nach seiner verlorenen Armbrust.
+		{
+			B_StartOtherRoutine	(Sengrath,"ORCBARRIER");
+			AI_Teleport(Sengrath,"OW_ORCBARRIER_12");
+			B_ClearDeadTrader(Sengrath);
+			if (Npc_HasItems (Sengrath,ItRw_Mil_Crossbow))
 			{
-				B_StartOtherRoutine	(Sengrath,"ORCBARRIER");
-				AI_Teleport(Sengrath,"OW_ORCBARRIER_12");
-				B_ClearDeadTrader(Sengrath);
-				if (Npc_HasItems (Sengrath,ItRw_Mil_Crossbow))
-				{
-					Npc_RemoveInvItem	(Sengrath, ItRw_Mil_Crossbow );
-	 			};
-	 			CreateInvItems 	(Sengrath, ItRw_SengrathsArmbrust_MIS, 1);	
-	 			Sengrath_Missing = TRUE;								
-				B_KillNpc     	(Sengrath);
+				Npc_RemoveInvItem	(Sengrath, ItRw_Mil_Crossbow );
 			};
+			CreateInvItems 	(Sengrath, ItRw_SengrathsArmbrust_MIS, 1);	
+			Sengrath_Missing = TRUE;								
+			B_KillNpc     	(Sengrath);
+		};
 
 		//Tote Drachenjäger
 		//-----------------
@@ -214,22 +218,22 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 	
 		Wld_InsertNpc		(DJG_700_Sylvio,		"OC1"); 
 
-		IF (SLD_Bullco_is_alive == TRUE)
-			{
+		if (SLD_Bullco_is_alive == TRUE)
+		{
 			Wld_InsertNpc		(DJG_701_Bullco, 		"OC1");
-			};
-		IF (SLD_Rod_is_alive == TRUE)
-			{
+		};
+		if (SLD_Rod_is_alive == TRUE)
+		{
 			Wld_InsertNpc		(DJG_702_Rod, 			"OC1");
-			};
-		IF (SLD_Cipher_is_alive == TRUE)
-			{
+		};
+		if (SLD_Cipher_is_alive == TRUE)
+		{
 			Wld_InsertNpc		(DJG_703_Cipher, 		"OC1");
-			};
-		IF (SLD_Gorn_is_alive == TRUE)
-			{
+		};
+		if (SLD_Gorn_is_alive == TRUE)
+		{
 			Wld_InsertNpc		(PC_Fighter_DJG, 		"OC1");
-			};
+		};
 
 		Wld_InsertNpc		(DJG_705_Angar, 		"OC1"); 
 		Wld_InsertNpc		(DJG_708_Kurgan, 		"OC1"); 
@@ -591,17 +595,17 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 	
 		//Talbin
 		//--------
-			if (Talbin_FollowsThroughPass == LOG_OBSOLETE)
-				{
-					B_KillNpc 		(VLK_4130_Talbin);
-					Wld_InsertNpc	(Dragonsnapper, "START");
-					Talbin_FollowsThroughPass = LOG_FAILED;
-				}
-			else if (Talbin_FollowsThroughPass == LOG_SUCCESS)
-				{
-					B_RemoveNpc 	(VLK_4130_Talbin);
-					Talbin_FollowsThroughPass = LOG_FAILED;	//Joly: absoluter Schluß
-				};
+		if (Talbin_FollowsThroughPass == LOG_OBSOLETE)
+		{
+			B_KillNpc 		(VLK_4130_Talbin);
+			Wld_InsertNpc	(Dragonsnapper, "START");
+			Talbin_FollowsThroughPass = LOG_FAILED;
+		}
+		else if (Talbin_FollowsThroughPass == LOG_SUCCESS)
+		{
+			B_RemoveNpc 	(VLK_4130_Talbin);
+			Talbin_FollowsThroughPass = LOG_FAILED;	//Joly: absoluter Schluß
+		};
 };
 
 //****************************************************

@@ -5713,3 +5713,572 @@ instance HERO_HURT(CFx_Base_Proto)
     visAlphaBlendFunc_S = "ADD";
     emFXLifeSpan = 0.1;
 };
+
+
+///                        XXXXXXXXXXXXXXXXXXXX                            ///
+///                        XX     A C I D    XX                            ///
+///                        XXXXXXXXXXXXXXXXXXXX                            ///
+///                              mud-freak                                 ///
+
+INSTANCE spellFX_Acid (CFx_Base_Proto)
+{
+    visname_S               = "MFX_ACID_INIT";
+    emtrjmode_s             = "FIXED";
+    emTrjOriginNode         = "ZS_RIGHTHAND";
+    emtrjtargetnode         = "BIP01"; // FIRE";
+    emtrjloopmode_s         = "NONE";
+    emtrjeasefunc_s         = "LINEAR";
+    emActionCollDyn_S       = "COLLIDE CREATEONCE";
+    emFXCollDyn_S           = "spellFX_Acid_COLLIDEDYNFX";
+    emFXCollDynPerc_S       = "VOB_ACID";
+    emTrjTargetRange        = 20;
+    emTrjTargetElev         = 0;
+    emTrjDynUpdateDelay     = 20000;
+    userString[0]           = "fireballquadmark.tga";
+    userString[1]           = "100 100";
+    userString[2]           = "MUL";
+    };
+    INSTANCE spellFX_Acid_KEY_CAST (C_ParticleFXEmitKey)
+    {
+        visname_S           = "MFX_Acid_CAST";
+        emtrjmode_s         = "TARGET";
+        emtrjeasevel        = 800.;
+        emSelfRotVel_S      = "0 0 400";
+        sfxisambient        = 1;
+        sfxid               = "MFX_DestroyUndead_Cast";
+        emCreateFXID        = "spellFX_Acid_CAST1";
+        emCheckCollision    = 1;
+    };
+    INSTANCE spellFX_Acid_KEY_COLLIDE (C_ParticleFXEmitKey)
+    {
+        emtrjeasevel        = 0.000001;
+};
+INSTANCE spellFX_ACID_CAST1 (CFx_Base_Proto)
+{
+    visname_S               = "MFX_ACID_CAST1";
+    emtrjmode_s             = "TARGET";
+    emtrjeasevel            = 800.;
+    emSelfRotVel_S          = "0 0 400";
+    emCheckCollision        = 2; // 2: Coll, aber keinen Schaden abziehen
+    emActionCollStat_S      = "COLLIDE";
+    emActionCollDyn_S       = "COLLIDE";
+    emFxCreate_s            = "spellFX_ACID_CAST2";
+    };
+    INSTANCE spellFX_ACID_CAST1_COLLIDE  (C_ParticleFXEmitKey)
+    {
+        emtrjeasevel        = 0.0001;
+};
+INSTANCE spellFX_ACID_CAST2 (CFx_Base_Proto)
+{
+    visname_S               = "MFX_ACID_CAST2";
+    emtrjmode_s             = "TARGET";
+    emtrjeasevel            = 800.;
+    emSelfRotVel_S          = "0 0 400";
+    emCheckCollision        = 2; // 2: Coll, aber keinen Schaden abziehen
+    emActionCollStat_S      = "COLLIDE";
+    emActionCollDyn_S       = "COLLIDE";
+    };
+    INSTANCE spellFX_ACID_CAST2_COLLIDE  (C_ParticleFXEmitKey)
+    {
+        emtrjeasevel        = 0.0001;
+};
+INSTANCE spellFX_Acid_COLLIDEDYNFX (CFx_Base_Proto)
+{
+    visname_S               = "MFX_WINDFIST_COLLIDE";
+    emTrjOriginNode         = "BIP01";
+    emtrjmode_s             = "FIXED";
+    emtrjdynupdatedelay     = 0.;
+    sfxid                   = "MFX_ACID";
+};
+INSTANCE VOB_ACID (CFx_Base_Proto)
+{
+    emTrjOriginNode         = "BIP01 FIRE";
+    visname_S               = "MFX_ACID_TARGET";
+    emFXCreate_S            = "VOB_ACID_CHILD1";
+    emFXCreatedOwnTrj       = 1;
+    emtrjmode_s             = "FIXED";
+    emtrjdynupdatedelay     = 0.;
+    emAdjustShpToOrigin     = 1;
+    secsPerDamage           = 0.5; // Damge over time (= 1/DoT)
+    emFXLifeSpan            = 8;   // Länge des FX (Totale DMG = Länge * DoT)
+};
+INSTANCE VOB_ACID_CHILD1 (CFx_Base_Proto)
+{
+    emTrjOriginNode         = "BIP01 R UPPERARM";
+    visname_S               = "MFX_ACID_TARGET";
+    emFXCreate_S            = "VOB_ACID_CHILD2";
+    emFXCreatedOwnTrj       = 1;
+    emtrjmode_s             = "FIXED";
+    emtrjdynupdatedelay     = 0.;
+    emAdjustShpToOrigin     = 1;
+    sfxid                   = "MFX_ACID_DOT"; // Blubber-Loop (abruptes Ende)
+};
+INSTANCE VOB_ACID_CHILD2 (CFx_Base_Proto)
+{
+    emTrjOriginNode         = "BIP01 L UPPERARM";
+    visname_S               = "MFX_ACID_TARGET";
+    emFXCreate_S            = "VOB_ACID_CHILD3";
+    emFXCreatedOwnTrj       = 1;
+    emtrjmode_s             = "FIXED";
+    emtrjdynupdatedelay     = 0.;
+    emAdjustShpToOrigin     = 1;
+};
+INSTANCE VOB_ACID_CHILD3 (CFx_Base_Proto)
+{
+    emTrjOriginNode         = "BIP01 L HAND";
+    visname_S               = "MFX_ACID_TARGET";
+    emFXCreate_S            = "VOB_ACID_CHILD4";
+    emFXCreatedOwnTrj       = 1;
+    emtrjmode_s             = "FIXED";
+    emtrjdynupdatedelay     = 0.;
+    emAdjustShpToOrigin     = 1;
+};
+INSTANCE VOB_ACID_CHILD4 (CFx_Base_Proto)
+{
+    emTrjOriginNode         = "BIP01 R HAND";
+    visname_S               = "MFX_ACID_TARGET";
+    emFXCreate_S            = "VOB_ACID_CHILD5";
+    emFXCreatedOwnTrj       = 1;
+    emtrjmode_s             = "FIXED";
+    emtrjdynupdatedelay     = 0.;
+    emAdjustShpToOrigin     = 1;
+    emFXTriggerDelay        = 0.5;
+};
+INSTANCE VOB_ACID_CHILD5 (CFx_Base_Proto)
+{
+    emTrjOriginNode         = "BIP01 L FOOT";
+    visname_S               = "MFX_ACID_TARGET";
+    emFXCreate_S            = "VOB_ACID_CHILD6";
+    emFXCreatedOwnTrj       = 1;
+    emtrjmode_s             = "FIXED";
+    emtrjdynupdatedelay     = 0.;
+    emAdjustShpToOrigin     = 1;
+    emFXTriggerDelay        = 0.5;
+};
+INSTANCE VOB_ACID_CHILD6 (CFx_Base_Proto)
+{
+    emTrjOriginNode         = "BIP01 R FOOT";
+    visname_S               = "MFX_ACID_TARGET";
+    emFXCreate_S            = "spellFX_Firespell_HUMANSMOKE";
+    emFXCreatedOwnTrj       = 1;
+    emtrjmode_s             = "FIXED";
+    emtrjdynupdatedelay     = 0.;
+    emAdjustShpToOrigin     = 1;
+    emFXTriggerDelay        = 0.8;
+};
+
+///                      XXXXXXXXXXXXXXXXXXXXXXXXXXX                       ///
+///                      XX  A D A N O S B A L L  XX                       ///
+///                      XXXXXXXXXXXXXXXXXXXXXXXXXXX                       ///
+///                                mud-freak                               ///
+
+INSTANCE spellFX_Adanosball (CFx_Base_Proto)
+{
+    visname_S               = "MFX_Adanosball_INIT";
+    emtrjmode_s             = "FIXED";
+    emTrjOriginNode         = "ZS_RIGHTHAND";
+    emtrjloopmode_s         = "NONE";
+    emtrjeasefunc_s         = "LINEAR";
+    emActionCollStat_S      = "COLLIDE";
+    emActionCollDyn_S       = "COLLIDE CREATEONCE";
+    emFXCollDyn_S           = "spellFX_Adanosball_TARGET";
+    emTrjTargetRange        = 20;
+    emTrjTargetElev         = 0;
+    lightPresetname         = "AURA";
+    };
+    INSTANCE spellFX_Adanosball_KEY_INIT (C_ParticleFXEmitKey)
+    {
+        lightrange          = 0.001;
+    };
+    INSTANCE spellFX_Adanosball_KEY_INVEST (C_ParticleFXEmitKey)
+    {
+        lightrange          = 100;
+    };
+    INSTANCE spellFX_Adanosball_KEY_CAST (C_ParticleFXEmitKey)
+    {
+        visname_S           = "MFX_ADANOSBALL_CAST";
+        emtrjmode_s         = "TARGET";
+        emtrjeasevel        = 900;
+        sfxid               = "MFX_Thunderball_Collide3";
+        lightrange          = 100;
+        emCheckCollision    = 1;
+    };
+    INSTANCE spellFX_Adanosball_KEY_COLLIDE (C_ParticleFXEmitKey)
+    {
+        emtrjeasevel        = 0.000001;
+};
+INSTANCE spellFX_Adanosball_KEY_BACK (C_ParticleFXEmitKey)
+{
+    visname_S               = "";
+    emtrjmode_s             = "FIXED";
+};
+INSTANCE spellFX_Adanosball_TARGET (CFx_Base_Proto)
+{
+    visname_S               = "MFX_ADANOSBALL_TARGET";
+    emtrjmode_s             = "FIXED";
+    emTrjOriginNode         = "BIP01";
+    sendAssessMagic         = 1;
+    sfxid                   = "MFX_Lightning_ORIGIN";
+    sfxisambient            = 1;
+};
+
+///                       XXXXXXXXXXXXXXXXXXXXXXXXX                        ///
+///                       XX  E X P L O S I O N  XX                        ///
+///                       XXXXXXXXXXXXXXXXXXXXXXXXX                        ///
+///                                mud-freak                               ///
+
+INSTANCE spellFX_Explosion (CFx_Base_Proto)
+{
+    visname_S               = "MFX_Explosion_INIT";
+    emtrjmode_s             = "FIXED";
+    emTrjOriginNode         = "ZS_RIGHTHAND";
+    emtrjtargetnode         = "BIP01 FIRE";
+    emtrjloopmode_s         = "NONE";
+    emtrjeasefunc_s         = "LINEAR";
+    emActionCollStat_S      = "COLLIDE CREATEONCE CREATEQUAD";
+    emActionCollDyn_S       = "COLLIDE CREATEONCE";
+    emFXCollStat_S          = "spellFX_InstantFireball_COLLIDE";
+    emFXCollDyn_S           = "spellFX_Explosion_COLLIDEDYNFX";
+    emFXCollDynPerc_S       = "VOB_MAGICBURN";
+    emFXCollStatAlign_S     = "COLLISIONNORMAL";
+    emFXCreatedOwnTrj       = 0;
+    emTrjTargetRange        = 20;
+    emTrjTargetElev         = 0;
+    emTrjDynUpdateDelay     = 20000;
+    //emTrjDynUpdateDelay   = 0.4;
+    userString[0]           = "fireballquadmark.tga";
+    userString[1]           = "100 100";
+    userString[2]           = "MUL";
+    lightPresetname         = "FIRESMALL";
+    };
+    INSTANCE spellFX_Explosion_KEY_OPEN (C_ParticleFXEmitKey)
+    {
+        lightrange          = 0.01;
+    };
+    INSTANCE spellFX_Explosion_KEY_INIT (C_ParticleFXEmitKey)
+    {
+        visname_S           = "MFX_Explosion_INIT";
+        lightrange          = 0.01;
+    };
+    INSTANCE spellFX_Explosion_KEY_CAST (C_ParticleFXEmitKey)
+    {
+        lightrange          = 100;
+        visname_S           = "MFX_Explosion_PFXTRAIL";
+        emtrjmode_s         = "TARGET";
+        emSelfRotVel_S      = "100 100 100";
+        emtrjeasevel        = 1400.;
+        sfxid               = "MFX_SuckEnergy_Cast";
+        sfxisambient        = 1;
+        emCreateFXID        = "spellFX_Explosion_TRAIL";
+        emCheckCollision    = 1;
+    };
+    INSTANCE spellFX_Explosion_KEY_COLLIDE (C_ParticleFXEmitKey)
+    {
+        pfx_flygravity_s    = "0 0.0002 0";
+        emtrjeasevel        = 0.000001;
+        sfxid               = "FSB_Attack";
+};
+INSTANCE spellFX_Explosion_TRAIL (CFx_Base_Proto)
+{
+    emtrjeasevel            = 1400.;
+    visname_S               = "MFX_Explosion_CAST";
+    visAlpha                = 1;
+    emtrjmode_s             = "TARGET";
+    emtrjtargetnode         = "BIP01 FIRE";
+    emtrjloopmode_s         = "NONE";
+    emtrjeasefunc_s         = "LINEAR";
+    emTrjDynUpdateDelay     = 20000;
+    emSelfRotVel_S          = "0 0 200";
+    emCheckCollision        = 2;  // 2: Coll, aber keinen Schaden abziehen
+    emActionCollDyn_S       = "COLLIDE";
+    emActionCollStat_S      = "COLLIDE";
+    };
+    INSTANCE spellFX_Explosion_TRAIL_KEY_COLLIDE (C_ParticleFXEmitKey)
+    {
+        emtrjeasevel        = 0.000001;
+};
+INSTANCE spellFX_Explosion_COLLIDEDYNFX (CFx_Base_Proto)
+{
+    visname_S               = "MFX_Fireball_Collide1";
+    visAlpha                = 1;
+    emTrjOriginNode         = "BIP01";
+    emtrjmode_s             = "FIXED";
+    lightPresetname         = "FIRESMALL";
+    sfxid                   = "MFX_EXPLOSION_COLLIDE";
+    emfxcreate_s            = "SpellFX_Explosion_TARGET";
+    emfxcreatedowntrj       = 1;
+};
+INSTANCE SpellFX_Explosion_TARGET (CFx_Base_Proto)
+{
+    emTrjOriginNode         = "BIP01";
+    visname_S               = "MFX_Explosion_SPREAD";
+    visAlpha                = 1;
+    emtrjmode_s             = "FIXED";
+    lightpresetname         = "FIRESMALL";
+    sfxid                   = "MFX_EXPLOSION_SPHERE";
+    sfxisambient            = 1;
+};
+
+///                        XXXXXXXXXXXXXXXXXXXXXXXXX                       ///
+///                        XX  E X T R I C A T E  XX                       ///
+///                        XXXXXXXXXXXXXXXXXXXXXXXXX                       ///
+///                                mud-freak                               ///
+
+INSTANCE spellFX_Extricate (CFx_Base_Proto)
+{
+    visname_S               = "MFX_Extricate_INIT";
+    emtrjmode_s             = "FIXED";
+    emTrjOriginNode         = "ZS_RIGHTHAND";
+    emtrjloopmode_s         = "NONE";
+    emtrjeasefunc_s         = "LINEAR";
+    emFXInvestOrigin_S      = "spellFX_Extricate_BUILDUP"; // SPL_NEXTLEVEL
+    };
+    INSTANCE spellFX_Extricate_KEY_CAST (C_ParticleFXEmitKey)
+    {
+        visname_S           = "MFX_Extricate_INIT";
+        emCreateFXID        = "spellFX_Extricate_CAST";
+        pfx_ppsIsLoopingChg = 1;
+    };
+INSTANCE spellFX_Extricate_BUILDUP (CFx_Base_Proto)
+{
+    visname_S               = "MFX_Extricate_BUILDUP";
+    emtrjmode_s             = "FIXED";
+    emTrjOriginNode         = "Bip01";
+    emFXCreate_S            = "spellFX_Extricate_PreRumble";
+    sfxid                   = "MFX_EXTRICATE_INHALE";
+};
+INSTANCE spellFX_Extricate_CAST (CFx_Base_Proto)
+{
+    visname_S               = "MFX_Extricate_Cast";
+    emTrjOriginNode         = "Bip01";
+    emtrjmode_s             = "NONE";
+    emFXCreate_S            = "spellFX_Extricate_CASTER";
+    emFXCreatedOwnTrj       = 1;
+    emActionCollDyn_S       = "CREATE COLLIDE"; // Erreiche alle
+    emFXCollDyn_S           = "spellFX_Extricate_COLLIDEDYNFX";
+    emFXCollDynPerc_S       = "spellFX_Extricate_SENDPERCEPTION";
+    emFXCollDynAlign_S      = "COLLISIONNORMAL";
+    emCheckCollision        = 1;
+};
+INSTANCE spellFX_Extricate_COLLIDEDYNFX (CFx_Base_Proto)
+{
+    visname_S               = "MFX_WINDFIST_TARGET";
+    sfxid                   = "MFX_EXTRICATE_COLLIDE";
+};
+INSTANCE spellFX_Extricate_SENDPERCEPTION (CFx_Base_Proto)  // Send perception
+{
+    visname_S               = "";
+    sendAssessMagic         = 1;
+};
+INSTANCE spellFX_Extricate_CASTER (CFx_Base_Proto)
+{
+    visname_S               = "";
+    sfxid                   = "MFX_Fireball_Collide4";
+    emFXCreate_S            = "spellFX_Extricate_Rumble";
+    emFXCreatedOwnTrj       = 1;
+};
+INSTANCE spellFX_Extricate_PreRumble (CFx_Base_Proto)
+{
+    visName_S               = "earthquake.eqk";
+    userString[0]           = "500";
+    userString[1]           = "0";  // Nicht ändern, sonst kommt es zwei mal
+    userString[2]           = "4 4 4";
+};
+INSTANCE spellFX_Extricate_Rumble (CFx_Base_Proto)
+{
+    visName_S               = "earthquake.eqk";
+    userString[0]           = "1000";
+    userString[1]           = "1";
+    userString[2]           = "7 7 7";
+    emFXCreatedOwnTrj       = 1;
+};
+
+///                      XXXXXXXXXXXXXXXXXXXXXXXXX                         ///
+///                      XX  H E A L O T H E R  XX                         ///
+///                      XXXXXXXXXXXXXXXXXXXXXXXXX                         ///
+///                               mud-freak                                ///
+
+
+INSTANCE spellFX_Healother (CFx_Base_Proto)
+{
+        visname_S           = "MFX_Healother_INIT";
+        emTrjOriginNode     = "ZS_RIGHTHAND";
+        emtrjmode_s         = "FIXED";
+        };
+        INSTANCE spellFX_Healother_KEY_CAST (C_ParticleFXEmitKey)
+        {
+            pfx_ppsisloopingChg = 1;
+};
+INSTANCE spellFX_Healother_TARGET (CFx_Base_Proto)
+{
+    visname_S           = "MFX_HEALOTHER_TARGET";
+    emtrjmode_s         = "FIXED";
+    emTrjOriginNode     = "BIP01";
+    sfxid               = "MFX_Heal_CAST";
+    sfxIsAmbient        = 1;
+};
+
+///                       XXXXXXXXXXXXXXXXXXXXXXXXX                        ///
+///                       XX  M A G I C C A G E  XX                        ///
+///                       XXXXXXXXXXXXXXXXXXXXXXXXX                        ///
+///                                mud-freak                               ///
+
+INSTANCE spellFX_MagicCage (CFx_Base_Proto)
+{
+    visname_S                    = "MFX_MagicCage_INIT";
+    emtrjmode_s                  = "FIXED";
+    emTrjOriginNode              = "ZS_RIGHTHAND";
+    emtrjloopmode_s              = "NONE";
+    emtrjeasefunc_s              = "LINEAR";
+    lightPresetname              = "WHITEBLEND";
+    };
+    INSTANCE spellFX_MagicCage_KEY_INIT (C_ParticleFXEmitKey)
+    {
+        Lightrange               = 0.001;
+    };
+    INSTANCE spellFX_MagicCage_KEY_INVEST_1 (C_ParticleFXEmitKey)
+    {
+        LightRange               = 100;
+    };
+    INSTANCE spellFX_MagicCage_KEY_CAST (C_ParticleFXEmitKey)
+    {
+        emCreateFXID             = "spellFX_MagicCage_Bridge";
+        emtrjeasevel             = 0.000001;
+        pfx_ppsisloopingchg      = 1;
+        sfxid                    = "MFX_Sleep_Cast";
+        emtrjmode_s              = "TARGET";
+        emtrjeasevel             = 500;
+        emCheckCollision         = 1;
+    };
+    INSTANCE spellFX_MagicCage_KEY_COLLIDE (C_ParticleFXEmitKey)
+    {
+
+};
+INSTANCE spellFX_MagicCage_Bridge (CFx_Base_Proto)
+{
+    visname_S                    = "MFX_MagicCage_CAST";
+    visalpha                     = 1;
+    visalphablendfunc_s          = "ADD";
+    emtrjmode_s                  = "TARGET";
+    emtrjoriginnode              = "ZS_RIGHTHAND";
+    emtrjnumkeys                 = 4;
+    emtrjnumkeysvar              = 2;
+    emtrjangleelevvar            = 5;
+    emtrjangleheadvar            = 10;
+    emtrjloopmode_s              = "NONE";
+    emtrjeasefunc_s              = "LINEAR";
+    emtrjeasevel                 = 900;
+    emtrjdynupdatedelay          = 0.1;
+    emtrjdynupdatetargetonly     = 1;
+    emactioncolldyn_s            = "COLLIDE CREATEONCE";
+    emactioncollstat_s           = "COLLIDE";
+    emfxcolldynPerc_s            = "spellFX_MagicCage_TARGET";
+    emfxlifespan                 = -1;
+    emselfrotvel_s               = "0 0 0";
+    secsperdamage                = -1;
+    sfxid                        = "MFX_Windfist_Cast";
+    sfxisambient                 = 1;
+    };
+    INSTANCE spellFX_MagicCage_Bridge_KEY_CAST (C_ParticleFXEmitKey)
+    {
+        emCheckCollision         = 1;
+    };
+    INSTANCE spellFX_MagicCage_Bridge_KEY_COLLIDE (C_ParticleFXEmitKey)
+    {
+        emtrjeasevel            = 0.000001;
+        pfx_ppsisloopingchg     = 1;
+        sfxid                   = "SPEAR_START"; // "MFX_ICECUBE_COLLIDE";
+};
+INSTANCE spellFX_MagicCage_TARGET (CFx_Base_Proto)
+{
+    visname_S                   = "MFX_MagicCage_ORIGIN";
+    emtrjmode_s                 = "FIXED";
+    emTrjOriginNode             = "BIP01";
+    sendAssessMagic             = 1;
+    lightpresetname             = "WHITEBLEND";
+    emFXLifeSpan                = 18;
+};
+
+///                        XXXXXXXXXXXXXXXXXXXXXX                          ///
+///                        XX     Q U A K E    XX                          ///
+///                        XXXXXXXXXXXXXXXXXXXXXX                          ///
+///                               mud-freak                                ///
+
+INSTANCE spellFX_Quake (CFx_Base_Proto)
+{
+    visName_S               = "MFX_QUAKE_INIT";
+    emtrjmode_s             = "FIXED";
+    emTrjOriginNode         = "ZS_RIGHTHAND";
+    emtrjloopmode_s         = "NONE";
+    emFXInvestOrigin_S      = "spellFX_Quake_BUILDUP"; // SPL_NEXTLEVEL
+    };
+    INSTANCE spellFX_Quake_KEY_CAST (C_ParticleFXEmitKey)
+    {
+        emCreateFXID        = "spellFX_Quake_TARGETS";
+        pfx_ppsIsLoopingChg = 1;
+        sfxid               = "MFX_QUAKE_STOMP";
+        sfxisambient        = 1;
+};
+INSTANCE spellFX_Quake_BUILDUP (CFX_Base_Proto)
+{
+    visName_S               = "spellFX_InvisibleProjectile"; // zSpy umgehen
+    sfxid                   = "MFX_QUAKE_CAST"; // Wir wollen nur den Sound
+};
+// Earth Quake FX
+INSTANCE spellFX_Quake_CAST (CFx_Base_Proto)
+{
+    visName_S               = "earthquake.eqk";
+    userString[0]           = "1000";
+    userString[1]           = "8";
+    userString[2]           = "7 7 7";
+    sfxid                   = "MFX_QUAKE_EARTHQUAKE";
+    sfxIsAmbient            = 1;
+};
+INSTANCE spellFX_Quake_TARGETS (CFx_Base_Proto)
+{
+    visname_S               = "MFX_QUAKE_CAST";
+    emTrjOriginNode         = "BIP01";
+    emActionCollDyn_S       = "CREATEONCE"; // Erreiche alle
+    emFXCollDynPerc_S       = "spellFX_Quake_SENDPERCEPTION";
+    emFXCollDynAlign_S      = "COLLISIONNORMAL";
+    emCheckCollision        = 1;
+    emFXCreate_S            = "spellFX_Quake_CAST";
+    emFXCreatedOwnTrj       = 1;
+};
+INSTANCE spellFX_Quake_SENDPERCEPTION (CFx_Base_Proto) //Sendet perception
+{
+    sendAssessMagic         = 1;
+};
+
+///                         XXXXXXXXXXXXXXX                                ///
+///                         XX  R A G E  XX                                ///
+///                         XXXXXXXXXXXXXXX                                ///
+///                             mud-freak                                  ///
+
+INSTANCE spellFX_Rage (CFx_Base_Proto)
+{
+    visname_S               = "MFX_FEAR_INIT";
+    emtrjmode_s             = "FIXED";
+    emtrjeasefunc_s         = "linear";
+    emTrjOriginNode         = "ZS_RIGHTHAND";
+    emtrjdynupdatedelay     = 10000;
+    };
+
+    INSTANCE spellFX_Rage_KEY_OPEN (C_ParticleFXEmitKey)
+    {
+        emtrjeasevel        = 0.;
+    };
+    INSTANCE spellFX_Rage_KEY_CAST (C_ParticleFXEmitKey)
+    {
+        emCreateFXID        = "spellFX_Fear_GROUND";
+        pfx_ppsIsLoopingChg = 1;
+};
+INSTANCE spellFX_Rage_TARGET (CFx_Base_Proto)
+{
+    visname_s               = "MFX_FEAR_GHOSTEND";
+    emTrjOriginNode         = "BIP01";
+    emtrjmode_s             = "FIXED";
+    emtrjloopmode_s         = "NONE";
+    sfxid                   = "MFX_FEAR_GHOSTEND";
+    sfxIsAmbient            = 1;
+};

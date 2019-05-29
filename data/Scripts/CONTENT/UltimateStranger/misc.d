@@ -303,7 +303,6 @@ func void MoreAlphaPolys(var int newCount) {
 //************************************************
 func int C_GetScrollCost(var int cost)
 {
-    Print(IntToString(cost));
 	if (cost < 10)
 	{
 		return 5;

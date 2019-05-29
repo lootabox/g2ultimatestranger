@@ -517,4 +517,7 @@ User Korianous@worldofgothic.com
 User Dimus@worldofplayers.ru
 	Insane metric ton of bug fixes and improvements. (converted manually to English code base)
 
+User mud-freak@worldofplayers.de
+	New spells with their own animations, sounds and effects. (modified to better fit the mod)
+
 https://github.com/szapp/GothicFreeAim/wiki/Installation-Steps-for-Gothic-2#wiki-wrapper

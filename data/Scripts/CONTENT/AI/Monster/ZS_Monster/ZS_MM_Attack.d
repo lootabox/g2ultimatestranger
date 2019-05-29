@@ -311,6 +311,12 @@ func void ZS_MM_Attack_End ()
 	// ------ other wieder holen, ist hier auf jeden Fall gelöscht! ------
 	other = Hlp_GetNpc(self.aivar[AIV_LASTTARGET]);
 
+	// ------ SPL_Rage (ZS_Rage) ------
+	if (Npc_WasInState(self, ZS_Rage)) {
+		AI_StartState(self, ZS_Rage, 0, "");
+		return;
+	};
+	
 	// ------ MonsterMage steckt Spruch weg / Orc steckt Waffe weg ------
 	if (C_NpcIsMonsterMage(self))
 	|| (self.guild == GIL_SKELETON)

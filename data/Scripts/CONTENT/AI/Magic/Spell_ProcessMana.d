@@ -107,6 +107,16 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	if (activeSpell == SPL_SummonZombie			)	{	return	Spell_Logic_SummonZombie	(manaInvested);	};
 	if (activeSpell == SPL_SummonMud			)	{	return	Spell_Logic_SummonMud		(manaInvested);	};
 
+	// mud freak spells
+	if (activeSpell == SPL_Acid					)	{	return	Spell_Logic_Acid			(manaInvested);	};
+	if (activeSpell == SPL_AdanosBall			)	{	return	Spell_Logic_AdanosBall		(manaInvested);	};
+	if (activeSpell == SPL_Explosion			)	{	return	Spell_Logic_Explosion		(manaInvested);	};
+	if (activeSpell == SPL_Extricate			)	{	return	Spell_Logic_Extricate		(manaInvested);	};
+	if (activeSpell == SPL_HealOther			)	{	return	Spell_Logic_HealOther		(manaInvested);	};
+	if (activeSpell == SPL_MagicCage			)	{	return	Spell_Logic_MagicCage		(manaInvested);	};
+	if (activeSpell == SPL_Quake				)	{	return	Spell_Logic_Quake			(manaInvested);	};
+	if (activeSpell == SPL_Rage					)	{	return	Spell_Logic_Rage			(manaInvested);	};
+
 //Leer
 
 //	if (Npc_GetActiveSpell(self) == SPL_B					)	{	return	Spell_Logic_XXX				(manaInvested);	};

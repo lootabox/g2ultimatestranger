@@ -4170,7 +4170,25 @@ Model ("HuS")
             aniBlend    ("t_MagLin_Aim_Move_2_Aim_MoveRB"  "s_MagLin_Aim_MoveRB"  0.2 0.2)
 
 
-		}
+//  Extricate (Explode)
+            ani         ("t_MagRun_2_ExpCast"   1   "s_ExpCast"     0.1 0.0 M.  "HUM_MAGEXPLODE_1_58_N.ASC" F   1   19)
+            ani         ("s_ExpCast"            1   "s_ExpCast"     0.0 0.0 M.  "HUM_MAGEXPLODE_1_58_N.ASC" F   20  39)
+            aniBlend    ("t_ExpCast_2_Stand"        ""              0.1 0.2)
+
+            ani         ("t_ExpCast_2_ExpShoot" 1   "s_ExpShoot"    0.0 0.0 M.  "HUM_MAGEXPLODE_1_58_N.ASC" F   40  41)
+            ani         ("s_ExpShoot"           1   "s_ExpShoot"    0.0 0.0 M.  "HUM_MAGEXPLODE_1_58_N.ASC" F   42  42)
+            ani         ("t_ExpShoot_2_Stand"   1   ""              0.0 0.1 M.  "HUM_MAGEXPLODE_1_58_N.ASC" F   43  57)
+
+//  Foot (Earthquake)
+            ani         ("t_MagRun_2_FotCast"   1   "s_FotCast"     0.1 0.0 M.  "HUM_MAGFOOT_1_60.ASC"      F   1   25)
+            ani         ("s_FotCast"            1   "s_FotCast"     0.0 0.0 M.  "HUM_MAGFOOT_1_60.ASC"      F   26  35)
+            aniBlend    ("t_FotCast_2_Stand"        ""              0.1 0.2)
+
+            ani         ("t_FotCast_2_FotShoot" 1   "s_FotShoot"    0.0 0.0 M.  "HUM_MAGFOOT_1_60.ASC"      F   36  41)
+            ani         ("s_FotShoot"           1   "s_FotShoot"    0.0 0.0 M.  "HUM_MAGFOOT_1_60.ASC"      F   42  42)
+            ani         ("t_FotShoot_2_Stand"   1   ""              0.0 0.1 M.  "HUM_MAGFOOT_1_60.ASC"      F   43  60)
+
+        }
 }
 
 //************************************************************************************

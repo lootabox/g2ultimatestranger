@@ -321,6 +321,15 @@ INSTANCE PC_Rockefeller(NPC_DEFAULT)
 	CreateInvItem(self,ItRu_ArmyOfDarkness);
 	CreateInvItem(self,ItRu_Shrink);
 	
+	CreateInvItems(self,ItRu_Acid,1);
+	CreateInvItems(self,ItRu_AdanosBall,1);
+	CreateInvItems(self,ItRu_Explosion,1);
+	CreateInvItems(self,ItRu_Extricate,1);
+	CreateInvItems(self,ItRu_HealOther,1);
+	CreateInvItems(self,ItRu_MagicCage,1);
+	CreateInvItems(self,ItRu_Quake,1);
+	CreateInvItems(self,ItRu_Rage,1);
+	
 //----------------------------------------
 //Alle neuen Scrolls
 //----------------------------------------
@@ -375,6 +384,14 @@ INSTANCE PC_Rockefeller(NPC_DEFAULT)
 	CreateInvItems(self,ItSc_TrfShadowbeast,10);
 	CreateInvItems(self,ItSc_TrfDragonSnapper,10);
 
+	CreateInvItems(self,ItSc_Acid,10);
+	CreateInvItems(self,ItSc_AdanosBall,10);
+	CreateInvItems(self,ItSc_Explosion,10);
+	CreateInvItems(self,ItSc_Extricate,10);
+	CreateInvItems(self,ItSc_HealOther,10);
+	CreateInvItems(self,ItSc_MagicCage,10);
+	CreateInvItems(self,ItSc_Quake,10);
+	CreateInvItems(self,ItSc_Rage,10);
 
 //**********************************************************************
 //	Alle neuen Food

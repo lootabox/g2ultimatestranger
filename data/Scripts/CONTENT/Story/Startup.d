@@ -1142,6 +1142,381 @@ FUNC VOID INIT_ADDON_PART_VALLEY_01 ()
 // Alte Oberwelt
 // *************
 
+
+func VOID STARTUP_SUB_PSICAMP ()
+{
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_PATH_TEMPLE_4");
+	Wld_InsertNpc	(Warg,	"PSI_PATH_TEMPLE_4");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_PATH_TEMPLE_9_MOVEMENT");
+	Wld_InsertNpc	(Warg,	"PSI_PATH_TEMPLE_9_MOVEMENT");
+	Wld_InsertNpc	(OrcElite_Roam,	"PSI_SWAMP_MOVEMENT");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_SWAMP_1");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_SMITH_TALK");
+	Wld_InsertNpc	(Warg,	"PSI_SMITH_TALK");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_PLATFORM_1");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_MEETINGPOINT_2");
+	Wld_InsertNpc   (OrcShaman_Sit,"PSI_TEACH_CADAR");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_TALK_AT_11_HUT");
+	Wld_InsertNpc	(OrcShaman_Sit,	"PSI_12_HUT_EX_TEACH2");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"PSI_12_HUT_EX");
+	Wld_InsertNpc	(OrcElite_Roam,	"PSI_GUARD_TREE_EX");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"PSI_GATE_GUARD_1");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"PSI_GATE_GUARD_2");
+	Wld_InsertNpc	(OrcShaman_Sit,	"PSI_PATH_1_3");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"PSI_PATH_2_2_GUARD");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_PLACE");
+	Wld_InsertNpc	(Warg,	"PSI_PLACE");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_PATH_4_CAMPFIRE_A");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_PATH_4_CAMPFIRE_B");
+	Wld_InsertNpc	(OrcShaman_Sit,	"PSI_PATH_2_14");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_GUARD2");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"PSI_PATH_11_5");
+	Wld_InsertNpc	(OrcShaman_Sit,	"PSI_34_HUT_EX");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_PATH_11_1");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_PATH_11_3");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_TRAINING_TEACHER");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_PATH_6_7");
+	Wld_InsertNpc	(OrcShaman_Sit,	"PSI_TRAINING_1");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_PATH_7_2");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_PATH_7_15");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_PATH_7_14");
+	Wld_InsertNpc	(OrcShaman_Sit,	"PSI_PATH_12_5");
+	Wld_InsertNpc	(OrcShaman_Sit,	"PSI_PATH_12_8");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"PSI_PATH_12_4");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"PSI_PATH_5_1_GUARD");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"PSI_PATH_5_1_GUARD2");
+	Wld_InsertNpc	(OrcShaman_Sit,	"PSI_PATH_5");
+	Wld_InsertNpc	(OrcShaman_Sit,	"PSI_17_HUT_EX");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_TEMPLE_NOVIZE_PR4_MOVEMENT");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_TEMPLE_NOVIZE_PR4_MOVEMENT");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"PSI_TEMPLE_NOVIZE_PR4_MOVEMENT");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"CAES_PATH_AROUND_PSI105");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"CAES_PATH_AROUND_PSI105");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"CAES_PATH_AROUND_PSI105");
+	Wld_InsertNpc	(Warg,	"CAES_PATH_AROUND_PSI105");
+	Wld_InsertNpc	(OrcElite_Roam,	"CAES_PATH_AROUND_PSI104_2");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"CAES_PATH_AROUND_PSI104_2");
+	Wld_InsertNpc	(OrcShaman_Sit,	"CAES_PATH_AROUND_PSI_ORCSIT1");
+	Wld_InsertNpc	(OrcShaman_Sit,	"CAES_PATH_AROUND_PSI_ORCSIT2");
+	Wld_InsertNpc	(OrcShaman_Sit,	"CAES_ORCPORT_FIRE");
+	Wld_InsertNpc	(Warg,	"CAES_SWAMP_PATH16");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"CAES_SWAMP_PATH16");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"CAES_SWAMP_PATH16");
+	Wld_InsertNpc	(Warg,	"CAES_SWAMP_PATH16");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"CAES_SWAMP_PATH17");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"CAES_SWAMP_PATH17");
+	Wld_InsertNpc	(Warg,	"CAES_SWAMP_PATH19");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"CAES_SWAMP_PATH19");
+	Wld_InsertNpc	(OrcElite_Roam,	"CAES_SWAMP_PATH19");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"CAES_SWAMP_PATH26");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"CAES_SWAMP_PATH19");
+	Wld_InsertNpc	(OrcElite_Roam,	"CAES_SWAMP_PATH19");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"CAES_SWAMP_PATH27");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"CAES_SWAMP_PATH27");
+	Wld_InsertNpc	(OrcElite_Roam,	"PSI_TEMPLE_RIGHT_GUARD");
+	Wld_InsertNpc	(OrcElite_Roam,	"PSI_TEMPLE_LEFT_GUARD");
+};
+
+func VOID INIT_SUB_PSICAMP ()
+{
+	/**************************************************************
+	**                STARTUP_LIGHTS IN PSICAMP                  **
+	**************************************************************/
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_01",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_01",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_01",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_02",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_02",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_02",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_03",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_03",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_03",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_04",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_04",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_04",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_05",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_05",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_05",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_06",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_06",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_06",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_07",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_07",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_07",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_08",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_08",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_08",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_09",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_09",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_09",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_10",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_10",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_10",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_11",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_11",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_11",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_12",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_12",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_12",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_13",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_13",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_13",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_14",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_14",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_14",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_15",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_15",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_15",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_16",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_16",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_16",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_17",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_17",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_17",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_18",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_18",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_18",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_19",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_19",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_19",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_20",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_20",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_20",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_21",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_21",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_21",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_22",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_22",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_22",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_23",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_23",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_23",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_24",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_24",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_24",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_25",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_25",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_25",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_26",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_26",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_26",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_27",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_27",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_27",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_28",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_28",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_28",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_29",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_29",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_29",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_30",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_30",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_30",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_31",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_31",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_31",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_32",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_32",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_32",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_33",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_33",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_33",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_34",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_34",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_34",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_35",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_35",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_35",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_36",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_36",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_36",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_37",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_37",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_37",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_38",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_38",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_38",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_39",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_39",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_39",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_40",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_40",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_40",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_41",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_41",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_41",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_42",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_42",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_42",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_43",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_43",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_43",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_44",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_44",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_44",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_45",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_45",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_45",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_46",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_46",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_46",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_47",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_47",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_47",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_48",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_48",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_48",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_49",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_49",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_49",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_50",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_50",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_50",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_51",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_51",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_51",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_52",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_52",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_52",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_53",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_53",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_53",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_54",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_54",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_54",0);
+	
+	Wld_SetObjectRoutine (00,00,"PC_CRYSTALLIGHT_55",1);
+	Wld_SetObjectRoutine (20,00,"PC_CRYSTALLIGHT_55",1);
+	Wld_SetObjectRoutine (05,00,"PC_CRYSTALLIGHT_55",0);
+};
+
+func VOID STARTUP_PSICAMP ()
+{
+    STARTUP_SUB_PSICAMP ();
+};
+
+func VOID INIT_PSICAMP ()
+{
+	INIT_SUB_PSICAMP ();
+};
+
+FUNC VOID STARTUP_SUB_FREEMINECAMP ()
+{
+	//Free Mine Camp
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_HUT02_OUT");
+	Wld_InsertNpc	(Warg,	"FMC_HUT02_OUT");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_HUT15_OUT");
+	Wld_InsertNpc	(OrcShaman_Sit,	"FMC_HUT15_OUT");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_HUT15_OUT");
+	Wld_InsertNpc	(Warg,	"FMC_HUT15_OUT");
+	Wld_InsertNpc	(Warg,	"FMC_HUT15_OUT");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_HUT01_OUT");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_HUT12_OUT");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_HUT12_OUT");
+	Wld_InsertNpc	(OrcElite_Roam,	"FMC_HUT12_OUT");
+	Wld_InsertNpc	(Warg,	"FMC_HUT12_OUT");
+	Wld_InsertNpc	(Warg,	"FMC_HUT12_OUT");
+	Wld_InsertNpc	(OrcElite_Roam,	"FMC_PATH16");
+	Wld_InsertNpc	(OrcElite_Roam,	"FMC_PATH16");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_PATH16");
+	Wld_InsertNpc	(Warg,	"FMC_PATH16");
+	Wld_InsertNpc	(Warg,	"FMC_PATH16");
+	Wld_InsertNpc	(Warg,	"FMC_PATH16");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_PATH21");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_PATH21");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_PATH21");
+	Wld_InsertNpc	(Warg,	"FMC_PATH21");
+	Wld_InsertNpc	(Warg,	"FMC_PATH21");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_PATH23");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_PATH23");
+	Wld_InsertNpc	(Warg,	"FMC_PATH23");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_HUT11_OUT");
+	Wld_InsertNpc	(Warg,	"FMC_HUT11_OUT");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_PATH24");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_PATH24");
+	Wld_InsertNpc	(Warg,	"FMC_PATH24");
+	Wld_InsertNpc	(Warg,	"FMC_PATH24");
+	Wld_InsertNpc	(Warg,	"FMC_PATH24");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"FMC_PATH29");
+	Wld_InsertNpc	(Warg,	"FMC_PATH29");
+};
+
+FUNC VOID INIT_SUB_FREEMINECAMP ()
+{
+};
+
+func VOID STARTUP_FREEMINECAMP ()
+{
+	STARTUP_SUB_FREEMINECAMP ();
+};
+
+func VOID INIT_FREEMINECAMP ()
+{
+	INIT_SUB_FREEMINECAMP ();
+};
+
+func VOID STARTUP_SUB_NEWCAMP ()
+{
+};
+
+func VOID INIT_SUB_NEWCAMP ()
+{
+};
+
+
 func void STARTUP_OLDCAMP ()
 {
 	
@@ -2472,6 +2847,401 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc	(Draconian,	"PATH_CASTLE_TO_WATERFALL");
 	Wld_InsertNpc	(Draconian,	"PATH_CASTLE_TO_WATERFALL");
 	
+	//----------------------------------------------------------------------
+	//CAESUM WASTELAND MOD
+	//----------------------------------------------------------------------
+	//Monastery
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY1");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY1");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY1");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY1");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY1");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY1");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY2");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY2");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY2");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY2");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY3");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY3");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY4");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY4");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY4");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY4");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY5");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY5");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY5");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY6");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY6");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY7");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_MONASTERY7");
+	Wld_InsertNpc	(Shadowbeast,	"CAES_PATH27");
+	//Troll Canyon + Quentin camp
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_DRAGONSNAPPER1");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_DRAGONSNAPPER1");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_DRAGONSNAPPER1");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_DRAGONSNAPPER2");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_DRAGONSNAPPER2");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_DRAGONSNAPPER2");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_DRAGONSNAPPER2");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_DRAGONSNAPPER3");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_DRAGONSNAPPER3");
+	Wld_InsertNpc	(Gobbo_Black,	"SPAWN_CAES_GOBLIN1");
+	Wld_InsertNpc	(Gobbo_Black,	"SPAWN_CAES_GOBLIN1");
+	Wld_InsertNpc	(Gobbo_Black,	"SPAWN_CAES_GOBLIN1");
+	Wld_InsertNpc	(Gobbo_Black,	"SPAWN_CAES_GOBLIN1");
+	Wld_InsertNpc	(Gobbo_Black,	"SPAWN_CAES_GOBLIN2");
+	Wld_InsertNpc	(Gobbo_Black,	"SPAWN_CAES_GOBLIN2");
+	Wld_InsertNpc	(Gobbo_Black,	"SPAWN_CAES_GOBLIN2");
+	Wld_InsertNpc	(Gobbo_Black,	"SPAWN_CAES_GOBLIN2");
+	Wld_InsertNpc	(Gobbo_Black,	"SPAWN_CAES_GOBLIN3");
+	Wld_InsertNpc	(Gobbo_Black,	"SPAWN_CAES_GOBLIN3");
+	Wld_InsertNpc	(Gobbo_Black,	"SPAWN_CAES_GOBLIN3");
+	Wld_InsertNpc	(Gobbo_Black,	"SPAWN_CAES_GOBLIN3");
+	Wld_InsertNpc	(Harpie,	"SPAWN_CAES_GOBLIN4");
+	Wld_InsertNpc	(Harpie,	"SPAWN_CAES_GOBLIN4");
+	Wld_InsertNpc	(Harpie,	"SPAWN_CAES_GOBLIN4");
+	Wld_InsertNpc	(Harpie,	"SPAWN_CAES_GOBLIN4");
+	Wld_InsertNpc	(Troll,	"SPAWN_CAES_TROLL1");
+	//Before freeminecamp
+	Wld_InsertNpc	(DragonSnapper,	"SPAWN_CAES_FREEMINECAMP1");	
+	Wld_InsertNpc	(DragonSnapper,	"SPAWN_CAES_FREEMINECAMP1");
+	Wld_InsertNpc	(DragonSnapper,	"SPAWN_CAES_FREEMINECAMP1");
+	Wld_InsertNpc	(DragonSnapper,	"SPAWN_CAES_FREEMINECAMP1");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_FREEMINECAMP1");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_FREEMINECAMP1");
+	//OrkCity
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY1");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"SPAWN_CAES_ORKCITY1");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"SPAWN_CAES_ORKCITY2");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY2");
+	Wld_InsertNpc	(OrcShaman_Sit,	"SPAWN_CAES_ORKCITY3");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY3");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY4");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY4");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY5");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY5");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY6");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY6");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY6");
+	Wld_InsertNpc	(OrcElite_Roam,	"SPAWN_CAES_ORKCITY7");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"SPAWN_CAES_ORKCITY7");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY8");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY8");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY8");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY9");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY9");
+	Wld_InsertNpc	(OrcShaman_Sit,	"SPAWN_CAES_ORKCITY9");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY10");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY10");
+	Wld_InsertNpc	(OrcElite_Roam,	"SPAWN_CAES_ORKCITY10");
+	Wld_InsertNpc	(OrcElite_Roam,	"SPAWN_CAES_ORKCITY11");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY11");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCITY11");
+	Wld_InsertNpc	(OrcShaman_Sit,	"SPAWN_CAES_ORKSHAMAN1");
+	Wld_InsertNpc	(OrcShaman_Sit,	"SPAWN_CAES_ORKSHAMAN2");
+	Wld_InsertNpc	(OrcShaman_Sit,	"SPAWN_CAES_ORKSHAMAN3");
+	//OrkCamp-near/in the big forest
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCAMP1");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCAMP1");
+	Wld_InsertNpc	(OrcShaman_Sit,	"SPAWN_CAES_ORKCAMP2");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_ORKCAMP2");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"SPAWN_CAES_ORKCAMP2");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"SPAWN_CAES_ORKCAMP2");
+	Wld_InsertNpc	(OrcElite_Roam,	"SPAWN_CAES_ORKCAMP2");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCAMP3");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCAMP3");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_ORKCAMP3");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCAMP4");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCAMP4");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_ORKCAMP4");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_ORKCAMP4");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCAMP5");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCAMP5");
+	Wld_InsertNpc	(OrcWarrior_Rest,	"SPAWN_CAES_ORKCAMP6");
+	Wld_InsertNpc	(OrcElite_Roam,	"SPAWN_CAES_ORKCAMP6");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_ORKCAMP6");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCAMP7");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_ORKCAMP7");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_ORKCAMP7");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_ORKCAMP7");
+	//BigForest Orcs
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_BIGFORESTORK1");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_BIGFORESTORK1");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_BIGFORESTORK1");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_BIGFORESTORK2");
+	Wld_InsertNpc	(OrcShaman_Sit,	"SPAWN_CAES_BIGFORESTORK2");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_BIGFORESTORK2");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_BIGFORESTORK3");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_BIGFORESTORK3");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_BIGFORESTORK3");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_BIGFORESTORK3");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_BIGFORESTORK4");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_BIGFORESTORK4");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_BIGFORESTORK4");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_BIGFORESTORK4");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_BIGFORESTORK4");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_BIGFORESTORK5");
+	Wld_InsertNpc	(OrcShaman_Sit,	"SPAWN_CAES_BIGFORESTORK5");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_BIGFORESTORK5");
+	Wld_InsertNpc	(OrcWarrior_Roam,	"SPAWN_CAES_BIGFORESTORK6");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_BIGFORESTORK6");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_BIGFORESTORK6");
+	Wld_InsertNpc	(Warg,	"SPAWN_CAES_BIGFORESTORK6");
+	//BigForest animals
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST1");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST1");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST1");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST1");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST2");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST2");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST2");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST2");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST2");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_BIGFOREST3");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_BIGFOREST3");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_BIGFOREST3");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST4");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST4");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST4");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST4");
+	Wld_InsertNpc	(Keiler,	"SPAWN_CAES_BIGFOREST5");
+	Wld_InsertNpc	(Keiler,	"SPAWN_CAES_BIGFOREST5");
+	Wld_InsertNpc	(Keiler,	"SPAWN_CAES_BIGFOREST5");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST5");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST5");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST6");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST6");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST6");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST7");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST7");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST7");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST7");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_BIGFOREST8");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST8");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST8");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST9");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST9");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST9");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST10");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST10");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST10");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST10");
+	Wld_InsertNpc	(Keiler,	"SPAWN_CAES_BIGFOREST11");
+	Wld_InsertNpc	(Keiler,	"SPAWN_CAES_BIGFOREST11");
+	Wld_InsertNpc	(Keiler,	"SPAWN_CAES_BIGFOREST11");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST12");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST12");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST12");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST13");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST13");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST13");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST13");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST14");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST14");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST14");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_BIGFOREST15");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_BIGFOREST15");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST16");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST16");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST16");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST17");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST17");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST17");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST18");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST18");
+	Wld_InsertNpc	(Wolf,	"SPAWN_CAES_BIGFOREST18");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_BIGFOREST19");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_BIGFOREST19");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST20");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST20");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_BIGFOREST20");
+	//Beach
+	Wld_InsertNpc	(FireWaran,	"SPAWN_CAES_BEACH1");
+	Wld_InsertNpc	(FireWaran,	"SPAWN_CAES_BEACH1");
+	Wld_InsertNpc	(FireWaran,	"SPAWN_CAES_BEACH2");
+	Wld_InsertNpc	(FireWaran,	"SPAWN_CAES_BEACH2");
+	Wld_InsertNpc	(FireWaran,	"SPAWN_CAES_BEACH2");
+	//Fog Tower
+	Wld_InsertNpc	(Lesser_skeleton, 			"SPAWN_CAES_FOGTOWER2"); 
+	Wld_InsertNpc	(Lesser_skeleton, 			"SPAWN_CAES_FOGTOWER1"); 
+	Wld_InsertNpc	(Lesser_skeleton, 			"SPAWN_CAES_FOGTOWER3"); 
+	Wld_InsertNpc	(Lesser_skeleton, 			"SPAWN_CAES_FOGTOWER4"); 
+	Wld_InsertNpc	(Lesser_skeleton,		"SPAWN_CAES_FOGTOWER5");
+	Wld_InsertNpc	(Skeleton,	"SPAWN_CAES_FOGTOWER5");
+	Wld_InsertNpc	(Skeleton,	"SPAWN_CAES_FOGTOWER6");
+	Wld_InsertNpc	(Skeleton,	"SPAWN_CAES_FOGTOWER7");
+	Wld_InsertNpc	(Lesser_skeleton,	"SPAWN_CAES_FOGTOWER8");
+	Wld_InsertNpc	(Lesser_skeleton,	"SPAWN_CAES_FOGTOWER9");
+	Wld_InsertNpc	(Lesser_skeleton,	"SPAWN_CAES_FOGTOWER9");
+	Wld_InsertNpc	(Lesser_skeleton,	"SPAWN_CAES_FOGTOWER9");
+	Wld_InsertNpc	(Lesser_skeleton,	"SPAWN_CAES_FOGTOWER12");
+	Wld_InsertNpc	(Skeleton,	"SPAWN_CAES_FOGTOWER12");
+	Wld_InsertNpc	(Lesser_skeleton,	"SPAWN_CAES_FOGTOWER10");
+	Wld_InsertNpc	(Lesser_skeleton,	"SPAWN_CAES_FOGTOWER10");
+	Wld_InsertNpc	(Lesser_skeleton,	"SPAWN_CAES_FOGTOWER11");
+	Wld_InsertNpc	(SkeletonMage,	"SPAWN_CAES_FOGTOWER11");
+	Wld_InsertNpc	(Lesser_skeleton,	"SPAWN_CAES_FOGTOWER13");
+	Wld_InsertNpc	(Skeleton,	"SPAWN_CAES_FOGTOWER14");
+	Wld_InsertNpc	(Lesser_skeleton,	"SPAWN_CAES_FOGTOWER14");
+	Wld_InsertNpc	(Skeleton,	"SPAWN_CAES_FOGTOWER15");
+	Wld_InsertNpc	(Lesser_skeleton,	"SPAWN_CAES_FOGTOWER15");
+	//Swamp
+	Wld_InsertNpc	(SwampShark,	"SPAWN_CAES_SWAMP_SHARK1");
+	Wld_InsertNpc	(SwampShark,	"SPAWN_CAES_SWAMP_SHARK2");
+	Wld_InsertNpc	(SwampShark,	"SPAWN_CAES_SWAMP_SHARK3");
+	Wld_InsertNpc	(SwampShark,	"SPAWN_CAES_SWAMP_SHARK4");
+	Wld_InsertNpc	(SwampShark,	"SPAWN_CAES_SWAMP_SHARK5");
+	Wld_InsertNpc	(SwampShark,	"SPAWN_CAES_SWAMP_SHARK6");
+	Wld_InsertNpc	(SwampShark,	"SPAWN_CAES_SWAMP_SHARK7");
+	Wld_InsertNpc	(SwampShark,	"SPAWN_CAES_SWAMP_SHARK8");
+	Wld_InsertNpc	(SwampShark,	"SPAWN_CAES_SWAMP_SHARK9");
+	Wld_InsertNpc	(SwampShark,	"SPAWN_CAES_SWAMP_SHARK10");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY1");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY1");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY2");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY2");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY2");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY3");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY3");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY4");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY4");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY4");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY5");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY5");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY6");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY6");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY7");
+	Wld_InsertNpc	(Bloodfly,	"SPAWN_CAES_SWAMP_BLOODFLY7");
+	Wld_InsertNpc	(Bloodfly,	"PATH_TAKE_BLOODFLY_SPAWN");
+	Wld_InsertNpc	(Bloodfly,	"PATH_TAKE_BLOODFLY_SPAWN");
+	//Old Xardas' Tower
+	Wld_InsertNpc	(Skeleton,	"SPAWN_CAES_MAGICTOWER_SKELETON1");
+	Wld_InsertNpc	(Skeleton,	"SPAWN_CAES_MAGICTOWER_SKELETON1");
+	Wld_InsertNpc	(Skeleton,	"SPAWN_CAES_MAGICTOWER_SKELETON1");
+	Wld_InsertNpc	(Skeleton,	"SPAWN_CAES_MAGICTOWER_SKELETON2");
+	Wld_InsertNpc	(Skeleton,	"SPAWN_CAES_MAGICTOWER_SKELETON2");
+	Wld_InsertNpc	(Skeleton,	"SPAWN_CAES_MAGICTOWER_SKELETON2");
+	Wld_InsertNpc	(SkeletonMage,	"SPAWN_CAES_MAGICTOWER_SKELETONMAGE1");
+	Wld_InsertNpc	(Zombie01,	"SPAWN_CAES_MAGICTOWER_ZOMBIE1");
+	Wld_InsertNpc	(Zombie02,	"SPAWN_CAES_MAGICTOWER_ZOMBIE1");
+	Wld_InsertNpc	(Zombie03,	"SPAWN_CAES_MAGICTOWER_ZOMBIE2");
+	Wld_InsertNpc	(Zombie04,	"SPAWN_CAES_MAGICTOWER_ZOMBIE2");
+	Wld_InsertNpc	(Zombie03,	"SPAWN_CAES_MAGICTOWER_ZOMBIE3");
+	Wld_InsertNpc	(Zombie04,	"SPAWN_CAES_MAGICTOWER_ZOMBIE3");
+	Wld_InsertNpc	(Zombie01,	"SPAWN_CAES_MAGICTOWER_ZOMBIE4");
+	Wld_InsertNpc	(Zombie02,	"SPAWN_CAES_MAGICTOWER_ZOMBIE4");
+	Wld_InsertNpc	(Zombie01,	"SPAWN_CAES_MAGICTOWER_ZOMBIE5");
+	Wld_InsertNpc	(Zombie02,	"SPAWN_CAES_MAGICTOWER_ZOMBIE5");
+	Wld_InsertNpc	(Zombie03,	"SPAWN_CAES_MAGICTOWER_ZOMBIE5");
+	Wld_InsertNpc	(Zombie04,	"SPAWN_CAES_MAGICTOWER_ZOMBIE5");
+	Wld_InsertNpc	(Zombie01,	"SPAWN_CAES_MAGICTOWER_ZOMBIE6");
+	Wld_InsertNpc	(Zombie02,	"SPAWN_CAES_MAGICTOWER_ZOMBIE6");
+	Wld_InsertNpc	(Zombie04,	"SPAWN_CAES_MAGICTOWER_ZOMBIE6");
+
+	//ORC CEMETERY
+	Wld_InsertNpc	(DragonSnapper,	"SPAWN_CAES_ORKCEMETERY1");
+	Wld_InsertNpc	(DragonSnapper,	"SPAWN_CAES_ORKCEMETERY1");
+	Wld_InsertNpc	(DragonSnapper,	"SPAWN_CAES_ORKCEMETERY1");
+	
+	//NEWCAMP_MAGES
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_35");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_35");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_37");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_6");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_6_HUT2");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_6_HUT2");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_6_HUT2");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_8");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_8");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_9");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_9");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_9");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_9");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_12");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_15");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_15");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_15");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_15");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_18");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_18");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_19");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_19");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_21");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_21");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_21");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_22");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_22");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_22");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_23");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_23");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_25");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_25");
+	Wld_InsertNpc		(Icewolf,"CAES_NC_MAGES_25");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_32");
+	Wld_InsertNpc		(Draconian,"CAES_NC_MAGES_32");
+	Wld_InsertNpc		(Wisp,"CAES_NC_MAGES_30");
+	Wld_InsertNpc		(Wisp,"CAES_NC_MAGES_9");
+	Wld_InsertNpc		(Wisp,"CAES_NC_MAGES_35");
+
+	//Goblin Master Cave
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_14");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_14");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_12");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_12");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_12");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_7");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_7");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_7");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_8");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_8");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_9");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_9");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_9");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_2");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_2");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_5");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_5");
+	Wld_InsertNpc (Gobbo_Black ,"CAES_GOBBO_MASTERCAVE_5");
+	
+	//Rest
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER1");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER1");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER1");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER1");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER2");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER2");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER2");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER3");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER3");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER3");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER3");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER3");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER4");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER4");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER4");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER4");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER_5");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER6");
+	Wld_InsertNpc	(Scavenger,	"SPAWN_CAES_SCAVENGER6");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_MOLERAT1");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_MOLERAT1");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_MOLERAT1");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_MOLERAT2");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_MOLERAT2");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_MOLERAT3");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_MOLERAT3");
+	Wld_InsertNpc	(Molerat,	"SPAWN_CAES_MOLERAT3");
+	Wld_InsertNpc	(Troll,	"SPAWN_CAES_OLDMINE_TROLL");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_DRAGONSNAPPER4");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_DRAGONSNAPPER4");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_DRAGONSNAPPER4");
+	Wld_InsertNpc	(Snapper,	"SPAWN_CAES_DRAGONSNAPPER4");
+	Wld_InsertNpc	(DragonSnapper,	"SPAWN_CAES_DRAGONSNAPPER5");
+	Wld_InsertNpc	(DragonSnapper,	"SPAWN_CAES_DRAGONSNAPPER5");
+	Wld_InsertNpc	(DragonSnapper,	"SPAWN_CAES_DRAGONSNAPPER5");
+	Wld_InsertNpc	(YGobbo_Green,	"SPAWN_OW_GOBBO_01_01");
+	Wld_InsertNpc	(YGobbo_Green,	"SPAWN_OW_GOBBO_01_01");
+	//----------------------------------------------------------------------
 
 	//Wld_InsertNpc				(GRD_254_Orry,"OC1");
 	//bis
@@ -2523,6 +3293,8 @@ FUNC VOID INIT_OLDWORLD ()
 	INIT_SUB_Oldcamp();
 	INIT_SUB_Demontower();
 	INIT_SUB_Surface();
+	INIT_SUB_PsiCamp();
+	INIT_SUB_FreeMineCamp();
 
     B_InitMonsterAttitudes ();
 	B_InitGuildAttitudes();
@@ -2543,6 +3315,8 @@ FUNC VOID STARTUP_OLDWORLD ()
 	Startup_Oldcamp();
 	Startup_Demontower();
 	Startup_Surface();
+	Startup_PsiCamp();
+	Startup_FreeMineCamp();
 	Wld_SetTime	(00,00);//Joly:nachtstart wegen video
 };
 
@@ -4825,4 +5599,107 @@ FUNC VOID INIT_AddonWorld ()
 };
 
 
+// ADDITIONAL WASTELAND WORLDS
+
+FUNC VOID STARTUP_FREEMINE ()	
+{
+
+	Wld_InsertNpc				(OrcWarrior_Roam,"FM_09");//
+	Wld_InsertNpc				(OrcWarrior_Roam,"FM_09");//
+	Wld_InsertNpc				(OrcWarrior_Roam,"FM_08");//
+	Wld_InsertNpc				(OrcShaman_Sit,"FM_14");//
+	Wld_InsertNpc				(OrcWarrior_Roam,"FM_14");//
+	Wld_InsertNpc				(OrcWarrior_Roam,"FM_14");//
+	Wld_InsertNpc				(OrcWarrior_Roam,"FM_148");//
+	Wld_InsertNpc				(OrcWarrior_Roam,"FM_139");//
+	Wld_InsertNpc				(OrcWarrior_Roam,"FM_139");//
+	Wld_InsertNpc				(OrcWarrior_Roam,"FM_129");//
+	Wld_InsertNpc				(OrcWarrior_Roam,"FM_129");//
+	Wld_InsertNpc				(Minecrawler,"FM_116");//
+	Wld_InsertNpc				(Minecrawler,"FM_116");//
+	Wld_InsertNpc				(MinecrawlerWarrior,"FM_107");//
+	Wld_InsertNpc				(Minecrawler,"FM_165");//
+	Wld_InsertNpc				(OrcWarrior_Roam,"FM_163");//
+	Wld_InsertNpc				(OrcWarrior_Roam,"FM_163");//
+	Wld_InsertNpc				(OrcWarrior_Roam,"FM_163");//
+	Wld_InsertNpc				(OrcShaman_Sit,"FM_157");//
+	Wld_InsertNpc				(OrcShaman_Sit,"FM_157");//
+	Wld_InsertNpc				(Zombie04,"FM_81");//
+	Wld_InsertNpc				(Zombie01,"FM_81");//
+	Wld_InsertNpc				(Zombie01,"FM_73");//
+	Wld_InsertNpc				(Zombie02,"FM_73");//
+	Wld_InsertNpc				(Zombie03,"FM_73");//
+
+	//--------------------Minecrawler-------------------------
+		
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_01");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_04");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_05");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_06");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_09");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_14");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_17");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_29");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_28");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_32");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_34");//
+};
+
+FUNC VOID INIT_FREEMINE ()	
+{
+	//-------------------Fackeln-----------------------------
+	Wld_SetMobRoutine			(00,00, "FIREPLACE", 1);
+
+	//-------- Attitüden initialisieren --------
+    B_InitMonsterAttitudes ();
+	B_InitGuildAttitudes();
+	CurrentLevel = FREEMINE_ZEN;
+};
+
+FUNC VOID STARTUP_ORCGRAVEYARD ()
+{
+	//-------- 1. Höhle --------
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_006");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_015");
+
+	//-------- 2. Höhle --------
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_019B");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_019D");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_020B");
+	
+	//-------- 3. Höhle --------
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_048");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_048");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_043");
+	//Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_043");
+
+	//-------- 1. Nebenstollen --------
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_031");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_032");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_037");
+	//Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_039");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_040");
+	//Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_042");
+
+	//-------- 2. Nebenstollen --------
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_047");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_047");
+
+	//-------- Große Halle --------
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_061");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_062");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_058");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_068");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_055");
+};
+
+FUNC VOID INIT_ORCGRAVEYARD ()
+{
+	Wld_SetMobRoutine 	(00,00, "FIREPLACE", 1);
+
+	//-------- Attitüden initialisieren --------
+    B_InitMonsterAttitudes ();
+	B_InitGuildAttitudes();
+	CurrentLevel = ORCGRAVEYARD_ZEN;
+};
 

@@ -916,7 +916,7 @@ INSTANCE ItRu_Windfist (C_Item)
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	SPL_Cost_WindFist;
 	
-	TEXT	[2]			=	"Wind damage per tier:";
+	TEXT	[2]			=	NAME_Dam_Magic_Per;
 	count 	[2]			=   SPL_Damage_Windfist;
 	
 	TEXT	[5]			=	NAME_Value;
@@ -1058,7 +1058,7 @@ INSTANCE ItRu_ChargeFireball (C_Item)
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	SPL_Cost_ChargeFireball;
 	
-	TEXT	[2]			=	NAME_DamagePerCharge;
+	TEXT	[2]			=	NAME_Dam_Magic_Per;
 	count 	[2]			=   SPL_Damage_ChargeFireball;
 	
 	TEXT	[5]			=	NAME_Value;
@@ -1203,7 +1203,7 @@ INSTANCE ItRu_ThunderBall (C_Item)
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	SPL_Cost_ChargeZap;
 	
-	TEXT	[2]			=	NAME_DamagePerCharge;
+	TEXT	[2]			=	NAME_Dam_Magic_Per;
 	count 	[2]			=   SPL_Damage_ChargeZap;
 	
 	TEXT	[5]			=	NAME_Value;
@@ -1307,7 +1307,7 @@ INSTANCE ItRu_Pyrokinesis (C_Item)
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	SPL_Cost_Firestorm;
 	
-	TEXT	[2]			=	NAME_DamagePerCharge;
+	TEXT	[2]			=	NAME_Dam_Magic_Per;
 	count 	[2]			=   SPL_Damage_Firestorm;
 	
 	TEXT	[5]			=	NAME_Value;

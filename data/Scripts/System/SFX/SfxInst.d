@@ -2670,4 +2670,20 @@ INSTANCE CONTROL_RETURN     	(C_SFX_DEF) {file= "Magic_6.wav" ;					};
 
 
 
+// Acid
+                INSTANCE MFX_ACID                       (C_SFX_DEF) {file= "COOLBLADE.WAV";                 vol = 127;          };
+                INSTANCE MFX_ACID_DOT                   (C_SFX_DEF) {file= "PSILAB_LOOP.WAV";               vol = 110;      loop=1;    };
+
+// Explosion
+                INSTANCE MFX_EXPLOSION_COLLIDE          (C_SFX_DEF) {file= "MFX_BARRIERE_SHOOT.WAV";        vol = 127;      pitchOff=-50; };  // pitch?
+                INSTANCE MFX_EXPLOSION_SPHERE           (C_SFX_DEF) {file= "CS_PRAYER_FOKUSFINAL.WAV";      vol = 250;          }; // Max volume is 127
+
+// Extricate
+                INSTANCE MFX_EXTRICATE_COLLIDE          (C_SFX_DEF) {file= "CS_IHL_ST_WO.WAV";              vol = 127;          };
+                INSTANCE MFX_EXTRICATE_INHALE           (C_SFX_DEF) {file= "MFX_EXTRICATE_INHALE.WAV";      vol = 127;          };
+
+// Quake
+                INSTANCE MFX_QUAKE_CAST                 (C_SFX_DEF) {file= "MFX_QUAKE_INVEST.WAV";          vol = 90;           };
+                INSTANCE MFX_QUAKE_STOMP                (C_SFX_DEF) {file= "M_STEP_HUGE01.WAV";             vol = 127;      pitchOff=-50;   };
+                INSTANCE MFX_QUAKE_EARTHQUAKE           (C_SFX_DEF) {file= "CS_PRAYER_MINECOLLIDE02.WAV";   vol = 110;          };
 

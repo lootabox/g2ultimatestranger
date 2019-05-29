@@ -115,6 +115,11 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 			CreateInvItems (slf, ItRu_FullHeal, 1);
 		};
 		
+		if (Npc_HasItems (slf, ItRu_Extricate) == 0)
+		{
+			CreateInvItems (slf, ItRu_Extricate, 1);
+		};
+
 		if (self.attribute[ATR_HITPOINTS] < 100) 
 		{
 			B_ReadySpell (slf, SPL_FullHeal, SPL_Cost_FullHeal);
@@ -126,6 +131,10 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 			|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Raven))
 			{
 				B_ReadySpell (slf, SPL_Deathball, SPL_Cost_Deathball);
+			}
+			else if (Npc_GetDistToNpc(slf, oth) < FIGHT_DIST_MELEE)
+			{
+				B_ReadySpell (slf, SPL_Extricate, SPL_Cost_Extricate);
 			}
 			else
 			{

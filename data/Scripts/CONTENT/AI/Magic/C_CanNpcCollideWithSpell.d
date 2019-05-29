@@ -338,6 +338,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		|| (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
 		|| (GetWaterLevel(self) == WATERLEVEL_WADE)
+		//|| (Wld_IsRaining() && (CurrentLevel == NEWWORLD_ZEN || CurrentLevel == OLDWORLD_ZEN || CurrentLevel == ADDONWORLD_ZEN))
 		{
 			return COLL_APPLYDOUBLEDAMAGE;
 		};
