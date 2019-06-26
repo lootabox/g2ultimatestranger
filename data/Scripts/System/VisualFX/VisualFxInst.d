@@ -59,6 +59,7 @@ INSTANCE spellFX_Thunderstorm(CFx_Base_Proto)
 
 INSTANCE spellFX_Thunderstorm_RAIN		(CFx_Base_Proto)
 {
+//		visname_S 				= "MFX_THUNDERSTORM_ICE";
 		visname_S 				= "MFX_Thunderstorm_Rain";
 		emtrjmode_s 			= "FIXED";
 		emTrjOriginNode 		= "ZS_RIGHTHAND";

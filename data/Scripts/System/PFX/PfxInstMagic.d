@@ -12329,6 +12329,40 @@ INSTANCE MFX_ADANOSBALL_TARGET (C_PARTICLEFX)
 
 INSTANCE MFX_Explosion_INIT (C_PARTICLEFX)
 {
+     ppsvalue = 20;
+     ppsscalekeys_s = "1";
+     ppsislooping = 1;
+     ppsissmooth = 1;
+     shptype_s = "POINT";
+     shpfor_s = "object";
+     shpoffsetvec_s = "0 7 0";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     dirmode_s = "TARGET";
+     dirfor_s = "object";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 7 0";
+     dirangleheadvar = 180.000000000;
+     dirangleelevvar = 180.000000000;
+     lsppartavg = 600.000000000;
+     flygravity_s = "0 0 0";
+     flycolldet_b = 0;
+     visname_s = "MFX_ExplosionBall.TGA";
+     visorientation_s = "NONE";
+     vistexisquadpoly = 1;
+     vistexanifps = 18.000000000;
+     vistexaniislooping = 1;
+     vistexcolorstart_s = "255 255 255";
+     vistexcolorend_s = "255 0 0";
+     vissizestart_s = "12 12";
+     vissizeendscale = 4.000000000;
+     visalphafunc_s = "ADD";
+     visalphastart = 255.000000000;
+};
+/*
+INSTANCE MFX_Explosion_INIT (C_PARTICLEFX)
+{
      ppsvalue = 80;
      ppsscalekeys_s = "1";
      ppsislooping = 1;
@@ -12355,7 +12389,7 @@ INSTANCE MFX_Explosion_INIT (C_PARTICLEFX)
      visalphastart = 255;
      useemittersfor = 1;
 };
-
+*/
 INSTANCE MFX_Explosion_PFXTRAIL (C_PARTICLEFX)
 {
      ppsvalue = 100;
@@ -12386,6 +12420,46 @@ INSTANCE MFX_Explosion_PFXTRAIL (C_PARTICLEFX)
 
 INSTANCE MFX_Explosion_CAST (C_PARTICLEFX)
 {
+     ppsvalue = 20;
+     ppsscalekeys_s = "5";
+     ppsislooping = 1;
+     ppsissmooth = 1;
+     ppsfps = 2;
+     shptype_s = "POINT";
+     shpfor_s = "object";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 2;
+     dirmode_s = "RAND";
+     dirfor_s = "object";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     dirangleheadvar = 180;
+     dirangleelevvar = 180;
+     velavg = 0.00800000038;
+     velvar = 0.0299999993;
+     lsppartavg = 600;
+     flygravity_s = "0 0 0";
+     visname_s = "MFX_ExplosionBall.TGA";
+     visorientation_s = "VELO3D";
+     vistexisquadpoly = 1;
+     vistexanifps = 18;
+     vistexaniislooping = 1;
+     vistexcolorstart_s = "255 200 200";
+     vistexcolorend_s = "200 150 0";
+     vissizestart_s = "12 12";
+     vissizeendscale = 4;
+     visalphafunc_s = "ADD";
+     visalphastart = 255;
+     trlfadespeed = 0.400000006;
+     trltexture_s = "FIRETRAIL.TGA";
+     trlwidth = 5;
+     useemittersfor = 1;
+};
+/* 
+INSTANCE MFX_Explosion_CAST (C_PARTICLEFX)
+{
      ppsvalue = 75.000000000;
      ppsscalekeys_s = "1";
      shptype_s = "POINT";
@@ -12412,7 +12486,7 @@ INSTANCE MFX_Explosion_CAST (C_PARTICLEFX)
      trltexture_s = "FIRETRAIL.TGA";
      trlwidth = 5;
      useemittersfor = 1;
-};
+}; */
 
 INSTANCE MFX_Explosion_SPREAD (C_PARTICLEFX)
 {
