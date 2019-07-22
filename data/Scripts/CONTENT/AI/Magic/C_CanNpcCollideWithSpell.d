@@ -259,6 +259,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	|| (spellType   == SPL_Pyrokinesis)
 	|| (spellType	== SPL_Deathbolt)
 	|| (spellType 	== SPL_Deathball)
+	|| (spellType	== SPL_Explosion)
 	{
 		if (C_NpcIsDown(self))
 		|| (C_BodyStateContains(self,BS_SWIM))
@@ -285,7 +286,9 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 			return COLL_APPLYDAMAGE;
 		};
 		
-		return COLL_DOEVERYTHING;
+		// Collision burn FX is handled by damage script
+		//return COLL_DOEVERYTHING;
+		return COLL_APPLYDAMAGE;
 	};
 	
 	//----- Eis -----
@@ -328,6 +331,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	if (spellType == SPL_Zap)
 	|| (spellType == SPL_ChargeZap)
 	|| (spellType == SPL_LightningFlash)
+	|| (spellType == SPL_AdanosBall)
 	{
 		if (C_NpcIsDown(self))
 		{

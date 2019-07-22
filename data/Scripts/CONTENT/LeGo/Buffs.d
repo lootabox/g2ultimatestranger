@@ -17,7 +17,7 @@ class lCBuff {
 		var int OnRemoved;
 
 		var string buffTex; // Currently only used for buffs applied on the hero
-		// var int originID; // Who casted/created this buff?
+		var int originID; // Who casted/created this buff?
 };
 
 /* BUFF DISPLAY FOR HERO BEGINS HERE */
@@ -125,11 +125,12 @@ func void _Buff_Dispatcher(var int bh) { // This is called every tick and is res
 		b.nextTickNr += 1;
 };
 
-func int Buff_Apply(var c_npc npc, var int buff) {
+func int Buff_Apply(var c_npc npc, var int buff, var c_npc origin) {
 		var int bh; bh = new(buff);
 		var lCBuff b; b = get(bh);
 
 		b.targetID = Npc_GetID(npc);
+		b.originID = Npc_GetID(origin);
 	
 		if (b.OnApply) {
 				bh;
@@ -149,9 +150,9 @@ func int Buff_Apply(var c_npc npc, var int buff) {
 		return bh;
 };
 
-func int Buff_ApplyUnique(var c_npc n, var int buff) {
+func int Buff_ApplyUnique(var c_npc n, var int buff, var c_npc o) {
 		if (!Buff_Has(n, buff)) {
-			return Buff_Apply(n, buff);
+			return Buff_Apply(n, buff, o);
 		};
 		return 0;
 };
@@ -165,13 +166,13 @@ func void Buff_Refresh(var int bh) {
 };
 
 
-func int Buff_ApplyOrRefresh(var c_npc n, var int buff) {
+func int Buff_ApplyOrRefresh(var c_npc n, var int buff, var c_npc o) {
 	var int bh; bh = Buff_Has(n, buff);
 	if (bh) {
 		Buff_Refresh(bh);
 		return bh;
 	} else {
-		return Buff_Apply(n, buff);
+		return Buff_Apply(n, buff, o);
 	};
 };
 
@@ -197,6 +198,10 @@ func int Buff_GetNpc(var int bh) {
 	return Npc_FindByID(b.targetID);
 };
 
+func int Buff_GetNpcOrigin(var int bh) {
+	var lCBuff b; b = get(bh);
+	return Npc_FindByID(b.originID);
+};
 
 func void _Buff_RemoveAll_Sub(var int buffh) {
 	var lCBuff buff; buff = get(buffh);

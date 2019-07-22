@@ -23,20 +23,6 @@ STORY\NPC_Globals.d
 STORY\svm.d
 STORY\Text.d
 
-AI\HUMAN\C_Human\C_NpcIsUndead.d
-AI\HUMAN\C_Human\C_NpcIsEvil.d
-AI\HUMAN\C_Human\C_NpcIsGolem.d
-AI\HUMAN\C_Human\C_NpcIsFireBase.d
-AI\HUMAN\C_Human\C_NpcIsIceBase.d
-AI\HUMAN\C_Human\C_NpcIsWaterBase.d
-AI\HUMAN\C_Human\C_NpcIsLarge.d
-AI\HUMAN\C_Human\C_NpcIsDraconic.d
-
-UltimateStranger\misc.d
-UltimateStranger\buff.d
-UltimateStranger\mainloop.d
-UltimateStranger\damage.d
-
 STORY\B_Story\C_NpcIsInQuarter.d
 STORY\B_Story\C_DiegoTooFar.d
 STORY\B_Story\B_AddFightSkill.d
@@ -74,6 +60,22 @@ STORY\Log_Entries\B_Checklog.d
 STORY\B_Story\B_GivePlayerXP.d
 STORY\B_Content\B_SCUsesRake.d
 
+AI\MAGIC\B_MagicHurtNpc.d
+
+AI\HUMAN\C_Human\C_NpcIsUndead.d
+AI\HUMAN\C_Human\C_NpcIsEvil.d
+AI\HUMAN\C_Human\C_NpcIsGolem.d
+AI\HUMAN\C_Human\C_NpcIsFireBase.d
+AI\HUMAN\C_Human\C_NpcIsIceBase.d
+AI\HUMAN\C_Human\C_NpcIsWaterBase.d
+AI\HUMAN\C_Human\C_NpcIsLarge.d
+AI\HUMAN\C_Human\C_NpcIsDraconic.d
+
+UltimateStranger\misc.d
+UltimateStranger\buff.d
+UltimateStranger\mainloop.d
+UltimateStranger\damage.d
+
 STORY\B_GiveTradeInv\B_ClearRuneInv.d
 STORY\B_GiveTradeInv\B_ClearSmithInv.d
 STORY\B_GiveTradeInv\B_ClearAlchemyInv.d
@@ -91,7 +93,6 @@ ITEMS\Zweihand_EquipBonus.d
 ITEMS\IT_*.d
 ITEMS\Missionitems_*.d
 
-AI\MAGIC\B_MagicHurtNpc.d
 AI\MAGIC\B_Transform.d
 
 STORY\B_Content\B_ScHasBeliarsWeapon.d

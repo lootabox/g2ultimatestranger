@@ -80,6 +80,7 @@ var string pristr;
 	if (attackerptr) {
 		Var c_npc att; att = _^(attackerptr);
 		Var c_item wpn;
+		var int prot;
 
 		// Weapon was associated with attack -> was melee/ranged attack
 		if (dmgDesc.itemWeapon)
@@ -124,7 +125,6 @@ var string pristr;
 pristr = IntToString(dmg);
 
 			// Handle protection
-			var int prot; 
 			if 		wpn.damagetype == DAM_EDGE		{ prot = vic.protection[PROT_EDGE]; }
 			else if wpn.damagetype == DAM_BLUNT		{ prot = vic.protection[PROT_BLUNT]; }
 			else if wpn.damagetype == DAM_POINT		{ prot = vic.protection[PROT_POINT]; }
@@ -151,81 +151,144 @@ pristr = IntToString(dmg);
 		// Magic
 		else if (dmgDesc.spellID >= 0)
 		{
-			// Get base type for spell
-			var int isSpellIce; isSpellIce = (
-					(dmgDesc.spellID == SPL_Icebolt)
-				||	(dmgDesc.spellID == SPL_IceLance)
-				||	(dmgDesc.spellID == SPL_IceCube)
-				||	(dmgDesc.spellID == SPL_IceWave)
-				||	(dmgDesc.spellID == SPL_Geyser)
-				||	(dmgDesc.spellID == SPL_WaterFist)
-				||	(dmgDesc.spellID == SPL_Thunderstorm)
-			);
-			var int isSpellFire; isSpellFire = (
-					(dmgDesc.spellID == SPL_Firebolt)
-				||	(dmgDesc.spellID == SPL_InstantFireball)
-				||	(dmgDesc.spellID == SPL_Firestorm)
-				||	(dmgDesc.spellID == SPL_ChargeFireball)
-				||	(dmgDesc.spellID == SPL_Pyrokinesis)
-				||	(dmgDesc.spellID == SPL_Firerain)
-			);
-			var int isSpellLightning; isSpellLightning = (
-					(dmgDesc.spellID == SPL_Zap)
-				||	(dmgDesc.spellID == SPL_ChargeZap)
-				||	(dmgDesc.spellID == SPL_LightningFlash)
-				||	(dmgDesc.spellID == SPL_Thunderstorm)
-			);
-			var int isSpellWind; isSpellWind = (
-					(dmgDesc.spellID == SPL_WindFist)
-			);
-			
-			// Get base magic damage
+			// Get base magic damage and prot
 			dmg = dmgDesc.dmgArray[DAM_INDEX_MAGIC];
-			if (isSpellWind) { dmg = dmgDesc.dmgArray[DAM_INDEX_FLY]; };
+			if (isSpellWind) 				{ dmg = dmgDesc.dmgArray[DAM_INDEX_FLY]; };
+			if (att.guild == GIL_DRAGON)	{ prot = vic.protection[PROT_FIRE]; }
+				else						{ prot = vic.protection[PROT_MAGIC]; };
+			if (prot == IMMUNE)				{ return 0; };
 pristr = IntToString(dmg);
+
 			// Get equipped staff
-			/* wpn = Npc_GetEquippedMeleeWeapon(att);
+			wpn = Npc_GetEquippedMeleeWeapon(att);
 			if (Hlp_IsValidItem(wpn))
 			{
+				// Get base type for spell
+				var int isSpellIce; isSpellIce = (
+						(dmgDesc.spellID == SPL_Icebolt)
+					||	(dmgDesc.spellID == SPL_IceLance)
+					||	(dmgDesc.spellID == SPL_IceCube)
+					||	(dmgDesc.spellID == SPL_IceWave)
+					||	(dmgDesc.spellID == SPL_Geyser)
+					||	(dmgDesc.spellID == SPL_WaterFist)
+					||	(dmgDesc.spellID == SPL_Thunderstorm)
+				);
+				var int isSpellFire; isSpellFire = (
+						(dmgDesc.spellID == SPL_Firebolt)
+					||	(dmgDesc.spellID == SPL_InstantFireball)
+					||	(dmgDesc.spellID == SPL_Firestorm)
+					||	(dmgDesc.spellID == SPL_ChargeFireball)
+					||	(dmgDesc.spellID == SPL_Pyrokinesis)
+					||	(dmgDesc.spellID == SPL_Firerain)
+					||	(dmgDesc.spellID == SPL_Explosion)
+				);
+				var int isSpellLightning; isSpellLightning = (
+						(dmgDesc.spellID == SPL_Zap)
+					||	(dmgDesc.spellID == SPL_ChargeZap)
+					||	(dmgDesc.spellID == SPL_LightningFlash)
+					||	(dmgDesc.spellID == SPL_Thunderstorm)
+					||	(dmgDesc.spellID == SPL_AdanosBall)
+				);
+				var int isSpellWind; isSpellWind = (
+						(dmgDesc.spellID == SPL_WindFist)
+				);
+				var int isSpellDot; isSpellDot = (
+						(dmgDesc.spellID == SPL_Whirlwind)
+					||	(dmgDesc.spellID == SPL_Thunderstorm)
+					||	(dmgDesc.spellID == SPL_Firerain)
+					||	(dmgDesc.spellID == SPL_GreenTentacle)
+					||	(dmgDesc.spellID == SPL_SuckEnergy)
+					||	(dmgDesc.spellID == SPL_Swarm)
+					||	(dmgDesc.spellID == SPL_Acid)
+				);
+
+				// Handle staff bonus
 				if (isSpellFire)
 				{
-					// Fire: Burning
-					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab04)
-					{
-						Print( "BURN" );
-					}
-					// Fire: Damage Bonus
-					else if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
+					// Fire: Damage Bonus (+10)
+					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
+					|| (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
 					{
 						dmg += 10;
+						// Fire: Burning (+20%)
+						if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
+						{
+							// temp for calculation
+							var int fire_dot; fire_dot = dmg * 10000 / 8333 - dmg;
+							if (dmg < prot) { fire_dot -= (dmg - prot); };
+							if (fire_dot > 0)
+							{
+								if		(fire_dot >= 60)	{ Buff_Apply(vic, fire_spell_dot_60, att); }
+								else if	(fire_dot >= 56)	{ Buff_Apply(vic, fire_spell_dot_56, att); }
+								else if	(fire_dot >= 52)	{ Buff_Apply(vic, fire_spell_dot_52, att); }
+								else if	(fire_dot >= 48)	{ Buff_Apply(vic, fire_spell_dot_48, att); }
+								else if	(fire_dot >= 44)	{ Buff_Apply(vic, fire_spell_dot_44, att); }
+								else if	(fire_dot >= 40)	{ Buff_Apply(vic, fire_spell_dot_40, att); }
+								else if	(fire_dot >= 36)	{ Buff_Apply(vic, fire_spell_dot_36, att); }
+								else if	(fire_dot >= 32)	{ Buff_Apply(vic, fire_spell_dot_32, att); }
+								else if	(fire_dot >= 28)	{ Buff_Apply(vic, fire_spell_dot_28, att); }
+								else if	(fire_dot >= 24)	{ Buff_Apply(vic, fire_spell_dot_24, att); }
+								else if	(fire_dot >= 20)	{ Buff_Apply(vic, fire_spell_dot_20, att); }
+								else if	(fire_dot >= 16)	{ Buff_Apply(vic, fire_spell_dot_16, att); }
+								else if	(fire_dot >= 12)	{ Buff_Apply(vic, fire_spell_dot_12, att); }
+								else if	(fire_dot >= 8)		{ Buff_Apply(vic, fire_spell_dot_8, att); }
+								else if	(fire_dot >= 4)		{ Buff_Apply(vic, fire_spell_dot_4, att); };
+
+								if (fire_dot >= 4) { Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE); };
+								dmg += (4 - fire_dot / 4); // add remainder
+							};
+						};
+					}
+					else if (dmg - prot >= vic.attribute[ATR_HITPOINTS])
+					{
+						// Play burn FX on corpses for flavor
+						Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
 					};
 				}
 				else if (isSpellIce)
 				{
-					// Ice: No reduced damage
-					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab05)
+					// Ice: Debuff
+					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab03)
+					|| (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab03)
 					{
-						Print ( "ICE BYBASS" );
+						Print ( "ICE DEBUFF 1" );
+						if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab03)
+						{
+							Print ( "ICE DEBUFF 2" );
+						};
 					};
 				}
 				else if (isSpellLightning)
 				{
-					// Lightning: Ignore protection
+					// Lightning/Force: Ignore protection
 					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab02)
+					|| (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab02)
 					{
-						// Ignore up to 15 protection
-						if (vic.protection[PROT_MAGIC] < 15)
-						{ dmg += vic.protection[PROT_MAGIC]; }
+						if (prot < 15)
+						{ dmg += prot; }
 						else
 						{ dmg += 15; };
+						
+						// Lightning/Force: ???
+						if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab02)
+						{
+							Print ( "LIGHTNING/FORCE ???" );
+						};
+					};
+				}
+				else if (isSpellDot)
+				{
+					// Dot: Increase dot
+					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab04)
+					{
+						dmg += dmg * 33 / 100;
 					};
 				};
-			}; */
+			};
 
 			// Handle protection
-			if (att.guild == GIL_DRAGON)			{ dmg -= vic.protection[PROT_FIRE]; }
-			else									{ dmg -= vic.protection[PROT_MAGIC]; };
-			
+			dmg -= prot;
+
 			// Apply ice cube dot, add remainder to main damage
 			if ((Npc_GetLastHitSpellID(vic) == SPL_IceCube)
 			|| (Npc_GetLastHitSpellID(vic) == SPL_IceWave))
@@ -235,16 +298,16 @@ pristr = IntToString(dmg);
 				dmg += (SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE);
 				if (dmg >= SPL_FREEZE_DAMAGE)
 				{
-					if		(dmg >= 10 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_10_dot); Buff_Apply(vic, icecube_10_dot); }
-					else if	(dmg >= 9 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_9_dot); Buff_Apply(vic, icecube_9_dot); }
-					else if	(dmg >= 8 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_8_dot); Buff_Apply(vic, icecube_8_dot); }
-					else if	(dmg >= 7 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_7_dot); Buff_Apply(vic, icecube_7_dot); }
-					else if	(dmg >= 6 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_6_dot); Buff_Apply(vic, icecube_6_dot); }
-					else if	(dmg >= 5 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_5_dot); Buff_Apply(vic, icecube_5_dot); }
-					else if	(dmg >= 4 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_4_dot); Buff_Apply(vic, icecube_4_dot); }
-					else if	(dmg >= 3 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_3_dot); Buff_Apply(vic, icecube_3_dot); }
-					else if	(dmg >= 2 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_2_dot); Buff_Apply(vic, icecube_2_dot); }
-					else if	(dmg >= 1 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_1_dot); Buff_Apply(vic, icecube_1_dot); };
+					if		(dmg >= 10 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_40); Buff_Apply(vic, icecube_dot_40, att); }
+					else if	(dmg >= 9 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_36); Buff_Apply(vic, icecube_dot_36, att); }
+					else if	(dmg >= 8 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_32); Buff_Apply(vic, icecube_dot_32, att); }
+					else if	(dmg >= 7 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_28); Buff_Apply(vic, icecube_dot_28, att); }
+					else if	(dmg >= 6 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_24); Buff_Apply(vic, icecube_dot_24, att); }
+					else if	(dmg >= 5 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_20); Buff_Apply(vic, icecube_dot_20, att); }
+					else if	(dmg >= 4 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_16); Buff_Apply(vic, icecube_dot_16, att); }
+					else if	(dmg >= 3 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_12); Buff_Apply(vic, icecube_dot_12, att); }
+					else if	(dmg >= 2 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_8); Buff_Apply(vic, icecube_dot_8, att); }
+					else if	(dmg >= 1 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_4); Buff_Apply(vic, icecube_dot_4, att); };
 				};
 				dmg -= (SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE);
 			};
@@ -261,9 +324,9 @@ Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 	{
 		if (att.level > 3)
 		{
-			Buff_Apply(vic, venom_bloodfly);
+			Buff_Apply(vic, venom_bloodfly, att);
 		} else {
-			Buff_Apply(vic, venom_small_bloodfly);
+			Buff_Apply(vic, venom_small_bloodfly, att);
 		};
 	};
 
