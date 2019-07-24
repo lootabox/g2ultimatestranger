@@ -49,7 +49,6 @@ func int ZS_MagicFreeze()
 func int ZS_MagicFreeze_Loop ()
 {	
 	// EXIT LOOP IF...
-	Print(IntToString(self.aivar[AIV_FreezeStateTime]));
 	if (self.aivar[AIV_FreezeStateTime] > SPL_TIME_FREEZE)
 	{
 		return LOOP_END;

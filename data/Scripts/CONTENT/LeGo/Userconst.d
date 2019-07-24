@@ -93,7 +93,7 @@ const string Cursor_Texture   = "CURSOR.TGA"; // Genutzte Textur, LeGo stellt ei
 //========================================
 // Buffs
 //========================================
-const int Buffs_DisplayForHero = 1;
+const int Buffs_DisplayForHero = 0;
 
 //========================================
 // Interface
@@ -126,3 +126,9 @@ const int AIV_TALENT = AIV_TALENT_INDEX; // Genutzte AI-Var
 //   DIAG_Prefix + AniName + DIAG_Suffix + ((rand() % (Max - (Min - 1))) + Min).ToString("00");
 const string DIAG_Prefix = "DG_";
 const string DIAG_Suffix = "_";
+
+//========================================
+// Buffs
+//========================================
+const int Buff_FadeOut = 0; // Deactivate fade-out by setting this to 0
+

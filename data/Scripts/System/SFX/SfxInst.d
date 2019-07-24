@@ -193,7 +193,7 @@ INSTANCE Piss_End     			    	(C_SFX_DEF) {file= "piss_end.wav";			vol = 10;			}
                                                                                                                                     
 /* Firerain */	INSTANCE MFX_Firerain_Invest	        (C_SFX_DEF) {file= "MFX_Firerain_Invest.wav";		vol = 127;			};      
 				INSTANCE MFX_Firerain_Rain		        (C_SFX_DEF) {file= "MFX_Firerain_Rain.wav";			vol = 127;			};      
-				INSTANCE MFX_Firespell_Humanburn        (C_SFX_DEF) {file= "MFX_Firespell_Humanburn.wav";	vol = 127;			};      
+				INSTANCE MFX_Firespell_Humanburn        (C_SFX_DEF) {file= "MFX_Firespell_Humanburn.wav";	vol = 60;			};      
 
 /* Geyser */	INSTANCE MFX_Geyser_Fountain	        (C_SFX_DEF) {file= "MFX_Geyser_Fountain.wav";		vol = 127;		};      
 				INSTANCE MFX_Geyser_Rumble           	(C_SFX_DEF) {file= "MFX_Geyser_Rumble.wav";			vol = 127;		};

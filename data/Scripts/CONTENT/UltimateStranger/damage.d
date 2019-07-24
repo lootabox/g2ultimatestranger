@@ -86,7 +86,7 @@ var string pristr;
 		if (dmgDesc.itemWeapon)
 		{
 			// If melee weapon is readied use that, otherwise use equipped ranged weapon
-			if (Npc_HasReadiedMeleeWeapon(att)) { wpn = Npc_GetReadiedWeapon(att); }
+			if (Npc_HasReadiedMeleeWeapon(att)) { wpn = Npc_GetEquippedMeleeWeapon(att); }
 			else { wpn = Npc_GetEquippedRangedWeapon(att); };
 			
 			// Get base weapon damage
@@ -151,11 +151,12 @@ pristr = IntToString(dmg);
 		// Magic
 		else if (dmgDesc.spellID >= 0)
 		{
-			// Get base magic damage and prot
-			dmg = dmgDesc.dmgArray[DAM_INDEX_MAGIC];
-			if (isSpellWind) 				{ dmg = dmgDesc.dmgArray[DAM_INDEX_FLY]; };
+			// Get base magic damage and protection
+			if (dmgDesc.spellID == SPL_WindFist)
+			|| (dmgDesc.spellID == SPL_Extricate)	{ dmg = dmgDesc.dmgArray[DAM_INDEX_FLY]; }
+			else									{ dmg = dmgDesc.dmgArray[DAM_INDEX_MAGIC]; };
 			if (att.guild == GIL_DRAGON)	{ prot = vic.protection[PROT_FIRE]; }
-				else						{ prot = vic.protection[PROT_MAGIC]; };
+			else							{ prot = vic.protection[PROT_MAGIC]; };
 			if (prot == IMMUNE)				{ return 0; };
 pristr = IntToString(dmg);
 
@@ -163,89 +164,85 @@ pristr = IntToString(dmg);
 			wpn = Npc_GetEquippedMeleeWeapon(att);
 			if (Hlp_IsValidItem(wpn))
 			{
-				// Get base type for spell
-				var int isSpellIce; isSpellIce = (
-						(dmgDesc.spellID == SPL_Icebolt)
+				// FIRE SPELLS ---------------------------------------------------------------------------
+				if	(dmgDesc.spellID == SPL_Firebolt)
+				||	(dmgDesc.spellID == SPL_InstantFireball)
+				||	(dmgDesc.spellID == SPL_Firestorm)
+				||	(dmgDesc.spellID == SPL_ChargeFireball)
+				||	(dmgDesc.spellID == SPL_Pyrokinesis)
+				||	(dmgDesc.spellID == SPL_Firerain)
+				||	(dmgDesc.spellID == SPL_Explosion)
+				{
+					// Figure out burn dot
+					var int fire_dot;
+					if	(dmgDesc.spellID == SPL_Firebolt)
+					||	(dmgDesc.spellID == SPL_InstantFireball)
+					||	(dmgDesc.spellID == SPL_ChargeFireball)
+					||	(dmgDesc.spellID == SPL_Explosion)
+					{
+						fire_dot = dmg / 3;
+						dmg -= fire_dot;
+					}
+					else if	(dmgDesc.spellID == SPL_Firestorm)
+						||	(dmgDesc.spellID == SPL_Pyrokinesis)
+					{
+						fire_dot = dmg * 2 / 3;
+						// Splash does not deal instant damage
+						if (STR_Compare(dmgDesc.visualFXStr, "VOB_MAGICBURN") == STR_EQUAL)	{ dmg = 0; }
+						else																{ dmg -= fire_dot; };
+					}
+					else if	(dmgDesc.spellID == SPL_Firerain)
+					{
+						fire_dot = dmg;
+						dmg = 0;
+					};
+					// HANDLE FIRE STAFF BONUS
+					if (Hlp_IsValidItem(wpn))
+					{
+						// Fire: Damage Bonus (+10)
+						if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
+						|| (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
+						{
+							dmg += 10;
+							// Fire: Burning (+20%)
+							if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
+							{
+								fire_dot = fire_dot * 120 / 100;
+							};
+						};
+					};
+					// Play burn FX on corpses for flavor in any case
+					if (dmg - prot >= vic.attribute[ATR_HITPOINTS])
+					{
+						Wld_StopEffect_Ext("VOB_MAGICBURN", vic, vic, FALSE);
+						Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
+					}
+					else if (dmg + fire_dot > prot)
+					{
+						// Reduce protection not negated by instant damage from dot
+						if (dmg < prot)
+						{
+							fire_dot -= (prot - dmg);
+							prot = dmg;
+						};
+
+						// Create dot debuff
+						if (fire_dot > 0)
+						{
+							burn_dot_apply(vic, fire_dot, att);
+							Wld_StopEffect_Ext("VOB_MAGICBURN", vic, vic, FALSE);
+							Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
+						};
+					};
+				}
+				// ICE SPELLS ---------------------------------------------------------------------------
+				else if	(dmgDesc.spellID == SPL_Icebolt)
 					||	(dmgDesc.spellID == SPL_IceLance)
 					||	(dmgDesc.spellID == SPL_IceCube)
 					||	(dmgDesc.spellID == SPL_IceWave)
 					||	(dmgDesc.spellID == SPL_Geyser)
 					||	(dmgDesc.spellID == SPL_WaterFist)
 					||	(dmgDesc.spellID == SPL_Thunderstorm)
-				);
-				var int isSpellFire; isSpellFire = (
-						(dmgDesc.spellID == SPL_Firebolt)
-					||	(dmgDesc.spellID == SPL_InstantFireball)
-					||	(dmgDesc.spellID == SPL_Firestorm)
-					||	(dmgDesc.spellID == SPL_ChargeFireball)
-					||	(dmgDesc.spellID == SPL_Pyrokinesis)
-					||	(dmgDesc.spellID == SPL_Firerain)
-					||	(dmgDesc.spellID == SPL_Explosion)
-				);
-				var int isSpellLightning; isSpellLightning = (
-						(dmgDesc.spellID == SPL_Zap)
-					||	(dmgDesc.spellID == SPL_ChargeZap)
-					||	(dmgDesc.spellID == SPL_LightningFlash)
-					||	(dmgDesc.spellID == SPL_Thunderstorm)
-					||	(dmgDesc.spellID == SPL_AdanosBall)
-				);
-				var int isSpellWind; isSpellWind = (
-						(dmgDesc.spellID == SPL_WindFist)
-				);
-				var int isSpellDot; isSpellDot = (
-						(dmgDesc.spellID == SPL_Whirlwind)
-					||	(dmgDesc.spellID == SPL_Thunderstorm)
-					||	(dmgDesc.spellID == SPL_Firerain)
-					||	(dmgDesc.spellID == SPL_GreenTentacle)
-					||	(dmgDesc.spellID == SPL_SuckEnergy)
-					||	(dmgDesc.spellID == SPL_Swarm)
-					||	(dmgDesc.spellID == SPL_Acid)
-				);
-
-				// Handle staff bonus
-				if (isSpellFire)
-				{
-					// Fire: Damage Bonus (+10)
-					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
-					|| (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
-					{
-						dmg += 10;
-						// Fire: Burning (+20%)
-						if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
-						{
-							// temp for calculation
-							var int fire_dot; fire_dot = dmg * 10000 / 8333 - dmg;
-							if (dmg < prot) { fire_dot -= (dmg - prot); };
-							if (fire_dot > 0)
-							{
-								if		(fire_dot >= 60)	{ Buff_Apply(vic, fire_spell_dot_60, att); }
-								else if	(fire_dot >= 56)	{ Buff_Apply(vic, fire_spell_dot_56, att); }
-								else if	(fire_dot >= 52)	{ Buff_Apply(vic, fire_spell_dot_52, att); }
-								else if	(fire_dot >= 48)	{ Buff_Apply(vic, fire_spell_dot_48, att); }
-								else if	(fire_dot >= 44)	{ Buff_Apply(vic, fire_spell_dot_44, att); }
-								else if	(fire_dot >= 40)	{ Buff_Apply(vic, fire_spell_dot_40, att); }
-								else if	(fire_dot >= 36)	{ Buff_Apply(vic, fire_spell_dot_36, att); }
-								else if	(fire_dot >= 32)	{ Buff_Apply(vic, fire_spell_dot_32, att); }
-								else if	(fire_dot >= 28)	{ Buff_Apply(vic, fire_spell_dot_28, att); }
-								else if	(fire_dot >= 24)	{ Buff_Apply(vic, fire_spell_dot_24, att); }
-								else if	(fire_dot >= 20)	{ Buff_Apply(vic, fire_spell_dot_20, att); }
-								else if	(fire_dot >= 16)	{ Buff_Apply(vic, fire_spell_dot_16, att); }
-								else if	(fire_dot >= 12)	{ Buff_Apply(vic, fire_spell_dot_12, att); }
-								else if	(fire_dot >= 8)		{ Buff_Apply(vic, fire_spell_dot_8, att); }
-								else if	(fire_dot >= 4)		{ Buff_Apply(vic, fire_spell_dot_4, att); };
-
-								if (fire_dot >= 4) { Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE); };
-								dmg += (4 - fire_dot / 4); // add remainder
-							};
-						};
-					}
-					else if (dmg - prot >= vic.attribute[ATR_HITPOINTS])
-					{
-						// Play burn FX on corpses for flavor
-						Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
-					};
-				}
-				else if (isSpellIce)
 				{
 					// Ice: Debuff
 					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab03)
@@ -257,8 +254,30 @@ pristr = IntToString(dmg);
 							Print ( "ICE DEBUFF 2" );
 						};
 					};
+					
+
+					// Apply ice cube dot, add remainder to main damage
+					if ((dmgDesc.spellID == SPL_IceCube)
+					||	(dmgDesc.spellID == SPL_IceWave))
+					&& (!C_NpcIsFireBase(vic)) // firebase immune to freeze
+					&& (!C_NpcIsIceBase(vic)) // icebase immune to freeze
+					{
+						if (dmg >= prot)
+						{
+							freeze_dot_apply(vic, SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE, att);
+						}
+						else if (dmg + SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE > prot)
+						{
+							freeze_dot_apply(vic, dmg + SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE - prot, att);
+						};
+					};
 				}
-				else if (isSpellLightning)
+				// LIGHTNING SPELLS ---------------------------------------------------------------------------
+				else if	(dmgDesc.spellID == SPL_Zap)
+					||	(dmgDesc.spellID == SPL_ChargeZap)
+					||	(dmgDesc.spellID == SPL_LightningFlash)
+					||	(dmgDesc.spellID == SPL_Thunderstorm)
+					||	(dmgDesc.spellID == SPL_AdanosBall)
 				{
 					// Lightning/Force: Ignore protection
 					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab02)
@@ -276,7 +295,14 @@ pristr = IntToString(dmg);
 						};
 					};
 				}
-				else if (isSpellDot)
+				// DAMAGE OVER TIME SPELLS ---------------------------------------------------------------------------
+				else if	(dmgDesc.spellID == SPL_Whirlwind)
+					||	(dmgDesc.spellID == SPL_Thunderstorm)
+					||	(dmgDesc.spellID == SPL_Firerain)
+					||	(dmgDesc.spellID == SPL_GreenTentacle)
+					||	(dmgDesc.spellID == SPL_SuckEnergy)
+					||	(dmgDesc.spellID == SPL_Swarm)
+					||	(dmgDesc.spellID == SPL_Acid)
 				{
 					// Dot: Increase dot
 					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab04)
@@ -288,29 +314,6 @@ pristr = IntToString(dmg);
 
 			// Handle protection
 			dmg -= prot;
-
-			// Apply ice cube dot, add remainder to main damage
-			if ((Npc_GetLastHitSpellID(vic) == SPL_IceCube)
-			|| (Npc_GetLastHitSpellID(vic) == SPL_IceWave))
-			&& (!C_NpcIsFireBase(vic)) // firebase immune to freeze
-			&& (!C_NpcIsIceBase(vic)) // icebase immune to freeze
-			{
-				dmg += (SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE);
-				if (dmg >= SPL_FREEZE_DAMAGE)
-				{
-					if		(dmg >= 10 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_40); Buff_Apply(vic, icecube_dot_40, att); }
-					else if	(dmg >= 9 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_36); Buff_Apply(vic, icecube_dot_36, att); }
-					else if	(dmg >= 8 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_32); Buff_Apply(vic, icecube_dot_32, att); }
-					else if	(dmg >= 7 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_28); Buff_Apply(vic, icecube_dot_28, att); }
-					else if	(dmg >= 6 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_24); Buff_Apply(vic, icecube_dot_24, att); }
-					else if	(dmg >= 5 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_20); Buff_Apply(vic, icecube_dot_20, att); }
-					else if	(dmg >= 4 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_16); Buff_Apply(vic, icecube_dot_16, att); }
-					else if	(dmg >= 3 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_12); Buff_Apply(vic, icecube_dot_12, att); }
-					else if	(dmg >= 2 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_8); Buff_Apply(vic, icecube_dot_8, att); }
-					else if	(dmg >= 1 * SPL_FREEZE_DAMAGE)	{ Buff_RemoveAll(vic, icecube_dot_4); Buff_Apply(vic, icecube_dot_4, att); };
-				};
-				dmg -= (SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE);
-			};
 		};
 
 		// Apply minimum damage of 5 only for NPCs

@@ -4,10 +4,14 @@
 // Buff talents
 //######################################################
 
-var int TAL_DOT_TOTAL_DAMAGE;
+var int TAL_DOT_VENOM;
+var int TAL_DOT_BURN;
+var int TAL_DOT_FREEZE;
 func void InitBuffTalents() {
-    if (!TAL_DOT_TOTAL_DAMAGE) {
-        TAL_DOT_TOTAL_DAMAGE = TAL_CreateTalent();
+    if (!TAL_DOT_VENOM) {
+        TAL_DOT_VENOM = TAL_CreateTalent();
+        TAL_DOT_BURN = TAL_CreateTalent();
+        TAL_DOT_FREEZE = TAL_CreateTalent();
     };
 };
 
@@ -39,109 +43,169 @@ func void TAL_ModValue(var c_npc n, var int talent, var int value) {
     };
 };
 
-
-func void dot_tick(var int bh) {
-    var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
-    var lCBuff b; b = get(bh);
-    // add total dot value
-    if (b.nextTickNr == 1)
-    {
-        TAL_ModValue(n, TAL_DOT_TOTAL_DAMAGE, b.durationMS / b.tickMS);
-        Print( ConcatStrings(IntToString( b.durationMS / b.tickMS ), " dot"));
-    };
-
-    // If dead, do something else
-    if (!Npc_IsInState(n, ZS_DEAD) && TAL_GetValue(n, TAL_DOT_TOTAL_DAMAGE) > 0)
-    {
-        if (n.attribute[ATR_HITPOINTS] > 0)
-        {
-            ptr = Buff_GetNpcOrigin(bh);
-            if (!ptr)
-            {
-                B_MagicHurtNpc(n, n, 1);
-            }
-            else
-            {
-                var c_npc o; o = _^(ptr);
-                B_MagicHurtNpc(o, n, 1);
-                if (n.attribute[ATR_HITPOINTS] == 0)
-                {
-                    Npc_SendPassivePerc (o, PERC_ASSESSMURDER, o, o);
-                };
-            };
-        };
-        TAL_ModValue(n, TAL_DOT_TOTAL_DAMAGE, -1);
-    } else {
-        TAL_SetValue(n, TAL_DOT_TOTAL_DAMAGE, 0);
-        Buff_Remove(bh);
-    };
-};
-
-func void dot_remove(var int bh) {
-    var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
-    var lCBuff b; b = get(bh);
-    TAL_ModValue(n, TAL_DOT_TOTAL_DAMAGE, -(b.durationMS / b.tickMS - (b.nextTickNr - 1)));
-};
-
-prototype dot_prototype(lCBuff) {
-    name = "";
-    bufftype = BUFF_BAD;
-    OnTick = SAVE_GetFuncID(dot_tick);
-    OnRemoved = SAVE_GetFuncID(dot_remove);
-};
-
 //######################################################
 // Bloodfly / Swampgas drone venom
 //######################################################
 
-instance venom_small_bloodfly(dot_prototype) {
+func void venom_dot_apply(var int bh, var int total_damage) {
+    var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
+    TAL_ModValue(n, TAL_DOT_VENOM, total_damage);
+};
+
+func void venom_dot_tick(var int bh) {
+    var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
+    var lCBuff b; b = get(bh);
+
+    if (n.attribute[ATR_HITPOINTS] > 0 && TAL_GetValue(n, TAL_DOT_VENOM) > 0)
+    {
+        ptr = Buff_GetNpcOrigin(bh);
+        if (!ptr)
+        {
+            B_MagicHurtNpc(n, n, 1);
+        }
+        else
+        {
+            var c_npc o; o = _^(ptr);
+            B_MagicHurtNpc(o, n, 1);
+            if (n.attribute[ATR_HITPOINTS] <= 0)
+            {
+                Npc_SendPassivePerc (o, PERC_ASSESSMURDER, o, o);
+            };
+        };
+        TAL_ModValue(n, TAL_DOT_VENOM, -1);
+    } else {
+        TAL_SetValue(n, TAL_DOT_VENOM, 0);
+        Buff_Remove(bh);
+    };
+};
+
+func void venom_dot_remove(var int bh) {
+    var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
+    var lCBuff b; b = get(bh);
+    TAL_ModValue(n, TAL_DOT_VENOM, -(b.durationMS / b.tickMS - (b.nextTickNr - 1)));
+};
+
+func void venom_small_bloodfly_apply(var int bh)        { venom_dot_apply(bh, VENOM_SMALL_BLOODFLY_TOTAL_DAMAGE); };
+func void venom_bloodfly_apply(var int bh)              { venom_dot_apply(bh, VENOM_BLOODFLY_TOTAL_DAMAGE); };
+func void venom_swampdrone_explosion_apply(var int bh)  { venom_dot_apply(bh, VENOM_SWAMPDRONE_EXPLOSION_TOTAL_DAMAGE); };
+
+instance venom_small_bloodfly(lCBuff) {
     durationMS = 1000 * VENOM_SMALL_BLOODFLY_DURATION_SEC;
     tickMS = 1000 * VENOM_SMALL_BLOODFLY_DURATION_SEC / VENOM_SMALL_BLOODFLY_TOTAL_DAMAGE;
+    OnApply = SAVE_GetFuncID(venom_small_bloodfly_apply);
+    OnRemoved = SAVE_GetFuncID(venom_dot_remove);
 };
-instance venom_bloodfly(dot_prototype) {
+instance venom_bloodfly(lCBuff) {
     durationMS = 1000 * VENOM_BLOODFLY_DURATION_SEC;
     tickMS = 1000 * VENOM_BLOODFLY_DURATION_SEC / VENOM_BLOODFLY_TOTAL_DAMAGE;
+    OnApply = SAVE_GetFuncID(venom_bloodfly_apply);
+    OnRemoved = SAVE_GetFuncID(venom_dot_remove);
 };
-instance venom_swampdrone_explosion(dot_prototype) {
+instance venom_swampdrone_explosion(lCBuff) {
     durationMS = 1000 * VENOM_SWAMPDRONE_EXPLOSION_DURATION_SEC;
     tickMS = 1000 * VENOM_SWAMPDRONE_EXPLOSION_DURATION_SEC / VENOM_SWAMPDRONE_EXPLOSION_TOTAL_DAMAGE;
+    OnApply = SAVE_GetFuncID(venom_swampdrone_explosion_apply);
+    OnRemoved = SAVE_GetFuncID(venom_dot_remove);
 };
 
 //######################################################
 // For smooth icecube dot
 //######################################################
 
-instance icecube_dot_4(dot_prototype)  { durationMS = 1 * 1000;     tickMS = 1000 / SPL_FREEZE_DAMAGE; };
-instance icecube_dot_8(dot_prototype)  { durationMS = 2 * 1000;     tickMS = 1000 / SPL_FREEZE_DAMAGE; };
-instance icecube_dot_12(dot_prototype) { durationMS = 3 * 1000;     tickMS = 1000 / SPL_FREEZE_DAMAGE; };
-instance icecube_dot_16(dot_prototype) { durationMS = 4 * 1000;     tickMS = 1000 / SPL_FREEZE_DAMAGE; };
-instance icecube_dot_20(dot_prototype) { durationMS = 5 * 1000;     tickMS = 1000 / SPL_FREEZE_DAMAGE; };
-instance icecube_dot_24(dot_prototype) { durationMS = 6 * 1000;     tickMS = 1000 / SPL_FREEZE_DAMAGE; };
-instance icecube_dot_28(dot_prototype) { durationMS = 7 * 1000;     tickMS = 1000 / SPL_FREEZE_DAMAGE; };
-instance icecube_dot_32(dot_prototype) { durationMS = 8 * 1000;     tickMS = 1000 / SPL_FREEZE_DAMAGE; };
-instance icecube_dot_36(dot_prototype) { durationMS = 9 * 1000;     tickMS = 1000 / SPL_FREEZE_DAMAGE; };
-instance icecube_dot_40(dot_prototype) { durationMS = 10 * 1000;    tickMS = 1000 / SPL_FREEZE_DAMAGE; };
+func void freeze_dot_tick(var int bh) {
+    var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
+    var lCBuff b; b = get(bh);
 
+    if (n.attribute[ATR_HITPOINTS] > 0 && TAL_GetValue(n, TAL_DOT_FREEZE) > 0)
+    {
+        var int tickdmg; tickdmg = TAL_GetValue(n, TAL_DOT_FREEZE);
+        if (tickdmg > SPL_FREEZE_DAMAGE) { tickdmg = SPL_FREEZE_DAMAGE; };
+        ptr = Buff_GetNpcOrigin(bh);
+        if (!ptr)
+        {
+            B_MagicHurtNpc(n, n, tickdmg);
+        }
+        else
+        {
+            var c_npc o; o = _^(ptr);
+            B_MagicHurtNpc(o, n, tickdmg);
+            if (n.attribute[ATR_HITPOINTS] <= 0)
+            {
+                Npc_SendPassivePerc (o, PERC_ASSESSMURDER, o, o);
+            };
+        };
+        TAL_ModValue(n, TAL_DOT_FREEZE, -tickdmg);
+    } else {
+        TAL_SetValue(n, TAL_DOT_FREEZE, 0);
+        Buff_Remove(bh);
+    };
+};
+
+func void freeze_dot_remove(var int bh) {
+    var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
+    Wld_StopEffect_Ext("spellFX_IceSpell_SENDPERCEPTION", 0, n, FALSE); // doesnt work
+};
+
+instance freeze_dot(lCBuff)
+{
+    durationMS = 3600000; // 1h
+    tickMS = 1000;
+    OnTick = SAVE_GetFuncID(freeze_dot_tick);
+    OnRemoved = SAVE_GetFuncID(freeze_dot_remove);
+};
+
+func void freeze_dot_apply(var c_npc npc, var int total_damage, var c_npc origin)
+{
+    Buff_RemoveAll(npc, freeze_dot);
+    TAL_SetValue(npc, TAL_DOT_FREEZE, total_damage);
+    Buff_Apply(npc, freeze_dot, origin);
+};
 
 //######################################################
 // Fire spell burn
 //######################################################
 
-instance fire_spell_dot_4(dot_prototype)  { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 4;    durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_8(dot_prototype)  { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 8;    durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_12(dot_prototype) { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 12;   durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_16(dot_prototype) { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 16;   durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_20(dot_prototype) { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 20;   durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_24(dot_prototype) { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 24;   durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_28(dot_prototype) { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 28;   durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_32(dot_prototype) { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 32;   durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_36(dot_prototype) { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 36;   durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_40(dot_prototype) { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 40;   durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_44(dot_prototype) { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 44;   durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_48(dot_prototype) { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 48;   durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_52(dot_prototype) { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 52;   durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_56(dot_prototype) { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 56;   durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
-instance fire_spell_dot_60(dot_prototype) { tickMS = FIRE_SPELL_DOT_VFX_DURATION / 60;   durationMS = FIRE_SPELL_DOT_VFX_DURATION;};
+func void burn_dot_tick(var int bh) {
+    var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
+    var lCBuff b; b = get(bh);
+
+    if (n.attribute[ATR_HITPOINTS] > 0 && TAL_GetValue(n, TAL_DOT_BURN) > 0)
+    {
+        var int tickdmg; tickdmg = (TAL_GetValue(n, TAL_DOT_BURN)) / (b.durationMS / b.tickMS - (b.nextTickNr - 1));
+        ptr = Buff_GetNpcOrigin(bh);
+        if (!ptr)
+        {
+            B_MagicHurtNpc(n, n, tickdmg);
+        }
+        else
+        {
+            var c_npc o; o = _^(ptr);
+            B_MagicHurtNpc(o, n, tickdmg);
+            if (n.attribute[ATR_HITPOINTS] <= 0)
+            {
+                Npc_SendPassivePerc (o, PERC_ASSESSMURDER, o, o);
+            };
+        };
+        TAL_ModValue(n, TAL_DOT_BURN, -tickdmg);
+    } else {
+        TAL_SetValue(n, TAL_DOT_BURN, 0);
+        Buff_Remove(bh);
+    };
+};
+
+instance burn_dot(lCBuff)
+{
+    durationMS = FIRE_SPELL_DOT_VFX_DURATION;
+    tickMS = 1000;
+    OnTick = SAVE_GetFuncID(burn_dot_tick);
+};
+
+func void burn_dot_apply(var c_npc npc, var int total_damage, var c_npc origin)
+{
+    Buff_RemoveAll(npc, burn_dot);
+    TAL_ModValue(npc, TAL_DOT_BURN, total_damage);
+    Buff_Apply(npc, burn_dot, origin);
+};
 
 //######################################################
 // Special
