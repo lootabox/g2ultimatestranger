@@ -18,7 +18,7 @@ INSTANCE Spell_Pyrokinesis (C_Spell_Proto)
 
 func int Spell_Logic_Pyrokinesis (var int manaInvested)
 {
-	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_Firestorm, 4);
+	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_Firestorm, 4, FALSE);
 };
 
 func void Spell_Cast_Pyrokinesis(var int spellLevel)

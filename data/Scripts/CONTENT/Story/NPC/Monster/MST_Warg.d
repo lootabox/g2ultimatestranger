@@ -66,13 +66,6 @@ func void B_SetVisuals_WARG()
 	Mdl_SetVisualBody		(self,	"Warg_Body2",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
-func void B_SetVisuals_BLACKWOLF()
-{
-	Mdl_SetVisual			(self, "Wolf.mds");
-	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Warg_Body",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
-};
-
 //************
 //	Warg
 //************
@@ -80,36 +73,6 @@ func void B_SetVisuals_BLACKWOLF()
 INSTANCE Warg	(Mst_Default_Warg)
 {
 	B_SetVisuals_Warg();
-	Npc_SetToFistMode(self);
-	//CreateInvItems (self, ItFoMuttonRaw, 1);
-};
-//**********************************************
-//	Schwarzer Wolf  (MIS)
-//*********************************************
-
-INSTANCE BlackWolf	(Mst_Default_Warg)
-{
-	name							=	"Black Wolf";
-	level							=	 6;		
-	//für Inventory
-	aivar[AIV_MM_REAL_ID]			= 	ID_WOLF;
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	15;
-	attribute	[ATR_DEXTERITY]		=	20;
-	attribute	[ATR_HITPOINTS_MAX]	=	120;
-	attribute	[ATR_HITPOINTS]		=	120;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
-	//----- Protections ----
-	protection	[PROT_BLUNT]		=	12;
-	protection	[PROT_EDGE]			=	12;
-	protection	[PROT_POINT]		=	12;
-	protection	[PROT_FIRE]			=	12;
-	protection	[PROT_FLY]			=	12;
-	protection	[PROT_MAGIC]		=	12;
-	
-	B_SetVisuals_BLACKWOLF();
 	Npc_SetToFistMode(self);
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
 };

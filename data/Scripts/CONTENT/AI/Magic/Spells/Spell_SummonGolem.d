@@ -3,6 +3,7 @@
 // ***************
 
 const int SPL_Cost_SummonGolem		= 80;
+const int SPL_Degen_SummonGolem		= 6;
 
 
 INSTANCE Spell_SummonGolem (C_Spell_Proto)	//ehem. Spell_Golem
@@ -14,20 +15,32 @@ INSTANCE Spell_SummonGolem (C_Spell_Proto)	//ehem. Spell_Golem
 
 func int Spell_Logic_SummonGolem (var int manaInvested)
 {	
-	return Spell_Logic_Basic(self, SPL_Cost_SummonGolem);
-	
+	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
+	if (Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused))
+	{
+		return Spell_Logic_Invest(self, manaInvested, SPL_Cost_SummonGolem, 3, TRUE);
+	}
+	else
+	{
+		return Spell_Logic_Invest(self, manaInvested, SPL_Cost_SummonGolem, 2, TRUE);
+	};
 };
 
 func void Spell_Cast_SummonGolem()
 {
 	if (Npc_IsPlayer(self)) 
-	{		
-		Wld_SpawnNpcRange( self,Summoned_Golem,1,500);
+	{
+		if (Npc_GetActiveSpellLevel(self) > 2)
+		{
+			Wld_SpawnNpcRange	(self,	Summoned_Magic_Golem,			1,	500);
+		}
+		else
+		{
+			Wld_SpawnNpcRange	(self,	Summoned_Golem,	1,	500);
+		};
 	}
 	else
 	{
-		Wld_SpawnNpcRange( self,StoneGolem,1,500);
+		Wld_SpawnNpcRange	(self,	StoneGolem,			1,	500);
 	};
-	
-	Spell_Cast_Basic(self, SPL_Cost_SummonGolem);
 };

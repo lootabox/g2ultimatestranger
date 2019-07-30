@@ -13,10 +13,23 @@ func int Spell_ProcessMana_Release (var int manaInvested)
 	var int activeSpell; activeSpell = Npc_GetActiveSpell(self);
 	
 	// ------ Spells, die beim loslassen der Taste gecastet werden ------
-	if (activeSpell == SPL_Pyrokinesis		)	{	return	SPL_SENDCAST;	}; //ALIAS CHARGE FIRESTORM!!!
-	if (activeSpell == SPL_ChargeFireball	)	{	return	SPL_SENDCAST;	};
-	if (activeSpell == SPL_ChargeZap		)	{	return	SPL_SENDCAST;	};
-	if (activeSpell == SPL_WINDFIST			)	{	return	SPL_SENDCAST;	};
+	if		(activeSpell == SPL_Pyrokinesis		)	{	return	SPL_SENDCAST;	} //ALIAS CHARGE FIRESTORM!!!
+	else if	(activeSpell == SPL_ChargeFireball	)	{	return	SPL_SENDCAST;	}
+	else if	(activeSpell == SPL_ChargeZap		)	{	return	SPL_SENDCAST;	}
+	else if	(activeSpell == SPL_WINDFIST		)	{	return	SPL_SENDCAST;	};
+
+	if (Npc_GetActiveSpellLevel(self) > 1)
+	{
+		if		(activeSpell == SPL_SummonWolf				)	{	return	SPL_SENDCAST;	}
+		else if	(activeSpell == SPL_SummonGoblinSkeleton	)	{	return	SPL_SENDCAST;	}
+		else if	(activeSpell == SPL_SummonSkeleton			)	{	return	SPL_SENDCAST;	}
+		else if	(activeSpell == SPL_SummonGolem				)	{	return	SPL_SENDCAST;	}
+		else if	(activeSpell == SPL_SummonDemon				)	{	return	SPL_SENDCAST;	}
+		else if	(activeSpell == SPL_ArmyOfDarkness			)	{	return	SPL_SENDCAST;	}
+		else if	(activeSpell == SPL_SummonGuardian			)	{	return	SPL_SENDCAST;	}
+		else if	(activeSpell == SPL_SummonZombie			)	{	return	SPL_SENDCAST;	}
+		else if	(activeSpell == SPL_SummonMud				)	{	return	SPL_SENDCAST;	};
+	};
 
 	// ------ Alle anderen Spells (Aufrechterhaltung oder Loslassen OHNE gecastet zu haben (zu wenig investiert) ------	
 	return SPL_SENDSTOP;

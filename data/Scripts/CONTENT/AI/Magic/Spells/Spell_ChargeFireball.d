@@ -14,7 +14,7 @@ INSTANCE Spell_ChargeFireball (C_Spell_Proto)
 
 func int Spell_Logic_ChargeFireball (var int manaInvested) 
 {
-	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_ChargeFireball, 4);
+	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_ChargeFireball, 4, FALSE);
 };
 
 func void Spell_Cast_ChargeFireball(var int spellLevel)

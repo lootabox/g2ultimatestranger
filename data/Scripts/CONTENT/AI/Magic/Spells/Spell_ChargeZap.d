@@ -14,7 +14,7 @@ INSTANCE Spell_ChargeZap (C_Spell_Proto)
 
 func int Spell_Logic_ChargeZap (var int manaInvested) 
 {
-	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_ChargeZap, 4);
+	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_ChargeZap, 4, FALSE);
 };
 
 func void Spell_Cast_ChargeZap(var int spellLevel)

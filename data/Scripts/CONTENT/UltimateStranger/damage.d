@@ -105,7 +105,7 @@ var string pristr;
 				dmg += (att.attribute[ATR_MANA] * Value_ManaSword_1h_Percentage / 100);
 			} else if ( wpn.weight == Value_ManaSword_2h_Weapon_ID ) {
 				dmg += (att.attribute[ATR_MANA] * Value_ManaSword_2h_Percentage / 100);
-			} else if ( wpn.weight == Value_WolfSword_Weapon_ID && (vic.guild == GIL_WOLF || vic.guild == GIL_SUMMONED_WOLF)) {
+			} else if ( wpn.weight == Value_WolfSword_Weapon_ID && (vic.guild == GIL_WOLF || vic.guild == GIL_SUMMONED_WOLF || vic.guild == GIL_SUMMONED_BLACK_WOLF)) {
 				dmg += Value_WolfSword_BonusDmg;
 			} else if ( wpn.weight == Value_Inquisitor_Weapon_ID && C_NpcIsEvil(vic) ) {
 				dmg += Value_Inquisitor_BonusDmg;
@@ -203,12 +203,12 @@ pristr = IntToString(dmg);
 						if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
 						|| (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
 						{
-							dmg += 10;
 							// Fire: Burning (+20%)
 							if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
 							{
 								fire_dot = fire_dot * 120 / 100;
 							};
+							dmg += 10;
 						};
 					};
 					// Play burn FX on corpses for flavor in any case
@@ -272,42 +272,29 @@ pristr = IntToString(dmg);
 						};
 					};
 				}
-				// LIGHTNING SPELLS ---------------------------------------------------------------------------
+				// WIND AND LIGHTNING SPELLS ---------------------------------------------------------------------------
 				else if	(dmgDesc.spellID == SPL_Zap)
 					||	(dmgDesc.spellID == SPL_ChargeZap)
 					||	(dmgDesc.spellID == SPL_LightningFlash)
-					||	(dmgDesc.spellID == SPL_Thunderstorm)
 					||	(dmgDesc.spellID == SPL_AdanosBall)
+					||	(dmgDesc.spellID == SPL_Whirlwind)
+					||	(dmgDesc.spellID == SPL_Extricate)
+					||	(dmgDesc.spellID == SPL_WindFist)
 				{
-					// Lightning/Force: Ignore protection
+					// Lightning/Wind: Ignore protection
 					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab02)
 					|| (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab02)
 					{
-						if (prot < 15)
+						if (prot < 20)
 						{ dmg += prot; }
 						else
-						{ dmg += 15; };
+						{ dmg += 20; };
 						
-						// Lightning/Force: ???
+						// Lightning/Wind: ???
 						if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab02)
 						{
-							Print ( "LIGHTNING/FORCE ???" );
+							Print ( "LIGHTNING/WIND ???" );
 						};
-					};
-				}
-				// DAMAGE OVER TIME SPELLS ---------------------------------------------------------------------------
-				else if	(dmgDesc.spellID == SPL_Whirlwind)
-					||	(dmgDesc.spellID == SPL_Thunderstorm)
-					||	(dmgDesc.spellID == SPL_Firerain)
-					||	(dmgDesc.spellID == SPL_GreenTentacle)
-					||	(dmgDesc.spellID == SPL_SuckEnergy)
-					||	(dmgDesc.spellID == SPL_Swarm)
-					||	(dmgDesc.spellID == SPL_Acid)
-				{
-					// Dot: Increase dot
-					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab04)
-					{
-						dmg += dmg * 33 / 100;
 					};
 				};
 			};

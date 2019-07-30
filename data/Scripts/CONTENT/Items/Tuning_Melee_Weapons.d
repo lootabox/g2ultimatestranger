@@ -346,7 +346,7 @@ const int Range_Stab01				= 120;
 const int Value_Stab01				= 900;
 //tatsächlicher Zauber Stab	- NEUE INSTANZ //ADDON
 const int Damage_Stab02				= 20; 
-const int Condition_Stab02			= 25;
+const int Condition_Stab02			= 40;	// SPL_Cost_SummonWolf * 2
 const int Range_Stab02				= 110;
 const int Value_Stab02				= 850;
 //Wassermagier	- NEUE INSTANZ //ADDON

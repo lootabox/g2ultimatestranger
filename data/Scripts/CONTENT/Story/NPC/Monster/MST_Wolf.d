@@ -66,6 +66,12 @@ func void B_SetVisuals_Wolf()
 	Mdl_SetVisualBody		(self,	"Wol_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
+func void B_SetVisuals_BLACKWOLF()
+{
+	Mdl_SetVisual			(self, "Wolf.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Warg_Body",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
 
 //************
 //	Wolf    	
@@ -78,6 +84,35 @@ INSTANCE Wolf	(Mst_Default_Wolf)
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
 };
 
+//**********************************************
+//	Schwarzer Wolf  (MIS)
+//*********************************************
+
+INSTANCE BlackWolf	(Mst_Default_Wolf)
+{
+	name							=	"Black Wolf";
+	level							=	 6;
+	
+	//----- Attribute ----
+	attribute	[ATR_STRENGTH]		=	30;
+	attribute	[ATR_DEXTERITY]		=	30;
+	attribute	[ATR_HITPOINTS_MAX]	=	60;
+	attribute	[ATR_HITPOINTS]		=	60;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+	
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	30;
+	protection	[PROT_EDGE]			=	30;
+	protection	[PROT_POINT]		=	0;
+	protection	[PROT_FIRE]			=	30;
+	protection	[PROT_FLY]			=	30;
+	protection	[PROT_MAGIC]		=	0;
+	
+	B_SetVisuals_BLACKWOLF();
+	Npc_SetToFistMode(self);
+	//CreateInvItems (self, ItFoMuttonRaw, 1);
+};
 
 //*****************
 //	Summoned Wolf    	
@@ -91,17 +126,20 @@ INSTANCE Summoned_Wolf	(Mst_Default_Wolf)
 	level							=	0; //10
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	50;
-	attribute	[ATR_DEXTERITY]		=	50;
-	attribute	[ATR_HITPOINTS_MAX]	=	100;
-	attribute	[ATR_HITPOINTS]		=	100;
+	attribute	[ATR_STRENGTH]		=	30;
+	attribute	[ATR_DEXTERITY]		=	30;
+	attribute	[ATR_HITPOINTS_MAX]	=	60;
+	attribute	[ATR_HITPOINTS]		=	60;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	75;
-	protection	[PROT_EDGE]			=	75;
-	protection	[PROT_POINT]		=	25;
-	protection	[PROT_FIRE]			=	75;
-	protection	[PROT_FLY]			=	75;
+	protection	[PROT_BLUNT]		=	30;
+	protection	[PROT_EDGE]			=	30;
+	protection	[PROT_POINT]		=	0;
+	protection	[PROT_FIRE]			=	30;
+	protection	[PROT_FLY]			=	30;
+	protection	[PROT_MAGIC]		=	0;
 	
 	aivar[AIV_PARTYMEMBER] = TRUE;
 	B_SetAttitude (self, ATT_FRIENDLY); 
@@ -113,6 +151,38 @@ INSTANCE Summoned_Wolf	(Mst_Default_Wolf)
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
 };
 
+INSTANCE Summoned_BlackWolf	(Mst_Default_Wolf)
+{
+	name							=	"Summoned Black Wolf";
+	guild							=	GIL_SUMMONED_WOLF;
+	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_WOLF;
+	level							=	0; //10
+	
+	//----- Attribute ----
+	attribute	[ATR_STRENGTH]		=	30;
+	attribute	[ATR_DEXTERITY]		=	30;
+	attribute	[ATR_HITPOINTS_MAX]	=	60;
+	attribute	[ATR_HITPOINTS]		=	60;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+	
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	30;
+	protection	[PROT_EDGE]			=	30;
+	protection	[PROT_POINT]		=	0;
+	protection	[PROT_FIRE]			=	30;
+	protection	[PROT_FLY]			=	30;
+	protection	[PROT_MAGIC]		=	0;
+	
+	aivar[AIV_PARTYMEMBER] = TRUE;
+	B_SetAttitude (self, ATT_FRIENDLY); 
+	
+	start_aistate = ZS_MM_Rtn_Summoned;
+	
+	B_SetVisuals_BLACKWOLF();
+	Npc_SetToFistMode(self);
+	//CreateInvItems (self, ItFoMuttonRaw, 1);
+};
 
 //************
 //	YWolf    	

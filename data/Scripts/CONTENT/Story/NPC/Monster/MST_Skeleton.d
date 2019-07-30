@@ -11,7 +11,7 @@ PROTOTYPE Mst_Default_Skeleton(C_Npc)
 	level							=	30;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	100; //+50 Waffe
+	attribute	[ATR_STRENGTH]		=	100; //+25 Waffe
 	attribute	[ATR_DEXTERITY]		=	150;
 	attribute	[ATR_HITPOINTS_MAX]	=	150;
 	attribute	[ATR_HITPOINTS]		=	150;
@@ -115,7 +115,7 @@ INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
 	level							=	0; //30
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	100; //+50 Waffe
+	attribute	[ATR_STRENGTH]		=	100; //+25 Waffe
 	attribute	[ATR_DEXTERITY]		=	150;
 	attribute	[ATR_HITPOINTS_MAX]	=	150;
 	attribute	[ATR_HITPOINTS]		=	150;
@@ -128,6 +128,7 @@ INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
 	protection	[PROT_POINT]		=	175; 
 	protection	[PROT_FIRE]			=	125;
 	protection	[PROT_FLY]			=	125;
+	protection	[PROT_MAGIC]		=	0;
 	
 	fight_tactic	=	FAI_HUMAN_NORMAL;
 	
@@ -138,8 +139,6 @@ INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
 	B_SetAttitude (self, ATT_FRIENDLY); 
 	
 	start_aistate = ZS_MM_Rtn_Summoned;
-	
-	B_SetVisuals_Lesser_Skeleton();
 
 	EquipItem (self, ItMw_2H_Sword_M_01);
 	//EquipItem (self, ItRw_Sld_Bow); //FIXME Carsten: Bogen schieﬂt beim Skelett in Zeitlupe...
@@ -156,7 +155,7 @@ INSTANCE Lesser_Skeleton	(Mst_Default_Skeleton)
 	level							=	15;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	65; //+30 Waffe
+	attribute	[ATR_STRENGTH]		=	65; //+15 Waffe
 	attribute	[ATR_DEXTERITY]		=	75;
 	attribute	[ATR_HITPOINTS_MAX]	=	150;
 	attribute	[ATR_HITPOINTS]		=	150;
@@ -177,6 +176,42 @@ INSTANCE Lesser_Skeleton	(Mst_Default_Skeleton)
 	B_SetVisuals_Warrior_Skeleton();
 	
 	// ------ Waffe ------
+	EquipItem (self, ItMw_1h_MISC_Sword);
+};
+
+
+INSTANCE Summoned_Lesser_Skeleton (Mst_Default_Skeleton)
+{
+	name							=	"Summoned Lesser Skeleton";
+	guild							=	GIL_SUMMONED_SKELETON;
+	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_SKELETON;
+	level							=	0; //15
+
+	//----- Attribute ----	
+	attribute	[ATR_STRENGTH]		=	65; //+15 Waffe
+	attribute	[ATR_DEXTERITY]		=	75;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	//----- Protection ----
+	protection	[PROT_BLUNT]		=	80;
+	protection	[PROT_EDGE]			=	80;
+	protection	[PROT_POINT]		=	130; 
+	protection	[PROT_FIRE]			=	80;
+	protection	[PROT_FLY]			=	80;
+	
+	fight_tactic	=	FAI_HUMAN_NORMAL;
+	
+	// ------ visual ------
+	B_SetVisuals_Lesser_Skeleton();
+	
+	aivar[AIV_PARTYMEMBER] = TRUE;
+	B_SetAttitude (self, ATT_FRIENDLY); 
+	
+	start_aistate = ZS_MM_Rtn_Summoned;
+
 	EquipItem (self, ItMw_1h_MISC_Sword);
 };
 

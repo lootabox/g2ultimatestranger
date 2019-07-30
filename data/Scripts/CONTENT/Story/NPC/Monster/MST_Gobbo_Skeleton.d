@@ -83,7 +83,7 @@ INSTANCE Gobbo_Skeleton	(Mst_Default_Gobbo_Skeleton)
 
 INSTANCE Summoned_Gobbo_Skeleton (Mst_Default_Gobbo_Skeleton)
 {
-	name							= "Summoned Skeleton";
+	name							= "Summoned Goblin Skeleton";
 	guild							= GIL_SUMMONED_GOBBO_SKELETON;
 	aivar[AIV_MM_REAL_ID]			= ID_SUMMONED_GOBBO_SKELETON;
 	level							= 0;
@@ -98,6 +98,23 @@ INSTANCE Summoned_Gobbo_Skeleton (Mst_Default_Gobbo_Skeleton)
 	Npc_SetToFightMode (self, ItMw_1h_MISC_Sword); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 };
 
+
+INSTANCE Summoned_Lesser_Gobbo_Skeleton (Mst_Default_Gobbo_Skeleton)
+{
+	name							= "Summoned Lesser Goblin Skeleton";
+	guild							= GIL_SUMMONED_GOBBO_SKELETON;
+	aivar[AIV_MM_REAL_ID]			= ID_SUMMONED_GOBBO_SKELETON;
+	level							= 0;
+
+	aivar[AIV_PARTYMEMBER] = TRUE;
+	B_SetAttitude (self, ATT_FRIENDLY); 
+	
+	start_aistate = ZS_MM_Rtn_Summoned;
+	
+	B_SetVisuals_Gobbo_Skeleton();
+	
+	Npc_SetToFightMode (self, ItMw_1h_MISC_Sword); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
+};
 
 //************************************
 //	Gobbo_Skeleton im OW Dämonenturm	

@@ -18,7 +18,7 @@ INSTANCE Spell_WindFist (C_Spell_Proto)
 
 func int Spell_Logic_WindFist (var int manaInvested)
 {
-	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_WindFist, 4);
+	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_WindFist, 4, FALSE);
 };
 
 func void Spell_Cast_WindFist(var int spellLevel)

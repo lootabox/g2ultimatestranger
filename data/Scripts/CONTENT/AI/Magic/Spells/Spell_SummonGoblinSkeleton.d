@@ -2,7 +2,8 @@
 // SPL_SummonGoblinSkeleton
 // ************************
 
-const int SPL_Cost_SummonGoblinSkeleton		= 20;
+const int SPL_Cost_SummonGoblinSkeleton		= 40;
+const int SPL_Degen_SummonGoblinSkeleton	= 3;
 
 
 INSTANCE Spell_SummonGoblinSkeleton (C_Spell_Proto)	//ehem. Spell_Skeleton
@@ -13,19 +14,34 @@ INSTANCE Spell_SummonGoblinSkeleton (C_Spell_Proto)	//ehem. Spell_Skeleton
 
 func int Spell_Logic_SummonGoblinSkeleton (var int manaInvested)
 {	
-	return Spell_Logic_Basic(self, SPL_Cost_SummonGoblinSkeleton);
+	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
+	if (Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused))
+	{
+		return Spell_Logic_Invest(self, manaInvested, SPL_Cost_SummonGoblinSkeleton, 3, TRUE);
+	}
+	else
+	{
+		return Spell_Logic_Invest(self, manaInvested, SPL_Cost_SummonGoblinSkeleton, 2, TRUE);
+	};
 };
 
 func void Spell_Cast_SummonGoblinSkeleton()
 {
 	if (Npc_IsPlayer(self)) 
-	{		
-		Wld_SpawnNpcRange	(self,	SUMMONED_GOBBO_SKELETON,	1,	500);
+	{
+		if (Npc_GetActiveSpellLevel(self) > 2)
+		{
+			Wld_SpawnNpcRange	(self,	SUMMONED_GOBBO_SKELETON,			1,	500);
+		}
+		else
+		{
+			Wld_SpawnNpcRange	(self,	SUMMONED_LESSER_GOBBO_SKELETON,		1,	500);
+		};
 	}
 	else
 	{
-		Wld_SpawnNpcRange	(self,	GOBBO_SKELETON,	1,	500);
+		Wld_SpawnNpcRange	(self,	GOBBO_SKELETON,			1,	500);
 	};
-	
-	Spell_Cast_Basic(self, SPL_Cost_SummonGoblinSkeleton);
+
+	self.aivar[AIV_SelectSpell] += 1;
 };

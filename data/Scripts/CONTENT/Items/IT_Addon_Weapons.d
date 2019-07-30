@@ -80,28 +80,33 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 
 	damageTotal  		= 	Damage_Stab01;
 	damagetype 			=	DAM_BLUNT;
-	range    			=  	RANGE_Stab01;		
-	
-	on_equip			=	Equip_2H_03;
-	on_unequip			=	UnEquip_2H_03;
+	range    			=  	RANGE_Stab01;
 	
 	cond_atr[2]   		=	ATR_MANA_MAX;
 	cond_value[2]  		=	Condition_Stab01;
 	visual 				=	"ItMW_MageStaff_Good_2H_01.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF1";
+	mag_circle 			=	1;
 
 	description			= 	"Staff of the Fire Magicians";
 
+	TEXT[0]				= "Increases fire spell damage by 10.";
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
-	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_03;
+	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+INSTANCE ItMW_Addon_Stab01_Infused (C_Item) {
+	B_CopyWeapon(ItMW_Addon_Stab01_Infused, ItMW_Addon_Stab01);
+	description			= ConcatStrings(description, " (Infused)");
+	TEXT[0]				= "Increases fire spell damage by 10 and burning damage by 20%.";
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab02 (C_Item)
 {	
-	name 				=	"Staff of Magic";  
+	name 				=	"Staff of Summoning";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -111,51 +116,27 @@ INSTANCE ItMW_Addon_Stab02 (C_Item)
 
 	damageTotal  		= 	Damage_Stab02;
 	damagetype 			=	DAM_BLUNT;
-	range    			=  	RANGE_Stab02;		
-	
-	on_equip			=	Equip_Zauberstab;
-	on_unequip			=	UnEquip_Zauberstab;
+	range    			=  	RANGE_Stab02;
 	
 	cond_atr[2]   		=	ATR_MANA_MAX;
 	cond_value[2]  		=	Condition_Stab02;
 	visual 				=	"ItMW_MageStaff_Good_2H_02.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF2";
+	mag_circle 			=	1;
 
 	description			= 	name;
 
-	TEXT[0]				= NAME_Bonus_Mana;				COUNT[0]	= 20;//FIXME_FILLER
-
+	TEXT[0]				= "Summon degeneration is reduced by 1.";
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
-FUNC VOID Equip_Zauberstab()
-{
-	if Npc_IsPlayer (self)
-	{ 
-		Npc_ChangeAttribute (self, ATR_MANA_MAX,20);
-		Npc_ChangeAttribute (self, ATR_MANA,20);
-	};
-};
-FUNC VOID UnEquip_Zauberstab()
-{
-	if Npc_IsPlayer (self)
-	{ 
-		Npc_ChangeAttribute (self, ATR_MANA_MAX, - 20);
-		
-		if self.attribute [ATR_MANA]	>= 20
-		{
-			Npc_ChangeAttribute (self, ATR_MANA, - 20);
-		}
-		else
-		{
-			self.attribute[ATR_MANA] = 0;
-		};
-	};
-	
-	
+INSTANCE ItMW_Addon_Stab02_Infused (C_Item) {
+	B_CopyWeapon(ItMW_Addon_Stab02_Infused, ItMW_Addon_Stab02);
+	description			= ConcatStrings(description, " (Infused)");
+	TEXT[0]				= "Summon degeneration is reduced by 1 and second charge tier enabled.";
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab03 (C_Item)
@@ -170,23 +151,27 @@ INSTANCE ItMW_Addon_Stab03 (C_Item)
 
 	damageTotal  		= 	Damage_Stab03;
 	damagetype 			=	DAM_BLUNT;
-	range    			=  	RANGE_Stab03;		
-	
-	on_equip			=	Equip_2H_04;
-	on_unequip			=	UnEquip_2H_04;
+	range    			=  	RANGE_Stab03;
 	
 	cond_atr[2]   		=	ATR_MANA_MAX;
 	cond_value[2]  		=	Condition_Stab03;
 	visual 				=	"ItMW_MageStaff_Blades_2H_01.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF3";
+	mag_circle 			=	1;
 
 	description			= 	"Staff of the Water Mages";
 
+	TEXT[0]				= "???.";
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
-	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_04;
+	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMW_Addon_Stab03_Infused (C_Item) {
+	B_CopyWeapon(ItMW_Addon_Stab03_Infused, ItMW_Addon_Stab03);
+	description			= ConcatStrings(description, " (Infused)");
+	TEXT[0]				= "???. ???.";
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab04 (C_Item)
@@ -201,24 +186,28 @@ INSTANCE ItMW_Addon_Stab04 (C_Item)
 
 	damageTotal  		= 	Damage_Stab04;
 	damagetype 			=	DAM_BLUNT;
-	range    			=  	RANGE_Stab04;		
-	
-	on_equip			=	Equip_2H_04;
-	on_unequip			=	UnEquip_2H_04;
+	range    			=  	RANGE_Stab04;
 	
 	cond_atr[2]   		=	ATR_MANA_MAX;
 	cond_value[2]  		=	Condition_Stab04;
 	visual 				=	"ItMW_MageStaff_Good_2H_02.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF4";
+	mag_circle 			=	1;
 
 	description			= 	name;
 
-	TEXT[0]				= "Ulthar enchanted this staff.";
+	//TEXT[0]				= "Ulthar enchanted this staff.";
+	TEXT[0]				= "Spells cost 5 less mana.";
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
-	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_04;
+	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMW_Addon_Stab04_Infused (C_Item) {
+	B_CopyWeapon(ItMW_Addon_Stab04_Infused, ItMW_Addon_Stab04);
+	description			= ConcatStrings(description, " (Infused)");
+	TEXT[0]				= "Spells cost 5 less mana and charging spells is 30% faster.";
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab05 (C_Item)
@@ -232,23 +221,27 @@ INSTANCE ItMW_Addon_Stab05 (C_Item)
 
 	damageTotal  		= 	Damage_Stab05;
 	damagetype 			=	DAM_EDGE;
-	range    			=  	RANGE_Stab05;		
-	
-	on_equip			=	Equip_2H_05;
-	on_unequip			=	UnEquip_2H_05;
+	range    			=  	RANGE_Stab05;
 	
 	cond_atr[2]   		=	ATR_MANA_MAX;
 	cond_value[2]  		=	Condition_Stab05;
 	visual 				=	"ItMW_MageStaff_Blades_2H_01.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF5";
+	mag_circle 			=	1;
 
 	description			= 	name;
 
+	TEXT[0]				=  "Wind and lightning spells ignore up to 20 magic protection.";
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
-	TEXT[4]				= NAME_ADDON_BONUS_2H;			COUNT[4]	= Waffenbonus_05;
+	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+INSTANCE ItMW_Addon_Stab05_Infused (C_Item) {
+	B_CopyWeapon(ItMW_Addon_Stab05_Infused, ItMW_Addon_Stab05);
+	description			= ConcatStrings(description, " (Infused)");
+	TEXT[0]				= "Wind and lightning spells ignore up to 20 magic protection. ???.";
 };
 /********************************************************************************/
 INSTANCE ItMW_Addon_Hacker_1h_01 (C_Item) 

@@ -3,6 +3,7 @@
 // ******************
 
 const int SPL_Cost_SummonSkeleton			= 60;
+const int SPL_Degen_SummonSkeleton			= 4;
 
 
 INSTANCE Spell_SummonSkeleton (C_Spell_Proto)	//ehem. Spell_Skeleton
@@ -13,19 +14,34 @@ INSTANCE Spell_SummonSkeleton (C_Spell_Proto)	//ehem. Spell_Skeleton
 
 func int Spell_Logic_SummonSkeleton(var int manaInvested)
 {
-	return Spell_Logic_Basic(self, SPL_Cost_SummonSkeleton);
+	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
+	if (Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused))
+	{
+		return Spell_Logic_Invest(self, manaInvested, SPL_Cost_SummonSkeleton, 3, TRUE);
+	}
+	else
+	{
+		return Spell_Logic_Invest(self, manaInvested, SPL_Cost_SummonSkeleton, 2, TRUE);
+	};
 };
 
 func void Spell_Cast_SummonSkeleton()
 {
 	if (Npc_IsPlayer(self)) 
-	{		
-		Wld_SpawnNpcRange	(self,	Summoned_Skeleton,			1,	500);
+	{
+		if (Npc_GetActiveSpellLevel(self) > 2)
+		{
+			Wld_SpawnNpcRange	(self,	Summoned_Skeleton,			1,	500);
+		}
+		else
+		{
+			Wld_SpawnNpcRange	(self,	Summoned_Lesser_Skeleton,	1,	500);
+		};
 	}
 	else
 	{
 		Wld_SpawnNpcRange	(self,	Skeleton,			1,	500);
 	};
 
-	Spell_Cast_Basic(self, SPL_Cost_SummonSkeleton);
+	self.aivar[AIV_SelectSpell] += 1;
 };

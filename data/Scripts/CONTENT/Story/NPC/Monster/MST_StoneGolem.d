@@ -79,7 +79,7 @@ INSTANCE StoneGolem	(Mst_Default_StoneGolem)
 
 INSTANCE Summoned_Golem (Mst_Default_StoneGolem)
 {
-	name							=	"Summoned Golem";
+	name							=	"Summoned Stone Golem";
 	guild							=	GIL_SUMMONED_GOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_GOLEM;
 	level							=	0;
@@ -89,6 +89,30 @@ INSTANCE Summoned_Golem (Mst_Default_StoneGolem)
 	
 	start_aistate = ZS_MM_Rtn_Summoned;
 	
+	B_SetVisuals_StoneGolem();
+	Npc_SetToFistMode	(self);
+};
+
+INSTANCE Summoned_Magic_Golem	(Mst_Default_StoneGolem)
+{
+	name							=	"Summoned Magic Golem";
+	guild							=	GIL_SUMMONED_GOLEM;
+	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_GOLEM;
+	level							=	0;
+	
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	IMMUNE;
+	protection	[PROT_EDGE]			=	IMMUNE;
+	protection	[PROT_POINT]		=	IMMUNE;	
+	protection	[PROT_FIRE]			=	IMMUNE;
+	protection	[PROT_FLY]			=	IMMUNE;	
+	protection	[PROT_MAGIC]		=	IMMUNE;
+	
+	aivar[AIV_PARTYMEMBER] = TRUE;
+	B_SetAttitude (self, ATT_FRIENDLY); 
+	
+	start_aistate = ZS_MM_Rtn_Summoned;
+
 	B_SetVisuals_StoneGolem();
 	Npc_SetToFistMode	(self);
 };
