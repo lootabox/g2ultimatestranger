@@ -2,8 +2,9 @@
 // SPL_FireStorm  ALIAS INSTANTFIRESTORM
 // *************
 
-const int SPL_Cost_InstantFireStorm		= 25;
-const int SPL_Damage_InstantFireStorm 	= 100;
+const int SPL_Cost_InstantFireStorm			= 20;
+const int SPL_Damage_InstantFireStorm 		= 20;
+const int SPL_Damage_InstantFireStorm_dot 	= 40;
 
 INSTANCE Spell_Firestorm (C_Spell_Proto)
 {

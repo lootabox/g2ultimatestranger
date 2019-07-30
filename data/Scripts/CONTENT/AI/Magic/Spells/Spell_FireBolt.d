@@ -2,8 +2,9 @@
 // SPL_FireBolt
 // ************
 
-const int SPL_Cost_Firebolt		= 5;
-const int SPL_Damage_Firebolt 	= 25;
+const int SPL_Cost_Firebolt			= 5;
+const int SPL_Damage_Firebolt 		= 20;
+const int SPL_Damage_Firebolt_dot 	= 10;
 
 
 INSTANCE Spell_Firebolt (C_Spell_Proto)

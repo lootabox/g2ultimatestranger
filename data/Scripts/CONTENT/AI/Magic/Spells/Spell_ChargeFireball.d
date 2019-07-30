@@ -2,8 +2,9 @@
 // SPL_ChargeFireball
 // ******************
 
-const int SPL_Cost_ChargeFireball		= 40; //*4
-const int SPL_Damage_ChargeFireball 	= 75;
+const int SPL_Cost_ChargeFireball		= 20; //*4
+const int SPL_Damage_ChargeFireball 	= 40;
+const int SPL_Damage_ChargeFireball_dot = 20;
 
 INSTANCE Spell_ChargeFireball (C_Spell_Proto)
 {

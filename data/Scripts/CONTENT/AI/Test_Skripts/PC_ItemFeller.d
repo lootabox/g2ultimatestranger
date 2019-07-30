@@ -319,6 +319,14 @@ INSTANCE PC_Itemfeller(NPC_DEFAULT)
 	CreateInvItems(self,ItRu_ArmyOfDarkness,1);
 	CreateInvItems(self,ItRu_Shrink,1);
 	
+	CreateInvItems(self,ItRu_BeliarsRage,1);
+	CreateInvItems(self,ItRu_SuckEnergy,1);
+	CreateInvItems(self,ItRu_GreenTentacle,1);
+	CreateInvItems(self,ItRu_Swarm,1);
+	CreateInvItems(self,ItRu_Skull,1);
+	CreateInvItems(self,ItRu_SummonZombie,1);
+	CreateInvItems(self,ItRu_SummonGuardian,1);
+	
 	CreateInvItems(self,ItRu_Acid,1);
 	CreateInvItems(self,ItRu_AdanosBall,1);
 	CreateInvItems(self,ItRu_Explosion,1);

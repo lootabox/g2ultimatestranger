@@ -162,139 +162,120 @@ pristr = IntToString(dmg);
 
 			// Get equipped staff
 			wpn = Npc_GetEquippedMeleeWeapon(att);
-			if (Hlp_IsValidItem(wpn))
+
+			// FIRE SPELLS ---------------------------------------------------------------------------
+			if	(dmgDesc.spellID == SPL_Firebolt)
+			||	(dmgDesc.spellID == SPL_InstantFireball)
+			||	(dmgDesc.spellID == SPL_Firestorm)
+			||	(dmgDesc.spellID == SPL_ChargeFireball)
+			||	(dmgDesc.spellID == SPL_Pyrokinesis)
+			||	(dmgDesc.spellID == SPL_Firerain)
+			||	(dmgDesc.spellID == SPL_Explosion)
 			{
-				// FIRE SPELLS ---------------------------------------------------------------------------
-				if	(dmgDesc.spellID == SPL_Firebolt)
-				||	(dmgDesc.spellID == SPL_InstantFireball)
-				||	(dmgDesc.spellID == SPL_Firestorm)
-				||	(dmgDesc.spellID == SPL_ChargeFireball)
-				||	(dmgDesc.spellID == SPL_Pyrokinesis)
-				||	(dmgDesc.spellID == SPL_Firerain)
-				||	(dmgDesc.spellID == SPL_Explosion)
+				// Figure out burn dot
+				var int fire_dot;
+				if		(dmgDesc.spellID == SPL_Firebolt)			{ fire_dot = SPL_Damage_Firebolt_dot; }
+				else if	(dmgDesc.spellID == SPL_InstantFireball)	{ fire_dot = SPL_Damage_InstantFireball_dot; }
+				else if	(dmgDesc.spellID == SPL_Firestorm)			{ fire_dot = SPL_Damage_InstantFireStorm_dot; }
+				else if	(dmgDesc.spellID == SPL_ChargeFireball)		{ fire_dot = SPL_Damage_ChargeFireball_dot; }
+				else if	(dmgDesc.spellID == SPL_Pyrokinesis)		{ fire_dot = SPL_Damage_FireStorm_dot; }
+				else if	(dmgDesc.spellID == SPL_Firerain)			{ fire_dot = SPL_Damage_Firerain_dot; }
+				else if	(dmgDesc.spellID == SPL_Explosion)			{ fire_dot = SPL_Damage_Explosion_dot; };
+
+				// Fire staff: Damage Bonus (+10)
+				if (Hlp_IsItem(wpn, ItMW_Addon_Stab01))
+				|| (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
 				{
-					// Figure out burn dot
-					var int fire_dot;
-					if	(dmgDesc.spellID == SPL_Firebolt)
-					||	(dmgDesc.spellID == SPL_InstantFireball)
-					||	(dmgDesc.spellID == SPL_ChargeFireball)
-					||	(dmgDesc.spellID == SPL_Explosion)
+					// Fire staff: Burning (+20%)
+					if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
 					{
-						fire_dot = dmg / 3;
-						dmg -= fire_dot;
-					}
-					else if	(dmgDesc.spellID == SPL_Firestorm)
-						||	(dmgDesc.spellID == SPL_Pyrokinesis)
-					{
-						fire_dot = dmg * 2 / 3;
-						// Splash does not deal instant damage
-						if (STR_Compare(dmgDesc.visualFXStr, "VOB_MAGICBURN") == STR_EQUAL)	{ dmg = 0; }
-						else																{ dmg -= fire_dot; };
-					}
-					else if	(dmgDesc.spellID == SPL_Firerain)
-					{
-						fire_dot = dmg;
-						dmg = 0;
+						fire_dot = fire_dot * 120 / 100;
 					};
-					// HANDLE FIRE STAFF BONUS
-					if (Hlp_IsValidItem(wpn))
+					dmg += 10;
+				};
+				// Play burn FX on corpses for flavor in any case
+				if (dmg - prot >= vic.attribute[ATR_HITPOINTS])
+				{
+					Wld_StopEffect_Ext("VOB_MAGICBURN", vic, vic, FALSE);
+					Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
+				}
+				else if (dmg + fire_dot > prot)
+				{
+					// Reduce protection not negated by instant damage from dot
+					if (dmg < prot)
 					{
-						// Fire: Damage Bonus (+10)
-						if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
-						|| (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
-						{
-							// Fire: Burning (+20%)
-							if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab01)
-							{
-								fire_dot = fire_dot * 120 / 100;
-							};
-							dmg += 10;
-						};
+						fire_dot -= (prot - dmg);
+						prot = dmg;
 					};
-					// Play burn FX on corpses for flavor in any case
-					if (dmg - prot >= vic.attribute[ATR_HITPOINTS])
+
+					// Create dot debuff
+					if (fire_dot > 0)
 					{
+						burn_dot_apply(vic, fire_dot, att);
 						Wld_StopEffect_Ext("VOB_MAGICBURN", vic, vic, FALSE);
 						Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
+					};
+				};
+			}
+			// ICE SPELLS ---------------------------------------------------------------------------
+			else if	(dmgDesc.spellID == SPL_Icebolt)
+				||	(dmgDesc.spellID == SPL_IceLance)
+				||	(dmgDesc.spellID == SPL_IceCube)
+				||	(dmgDesc.spellID == SPL_IceWave)
+				||	(dmgDesc.spellID == SPL_Geyser)
+				||	(dmgDesc.spellID == SPL_WaterFist)
+				||	(dmgDesc.spellID == SPL_Thunderstorm)
+			{
+				// Ice staff: Debuff
+				if (Hlp_IsItem(wpn, ItMW_Addon_Stab03))
+				|| (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
+				{
+					Print ( "ICE DEBUFF 1" );
+					if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
+					{
+						Print ( "ICE DEBUFF 2" );
+					};
+				};
+				
+
+				// Apply ice cube dot, add remainder to main damage
+				if ((dmgDesc.spellID == SPL_IceCube)
+				||	(dmgDesc.spellID == SPL_IceWave))
+				&& (!C_NpcIsFireBase(vic)) // firebase immune to freeze
+				&& (!C_NpcIsIceBase(vic)) // icebase immune to freeze
+				{
+					if (dmg >= prot)
+					{
+						freeze_dot_apply(vic, SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE, att);
 					}
-					else if (dmg + fire_dot > prot)
+					else if (dmg + SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE > prot)
 					{
-						// Reduce protection not negated by instant damage from dot
-						if (dmg < prot)
-						{
-							fire_dot -= (prot - dmg);
-							prot = dmg;
-						};
-
-						// Create dot debuff
-						if (fire_dot > 0)
-						{
-							burn_dot_apply(vic, fire_dot, att);
-							Wld_StopEffect_Ext("VOB_MAGICBURN", vic, vic, FALSE);
-							Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
-						};
+						freeze_dot_apply(vic, dmg + SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE - prot, att);
 					};
-				}
-				// ICE SPELLS ---------------------------------------------------------------------------
-				else if	(dmgDesc.spellID == SPL_Icebolt)
-					||	(dmgDesc.spellID == SPL_IceLance)
-					||	(dmgDesc.spellID == SPL_IceCube)
-					||	(dmgDesc.spellID == SPL_IceWave)
-					||	(dmgDesc.spellID == SPL_Geyser)
-					||	(dmgDesc.spellID == SPL_WaterFist)
-					||	(dmgDesc.spellID == SPL_Thunderstorm)
+				};
+			}
+			// WIND AND LIGHTNING SPELLS ---------------------------------------------------------------------------
+			else if	(dmgDesc.spellID == SPL_Zap)
+				||	(dmgDesc.spellID == SPL_ChargeZap)
+				||	(dmgDesc.spellID == SPL_LightningFlash)
+				||	(dmgDesc.spellID == SPL_AdanosBall)
+				||	(dmgDesc.spellID == SPL_Whirlwind)
+				||	(dmgDesc.spellID == SPL_Extricate)
+				||	(dmgDesc.spellID == SPL_WindFist)
+			{
+				// Lightning/Wind staff: Ignore protection
+				if (Hlp_IsItem(wpn, ItMW_Addon_Stab05))
+				|| (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
 				{
-					// Ice: Debuff
-					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab03)
-					|| (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab03)
-					{
-						Print ( "ICE DEBUFF 1" );
-						if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab03)
-						{
-							Print ( "ICE DEBUFF 2" );
-						};
-					};
+					if (prot < 20)
+					{ dmg += prot; }
+					else
+					{ dmg += 20; };
 					
-
-					// Apply ice cube dot, add remainder to main damage
-					if ((dmgDesc.spellID == SPL_IceCube)
-					||	(dmgDesc.spellID == SPL_IceWave))
-					&& (!C_NpcIsFireBase(vic)) // firebase immune to freeze
-					&& (!C_NpcIsIceBase(vic)) // icebase immune to freeze
+					// Lightning/Wind staff: ???
+					if (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
 					{
-						if (dmg >= prot)
-						{
-							freeze_dot_apply(vic, SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE, att);
-						}
-						else if (dmg + SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE > prot)
-						{
-							freeze_dot_apply(vic, dmg + SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE - prot, att);
-						};
-					};
-				}
-				// WIND AND LIGHTNING SPELLS ---------------------------------------------------------------------------
-				else if	(dmgDesc.spellID == SPL_Zap)
-					||	(dmgDesc.spellID == SPL_ChargeZap)
-					||	(dmgDesc.spellID == SPL_LightningFlash)
-					||	(dmgDesc.spellID == SPL_AdanosBall)
-					||	(dmgDesc.spellID == SPL_Whirlwind)
-					||	(dmgDesc.spellID == SPL_Extricate)
-					||	(dmgDesc.spellID == SPL_WindFist)
-				{
-					// Lightning/Wind: Ignore protection
-					if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab02)
-					|| (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab02)
-					{
-						if (prot < 20)
-						{ dmg += prot; }
-						else
-						{ dmg += 20; };
-						
-						// Lightning/Wind: ???
-						if (Hlp_GetInstanceID(wpn) == ItMW_Addon_Stab02)
-						{
-							Print ( "LIGHTNING/WIND ???" );
-						};
+						Print ( "LIGHTNING/WIND ???" );
 					};
 				};
 			};

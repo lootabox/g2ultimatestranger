@@ -28,7 +28,7 @@ const int VENOM_BLOODFLY_DURATION_SEC = 20;
 const int VENOM_SWAMPDRONE_EXPLOSION_TOTAL_DAMAGE = 50;
 const int VENOM_SWAMPDRONE_EXPLOSION_DURATION_SEC = 10;
 
-const int FIRE_SPELL_DOT_VFX_DURATION = 4000;
+const int FIRE_SPELL_DOT_VFX_DURATION_MS = 4000;
 
 //######################################################
 // DOT general methods and dot prototype
@@ -61,7 +61,7 @@ func void venom_dot_tick(var int bh) {
         ptr = Buff_GetNpcOrigin(bh);
         if (!ptr)
         {
-            B_MagicHurtNpc(n, n, 1);
+            Npc_ChangeAttribute (n, ATR_HITPOINTS, -1);
         }
         else
         {
@@ -123,7 +123,7 @@ func void freeze_dot_tick(var int bh) {
         ptr = Buff_GetNpcOrigin(bh);
         if (!ptr)
         {
-            B_MagicHurtNpc(n, n, tickdmg);
+            Npc_ChangeAttribute (n, ATR_HITPOINTS, -tickdmg);
         }
         else
         {
@@ -175,7 +175,7 @@ func void burn_dot_tick(var int bh) {
         ptr = Buff_GetNpcOrigin(bh);
         if (!ptr)
         {
-            B_MagicHurtNpc(n, n, tickdmg);
+            Npc_ChangeAttribute (n, ATR_HITPOINTS, -tickdmg);
         }
         else
         {
@@ -195,7 +195,7 @@ func void burn_dot_tick(var int bh) {
 
 instance burn_dot(lCBuff)
 {
-    durationMS = FIRE_SPELL_DOT_VFX_DURATION;
+    durationMS = FIRE_SPELL_DOT_VFX_DURATION_MS;
     tickMS = 1000;
     OnTick = SAVE_GetFuncID(burn_dot_tick);
 };

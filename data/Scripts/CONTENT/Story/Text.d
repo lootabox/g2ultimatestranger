@@ -722,6 +722,7 @@ const string NAME_Dam_Magic		= "Magic damage:";
 const string NAME_Dam_Magic_Per		= "Magic damage per tier:";
 
 const string NAME_Dam_MagicDot			= "Magic damage over time:";
+const string NAME_Dam_MagicDot_Per		= "Magic damage over time per tier:";
 const string NAME_Dam_MagicDotFreeze	= "Magic damage over time (freezes targets):";
 
 //const string NAME_Damage		= "Damage:";

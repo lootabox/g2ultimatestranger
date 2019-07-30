@@ -3,8 +3,9 @@
 // SPL_Explosion (mud-freak)
 // *************************
 
-const int SPL_Cost_Explosion       = 35;
-const int SPL_Damage_Explosion     = 165;
+const int SPL_Cost_Explosion        = 50;
+const int SPL_Damage_Explosion      = 100;
+const int SPL_Damage_Explosion_dot  = 30;
 
 INSTANCE Spell_Explosion (C_Spell_Proto) {
     time_per_mana           = 0;
