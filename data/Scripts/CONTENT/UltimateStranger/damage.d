@@ -173,14 +173,14 @@ pristr = IntToString(dmg);
 			||	(dmgDesc.spellID == SPL_Explosion)
 			{
 				// Figure out burn dot
-				var int fire_dot;
-				if		(dmgDesc.spellID == SPL_Firebolt)			{ fire_dot = SPL_Damage_Firebolt_dot; }
-				else if	(dmgDesc.spellID == SPL_InstantFireball)	{ fire_dot = SPL_Damage_InstantFireball_dot; }
-				else if	(dmgDesc.spellID == SPL_Firestorm)			{ fire_dot = SPL_Damage_InstantFireStorm_dot; }
-				else if	(dmgDesc.spellID == SPL_ChargeFireball)		{ fire_dot = SPL_Damage_ChargeFireball_dot; }
-				else if	(dmgDesc.spellID == SPL_Pyrokinesis)		{ fire_dot = SPL_Damage_FireStorm_dot; }
-				else if	(dmgDesc.spellID == SPL_Firerain)			{ fire_dot = SPL_Damage_Firerain_dot; }
-				else if	(dmgDesc.spellID == SPL_Explosion)			{ fire_dot = SPL_Damage_Explosion_dot; };
+				var int fireDot;
+				if		(dmgDesc.spellID == SPL_Firebolt)			{ fireDot = SPL_Damage_Firebolt_dot; }
+				else if	(dmgDesc.spellID == SPL_InstantFireball)	{ fireDot = SPL_Damage_InstantFireball_dot; }
+				else if	(dmgDesc.spellID == SPL_Firestorm)			{ fireDot = SPL_Damage_InstantFireStorm_dot; }
+				else if	(dmgDesc.spellID == SPL_ChargeFireball)		{ fireDot = SPL_Damage_ChargeFireball_dot; }
+				else if	(dmgDesc.spellID == SPL_Pyrokinesis)		{ fireDot = SPL_Damage_FireStorm_dot; }
+				else if	(dmgDesc.spellID == SPL_Firerain)			{ fireDot = SPL_Damage_Firerain_dot; }
+				else if	(dmgDesc.spellID == SPL_Explosion)			{ fireDot = SPL_Damage_Explosion_dot; };
 
 				// Fire staff: Damage Bonus (+10)
 				if (Hlp_IsItem(wpn, ItMW_Addon_Stab01))
@@ -189,7 +189,7 @@ pristr = IntToString(dmg);
 					// Fire staff: Burning (+20%)
 					if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
 					{
-						fire_dot = fire_dot * 120 / 100;
+						fireDot = fireDot * 120 / 100;
 					};
 					dmg += 10;
 				};
@@ -199,19 +199,19 @@ pristr = IntToString(dmg);
 					Wld_StopEffect_Ext("VOB_MAGICBURN", vic, vic, FALSE);
 					Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
 				}
-				else if (dmg + fire_dot > prot)
+				else if (dmg + fireDot > prot)
 				{
 					// Reduce protection not negated by instant damage from dot
 					if (dmg < prot)
 					{
-						fire_dot -= (prot - dmg);
+						fireDot -= (prot - dmg);
 						prot = dmg;
 					};
 
 					// Create dot debuff
-					if (fire_dot > 0)
+					if (fireDot > 0)
 					{
-						burn_dot_apply(vic, fire_dot, att);
+						burn_dot_apply(vic, fireDot, att);
 						Wld_StopEffect_Ext("VOB_MAGICBURN", vic, vic, FALSE);
 						Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
 					};
@@ -244,14 +244,11 @@ pristr = IntToString(dmg);
 				&& (!C_NpcIsFireBase(vic)) // firebase immune to freeze
 				&& (!C_NpcIsIceBase(vic)) // icebase immune to freeze
 				{
-					if (dmg >= prot)
-					{
-						freeze_dot_apply(vic, SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE, att);
-					}
-					else if (dmg + SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE > prot)
-					{
-						freeze_dot_apply(vic, dmg + SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE - prot, att);
-					};
+					var int freezeDuration; freezeDuration = (dmg + SPL_FREEZE_DAMAGE * SPL_FREEZE_TIME - prot) / SPL_FREEZE_DAMAGE;
+					if		(freezeDuration > SPL_FREEZE_TIME)		{ self.aivar[AIV_FreezeStateTime] = 0; }
+					else if	(freezeDuration > 0)					{ self.aivar[AIV_FreezeStateTime] = SPL_FREEZE_TIME - freezeDuration; }
+					else											{ self.aivar[AIV_FreezeStateTime] = SPL_FREEZE_TIME + 1; };
+					Print(ConcatStrings("Start: ", IntToString(self.aivar[AIV_FreezeStateTime])));
 				};
 			}
 			// WIND AND LIGHTNING SPELLS ---------------------------------------------------------------------------

@@ -5,7 +5,7 @@
 const int	SPL_Cost_IceCube			=	40;
 const int	SPL_Damage_IceCube			=	60;		// initial hit
 const int   SPL_FREEZE_DAMAGE		 	=	4;		// IceCube, IceWave
-const int	SPL_TIME_FREEZE				=	10;		// IceCube, IceWave
+const int	SPL_FREEZE_TIME				=	10;		// IceCube, IceWave
 
 //Achtung: wenn bei FREEZE (19) die Werte ge‰ndert werden, muﬂ auch die Lebensdauer der PFX angepasst werden
 

@@ -4815,18 +4815,25 @@ instance spellFX_Thunderspell_TARGET_CHILD11		(CFx_Base_Proto)		// gehört zu FX-
 
 
 // HUMAN oder VOB ist eingefroren von IceSpell
-
-
 instance spellFX_IceSpell_SENDPERCEPTION(CFx_Base_Proto)
 {
-		visname_S 			= "MFX_IceSpell_Target";
-		visAlpha			= 1;
-		emtrjmode_s 		= "FIXED";
+		//visname_S 			= "MFX_IceSpell_Target";
+		//visAlpha			= 1;
+		//emtrjmode_s 		= "FIXED";
 		sendAssessMagic		= 1;
-		emAdjustShpToOrigin = 1;
-		sfxid				= "MFX_Icecube_Target";
-
+		//emAdjustShpToOrigin = 1;
+		//sfxid				= "MFX_Icecube_Target";
 };
+instance spellFX_IceSpell_Freeze_1(CFx_Base_Proto)	{ visname_S = "MFX_IceSpell_Target_1";  visAlpha = 1; emtrjmode_s = "FIXED"; emAdjustShpToOrigin = 1; sfxid = "MFX_Icecube_Target";};
+instance spellFX_IceSpell_Freeze_2(CFx_Base_Proto)	{ visname_S = "MFX_IceSpell_Target_2";  visAlpha = 1; emtrjmode_s = "FIXED"; emAdjustShpToOrigin = 1; sfxid = "MFX_Icecube_Target";};
+instance spellFX_IceSpell_Freeze_3(CFx_Base_Proto)	{ visname_S = "MFX_IceSpell_Target_3";  visAlpha = 1; emtrjmode_s = "FIXED"; emAdjustShpToOrigin = 1; sfxid = "MFX_Icecube_Target";};
+instance spellFX_IceSpell_Freeze_4(CFx_Base_Proto)	{ visname_S = "MFX_IceSpell_Target_4";  visAlpha = 1; emtrjmode_s = "FIXED"; emAdjustShpToOrigin = 1; sfxid = "MFX_Icecube_Target";};
+instance spellFX_IceSpell_Freeze_5(CFx_Base_Proto)	{ visname_S = "MFX_IceSpell_Target_5";  visAlpha = 1; emtrjmode_s = "FIXED"; emAdjustShpToOrigin = 1; sfxid = "MFX_Icecube_Target";};
+instance spellFX_IceSpell_Freeze_6(CFx_Base_Proto)	{ visname_S = "MFX_IceSpell_Target_6";  visAlpha = 1; emtrjmode_s = "FIXED"; emAdjustShpToOrigin = 1; sfxid = "MFX_Icecube_Target";};
+instance spellFX_IceSpell_Freeze_7(CFx_Base_Proto)	{ visname_S = "MFX_IceSpell_Target_7";  visAlpha = 1; emtrjmode_s = "FIXED"; emAdjustShpToOrigin = 1; sfxid = "MFX_Icecube_Target";};
+instance spellFX_IceSpell_Freeze_8(CFx_Base_Proto)	{ visname_S = "MFX_IceSpell_Target_8";  visAlpha = 1; emtrjmode_s = "FIXED"; emAdjustShpToOrigin = 1; sfxid = "MFX_Icecube_Target";};
+instance spellFX_IceSpell_Freeze_9(CFx_Base_Proto)	{ visname_S = "MFX_IceSpell_Target_9";  visAlpha = 1; emtrjmode_s = "FIXED"; emAdjustShpToOrigin = 1; sfxid = "MFX_Icecube_Target";};
+instance spellFX_IceSpell_Freeze_10(CFx_Base_Proto)	{ visname_S = "MFX_IceSpell_Target_10"; visAlpha = 1; emtrjmode_s = "FIXED"; emAdjustShpToOrigin = 1; sfxid = "MFX_Icecube_Target";};
 
 // Earth Quake FX
 

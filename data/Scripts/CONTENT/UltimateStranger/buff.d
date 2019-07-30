@@ -6,12 +6,10 @@
 
 var int TAL_DOT_VENOM;
 var int TAL_DOT_BURN;
-var int TAL_DOT_FREEZE;
 func void InitBuffTalents() {
     if (!TAL_DOT_VENOM) {
         TAL_DOT_VENOM = TAL_CreateTalent();
         TAL_DOT_BURN = TAL_CreateTalent();
-        TAL_DOT_FREEZE = TAL_CreateTalent();
     };
 };
 
@@ -106,59 +104,6 @@ instance venom_swampdrone_explosion(lCBuff) {
     tickMS = 1000 * VENOM_SWAMPDRONE_EXPLOSION_DURATION_SEC / VENOM_SWAMPDRONE_EXPLOSION_TOTAL_DAMAGE;
     OnApply = SAVE_GetFuncID(venom_swampdrone_explosion_apply);
     OnRemoved = SAVE_GetFuncID(venom_dot_remove);
-};
-
-//######################################################
-// For smooth icecube dot
-//######################################################
-
-func void freeze_dot_tick(var int bh) {
-    var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
-    var lCBuff b; b = get(bh);
-
-    if (n.attribute[ATR_HITPOINTS] > 0 && TAL_GetValue(n, TAL_DOT_FREEZE) > 0)
-    {
-        var int tickdmg; tickdmg = TAL_GetValue(n, TAL_DOT_FREEZE);
-        if (tickdmg > SPL_FREEZE_DAMAGE) { tickdmg = SPL_FREEZE_DAMAGE; };
-        ptr = Buff_GetNpcOrigin(bh);
-        if (!ptr)
-        {
-            Npc_ChangeAttribute (n, ATR_HITPOINTS, -tickdmg);
-        }
-        else
-        {
-            var c_npc o; o = _^(ptr);
-            B_MagicHurtNpc(o, n, tickdmg);
-            if (n.attribute[ATR_HITPOINTS] <= 0)
-            {
-                Npc_SendPassivePerc (o, PERC_ASSESSMURDER, o, o);
-            };
-        };
-        TAL_ModValue(n, TAL_DOT_FREEZE, -tickdmg);
-    } else {
-        TAL_SetValue(n, TAL_DOT_FREEZE, 0);
-        Buff_Remove(bh);
-    };
-};
-
-func void freeze_dot_remove(var int bh) {
-    var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
-    Wld_StopEffect_Ext("spellFX_IceSpell_SENDPERCEPTION", 0, n, FALSE); // doesnt work
-};
-
-instance freeze_dot(lCBuff)
-{
-    durationMS = 3600000; // 1h
-    tickMS = 1000;
-    OnTick = SAVE_GetFuncID(freeze_dot_tick);
-    OnRemoved = SAVE_GetFuncID(freeze_dot_remove);
-};
-
-func void freeze_dot_apply(var c_npc npc, var int total_damage, var c_npc origin)
-{
-    Buff_RemoveAll(npc, freeze_dot);
-    TAL_SetValue(npc, TAL_DOT_FREEZE, total_damage);
-    Buff_Apply(npc, freeze_dot, origin);
 };
 
 //######################################################

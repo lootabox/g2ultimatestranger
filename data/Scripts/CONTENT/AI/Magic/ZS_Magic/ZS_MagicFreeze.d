@@ -7,20 +7,18 @@ func void B_RestartFreeze()
 	if (Npc_GetLastHitSpellID(self) == SPL_IceCube)
 	|| (Npc_GetLastHitSpellID(self) == SPL_IceWave)
 	{
-		// Get total damage (main + dot - prot) -> get freeze duration (total / dot_dps)
-		var int freezeDuration; freezeDuration = (SPL_Damage_IceCube + SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE - self.protection[PROT_MAGIC]) / SPL_FREEZE_DAMAGE;
-		if (freezeDuration > 0)
-		{
-			// No exceeding max duration
-			if (freezeDuration > SPL_TIME_FREEZE) { freezeDuration = SPL_TIME_FREEZE; };
-
-			self.aivar[AIV_FreezeStateTime] = SPL_TIME_FREEZE - freezeDuration;
-			Npc_SetStateTime(self, self.aivar[AIV_FreezeStateTime]);
-		}
-		else
-		{
-			self.aivar[AIV_FreezeStateTime] = SPL_TIME_FREEZE + 1;
-		};
+		// Initial state time is set by damage calculation
+		Npc_SetStateTime(self, self.aivar[AIV_FreezeStateTime]);
+		if		(self.aivar[AIV_FreezeStateTime] == 0)	{ Wld_PlayEffect ("spellFX_IceSpell_Freeze_10", self, self, 0, 0, 0, FALSE); }
+		else if	(self.aivar[AIV_FreezeStateTime] == 1)	{ Wld_PlayEffect ("spellFX_IceSpell_Freeze_9", self, self, 0, 0, 0, FALSE); }
+		else if	(self.aivar[AIV_FreezeStateTime] == 2)	{ Wld_PlayEffect ("spellFX_IceSpell_Freeze_8", self, self, 0, 0, 0, FALSE); }
+		else if	(self.aivar[AIV_FreezeStateTime] == 3)	{ Wld_PlayEffect ("spellFX_IceSpell_Freeze_7", self, self, 0, 0, 0, FALSE); }
+		else if	(self.aivar[AIV_FreezeStateTime] == 4)	{ Wld_PlayEffect ("spellFX_IceSpell_Freeze_6", self, self, 0, 0, 0, FALSE); }
+		else if	(self.aivar[AIV_FreezeStateTime] == 5)	{ Wld_PlayEffect ("spellFX_IceSpell_Freeze_5", self, self, 0, 0, 0, FALSE); }
+		else if	(self.aivar[AIV_FreezeStateTime] == 6)	{ Wld_PlayEffect ("spellFX_IceSpell_Freeze_4", self, self, 0, 0, 0, FALSE); }
+		else if	(self.aivar[AIV_FreezeStateTime] == 7)	{ Wld_PlayEffect ("spellFX_IceSpell_Freeze_3", self, self, 0, 0, 0, FALSE); }
+		else if	(self.aivar[AIV_FreezeStateTime] == 8)	{ Wld_PlayEffect ("spellFX_IceSpell_Freeze_2", self, self, 0, 0, 0, FALSE); }
+		else if	(self.aivar[AIV_FreezeStateTime] == 9)	{ Wld_PlayEffect ("spellFX_IceSpell_Freeze_1", self, self, 0, 0, 0, FALSE); };
 	};
 };
 
@@ -40,7 +38,6 @@ func int ZS_MagicFreeze()
 		AI_PlayAniBS 		(self, "T_STAND_2_FREEZE_VICTIM", BS_UNCONSCIOUS);
 	};
 	B_ClearRuneInv(self);
-	//self.aivar[AIV_FreezeStateTime] = 0;
 	B_RestartFreeze();
 };
 
@@ -49,7 +46,7 @@ func int ZS_MagicFreeze()
 func int ZS_MagicFreeze_Loop ()
 {	
 	// EXIT LOOP IF...
-	if (self.aivar[AIV_FreezeStateTime] > SPL_TIME_FREEZE)
+	if (self.aivar[AIV_FreezeStateTime] >= SPL_FREEZE_TIME)
 	{
 		return LOOP_END;
 	};
@@ -58,6 +55,8 @@ func int ZS_MagicFreeze_Loop ()
 	if (Npc_GetStateTime(self) != self.aivar[AIV_FreezeStateTime])
 	{
 		self.aivar[AIV_FreezeStateTime] = Npc_GetStateTime(self);
+		Print(IntToString(self.aivar[AIV_FreezeStateTime]));
+		B_MagicHurtNpc 		(other,	self, SPL_FREEZE_DAMAGE);
 	};
 	
 	return				LOOP_CONTINUE;

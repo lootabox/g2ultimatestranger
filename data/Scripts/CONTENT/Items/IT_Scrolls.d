@@ -864,7 +864,7 @@ INSTANCE ItSc_IceCube (C_Item)
 	COUNT	[2]			=	SPL_Damage_IceCube;
 	
 	TEXT	[3]			=	NAME_Dam_MagicDotFreeze;
-	COUNT	[3]			=	SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE;
+	COUNT	[3]			=	SPL_FREEZE_DAMAGE * SPL_FREEZE_TIME;
 	
 	TEXT	[4]			=	NAME_DamagePerSec;
 	COUNT	[4]			=	SPL_FREEZE_DAMAGE;
@@ -1078,7 +1078,7 @@ INSTANCE ItSc_IceWave (C_Item)
 	COUNT	[2]			=	SPL_Damage_IceCube;
 	
 	TEXT	[3]			=	NAME_Dam_MagicDotFreeze;
-	COUNT	[3]			=	SPL_FREEZE_DAMAGE * SPL_TIME_FREEZE;
+	COUNT	[3]			=	SPL_FREEZE_DAMAGE * SPL_FREEZE_TIME;
 	
 	TEXT	[4]			=	NAME_DamagePerSec;
 	COUNT	[4]			=	SPL_FREEZE_DAMAGE;

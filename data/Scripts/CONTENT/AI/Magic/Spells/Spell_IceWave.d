@@ -3,7 +3,7 @@
 // ***********
 
 const int	SPL_Cost_IceWave			=	120;
-//SPL_FREEZE_DAMAGE	und SPL_TIME_FREEZE	siehe SPL_IceCube
+//SPL_FREEZE_DAMAGE	und SPL_FREEZE_TIME	siehe SPL_IceCube
 
 
 INSTANCE Spell_IceWave (C_Spell_Proto)

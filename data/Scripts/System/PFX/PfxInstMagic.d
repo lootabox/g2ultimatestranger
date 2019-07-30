@@ -6429,15 +6429,13 @@ INSTANCE MFX_ICECUBE_CAST (C_PARTICLEFX)
      visalphastart = 255;
 };
 
-
-INSTANCE MFX_ICESPELL_TARGET (C_PARTICLEFX)
+PROTOTYPE MFX_ICESPELL_TARGET (C_PARTICLEFX)
 {
      ppsvalue = 100;
      ppsscalekeys_s = "1";
      ppsissmooth = 1;
      ppsfps = 10;
      ppscreateem_s = "MFX_ICESPELL_TARGETEND";
-     ppscreateemdelay = 20000;
      shptype_s = "BOX";
      shpfor_s = "object";
      shpoffsetvec_s = "0 0 0";
@@ -6455,7 +6453,6 @@ INSTANCE MFX_ICESPELL_TARGET (C_PARTICLEFX)
      dirangleheadvar = 180;
      dirangleelevvar = 180;
      velavg = 9.99999997e-007;
-     lsppartavg = 20000;
      flygravity_s = "0 0 0";
      visname_s = "MFX_FREEZE_MULTIICE.TGA";
      visorientation_s = "VELO";
@@ -6470,6 +6467,17 @@ INSTANCE MFX_ICESPELL_TARGET (C_PARTICLEFX)
      visalphastart = 255;
      visalphaend = 255;
 };
+
+INSTANCE MFX_ICESPELL_TARGET_1 (MFX_ICESPELL_TARGET)    { ppscreateemdelay = 1000;  lsppartavg = 1000; };
+INSTANCE MFX_ICESPELL_TARGET_2 (MFX_ICESPELL_TARGET)    { ppscreateemdelay = 2000;  lsppartavg = 2000; };
+INSTANCE MFX_ICESPELL_TARGET_3 (MFX_ICESPELL_TARGET)    { ppscreateemdelay = 3000;  lsppartavg = 3000; };
+INSTANCE MFX_ICESPELL_TARGET_4 (MFX_ICESPELL_TARGET)    { ppscreateemdelay = 4000;  lsppartavg = 4000; };
+INSTANCE MFX_ICESPELL_TARGET_5 (MFX_ICESPELL_TARGET)    { ppscreateemdelay = 5000;  lsppartavg = 5000; };
+INSTANCE MFX_ICESPELL_TARGET_6 (MFX_ICESPELL_TARGET)    { ppscreateemdelay = 6000;  lsppartavg = 6000; };
+INSTANCE MFX_ICESPELL_TARGET_7 (MFX_ICESPELL_TARGET)    { ppscreateemdelay = 7000;  lsppartavg = 7000; };
+INSTANCE MFX_ICESPELL_TARGET_8 (MFX_ICESPELL_TARGET)    { ppscreateemdelay = 8000;  lsppartavg = 8000; };
+INSTANCE MFX_ICESPELL_TARGET_9 (MFX_ICESPELL_TARGET)    { ppscreateemdelay = 9000;  lsppartavg = 9000; };
+INSTANCE MFX_ICESPELL_TARGET_10 (MFX_ICESPELL_TARGET)   { ppscreateemdelay = 10000; lsppartavg = 10000; };
 
 
 INSTANCE MFX_ICESPELL_TARGETEND (C_PARTICLEFX)
