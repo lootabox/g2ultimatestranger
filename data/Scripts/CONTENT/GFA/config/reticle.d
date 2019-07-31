@@ -193,6 +193,18 @@ func void GFA_GetSpellReticle(var C_Npc target, var int spellID, var C_Spell spe
     || (STR_IndexOf(spellName, "SHRINK") != -1) {
         // Psyonic spells
         reticle.texture = RETICLE_EDGES;
+    } else if (spellID == SPL_SummonGoblinSkeleton)
+    || (spellID == SPL_SummonWolf)
+    || (spellID == SPL_SummonSkeleton)
+    || (spellID == SPL_SummonGolem)
+    || (spellID == SPL_SummonDemon)
+    || (spellID == SPL_ArmyOfDarkness)
+    || (spellID == SPL_SummonGuardian)
+    || (spellID == SPL_SummonZombie)
+    || (spellID == SPL_SummonMud)
+    {
+        // No reticle for summons
+        reticle.texture = "";
     } else {
         // Set this as 'default' texture here (if none of the conditions above is met)
         reticle.texture = RETICLE_EDGES;

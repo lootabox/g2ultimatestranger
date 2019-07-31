@@ -8,25 +8,19 @@ const int SPL_Degen_SummonGuardian			= 3;
 
 INSTANCE Spell_SummonGuardian (C_Spell_Proto)	
 {
-	time_per_mana			= 0;
-	targetCollectAlgo		= TARGET_COLLECT_NONE;
+	time_per_mana			= 25;
+	targetCollectAlgo		= TARGET_COLLECT_FOCUS_FALLBACK_NONE;	// Do not change.
+	targetCollectRange		= 1000;				// Maximum distance (cm) to traverse. Can be freely adjusted.
+	targetCollectAzi		= 0;				// Do not display focus names.
+	targetCollectElev		= 0;
 };
 
 func int Spell_Logic_SummonGuardian(var int manaInvested)
 {
-	return Spell_Logic_Basic(self, SPL_Cost_SummonGuardian);
+	return Spell_Logic_Invest_Summon(self, manaInvested, SPL_Cost_SummonGuardian);
 };
 
-func void Spell_Cast_SummonGuardian()
+func void Spell_Cast_SummonGuardian(var int spellLevel)
 {
-	if (Npc_IsPlayer(self)) 
-	{		
-		Wld_SpawnNpcRange	(self,	Summoned_Guardian,			1,	500);
-	}
-	else
-	{
-		Wld_SpawnNpcRange	(self,	Stoneguardian,			1,	500);
-	};
-	
-	Spell_Cast_Basic(self, SPL_Cost_SummonGuardian);
+	Spell_Cast_Summon(self, spellLevel, Stoneguardian, Summoned_Guardian, Summoned_Large_Guardian);
 };

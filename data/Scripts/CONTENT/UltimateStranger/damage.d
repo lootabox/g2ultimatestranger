@@ -183,15 +183,18 @@ pristr = IntToString(dmg);
 				else if	(dmgDesc.spellID == SPL_Explosion)			{ fireDot = SPL_Damage_Explosion_dot; };
 
 				// Fire staff: Damage Bonus (+10)
-				if (Hlp_IsItem(wpn, ItMW_Addon_Stab01))
-				|| (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
+				if (Hlp_IsValidItem(wpn))
 				{
-					// Fire staff: Burning (+20%)
-					if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
+					if (Hlp_IsItem(wpn, ItMW_Addon_Stab01))
+					|| (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
 					{
-						fireDot = fireDot * 120 / 100;
+						// Fire staff: Burning (+20%)
+						if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
+						{
+							fireDot = fireDot * 120 / 100;
+						};
+						dmg += 10;
 					};
-					dmg += 10;
 				};
 				// Play burn FX on corpses for flavor in any case
 				if (dmg - prot >= vic.attribute[ATR_HITPOINTS])
@@ -227,13 +230,16 @@ pristr = IntToString(dmg);
 				||	(dmgDesc.spellID == SPL_Thunderstorm)
 			{
 				// Ice staff: Debuff
-				if (Hlp_IsItem(wpn, ItMW_Addon_Stab03))
-				|| (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
+				if (Hlp_IsValidItem(wpn))
 				{
-					Print ( "ICE DEBUFF 1" );
-					if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
+					if (Hlp_IsItem(wpn, ItMW_Addon_Stab03))
+					|| (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
 					{
-						Print ( "ICE DEBUFF 2" );
+						Print ( "ICE DEBUFF 1" );
+						if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
+						{
+							Print ( "ICE DEBUFF 2" );
+						};
 					};
 				};
 				
@@ -261,18 +267,21 @@ pristr = IntToString(dmg);
 				||	(dmgDesc.spellID == SPL_WindFist)
 			{
 				// Lightning/Wind staff: Ignore protection
-				if (Hlp_IsItem(wpn, ItMW_Addon_Stab05))
-				|| (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
+				if (Hlp_IsValidItem(wpn))
 				{
-					if (prot < 20)
-					{ dmg += prot; }
-					else
-					{ dmg += 20; };
-					
-					// Lightning/Wind staff: ???
-					if (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
+					if (Hlp_IsItem(wpn, ItMW_Addon_Stab05))
+					|| (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
 					{
-						Print ( "LIGHTNING/WIND ???" );
+						if (prot < 20)
+						{ dmg += prot; }
+						else
+						{ dmg += 20; };
+						
+						// Lightning/Wind staff: ???
+						if (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
+						{
+							Print ( "LIGHTNING/WIND ???" );
+						};
 					};
 				};
 			};

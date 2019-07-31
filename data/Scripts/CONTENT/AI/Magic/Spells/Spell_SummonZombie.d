@@ -8,26 +8,19 @@ const int SPL_Degen_SummonZombie		= 4;
 
 INSTANCE Spell_SummonZombie (C_Spell_Proto)	
 {
-	time_per_mana			= 0;
-	spelltype 				= SPELL_BAD;
-	targetCollectAlgo		= TARGET_COLLECT_NONE;
+	time_per_mana			= 18;
+	targetCollectAlgo		= TARGET_COLLECT_FOCUS_FALLBACK_NONE;	// Do not change.
+	targetCollectRange		= 1000;				// Maximum distance (cm) to traverse. Can be freely adjusted.
+	targetCollectAzi		= 0;				// Do not display focus names.
+	targetCollectElev		= 0;
 };
 
 func int Spell_Logic_SummonZombie(var int manaInvested)
 {
-	return Spell_Logic_Basic(self, SPL_Cost_SummonZombie);
+	return Spell_Logic_Invest_Summon(self, manaInvested, SPL_Cost_SummonZombie);
 };
 
-func void Spell_Cast_SummonZombie()
+func void Spell_Cast_SummonZombie(var int spellLevel)
 {
-	if (Npc_IsPlayer(self)) 
-	{		
-		Wld_SpawnNpcRange	(self,	Summoned_ZOMBIE,			1,	500);
-	}
-	else
-	{
-		Wld_SpawnNpcRange	(self,	Zombie01,			1,	500);
-	};
-	
-	Spell_Cast_Basic(self, SPL_Cost_SummonZombie);
+	Spell_Cast_Summon(self, spellLevel, Zombie01, Summoned_Zombie, Summoned_Armored_Zombie);
 };

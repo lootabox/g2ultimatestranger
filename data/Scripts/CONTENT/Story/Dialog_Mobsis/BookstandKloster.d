@@ -303,7 +303,7 @@ FUNC VOID Use_Bookstand_Kreise_03_S1()
 					Doc_PrintLine	( nDocID,  0, "Sulfur");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Create Skeleton");
+					Doc_PrintLine	( nDocID,  0, "Summon Skeleton");
 					Doc_PrintLine	( nDocID,  0, "Skeleton's Bone");
 					Doc_PrintLine	( nDocID,  0, "");
 					
@@ -375,7 +375,7 @@ FUNC VOID Use_Bookstand_Kreise_04_S1()
 					Doc_PrintLine	( nDocID,  0, "Glacier Quartz");
 					Doc_PrintLine	( nDocID,  0, "");				
 					
-					Doc_PrintLine	( nDocID,  0, "Awaken Golem");
+					Doc_PrintLine	( nDocID,  0, "Summon Golem");
 					Doc_PrintLine	( nDocID,  0, "Heart of a Stone Golem");
 					Doc_PrintLine	( nDocID,  0, "");
 					

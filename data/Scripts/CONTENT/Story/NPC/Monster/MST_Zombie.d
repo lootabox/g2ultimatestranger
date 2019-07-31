@@ -372,6 +372,36 @@ INSTANCE Summoned_Zombie		(Mst_Default_Zombie)
 	
 	start_aistate = ZS_MM_Rtn_Summoned;
 
-	B_SetVisuals_Maya_Zombie04();
+	var int rnd; rnd = Hlp_Random(100);
+	if		(rnd < 25)	{ B_SetVisuals_Zombie01(); }
+	else if	(rnd < 50)	{ B_SetVisuals_Zombie02(); }
+	else if	(rnd < 75)	{ B_SetVisuals_Zombie03(); }
+	else 				{ B_SetVisuals_Zombie04(); };
+
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE Summoned_Armored_Zombie		(Mst_Default_Zombie)
+{
+	name							= NAME_Addon_Summoned_Zombie;
+	guild							= GIL_SUMMONEDZombie;
+	aivar[AIV_MM_REAL_ID]			= ID_SUMMONEDZombie;
+	level							= 0;
+
+	//----- Attribute ----
+	attribute	[ATR_STRENGTH]		= 200;
+	attribute	[ATR_DEXTERITY]		= 200;
+
+	aivar[AIV_PARTYMEMBER] = TRUE;
+	B_SetAttitude (self, ATT_FRIENDLY); 
+	
+	start_aistate = ZS_MM_Rtn_Summoned;
+
+	var int rnd; rnd = Hlp_Random(100);
+	if		(rnd < 25)	{ B_SetVisuals_Maya_Zombie01(); }
+	else if	(rnd < 50)	{ B_SetVisuals_Maya_Zombie02(); }
+	else if	(rnd < 75)	{ B_SetVisuals_Maya_Zombie03(); }
+	else 				{ B_SetVisuals_Maya_Zombie04(); };
+
 	Npc_SetToFistMode(self);
 };

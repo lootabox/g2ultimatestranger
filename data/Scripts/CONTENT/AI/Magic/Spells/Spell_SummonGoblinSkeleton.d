@@ -8,40 +8,19 @@ const int SPL_Degen_SummonGoblinSkeleton	= 3;
 
 INSTANCE Spell_SummonGoblinSkeleton (C_Spell_Proto)	//ehem. Spell_Skeleton
 {
-	time_per_mana			= 0;
-	targetCollectAlgo		= TARGET_COLLECT_NONE;
+	time_per_mana			= 37;
+	targetCollectAlgo		= TARGET_COLLECT_FOCUS_FALLBACK_NONE;	// Do not change.
+	targetCollectRange		= 1000;				// Maximum distance (cm) to traverse. Can be freely adjusted.
+	targetCollectAzi		= 0;				// Do not display focus names.
+	targetCollectElev		= 0;
 };
 
 func int Spell_Logic_SummonGoblinSkeleton (var int manaInvested)
-{	
-	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
-	if (Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused))
-	{
-		return Spell_Logic_Invest(self, manaInvested, SPL_Cost_SummonGoblinSkeleton, 3, TRUE);
-	}
-	else
-	{
-		return Spell_Logic_Invest(self, manaInvested, SPL_Cost_SummonGoblinSkeleton, 2, TRUE);
-	};
+{
+	return Spell_Logic_Invest_Summon(self, manaInvested, SPL_Cost_SummonGoblinSkeleton);
 };
 
-func void Spell_Cast_SummonGoblinSkeleton()
+func void Spell_Cast_SummonGoblinSkeleton(var int spellLevel)
 {
-	if (Npc_IsPlayer(self)) 
-	{
-		if (Npc_GetActiveSpellLevel(self) > 2)
-		{
-			Wld_SpawnNpcRange	(self,	SUMMONED_GOBBO_SKELETON,			1,	500);
-		}
-		else
-		{
-			Wld_SpawnNpcRange	(self,	SUMMONED_LESSER_GOBBO_SKELETON,		1,	500);
-		};
-	}
-	else
-	{
-		Wld_SpawnNpcRange	(self,	GOBBO_SKELETON,			1,	500);
-	};
-
-	self.aivar[AIV_SelectSpell] += 1;
+	Spell_Cast_Summon(self, spellLevel, GOBBO_SKELETON, SUMMONED_LESSER_GOBBO_SKELETON, SUMMONED_GOBBO_SKELETON);
 };

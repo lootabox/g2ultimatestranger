@@ -408,7 +408,7 @@ const string NAME_SPL_Icebolt				= "Ice Arrow";
 
 // Kreis 1
 const string NAME_SPL_LightHeal				= "Heal Light Wounds";
-const string NAME_SPL_SummonGoblinSkeleton	= "Create Goblin Skeleton";
+const string NAME_SPL_SummonGoblinSkeleton	= "Summon Goblin Skeleton";
 
 // Kreis 2
 const string NAME_SPL_InstantFireball		= "Fireball";
@@ -424,14 +424,14 @@ const string NAME_SPL_Sleep					= "Sleep";
 // Kreis 3
 const string NAME_SPL_MediumHeal			= "Heal Medium Wounds";
 const string NAME_SPL_Firestorm				= "Small Fire Storm";
-const string NAME_SPL_SummonSkeleton		= "Create Skeleton";
+const string NAME_SPL_SummonSkeleton		= "Summon Skeleton";
 const string NAME_SPL_Fear					= "Fear";
 const string NAME_SPL_IceCube				= "Ice Block";
 const string NAME_SPL_ChargeZap				= "Ball Lightning";
 
 // Kreis 4
 const string NAME_SPL_LightningFlash		= "Lightning";
-const string NAME_SPL_SummonGolem			= "Awaken Golem";
+const string NAME_SPL_SummonGolem			= "Summon Golem";
 const string NAME_SPL_DestroyUndead			= "Destroy Undead";
 const string NAME_SPL_ChargeFireball		= "Large Fireball";
 

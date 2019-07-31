@@ -99,6 +99,35 @@ INSTANCE Summoned_Guardian	(Mst_Addon_Stoneguardian)
 	B_SetVisuals_Stoneguardian ();
 };
 
+INSTANCE Summoned_Large_Guardian	(Mst_Addon_Stoneguardian)
+{
+	name							= NAME_Addon_Summoned_Guardian;
+	guild							= GIL_SUMMONEDGuardian;
+	aivar[AIV_MM_REAL_ID]			= ID_SUMMONEDGuardian;
+	level							=	0;	//30
+
+	//----- Attribute ----	
+	attribute	[ATR_STRENGTH]		=	100; //+50 Waffe
+	attribute	[ATR_DEXTERITY]		=	150;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
+
+	//----- Protection ----
+	protection	[PROT_BLUNT]		=	75;
+	protection	[PROT_EDGE]			=	125;
+	protection	[PROT_POINT]		=	175; 
+	protection	[PROT_FIRE]			=	125;
+	protection	[PROT_FLY]			=	125;
+		
+	aivar[AIV_PARTYMEMBER] = TRUE;
+	B_SetAttitude (self, ATT_FRIENDLY); 
+	
+	start_aistate = ZS_MM_Rtn_Summoned;
+	
+	B_SetVisuals_Stoneguardian ();
+	Mdl_SetModelScale(self,	1.20,	1.20, 	1.20);
+};
+
 //**************************************************************
 //	Steinwächter	
 //**************************************************************

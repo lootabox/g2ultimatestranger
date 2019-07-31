@@ -58,7 +58,7 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 	if (circle == 3)
 	{
 		PrintScreen	(PRINT_LearnCircle_3, -1, -1, FONT_Screen, 2);
-		B_LogEntry (TOPIC_TalentMagicCircle,"The spells of the 3rd Circle are: Heal Medium Wounds, Ball Lightning, Small Fire Storm, Create Skeleton, Fear and Ice Block.");
+		B_LogEntry (TOPIC_TalentMagicCircle,"The spells of the 3rd Circle are: Heal Medium Wounds, Ball Lightning, Small Fire Storm, Summon Skeleton, Fear and Ice Block.");
 		return TRUE;
 	};
 	
@@ -66,7 +66,7 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 	if (circle == 4)
 	{
 		PrintScreen	(PRINT_LearnCircle_4, -1, -1, FONT_Screen, 2);
-		B_LogEntry (TOPIC_TalentMagicCircle,"The spells of the 4th Circle are: Lightning, Create Stone Golem, Destroy Undead and Large Fireball.");
+		B_LogEntry (TOPIC_TalentMagicCircle,"The spells of the 4th Circle are: Lightning, Summon Stone Golem, Destroy Undead and Large Fireball.");
 		return TRUE;
 	};
 	

@@ -86,7 +86,7 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	if (spell == SPL_LightHeal)				{	PLAYER_TALENT_RUNES[SPL_LightHeal] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_LightHeal, 1);				
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Heal Light Wounds': 1 Healing Plant.");	};		
 	if (spell == SPL_SummonGoblinSkeleton)	{	PLAYER_TALENT_RUNES[SPL_SummonGoblinSkeleton] 	= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumGobSkel, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Create Goblin Skeleton': 1 Goblin's Bone.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Summon Goblin Skeleton': 1 Goblin's Bone.");	};		
 	if (spell == SPL_InstantFireball)		{	PLAYER_TALENT_RUNES[SPL_InstantFireball] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_InstantFireball, 1);			
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Fireball': 1 Pitch.");	};	
 	if (spell == SPL_Zap)					{	PLAYER_TALENT_RUNES[SPL_Zap] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_Zap, 1);						
@@ -104,7 +104,7 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	if (spell == SPL_ChargeFireball)		{	PLAYER_TALENT_RUNES[SPL_ChargeFireball] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_ChargeFireball, 1);			
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Large Fireball': 1 Sulfur and 1 Pitch.");	};		
 	if (spell == SPL_SummonSkeleton)		{	PLAYER_TALENT_RUNES[SPL_SummonSkeleton] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumSkel, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Create Skeleton': 1 Skeleton's Bone.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Summon Skeleton': 1 Skeleton's Bone.");	};		
 	if (spell == SPL_Fear)					{	PLAYER_TALENT_RUNES[SPL_Fear] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_Fear, 1);					
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Fear': 1 Black Perl.");	};		
 	if (spell == SPL_IceCube)				{	PLAYER_TALENT_RUNES[SPL_IceCube] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_IceCube, 1);					
@@ -112,7 +112,7 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	if (spell == SPL_ChargeZap)				{	PLAYER_TALENT_RUNES[SPL_ChargeZap] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_ThunderBall, 1);				
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Ball Lightning': 1 Sulfur and 1 Rock Crystal.");	};		
 	if (spell == SPL_SummonGolem)			{	PLAYER_TALENT_RUNES[SPL_SummonGolem] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumGol, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Awaken Golem': 1 Heart of a Stonegolem.");	};	
+	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Summon Golem': 1 Heart of a Stonegolem.");	};	
 	if (spell == SPL_DestroyUndead)			{	PLAYER_TALENT_RUNES[SPL_DestroyUndead] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_HarmUndead, 1);				
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Destroy Undead': 1 Holy Water.");	};		
 	if (spell == SPL_Pyrokinesis)			{	PLAYER_TALENT_RUNES[SPL_Pyrokinesis] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_Pyrokinesis, 1);				

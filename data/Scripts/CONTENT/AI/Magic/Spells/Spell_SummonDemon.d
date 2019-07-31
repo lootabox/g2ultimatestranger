@@ -8,42 +8,21 @@ const int SPL_Degen_SummonDemon		= 20;
 
 INSTANCE Spell_SummonDemon (C_Spell_Proto)	//ehem. Spell_Demon
 {
-	time_per_mana			= 0;
-	targetCollectAlgo		= TARGET_COLLECT_NONE;
+	time_per_mana			= 12;
+	targetCollectAlgo		= TARGET_COLLECT_FOCUS_FALLBACK_NONE;	// Do not change.
+	targetCollectRange		= 1000;				// Maximum distance (cm) to traverse. Can be freely adjusted.
+	targetCollectAzi		= 0;				// Do not display focus names.
+	targetCollectElev		= 0;
 };
 
 func int Spell_Logic_SummonDemon(var int manaInvested)
 {
-	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
-	if (Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused))
-	{
-		return Spell_Logic_Invest(self, manaInvested, SPL_Cost_SummonDemon, 3, TRUE);
-	}
-	else
-	{
-		return Spell_Logic_Invest(self, manaInvested, SPL_Cost_SummonDemon, 2, TRUE);
-	};
+	return Spell_Logic_Invest_Summon(self, manaInvested, SPL_Cost_SummonDemon);
 };
 
-func void Spell_Cast_SummonDemon()
+func void Spell_Cast_SummonDemon(var int spellLevel)
 {
-	if (Npc_IsPlayer(self)) 
-	{
-		if (Npc_GetActiveSpellLevel(self) > 2)
-		{
-			Wld_SpawnNpcRange	(self,	Summoned_DemonLord,		1,	1000);
-		}
-		else
-		{
-			Wld_SpawnNpcRange	(self,	Summoned_Demon,			1,	1000);
-		};
-	}
-	else
-	{
-		Wld_SpawnNpcRange	(self,	Demon,			1,	1000);
-	};
-
-	self.aivar[AIV_SelectSpell] += 1;
+	Spell_Cast_Summon(self, spellLevel, Demon, Summoned_Demon, Summoned_DemonLord);
 };
 
 
