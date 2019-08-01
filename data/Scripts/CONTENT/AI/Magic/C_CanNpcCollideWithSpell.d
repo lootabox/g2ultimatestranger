@@ -348,6 +348,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		};
 		
 		if (spellType == SPL_LightningFlash)
+		|| (spellType == SPL_AdanosBall) && (C_NpcIsUndead(self))
 		{
 			return COLL_DOEVERYTHING;
 		}

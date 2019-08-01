@@ -84,6 +84,15 @@ func void B_AssessMagic ()
 		return;
 	};
 
+	// ------ AdanosBall ------
+	if (Npc_GetLastHitSpellID(self) == SPL_AdanosBall)
+	{
+		Npc_ClearAIQueue	(self);
+		B_ClearPerceptions	(self);
+		AI_StartState		(self, ZS_Zapped, 0, "");
+		return;
+	};
+
 	// ------ Fear ------
 /* 	if (Npc_GetLastHitSpellID(self) == SPL_Fear)	
 	{

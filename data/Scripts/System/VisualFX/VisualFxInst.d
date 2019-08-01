@@ -5889,7 +5889,7 @@ INSTANCE spellFX_Adanosball (CFx_Base_Proto)
     emtrjeasefunc_s         = "LINEAR";
     emActionCollStat_S      = "COLLIDE";
     emActionCollDyn_S       = "COLLIDE CREATEONCE";
-    emFXCollDyn_S           = "spellFX_Adanosball_TARGET";
+    emFXCollDynPerc_S       = "spellFX_Adanosball_TARGET";
     emTrjTargetRange        = 20;
     emTrjTargetElev         = 0;
     lightPresetname         = "AURA";

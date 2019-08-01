@@ -1,29 +1,3 @@
-
-//************************************************
-//   Creating empty item at given point
-// https://forum.worldofplayers.de/forum/threads/1456691-Straight-line-AoE-spell
-//************************************************
-instance EmptyItemInstance(C_ITEM); //empty item for whatever
-func void MEM_InsertItemInstance (var int inst, var int fX, var int fY, var int fZ) //insert an instance at a given point
-{
-    var zCWaynet wayNet; wayNet = MEM_PtrToInst(MEM_World.wayNet);
-    var zCWaypoint wp; wp = MEM_PtrToInst(MEM_ReadInt(wayNet.wplist_next+4));
-    var int x; x = wp.pos[0];
-    var int y; y = wp.pos[1];
-    var int z; z = wp.pos[2];
-    wp.pos[0] = fX;
-    wp.pos[1] = fY;
-    wp.pos[2] = fZ;
-    Wld_InsertItem(inst, wp.name);
-    wp.pos[0] = x;
-    wp.pos[1] = y;
-    wp.pos[2] = z;
-};
-func void RemoveItemInstance() //optional: you may want to delete previous inserted empty item
-{
-    Wld_RemoveItem(EmptyItemInstance);
-};
-
 //************************************************
 //   Weapon copying
 // https://forum.worldofplayers.de/forum/threads/1203625-Creating-instances-dinamically/page2?p=20511013&viewfull=1#post20511013

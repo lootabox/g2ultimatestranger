@@ -495,11 +495,11 @@ const string NAME_SPL_Plague				= "Insect Plague";
 const string NAME_SPL_Swarm					= "Insect Swarm";
 const string NAME_SPL_GreenTentacle			= "Root Snare";
 const string NAME_SPL_Earthquake			= "Earthquake";
-const string NAME_SPL_SummonGuardian		= "Create Guardian";
+const string NAME_SPL_SummonGuardian		= "Summon Stone Sentinel";
 const string NAME_SPL_BeliarsRage			= "Beliar's Wrath";
 const string NAME_SPL_SuckEnergy			= "Steal energy";
 const string NAME_SPL_Skull					= "Cry of the Dead";
-const string NAME_SPL_SummonZombie			= "Create Zombie";
+const string NAME_SPL_SummonZombie			= "Summon Zombie";
 const string NAME_SPL_SummonMud				= "Summon Mud";
 
 // ...
