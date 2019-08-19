@@ -332,7 +332,7 @@ func void Buff_Remove(var int bh) {
 			MEM_CallByID(b.onRemoved);
 	};
 
-	if (b.targetID == Npc_GetID(hero)) {
+	if (b.targetID == Npc_GetID(hero) && Buffs_DisplayForHero) {
 			Bufflist_Remove(bh);
 	};
 

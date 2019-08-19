@@ -4682,19 +4682,19 @@ INSTANCE spellFX_Firespell_HUMANSMOKE	(CFx_Base_Proto)
 
 // HUMAN oder VOB ist elektrisiert von ThunderSpell
 
-instance spellFX_Lightning_TARGET			(CFx_Base_Proto)
+/* instance spellFX_Lightning_TARGET			(CFx_Base_Proto)
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "MFX_Lightning_Target";
 		emTrjOriginNode = "BIP01 Head";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
 		sfxid			= "MFX_Lightning_Target";
 		emfxcreate_s	= "spellFX_Thunderspell_TARGET_CHILD1";
-};
+}; */
 
 instance spellFX_Thunderspell_SENDPERCEPTION			(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "MFX_Lightning_Target";
 		emTrjOriginNode = "BIP01 Head";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
@@ -4707,7 +4707,7 @@ instance spellFX_Thunderspell_SENDPERCEPTION			(CFx_Base_Proto)			// gehört zu F
 
 instance spellFX_Thunderspell_SENDPERCEPTION_CHILD1		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "MFX_Lightning_Target";
 		emTrjOriginNode = "BIP01 R UPPERARM";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
@@ -4715,9 +4715,9 @@ instance spellFX_Thunderspell_SENDPERCEPTION_CHILD1		(CFx_Base_Proto)			// gehör
 		emFXCreatedOwnTrj 	= 1;
 };
 
-instance spellFX_Thunderspell_TARGET_CHILD2		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
+instance spellFX_Thunderspell_SENDPERCEPTION_CHILD2		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "MFX_Lightning_Target";
 		emTrjOriginNode = "BIP01 L UPPERARM";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
@@ -4725,9 +4725,9 @@ instance spellFX_Thunderspell_TARGET_CHILD2		(CFx_Base_Proto)			// gehört zu FX-
 		emFXCreatedOwnTrj 	= 1;
 };
 
-instance spellFX_Thunderspell_TARGET_CHILD3		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
+instance spellFX_Thunderspell_SENDPERCEPTION_CHILD3		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "MFX_Lightning_Target";
 		emTrjOriginNode = "BIP01 L HAND";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
@@ -4735,9 +4735,9 @@ instance spellFX_Thunderspell_TARGET_CHILD3		(CFx_Base_Proto)			// gehört zu FX-
 		emFXCreatedOwnTrj 	= 1;
 };
 
-instance spellFX_Thunderspell_TARGET_CHILD4		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
+instance spellFX_Thunderspell_SENDPERCEPTION_CHILD4		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "MFX_Lightning_Target";
 		emTrjOriginNode = "BIP01 R HAND";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
@@ -4745,9 +4745,9 @@ instance spellFX_Thunderspell_TARGET_CHILD4		(CFx_Base_Proto)			// gehört zu FX-
 		emFXCreatedOwnTrj 	= 1;
 };
 
-instance spellFX_Thunderspell_TARGET_CHILD5		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
+instance spellFX_Thunderspell_SENDPERCEPTION_CHILD5		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "MFX_Lightning_Target";
 		emTrjOriginNode = "BIP01 L FOOT";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
@@ -4755,27 +4755,27 @@ instance spellFX_Thunderspell_TARGET_CHILD5		(CFx_Base_Proto)			// gehört zu FX-
 		emFXCreatedOwnTrj 	= 1;
 };
 
-instance spellFX_Thunderspell_TARGET_CHILD6		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
+instance spellFX_Thunderspell_SENDPERCEPTION_CHILD6		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "MFX_Lightning_Target";
 		emTrjOriginNode = "BIP01 R FOOT";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
 		emfxcreate_s	= "spellFX_Thunderspell_SENDPERCEPTION_CHILD7";
 		emFXCreatedOwnTrj 	= 1;
 };
-instance spellFX_Thunderspell_TARGET_CHILD7		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
+instance spellFX_Thunderspell_SENDPERCEPTION_CHILD7		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "MFX_Lightning_Target";
 		emTrjOriginNode = "BIP01 L THIGH";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
 		emfxcreate_s	= "spellFX_Thunderspell_SENDPERCEPTION_CHILD8";
 		emFXCreatedOwnTrj 	= 1;
 };
-instance spellFX_Thunderspell_TARGET_CHILD8		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
+instance spellFX_Thunderspell_SENDPERCEPTION_CHILD8		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "MFX_Lightning_Target";
 		emTrjOriginNode = "BIP01 R THIGH";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
@@ -4783,9 +4783,9 @@ instance spellFX_Thunderspell_TARGET_CHILD8		(CFx_Base_Proto)			// gehört zu FX-
 		emFXCreatedOwnTrj 	= 1;
 };
 
-instance spellFX_Thunderspell_TARGET_CHILD9		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
+instance spellFX_Thunderspell_SENDPERCEPTION_CHILD9		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "MFX_Lightning_Target";
 		emTrjOriginNode = "BIP01 L CALF";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
@@ -4793,9 +4793,9 @@ instance spellFX_Thunderspell_TARGET_CHILD9		(CFx_Base_Proto)			// gehört zu FX-
 		emFXCreatedOwnTrj 	= 1;
 };
 
-instance spellFX_Thunderspell_TARGET_CHILD10		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
+instance spellFX_Thunderspell_SENDPERCEPTION_CHILD10		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "MFX_Lightning_Target";
 		emTrjOriginNode = "BIP01 R CALF";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
@@ -4803,9 +4803,9 @@ instance spellFX_Thunderspell_TARGET_CHILD10		(CFx_Base_Proto)			// gehört zu FX
 		emFXCreatedOwnTrj 	= 1;
 };
 
-instance spellFX_Thunderspell_TARGET_CHILD11		(CFx_Base_Proto)		// gehört zu FX-Kette. DO NOT DELETE
+instance spellFX_Thunderspell_SENDPERCEPTION_CHILD11		(CFx_Base_Proto)		// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "MFX_Lightning_Target";
 		emTrjOriginNode = "BIP01";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
