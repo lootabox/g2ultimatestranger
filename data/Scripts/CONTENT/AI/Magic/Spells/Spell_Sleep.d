@@ -59,7 +59,7 @@ func void Spell_Cast_Sleep()
 	&& (Hlp_GetInstanceID(other) != Hlp_GetInstanceID(Vatras))
 	&& (Hlp_GetInstanceID(other) != Hlp_GetInstanceID(Myxir_CITY))
 	&& (Hlp_GetInstanceID(other) != Hlp_GetInstanceID(KDF_511_Daron))
-	{		
+	{
 		Npc_ClearAIQueue	(other);
 		B_ClearPerceptions	(other);
 		AI_StartState		(other, ZS_MagicSleep, 0, "");
