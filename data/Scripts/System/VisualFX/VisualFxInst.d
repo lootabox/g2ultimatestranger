@@ -3843,7 +3843,7 @@ instance spellFX_Sleep_ORIGIN	(CFx_Base_Proto)
 
 instance spellFX_Sleep_TARGET	(CFx_Base_Proto)
 {
-		lightPresetname 	= "AURA";
+		//lightPresetname 	= "AURA";
 		visname_S 		= "MFX_SLEEP_TARGET";
 		emtrjmode_s 		= "FIXED";
 		emtrjoriginnode 	= "BIP01";

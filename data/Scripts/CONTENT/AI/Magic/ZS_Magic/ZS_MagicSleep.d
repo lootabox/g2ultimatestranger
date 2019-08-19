@@ -68,6 +68,7 @@ func void ZS_MagicSleep ()
 	};
 
 	AI_PlayAniBS (self,	"T_STAND_2_VICTIM_SLE", BS_LIE );
+	Wld_PlayEffect("spellFX_Sleep_TARGET", self, self, 0, 0, 0, FALSE);
 };
 
 func int ZS_MagicSleep_Loop ()
