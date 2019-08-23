@@ -532,6 +532,8 @@ INSTANCE ItSc_Zap (C_Item)
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_ZAP;
+
+	TEXT	[3]			=	ConcatStrings(NAME_Stagger, NAME_Nonlethal);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -727,6 +729,8 @@ INSTANCE ItSc_LightningFlash (C_Item)
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_LightningFlash;
+
+	TEXT	[3]			=	NAME_Stagger;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -902,6 +906,8 @@ INSTANCE ItSc_ThunderBall (C_Item)
 	
 	TEXT	[2]			=	NAME_Dam_Magic_Per;
 	count 	[2]			=   SPL_Damage_ChargeZap;
+
+	TEXT	[3]			=	ConcatStrings(NAME_Stagger, NAME_Nonlethal);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

@@ -338,23 +338,48 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 			return COLL_DONOTHING;
 		};
 		
+		// Check for APPLYVICTIMSTATE
+		var int applyState; applyState = COLL_DONOTHING;
+		if	(spellType == SPL_AdanosBall)
+		{
+			applyState = applyState | COLL_APPLYVICTIMSTATE;
+		}
+		else
+		{
+			if	(!C_NpcIsUndead(self))
+			&&	(self.attribute[ATR_HITPOINTS] == self.attribute[ATR_HITPOINTS_MAX])
+			{
+				// Thunder staff
+				var c_npc wpn; wpn = Npc_GetEquippedMeleeWeapon(other);
+				if (Hlp_IsValidItem(wpn))
+				{
+					// Bonus 1: Stun on full hp
+					if (Hlp_IsItem(wpn, ItMW_Addon_Stab02))
+					|| (Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused))
+					{
+						applyState = applyState | COLL_APPLYVICTIMSTATE;
+					};
+				};
+			};
+		};
+
 		if (C_NpcIsWaterBase(self))
 		|| (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
 		|| (GetWaterLevel(self) == WATERLEVEL_WADE)
 		//|| (Wld_IsRaining() && (CurrentLevel == NEWWORLD_ZEN || CurrentLevel == OLDWORLD_ZEN || CurrentLevel == ADDONWORLD_ZEN))
 		{
-			return COLL_APPLYDOUBLEDAMAGE;
+			return COLL_APPLYDOUBLEDAMAGE | applyState;
 		};
-		
+
 		if (spellType == SPL_LightningFlash)
-		|| (spellType == SPL_AdanosBall) && (C_NpcIsUndead(self))
+		|| (spellType == SPL_AdanosBall)
 		{
-			return COLL_DOEVERYTHING;
+			return COLL_APPLYDAMAGE | applyState;
 		}
 		else
 		{
-			return COLL_APPLYDAMAGE | COLL_DONTKILL;
+			return COLL_APPLYDAMAGE | COLL_DONTKILL | applyState;
 		};
 	};
 

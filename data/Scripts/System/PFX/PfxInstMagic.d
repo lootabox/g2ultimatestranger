@@ -5389,7 +5389,7 @@ INSTANCE MFX_LIGHTNING_ORIGIN (C_PARTICLEFX)
 
 INSTANCE MFX_LIGHTNING_TARGET (C_PARTICLEFX)
 {
-     ppsvalue = 25.000000000;
+     ppsvalue = 50.000000000;
      ppsscalekeys_s = "1 2 1 0.7 0.4 0.1";
      ppsissmooth = 1;
      ppsfps = 2.000000000;
@@ -12256,16 +12256,16 @@ INSTANCE MFX_ADANOSBALL_INIT (C_PARTICLEFX)
      dirfor_s = "OBJECT";
      dirmodetargetfor_s = "OBJECT";
      velavg = 0.00100000005;
-     lsppartavg = 800;
-     lsppartvar = 300;
+     lsppartavg = 600;
+     lsppartvar = 200;
      flygravity_s = "0 -0.0000001 0";
      visname_s = "KOPFBALL.TGA";
      visorientation_s = "VELO";
      vistexisquadpoly = 1;
-     vistexcolorstart_s = "143 128 255";
-     vistexcolorend_s = "143 128 255";
+     vistexcolorstart_s = "103 168 255";
+     vistexcolorend_s = "103 168 255";
      vissizestart_s = "10 10";
-     vissizeendscale = 10;
+     vissizeendscale = 8;
      visalphafunc_s = "ADD";
      visalphastart = 255;
      useemittersfor = 1;
@@ -12285,16 +12285,16 @@ INSTANCE MFX_ADANOSBALL_CAST (C_PARTICLEFX)
      dirfor_s = "OBJECT";
      dirmodetargetfor_s = "OBJECT";
      velavg = 0.00100000005;
-     lsppartavg = 800;
-     lsppartvar = 300;
+     lsppartavg = 600;
+     lsppartvar = 200;
      flygravity_s = "0 -0.0000001 0";
      visname_s = "KOPFBALL.TGA";
      visorientation_s = "VELO";
      vistexisquadpoly = 1;
-     vistexcolorstart_s = "143 128 255";
-     vistexcolorend_s = "51 0 255";
+     vistexcolorstart_s = "103 168 255";
+     vistexcolorend_s = "0 51 255";
      vissizestart_s = "30 30";
-     vissizeendscale = 10;
+     vissizeendscale = 8;
      visalphafunc_s = "ADD";
      visalphastart = 255;
 };
@@ -12314,16 +12314,16 @@ INSTANCE MFX_ADANOSBALL_TARGET (C_PARTICLEFX)
      dirfor_s = "OBJECT";
      dirmodetargetfor_s = "OBJECT";
      velavg = 0.00100000005;
-     lsppartavg = 800;
-     lsppartvar = 300;
+     lsppartavg = 600;
+     lsppartvar = 200;
      flygravity_s = "0 -0.0000001 0";
      visname_s = "KOPFBALL.TGA";
      visorientation_s = "VELO";
      vistexisquadpoly = 1;
-     vistexcolorstart_s = "143 128 255";
-     vistexcolorend_s = "143 128 255";
+     vistexcolorstart_s = "103 168 255";
+     vistexcolorend_s = "103 168 255";
      vissizestart_s = "30 30";
-     vissizeendscale = 20;
+     vissizeendscale = 16;
      visalphafunc_s = "ADD";
      visalphastart = 255;
      useemittersfor = 1;

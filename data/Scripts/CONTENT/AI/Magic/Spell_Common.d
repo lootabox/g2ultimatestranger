@@ -31,11 +31,24 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 	}
 	else
 	{
-		// Check for Ulthar's
+		// Check for water staff mana cost reduction
 		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 		if (Hlp_IsValidItem(wpn))
 		{
-			if (Hlp_IsItem(wpn, ItMW_Addon_Stab04) || Hlp_IsItem(wpn, ItMW_Addon_Stab04_Infused)) { manaCost -= 5; };
+			if (Hlp_IsItem(wpn, ItMW_Addon_Stab03) || Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
+			{
+				var int spellID; spellID = Npc_GetActiveSpell(self);
+				if	(spellID == SPL_Icebolt)
+				||	(spellID == SPL_IceLance)
+				||	(spellID == SPL_IceCube)
+				||	(spellID == SPL_IceWave)
+				||	(spellID == SPL_Geyser)
+				||	(spellID == SPL_WaterFist)
+				||	(spellID == SPL_Thunderstorm)
+				{
+					manaCost -= 5;
+				};
+			};
 		};
 
 		slf.attribute[ATR_MANA] -= manaCost;
@@ -53,13 +66,9 @@ func int Spell_Logic_Invest(var C_NPC slf, var int manaInvested, var int STEP_si
 		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 		if (Hlp_IsValidItem(wpn))
 		{
-			if (Hlp_IsItem(wpn, ItMW_Addon_Stab04) || Hlp_IsItem(wpn, ItMW_Addon_Stab04_Infused))
+			if (Hlp_IsItem(wpn, ItMW_Addon_Stab04_Infused))
 			{
-				STEP_cost -= 5;
-				if (Hlp_IsItem(wpn, ItMW_Addon_Stab04_Infused))
-				{
-					STEP_size = STEP_size * 7 / 10;
-				};
+				STEP_size = STEP_size * 7 / 10;
 			};
 		};
 	};
@@ -203,15 +212,8 @@ func int Spell_Logic_Invest_Summon(var C_NPC slf, var int manaInvested, var int 
 		GFA_AimVobAttachFX("spellFX_Blink_Target"); // Technically this would work purely by spellFX, but it is unstable
 	};
 
-	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(slf);
-	if (Hlp_IsValidItem(wpn))
-	{
-		if (Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused))
-		{
-			return Spell_Logic_Invest(slf, manaInvested, SPL_Cost, 3, TRUE);
-		};
-	};
-	return Spell_Logic_Invest(slf, manaInvested, SPL_Cost, 2, TRUE);
+	return Spell_Logic_Invest(slf, manaInvested, SPL_Cost, 3, TRUE);
+	//return Spell_Logic_Invest(slf, manaInvested, SPL_Cost, 2, TRUE);
 };
 
 func void Spell_Cast_Summon(var C_NPC slf, var int spellLevel, var int npcSummonInstance, var int playerSummonInstance, var int playerSummonInstance2) {

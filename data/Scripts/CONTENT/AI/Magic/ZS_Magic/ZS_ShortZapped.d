@@ -5,27 +5,8 @@
 // aus ZS_Zapped aufgerufen
 // **************************************
 
-func void B_StopShortZapped()
-{	
- 	//Npc_PercDisable	(self, PERC_ASSESSSTOPMAGIC); // *** was soll das??? ***
- 	Npc_PercEnable	(self, PERC_ASSESSMAGIC, B_AssessMagic); //falls in diesem Frame (während des Ausführens des B_) noch ein neuer Spruch wirkt
-	
-	Npc_ClearAIQueue(self );		// alle AI Befehle entfernen
-	AI_StandUp		(self);
-
-	if (self.guild < GIL_SEPERATOR_HUM)
-	{
-		B_AssessDamage();
-		AI_ContinueRoutine	(self); //Sicherheitshalber, falls B_AssessDamage NICHT in neuen ZS weiterleitet (kann z.ZT. aber nicht passieren) 
-									// - sonst würde NPC in Loop hängenbleiben
-	}
-	else
-	{
-		Npc_SetTempAttitude (self, ATT_HOSTILE); //falls nicht schon Gilden-Attitüde hostile ist 
-		AI_ContinueRoutine	(self); //sonst bleibt Monster in Loop und kassiert weiter Schaden
-	};
-};		
-
+const int SPL_TIME_SHORTZAPPED = 3;
+const int SPL_TIME_SHORTZAPPED_UNDEAD = SPL_TIME_SHORTZAPPED * 2;
 
 // **********************************
 // ZS_ShortZapped
@@ -35,8 +16,6 @@ func void B_StopShortZapped()
 
 func int ZS_ShortZapped()
 {
-	Npc_PercEnable		(self, PERC_ASSESSSTOPMAGIC, 	B_StopShortZapped);
-	
 	// ------ Non_interruptable Bodystates stehen sauber auf bzw. beenden sauber
 	if (!Npc_HasBodyFlag(self, BS_FLAG_INTERRUPTABLE))
 	{
@@ -46,23 +25,55 @@ func int ZS_ShortZapped()
 	{
 		AI_StandUpQuick (self);
 	};
-	if (self.guild < GIL_SEPERATOR_HUM)
+	if (TRUE)
 	{
 		AI_PlayAni			(self, "T_STAND_2_LIGHTNING_VICTIM" );
-	};	
+	};
+
+	Wld_PlayEffect ("spellFX_Lightning_TARGET", self, self, 0, 0, 0, FALSE);
+	self.aivar[AIV_FreezeStateTime] = 0;
 };
 
 
 func int ZS_ShortZapped_Loop ()
 {	
-	if	(Npc_GetStateTime(self) > SPL_TIME_SHORTZAPPED)	
+	if	(Npc_GetStateTime(self) >= SPL_TIME_SHORTZAPPED_UNDEAD)
+	||	(Npc_GetStateTime(self) >= SPL_TIME_SHORTZAPPED)
+	&&	(!C_NpcIsUndead(self))
 	{
-		B_StopShortZapped();
+		return LOOP_END;
 	};
+
+	if (Npc_GetStateTime(self) != self.aivar[AIV_FreezeStateTime])
+	{
+		self.aivar[AIV_FreezeStateTime] = Npc_GetStateTime(self);
+
+		// Make sure to keep playing vfx
+		if	(C_NpcIsUndead(self))
+		&&	(Npc_GetStateTime(self) == SPL_TIME_SHORTZAPPED)
+		{
+			Wld_PlayEffect ("spellFX_Lightning_TARGET", self, self, 0, 0, 0, FALSE);
+		};
+	};
+	return LOOP_CONTINUE;
 };
 
 
 func void ZS_ShortZapped_End()
 {
+//	Npc_PercEnable	(self, PERC_ASSESSMAGIC, B_AssessMagic);
+	
+	Npc_ClearAIQueue(self);
+	AI_StandUp		(self);
 
+	if (self.guild < GIL_SEPERATOR_HUM)
+	{
+		B_AssessDamage();
+	}
+	else
+	{
+		Npc_SetTempAttitude (self, ATT_HOSTILE); //falls nicht schon Gilden-Attitüde hostile ist 
+	};
+	
+	// nach Aufruf dieses Befehles wird die Loop über return LOOP_END beendet
 };

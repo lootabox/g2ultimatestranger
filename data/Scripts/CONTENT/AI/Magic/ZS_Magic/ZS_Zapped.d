@@ -5,6 +5,8 @@
 // aus ZS_Zapped aufgerufen
 // **************************************
 
+const int SPL_ZAPPED_DAMAGE_PER_SEC = 2;
+
 func void B_StopZapped ()
 {	
  	//Npc_PercDisable	(self, PERC_ASSESSSTOPMAGIC); // *** was soll das??? ***

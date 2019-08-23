@@ -182,18 +182,22 @@ pristr = IntToString(dmg);
 				else if	(dmgDesc.spellID == SPL_Firerain)			{ fireDot = SPL_Damage_Firerain_dot; }
 				else if	(dmgDesc.spellID == SPL_Explosion)			{ fireDot = SPL_Damage_Explosion_dot; };
 
-				// Fire staff: Damage Bonus (+10)
 				if (Hlp_IsValidItem(wpn))
 				{
+					// Fire staff
 					if (Hlp_IsItem(wpn, ItMW_Addon_Stab01))
 					|| (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
 					{
-						// Fire staff: Burning (+20%)
+						// Bonus 2: Burning (+20%)
 						if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
 						{
 							fireDot = fireDot * 120 / 100;
 						};
-						dmg += 10;
+						// Bonus 1: Damage Bonus vs. burning (+10)
+						if (Buff_Has(vic, burn_dot))
+						{
+							dmg += 10;
+						};
 					};
 				};
 				// Play burn FX on corpses for flavor in any case
@@ -229,17 +233,12 @@ pristr = IntToString(dmg);
 				||	(dmgDesc.spellID == SPL_WaterFist)
 				||	(dmgDesc.spellID == SPL_Thunderstorm)
 			{
-				// Ice staff: Debuff
 				if (Hlp_IsValidItem(wpn))
 				{
-					if (Hlp_IsItem(wpn, ItMW_Addon_Stab03))
-					|| (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
+					// Ice staff
+					if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
 					{
-						Print ( "ICE DEBUFF 1" );
-						if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
-						{
-							Print ( "ICE DEBUFF 2" );
-						};
+						Print ( "ICE DEBUFF 2" );
 					};
 				};
 				
@@ -257,31 +256,31 @@ pristr = IntToString(dmg);
 					Print(ConcatStrings("Start: ", IntToString(self.aivar[AIV_FreezeStateTime])));
 				};
 			}
-			// WIND AND LIGHTNING SPELLS ---------------------------------------------------------------------------
+			// LIGHTNING SPELLS ---------------------------------------------------------------------------
 			else if	(dmgDesc.spellID == SPL_Zap)
 				||	(dmgDesc.spellID == SPL_ChargeZap)
 				||	(dmgDesc.spellID == SPL_LightningFlash)
 				||	(dmgDesc.spellID == SPL_AdanosBall)
-				||	(dmgDesc.spellID == SPL_Whirlwind)
-				||	(dmgDesc.spellID == SPL_Extricate)
-				||	(dmgDesc.spellID == SPL_WindFist)
 			{
-				// Lightning/Wind staff: Ignore protection
+				// Lightning spell stagger
+				if	(!C_NpcIsUndead(self))
+				||	(dmgDesc.spellID == SPL_AdanosBall)
+				{
+					if (!Npc_HasBodyFlag(self, BS_FLAG_INTERRUPTABLE))
+					{
+						AI_PlayAni(self, "T_STUMBLE");
+					};
+				};
+				// Thunder staff
 				if (Hlp_IsValidItem(wpn))
 				{
-					if (Hlp_IsItem(wpn, ItMW_Addon_Stab05))
-					|| (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
+					// Bonus 2: Ignore protection
+					if (Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused))
 					{
 						if (prot < 20)
 						{ dmg += prot; }
 						else
 						{ dmg += 20; };
-						
-						// Lightning/Wind staff: ???
-						if (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
-						{
-							Print ( "LIGHTNING/WIND ???" );
-						};
 					};
 				};
 			};

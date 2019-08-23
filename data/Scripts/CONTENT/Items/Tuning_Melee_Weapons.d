@@ -340,27 +340,27 @@ const int Condition_RangerStaff		= 15;
 const int Range_RangerStaff			= 130;
 const int Value_RangerStaff			= 900;
 //Magier Stab	- NEUE INSTANZ //ADDON
-const int Damage_Stab01				= 25; 
+const int Damage_Stab01				= 0; 
 const int Condition_Stab01			= 30;
 const int Range_Stab01				= 120;
 const int Value_Stab01				= 900;
 //tatsächlicher Zauber Stab	- NEUE INSTANZ //ADDON
-const int Damage_Stab02				= 20; 
+const int Damage_Stab02				= 0; 
 const int Condition_Stab02			= 40;	// SPL_Cost_SummonWolf * 2
 const int Range_Stab02				= 110;
 const int Value_Stab02				= 850;
 //Wassermagier	- NEUE INSTANZ //ADDON
-const int Damage_Stab03				= 30; 
+const int Damage_Stab03				= 0; 
 const int Condition_Stab03			= 35;
 const int Range_Stab03				= 120;
 const int Value_Stab03				= 950;
 //Wassermagier	- NEUE INSTANZ //ADDON
-const int Damage_Stab04				= 35; 
+const int Damage_Stab04				= 0; 
 const int Condition_Stab04			= 40;
 const int Range_Stab04				= 130;
 const int Value_Stab04				= 1000;
 //Wassermagier	- NEUE INSTANZ //ADDON
-const int Damage_Stab05				= 40; 
+const int Damage_Stab05				= 0; 
 const int Condition_Stab05			= 45;
 const int Range_Stab05				= 130;
 const int Value_Stab05				= 1050;

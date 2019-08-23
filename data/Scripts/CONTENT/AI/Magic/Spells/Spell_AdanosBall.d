@@ -3,8 +3,8 @@
 // SPL_Adanosball (mud-freak)
 // **************************
 
-const int SPL_Cost_AdanosBall		= 40;
-const int SPL_Damage_AdanosBall		= 20;
+const int SPL_Cost_AdanosBall		= 20;
+const int SPL_Damage_AdanosBall		= 60;
 
 INSTANCE Spell_AdanosBall (C_Spell_Proto) {
 	time_per_mana			= 0;

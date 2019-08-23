@@ -341,7 +341,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"Waterfist",				// 72	SPL_WaterFist
 	"Ice Lance",					// 73	SPL_IceLance
 	"Inflate People",		// 74	SPL_Inflate
-	"Geyser",					// 75	SPL_Geyser
+	"Water Geyser",				// 75	SPL_Geyser
 	"Water Wall",				// 76	SPL_Waterwall
 	"TXT_SPL_RESERVED_77",		// 77	SPL_Reserved_77
 	"TXT_SPL_RESERVED_78",		// 78	SPL_Reserved_78
@@ -361,7 +361,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 
 	// ...
 	"Acid",						// 90	SPL_Acid
-	"AdanosBall",				// 91	SPL_AdanosBall
+	"Stun Ray",				// 91	SPL_AdanosBall
 	"Explosion",				// 92	SPL_Explosion
 	"Extricate",				// 93	SPL_Extricate
 	"HealOther",				// 94	SPL_HealOther
@@ -484,7 +484,7 @@ const string NAME_SPL_Whirlwind				= "Dust Devil";
 const string NAME_SPL_WaterFist				= "Waterfist";
 const string NAME_SPL_IceLance				= "Ice Lance";
 const string NAME_SPL_Inflate				= "Inflate People";
-const string NAME_SPL_Geyser				= "Geyser";
+const string NAME_SPL_Geyser				= "Water Geyser";
 const string NAME_SPL_Waterwall				= "Water Wall";
 const string NAME_SPL_Reserved_77			= "NAME_SPL_RESERVED_77";
 const string NAME_SPL_Reserved_78			= "NAME_SPL_RESERVED_78";
@@ -504,7 +504,7 @@ const string NAME_SPL_SummonMud				= "Summon Mud";
 
 // ...
 const string NAME_SPL_Acid					= "Acid";
-const string NAME_SPL_AdanosBall			= "AdanosBall";
+const string NAME_SPL_AdanosBall			= "Stun Ray";
 const string NAME_SPL_Explosion				= "Explosion";
 const string NAME_SPL_Extricate				= "Extricate";
 const string NAME_SPL_HealOther				= "HealOther";
@@ -724,6 +724,24 @@ const string NAME_Dam_Magic_Per		= "Magic damage per tier:";
 const string NAME_Dam_MagicDot			= "Magic damage over time:";
 const string NAME_Dam_MagicDot_Per		= "Magic damage over time per tier:";
 const string NAME_Dam_MagicDotFreeze	= "Magic damage over time (freezes targets):";
+
+const string NAME_Stagger		= "Staggers living targets. ";
+const string NAME_Nonlethal		= "Nonlethal. ";
+
+const string NAME_Stun_AdanosBall	= "Stuns all targets, undead for twice as long. ";
+
+// MAX LENGTH						"------------------------------------------------------------";
+const string NAME_Staff_Fire_1		= "Fire spells deal +10 damage against burning targets.";
+const string NAME_Staff_Fire_2		= "Fire spells deal 20% more damage over time.";
+const string NAME_Staff_Thunder_1	= "Lightning spells stun targets on full hit points.";
+const string NAME_Staff_Thunder_2	= "Lightning spells penetrate +20 magic protection.";
+const string NAME_Staff_Water_1		= "Ice/Water spells have -5 mana cost.";
+const string NAME_Staff_Water_2		= "";
+const string NAME_Staff_Ulthar_1	= "Basic projectile spells can be cast rapidly.";
+const string NAME_Staff_Ulthar_2	= "Chargeable spells are charged 30% faster.";
+const string NAME_Staff_Typhoon_1	= "";
+const string NAME_Staff_Typhoon_2	= "";
+
 
 //const string NAME_Damage		= "Damage:";
 //const string NAME_Damage_Max	= "Maximum damage:";

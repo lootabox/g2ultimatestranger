@@ -22,12 +22,6 @@ func void HandleSummonDegen(var c_npc summon)
 	else if	(summon.guild == GIL_SUMMONED_GOLEM)			{ degen = SPL_Degen_SummonGolem; }
 	else if	(summon.guild == GIL_SummonedZombie)			{ degen = SPL_Degen_SummonZombie; }
 	else if	(summon.guild == GIL_SUMMONED_DEMON)			{ degen = SPL_Degen_SummonDemon; };
-	
-	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
-	if (Hlp_IsValidItem(wpn))
-	{
-		if (Hlp_IsItem(wpn, ItMW_Addon_Stab02) || Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused)) { degen -= 1; };
-	};
 
 	Npc_ChangeAttribute(summon, ATR_HITPOINTS, -degen);
 };

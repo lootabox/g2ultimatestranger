@@ -75,21 +75,15 @@ func void B_AssessMagic ()
 		return;
 	};
 	
-	// ------ ChargeZap ------
-	if (Npc_GetLastHitSpellID(self) == SPL_ChargeZap)
+	// ------ Blitz ------
+	if ((Npc_GetLastHitSpellID(self) == SPL_Zap)
+	|| (Npc_GetLastHitSpellID(self) == SPL_ChargeZap)
+	|| (Npc_GetLastHitSpellID(self) == SPL_LightningFlash)
+	|| (Npc_GetLastHitSpellID(self) == SPL_AdanosBall))
 	{
 		Npc_ClearAIQueue	(self);
 		B_ClearPerceptions	(self);
 		AI_StartState		(self, ZS_ShortZapped, 0, "");
-		return;
-	};
-
-	// ------ AdanosBall ------
-	if (Npc_GetLastHitSpellID(self) == SPL_AdanosBall)
-	{
-		Npc_ClearAIQueue	(self);
-		B_ClearPerceptions	(self);
-		AI_StartState		(self, ZS_Zapped, 0, "");
 		return;
 	};
 
