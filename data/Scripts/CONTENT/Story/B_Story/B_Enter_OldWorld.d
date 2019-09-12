@@ -127,7 +127,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_3 ()
 		Wld_InsertNpc	(DMT_DementorAmbient,"PSI_TEMPLE_LEFTCORNER");
 		Wld_InsertNpc	(DMT_DementorAmbient,"PSI_TEMPLE_RIGHTCORNER");
 		
-		Wld_InsertItem 	(ItRu_Fear,"FP_ITEM_XARDASALTERTURM_01");
+		Wld_InsertItem 	(ItRu_BeliarsRage,"FP_ITEM_XARDASALTERTURM_01");
 
 		if (hero.guild == GIL_KDF)
 		{

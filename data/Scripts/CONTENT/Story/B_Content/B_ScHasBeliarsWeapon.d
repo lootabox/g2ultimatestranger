@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 func int C_SCHasBeliarsRune()
 {
-	if (Npc_HasItems (hero, ItRu_BeliarsRage) 		== TRUE)
+/* 	if (Npc_HasItems (hero, ItRu_BeliarsRage) 		== TRUE)
 	|| (Npc_HasItems (hero, ItRu_SuckEnergy) 		== TRUE)
 	|| (Npc_HasItems (hero, ItRu_GreenTentacle) 	== TRUE)
 	|| (Npc_HasItems (hero, ItRu_Swarm) 			== TRUE)
@@ -12,7 +12,7 @@ func int C_SCHasBeliarsRune()
 	|| (Npc_HasItems (hero, ItRu_SummonGuardian) 	== TRUE)
 	{
 		return TRUE;
-	};
+	}; */
 	
 	return FALSE; //DEFAULT
 };
@@ -126,13 +126,13 @@ func int C_IsItemBeliarsWeapon(var C_ITEM Weap)
 
 	//------------------------------------------------------
 
-	|| (Hlp_IsItem(Weap, ItRu_BeliarsRage) 	== TRUE)
+/* 	|| (Hlp_IsItem(Weap, ItRu_BeliarsRage) 	== TRUE)
 	|| (Hlp_IsItem(Weap, ItRu_SuckEnergy) 		== TRUE)
 	|| (Hlp_IsItem(Weap, ItRu_GreenTentacle) 	== TRUE)
 	|| (Hlp_IsItem(Weap, ItRu_Swarm) 			== TRUE)
 	|| (Hlp_IsItem(Weap, ItRu_Skull) 			== TRUE)
 	|| (Hlp_IsItem(Weap, ItRu_SummonZombie) 	== TRUE)
-	|| (Hlp_IsItem(Weap, ItRu_SummonGuardian) 	== TRUE)
+	|| (Hlp_IsItem(Weap, ItRu_SummonGuardian) 	== TRUE) */
 	{
 		return TRUE;
 	};
@@ -228,13 +228,13 @@ func void B_ClearBeliarsWeapon ()
 
 	//------------------------------------------------------
 
-	Npc_RemoveInvItems	(hero ,ItRu_BeliarsRage 	, Npc_HasItems (hero, ItRu_BeliarsRage ));
+/* 	Npc_RemoveInvItems	(hero ,ItRu_BeliarsRage 	, Npc_HasItems (hero, ItRu_BeliarsRage ));
 	Npc_RemoveInvItems	(hero ,ItRu_SuckEnergy 		, Npc_HasItems (hero, ItRu_SuckEnergy ));
 	Npc_RemoveInvItems	(hero ,ItRu_GreenTentacle 	, Npc_HasItems (hero, ItRu_GreenTentacle ));
 	Npc_RemoveInvItems	(hero ,ItRu_Swarm 			, Npc_HasItems (hero, ItRu_Swarm ));
 	Npc_RemoveInvItems	(hero ,ItRu_Skull 			, Npc_HasItems (hero, ItRu_Skull ));
 	Npc_RemoveInvItems	(hero ,ItRu_SummonZombie 	, Npc_HasItems (hero, ItRu_SummonZombie ));
-	Npc_RemoveInvItems	(hero ,ItRu_SummonGuardian 	, Npc_HasItems (hero, ItRu_SummonGuardian ));
+	Npc_RemoveInvItems	(hero ,ItRu_SummonGuardian 	, Npc_HasItems (hero, ItRu_SummonGuardian )); */
 };	
 
 var int BeliarWeapCurrentLvL;
