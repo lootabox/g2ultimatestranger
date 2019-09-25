@@ -105,10 +105,13 @@ func void GFA_SpellAiming() {
     };
 
     // For safety: Clean up, in case custom spells are recklessly designed
+    /* Must remove safety to allow aim vob FX targeting to work...
     if (GFA_InvestingOrCasting(hero) <= 0) {
         GFA_AimVobDetachFX();
     };
+    */
 
+    var int pos[3];
     var int distance;
     var int target;
 
@@ -121,13 +124,21 @@ func void GFA_SpellAiming() {
         || (spell.targetCollectAzi <= 0)
         || (spell.targetCollectElev <= 0) {
             focusType = 0;
+            if (GFA_AimVobHasFX == FALSE) {
+                GFA_AimVobAttachFX("spellFX_Blink_Target"); // Technically this would work purely by spellFX, but it is unstable
+            };
         } else {
             focusType = spell.targetCollectType;
         };
 
         // Shoot aim ray, to retrieve the distance to an intersection and a possible target
-        GFA_AimRay(spell.targetCollectRange, focusType, _@(target), 0, _@(distance), 0);
+        GFA_AimRay(spell.targetCollectRange, focusType, _@(target), _@(pos), _@(distance), 0);
         distance = roundf(divf(mulf(distance, FLOAT1C), mkf(spell.targetCollectRange))); // Distance scaled to [0, 100]
+
+        // Update aim vob if aim vob has FX attached
+        if (GFA_AimVobHasFX == TRUE) {
+            GFA_SetupAimVob(_@(pos));
+        };
 
     } else {
         // No focus collection

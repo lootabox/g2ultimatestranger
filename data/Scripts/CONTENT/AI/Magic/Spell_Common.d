@@ -105,17 +105,17 @@ const int zCWaypoint__CorrectHeight_maxDepth	= 8061133; //0x7B00CD
 
 const string SPL_BLINK_WP						= "WP_SPL_BLINK"; // The name should be unique
 
-func int Move_Blink_Waypoint(var C_NPC slf)
+func int Move_Aim_Waypoint(var C_NPC slf)
 {
 	// --- Check if spell failed ---
 
 	// Retrieve position from aim vob
 	var int vobPtr; vobPtr = GFA_SetupAimVob(0);
 	if (!vobPtr) {
-		// MEM_Error("Summon: Failed to retrieve destination (aim vob)"); // Don't break immersion
+		// MEM_Error("Move_Aim_Waypoint: Failed to retrieve destination (aim vob)"); // Don't break immersion
 		AI_PlayAni(slf, "T_CASTFAIL"); // Much nicer
 		Wld_PlayEffect("SPELLFX_FEAR_GROUND", slf, slf, 0, 0, 0, FALSE);
-		MEM_Warn("Spell_Cast_Summon: Failed to retrieve destination (aim vob)");
+		MEM_Warn("Move_Aim_Waypoint: Failed to retrieve destination (aim vob)");
 		return FALSE;
 	};
 	var zCVob vob; vob = _^(vobPtr);
@@ -124,7 +124,7 @@ func int Move_Blink_Waypoint(var C_NPC slf)
 	// Safety first: Line of sight to target location is obstructed, cancel to prevent traversing through walls
 	if (!Npc_CanSeeItem(slf, vob)) {
 		AI_PlayAni(slf, "T_CASTFAIL");
-		MEM_Warn("Spell_Cast_Summon: Destination out of sight (aim vob)");
+		MEM_Warn("Move_Aim_Waypoint: Destination out of sight (aim vob)");
 		return FALSE;
 	};
 
@@ -152,7 +152,7 @@ func int Move_Blink_Waypoint(var C_NPC slf)
 
 	// Create way point if it does not exit yet
 	if (!wpPtr) {
-		MEM_Info("Spell_Cast_Summon: Creating destination way point."); // Should be printed only once for each world
+		MEM_Info("Move_Aim_Waypoint: Creating destination way point."); // Should be printed only once for each world
 
 		CALL__cdecl(zCWaypoint___CreateNewInstance); // This allocates the necessary memory
 		wpPtr = CALL_RetValAsPtr();
@@ -170,7 +170,6 @@ func int Move_Blink_Waypoint(var C_NPC slf)
 
 
 	// --- Correct way point height ---
-/* 
 	// Set longer ground check trace ray in zCWaypoint::CorrectHeight
 	MemoryProtectionOverride(zCWaypoint__CorrectHeight_maxDepth, 4);
 	var int traceLengthBak; traceLengthBak = MEM_ReadInt(zCWaypoint__CorrectHeight_maxDepth);
@@ -195,28 +194,42 @@ func int Move_Blink_Waypoint(var C_NPC slf)
 		} else {
 			UpdateLine(h, _@(wp.pos), _@(pos));
 		};
-	}; */
+	};
 
 	return TRUE;
 };
 
-func int Spell_Logic_Invest_Summon(var C_NPC slf, var int manaInvested, var int SPL_Cost)
+func void Spell_Cast_Aimvob(var C_NPC slf, var int spellLevel, var int manaCost, var string spellFX, var int spellDamage)
+{
+	Spell_Cast_Basic(slf, manaCost);
+	if (Npc_IsPlayer(slf))
+	{
+		var int vobPtr; vobPtr = GFA_SetupAimVob(0);
+		if (!vobPtr) {
+			// MEM_Error("Spell_Cast_Aim_Waypoint: Failed to retrieve destination (aim vob)"); // Don't break immersion
+			AI_PlayAni(slf, "T_CASTFAIL"); // Much nicer
+			MEM_Warn("Spell_Cast_Aim_Waypoint: Failed to retrieve destination (aim vob)");
+			return;
+		};
+		var zCVob vob; vob = _^(vobPtr);
+
+		Wld_PlayEffect(spellFX,vob,vob,0,spellDamage,DAM_MAGIC,FALSE);
+	};
+};
+
+func int Spell_Logic_Invest_Summon(var C_NPC slf, var int manaInvested, var int manaCost)
 {
 	// Npcs cant handle charge summons...
 	if (!Npc_IsPlayer(slf))
 	{
-		return Spell_Logic_Basic(slf, SPL_Cost);
+		return Spell_Logic_Basic(slf, manaCost);
 	};
 
-	if (!manaInvested) && (GFA_ACTIVE) {
-		GFA_AimVobAttachFX("spellFX_Blink_Target"); // Technically this would work purely by spellFX, but it is unstable
-	};
-
-	return Spell_Logic_Invest(slf, manaInvested, SPL_Cost, 3, TRUE);
-	//return Spell_Logic_Invest(slf, manaInvested, SPL_Cost, 2, TRUE);
+	return Spell_Logic_Invest(slf, manaInvested, manaCost, 2, FALSE);
 };
 
 func void Spell_Cast_Summon(var C_NPC slf, var int spellLevel, var int npcSummonInstance, var int playerSummonInstance, var int playerSummonInstance2) {
+	// Npcs cant handle charge summons...
 	if (!Npc_IsPlayer(slf))
 	{
 		Wld_SpawnNpcRange	(slf,	npcSummonInstance,			1,	500);
@@ -224,23 +237,29 @@ func void Spell_Cast_Summon(var C_NPC slf, var int spellLevel, var int npcSummon
 		return;
 	};
 
-	// Remove FX from aim vob
-	GFA_AimVobDetachFX();
-
-	// Spell was aborted by caster before it started ("arming" the spell not finished)
-	if (spellLevel < 2) {
-		return;
+	if (GFA_ACTIVE)
+	{
+		if (Move_Aim_Waypoint(slf))
+		{
+			if (spellLevel > 1)
+			{
+				Wld_InsertNpc(playerSummonInstance2, SPL_BLINK_WP);
+			}
+			else
+			{
+				Wld_InsertNpc(playerSummonInstance, SPL_BLINK_WP);
+			};
+			return;
+		};
 	};
 
-	if (!Move_Blink_Waypoint(slf)) { return; };
-
-	if (spellLevel > 2)
+	// Fallback incase free aim is off or moving the aim waypoint is not possible for some reason
+	if (spellLevel > 1)
 	{
-		Wld_InsertNpc(playerSummonInstance2, SPL_BLINK_WP);
+		Wld_SpawnNpcRange(slf, playerSummonInstance2, 1, 500);
 	}
 	else
 	{
-		Wld_InsertNpc(playerSummonInstance, SPL_BLINK_WP);
+		Wld_SpawnNpcRange(slf, playerSummonInstance, 1, 500);
 	};
-	
 };
