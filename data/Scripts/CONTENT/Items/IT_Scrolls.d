@@ -630,6 +630,8 @@ INSTANCE ItSc_Sleep (C_Item)
 	
 	TEXT	[2]			=	NAME_Sec_Duration;
 	COUNT	[2]			=	SPL_TIME_Sleep;
+
+	TEXT	[3]			=	ConcatStrings(NAME_ShortRange, NAME_Instant);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -833,6 +835,8 @@ INSTANCE ItSc_Fear (C_Item)
 	
 	TEXT	[2]			=	NAME_Sec_Duration;
 	COUNT	[2]			=	SPL_TIME_Fear;
+
+	TEXT	[3]			=	ConcatStrings(NAME_AreaOfEffect_Default, NAME_Instant);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1321,6 +1325,8 @@ INSTANCE ItSc_Shrink (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarzmagiern
 
 	TEXT	[2]			=	NAME_Shrink_Penalty;
 	COUNT	[2]			=	SPL_Shrink_Penalty;
+
+	TEXT	[3]			=	ConcatStrings(NAME_ShortRange, NAME_Instant);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

@@ -10,6 +10,7 @@ INSTANCE Spell_HealOther (C_Spell_Proto) {
     time_per_mana           = 0;
     spelltype               = SPELL_NEUTRAL;
     targetCollectAlgo       = TARGET_COLLECT_FOCUS;
+    targetCollectRange      = 1000;
 };
 
 func int Spell_Logic_HealOther(var int manaInvested) {

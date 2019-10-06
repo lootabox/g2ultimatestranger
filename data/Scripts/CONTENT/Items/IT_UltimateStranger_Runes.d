@@ -175,6 +175,8 @@ INSTANCE ItRu_HealOther (C_Item)
 	TEXT	[2]			=	NAME_HealingPerCast;
 	COUNT	[2]			=	SPL_Heal_HealOther;
 
+    TEXT    [3]         =   ConcatStrings(NAME_ShortRange, NAME_Instant);
+
     TEXT    [5]         =   NAME_Value;
     COUNT   [5]         =   value;
 };
@@ -267,6 +269,10 @@ INSTANCE ItRu_Rage (C_Item)
 
     TEXT    [1]         =   NAME_Manakosten;
     COUNT   [1]         =   SPL_Cost_Rage;
+
+    TEXT    [2]         =   NAME_Rage;
+
+    TEXT    [3]         =   ConcatStrings(NAME_ShortRange, NAME_Instant);
 
     TEXT    [5]         =   NAME_Value;
     COUNT   [5]         =   value;

@@ -301,7 +301,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 	// Kreis 6
 	"Fire Rain",				// 42	SPL_Firerain
 	"Breath of Death",				// 43	SPL_BreathOfDeath
-	"Mass Destruction",			// 44	SPL_MassDeath
+	"Wave of Death",			// 44	SPL_MassDeath
 	"Army of Darkness",		// 45	SPL_ArmyOfDarkness
 	"Shrink",				// 46	SPL_Shrink
 
@@ -712,6 +712,7 @@ const string NAME_Dex_needed	= "Dexterity required:";
 //const string NAME_Spell_Invest	= "Sustainable spell";
 const string NAME_Spell_Freeze	= "Freezes enemies while dealing damage over time.";
 const string NAME_Shrink_Penalty= "Attribute and protection reduction (percentage):";
+const string NAME_Rage			= "Forces the target to attack the nearest creature.";
 
 const string NAME_Dam_Blunt		= "Blunt damage:";
 const string NAME_Dam_Edge		= "Edge damage:";
@@ -727,6 +728,11 @@ const string NAME_Dam_MagicDotFreeze	= "Magic damage over time (freezes targets)
 
 const string NAME_Stagger		= "Staggers living targets. ";
 const string NAME_Nonlethal		= "Nonlethal. ";
+const string NAME_Instant		= "Instant. ";
+const string NAME_ShortRange	= "Short range. ";
+//const string NAME_AreaOfEffect_Small	= "Small area of effect. ";
+const string NAME_AreaOfEffect_Default	= "Area of effect. ";
+//const string NAME_AreaOfEffect_Large	= "Large area of effect. ";
 
 const string NAME_Stun_AdanosBall	= "Stuns all targets, undead for twice as long. ";
 

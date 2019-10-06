@@ -11,6 +11,7 @@ instance Spell_Sleep (C_Spell_Proto)
 	time_per_mana			= 0;					//Wert wird nicht gebraucht - Spell wirkt INSTANT
 	spelltype 				= SPELL_NEUTRAL;
 	targetCollectAlgo		= TARGET_COLLECT_FOCUS;
+	targetCollectRange		= 1000;
 };
 
 func int Spell_Logic_Sleep (var int manaInvested) //Parameter manaInvested wird hier nicht benutzt
