@@ -797,15 +797,16 @@ const string spellFxInstanceNames[MAX_SPELL] =
 //
 //	Spells: Animationskürzel (Array)
 //
+// Note: FBT is hastened by Ulthar's staff, use FIB instead
 
 const string spellFxAniLetters[MAX_SPELL] =
 {
 	// Paladin-Runen
 	"SLE",					// 0	 SPL_PalLight
 	"HEA",  				// 1	 SPL_PalLightHeal
-	"FBT",  				// 2	 SPL_PalHolyBolt
+	"FIB",  				// 2	 SPL_PalHolyBolt
 	"HEA",  				// 3	 SPL_PalMediumHeal
-	"FBT",					// 4	 SPL_PalRepelEvil
+	"FIB",					// 4	 SPL_PalRepelEvil
 	"HEA",  				// 5	 SPL_PalFullHeal
 	"FIB",  				// 6	 SPL_PalDestroyEvil
 
@@ -846,7 +847,7 @@ const string spellFxAniLetters[MAX_SPELL] =
 
 	// Kreis 3
 	"HEA",  				// 28	SPL_MediumHeal
-	"WND",  				// 29	SPL_LightningFlash
+	"SLE",  				// 29	SPL_LightningFlash
 	"FIB",  				// 30	SPL_ChargeFireball
 	"SUM",  				// 31	SPL_SummonSkeleton
 	"FEA",  				// 32	SPL_Fear
@@ -859,13 +860,13 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"FIB",  				// 37	SPL_Pyrokinesis
 
 	// Kreis 5
-	"FIB",  				// 38	SPL_Firestorm
+	"FBT",  				// 38	SPL_Firestorm
 	"FEA",  				// 39	SPL_IceWave
 	"SUM",  				// 40	SPL_SummonDemon
 	"HEA",  				// 41	SPL_FullHeal
 
 	// Kreis 6
-	"FEA",  				// 42	SPL_Firerain
+	"STM",  				// 42	SPL_Firerain
 	"FIB",  				// 43	SPL_BreathOfDeath
 	"MSD",  				// 44	SPL_MassDeath
 	"SUM",  				// 45	SPL_ArmyOfDarkness
@@ -890,11 +891,10 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"FIB",  				// 60	SPL_MasterOfDisaster
 
 	// ???
-	"FBT",  				// 61	SPL_Deathbolt
-	"FBT",  				// 62	SPL_Deathball
-	"FBT",  				// 63	SPL_Concussionbolt
+	"FIB",  				// 61	SPL_Deathbolt
+	"FIB",  				// 62	SPL_Deathball
+	"FIB",  				// 63	SPL_Concussionbolt
 	"HEA",  				// 64	SPL_Teleport_Maya
-	//"XXX",  				// 64	SPL_Reserved_64
 	"XXX",  				// 65	SPL_Reserved_65
 	"XXX",  				// 66	SPL_Reserved_66
 	"XXX",					// 67	SPL_Reserved_67
@@ -907,15 +907,15 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"WND",  				// 72	SPL_WaterFist
 	"FBT",  				// 73	SPL_IceLance
 	"SLE",  				// 74	SPL_Inflate			
-	"WND",  				// 75	SPL_Geyser			
+	"FOT",  				// 75	SPL_Geyser			
 	"FEA",  				// 76	SPL_Waterwall
 	"XXX",					// 77	SPL_Reserved_77
 	"XXX",					// 78	SPL_Reserved_78
 	"XXX",					// 79	SPL_Reserved_79
 
 	// Magick (Maya)
-	"FBT",  				// 80	SPL_Plague
-	"FBT",  				// 81	SPL_Swarm			
+	"FIB",  				// 80	SPL_Plague
+	"FIB",  				// 81	SPL_Swarm			
 	"FRZ",  				// 82	SPL_GreenTentacle
 	"FEA",  				// 83	SPL_Earthquake
 	"SUM",  				// 84	SPL_SummonGuardian
@@ -927,7 +927,7 @@ const string spellFxAniLetters[MAX_SPELL] =
 
 	// ...
 	"FRZ",  				// 90	SPL_Acid
-	"WND",  				// 91	SPL_AdanosBall
+	"FIB",  				// 91	SPL_AdanosBall
 	"FRZ",  				// 92	SPL_Explosion
 	"EXP",  				// 93	SPL_Extricate
 	"SLE",  				// 94	SPL_HealOther
