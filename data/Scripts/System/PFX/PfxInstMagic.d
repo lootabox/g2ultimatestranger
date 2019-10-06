@@ -1885,7 +1885,7 @@ INSTANCE MFX_GEYSER_CAST (C_PARTICLEFX)
 {
      ppsvalue = 100;
      ppsscalekeys_s = "1";
-     ppsislooping = 1;
+     //ppsislooping = 1;
      ppsfps = 2;
      shptype_s = "POINT";
      shpfor_s = "WORLD";

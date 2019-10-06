@@ -128,6 +128,8 @@ INSTANCE ItRu_Geyser (C_Item)
 	
 	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Geyser;
+
+	TEXT	[3]			=	NAME_Instant;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -225,7 +227,7 @@ INSTANCE ItRu_BeliarsRage	(C_Item)
 	spell				= 	SPL_Energyball;
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_Cost_Energyball;	
-	mag_circle			=	3;
+	//mag_circle			=	3;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -261,7 +263,7 @@ INSTANCE ItRu_SuckEnergy	(C_Item)
 	spell				= 	SPL_SuckEnergy;
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_Cost_SuckEnergy;	
-	mag_circle			=	2;
+	//mag_circle			=	2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -300,7 +302,7 @@ INSTANCE ItRu_GreenTentacle (C_Item)
 	spell				= 	SPL_Greententacle;
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_Cost_Greententacle;	
-	mag_circle			=	1;
+	//mag_circle			=	1;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -336,7 +338,7 @@ INSTANCE ItRu_Swarm	(C_Item)
 	spell				= 	SPL_Swarm;
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_Cost_Swarm;	
-	mag_circle			=	4;
+	//mag_circle			=	4;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -375,7 +377,7 @@ INSTANCE ItRu_Skull	(C_Item)
 	spell				= 	SPL_Skull;
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_Cost_Skull;	
-	mag_circle			=	5;
+	//mag_circle			=	5;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -414,7 +416,7 @@ INSTANCE ItRu_SummonZombie	(C_Item)
 	spell				= 	SPL_SummonZombie;
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_Cost_SummonZombie;	
-	mag_circle			=	4;
+	//mag_circle			=	4;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -447,7 +449,7 @@ INSTANCE ItRu_SummonGuardian	(C_Item)
 	spell				= 	SPL_SummonGuardian;
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_Cost_SummonGuardian;	
-	mag_circle			=	3;
+	//mag_circle			=	3;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";

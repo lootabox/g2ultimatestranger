@@ -10,7 +10,8 @@ INSTANCE Spell_LightningFlash (C_Spell_Proto)
 {							
 	time_per_mana			= 0;
 	damage_per_level		= SPL_Damage_LightningFlash;
-	damageType				= DAM_MAGIC;	
+	damageType				= DAM_MAGIC;
+	targetCollectAlgo		= TARGET_COLLECT_FOCUS;
 };
 
 func int Spell_Logic_LightningFlash (var int manaInvested) //Parameter wird hier nicht gebraucht
@@ -20,5 +21,5 @@ func int Spell_Logic_LightningFlash (var int manaInvested) //Parameter wird hier
 
 func void Spell_Cast_LightningFlash()
 {
-	Spell_Cast_Basic(self, SPL_Cost_LightningFlash);
+	Spell_Cast_Focus(SPL_LightningFlash, SPL_Cost_LightningFlash, SPL_Damage_LightningFlash, "spellFX_LightningFlash_HEAVENSRAGE");
 };

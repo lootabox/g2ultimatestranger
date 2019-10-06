@@ -11,6 +11,7 @@ INSTANCE Spell_Geyser	(C_Spell_Proto)
 	time_per_mana			= 0;
 	damage_per_level		= SPL_Damage_Geyser;
 	damageType				= DAM_MAGIC;
+	targetCollectAlgo		= TARGET_COLLECT_FOCUS;
 };
 
 func int Spell_Logic_Geyser (var int manaInvested) //Parameter wird hier nicht gebraucht
@@ -20,5 +21,5 @@ func int Spell_Logic_Geyser (var int manaInvested) //Parameter wird hier nicht g
 
 func void Spell_Cast_Geyser()
 {
-	Spell_Cast_Basic(self, SPL_Cost_Geyser);
+	Spell_Cast_Focus(SPL_Geyser, SPL_Cost_Geyser, SPL_Damage_Geyser, "spellFX_Geyser_FOUNTAIN");
 };

@@ -199,22 +199,49 @@ func int Move_Aim_Waypoint(var C_NPC slf)
 	return TRUE;
 };
 
-func void Spell_Cast_Aimvob(var C_NPC slf, var int spellLevel, var int manaCost, var string spellFX, var int spellDamage)
+// Spells using this have to handle their "B_AssesMagic" logic here
+func void Spell_Cast_Focus(var int spellID, var int manaCost, var int spellDamage, var string spellFX)
 {
-	Spell_Cast_Basic(slf, manaCost);
-	if (Npc_IsPlayer(slf))
-	{
-		var int vobPtr; vobPtr = GFA_SetupAimVob(0);
-		if (!vobPtr) {
-			// MEM_Error("Spell_Cast_Aim_Waypoint: Failed to retrieve destination (aim vob)"); // Don't break immersion
-			AI_PlayAni(slf, "T_CASTFAIL"); // Much nicer
-			MEM_Warn("Spell_Cast_Aim_Waypoint: Failed to retrieve destination (aim vob)");
-			return;
-		};
-		var zCVob vob; vob = _^(vobPtr);
+	// Handle spell collision
+	var C_NPC selfTemp; selfTemp = Hlp_GetNpc (self);
+	var C_NPC otherTemp; otherTemp = Hlp_GetNpc (other);
+	self = Hlp_GetNpc(otherTemp); other = Hlp_GetNpc(selfTemp);
+	var int coll; coll = C_CanNpcCollideWithSpell(spellID);
+	self = Hlp_GetNpc(selfTemp); other = Hlp_GetNpc(otherTemp);
 
-		Wld_PlayEffect(spellFX,vob,vob,0,spellDamage,DAM_MAGIC,FALSE);
+	// Calculate damage and play vfx
+	if (coll & COLL_APPLYDOUBLEDAMAGE)	{ spellDamage *= 2; };
+	if (coll & COLL_APPLYHALVEDAMAGE)	{ spellDamage /= 2; };
+	Wld_PlayEffect(spellFX, other, other, 0, 0, 0, FALSE);
+
+	// Make sure collision checks out, then handle and apply damage
+	if (coll > COLL_DONOTHING)
+	{
+		B_MagicHurtNpc(self, other, Handle_Magic_Dmg(self, other, spellID, spellDamage));
+
+		// Send percs depending on outcome
+		if (other.attribute[ATR_HITPOINTS] > 0)
+		{
+			Npc_SendSinglePerc(self, other, PERC_ASSESSDAMAGE);
+			NPC_SendPassivePerc(other, PERC_ASSESSFIGHTSOUND, other, self);
+
+			// Handle "B_AssessMagic"
+			if (coll & (COLL_DOEVERYTHING | COLL_APPLYVICTIMSTATE))
+			{
+				if (spellID == SPL_LightningFlash) {
+					Npc_ClearAIQueue	(self);
+					B_ClearPerceptions	(self);
+					AI_StartState(other, ZS_ShortZapped, 0, "");
+				};
+			};
+		}
+		else
+		{
+			Npc_SendPassivePerc (other, PERC_ASSESSMURDER, other, self);
+		};
 	};
+
+	Spell_Cast_Basic(self, manaCost);
 };
 
 func int Spell_Logic_Invest_Summon(var C_NPC slf, var int manaInvested, var int manaCost)

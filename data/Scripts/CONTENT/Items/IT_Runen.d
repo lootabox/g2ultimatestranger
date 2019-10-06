@@ -1041,7 +1041,7 @@ INSTANCE ItRu_LightningFlash (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_LightningFlash;
 
-	TEXT	[3]			=	NAME_Stagger;
+	TEXT	[3]			=	ConcatStrings(NAME_Stagger, NAME_Instant);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

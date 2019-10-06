@@ -32,6 +32,8 @@ INSTANCE ItSc_Geyser (C_Item)
 	
 	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Geyser;
+
+	TEXT	[3]			=	NAME_Instant;
 	
 	TEXT	[5]			=	NAME_Value;				
 	COUNT	[5]			=	value;

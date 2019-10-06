@@ -740,12 +740,11 @@ INSTANCE spellFX_Geyser (CFx_Base_Proto)
      	emtrjloopmode_s 		= "NONE";
      	emtrjeasefunc_s 		= "LINEAR";
 
-     	emActionCollStat_S		= "COLLIDE";
-     	emActionCollDyn_S		= "COLLIDE CREATEONCE";
-     	emFXCollDyn_S	   		= "spellFX_Geyser_FOUNTAIN";
-     	emTrjTargetRange	 	= 20;
-		emTrjTargetElev 		= 0;
-		
+     	//emActionCollStat_S		= "COLLIDE";
+     	//emActionCollDyn_S		= "COLLIDE CREATEONCE";
+     	//emFXCollDyn_S	   		= "spellFX_Geyser_FOUNTAIN";
+     	//emTrjTargetRange	 	= 20;
+		//emTrjTargetElev 		= 0;
 
 		lightPresetname   		= "AURA";
 
@@ -767,18 +766,19 @@ INSTANCE spellFX_Geyser (CFx_Base_Proto)
 		INSTANCE spellFX_Geyser_KEY_CAST (C_ParticleFXEmitKey)
 		{
 				visname_S 				= "MFX_GEYSER_CAST";
-				emtrjmode_s 			= "TARGET";
-				emtrjeasevel 			= 1000;
-		     	lightrange 				= 100;
-	 			emCheckCollision 		= 1;
+				//emtrjmode_s 			= "TARGET";
+				//emtrjmode_s 			= "FIXED";
+				//emtrjeasevel 			= 1000;
+		     	//lightrange 				= 100;
+	 			//emCheckCollision 		= 1;
 	 			sfxid					= "MFX_Geyser_Rumble";
 				sfxisambient			= 1;
 		};
 
-		INSTANCE spellFX_Geyser_KEY_COLLIDE (C_ParticleFXEmitKey)
+/* 		INSTANCE spellFX_Geyser_KEY_COLLIDE (C_ParticleFXEmitKey)
 		{
 		     	emtrjeasevel 			= 0.000001;
-};
+}; */
 
 instance spellFX_Geyser_FOUNTAIN	(CFx_Base_Proto)  //FLASH
 {
@@ -2341,12 +2341,12 @@ INSTANCE spellFX_LightningFlash (CFx_Base_Proto)
      	emtrjloopmode_s 		= "NONE";
      	emtrjeasefunc_s 		= "LINEAR";
 
-     	emActionCollDyn_S		= "COLLIDE CREATEONCE";
-     	emFXCollDyn_S	   		= "spellFX_LightningFlash_HEAVENSRAGE";
-		emFXCollDynPerc_S     	= "spellFX_Thunderspell_SENDPERCEPTION";
-     	emTrjTargetRange	 	= 20;
-		emTrjTargetElev 		= 0;
-		emTrjDynUpdateDelay		= 20000;
+     	//emActionCollDyn_S		= "COLLIDE CREATEONCE";
+     	//emFXCollDyn_S	   		= "spellFX_LightningFlash_HEAVENSRAGE";
+		//emFXCollDynPerc_S     	= "spellFX_Thunderspell_SENDPERCEPTION";
+     	//emTrjTargetRange	 	= 20;
+		//emTrjTargetElev 		= 0;
+		//emTrjDynUpdateDelay		= 20000;
 
 		lightPresetname   		= "AURA";
 
@@ -2365,18 +2365,20 @@ INSTANCE spellFX_LightningFlash (CFx_Base_Proto)
 
 		INSTANCE spellFX_LightningFlash_KEY_CAST (C_ParticleFXEmitKey)
 		{
-				visname_S 				= "MFX_HEAVENSRAGE_CAST";
-				emtrjmode_s 			= "TARGET";
-				emtrjeasevel 			= 2000;
-		     	sfxid					= "MFX_Thunderball_Collide3";
+				//visname_S 				= "MFX_HEAVENSRAGE_CAST";
+				visname_S				= "MFX_ICEBOLT_COLLIDE";
+				emtrjmode_s 			= "NONE";
+				//emtrjmode_s 			= "TARGET";
+				//emtrjeasevel 			= 2000;
+				sfxid					= "MFX_Thunderball_Collide3";
 	 			lightrange 				= 100;
-	 			emCheckCollision 		= 1;
+	 			//emCheckCollision 		= 1;
 		};
 
-		INSTANCE spellFX_LightningFlash_KEY_COLLIDE (C_ParticleFXEmitKey)
+/* 		INSTANCE spellFX_LightningFlash_KEY_COLLIDE (C_ParticleFXEmitKey)
 		{
 		     	emtrjeasevel 			= 0.000001;
-};
+}; */
 instance spellFX_LightningFlash_HEAVENSRAGE	(CFx_Base_Proto)  //FLASH
 {
 	visname_S 			= "MFX_HEAVENSRAGE_FLASH";
