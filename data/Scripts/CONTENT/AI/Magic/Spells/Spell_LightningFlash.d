@@ -2,8 +2,8 @@
 // SPL_LightningFlash
 // ******************
 
-const int SPL_Cost_LightningFlash 		= 30; 
-const int SPL_Damage_LightningFlash 	= 150; 
+const int SPL_Cost_LightningFlash 		= 25; 
+const int SPL_Damage_LightningFlash 	= 120; 
 
 
 INSTANCE Spell_LightningFlash (C_Spell_Proto)

@@ -3,7 +3,7 @@
 // ******************
 
 const int SPL_Cost_ChargeZap		= 10; //*4
-const int SPL_Damage_ChargeZap 		= 30;
+const int SPL_Damage_ChargeZap 		= 40;
 
 INSTANCE Spell_ChargeZap (C_Spell_Proto)
 {

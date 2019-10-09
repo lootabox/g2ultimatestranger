@@ -2,8 +2,8 @@
 // SPL_Geyser	K3
 // ******************
 
-const int SPL_Cost_Geyser 				= 75;
-const int SPL_Damage_Geyser 			= 150; 
+const int SPL_Cost_Geyser 				= 20;
+const int SPL_Damage_Geyser 			= 75;
 
 
 INSTANCE Spell_Geyser	(C_Spell_Proto)

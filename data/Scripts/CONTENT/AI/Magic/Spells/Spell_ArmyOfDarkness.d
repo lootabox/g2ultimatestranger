@@ -2,7 +2,7 @@
 // SPL_ArmyOfDarkness
 // ******************
 
-const int SPL_Cost_ArmyOfDarkness	= 150;
+const int SPL_Cost_ArmyOfDarkness	= 60;
 
 
 INSTANCE Spell_ArmyOfDarkness (C_Spell_Proto)

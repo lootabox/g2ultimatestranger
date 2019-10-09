@@ -3,14 +3,14 @@
 // *************
 
 const int SPL_Cost_Waterfist	= 25;
-const int SPL_Damage_Waterfist	= 125;
+const int SPL_Damage_Waterfist	= 100;
 
 
 INSTANCE Spell_Waterfist	(C_Spell_Proto)
 {
 	time_per_mana			= 0;
 	damage_per_level		= SPL_Damage_Waterfist;
-	damageType				= DAM_MAGIC;
+	damageType				= DAM_FLY;
 };
 
 func int Spell_Logic_Waterfist	(var int manaInvested)

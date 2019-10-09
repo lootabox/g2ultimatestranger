@@ -4,8 +4,7 @@
 // *************************
 
 const int SPL_Cost_Explosion        = 50;
-const int SPL_Damage_Explosion      = 100;
-const int SPL_Damage_Explosion_dot  = 30;
+const int SPL_Damage_Explosion      = 120;
 
 INSTANCE Spell_Explosion (C_Spell_Proto) {
     time_per_mana           = 0;

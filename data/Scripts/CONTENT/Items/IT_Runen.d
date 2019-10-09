@@ -675,12 +675,9 @@ INSTANCE ItRu_FireBolt (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_FIREBOLT;
 
-	TEXT	[3]			=	NAME_Dam_MagicDot;
-	COUNT	[3]			=	SPL_DAMAGE_FIREBOLT_DOT;
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Third, NAME_Sec_Duration);
+	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
 
-	TEXT	[4]			=	NAME_Sec_Duration;
-	COUNT	[4]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
-	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
@@ -823,11 +820,8 @@ INSTANCE ItRu_InstantFireball (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_InstantFireball;
 
-	TEXT	[3]			=	NAME_Dam_MagicDot;
-	COUNT	[3]			=	SPL_DAMAGE_InstantFireball_DOT;
-
-	TEXT	[4]			=	NAME_Sec_Duration;
-	COUNT	[4]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Third, NAME_Sec_Duration);
+	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1079,11 +1073,8 @@ INSTANCE ItRu_ChargeFireball (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic_Per;
 	count 	[2]			=   SPL_Damage_ChargeFireball;
 
-	TEXT	[3]			=	NAME_Dam_MagicDot_Per;
-	COUNT	[3]			=	SPL_Damage_ChargeFireball_DOT;
-
-	TEXT	[4]			=	NAME_Sec_Duration;
-	COUNT	[4]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Third, NAME_Sec_Duration);
+	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1189,11 +1180,10 @@ INSTANCE ItRu_IceCube (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_IceCube;
 	
-	TEXT	[3]			=	NAME_Dam_MagicDotFreeze;
-	COUNT	[3]			=	SPL_FREEZE_DAMAGE * SPL_FREEZE_TIME;
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Full, NAME_DamagePerSec);
+	COUNT	[3]			=	SPL_FREEZE_DAMAGE;
 	
-	TEXT	[4]			=	NAME_DamagePerSec;
-	COUNT	[4]			=	SPL_FREEZE_DAMAGE;
+	TEXT	[4]			=	NAME_Ice_Freeze;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1338,11 +1328,10 @@ INSTANCE ItRu_Pyrokinesis (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic_Per;
 	count 	[2]			=   SPL_Damage_Firestorm;
 
-	TEXT	[3]			=	NAME_Dam_MagicDot_Per;
-	COUNT	[3]			=	SPL_Damage_Firestorm_DOT;
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Third, NAME_Sec_Duration);
+	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
 
-	TEXT	[4]			=	NAME_Sec_Duration;
-	COUNT	[4]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
+	TEXT	[4]			=	NAME_AreaOfEffect_Small;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1381,11 +1370,10 @@ INSTANCE ItRu_Firestorm (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_INSTANTFIRESTORM;
 
-	TEXT	[3]			=	NAME_Dam_MagicDot;
-	COUNT	[3]			=	SPL_DAMAGE_INSTANTFIRESTORM_DOT;
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Third, NAME_Sec_Duration);
+	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
 
-	TEXT	[4]			=	NAME_Sec_Duration;
-	COUNT	[4]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
+	TEXT	[4]			=	NAME_AreaOfEffect_Small;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1422,11 +1410,10 @@ INSTANCE ItRu_IceWave (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_IceCube;
 	
-	TEXT	[3]			=	NAME_Dam_MagicDotFreeze;
-	COUNT	[3]			=	SPL_FREEZE_DAMAGE * SPL_FREEZE_TIME;
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Full, NAME_DamagePerSec);
+	COUNT	[3]			=	SPL_FREEZE_DAMAGE;
 	
-	TEXT	[4]			=	NAME_DamagePerSec;
-	COUNT	[4]			=	SPL_FREEZE_DAMAGE;
+	TEXT	[4]			=	ConcatStrings(NAME_Ice_Freeze, NAME_AreaOfEffect_Default);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1528,14 +1515,13 @@ INSTANCE ItRu_Firerain (C_Item)
 	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_COST_FIRERAIN;
 	
-	//TEXT	[2]			=	NAME_Dam_Magic;
-	//COUNT	[2]			=	SPL_DAMAGE_FIRERAIN;
+	TEXT	[2]			=	NAME_Dam_Magic;
+	COUNT	[2]			=	SPL_DAMAGE_FIRERAIN;
 
-	TEXT	[2]			=	NAME_Dam_MagicDot;
-	COUNT	[2]			=	SPL_Damage_FireRain_dot;
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Full, NAME_Sec_Duration);
+	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
 
-	TEXT	[4]			=	NAME_Sec_Duration;
-	COUNT	[4]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
+	TEXT	[4]			=	NAME_AreaOfEffect_Large;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

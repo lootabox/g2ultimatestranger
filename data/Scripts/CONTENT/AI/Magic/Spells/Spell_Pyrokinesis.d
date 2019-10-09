@@ -2,9 +2,8 @@
 // SPL_Pyrokinesis  ALIAS  ChargeFireStorm
 // ***************
 
-const int SPL_Cost_Firestorm		= 30; //*4
-const int SPL_Damage_FireStorm 		= 20;
-const int SPL_Damage_FireStorm_dot 	= 40;
+const int SPL_Cost_Firestorm		= 20; //*4
+const int SPL_Damage_FireStorm 		= 60;
 
 	// obsolete:
 	const int SPL_PYRO_DAMAGE_PER_SEC = 20;	// wird in ZS_Pyro (Pyrokinese-Opfer) benutzt, dort KEIN Rùstungsschutz!

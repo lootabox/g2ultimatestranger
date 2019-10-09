@@ -113,6 +113,7 @@ func int Handle_Weapon_Dmg(var c_npc att, var c_npc vic)
 	else if	(wpn.mainflag & ITEM_KAT_FF) { stat = att.attribute[ATR_DEXTERITY]; };
 	dmg += stat;
 
+var string pristr; pristr = IntToString(dmg);
 	// Handle protection
 	var int prot;
 	if 		wpn.damagetype == DAM_EDGE		{ prot = vic.protection[PROT_EDGE]; }
@@ -132,11 +133,13 @@ func int Handle_Weapon_Dmg(var c_npc att, var c_npc vic)
 		dmg /= (10 - modelState.combonr); // 5 -> 2
 	};
 
+Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 	return dmg;
 };
 
 func int Handle_Magic_Dmg(var c_npc att, var c_npc vic, var int spellID, var int dmg)
 {
+var string pristr; pristr = IntToString(dmg);
 	// Get protection amount
 	var int prot;
 	if (att.guild == GIL_DRAGON)	{ prot = vic.protection[PROT_FIRE]; }
@@ -157,13 +160,9 @@ func int Handle_Magic_Dmg(var c_npc att, var c_npc vic, var int spellID, var int
 	{
 		// Figure out burn dot
 		var int fireDot;
-		if		(spellID == SPL_Firebolt)			{ fireDot = SPL_Damage_Firebolt_dot; }
-		else if	(spellID == SPL_InstantFireball)	{ fireDot = SPL_Damage_InstantFireball_dot; }
-		else if	(spellID == SPL_Firestorm)			{ fireDot = SPL_Damage_InstantFireStorm_dot; }
-		else if	(spellID == SPL_ChargeFireball)		{ fireDot = SPL_Damage_ChargeFireball_dot; }
-		else if	(spellID == SPL_Pyrokinesis)		{ fireDot = SPL_Damage_FireStorm_dot; }
-		else if	(spellID == SPL_Firerain)			{ fireDot = SPL_Damage_Firerain_dot; }
-		else if	(spellID == SPL_Explosion)			{ fireDot = SPL_Damage_Explosion_dot; };
+		if		(spellID == SPL_Firerain)	{ fireDot = dmg; }
+		else								{ fireDot = dmg / 3; };
+		dmg -= fireDot;
 
 		if (Hlp_IsValidItem(wpn))
 		{
@@ -171,10 +170,10 @@ func int Handle_Magic_Dmg(var c_npc att, var c_npc vic, var int spellID, var int
 			if (Hlp_IsItem(wpn, ItMW_Addon_Stab01))
 			|| (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
 			{
-				// Bonus 2: Burning (+20%)
+				// Bonus 2: Burning (+50%)
 				if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
 				{
-					fireDot = fireDot * 120 / 100;
+					fireDot = fireDot * 3 / 2;
 				};
 				// Bonus 1: Damage Bonus vs. burning (+10)
 				if (Buff_Has(vic, burn_dot))
@@ -232,10 +231,15 @@ func int Handle_Magic_Dmg(var c_npc att, var c_npc vic, var int spellID, var int
 		&& (!C_NpcIsFireBase(vic)) // firebase immune to freeze
 		&& (!C_NpcIsIceBase(vic)) // icebase immune to freeze
 		{
-			var int freezeDuration; freezeDuration = (dmg + SPL_FREEZE_DAMAGE * SPL_FREEZE_TIME - prot) / SPL_FREEZE_DAMAGE;
-			if		(freezeDuration > SPL_FREEZE_TIME)		{ self.aivar[AIV_FreezeStateTime] = 0; }
-			else if	(freezeDuration > 0)					{ self.aivar[AIV_FreezeStateTime] = SPL_FREEZE_TIME - freezeDuration; }
-			else											{ self.aivar[AIV_FreezeStateTime] = SPL_FREEZE_TIME + 1; };
+			// Calculate freeze dot
+			var int freezeDot; freezeDot = SPL_FREEZE_DAMAGE;
+			if		(C_NpcIsFireBase(vic)) { freezeDot *= 2; }
+			else if	(C_NpcIsIceBase(vic)) { freezeDot /= 2; };
+
+			var int freezeDurationMax; freezeDurationMax = dmg / SPL_FREEZE_DAMAGE;
+			var int freezeDuration; freezeDuration = (dmg - prot) / freezeDot;
+			if	(freezeDuration > 0)	{ self.aivar[AIV_FreezeStateTime] = SPL_FREEZE_TIME - freezeDuration; }
+			else						{ self.aivar[AIV_FreezeStateTime] = SPL_FREEZE_TIME + 1; };
 			//Print(ConcatStrings("Start: ", IntToString(self.aivar[AIV_FreezeStateTime])));
 		};
 	}
@@ -271,6 +275,7 @@ func int Handle_Magic_Dmg(var c_npc att, var c_npc vic, var int spellID, var int
 	// Handle protection
 	dmg -= prot;
 
+Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 	return dmg;
 };
 
@@ -301,7 +306,6 @@ func int DMG_OnDmg(var int victimPtr, var int attackerPtr, var int dmg, var int 
 		// Apply minimum damage of 5 only for NPCs
 		if (!Npc_IsPlayer(att) && dmg < 5)	{ dmg = 5; }
 		else if (dmg < 0)					{ dmg = 0; };
-//Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 	};
 
 	// Monster specials

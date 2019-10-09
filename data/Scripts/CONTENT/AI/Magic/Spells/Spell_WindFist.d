@@ -2,8 +2,8 @@
 // SPL_WindFist
 // ************
 
-const int SPL_Cost_WindFist				= 20; //*4
-const int SPL_Damage_WindFist			= 50;
+const int SPL_Cost_WindFist				= 5; //*4
+const int SPL_Damage_WindFist			= 20;
 
 INSTANCE Spell_WindFist (C_Spell_Proto)
 {

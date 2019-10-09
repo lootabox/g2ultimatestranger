@@ -3,7 +3,7 @@
 // *************
 
 const int SPL_Cost_MassDeath		= 150;
-const int SPL_Damage_MassDeath 		= 500;
+const int SPL_Damage_MassDeath 		= 400;
 
 
 INSTANCE Spell_MassDeath (C_Spell_Proto)

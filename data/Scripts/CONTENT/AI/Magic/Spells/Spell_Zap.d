@@ -2,7 +2,7 @@
 // SPL_Daze
 // ***********
 
-const int SPL_Cost_Zap		= 15;
+const int SPL_Cost_Zap		= 6;
 const int SPL_Damage_Zap 	= 30;
 
 

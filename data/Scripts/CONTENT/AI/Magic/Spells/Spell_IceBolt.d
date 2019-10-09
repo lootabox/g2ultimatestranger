@@ -2,8 +2,8 @@
 // SPL_IceBolt
 // ***********
 
-const int SPL_Cost_IceBolt		= 10;
-const int SPL_Damage_IceBolt 	= 50;
+const int SPL_Cost_IceBolt		= 7;
+const int SPL_Damage_IceBolt 	= 40;
 
 
 

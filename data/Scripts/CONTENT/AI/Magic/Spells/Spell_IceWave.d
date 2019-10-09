@@ -2,7 +2,7 @@
 // SPL_IceWave
 // ***********
 
-const int	SPL_Cost_IceWave			=	120;
+const int	SPL_Cost_IceWave			=	60;
 //SPL_FREEZE_DAMAGE	und SPL_FREEZE_TIME	siehe SPL_IceCube
 
 

@@ -306,5 +306,5 @@ func int C_GetScrollCost(var int cost)
 	{
 		return 5;
 	};
-	return (cost / 10) * 5;
+	return (cost / 6) * 5;
 };

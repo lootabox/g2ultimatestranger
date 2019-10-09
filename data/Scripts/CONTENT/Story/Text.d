@@ -710,9 +710,6 @@ const string NAME_Dex_needed	= "Dexterity required:";
 
 //const string NAME_Spell_Load	= "Boostable spell";
 //const string NAME_Spell_Invest	= "Sustainable spell";
-const string NAME_Spell_Freeze	= "Freezes enemies while dealing damage over time.";
-const string NAME_Shrink_Penalty= "Attribute and protection reduction (percentage):";
-const string NAME_Rage			= "Forces the target to attack the nearest creature.";
 
 const string NAME_Dam_Blunt		= "Blunt damage:";
 const string NAME_Dam_Edge		= "Edge damage:";
@@ -720,28 +717,31 @@ const string NAME_Dam_Point		= "Point damage:";
 //const string NAME_Dam_Fire		= "Fire damage:";
 const string NAME_Dam_Magic		= "Magic damage:";
 //const string NAME_Dam_Fly		= "Wind damage:";
-const string NAME_Dam_Magic_Per		= "Magic damage per tier:";
+const string NAME_Dam_Magic_Per	= "Magic damage per tier:";
+const string NAME_Shrink_Penalty= "Attribute and protection reduction (percentage):";
 
-const string NAME_Dam_MagicDot			= "Magic damage over time:";
-const string NAME_Dam_MagicDot_Per		= "Magic damage over time per tier:";
-const string NAME_Dam_MagicDotFreeze	= "Magic damage over time (freezes targets):";
+const string NAME_Dot_Third		= "Third of damage is dealt over time. ";
+const string NAME_Dot_Full		= "All damage is dealt over time. ";
+const string NAME_Ice_Freeze	= "Freezes enemies while dealing damage over time. ";
+const string NAME_Rage			= "Forces the target to attack the nearest creature. ";
 
 const string NAME_Stagger		= "Staggers living targets. ";
 const string NAME_Nonlethal		= "Nonlethal. ";
-const string NAME_Instant		= "Instant. ";
+const string NAME_Instant		= "Instant effect. ";
 const string NAME_ShortRange	= "Short range. ";
-//const string NAME_AreaOfEffect_Small	= "Small area of effect. ";
+
+const string NAME_AreaOfEffect_Small	= "Small area of effect. ";
 const string NAME_AreaOfEffect_Default	= "Area of effect. ";
-//const string NAME_AreaOfEffect_Large	= "Large area of effect. ";
+const string NAME_AreaOfEffect_Large	= "Large area of effect. ";
 
 const string NAME_Stun_AdanosBall	= "Stuns all targets, undead for twice as long. ";
 
 // MAX LENGTH						"------------------------------------------------------------";
 const string NAME_Staff_Fire_1		= "Fire spells deal +10 damage against burning targets.";
-const string NAME_Staff_Fire_2		= "Fire spells deal 20% more damage over time.";
+const string NAME_Staff_Fire_2		= "Fire spells deal 50% more damage over time.";
 const string NAME_Staff_Thunder_1	= "Lightning spells stun targets on full hit points.";
 const string NAME_Staff_Thunder_2	= "Lightning spells penetrate +20 magic protection.";
-const string NAME_Staff_Water_1		= "Ice/Water spells have -5 mana cost.";
+const string NAME_Staff_Water_1		= "Ice and Water spells cost 5 less mana to cast.";
 const string NAME_Staff_Water_2		= "";
 const string NAME_Staff_Ulthar_1	= "Basic projectile spells can be cast rapidly.";
 const string NAME_Staff_Ulthar_2	= "Chargeable spells are charged 30% faster.";
