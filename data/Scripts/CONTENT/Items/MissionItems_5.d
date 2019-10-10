@@ -522,7 +522,8 @@ INSTANCE ItPo_PotionOfDeath_01_Mis(C_Item)
 			PrintScreen	(PRINT_LearnSTR5, -1, 45, FONT_SCREEN, 2);
 			PrintScreen	(PRINT_LearnDex5, -1, 55, FONT_SCREEN, 2);
 			PrintScreen (PRINT_FullyHealed, - 1, 65, FONT_Screen, 2); 
-			Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", Time_Speed);
+			//Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", Time_Speed);
+			Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_MAGESPRINT.MDS", Time_Speed);
 		}
 		else
 		{

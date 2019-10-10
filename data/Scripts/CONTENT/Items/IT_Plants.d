@@ -373,7 +373,8 @@ INSTANCE ItPl_Speed_Herb_01(C_Item)
 
 func void Use_Speed_Herb_01 ()
 {
-	Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", Speed_Boost);
+	//Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", Speed_Boost);
+	Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_MAGESPRINT.MDS", Speed_Boost);
 };	
 
 /******************************************************************************************/

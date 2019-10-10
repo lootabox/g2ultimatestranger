@@ -377,8 +377,8 @@ INSTANCE ItPo_Speed(C_Item)
 
 FUNC VOID UseItPo_Speed()
 {
-	Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", Time_Speed);
-	
+	//Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", Time_Speed);
+	Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_MAGESPRINT.MDS", Time_Speed);
 };
 
 /******************************************************************************************/

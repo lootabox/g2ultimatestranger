@@ -228,7 +228,8 @@ INSTANCE ItFo_Addon_SchnellerHering(C_Item)
 			//AI_Wait (self ,2);
 			//AI_PlayAni (self, "T_HEASHOOT_2_STAND");
 			//Wld_PlayEffect("spellFX_LIGHTSTAR_WHITE",  self, self, 0, 0, 0, FALSE );
-			Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", 120000);		//2min
+			//Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", 120000);		//2min
+			Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_MAGESPRINT.MDS", 120000);		//2min
 		};	
 		Player_KnowsSchnellerHering = TRUE;
 	};	
