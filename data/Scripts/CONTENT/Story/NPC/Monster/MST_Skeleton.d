@@ -58,11 +58,14 @@ PROTOTYPE Mst_Default_Skeleton(C_Npc)
 func void B_SetVisuals_Warrior_Skeleton()
 {
 	Mdl_SetVisual			(self,	"HumanS.mds");
-	Mdl_ApplyOverlayMds 	(self,	"humans_1hST1.mds");
-	Mdl_ApplyOverlayMds 	(self,	"humans_2hST2.mds");
+	//Mdl_ApplyOverlayMds 	(self,	"humans_1hST1.mds");
+	Mdl_ApplyOverlayMds		(self,	"humans_pirate.mds");
+	//Mdl_ApplyOverlayMds 	(self,	"humans_2hST2.mds");
+	Mdl_ApplyOverlayMds		(self,	"humans_axest1.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_BowT1.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_CBowT1.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_skeleton.mds");
+	Mdl_ApplyOverlayMds 	(self,	"skeleton_wait.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
 	Mdl_SetVisualBody		(self,	"Ske_Body3",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
@@ -70,11 +73,14 @@ func void B_SetVisuals_Warrior_Skeleton()
 func void B_SetVisuals_Skeleton()
 {
 	Mdl_SetVisual			(self,	"HumanS.mds");
-	Mdl_ApplyOverlayMds 	(self,	"humans_1hST1.mds");
-	Mdl_ApplyOverlayMds 	(self,	"humans_2hST2.mds");
+	//Mdl_ApplyOverlayMds 	(self,	"humans_1hST1.mds");
+	Mdl_ApplyOverlayMds		(self,	"humans_pirate.mds");
+	//Mdl_ApplyOverlayMds 	(self,	"humans_2hST2.mds");
+	Mdl_ApplyOverlayMds		(self,	"humans_axest1.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_BowT1.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_CBowT1.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_skeleton.mds");
+	Mdl_ApplyOverlayMds 	(self,	"skeleton_wait.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
 	Mdl_SetVisualBody		(self,	"Ske_Body2",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
@@ -82,11 +88,14 @@ func void B_SetVisuals_Skeleton()
 func void B_SetVisuals_Lesser_Skeleton()
 {
 	Mdl_SetVisual			(self,	"HumanS.mds");
-	Mdl_ApplyOverlayMds 	(self,	"humans_1hST1.mds");
-	Mdl_ApplyOverlayMds 	(self,	"humans_2hST2.mds");
+	//Mdl_ApplyOverlayMds 	(self,	"humans_1hST1.mds");
+	Mdl_ApplyOverlayMds		(self,	"humans_pirate.mds");
+	//Mdl_ApplyOverlayMds 	(self,	"humans_2hST2.mds");
+	Mdl_ApplyOverlayMds		(self,	"humans_axest1.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_BowT1.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_CBowT1.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_skeleton.mds");
+	Mdl_ApplyOverlayMds 	(self,	"skeleton_wait.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
 	Mdl_SetVisualBody		(self,	"Ske_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
@@ -100,7 +109,8 @@ INSTANCE Skeleton			(Mst_Default_Skeleton)
 {
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	//EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ItMw_1h_Misc_Axe);
 };
 
 //**************
@@ -140,7 +150,8 @@ INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
 	
 	start_aistate = ZS_MM_Rtn_Summoned;
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	//EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ItMw_1h_Misc_Axe);
 	//EquipItem (self, ItRw_Sld_Bow); //FIXME Carsten: Bogen schieﬂt beim Skelett in Zeitlupe...
 };
 
@@ -243,7 +254,8 @@ INSTANCE Crypt_Skeleton_Room_02			(Mst_Default_Skeleton)
 	
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	//EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ItMw_1h_Misc_Axe);
 	CreateInvItem (self, ItKe_EVT_CRYPT_02);
 };
 
@@ -277,7 +289,8 @@ INSTANCE Skeleton_Archol2	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	//EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ItMw_1h_Misc_Axe);
 };
 
 INSTANCE Skeleton_Archol3	(Mst_Default_Skeleton)
@@ -295,7 +308,8 @@ INSTANCE Skeleton_Archol4	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	//EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ItMw_1h_Misc_Axe);
 };
 
 INSTANCE Skeleton_Archol5	(Mst_Default_Skeleton)
@@ -313,7 +327,8 @@ INSTANCE Skeleton_Archol6	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	//EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ItMw_1h_Misc_Axe);
 };
 //****************************
 //	Marios-Skeletons auf DI
@@ -334,7 +349,8 @@ INSTANCE Skeleton_Mario2	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	//EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ItMw_1h_Misc_Axe);
 };
 
 INSTANCE Skeleton_Mario3	(Mst_Default_Skeleton)
@@ -352,5 +368,6 @@ INSTANCE Skeleton_Mario4	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	//EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ItMw_1h_Misc_Axe);
 };
