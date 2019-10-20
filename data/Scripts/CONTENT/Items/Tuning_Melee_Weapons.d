@@ -31,7 +31,7 @@ const int Range_Schuerhaken				= 50;
 const int Value_Schuerhaken				= 5; 
 //Sichel - ItMw_1h_Bau_Axe    
 const int Damage_BauAxe					= 7; 
-const int Condition_BauAxe				= 5;
+const int Condition_BauAxe				= 0; //5
 const int Range_BauAxe					= 50;
 const int Value_BauAxe					= 10; 
 //Goldene Sichel - ItMw_1h_Bau_Axe    
@@ -46,11 +46,11 @@ const int Range_VLKMace					= 70;
 const int Value_VLKMace					= 10; 
 //Belegnagel - ItMw_1H_Mace_L_03    
 const int Damage_Belegnagel 			= 8; 
-const int Condition_Belegnagel			= 10;
+const int Condition_Belegnagel			= 0; //10
 const int Range_Belegnagel				= 70;
 const int Value_Belegnagel				= 5; 
 //schwerer Ast - ItMw_1h_Bau_Mace    
-const int Damage_BauMace				= 10; 
+const int Damage_BauMace				= 3; //3
 const int Condition_BauMace				= 0; //10
 const int Range_BauMace					= 70;
 const int Value_BauMace					= 1; 
@@ -75,7 +75,7 @@ const int Condition_Schmiedehammer		= 10;
 const int Range_Schmiedehammer			= 30;
 const int Value_Schmiedehammer			= 200;
 //Kurzschwert der Miliz - MILIZ - NEUE INSTANZ
-const int Damage_ShortSword1 			= 10; 
+const int Damage_ShortSword1 			= 16; 
 const int Condition_ShortSword1			= 10;
 const int Range_ShortSword1				= 50;
 const int Value_ShortSword1				= 500;
@@ -85,10 +85,10 @@ const int Condition_Nagelknueppel		= 10;
 const int Range_Nagelknueppel			= 60;
 const int Value_Nagelknueppel			= 10;
 //Wolfsmesser - ItMw_1H_Sword_L_03 //ADDON
-const int Damage_Wolfsmesser 			= 12; 
+/* const int Damage_Wolfsmesser 			= 12; 
 const int Condition_Wolfsmesser			= 0; //10
 const int Range_Wolfsmesser				= 30;
-const int Value_Wolfsmesser				= 350;
+const int Value_Wolfsmesser				= 350; */
 //AlriksSword
 const int Damage_Alrik					= 25; //+10% 
 const int Condition_Alrik				= 20;
@@ -110,12 +110,12 @@ const int Condition_Sense				= 10;
 const int Range_Sense					= 60;
 const int Value_Sense					= 250;
 //Degen 	- ItMw_1h_Vlk_Sword
-const int Damage_VLKSchwert 			= 40; //+5%
-const int Condition_VLKSchwert			= 40; //DEX
+const int Damage_VLKSchwert 			= 40;
+const int Condition_VLKSchwert			= 60; //DEX
 const int Range_VLKSchwert				= 70;
 const int Value_VLKSchwert				= 1200; 
-	const int Damage_BanditVLKSchwert 		= 18; //+5%
-	const int Condition_BanditVLKSchwert	= 10; //DEX
+	const int Damage_BanditVLKSchwert 		= 20;
+	const int Condition_BanditVLKSchwert	= 30; //DEX
 	const int Value_BanditTrader			= 250;	//Degen der Banditen
 //Kampfstab (2h) - ItMw_1h_Nov_Mace 
 const int Damage_NovMace				= 20;
@@ -133,7 +133,7 @@ const int Condition_Spitzhacke			= 0;//25
 const int Range_Spitzhacke				= 60;
 const int Value_Spitzhacke				= 300;
 //rostiges Schwert - STANDARDOBJEKTIERUNG - ItMw_1h_MISC_Sword
-const int Damage_MiscSword				= 15; 
+const int Damage_MiscSword				= 10; //10
 const int Condition_MiscSword			= 10;
 const int Range_MiscSword				= 70;
 const int Value_MiscSword				= 10; 
@@ -262,7 +262,7 @@ const int Value_Orkschwert_01		=  50;
 // Kapitel 1 - Händler
 // *******************
 //Kurzschwert - NEUE INSTANZ
-const int Damage_ShortSword3 		= 16; 
+const int Damage_ShortSword3 		= 10; 
 const int Condition_ShortSword3		= 10;
 const int Range_ShortSword3			= 50;
 const int Value_ShortSword3			= 250;
@@ -563,8 +563,8 @@ const int Condition_Kriegshammer2	= 70;
 const int Range_Kriegshammer2		= 60;
 const int Value_Kriegshammer2		= 1200;
 //Meisterdegen - NEUE INSTANZ
-const int Damage_Meisterdegen		= 65; //+10%
-const int Condition_Meisterdegen	= 65; //DEX
+const int Damage_Meisterdegen		= 65;
+const int Condition_Meisterdegen	= 100; //DEX
 const int Range_Meisterdegen		= 100;
 const int Value_Meisterdegen		= 2400;
 //Folteraxt (2h) - NEUE INSTANZ

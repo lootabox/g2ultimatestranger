@@ -102,7 +102,7 @@ INSTANCE ItMw_1h_Bau_Axe (C_Item)
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
-	TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
+	//TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -154,7 +154,7 @@ INSTANCE ItMw_1H_Mace_L_03 (C_Item)
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
-	TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
+	//TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -252,13 +252,13 @@ INSTANCE ItMw_ShortSword1 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword1;		
 
-	cond_atr[2]   		=	ATR_DEXTERITY;
+	cond_atr[2]   		=	ATR_STRENGTH;
 	cond_value[2]  		=	Condition_ShortSword1;
 	visual 				=	"ItMw_010_1h_Sword_short_01.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
-	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
+	TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -292,7 +292,7 @@ INSTANCE ItMw_Nagelknueppel (C_Item)
 // *****************************************************
 INSTANCE ItMw_1H_Sword_L_03 (C_Item)
 {	
-	name 				=	"Wolf Blade";  
+	name 				=	"Wolf Knife";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -330,13 +330,13 @@ INSTANCE ItMw_ShortSword2 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword2;		
 
-	cond_atr[2]   		=	ATR_DEXTERITY;
+	cond_atr[2]   		=	ATR_STRENGTH;
 	cond_value[2]  		=	Condition_ShortSword2;
 	visual 				=	"ItMw_012_1h_Sword_short_02.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
-	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
+	TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -382,14 +382,15 @@ INSTANCE ItMw_1h_Vlk_Sword (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_VLKSchwert;		
 
-	on_equip			=	Equip_1H_05;
-	on_unequip			=	UnEquip_1H_05;	
+	on_equip			=	Equip_Dex_Weapon;
+	on_unequip			=	UnEquip_Dex_Weapon;
 
 	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_VLKSchwert;
 	visual 				=	"ItMw_018_1h_SwordCane_01.3ds";
 
 	description			= name;
+	TEXT[0]				= NAME_Rapier;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
@@ -974,13 +975,13 @@ INSTANCE ItMw_ShortSword3 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword3;		
 
-	cond_atr[2]   		=	ATR_DEXTERITY;
+	cond_atr[2]   		=	ATR_STRENGTH;
 	cond_value[2]  		=	Condition_ShortSword3;
 	visual 				=	"ItMw_016_1h_Sword_short_03.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
-	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
+	TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -1026,13 +1027,13 @@ INSTANCE ItMw_ShortSword4 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword4;		
 
-	cond_atr[2]   		=	ATR_DEXTERITY;
+	cond_atr[2]   		=	ATR_STRENGTH;
 	cond_value[2]  		=	Condition_ShortSword4;
 	visual 				=	"ItMw_020_1h_Sword_short_04.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
-	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
+	TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -1107,13 +1108,13 @@ INSTANCE ItMw_ShortSword5 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_ShortSword5;		
 
-	cond_atr[2]   		=	ATR_DEXTERITY;
+	cond_atr[2]   		=	ATR_STRENGTH;
 	cond_value[2]  		=	Condition_ShortSword5;
 	visual 				=	"ItMw_025_1h_Sword_short_05.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
-	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
+	TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -1714,11 +1715,15 @@ INSTANCE ItMw_Rapier (C_Item)
 	on_equip			=	Equip_1H_08;
 	on_unequip			=	UnEquip_1H_08;
 	
+	on_equip			=	Equip_Dex_Weapon;
+	on_unequip			=	UnEquip_Dex_Weapon;
+
 	cond_atr[2]   		= 	ATR_DEXTERITY;  //!!!
 	cond_value[2]  		= 	Condition_Rapier;
 	visual 				=	"ItMw_050_1h_Sword_Rapier_01.3ds";
 
 	description			= name;
+	TEXT[0]				= NAME_Rapier;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
@@ -2097,15 +2102,16 @@ INSTANCE ItMw_Meisterdegen (C_Item)
 	damageTotal  		= 	Damage_Meisterdegen;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Meisterdegen;
-	
-	on_equip			=	Equip_1H_10;
-	on_unequip			=	UnEquip_1H_10;
+
+	on_equip			=	Equip_Dex_Weapon_Master;
+	on_unequip			=	UnEquip_Dex_Weapon;
 
 	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_Meisterdegen;
 	visual 				=	"ItMw_065_1h_SwordCane_02.3ds";
 
 	description			= name;
+	TEXT[0]				= NAME_Rapier_Master;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;

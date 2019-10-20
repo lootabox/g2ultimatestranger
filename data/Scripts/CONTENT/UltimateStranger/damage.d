@@ -56,12 +56,12 @@ Range		WD         - AP
 Range Crit	WDx2       - AP (dex only influenced range)
 
 Chance for a Critical Hit:
-1H: lvl1: 5% for the ctitical hit, cost 10 LPs, lvl2: 10% cost 20 more LPs
-2H: lvl1: 5%/30LP, lvl2: 10%/40LP
-Bow: lvl1: 15%/10LP, lvl2: 30%/20LP
-X-Bow: lvl1: 20%/10LP, lvl2: 40%/20LP
+1H:		lvl1: 5%/10LP,	lvl2: 10%/20LP
+2H:		lvl1: 5%/30LP,	lvl2: 10%/40LP
+Bow:	lvl1: 15%/10LP,	lvl2: 30%/20LP
+X-Bow:	lvl1: 20%/10LP,	lvl2: 40%/20LP
 
-		GOTHIC 2
+		GOTHIC 2 / NOTR
 Melee		(WD + STR - AP - 1) / 10		>= 5
 Melee Crit	 WD + STR - AP					>= 5
 Range		 WD + DEX - AP
@@ -72,12 +72,10 @@ Melee Crit	WDx2 + STR - AP				>= 5 (npc only)
 Range		WD   + DEX - AP
 */
 
-func int Handle_Weapon_Dmg(var c_npc att, var c_npc vic)
+func int Handle_Melee_Dmg(var c_npc vic, var c_npc att)
 {
-	// If melee weapon is readied use that, otherwise use equipped ranged weapon
-	var c_item wpn;
-	if (Npc_HasReadiedMeleeWeapon(att)) { wpn = Npc_GetEquippedMeleeWeapon(att); }
-	else { wpn = Npc_GetEquippedRangedWeapon(att); };
+	// If melee weapon was used, it should be readied when dealing damage
+	var c_item wpn; wpn = Npc_GetReadiedWeapon(att);
 	
 	// Get base weapon damage
 	var int dmg; dmg = wpn.damageTotal;
@@ -101,27 +99,23 @@ func int Handle_Weapon_Dmg(var c_npc att, var c_npc vic)
 		dmg += Value_Inquisitor_BonusDmg;
 	}; */
 
-	// Check for crit (melee)
-	var int skill; skill = 100; // ranged always crit
+	// Check for crit
+	var int skill; skill = 0;
 	if		(wpn.flags & ITEM_SWD 		|| wpn.flags & ITEM_AXE)		{ skill = att.hitChance[NPC_TALENT_1H]; }
 	else if	(wpn.flags & ITEM_2HD_SWD 	|| wpn.flags & ITEM_2HD_AXE)	{ skill = att.hitChance[NPC_TALENT_2H]; };
 	if (r_Max(99) < skill) { dmg *= 2; }; // crit doubles weapon damage
 
 	// Add stat
-	var int stat;
-	if 		(wpn.mainflag & ITEM_KAT_NF) { stat = att.attribute[ATR_STRENGTH]; }
-	else if	(wpn.mainflag & ITEM_KAT_FF) { stat = att.attribute[ATR_DEXTERITY]; };
-	dmg += stat;
+	dmg += att.attribute[ATR_STRENGTH];
 
+Print(ConcatStrings(ConcatStrings(att.name," - "),wpn.name));
 var string pristr; pristr = IntToString(dmg);
+
 	// Handle protection
 	var int prot;
 	if 		wpn.damagetype == DAM_EDGE		{ prot = vic.protection[PROT_EDGE]; }
 	else if wpn.damagetype == DAM_BLUNT		{ prot = vic.protection[PROT_BLUNT]; }
-	else if wpn.damagetype == DAM_POINT		{ prot = vic.protection[PROT_POINT]; }
-	else if wpn.damagetype == DAM_MAGIC		{ prot = vic.protection[PROT_MAGIC]; }
-	else if wpn.damagetype == DAM_FIRE		{ prot = vic.protection[PROT_FIRE]; }
-	else if wpn.damagetype == DAM_FLY		{ prot = vic.protection[PROT_FLY]; };
+	else if wpn.damagetype == DAM_POINT		{ prot = vic.protection[PROT_POINT]; };
 	if (prot == IMMUNE) 	{ return 0; }
 	else 					{ dmg -= prot; };
 
@@ -137,7 +131,28 @@ Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 	return dmg;
 };
 
-func int Handle_Magic_Dmg(var c_npc att, var c_npc vic, var int spellID, var int dmg)
+func int Handle_Fist_Dmg(var c_npc vic, var c_npc att)
+{
+	// Monster specials
+	if (att.aivar[AIV_MM_REAL_ID] == ID_BLOODFLY || att.aivar[AIV_MM_REAL_ID] == ID_SWAMPDRONE)
+	{
+		if (att.level > 3)
+		{
+			Buff_Apply(vic, venom_bloodfly, att);
+		} else {
+			Buff_Apply(vic, venom_small_bloodfly, att);
+		};
+	};
+
+	// Fist damage
+	if		(att.damagetype & DAM_EDGE)		{ return att.attribute[ATR_STRENGTH] - vic.protection[PROT_EDGE]; }
+	else if	(att.damagetype & DAM_POINT)	{ return att.attribute[ATR_STRENGTH] - vic.protection[PROT_POINT]; }
+	else if	(att.damagetype & DAM_MAGIC)	{ return att.attribute[ATR_STRENGTH] - vic.protection[PROT_MAGIC]; }
+	else if	(att.damagetype & DAM_FIRE)		{ return att.attribute[ATR_STRENGTH] - vic.protection[PROT_FIRE]; }
+	else									{ return att.attribute[ATR_STRENGTH] - vic.protection[PROT_BLUNT]; };
+};
+
+func int Handle_Magic_Dmg(var c_npc vic, var c_npc att, var int spellID, var int dmg)
 {
 var string pristr; pristr = IntToString(dmg);
 	// Get protection amount
@@ -148,7 +163,7 @@ var string pristr; pristr = IntToString(dmg);
 
 	// Get equipped staff
 	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(att);
-
+	Print(wpn.name);
 	// FIRE SPELLS ---------------------------------------------------------------------------
 	if	(spellID == SPL_Firebolt)
 	||	(spellID == SPL_InstantFireball)
@@ -280,43 +295,29 @@ Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 };
 
 func int DMG_OnDmg(var int victimPtr, var int attackerPtr, var int dmg, var int dmgDescriptorPtr) {
-	Var c_npc vic; vic = _^(victimPtr);
-	Var oSDamageDescriptor dmgDesc; dmgDesc = _^(dmgDescriptorPtr);
+	var c_npc vic; vic = _^(victimPtr);
+	var oSDamageDescriptor dmgDesc; dmgDesc = _^(dmgDescriptorPtr);
 
 	// Damage calculations
-	if (attackerptr) {
-		Var c_npc att; att = _^(attackerptr);
+	if (attackerPtr) {
+		var c_npc att; att = _^(attackerPtr);
 
 		// Weapon was associated with attack -> was melee/ranged attack
 		if (dmgDesc.itemWeapon)
 		{
-			dmg = Handle_Weapon_Dmg(att, vic);
-		}
-		// Fist responsibly
-		else if (Npc_IsInFightMode(att, FMODE_FIST))
-		{
-			dmg = att.attribute[ATR_STRENGTH] - vic.protection[PROT_BLUNT];
+			if (Npc_HasReadiedMeleeWeapon(att))	{ dmg = Handle_Melee_Dmg(vic, att); };
 		}
 		// Magic
 		else if (dmgDesc.spellID >= 0)
 		{
-			dmg = Handle_Magic_Dmg(att, vic, dmgDesc.spellID, dmgDesc.dmgArray[DAM_INDEX_FLY] || dmgDesc.dmgArray[DAM_INDEX_MAGIC]);
-		};
-
-		// Apply minimum damage of 5 only for NPCs
-		if (!Npc_IsPlayer(att) && dmg < 5)	{ dmg = 5; }
-		else if (dmg < 0)					{ dmg = 0; };
-	};
-
-	// Monster specials
-	if (att.aivar[AIV_MM_REAL_ID] == ID_BLOODFLY || att.aivar[AIV_MM_REAL_ID] == ID_SWAMPDRONE)
-	{
-		if (att.level > 3)
+			dmg = Handle_Magic_Dmg(vic, att, dmgDesc.spellID, dmgDesc.dmgArray[DAM_INDEX_BARRIER] + dmgDesc.dmgArray[DAM_INDEX_FLY] + dmgDesc.dmgArray[DAM_INDEX_MAGIC]);
+		}
+		// Fist responsibly
+		else if (Npc_IsInFightMode(att, FMODE_FIST))
 		{
-			Buff_Apply(vic, venom_bloodfly, att);
-		} else {
-			Buff_Apply(vic, venom_small_bloodfly, att);
+			dmg = Handle_Fist_Dmg(vic, att);
 		};
+		if (dmg < 0) { dmg = 0; };
 	};
 
 	return dmg;

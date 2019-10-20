@@ -38,7 +38,7 @@
 //-------------------------------------------------------
 //	Addon Waffen  Wolfsmesser
 //-------------------------------------------------------
-INSTANCE ItMW_Addon_Knife01 (C_Item)
+/* INSTANCE ItMW_Addon_Knife01 (C_Item)
 {	
 	name 				=	"Wolf Knife";  
 
@@ -55,18 +55,18 @@ INSTANCE ItMW_Addon_Knife01 (C_Item)
 	on_equip			=	Equip_1H_03;
 	on_unequip			=	UnEquip_1H_03;
 	
-	cond_atr[2]   		=	ATR_DEXTERITY;
+	cond_atr[2]   		=	ATR_STRENGTH;
 	cond_value[2]  		=	Condition_Wolfsmesser;
 	visual 				=	"ItMw_012_1h_Knife_02.3DS";
 
 	description			=   name;
 	
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
-	//TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
+	//TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_03;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
+}; */
 // *****************************************************
 INSTANCE ItMW_Addon_Stab01 (C_Item)
 {	
@@ -637,12 +637,16 @@ INSTANCE ItMw_Addon_BanditTrader (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_VLKSchwert;		
 
+	on_equip			=	Equip_Dex_Weapon;
+	on_unequip			=	UnEquip_Dex_Weapon;
+
 	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_BanditVLKSchwert;
 	visual 				=	"ItMw_018_1h_SwordCane_01.3ds";
 
 	description			= name;
 
+	//TEXT[0]				= NAME_Rapier;
 	TEXT[0]				= 	"The letter 'F.' is scratched in the pommel.";
 
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;

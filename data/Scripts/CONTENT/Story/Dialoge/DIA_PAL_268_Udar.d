@@ -168,7 +168,7 @@ FUNC INT DIA_Udar_Teach_Condition()
  
 FUNC VOID DIA_Udar_Teach_Info()
 {	
-	AI_Output	(other,self ,"DIA_Udar_Teach_15_00");	//I want to learn form you.
+	AI_Output	(other,self ,"DIA_Udar_Teach_15_00");	//I want to learn from you.
 	AI_Output	(self ,other,"DIA_Udar_Teach_09_01");   //Okay, fire away!
 	
 	Info_ClearChoices (DIA_Udar_Teach);

@@ -71,6 +71,7 @@ AI\HUMAN\C_Human\C_NpcIsWaterBase.d
 AI\HUMAN\C_Human\C_NpcIsLarge.d
 AI\HUMAN\C_Human\C_NpcIsDraconic.d
 
+UltimateStranger\items.d
 UltimateStranger\misc.d
 UltimateStranger\buff.d
 UltimateStranger\mainloop.d

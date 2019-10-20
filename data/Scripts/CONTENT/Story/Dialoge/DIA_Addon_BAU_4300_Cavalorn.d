@@ -578,8 +578,10 @@ func void DIA_Addon_Cavalorn_AUSRUESTUNG_Info ()
 	AI_Output	(self, other, "DIA_Addon_Cavalorn_AUSRUESTUNG_08_02"); //I can give you a wolf knife. Will that do for now?
 	AI_Output	(other, self, "DIA_Addon_Cavalorn_AUSRUESTUNG_15_03"); //You call that a knife?
 
-	CreateInvItems (self, ItMW_Addon_Knife01, 1);									
-	B_GiveInvItems (self, other, ItMW_Addon_Knife01, 1);					
+	//CreateInvItems (self, ItMW_Addon_Knife01, 1);
+	//B_GiveInvItems (self, other, ItMW_Addon_Knife01, 1);
+	CreateInvItems (self, ItMw_1H_Sword_L_03, 1);
+	B_GiveInvItems (self, other, ItMw_1H_Sword_L_03, 1);
 	 
 	AI_Output	(other, self, "DIA_Addon_Cavalorn_AUSRUESTUNG_15_04"); //But what about healing?
 	AI_Output	(self, other, "DIA_Addon_Cavalorn_AUSRUESTUNG_08_05"); //I still have 2 healing potions here. Interested?

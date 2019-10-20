@@ -187,7 +187,7 @@ instance Itemhoshi (Npc_Default)
 	CreateInvItems (self, ItMw_BeliarWeapon_2H_01,1);
 	CreateInvItems (self, ItMw_BeliarWeapon_Raven,1);
 //Addon
-	CreateInvItems (self, ItMW_Addon_Knife01,1);
+	//CreateInvItems (self, ItMW_Addon_Knife01,1);
 	CreateInvItems (self, ItMW_Addon_Stab01,1);
 	CreateInvItems (self, ItMW_Addon_Stab02,1);
 	CreateInvItems (self, ItMW_Addon_Stab03,1);
