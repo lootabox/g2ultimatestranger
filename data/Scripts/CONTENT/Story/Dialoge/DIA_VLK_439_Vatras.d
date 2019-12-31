@@ -1147,8 +1147,6 @@ func void DIA_Addon_Vatras_Free_Info ()
 	other.attribute[ATR_MANA]	   = other.attribute[ATR_MANA_MAX];
 	other.attribute[ATR_HITPOINTS] = other.attribute[ATR_HITPOINTS_MAX];
 	
-	Snd_Play ("Levelup");
-	
 	// ***Mike** Auskommentiert, weil FALSCHE funktion - bitte Rücksprache, bevor du's wieder änderst
 	//var string concatText;
 	//concatText = ConcatStrings (NAME_Bonus_ManaMax,IntToString (4));

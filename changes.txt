@@ -19,6 +19,16 @@ Default menu option when not ingame is load game instead of new game.
 Music is changed to the installation theme.
 
 
+	Ingame menu
+
+Status menu shows boosted and trained values for Strength and Dexterity.
+
+
+	Character progression
+
+Only actual training received from NPCs influences how much more can be taught by NPCs. Random increases during dialogues are not counted. This means that any ability increases the player comes across can be used right away without losing any end game potential.
+
+
 	Shrine of Innos
 
 Specific gold amounts cannot be donated. Instead for every level gained, up to 60, a donation can be made for an attribute bonus. The amount of gold required depends on donation prayers made and hero level. The bonus is not tied to guilds in any way and the different attributes receive bonuses inline with each other (pseudo random). The first 12 prayers always increase health. In addition the hero can pray without donating for full health or mana once per day.

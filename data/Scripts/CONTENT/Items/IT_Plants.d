@@ -316,6 +316,7 @@ INSTANCE ItPl_Dex_Herb_01(C_Item)
 FUNC VOID USE_Dex_Herb_01 ()
 {
 	B_RaiseAttribute	(self, ATR_DEXTERITY ,1);
+	Snd_Play	("LevelUp");
 };
 
 /******************************************************************************************/
@@ -345,6 +346,7 @@ INSTANCE ItPl_Strength_Herb_01(C_Item)
 FUNC VOID USE_Strength_Herb_01 ()
 {
 	B_RaiseAttribute	(self, ATR_STRENGTH,1);
+	Snd_Play	("LevelUp");
 };
 
 /******************************************************************************************/

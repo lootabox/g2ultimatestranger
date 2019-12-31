@@ -151,6 +151,7 @@ INSTANCE ItFo_Addon_LousHammer (C_Item)
 		if Hammer_Once == FALSE
 		{
 			B_RaiseAttribute (self,	ATR_MANA_MAX, Mana_LousHammer);
+			Snd_Play	("LevelUp");
 			Hammer_Once = TRUE;
 		};	
 	};
@@ -284,8 +285,13 @@ INSTANCE ItFo_Addon_FireStew (C_Item)
 	{
 		B_RaiseAttribute 	(self,	ATR_STRENGTH,	STR_FireStew);
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS_MAX,	HP_FireStew);
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_FireStew);
 		
-		PrintScreen ("Strength and life energy increased!", -1, 34, FONT_ScreenSmall,2); 
+		var string concatText;
+		concatText = ConcatStrings(PRINT_Learnhitpoints_MAX, IntToString(HP_Beer));
+		PrintScreen	(concatText, -1, 55, FONT_Screen, 2);
+		
+		Snd_Play	("LevelUp");
 	};
 //-------------------------------------------------------
 // Fleischsuppe
@@ -313,11 +319,8 @@ INSTANCE ItFo_Addon_Meatsoup (C_Item)
 
 	FUNC VOID Use_MeatSoup()
 	{
-		var string ConcatText;
-		ConcatText = ConcatStrings (NAME_Bonus_Str, IntToString (STR_MeatSoup));
-		
 		B_RaiseAttribute (self,	ATR_STRENGTH, STR_MeatSoup);
-		PrintScreen (ConcatText, -1, 34, FONT_ScreenSmall,2); 
+		Snd_Play	("LevelUp");
 	};
 	
 	

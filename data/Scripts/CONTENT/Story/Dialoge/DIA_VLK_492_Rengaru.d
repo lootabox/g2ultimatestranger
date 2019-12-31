@@ -364,5 +364,4 @@ FUNC VOID DIA_Rengaru_Zeichen_Info()
 	AI_Output (self, other, "DIA_Rengaru_Zeichen_07_03");//Try to grab the desired object with one hand, and wave about with the other. That distracts them.
 	
 	B_RaiseAttribute(other, ATR_DEXTERITY, 1);
-	Snd_Play ("LEVELUP"); 
 };

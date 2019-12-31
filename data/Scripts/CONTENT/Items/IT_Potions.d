@@ -253,6 +253,7 @@ INSTANCE ItPo_Perm_STR(C_Item)
 FUNC VOID UseItPo_Perm_STR()
 { 
 	B_RaiseAttribute	(self, ATR_STRENGTH,	STR_Elixier);
+	Snd_Play	("LevelUp");
 };
 /******************************************************************************************/		
 INSTANCE ItPo_Perm_DEX(C_Item)
@@ -281,6 +282,7 @@ INSTANCE ItPo_Perm_DEX(C_Item)
 FUNC VOID UseItPo_Perm_DEX()
 { 
 	B_RaiseAttribute	(self, ATR_DEXTERITY,	DEX_Elixier);
+	Snd_Play	("LevelUp");
 };
 /******************************************************************************************/
 INSTANCE ItPo_Perm_Health(C_Item)
@@ -313,6 +315,7 @@ FUNC VOID UseItPo_Perm_Health()
 {
 	B_RaiseAttribute	(self, ATR_HITPOINTS_MAX,	HPMax_Elixier);	
 	Npc_ChangeAttribute	(self, ATR_HITPOINTS,	HPMax_Elixier);
+	Snd_Play	("LevelUp");
 };
 /******************************************************************************************/
 INSTANCE ItPo_Perm_Mana(C_Item)
@@ -343,6 +346,7 @@ FUNC VOID UseItPo_Perm_Mana()
 {
 	B_RaiseAttribute	(self, ATR_MANA_MAX,	ManaMax_Elixier);
 	Npc_ChangeAttribute	(self, ATR_MANA,	ManaMax_Elixier);
+	Snd_Play	("LevelUp");
 };
 
 /******************************************************************************************/

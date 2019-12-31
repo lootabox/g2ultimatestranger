@@ -916,6 +916,7 @@ INSTANCE ItPo_Perm_LittleMana(C_Item)
 	{
 		B_RaiseAttribute	(self, ATR_MANA_MAX,	3);
 		Npc_ChangeAttribute	(self, ATR_MANA,	3);
+		Snd_Play	("LevelUp");
 	};
 //****************************************************
 //		Hammer Innos, für Golem Prüfung 

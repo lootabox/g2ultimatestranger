@@ -1,3 +1,44 @@
+
+//************************************************
+//   Update status menu when opened
+// https://forum.worldofplayers.de/forum/threads/1126551-Skriptpaket-LeGo-2/page11?p=20906914&viewfull=1#post20906914
+//************************************************
+
+func void Update_Menu_Item(var string name, var string val) {
+    var int itPtr;
+    itPtr = MEM_GetMenuItemByString(name);
+    
+    if (!itPtr) {
+        MEM_Error(ConcatStrings("Update_Menu_Item: Invalid Menu Item: ", name));
+        return;
+    };
+    
+    //void __thiscall zCMenuItem::SetText(val = val, line = 0, drawNow = true)
+    const int SetText = 5114800;
+    
+    CALL_IntParam(true);
+    CALL_IntParam(0);
+    CALL_zStringPtrParam(val);
+    CALL__thiscall(itPtr, SetText);
+};
+
+func void Install_Character_Menu_Hook() {
+    //at oCMenu_Status::SetLearnPoints
+    const int done = false;
+    if(!done) {
+        HookEngineF(4707920, 6, Update_Character_Menu);
+        done = true;
+    };
+};
+
+func void Update_Character_Menu() {
+    //Replace Strength and Dexterity lines with "modded/real" value
+    var string s; s = ConcatStrings(IntToString(hero.attribute[ATR_STRENGTH]), "/");
+    Update_Menu_Item("MENU_ITEM_ATTRIBUTE_1_SCRIPTED", ConcatStrings(s, IntToString(hero.aivar[REAL_STRENGTH])));
+    s = ConcatStrings(IntToString(hero.attribute[ATR_DEXTERITY]), "/");
+    Update_Menu_Item("MENU_ITEM_ATTRIBUTE_2_SCRIPTED", ConcatStrings(s, IntToString(hero.aivar[REAL_DEXTERITY])));
+};
+
 //************************************************
 //   Check whether creature is standing in water
 // https://forum.worldofplayers.de/forum/threads/994505-Abfrage-Ob-Held-im-Wasser-steht?p=16075800&viewfull=1#post16075800

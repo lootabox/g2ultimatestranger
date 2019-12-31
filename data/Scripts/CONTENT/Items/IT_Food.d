@@ -299,9 +299,9 @@ INSTANCE ItFo_XPStew (C_Item)
 
 	FUNC VOID Use_XPStew()
 	{
+		B_RaiseAttribute (self, ATR_STRENGTH, 1);
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Stew);
 		Snd_Play	("LevelUp");
-		B_RaiseAttribute (self, ATR_STRENGTH, 1);
 	};
 
 
@@ -333,13 +333,16 @@ INSTANCE ItFo_CoragonsBeer (C_Item)
 	FUNC VOID Use_CoragonsBeerBeer()
 	{
 		B_RaiseAttribute	(self,	ATR_MANA_MAX,	Mana_Beer);
-		Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Beer);	 
+		Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Beer);
 		
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS_MAX,	HP_Beer);
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Beer);
+
 		var string concatText;
 		concatText = ConcatStrings(PRINT_Learnhitpoints_MAX, IntToString(HP_Beer));
-		PrintScreen	(concatText, 55, -1, FONT_Screen, 2);
+		PrintScreen	(concatText, -1, 55, FONT_Screen, 2);
+		
+		Snd_Play	("LevelUp");
 	};
 
 

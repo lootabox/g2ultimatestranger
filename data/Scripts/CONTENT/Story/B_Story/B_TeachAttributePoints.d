@@ -64,6 +64,7 @@ func int B_TeachAttributePoints (var C_NPC slf, var C_NPC oth, var int attrib, v
 	oth.lp = oth.lp - kosten;
 		
 	B_RaiseAttribute (oth, attrib, points);
+	B_RaiseRealAttributeLearnCounter (oth, attrib, points);
 	
 	return TRUE;
 };

@@ -707,6 +707,7 @@ FUNC VOID Use_Astronomy()
 		if (Astronomy_once == FALSE)
 		{
 			B_RaiseAttribute (self, ATR_MANA_MAX, 2);
+			Snd_Play	("LevelUp");
 			Print (PRINT_ReadAstronomy);
 			Astronomy_once = TRUE;
 		};

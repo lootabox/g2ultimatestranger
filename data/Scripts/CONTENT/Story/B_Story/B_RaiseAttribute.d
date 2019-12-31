@@ -10,7 +10,7 @@ func void B_RaiseRealAttributeLearnCounter (var C_NPC oth, var int attrib, var i
 	else if (attrib == ATR_MANA_MAX)	{	oth.aivar[REAL_MANA_MAX] = oth.aivar[REAL_MANA_MAX] + points;	};
 };
 
-// ---------------------------------------
+// --------------------------------------- DOES NOT RAISE REAL ATTRIBUTE COUNTERS ANYMORE!
 func void B_RaiseAttribute (var C_NPC oth, var int attrib, var int points)
 {
 	var string concatText;
@@ -58,5 +58,5 @@ func void B_RaiseAttribute (var C_NPC oth, var int attrib, var int points)
 		PrintScreen	(concatText, -1, -1, FONT_SCREEN, 2);
 	};
 	
-	B_RaiseRealAttributeLearnCounter (oth, attrib, points);
+	//B_RaiseRealAttributeLearnCounter (oth, attrib, points);
 };
