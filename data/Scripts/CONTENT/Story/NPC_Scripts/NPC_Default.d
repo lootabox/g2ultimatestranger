@@ -6,11 +6,11 @@ prototype Npc_Default (C_NPC)
 {
 	// ------ Attribute ------
 	attribute	[ATR_STRENGTH] 			= 10;
-	aivar		[REAL_STRENGTH]			= 10;
+	//aivar		[REAL_STRENGTH]			= 10;
 	attribute	[ATR_DEXTERITY] 		= 10;
-	aivar		[REAL_DEXTERITY]		= 10;
+	//aivar		[REAL_DEXTERITY]		= 10;
 	attribute	[ATR_MANA_MAX] 			= 10;
-	aivar		[REAL_MANA_MAX]			= 10;
+	//aivar		[REAL_MANA_MAX]			= 10;
 	attribute	[ATR_MANA] 				= 10;
 	attribute	[ATR_HITPOINTS_MAX] 	= 40;
 	attribute	[ATR_HITPOINTS] 		= 40;

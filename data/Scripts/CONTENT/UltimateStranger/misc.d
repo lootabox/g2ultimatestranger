@@ -31,12 +31,25 @@ func void Install_Character_Menu_Hook() {
     };
 };
 
+func string getAttributeString(var int boosted, var int max, var int trained)
+{
+    var string s; s = IntToString(boosted);
+    if (max > 0)
+    {
+        s = ConcatStrings(s, "/");
+        s = ConcatStrings(s, IntToString(max));
+    };
+    s = ConcatStrings(s, " (");
+    s = ConcatStrings(s, IntToString(trained));
+    s = ConcatStrings(s, ")");
+    return s;
+};
+
 func void Update_Character_Menu() {
-    //Replace Strength and Dexterity lines with "modded/real" value
-    var string s; s = ConcatStrings(IntToString(hero.attribute[ATR_STRENGTH]), "/");
-    Update_Menu_Item("MENU_ITEM_ATTRIBUTE_1_SCRIPTED", ConcatStrings(s, IntToString(hero.aivar[REAL_STRENGTH])));
-    s = ConcatStrings(IntToString(hero.attribute[ATR_DEXTERITY]), "/");
-    Update_Menu_Item("MENU_ITEM_ATTRIBUTE_2_SCRIPTED", ConcatStrings(s, IntToString(hero.aivar[REAL_DEXTERITY])));
+    //Replace Strength, Dexterity and Mana lines with "modded/real (trained)" value
+    Update_Menu_Item("MENU_ITEM_ATTRIBUTE_1_SCRIPTED", GetAttributeString(hero.attribute[ATR_STRENGTH], -1, hero.aivar[REAL_STRENGTH]));
+    Update_Menu_Item("MENU_ITEM_ATTRIBUTE_2_SCRIPTED", GetAttributeString(hero.attribute[ATR_DEXTERITY], -1, hero.aivar[REAL_DEXTERITY]));
+    Update_Menu_Item("MENU_ITEM_ATTRIBUTE_3_SCRIPTED", GetAttributeString(hero.attribute[ATR_MANA], hero.attribute[ATR_MANA_MAX], hero.aivar[REAL_MANA_MAX]));
 };
 
 //************************************************

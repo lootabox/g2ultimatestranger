@@ -515,9 +515,9 @@ INSTANCE ItPo_PotionOfDeath_01_Mis(C_Item)
 			self.attribute[ATR_MANA] = self.attribute[ATR_MANA_MAX];
 			
 			Npc_ChangeAttribute (self,	ATR_STRENGTH  	,5);
-			self.aivar[REAL_STRENGTH] = self.aivar[REAL_STRENGTH] + 5;
+			//self.aivar[REAL_STRENGTH] = self.aivar[REAL_STRENGTH] + 5;
 			Npc_ChangeAttribute (self,	ATR_DEXTERITY  	,5);
-			self.aivar[REAL_DEXTERITY] = self.aivar[REAL_DEXTERITY] + 5;
+			//self.aivar[REAL_DEXTERITY] = self.aivar[REAL_DEXTERITY] + 5;
 			
 			PrintScreen	(PRINT_LearnSTR5, -1, 45, FONT_SCREEN, 2);
 			PrintScreen	(PRINT_LearnDex5, -1, 55, FONT_SCREEN, 2);
