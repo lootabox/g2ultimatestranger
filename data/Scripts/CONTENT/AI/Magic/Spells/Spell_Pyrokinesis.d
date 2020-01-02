@@ -2,7 +2,7 @@
 // SPL_Pyrokinesis  ALIAS  ChargeFireStorm
 // ***************
 
-const int SPL_Cost_Firestorm		= 20; //*4
+const int SPL_Cost_Firestorm		= 30; //*4
 const int SPL_Damage_FireStorm 		= 60;
 
 	// obsolete:

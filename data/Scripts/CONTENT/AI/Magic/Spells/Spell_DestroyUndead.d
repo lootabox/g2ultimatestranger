@@ -2,8 +2,9 @@
 // SPL_DestroyUndead
 // *****************
 
-const int	SPL_Cost_DESTROYUNDEAD		=	100;
-const int 	SPL_Damage_DESTROYUNDEAD 	= 	1000; //soll halt wirklich killen!
+const int	SPL_Cost_DESTROYUNDEAD		=	50;
+const int 	SPL_Damage_DESTROYUNDEAD 	= 	100; //soll halt wirklich killen!
+const int	SPL_Damage_Per_Mana_DESTROYUNDEAD		=	2;
 
 INSTANCE Spell_DestroyUndead(C_Spell_Proto)
 {

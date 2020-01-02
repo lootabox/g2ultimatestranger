@@ -717,6 +717,7 @@ const string NAME_Dam_Point		= "Point damage:";
 const string NAME_Dam_Magic		= "Magic damage:";
 //const string NAME_Dam_Fly		= "Wind damage:";
 const string NAME_Dam_Magic_Per	= "Magic damage per tier:";
+const string NAME_Dam_Magic_Mana= "Magic damage per maximum mana:";
 const string NAME_Shrink_Penalty= "Attribute and protection reduction (percentage):";
 
 const string NAME_Dot_Third		= "Third of damage is dealt over time. ";
@@ -725,13 +726,16 @@ const string NAME_Ice_Freeze	= "Freezes enemies while dealing damage over time. 
 const string NAME_Rage			= "Forces the target to attack the nearest creature. ";
 
 const string NAME_Stagger		= "Staggers living targets. ";
-const string NAME_Nonlethal		= "Nonlethal. ";
+const string NAME_Nonlethal		= "Non-lethal. ";
 const string NAME_Instant		= "Instant effect. ";
 const string NAME_ShortRange	= "Short range. ";
 
 const string NAME_AreaOfEffect_Small	= "Small area of effect. ";
 const string NAME_AreaOfEffect_Default	= "Area of effect. ";
 const string NAME_AreaOfEffect_Large	= "Large area of effect. ";
+
+const string NAME_DestroyUndead_Dmg		= "Only deals damage if lethal. ";
+const string NAME_DestroyUndead_Info	= "Only affects undead. ";
 
 const string NAME_Stun_AdanosBall	= "Stuns all targets, undead for twice as long. ";
 

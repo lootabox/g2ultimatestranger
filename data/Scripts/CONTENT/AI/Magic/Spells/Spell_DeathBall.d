@@ -3,7 +3,7 @@
 // ***************
 
 const int SPL_Cost_Deathball	= 35;
-const int SPL_Damage_Deathball	= 165;
+const int SPL_Damage_Deathball	= 175;
 
 
 INSTANCE Spell_Deathball (C_Spell_Proto)

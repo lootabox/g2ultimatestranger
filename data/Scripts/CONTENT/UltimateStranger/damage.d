@@ -253,9 +253,18 @@ var string pristr; pristr = IntToString(dmg);
 
 			var int freezeDurationMax; freezeDurationMax = dmg / SPL_FREEZE_DAMAGE;
 			var int freezeDuration; freezeDuration = (dmg - prot) / freezeDot;
-			if	(freezeDuration > 0)	{ self.aivar[AIV_FreezeStateTime] = SPL_FREEZE_TIME - freezeDuration; }
-			else						{ self.aivar[AIV_FreezeStateTime] = SPL_FREEZE_TIME + 1; };
-			//Print(ConcatStrings("Start: ", IntToString(self.aivar[AIV_FreezeStateTime])));
+			if	(freezeDuration > 0)
+			{
+				// Initialize freeze effect duration and reduce dot from dmg
+				vic.aivar[AIV_FreezeStateTime] = SPL_FREEZE_TIME - freezeDuration;
+				dmg -= freezeDot * freezeDuration;
+			}
+			else
+			{
+				// Bypass freeze effect
+				vic.aivar[AIV_FreezeStateTime] = SPL_FREEZE_TIME + 1;
+			};
+			//Print(ConcatStrings("Start: ", IntToString(vic.aivar[AIV_FreezeStateTime])));
 		};
 	}
 	// LIGHTNING SPELLS ---------------------------------------------------------------------------
@@ -265,12 +274,12 @@ var string pristr; pristr = IntToString(dmg);
 		||	(spellID == SPL_AdanosBall)
 	{
 		// Lightning spell stagger
-		if	(!C_NpcIsUndead(self))
+		if	(!C_NpcIsUndead(vic))
 		||	(spellID == SPL_AdanosBall)
 		{
-			if (!Npc_HasBodyFlag(self, BS_FLAG_INTERRUPTABLE))
+			if (!Npc_HasBodyFlag(vic, BS_FLAG_INTERRUPTABLE))
 			{
-				AI_PlayAni(self, "T_STUMBLE");
+				AI_PlayAni(vic, "T_STUMBLE");
 			};
 		};
 		// Thunder staff
@@ -284,6 +293,18 @@ var string pristr; pristr = IntToString(dmg);
 				else
 				{ dmg += 20; };
 			};
+		};
+	}
+	// OTHER SPELLS ---------------------------------------------------------------------------
+	else if	(spellID == SPL_DestroyUndead)
+	{
+		if (dmg + att.attribute[ATR_MANA_MAX] * SPL_Damage_Per_Mana_DESTROYUNDEAD >= vic.attribute[ATR_HITPOINTS] + prot)
+		{
+			dmg = vic.attribute[ATR_HITPOINTS] + prot;
+		}
+		else
+		{
+			dmg = 0;
 		};
 	};
 

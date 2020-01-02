@@ -1293,6 +1293,11 @@ INSTANCE ItRu_HarmUndead (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_DESTROYUNDEAD;
 	
+	TEXT	[3]			=	NAME_Dam_Magic_Mana;
+	COUNT	[3]			=	SPL_Damage_Per_Mana_DESTROYUNDEAD;
+	
+	TEXT	[4]			=	ConcatStrings(NAME_DestroyUndead_Dmg, NAME_DestroyUndead_Info);
+	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };

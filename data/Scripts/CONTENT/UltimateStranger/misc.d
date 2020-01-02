@@ -31,6 +31,7 @@ func void Install_Character_Menu_Hook() {
     };
 };
 
+// Returns "boosted/max (trained)" or "boosted (trained)" for given values
 func string getAttributeString(var int boosted, var int max, var int trained)
 {
     var string s; s = IntToString(boosted);
@@ -49,7 +50,7 @@ func void Update_Character_Menu() {
     //Replace edge protection with proper value
     Update_Menu_Item("MENU_ITEM_ARMOR_5_SCRIPTED", IntToString(hero.protection[PROT_EDGE]));
 
-    //Replace Strength, Dexterity and Mana lines with "modded/real (trained)" value
+    //Replace Strength, Dexterity and Mana values
     Update_Menu_Item("MENU_ITEM_ATTRIBUTE_1_SCRIPTED", GetAttributeString(hero.attribute[ATR_STRENGTH], -1, hero.aivar[REAL_STRENGTH]));
     Update_Menu_Item("MENU_ITEM_ATTRIBUTE_2_SCRIPTED", GetAttributeString(hero.attribute[ATR_DEXTERITY], -1, hero.aivar[REAL_DEXTERITY]));
     Update_Menu_Item("MENU_ITEM_ATTRIBUTE_3_SCRIPTED", GetAttributeString(hero.attribute[ATR_MANA], hero.attribute[ATR_MANA_MAX], hero.aivar[REAL_MANA_MAX]));

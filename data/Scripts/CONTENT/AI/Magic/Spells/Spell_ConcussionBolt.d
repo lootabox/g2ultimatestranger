@@ -3,7 +3,7 @@
 // ******************
 
 const int SPL_Cost_Concussionbolt	= 40;
-const int SPL_Damage_Concussionbolt	= 200;
+const int SPL_Damage_Concussionbolt	= 150;
 
 INSTANCE Spell_Concussionbolt (C_Spell_Proto)
 {

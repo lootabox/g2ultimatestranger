@@ -309,13 +309,13 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		// feuer wesen erhalten doppelten schaden, kein opfer zs
 		if (C_NpcIsFireBase(self))
 		{
-			return COLL_APPLYDOUBLEDAMAGE;
+			return COLL_APPLYDOUBLEDAMAGE | COLL_APPLYVICTIMSTATE;
 		};
 
 		// eis wesen erhalten halben schaden, kein opfer zs
 		if (C_NpcIsIceBase(self))
 		{
-			return COLL_APPLYHALVEDAMAGE;
+			return COLL_APPLYHALVEDAMAGE | COLL_APPLYVICTIMSTATE;
 		};
 		
 		// grosse monster erhalten nur schaden, kein opfer zs		
@@ -401,7 +401,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	if (spellType == SPL_DestroyUndead)
 	{
 		if (C_NpcIsUndead(self))
-		&& (self.attribute[ATR_HITPOINTS_MAX] <= SPL_Damage_DESTROYUNDEAD)
+		//&& (self.attribute[ATR_HITPOINTS_MAX] <= SPL_Damage_DESTROYUNDEAD)
 		{	
 			return COLL_DOEVERYTHING;
 		};
