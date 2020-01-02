@@ -37,7 +37,6 @@ func void INIT_GLOBAL()
 	// Ultimate Stranger
 	InitBuffTalents();
 	InitCustomDamageHook();
-	InitStatusScreenHook();
 	Install_Character_Menu_Hook();
 	//UltimateStrangerLoopInit();
 };

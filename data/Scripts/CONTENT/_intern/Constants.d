@@ -972,7 +972,7 @@ const int NPC_TALENT_TAKEANIMALTROPHY	= 16;
 
 const int NPC_TALENT_FOREIGNLANGUAGE	= 17;
 const int NPC_TALENT_WISPDETECTOR		= 18;
-const int NPC_TALENT_C					= 19; // Edge protection
+const int NPC_TALENT_C					= 19;
 const int NPC_TALENT_D					= 20;
 const int NPC_TALENT_E					= 21;
 

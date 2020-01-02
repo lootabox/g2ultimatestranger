@@ -46,6 +46,9 @@ func string getAttributeString(var int boosted, var int max, var int trained)
 };
 
 func void Update_Character_Menu() {
+    //Replace edge protection with proper value
+    Update_Menu_Item("MENU_ITEM_ARMOR_5_SCRIPTED", IntToString(hero.protection[PROT_EDGE]));
+
     //Replace Strength, Dexterity and Mana lines with "modded/real (trained)" value
     Update_Menu_Item("MENU_ITEM_ATTRIBUTE_1_SCRIPTED", GetAttributeString(hero.attribute[ATR_STRENGTH], -1, hero.aivar[REAL_STRENGTH]));
     Update_Menu_Item("MENU_ITEM_ATTRIBUTE_2_SCRIPTED", GetAttributeString(hero.attribute[ATR_DEXTERITY], -1, hero.aivar[REAL_DEXTERITY]));
@@ -65,27 +68,6 @@ func int GetWaterLevel(var C_NPC slf) {
     var zCAIPlayer aip;
     aip = MEM_PtrToInst(ocslf.anictrl);
     return aip.waterLevel;
-};
-
-//************************************************
-//   Displaying blunt protection in status screen
-// https://forum.worldofplayers.de/forum/threads/1424424-Hooking-status-screen
-// https://forum.worldofplayers.de/forum/threads/1449798-Wasting-time-in-a-function
-//************************************************
-const int oCNpc__OpenScreen_Status = 7592320; //0x73D980
-const int oCNpc__CloseScreen_Status = 4714092; //0x47EE6
-
-func void StatusScreen()
-{
-    if (!Hlp_IsValidNpc(hero)) { return; };
-    var int prot; prot = hero.protection[PROT_EDGE];
-    if (prot > 200) { prot = 201; }; // 201+1 = "200+"
-    Npc_SetTalentSkill(hero, NPC_TALENT_C, prot+1);
-};
-
-func void InitStatusScreenHook()
-{
-    HookEngineF(oCNpc__OpenScreen_Status, 7, StatusScreen);
 };
 
 

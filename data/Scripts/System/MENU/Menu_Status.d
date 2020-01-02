@@ -98,10 +98,12 @@ instance MENU_STATUS (C_MENU_DEF)
 	// --- TakeAnimalTrophy ------------------------------------------
 	items[56]	= "MENU_ITEM_TALENT_16_TITLE";
 	items[57]	= "MENU_ITEM_TALENT_16_SKILL";
-	// --- Blunt protection ------------------------------------------
-	items[58]	= "MENU_ITEM_TALENT_19_TITLE";
-	items[59]	= "MENU_ITEM_TALENT_19_SKILL";
-	
+
+	// CUSTOM
+
+	// --- Edge protection ------------------------------------------
+	items[58]	= "MENU_ITEM_ARMOR_5_TITLE";
+	items[59]	= "MENU_ITEM_ARMOR_5_SCRIPTED";
 
 	// ------ Eigenschaften ------
 		
@@ -367,12 +369,6 @@ INSTANCE MENU_ITEM_ARMOR_1(C_MENU_ITEM_DEF)
 	flags 		= flags & ~IT_SELECTABLE;
 };
 
-// ----- Edge protection, handled using NPC_TALENT_C -----
-
-INSTANCE MENU_ITEM_TALENT_19_TITLE(C_MENU_ITEM_DEF)  { posx = STAT_A_X1;posy = STAT_ARM_Y + STAT_DY*1;	fontName = STAT_FONT_DEFAULT;flags=flags & ~IT_SELECTABLE; };
-instance MENU_ITEM_TALENT_19_SKILL(C_MENU_ITEM_DEF)  { posx = STAT_A_X3;posy = STAT_ARM_Y + STAT_DY*1;	fontName = STAT_FONT_DEFAULT;flags=flags & ~IT_SELECTABLE; };
-//INSTANCE MENU_ITEM_TALENT_19(C_MENU_ITEM_DEF) 	   { posx = STAT_A_X3;posy = STAT_ARM_Y + STAT_DY*1;	fontName = STAT_FONT_DEFAULT;flags=flags & ~IT_SELECTABLE; };
-
 // ------ Point ------
 instance MENU_ITEM_ARMOR_2_TITLE(C_MENU_ITEM_DEF)
 {
@@ -389,7 +385,7 @@ INSTANCE MENU_ITEM_ARMOR_2(C_MENU_ITEM_DEF)
 	flags 		= flags & ~IT_SELECTABLE;
 };
 
-// ------ Fire ------
+// ------ Dragon fire ------
 INSTANCE MENU_ITEM_ARMOR_3_TITLE(C_MENU_ITEM_DEF)
 {
 	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*4;
@@ -417,6 +413,22 @@ INSTANCE MENU_ITEM_ARMOR_4_TITLE(C_MENU_ITEM_DEF)
 INSTANCE MENU_ITEM_ARMOR_4(C_MENU_ITEM_DEF)
 {
 	posx 		= STAT_A_X3; 				posy = STAT_ARM_Y + STAT_DY*3;
+	fontName 	= STAT_FONT_DEFAULT;
+	flags 		= flags & ~IT_SELECTABLE;
+};
+
+// ------ Edge ------
+INSTANCE MENU_ITEM_ARMOR_5_TITLE(C_MENU_ITEM_DEF)
+{
+	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*1;
+	text[0]		= "Edge";
+	fontName 	= STAT_FONT_DEFAULT;
+	flags 		= flags & ~IT_SELECTABLE;
+};
+
+INSTANCE MENU_ITEM_ARMOR_5_SCRIPTED(C_MENU_ITEM_DEF)
+{
+	posx 		= STAT_A_X3; 				posy = STAT_ARM_Y + STAT_DY*1;
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
 };
