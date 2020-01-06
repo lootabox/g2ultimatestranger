@@ -987,7 +987,7 @@ func void DIA_Parlan_CIRCLE3_Info ()
 		{
 			AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE3_05_01"); //Yes, the time has come. Enter now the third Circle of Magic. New spells await you.
 			AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE3_05_02"); //You will need them, for Evil draws nigh and it can be thwarted only with the power of Innos.
-			AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE3_05_03"); //I have now taught you all of the Circles that I can pass on. Karas will instruct you in the higher Circles.
+			AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE3_05_03"); //I have now taught you all of the Circles that I can pass on. Karras will instruct you in the higher Circles.
 			
 			B_LogEntry (Topic_KlosterTeacher,"Brother Parlan has taught me the first three Circles. Brother Karras will help me into the next Circles.");
 		};
@@ -1177,7 +1177,7 @@ INSTANCE DIA_Parlan_IAmParlan   (C_INFO)
 FUNC INT DIA_Parlan_IAmParlan_Condition()
 {
 	if	( (Kapitel >= 3)  
-	&&	  (Npc_IsInState (self, ZS_Talk))
+	//&&	  (Npc_IsInState (self, ZS_Talk))
 	&&	 ((other.guild != GIL_NOV)
 	&& 	  (other.guild != GIL_KDF)))
 	{
@@ -1202,7 +1202,7 @@ FUNC VOID DIA_Parlan_IAmParlan_Info()
 		Info_AddChoice (DIA_Parlan_IAmParlan,"I shall do what I please.",DIA_Parlan_IAmParlan_MyChoice);
 		Info_AddChoice (DIA_Parlan_IAmParlan,"Sure.",DIA_Parlan_IAmParlan_OK);
 	};
-	Wld_InsertItem (ItKe_KlosterBibliothek,"NW_MONASTERY_CORRIDOR_02"); 
+	//Wld_InsertItem (ItKe_KlosterBibliothek,"NW_MONASTERY_CORRIDOR_02"); 
 };
 
 FUNC VOID DIA_Parlan_IAmParlan_MyChoice ()
@@ -1237,8 +1237,9 @@ FUNC INT DIA_Parlan_Bibliothek_Condition()
 {
 	if  (other.guild != GIL_KDF)
 	&&  (Kapitel >=3)
-	&&  (other.guild != GIL_SLD)
-	&&  (other.guild != GIL_DJG)
+	//&&  (other.guild != GIL_SLD)
+	//&&  (other.guild != GIL_DJG)
+	&& ((MIS_NOVIZENCHASE > FALSE) || other.guild == GIL_PAL)
 	{
 		return TRUE;
 	};	
@@ -1246,7 +1247,11 @@ FUNC INT DIA_Parlan_Bibliothek_Condition()
 FUNC VOID DIA_Parlan_Bibliothek_Info()
 {
 	AI_Output (other ,self,"DIA_Parlan_Bibliothek_15_00"); //Have you got anything else for me?
-	AI_Output (self ,other,"DIA_Parlan_Bibliothek_05_01"); //Yes. As a member of the library, you are given the key to the library. There you will find Brothers Karas and Hyglas.
+	if((other.guild == GIL_SLD) || (other.guild == GIL_DJG))
+	{
+		AI_Output (self ,other,"DIA_Parlan_IAmParlan_05_00"); //I see that you have decided to fight on our side. I am glad.
+	};
+	AI_Output (self ,other,"DIA_Parlan_Bibliothek_05_01"); //Yes. As a member of the library, you are given the key to the library. There you will find Brothers Karras and Hyglas.
 	AI_Output (self ,other,"DIA_Parlan_Bibliothek_05_02"); //If you like, you can speak with them there.
 	
 	if (other.guild != GIL_PAL)
