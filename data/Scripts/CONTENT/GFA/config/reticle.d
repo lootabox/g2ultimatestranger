@@ -170,7 +170,8 @@ func void GFA_GetSpellReticle(var C_Npc target, var int spellID, var C_Spell spe
     } else if (STR_IndexOf(spellName, "ZAP") != -1)
     || (STR_IndexOf(spellName, "LIGHTNING") != -1)
     || (STR_IndexOf(spellName, "FLASH") != -1)
-    || (STR_IndexOf(spellName, "THUNDER") != -1) {
+    || (STR_IndexOf(spellName, "THUNDER") != -1)
+    || (STR_IndexOf(spellName, "ADANOSBALL") != -1) {
         // Electric spells
         reticle.texture = RETICLE_BOLTS;
     } else if (STR_IndexOf(spellName, "PAL") != -1) {

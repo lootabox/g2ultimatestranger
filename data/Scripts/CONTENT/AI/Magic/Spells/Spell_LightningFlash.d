@@ -12,6 +12,7 @@ INSTANCE Spell_LightningFlash (C_Spell_Proto)
 	damage_per_level		= SPL_Damage_LightningFlash;
 	damageType				= DAM_MAGIC;
 	targetCollectAlgo		= TARGET_COLLECT_FOCUS;
+	targetCollectRange		= FIGHT_DIST_CANCEL;
 };
 
 func int Spell_Logic_LightningFlash (var int manaInvested) //Parameter wird hier nicht gebraucht

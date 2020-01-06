@@ -63,24 +63,24 @@ func int Spell_Blink_CorrectDestination(var int posPtr) {
  * functions GFA_AimVobAttachFX() and GFA_AimVobDetachFX().
  */
 func int GFA_ShiftAimVob(var int spellID, var int posPtr) {
-    // if (spellID == ...) { return -100; }; // Push the aim vob 100 cm away from any wall towards the player
+	// if (spellID == ...) { return -100; }; // Push the aim vob 100 cm away from any wall towards the player
 
-    // Summons
-    if (spellID == SPL_SummonGoblinSkeleton)
-    || (spellID == SPL_SummonWolf)
-    || (spellID == SPL_SummonSkeleton)
-    || (spellID == SPL_SummonGolem)
-    || (spellID == SPL_SummonDemon)
-    || (spellID == SPL_ArmyOfDarkness)
-    || (spellID == SPL_SummonGuardian)
-    || (spellID == SPL_SummonZombie)
-    || (spellID == SPL_SummonMud)
-    {
-        MEM_PushIntParam(posPtr);
-        MEM_Call(Spell_Blink_CorrectDestination);
-        return MEM_PopIntResult();
-    };
+	// Summons
+	if (spellID == SPL_SummonGoblinSkeleton)
+	|| (spellID == SPL_SummonWolf)
+	|| (spellID == SPL_SummonSkeleton)
+	|| (spellID == SPL_SummonGolem)
+	|| (spellID == SPL_SummonDemon)
+	|| (spellID == SPL_ArmyOfDarkness)
+	|| (spellID == SPL_SummonGuardian)
+	|| (spellID == SPL_SummonZombie)
+	|| (spellID == SPL_SummonMud)
+	{
+		MEM_PushIntParam(posPtr);
+		MEM_Call(Spell_Blink_CorrectDestination);
+		return MEM_PopIntResult();
+	};
 
-    // Usually none
-    return 0;
+	// Usually none
+	return 0;
 };

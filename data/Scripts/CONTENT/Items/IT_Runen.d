@@ -1702,6 +1702,8 @@ INSTANCE ItRu_Shrink (C_Item)
 	COUNT	[2]			=	SPL_Shrink_Penalty;
 
 	TEXT	[3]			=	ConcatStrings(NAME_ShortRange, NAME_Instant);
+
+	TEXT	[4]			=	NAME_Shrink_Info;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

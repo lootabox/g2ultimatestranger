@@ -718,7 +718,6 @@ const string NAME_Dam_Magic		= "Magic damage:";
 //const string NAME_Dam_Fly		= "Wind damage:";
 const string NAME_Dam_Magic_Per	= "Magic damage per tier:";
 const string NAME_Dam_Magic_Mana= "Magic damage per maximum mana:";
-const string NAME_Shrink_Penalty= "Attribute and protection reduction (percentage):";
 
 const string NAME_Dot_Third		= "Third of damage is dealt over time. ";
 const string NAME_Dot_Full		= "All damage is dealt over time. ";
@@ -735,6 +734,9 @@ const string NAME_AreaOfEffect_Default	= "Area of effect. ";
 const string NAME_AreaOfEffect_Large	= "Large area of effect. ";
 
 const string NAME_DestroyUndead_Dmg		= "Only deals damage if lethal. ";
+const string NAME_Shrink_Penalty		= "Attribute and protection reduction (percentage):";
+const string NAME_Shrink_Info			= "Only affects living non-humans. ";
+
 const string NAME_DestroyUndead_Info	= "Only affects undead. ";
 
 const string NAME_Stun_AdanosBall	= "Stuns all targets, undead for twice as long. ";
