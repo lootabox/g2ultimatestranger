@@ -363,6 +363,7 @@ Talbin will teach NH hunting once escorted to Khorinis.
 Talbins dialog creates a journal note of him being a teacher only after he agrees to teach NH.
 Thekla now grants previously omitted XP bonus for defeating Bullco.
 Thorben does not immediately take Lehmar's book of debts, instead another dialog option is created just for giving the book.
+Thorus can be pickpocketed for his key.
 Torlof won't be asked about location of Bengar or Sekobs farm if NH already met them.
 Ulf does not randomly die in the beginning of chapter 3.
 Ulf smokes a joint as well instead of watching as NH smokes one.

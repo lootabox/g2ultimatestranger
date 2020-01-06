@@ -434,3 +434,36 @@ FUNC VOID DIA_Addon_Thorus_Raventot_Info()
 
 
 
+instance DIA_Addon_Thorus_PICKPOCKET(C_Info)
+{
+	npc = BDT_10014_Addon_Thorus;
+	nr = 900;
+	condition = DIA_Addon_Thorus_PICKPOCKET_Condition;
+	information = DIA_Addon_Thorus_PICKPOCKET_Info;
+	permanent = TRUE;
+	description = "(It would be risky to steal his key)";
+};
+
+func int DIA_Addon_Thorus_PICKPOCKET_Condition()
+{
+	return C_StealItem(60, ITKE_Addon_Thorus);
+};
+
+func void DIA_Addon_Thorus_PICKPOCKET_Info()
+{
+	Info_ClearChoices(DIA_Addon_Thorus_PICKPOCKET);
+	Info_AddChoice(DIA_Addon_Thorus_PICKPOCKET,Dialog_Back,DIA_Addon_Thorus_PICKPOCKET_BACK);
+	Info_AddChoice(DIA_Addon_Thorus_PICKPOCKET,DIALOG_PICKPOCKET,DIA_Addon_Thorus_PICKPOCKET_DoIt);
+};
+
+func void DIA_Addon_Thorus_PICKPOCKET_DoIt()
+{
+	B_StealItem(60, ITKE_Addon_Thorus);
+	Info_ClearChoices(DIA_Addon_Thorus_PICKPOCKET);
+};
+
+func void DIA_Addon_Thorus_PICKPOCKET_BACK()
+{
+	Info_ClearChoices(DIA_Addon_Thorus_PICKPOCKET);
+};
+
