@@ -288,7 +288,7 @@ func int DIA_Urshak_GEH_Condition ()
 {
 	if (Npc_KnowsInfo(other, DIA_Urshak_HOSHPAKDEAD))
 		&& ((Npc_GetDistToWP(self,"OW_HOSHPAK_04")<1000) == FALSE)
-		&& (Npc_RefuseTalk(self) == FALSE)
+		&& (Npc_IsInState(self,ZS_Talk)) //(Npc_RefuseTalk(self) == FALSE)
 		&& (URSHAK_SUCKED	== FALSE)
 		{
 				return TRUE;
@@ -298,7 +298,7 @@ func int DIA_Urshak_GEH_Condition ()
 func void DIA_Urshak_GEH_Info ()
 {
 	AI_Output			(self, other, "DIA_Urshak_GEH_18_00"); //Friend better go over pass now.
-	Npc_SetRefuseTalk (self,10);
+	//Npc_SetRefuseTalk (self,10);
 	AI_StopProcessInfos (self);
 };
 
