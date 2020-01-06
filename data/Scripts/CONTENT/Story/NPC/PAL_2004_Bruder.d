@@ -2,7 +2,8 @@ instance PAL_2004_Bruder  (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= NAME_PALADIN;
-	guild 		= GIL_NONE;
+	//guild 		= GIL_NONE;
+	guild 		= GIL_PAL;
 	id 			= 2004;
 	voice 		= 4;
 	flags       = 0;																	

@@ -2,7 +2,8 @@ instance PAL_2005_Leiche  (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= NAME_PALADIN;
-	guild 		= GIL_NONE;
+	//guild 		= GIL_NONE;
+	guild 		= GIL_PAL;
 	id 			= 2005;
 	voice 		= 4;
 	flags       = 0;																	
