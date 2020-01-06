@@ -51,6 +51,17 @@ func int B_DragonKillCounter (var C_NPC current_dragon)
 		{
 			MIS_KilledDragons = (MIS_KilledDragons + 1);
 			IcDragnIsDead = TRUE;
+			if(Npc_IsDead(IceGolem_Sylvio1) && Npc_IsDead(IceGolem_Sylvio2))
+			{
+				if(!Npc_IsDead(DJG_Sylvio))
+				{
+					B_StartOtherRoutine(DJG_Sylvio,"IceDragon");
+				};
+				if(!Npc_IsDead(DJG_Bullco))
+				{
+					B_StartOtherRoutine(DJG_Bullco,"IceDragon");
+				};
+			};
 		};
 	};
 

@@ -26,7 +26,7 @@ Status menu shows boosted and trained values for Strength and Dexterity.
 
 	Character progression
 
-Only actual training received from NPCs influences how much more can be taught by NPCs. Random increases during dialogues are not counted. This means that any ability increases the player comes across can be used right away without losing any end game potential.
+Only actual training received from NPCs influences how much more can be taught by NPCs. Random increases during dialogues are not counted. This means that any ability increases the NH comes across can be used right away without losing any end game potential.
 
 
 	Shrine of Innos
@@ -78,6 +78,7 @@ Changed NPCs that are fleeing to ignore trespassing and not to engage in dialog 
 Changed NPCs that are thieves or complicit to ignore theft for Attila, Cassia, Halvor, Jesper, Kardif, Moe, Nagur, Ramirez, Rengaru, Sarah.
 Changed NPCs to attack to kill for Girion, Parcival, Sylvio.
 Changed NPCs to engage in small talk 50% less frequently.
+Changed NPCs to move to the ice dragon cave once it is dead, if the ice golems at the gate are dead for Bullco, Sylvio.
 Changed NPCs to receive varying guild specific weapon on spawn, instead of always Heavy Branch, if their regular weapon is taken.
 Changed NPCs to refuse joining the crew with previously unused dialogue if dismissed twice for Lee, Lester, Mario.
 Changed NPCs to return to monastery after surviving the Trial of Fire for Agon, Igaraz, Ulf.
@@ -100,9 +101,9 @@ Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, 
 Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patrick, Monty, Tonak, Telbor, Pardos.
 Fixed issue with dragon dialog restarting quest 'Dragon Eggs', if it was already completed.
 Fixed logical issues with dialogue of Bennet, Diego, Fernando, Lobart, Lothar, Lucia, Ramon, Ulf, Vatras, Xardas.
-Fixed skipping of NH dialog line when talking to possessed NPCs for Bromor, Brutus, Engrom, Fernando, Malak, Sekob, Vino.
-Fixed mages to not loot the player while in the city for Daron, Myxir and Vatras.
+Fixed mages to not loot the NH while in the city for Daron, Myxir and Vatras.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
+Fixed skipping of NH dialog line when talking to possessed NPCs for Bromor, Brutus, Engrom, Fernando, Malak, Sekob, Vino.
 Fixed wrong or inconsistent style of text for most dialogs.
 
 Removed Goblin Berries and Pepper bags from ambient inventories.
@@ -214,7 +215,7 @@ Gaan's dialog option for asking who he is cannot glitch up and become unavailabl
 Garond can be told about Silvestro's mining site even if Diego has died.
 Garond is not informed about death of Silvestro, if NH does not know about his death.
 Garwig does not get stuck repeating himself after stealing the hammer.
-Garwig initiates the dialog about the Sacred Hammer disappearing if the player has it or he knows he took it.
+Garwig initiates the dialog about the Sacred Hammer disappearing if the NH has it or he knows he took it.
 Garwig will always loot or pick up the Sacred Hammer from NH after beating him.
 Garwig will know NH took the Sacred Hammer if NH has it equipped.
 Garwig will not tell NH about the hammer, if NH has the hammer.
@@ -226,7 +227,7 @@ Gerold will not keep the note for Gorn in his inventory.
 Gerold will not wait to say that he delivered the note if Gorn is already out of the prison.
 Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
-Gorn leads the player to the rock fortress instead of running ahead of him.
+Gorn leads the NH to the rock fortress instead of running ahead of him.
 Greg's treasure hunt quest cancels if the first treasure is not given to him and he will comment in Jharkendar if the quest fails.
 Grimbald does not teach NH for free without finishing the hunt.
 Grimbald gives NH experience for killed snappers.
@@ -276,12 +277,12 @@ Lares' dialog only shows options for the missing people when they are relevant.
 Lares's dialog has 5 more previously unused dialogue lines.
 Larius dialog has 2 more previously inaccessible dialogue lines.
 Lee can be told about lizard people only from chapter 4 onwards.
-Lee will only sell mercenary armour while the player is a mercenary.
+Lee will only sell mercenary armour while the NH is a mercenary.
 Lee's dialog has 1 more previously unused dialogue lines.
 Lehmar attacking the NH causes Meldor to also attack the NH.
 Lehmar does not immediately notice the theft of his ledger.
 Lehmar does not lend money to NH if he attacked him, unless Oblivion is cast on him.
-Lobart's quest for working clothes does not start if player already has bought the clothes or has some other armor.
+Lobart's quest for working clothes does not start if NH already has bought the clothes or has some other armor.
 Logan teaches skinning reptiles instead of skinning off furs.
 Lothar can only be told about getting proof of dragons after talking to him about the dragons.
 Lothar cannot be asked about the part of the metal ornament after already receiving it from Hagen.
@@ -360,7 +361,7 @@ Talbin will teach NH hunting once escorted to Khorinis.
 Talbins dialog creates a journal note of him being a teacher only after he agrees to teach NH.
 Thekla now grants previously omitted XP bonus for defeating Bullco.
 Thorben does not immediately take Lehmar's book of debts, instead another dialog option is created just for giving the book.
-Torlof won't be asked about location of Bengar or Sekobs farm if player already met them.
+Torlof won't be asked about location of Bengar or Sekobs farm if NH already met them.
 Ulf does not randomly die in the beginning of chapter 3.
 Ulf smokes a joint as well instead of watching as NH smokes one.
 Ur-Shak has an orcish axe, like the other orc shamans have.
@@ -403,7 +404,7 @@ Keys no longer have any value.
 Nostalgia bonus properly awards levels to NH.
 Novices do not create additional sausages when given one.
 Quarhodron summoning scroll changed from piece of paper into proper scroll.
-Quests from monastery for novices become obsolete after player becomes a mage, not when they receive the key to the library.
+Quests from monastery for novices become obsolete after NH becomes a mage, not when they receive the key to the library.
 Quests to join mercenaries and the militia become obsolete already when joining the monastery as novice, not after becoming a mage.
 Rum drinking animations are slower.
 Sheep cannot be bought from Onar or Pepe after escorting one to the monastery.
