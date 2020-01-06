@@ -48,8 +48,14 @@ func void DIA_Tandor_Hallo_Info ()
 	AI_Output (self, other, "DIA_Tandor_Hallo_08_01"); //I know myself what it's like out there - I accompanied a reconnaissance unit for a while.
 	AI_Output (self, other, "DIA_Tandor_Hallo_08_02"); //Do you have a weapon? If you need a good weapon, I'm your man.
 	
-	Log_CreateTopic (TOPIC_Trader_OC,LOG_NOTE);
-	B_LogEntry (TOPIC_Trader_OC,"Tandor trades in weapons at the castle.");
+	if(!Npc_KnowsInfo(other,DIA_Garond_Equipment)
+	&& !Npc_KnowsInfo(other,DIA_Keroloth_WantTeach)
+	&& !Npc_KnowsInfo(other,DIA_Dobar_Waffe)
+	&& !Npc_KnowsInfo(other,DIA_Sengrath_Equipment))
+	{
+		Log_CreateTopic (TOPIC_Trader_OC,LOG_NOTE);
+		B_LogEntry (TOPIC_Trader_OC,"Tandor trades in weapons at the castle.");
+	};
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Spähtrupp

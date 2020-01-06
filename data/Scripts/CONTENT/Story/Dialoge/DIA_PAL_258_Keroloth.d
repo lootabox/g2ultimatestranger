@@ -81,11 +81,20 @@ FUNC VOID DIA_Keroloth_WantTeach_Info()
 	AI_Output 	(self ,other,"DIA_Keroloth_WantTeach_07_03"); //Ask the knight Tandor. He'll take care of you.
 		
 	Keroloth_TeachPlayer = TRUE;
-	Log_CreateTopic (TOPIC_Teacher_OC,LOG_NOTE);
-	B_LogEntry (TOPIC_Teacher_OC,"Keroloth trains swordfighters at the castle.");
+	if(!Npc_KnowsInfo(other,DIA_Sengrath_Perm))
+	{
+		Log_CreateTopic (TOPIC_Teacher_OC,LOG_NOTE);
+		B_LogEntry (TOPIC_Teacher_OC,"Keroloth trains swordfighters at the castle.");
+	};
 	
-	Log_CreateTopic (TOPIC_Trader_OC,LOG_NOTE);
-	B_LogEntry (TOPIC_Trader_OC,"Tandor trades in weapons at the castle.");
+	if(!Npc_KnowsInfo(other,DIA_Garond_Equipment)
+	&& !Npc_KnowsInfo(other,DIA_Tandor_Hallo)
+	&& !Npc_KnowsInfo(other,DIA_Dobar_Waffe)
+	&& !Npc_KnowsInfo(other,DIA_Sengrath_Equipment))
+	{
+		Log_CreateTopic (TOPIC_Trader_OC,LOG_NOTE);
+		B_LogEntry (TOPIC_Trader_OC,"Tandor trades in weapons at the castle.");
+	};
 };
 //***********************************************
 //	Kampflehrer EINHAND

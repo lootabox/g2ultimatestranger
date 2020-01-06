@@ -438,8 +438,14 @@ FUNC VOID DIA_Garond_Equipment_Info()
 	{
 		AI_Output (self ,other,"DIA_Garond_Equipment_10_02"); //Talk to Tandor about that. He'll get you everything you need.
 		
-		Log_CreateTopic (TOPIC_Trader_OC,LOG_NOTE);
-		B_LogEntry (TOPIC_Trader_OC,"Tandor trades in weapons at the castle.");
+		if(!Npc_KnowsInfo(other,DIA_Keroloth_WantTeach)
+		&& !Npc_KnowsInfo(other,DIA_Tandor_Hallo)
+		&& !Npc_KnowsInfo(other,DIA_Dobar_Waffe)
+		&& !Npc_KnowsInfo(other,DIA_Sengrath_Equipment))
+		{
+			Log_CreateTopic (TOPIC_Trader_OC,LOG_NOTE);
+			B_LogEntry (TOPIC_Trader_OC,"Tandor trades in weapons at the castle.");
+		};
 	};
 };
 // ************************************************************

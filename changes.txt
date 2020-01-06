@@ -423,6 +423,7 @@ Following actions no longer cause unnecessary journal updates:
 * Alric asked to duel when he does not have his sword.
 * Alrik, Karl, Lares, Brahim, Ignaz and Kardif talked about who can teach and sell things.
 * Angar, Bennet, Diego, Gorn, Lee, Milten and Vatras told where the enemy is hiding.
+* Dobar, Garond, Keroloth, Sengrath, Tandor talked about who can teach and sell things.
 * Biff asked to work for NH.
 * Bones asked to give bandit armor before receiving permission from Greg.
 * Bones, Morgan and Henry talked to about who can teach what.

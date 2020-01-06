@@ -176,8 +176,14 @@ func void DIA_Dobar_Waffe_Info ()
 	AI_Output (other, self, "DIA_Dobar_Waffe_15_00"); //Could you make a weapon for me?
 	AI_Output (self, other, "DIA_Dobar_Waffe_08_01"); //I don't have time for that. Tandor hands out the weapons - I just make them, and Parlaf sharpens them.
 	
-	Log_CreateTopic (TOPIC_Trader_OC,LOG_NOTE);
-	B_LogEntry (TOPIC_Trader_OC,"Tandor trades in weapons at the castle.");
+	if(!Npc_KnowsInfo(other,DIA_Keroloth_WantTeach)
+	&& !Npc_KnowsInfo(other,DIA_Tandor_Hallo)
+	&& !Npc_KnowsInfo(other,DIA_Garond_Equipment)
+	&& !Npc_KnowsInfo(other,DIA_Sengrath_Equipment))
+	{
+		Log_CreateTopic (TOPIC_Trader_OC,LOG_NOTE);
+		B_LogEntry (TOPIC_Trader_OC,"Tandor trades in weapons at the castle.");
+	};
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Perm

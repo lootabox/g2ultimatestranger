@@ -75,6 +75,15 @@ FUNC VOID DIA_Sengrath_Equipment_Info()
 	AI_Output (other ,self,"DIA_Sengrath_Equipment_15_02"); //What about magic supplies?
 	AI_Output (self ,other,"DIA_Sengrath_Equipment_03_03"); //We are equipped with spell scrolls. If you want some of them, let me know.
 	
+	if(!Npc_KnowsInfo(other,DIA_Keroloth_WantTeach)
+	&& !Npc_KnowsInfo(other,DIA_Tandor_Hallo)
+	&& !Npc_KnowsInfo(other,DIA_Garond_Equipment)
+	&& !Npc_KnowsInfo(other,DIA_Dobar_Waffe))
+	{
+		Log_CreateTopic (TOPIC_Trader_OC,LOG_NOTE);
+		B_LogEntry (TOPIC_Trader_OC,"Tandor trades in weapons at the castle.");
+	};
+
 	Log_CreateTopic (TOPIC_Trader_OC,LOG_NOTE);
 	B_LogEntry (TOPIC_Trader_OC,"Sengrath sells spell scrolls in the castle.");
 };
@@ -107,9 +116,11 @@ FUNC VOID DIA_Sengrath_Perm_Info()
 	else
 	{
 		AI_Output (self ,other,"DIA_Sengrath_Perm_03_02"); //Ask Keroloth. He trains the boys in sword fighting. Maybe he'll teach you something, too.
-		
-		Log_CreateTopic (TOPIC_Teacher_OC,LOG_NOTE);
-		B_LogEntry (TOPIC_Teacher_OC,"Keroloth trains swordfighters at the castle.");
+		if(!Npc_KnowsInfo(other,DIA_Keroloth_WantTeach))
+		{
+			Log_CreateTopic (TOPIC_Teacher_OC,LOG_NOTE);
+			B_LogEntry (TOPIC_Teacher_OC,"Keroloth trains swordfighters at the castle.");
+		};
 	};
 };
 // ************************************************************
