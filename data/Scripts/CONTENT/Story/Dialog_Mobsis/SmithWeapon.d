@@ -645,7 +645,6 @@ FUNC VOID PC_ItMw_2H_Special_04_Info ()
 FUNC VOID SMITHWEAPON_S1 ()
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
-		
 	if  (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))
 	{	
 		self.aivar[AIV_INVINCIBLE]=TRUE;

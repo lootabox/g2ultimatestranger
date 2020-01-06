@@ -213,7 +213,7 @@ FUNC VOID PC_PrayShrine_Pray_Info()
 		pricetopay -= pricetopay % 10;
 		if (Npc_HasItems (hero,ItMi_Gold) >= pricetopay)
 		&& (PrayLevel < hero.level)
-		&& (PrayLevel < 50)
+		&& (PrayLevel < 50) // PrayLevelMax
 		{
 			var string praystr; praystr = ConcatStrings(ConcatStrings ("I want to pray and donate ", IntToString (pricetopay)), " gold pieces.");
 			Info_AddChoice (PC_PrayShrine_Pray,praystr,PC_PrayShrine_Pray_BigPay);
@@ -286,13 +286,13 @@ func VOID PC_PrayShrine_Pray_BigPay ()
 		B_BlessAttribute (hero, ATR_DEXTERITY, 1);
 		Shrine_DEX_Bonus += 1;
 	}
-	else if (zufall < 70)
+	else if (zufall < 60)
 	&& (Shrine_MANA_Bonus <= PrayLevel/5)
 	{
 		B_BlessAttribute (hero, ATR_MANA_MAX, 2);
 		Shrine_MANA_Bonus += 1;
 	}
-	else if (Shrine_HP_Bonus < 20)
+	else if (Shrine_HP_Bonus < 50/5*2) // PrayLevelMax / 5 * 2
 	{
 		B_BlessAttribute (hero, ATR_HITPOINTS_MAX, 3);
 		Shrine_HP_Bonus += 1;
