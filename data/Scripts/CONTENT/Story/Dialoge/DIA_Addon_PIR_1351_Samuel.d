@@ -473,6 +473,7 @@ FUNC INT DIA_Addon_Samuel_News_Condition()
 {
 	return TRUE;
 };
+var int DIA_Addon_Samuel_News_FreeDrink;
 func VOID DIA_Addon_Samuel_News_Info()
 {	
 	AI_Output (other,self ,"DIA_Addon_Samuel_News_15_00"); //What's new in the camp?
@@ -481,10 +482,19 @@ func VOID DIA_Addon_Samuel_News_Info()
 	|| (Francis_ausgeschissen == TRUE)
 	{
 		AI_Output (self, other, "DIA_Addon_Samuel_News_14_01"); //Francis got what was coming to him! I can't begin to tell you how that pleases me.
-		AI_Output (self, other, "DIA_Addon_Samuel_News_14_02"); //You're all right. Come on, let's have a drink - it's on me!
 		if (GregIsBack == TRUE)
 		{
 			AI_Output (self, other, "DIA_Addon_Samuel_News_14_03"); //And Greg is finally back. He lost the ship, but at least he'll restore order to the camp.
+		};
+		if (DIA_Addon_Samuel_News_FreeDrink == FALSE)
+		{
+			AI_Output (self, other, "DIA_Addon_Samuel_News_14_02"); //You're all right. Come on, let's have a drink - it's on me!
+			CreateInvItems(self, ItFo_Addon_SchnellerHering, 2);
+			B_GiveInvItems(self, other, ItFo_Addon_SchnellerHering, 1);
+			B_UseItem(other, ItFo_Addon_SchnellerHering);
+			B_UseItem(self, ItFo_Addon_SchnellerHering);
+			DIA_Addon_Samuel_News_FreeDrink = TRUE;
+			AI_Output (self ,other,"DIa_Addon_Samuel_Stronger_SchnellerHering_14_01"); //Rather vile muck, but effective!
 		};
 	}
 	else //Greg noch weg UND Francis lebt noch

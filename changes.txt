@@ -336,6 +336,7 @@ Rosi can only be asked about Bengar's farm if NH has not yet spoken with Bengar.
 Rosi will not create extra gold in her inventory when giving the reward to NH for escorting her.
 Rukhar drinks only beer during his drinking contest.
 Rupert can only be asked where Matteo can be found if NH did not find him yet.
+Samuel will actually drink Hasty Herrings with NH when he says so, but only once.
 Salandril can be commented about fake mining shares before knowing he is behind it.
 Salandril can only be accused of distributing the fake mining shares after reading one and seeing his signature.
 Salandril does not care about NH wearing weapons or magic while in the monastery.
