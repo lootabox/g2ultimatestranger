@@ -418,6 +418,7 @@ Stunt bonus can be received only after learning Malcom fell down the hole and th
 Sun Aloe can't be eaten.
 Translated dialogs of CH, SH, SH_Oldworld dialogs and added addon skills to CH dialog.
 Weed has no price field and makes NH cough funnily.
+Zombie paladins are restored and replaces zombies in Irdorath.
 
 Following actions no longer cause unnecessary journal updates:
 * Reading Cornelius' Diary, Xardas' Letter, Lucia's farewell letter, almanac in the secret library, Black Magician's Scroll, Diary of the novice black magician, "Pure mana" and "Pure health".

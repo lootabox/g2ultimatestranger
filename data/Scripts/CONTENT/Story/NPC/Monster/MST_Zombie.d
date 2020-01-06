@@ -199,10 +199,8 @@ func void B_Pal_ZOMBIE_RISE ()
 	if (Npc_GetDistToNpc (self,hero) <= 1400)
 	{
 		AI_PlayAni (self,"T_RISE");
-		
-		
 		AI_StartState 		(self, ZS_MM_Attack, 0, "");
-		self.bodyStateInterruptableOverride 	= FALSE;
+		//self.bodyStateInterruptableOverride 	= FALSE;
 		self.start_aistate				= ZS_MM_AllScheduler;
 		self.aivar[AIV_MM_RestStart] 	= OnlyRoutine;
 	};
@@ -245,9 +243,7 @@ INSTANCE Pal_Zombie01		(Mst_Default_Zombie)
 {
 	B_SetVisuals_Pal_Zombie01();
 	Npc_SetToFistMode(self);
-	
 	start_aistate				= ZS_Pal_ZOMBIE;
-
 	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
 };
 
@@ -255,9 +251,7 @@ INSTANCE Pal_Zombie02		(Mst_Default_Zombie)
 {
 	B_SetVisuals_Pal_Zombie02();
 	Npc_SetToFistMode(self);
-	
 	start_aistate				= ZS_Pal_ZOMBIE;
-
 	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
 };
 
@@ -265,9 +259,7 @@ INSTANCE Pal_Zombie03		(Mst_Default_Zombie)
 {
 	B_SetVisuals_Pal_Zombie03();
 	Npc_SetToFistMode(self);
-	
 	start_aistate				= ZS_Pal_ZOMBIE;
-
 	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
 };
 
@@ -275,9 +267,7 @@ INSTANCE Pal_Zombie04		(Mst_Default_Zombie)
 {
 	B_SetVisuals_Pal_Zombie04();
 	Npc_SetToFistMode(self);
-	
 	start_aistate				= ZS_Pal_ZOMBIE;
-
 	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
 };
 
@@ -316,9 +306,7 @@ INSTANCE MayaZombie01		(Mst_Default_Zombie)
 {
 	B_SetVisuals_Maya_Zombie01();
 	Npc_SetToFistMode(self);
-	
 	start_aistate				= ZS_Pal_ZOMBIE;
-
 	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
 };
 
@@ -333,7 +321,6 @@ INSTANCE MayaZombie03		(Mst_Default_Zombie)
 	B_SetVisuals_Maya_Zombie03();
 	Npc_SetToFistMode(self);
 	start_aistate				= ZS_Pal_ZOMBIE;
-
 	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
 };
 

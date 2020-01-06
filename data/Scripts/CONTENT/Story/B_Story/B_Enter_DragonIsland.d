@@ -129,10 +129,14 @@ FUNC VOID STARTUP_NEWWORLD_PART_DRAGON_UNDEAD_01 ()
 	Wld_InsertNpc	(OrcElite_Rest,			"WP_UNDEAD_SPAWN_POINT_03");
 	Wld_InsertNpc	(OrcShaman_Sit,			"WP_UNDEAD_SPAWN_POINT_04");
 	
-	Wld_InsertNpc	(Zombie01,				"WP_UNDEAD_SPAWN_POINT_05");
-	Wld_InsertNpc	(Zombie02,				"WP_UNDEAD_SPAWN_POINT_06");
-	Wld_InsertNpc	(Zombie03,				"WP_UNDEAD_SPAWN_POINT_07");
-	Wld_InsertNpc	(Zombie04,				"WP_UNDEAD_SPAWN_POINT_08");
+	//Wld_InsertNpc	(Zombie01,				"WP_UNDEAD_SPAWN_POINT_05");
+	//Wld_InsertNpc	(Zombie02,				"WP_UNDEAD_SPAWN_POINT_06");
+	//Wld_InsertNpc	(Zombie03,				"WP_UNDEAD_SPAWN_POINT_07");
+	//Wld_InsertNpc	(Zombie04,				"WP_UNDEAD_SPAWN_POINT_08");
+	Wld_InsertNpc	(Pal_Zombie01,			"WP_UNDEAD_SPAWN_POINT_05");
+	Wld_InsertNpc	(Pal_Zombie02,			"WP_UNDEAD_SPAWN_POINT_06");
+	Wld_InsertNpc	(Pal_Zombie03,			"WP_UNDEAD_SPAWN_POINT_07");
+	Wld_InsertNpc	(Pal_Zombie04,			"WP_UNDEAD_SPAWN_POINT_08");
 	
 	Wld_InsertNpc	(Skeleton,				"DRAGONISLAND_UNDEAD_04_01");
 	Wld_InsertNpc	(Skeleton,				"DRAGONISLAND_UNDEAD_04_02");
