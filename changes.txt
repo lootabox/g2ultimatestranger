@@ -414,6 +414,7 @@ Rum drinking animations are slower.
 Sheep cannot be bought from Onar or Pepe after escorting one to the monastery.
 Sleep dialog has black overlay.
 Sleeping is not possible while afflicted by nightmares.
+Stone Sentinels will not awaken after Raven is dead.
 Stunt bonus can be received only after learning Malcom fell down the hole and there is no penalty for jumping more than once.
 Sun Aloe can't be eaten.
 Translated dialogs of CH, SH, SH_Oldworld dialogs and added addon skills to CH dialog.
