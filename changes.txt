@@ -101,7 +101,7 @@ Fixed ambient inventory generation for pirates.
 Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
 Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patrick, Monty, Tonak, Telbor, Pardos.
 Fixed issue with dragon dialog restarting quest 'Dragon Eggs', if it was already completed.
-Fixed logical issues with dialogue of Bennet, Diego, Fernando, Lobart, Lothar, Lucia, Ramon, Ulf, Vatras, Xardas.
+Fixed logical issues with dialogue of Baltram, Bennet, Diego, Fernando, Lobart, Lothar, Lucia, Ramon, Ulf, Vatras, Xardas.
 Fixed mages to not loot the NH while in the city for Daron, Myxir and Vatras.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
 Fixed skipping of NH dialog line when talking to possessed NPCs for Bromor, Brutus, Engrom, Fernando, Malak, Sekob, Vino.

@@ -224,6 +224,12 @@ func void DIA_Baltram_WAREZ_Info ()
 		Baltram_TradeLOG = TRUE;
 	};
 	
+	if (Kapitel == 3)
+	&& (MIS_RescueBennet != LOG_SUCCESS)
+	{
+		AI_Output (self ,other,"DIA_Baltram_WAREZ_01_01"); //They never should have let it get so far. Now one of the mercenaries has actually murdered a paladin.
+		AI_Output (self ,other,"DIA_Baltram_WAREZ_01_02"); //Something had to happen one of these days!
+	};
 	if ((MIS_BaltramTrade != LOG_SUCCESS)
 	&& ((hero.guild == GIL_SLD)
 	||  (hero.guild == GIL_DJG)))
@@ -236,12 +242,6 @@ func void DIA_Baltram_WAREZ_Info ()
 		MIS_BaltramTrade = LOG_FAILED;
 		
 		AI_StopProcessInfos (self);
-	};
-	if (Kapitel == 3)
-	&& (MIS_RescueBennet != LOG_SUCCESS)
-	{
-		AI_Output (self ,other,"DIA_Baltram_WAREZ_01_01"); //They never should have let it get so far. Now one of the mercenaries has actually murdered a paladin.
-		AI_Output (self ,other,"DIA_Baltram_WAREZ_01_02"); //Something had to happen one of these days!
 	};
 };
 
@@ -436,8 +436,8 @@ func void DIA_Baltram_Lieferung_Info ()
 	
 	Npc_RemoveInvItems (self, ItMi_BaltramPaket,1);
 	
-	CreateInvItems (self,ItFo_Cheese	,  5); 	
-	CreateInvItems (self,ItFo_Apple 	, 10); 
+	CreateInvItems (self,ItFo_Cheese	,  5);
+	CreateInvItems (self,ItFo_Apple 	, 10);
 	CreateInvItems (self,ItFo_Beer  	,  5);
 	CreateInvItems (self,ItFo_Bacon 	,  5);
 	CreateInvItems (self,ItFo_Sausage	,  5);

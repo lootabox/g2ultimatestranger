@@ -165,6 +165,8 @@ FUNC VOID DIA_Dragomir_Armbrust_Info()
 	B_GiveInvItems (self, other, ItMi_Gold, 150);					
 	MIS_DragomirsArmbrust = LOG_SUCCESS;
 	B_GivePlayerXP (XP_DragomirsArmbrust);
+	AI_UnequipWeapons(self);
+	AI_EquipBestMeleeWeapon(self);
 	AI_EquipBestRangedWeapon(self);
 };
 

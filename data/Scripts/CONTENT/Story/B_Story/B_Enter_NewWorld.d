@@ -467,6 +467,11 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
  		Wld_InsertNpc 	(DragonSnapper, 	"NW_FARM3_BIGWOOD_04");
 		Wld_InsertNpc 	(Maya_Troll, 		"NW_TROLLAREA_RUINS_41");
 	
+		if(!Npc_IsDead(Hilda) && (MIS_HealHilda == LOG_SUCCESS))
+		{
+			B_StartOtherRoutine(Hilda,"START");
+		};
+	
 		//***********GILDENABHÄNGIG*****************************************
 		//AntiPaladine für den Paladin 
 		if (hero.Guild == GIL_PAL)
