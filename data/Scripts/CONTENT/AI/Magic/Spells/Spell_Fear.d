@@ -2,7 +2,7 @@
 // SPL_Fear
 // ********
 
-const int SPL_Cost_Fear			= 50;
+const int SPL_Cost_Fear			= 100;
 const int SPL_TIME_Fear			= 5;
 
 INSTANCE Spell_Fear (C_Spell_Proto)

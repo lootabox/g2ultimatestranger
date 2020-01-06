@@ -6,7 +6,7 @@ const int Value_Sc_Extricate	= 200;
 const int Value_Sc_HealOther	= 200;
 const int Value_Sc_MagicCage	= 200;
 const int Value_Sc_Quake		= 200;
-const int Value_Sc_Rage			= 200;
+const int Value_Sc_Rage			= 150;
 
 INSTANCE ItSc_Acid (C_Item)
 {

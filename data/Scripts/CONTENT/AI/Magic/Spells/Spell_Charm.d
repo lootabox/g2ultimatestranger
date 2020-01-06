@@ -2,16 +2,14 @@
 // SPL_Charm
 // *********
 
-const int SPL_Cost_Charm		= 5;
-const int SPL_Damage_Charm 		= 0;
+const int SPL_Cost_Charm		= 10;
 
 
 INSTANCE Spell_Charm(C_Spell_Proto)
 {
 	time_per_mana			= 0;
+	damage_per_level		= 0;
 	spelltype 				= SPELL_NEUTRAL;
-	damage_per_level		= SPL_Damage_Charm;
-	damageType				= DAM_MAGIC;						// war vorher DAM_FIRE
 };
 
 func int Spell_Logic_Charm(var int manaInvested)

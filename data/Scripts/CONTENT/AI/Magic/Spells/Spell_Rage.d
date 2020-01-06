@@ -3,7 +3,7 @@
 // SPL_Rage (mud-freak)
 // ********************
 
-const int SPL_Cost_Rage            = 50;
+const int SPL_Cost_Rage            = 60;
 const int SPL_Victims_Rage         = 1;    // Wie viele soll Victim angreifen
 
 INSTANCE Spell_Rage (C_Spell_Proto) {

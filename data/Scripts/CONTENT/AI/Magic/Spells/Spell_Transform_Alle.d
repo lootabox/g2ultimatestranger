@@ -2,18 +2,19 @@
 // Alle Transform Spells
 // *********************
 
-const int SPL_Cost_TrfSheep			= 0;	//0
-const int SPL_Cost_TrfGiantRat		= 5;	//4
-const int SPL_Cost_TrfScavenger		= 10;	//7
-const int SPL_Cost_TrfWolf			= 15;	//6
-const int SPL_Cost_TrfGiantBug		= 15;	//8
-const int SPL_Cost_TrfLurker		= 20;	//10
-const int SPL_Cost_TrfWaran			= 20;	//12
-const int SPL_Cost_TrfSnapper		= 25;	//18
-const int SPL_Cost_TrfWarg			= 30;	//15?!
-const int SPL_Cost_TrfDragonSnapper	= 35;	//20
-const int SPL_Cost_TrfFireWaran		= 40;	//21
-const int SPL_Cost_TrfShadowbeast	= 50;	//20
+// All costs are halved since they are scrolls
+const int SPL_Cost_TrfSheep			= 5;	//0
+const int SPL_Cost_TrfGiantRat		= 10;	//4
+const int SPL_Cost_TrfScavenger		= 20;	//7
+const int SPL_Cost_TrfWolf			= 30;	//6
+const int SPL_Cost_TrfGiantBug		= 30;	//8
+const int SPL_Cost_TrfLurker		= 40;	//10
+const int SPL_Cost_TrfWaran			= 40;	//12
+const int SPL_Cost_TrfSnapper		= 50;	//18
+const int SPL_Cost_TrfWarg			= 60;	//15?!
+const int SPL_Cost_TrfDragonSnapper	= 70;	//20
+const int SPL_Cost_TrfFireWaran		= 80;	//21
+const int SPL_Cost_TrfShadowbeast	= 100;	//20
 
 // ------ Instanz für alle Transform-Sprüche ------
 INSTANCE Spell_Transform (C_Spell_Proto)
