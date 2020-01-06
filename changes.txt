@@ -265,6 +265,7 @@ Isgaroth's blessing creates a log entry for Thorben's quest.
 Jorgen wields a Short Sword in Irdorath instead of a Sickle.
 Kardif cannot be asked about who's in debt to Lehmar if NH already read the book.
 Kardif cannot be talked about Attila if he is nearby and the dialog option does not kill him.
+Karras does not offer his wares to non-mages.
 Kati can be asked about location of Bengar and Sekobs farms only before talking to them.
 Kati can die during his fight with the mercenaries.
 Kati can only be asked for Baltram's shipment and food after asking her whether she is alright.

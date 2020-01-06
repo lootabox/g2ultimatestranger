@@ -172,7 +172,8 @@ instance DIA_Karras_Trade		(C_INFO)
 };
 func int DIA_Karras_Trade_Condition ()
 {	
-	if (hero.guild != GIL_NOV)
+	//if (hero.guild != GIL_NOV)
+	if (hero.guild == GIL_KDF) && Npc_KnowsInfo(other,DIA_Karras_JOB)
 	{
 		return TRUE;
 	};
