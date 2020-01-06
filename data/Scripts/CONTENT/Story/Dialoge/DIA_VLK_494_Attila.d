@@ -228,6 +228,8 @@ func void DIA_Attila_Willkommen_Info ()
 	B_GiveInvItems (self,other,ItKe_ThiefGuildKey_MIS,1);
 	Attila_Key = TRUE;
 	AI_StopProcessInfos (self);
+	self.aivar[AIV_DropDeadAndKill] = FALSE;
+	self.aivar[AIV_ToughGuy] = TRUE;
 	Npc_ExchangeRoutine (self, "AFTER");
 };
 ///////////////////////////////////////////////////////////////////////
