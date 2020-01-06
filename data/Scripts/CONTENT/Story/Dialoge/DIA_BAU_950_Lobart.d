@@ -637,30 +637,33 @@ func void DIA_Lobart_RuebenRunning_Info ()
 		AI_Output (other, self, "DIA_Lobart_RuebenRunning_15_03"); //What about my pay?
 		AI_Output (self, other, "DIA_Lobart_RuebenRunning_05_04"); //I can give you 5 gold pieces.
 		
-		if (hero.guild == GIL_NONE)
+		if (Lobart_Kleidung_Verkauft == TRUE)
+		|| (hero.guild != GIL_NONE)
+		{
+			B_GiveInvItems(self,other,ItMi_Gold,5);
+			AI_Output (self, other, "DIA_Lobart_RuebenRunning_Gold_05_01"); //Here.
+			if (hero.guild == GIL_NONE)
 			{
-				AI_Output (self, other, "DIA_Lobart_RuebenRunning_05_05"); //... or sell you the clothes cheaper, what's it to be?
+				AI_Output (self, other, "DIA_Lobart_RuebenRunning_Gold_05_02"); //And don't drink it all at once.
 			};
-	
-		Info_ClearChoices 	(DIA_Lobart_RuebenRunning);
-
-		if (hero.guild == GIL_NONE)
-			{
-				Info_AddChoice		(DIA_Lobart_RuebenRunning, "Make me a better price for the togs!",	DIA_Lobart_RuebenRunning_Billiger );
-			};
-
-		Info_AddChoice		(DIA_Lobart_RuebenRunning, "Give me 5 gold pieces!", 		DIA_Lobart_RuebenRunning_Gold );
-
+		}
+		else if (hero.guild == GIL_NONE)
+		{
+			AI_Output (self, other, "DIA_Lobart_RuebenRunning_05_05"); //... or sell you the clothes cheaper, what's it to be?
+			Info_ClearChoices 	(DIA_Lobart_RuebenRunning);
+			Info_AddChoice		(DIA_Lobart_RuebenRunning, "Make me a better price for the togs!",	DIA_Lobart_RuebenRunning_Billiger );
+			Info_AddChoice		(DIA_Lobart_RuebenRunning, "Give me 5 gold pieces!", 		DIA_Lobart_RuebenRunning_Gold );
+		};
 	}
 	else
 	{
 		AI_Output (self, other, "DIA_Lobart_RuebenRunning_05_06"); //But that's not even 20 of them!
 		
 		if (hero.guild == GIL_NONE)
-			{
-				AI_Output (self, other, "DIA_Lobart_RuebenRunning_05_07"); //Did you eat the rest?! I hope not, my boy, otherwise you can forget your pay!
-				AI_Output (self, other, "DIA_Lobart_RuebenRunning_05_08"); //Get out there, and get more! Go back to work or I'll make you!
-			};
+		{
+			AI_Output (self, other, "DIA_Lobart_RuebenRunning_05_07"); //Did you eat the rest?! I hope not, my boy, otherwise you can forget your pay!
+			AI_Output (self, other, "DIA_Lobart_RuebenRunning_05_08"); //Get out there, and get more! Go back to work or I'll make you!
+		};
 		
 		AI_StopProcessInfos (self);
 	};
@@ -673,11 +676,10 @@ func void DIA_Lobart_RuebenRunning_Gold ()
 
 	B_GiveInvItems (self, other, ItMi_Gold, 5);
 
-		if (hero.guild == GIL_NONE)
-			{
-					AI_Output (self, other, "DIA_Lobart_RuebenRunning_Gold_05_02"); //And don't drink it all at once.
-			};
-			
+	if (hero.guild == GIL_NONE)
+	{
+		AI_Output (self, other, "DIA_Lobart_RuebenRunning_Gold_05_02"); //And don't drink it all at once.
+	};
 
 	Info_ClearChoices 	(DIA_Lobart_RuebenRunning);
 };

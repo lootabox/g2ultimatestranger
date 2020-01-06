@@ -284,6 +284,7 @@ Lee's dialog has 1 more previously unused dialogue lines.
 Lehmar attacking the NH causes Meldor to also attack the NH.
 Lehmar does not immediately notice the theft of his ledger.
 Lehmar does not lend money to NH if he attacked him, unless Oblivion is cast on him.
+Lobart will only give a discount for working clothes if NH has not already bought them or joined a guild.
 Lobart's quest for working clothes does not start if NH already has bought the clothes or has some other armor.
 Logan teaches skinning reptiles instead of skinning off furs.
 Lothar can only be told about getting proof of dragons after talking to him about the dragons.
