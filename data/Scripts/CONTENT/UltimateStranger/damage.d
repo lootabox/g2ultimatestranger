@@ -163,7 +163,6 @@ var string pristr; pristr = IntToString(dmg);
 
 	// Get equipped staff
 	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(att);
-	Print(wpn.name);
 	// FIRE SPELLS ---------------------------------------------------------------------------
 	if	(spellID == SPL_Firebolt)
 	||	(spellID == SPL_InstantFireball)
@@ -298,11 +297,7 @@ var string pristr; pristr = IntToString(dmg);
 	// OTHER SPELLS ---------------------------------------------------------------------------
 	else if	(spellID == SPL_DestroyUndead)
 	{
-		if (dmg + att.attribute[ATR_MANA_MAX] * SPL_Damage_Per_Mana_DESTROYUNDEAD >= vic.attribute[ATR_HITPOINTS] + prot)
-		{
-			dmg = vic.attribute[ATR_HITPOINTS] + prot;
-		}
-		else
+		if (dmg < vic.attribute[ATR_HITPOINTS] + prot)
 		{
 			dmg = 0;
 		};

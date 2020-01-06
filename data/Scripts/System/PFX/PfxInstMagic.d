@@ -7595,7 +7595,45 @@ INSTANCE MFX_DESTROYUNDEAD_INIT (C_PARTICLEFX)
      vistexcolorstart_s = "0 100 255";
      vistexcolorend_s = "0 0 255";
      vissizestart_s = "3 3";
-     vissizeendscale = 30.000000000;
+     vissizeendscale = 25.000000000;
+     visalphafunc_s = "ADD";
+     visalphastart = 255.000000000;
+};
+
+INSTANCE MFX_DESTROYUNDEAD_INVEST (C_PARTICLEFX)
+{
+     ppsvalue = 100.000000000;
+     ppsscalekeys_s = "1";
+     ppsfps = 5.000000000;
+     shptype_s = "SPHERE";
+     shpfor_s = "object";
+     shpoffsetvec_s = "0 0 0";
+     shpdistribtype_s = "RAND";
+     shpdim_s = "15";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 2.000000000;
+     dirmode_s = "TARGET";
+     dirfor_s = "object";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     dirangleheadvar = 180.000000000;
+     dirangleelevvar = 180.000000000;
+     velavg = 0.001000000;
+     lsppartavg = 800.000000000;
+     lsppartvar = 100.000000000;
+     flygravity_s = "0 0 0";
+     flycolldet_b = 0;
+     visname_s = "DESTROYUNDEAD3.TGA";
+     visorientation_s = "VELO";
+     vistexisquadpoly = 1;
+     vistexanifps = 18.000000000;
+     vistexaniislooping = 1;
+     vistexcolorstart_s = "0 100 255";
+     vistexcolorend_s = "0 0 255";
+     vissizestart_s = "3 3";
+     vissizeendscale = 50.000000000;
      visalphafunc_s = "ADD";
      visalphastart = 255.000000000;
 };

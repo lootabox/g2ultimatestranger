@@ -18,6 +18,8 @@ func int Spell_ProcessMana_Release (var int manaInvested)
 	else if	(activeSpell == SPL_ChargeZap				)	{	return	SPL_SENDCAST;	}
 	else if	(activeSpell == SPL_WINDFIST				)	{	return	SPL_SENDCAST;	}
 
+	else if	(activeSpell == SPL_DestroyUndead			)	{	return	SPL_SENDCAST;	}
+
 	else if	(activeSpell == SPL_SummonWolf				)	{	return	SPL_SENDCAST;	}
 	else if	(activeSpell == SPL_SummonGoblinSkeleton	)	{	return	SPL_SENDCAST;	}
 	else if	(activeSpell == SPL_SummonSkeleton			)	{	return	SPL_SENDCAST;	}

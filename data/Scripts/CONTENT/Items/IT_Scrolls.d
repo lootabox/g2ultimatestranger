@@ -960,16 +960,13 @@ INSTANCE ItSc_HarmUndead (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_DestroyUndead);
 	
-	TEXT	[2]			=	NAME_Dam_Magic;
+	TEXT	[2]			=	NAME_Dam_Magic_Per;
 	COUNT	[2]			=	SPL_DAMAGE_DESTROYUNDEAD;
 	
-	TEXT	[3]			=	NAME_Dam_Magic_Mana;
-	COUNT	[3]			=	SPL_Damage_Per_Mana_DESTROYUNDEAD;
-	
-	TEXT	[4]			=	ConcatStrings(NAME_DestroyUndead_Dmg, NAME_DestroyUndead_Info);
+	TEXT	[3]			=	ConcatStrings(NAME_DestroyUndead_Dmg, NAME_DestroyUndead_Info);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

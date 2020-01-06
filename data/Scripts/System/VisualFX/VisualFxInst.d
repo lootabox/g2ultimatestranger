@@ -3439,8 +3439,8 @@ INSTANCE spellFX_DestroyUndead(CFx_Base_Proto)
      	emtrjeasefunc_s 		= "LINEAR";
      	emActionCollStat_S		= "COLLIDE CREATE";
      	emActionCollDyn_S 		= "COLLIDE CREATEONCE";
-		emFXCollStat_S	   		= "spellFX_Destroyundead_COLLIDE";
-		emFXCollDyn_S     		= "spellFX_Destroyundead_COLLIDEDYNFX";
+		emFXCollStat_S	   		= "spellFX_DestroyUndead_COLLIDE";
+		emFXCollDyn_S     		= "spellFX_DestroyUndead_COLLIDE";
 		emTrjTargetRange	 	= 20;
 		emTrjTargetElev 		= 0;
 		emTrjDynUpdateDelay		= 20000;
@@ -3451,19 +3451,84 @@ INSTANCE spellFX_DestroyUndead(CFx_Base_Proto)
 				visname_S 			= "MFX_DestroyUndead_INIT";
 		};
 
+		INSTANCE spellFX_DestroyUndead_KEY_INVEST_1 (C_ParticleFXEmitKey)
+		{
+				emCreateFXID	= "spellFX_DestroyUndead_INVEST_BLAST";
+				sfxid			= "MFX_SHRINK_INVEST";
+				sfxisambient	= 1;
+		};
+		INSTANCE spellFX_DestroyUndead_KEY_INVEST_2 (C_ParticleFXEmitKey)
+		{
+				emCreateFXID	= "spellFX_DestroyUndead_INVEST_BLAST";
+				sfxid			= "MFX_SHRINK_INVEST";
+				sfxisambient	= 1;
+		};
+		INSTANCE spellFX_DestroyUndead_KEY_INVEST_3 (C_ParticleFXEmitKey)
+		{
+				emCreateFXID	= "spellFX_DestroyUndead_INVEST_BLAST";
+				sfxid			= "MFX_SHRINK_INVEST";
+				sfxisambient	= 1;
+		};
+		INSTANCE spellFX_DestroyUndead_KEY_INVEST_4 (C_ParticleFXEmitKey)
+		{
+				emCreateFXID	= "spellFX_DestroyUndead_INVEST_BLAST";
+				sfxid			= "MFX_SHRINK_INVEST";
+				sfxisambient	= 1;
+		};
+		INSTANCE spellFX_DestroyUndead_KEY_INVEST_5 (C_ParticleFXEmitKey)
+		{
+				emCreateFXID	= "spellFX_DestroyUndead_INVEST_BLAST";
+				sfxid			= "MFX_SHRINK_INVEST";
+				sfxisambient	= 1;
+		};
+		INSTANCE spellFX_DestroyUndead_KEY_INVEST_6 (C_ParticleFXEmitKey)
+		{
+				emCreateFXID	= "spellFX_DestroyUndead_INVEST_BLAST";
+				sfxid			= "MFX_SHRINK_INVEST";
+				sfxisambient	= 1;
+		};
+
 		INSTANCE spellFX_DestroyUndead_KEY_CAST (C_ParticleFXEmitKey)
 		{
-				visname_S 				= "MFX_DestroyUndead_CAST";
-				emtrjmode_s 			= "TARGET";
-		     	emtrjeasevel 			= 800.;
-	 			sfxid					= "MFX_DestroyUndead_Cast";
-	 			sfxisambient			= 1;
-				//emCreateFXID 			= "FX_CAST2";
-				emCheckCollision 		= 1;
+				visname_S				= "MFX_DestroyUndead_CAST";
+				emtrjmode_s				= "TARGET";
+				emtrjeasevel			= 800.;
+				sfxid					= "MFX_DestroyUndead_Cast";
+				sfxisambient			= 1;
+				emCheckCollision		= 1;
 };
 
+/* 		INSTANCE spellFX_DestroyUndead_KEY_CAST (C_ParticleFXEmitKey)
+		{
+				emCreateFXID			= "spellFX_DestroyUndead_SPREAD";
+				pfx_ppsIsLoopingChg		= 1;
+}; */
 
-INSTANCE spellFX_Destroyundead_COLLIDE		(CFx_Base_Proto)
+INSTANCE spellFX_DestroyUndead_INVEST_BLAST	(CFX_Base_Proto)
+{
+		visname_S			= "MFX_DESTROYUNDEAD_INVEST";
+		//sfxid				= "MFX_DESTROYUNDEAD_COLLIDE";
+		//sfxisambient		= 1;
+};
+
+/* INSTANCE spellFX_DestroyUndead_SPREAD	(CFx_Base_Proto)
+{
+	visname_S				= "MFX_DestroyUndead_CAST";
+
+	emTrjOriginNode 		= "ZS_RIGHTHAND";
+	emtrjmode_s				= "TARGET";
+	emtrjeasevel			= 800.;
+	emCheckCollision		= 1;
+
+	emActionCollDyn_S		= "CREATEONCE";
+	emFXCollDyn_S			= "spellFX_DestroyUndead_COLLIDE";
+	emFXCollDynAlign_S		= "COLLISIONNORMAL";
+
+	sfxid					= "MFX_DestroyUndead_Cast";
+	sfxisambient			= 1;
+}; */
+
+INSTANCE spellFX_DestroyUndead_COLLIDE		(CFx_Base_Proto)
 {
 	emTrjOriginNode 	= "BIP01";
 	visname_S 			= "MFX_DESTROYUNDEAD_COLLIDE";
@@ -3473,18 +3538,6 @@ INSTANCE spellFX_Destroyundead_COLLIDE		(CFx_Base_Proto)
 	sfxid				= "MFX_DESTROYUNDEAD_COLLIDE";
 	sfxisambient		= 1;
 };
-
-INSTANCE spellFX_Destroyundead_COLLIDEDYNFX	(CFx_Base_Proto)
-{
-	emTrjOriginNode 	= "BIP01";
-	visname_S 			= "MFX_DESTROYUNDEAD_COLLIDE";
-	emtrjmode_s 		= "FIXED";
-	emtrjdynupdatedelay = 0.;
-	lightpresetname		= "AURA";
-	sfxid				= "MFX_DESTROYUNDEAD_COLLIDE";
-	sfxisambient		= 1;
-};
-
 
 ///   													XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ///   													XX     R E P E L    E V I L		 XX
