@@ -24,7 +24,7 @@ FUNC VOID DIA_Gerbrandt_EXIT_Info()
 {	
 	if (DIEGO_COMING == TRUE)
 	{
-		DiegoNW = Hlp_GetNpc (PC_THIEF_NW);
+		//DiegoNW = Hlp_GetNpc (PC_THIEF_NW);
 				
 		if ( Diego_IsOnBoard == FALSE)
 		{
@@ -32,7 +32,7 @@ FUNC VOID DIA_Gerbrandt_EXIT_Info()
 		};	
 		//patch m.f. B_Startotherroutine raus und ersetzt durch Npc_exchange 
 		
-		Npc_ExchangeRoutine  (self,"NEWLIFE");
+		Npc_ExchangeRoutine  (self,"FLEE");
 		B_StartOtherRoutine (GerbrandtsFrau,"NEWLIFE");
 		
 		DIEGO_COMING = 2; //Weder TRUE noch False
