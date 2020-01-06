@@ -1,8 +1,8 @@
 
 const int	Value_Lockpick			=	10;
-const int	Value_Key_01			=	3;
-const int	Value_Key_02			=	3;
-const int	Value_Key_03			=	3;
+const int	Value_Key_01			=	0;
+const int	Value_Key_02			=	Value_Key_01;
+const int	Value_Key_03			=	Value_Key_02;
 
 
 //******************************************************************************************

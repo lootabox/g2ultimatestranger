@@ -434,7 +434,7 @@ INSTANCE ItMw_FrancisDagger_Mis (C_Item)
 	flags 				=	ITEM_SWD|ITEM_MISSION;	
 	material 			=	MAT_METAL;
 
-	value 				=	0;
+	value 				=	Value_VLKDolch * 10;
 
 	damageTotal  		= 	Damage_VLKDolch;
 	damagetype 			=	DAM_EDGE;

@@ -465,7 +465,7 @@ instance ItMi_Zeitspalt_Addon(C_Item)
 	mainflag 			=	ITEM_KAT_POTIONS;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	0;
+	value 				=	500;
 
 	visual 				=	"ItMi_Zeitspalt_Addon.3DS";
 	scemename			=	"MAPSEALED";	
