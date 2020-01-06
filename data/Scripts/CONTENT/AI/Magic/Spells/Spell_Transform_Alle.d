@@ -2,18 +2,18 @@
 // Alle Transform Spells
 // *********************
 
-const int SPL_Cost_TrfSheep			= 10;
-const int SPL_Cost_TrfScavenger		= 10;
-const int SPL_Cost_TrfGiantRat		= 10;
-const int SPL_Cost_TrfGiantBug		= 10;
-const int SPL_Cost_TrfWolf			= 10;
-const int SPL_Cost_TrfWaran			= 10;
-const int SPL_Cost_TrfSnapper		= 10;
-const int SPL_Cost_TrfWarg			= 10;
-const int SPL_Cost_TrfFireWaran		= 10;
-const int SPL_Cost_TrfLurker		= 10;
-const int SPL_Cost_TrfShadowbeast	= 10;
-const int SPL_Cost_TrfDragonSnapper	= 10;
+const int SPL_Cost_TrfSheep			= 0;	//0
+const int SPL_Cost_TrfGiantRat		= 5;	//4
+const int SPL_Cost_TrfScavenger		= 10;	//7
+const int SPL_Cost_TrfWolf			= 15;	//6
+const int SPL_Cost_TrfGiantBug		= 15;	//8
+const int SPL_Cost_TrfLurker		= 20;	//10
+const int SPL_Cost_TrfWaran			= 20;	//12
+const int SPL_Cost_TrfSnapper		= 25;	//18
+const int SPL_Cost_TrfWarg			= 30;	//15?!
+const int SPL_Cost_TrfDragonSnapper	= 35;	//20
+const int SPL_Cost_TrfFireWaran		= 40;	//21
+const int SPL_Cost_TrfShadowbeast	= 50;	//20
 
 // ------ Instanz für alle Transform-Sprüche ------
 INSTANCE Spell_Transform (C_Spell_Proto)

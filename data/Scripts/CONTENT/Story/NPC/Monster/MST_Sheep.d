@@ -8,7 +8,7 @@ PROTOTYPE Mst_Default_Sheep(C_Npc)
 	name							=	"Sheep";
 	guild							=	GIL_SHEEP;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SHEEP;
-	level							=	1;
+	level							=	0;
 
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	5;
