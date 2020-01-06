@@ -10,11 +10,16 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_1 ()
 
 		// ------ Immortal-Flags löschen ------
 		if (RavenIsDead == TRUE)
-		&& (Npc_IsDead(KDW_140300_Addon_Myxir_CITY))//Joly:zur Sicherheit
 		{
-			Wld_InsertNpc (KDW_140300_Addon_Myxir_CITY,"CITY1");
+			if (!Hlp_IsValidNpc(Myxir_CITY))
+			{
+				Wld_InsertNpc (KDW_140300_Addon_Myxir_CITY,"CITY1");
+			}
+			else if (Npc_IsDead(Myxir_CITY))//Joly:zur Sicherheit
+			{
+				Wld_InsertNpc (KDW_140300_Addon_Myxir_CITY,"CITY1");
+			};
 		};
-
 		// ------ TAs ändern ------
 		if (ENTERED_ADDONWORLD == TRUE)
 		{

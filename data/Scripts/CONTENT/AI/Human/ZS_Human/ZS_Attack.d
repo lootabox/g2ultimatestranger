@@ -222,47 +222,52 @@ func int ZS_Attack_Loop ()
 	B_SelectWeapon (self, other);				//Waffe oder Spell ziehen
 	
 	// ------ ATTACK ------
-	if ((Hlp_IsValidNpc(other)) 							
-	&& (C_NpcIsDown(other) == FALSE))
+	if (Hlp_IsValidNpc(other))
 	{
-		if (other.aivar[AIV_INVINCIBLE] == FALSE) // Nur NSCs angreifen, die NICHT im Talk sind
+		if (C_NpcIsDown(other) == FALSE)
 		{
-												//führt Angriff mit Waffe oder Spell aus (Aktion wird durch FAI bestimmt)
-			AI_Attack (self);		 			//In der Funktion, in der AI_Attack aufgerufen wird DARF KEIN AI_ Befehl VOR AI_Attack kommen, da sonst AI_Attack ignoriert wird
-												//(AI-Attack funktioniert NUR, wenn die AIqueue leer ist!)
-		}
-		else
-		{
-			Npc_ClearAIQueue(self); //killt den letzten AI_Attack-Befehl, verhindert z.B. stumpfes weiterrennen.
+			if (other.aivar[AIV_INVINCIBLE] == FALSE) // Nur NSCs angreifen, die NICHT im Talk sind
+			{
+													//führt Angriff mit Waffe oder Spell aus (Aktion wird durch FAI bestimmt)
+				AI_Attack (self);		 			//In der Funktion, in der AI_Attack aufgerufen wird DARF KEIN AI_ Befehl VOR AI_Attack kommen, da sonst AI_Attack ignoriert wird
+													//(AI-Attack funktioniert NUR, wenn die AIqueue leer ist!)
+			}
+			else
+			{
+				Npc_ClearAIQueue(self); //killt den letzten AI_Attack-Befehl, verhindert z.B. stumpfes weiterrennen.
+			};
+			
+			self.aivar[AIV_LASTTARGET] = Hlp_GetInstanceID (other);
+			
+			return LOOP_CONTINUE;
 		};
-		
-		self.aivar[AIV_LASTTARGET] = Hlp_GetInstanceID (other);
-		
-		return LOOP_CONTINUE;
-	}
-	else //target ungültig (tot) oder down		// falls NPC_GetTarget(self) == FALSE --> other hier automatisch gelöscht
+	};
+
+	//target ungültig (tot) oder down		// falls NPC_GetTarget(self) == FALSE --> other hier automatisch gelöscht
+	// ------ noch in der Queue befindliche Attacks löschen ------
+	Npc_ClearAIQueue(self);
+	
+	// ------ wenn Spieler niedergeschlagen, temp_att (upset) resetten ------
+	if (Hlp_IsValidNpc(other))
 	{
-		// ------ noch in der Queue befindliche Attacks löschen ------
-		Npc_ClearAIQueue(self);
-		
-		// ------ wenn Spieler niedergeschlagen, temp_att (upset) resetten ------
-		if (Hlp_IsValidNpc(other))
-		&& (Npc_IsPlayer(other))
+		if (Npc_IsPlayer(other))
 		&& (C_NpcIsDown(other))
 		{
 			Npc_SetTempAttitude(self, Npc_GetPermAttitude(self,hero));
 		};
-		
-		// ------ NUR neues Ziel wählen, wenn AR NICHT Kill ------
-		if (self.aivar [AIV_ATTACKREASON] != AR_KILL)
-		{
-			Npc_PerceiveAll	(self);					// nötig, da Npc_GetNextTarget() auf der Liste der zuletzt Wahrgenommenen VOBs beruht, und das kann hier schon ne Weile her sein, denn ZS_Attack hat keine aktiven Wahrnehmungen
-			Npc_GetNextTarget (self);
-		};
-		
-		// ----- ist neues Ziel gefunden, in Reichweite, nicht down, nicht im Dialog, nicht FakeBandit und ich selbst Bandit? Dann neues Ziel, sonst End ------
-		if (Hlp_IsValidNpc(other))
-		&& (!C_NpcIsDown(other))
+	};
+	
+	// ------ NUR neues Ziel wählen, wenn AR NICHT Kill ------
+	if (self.aivar [AIV_ATTACKREASON] != AR_KILL)
+	{
+		Npc_PerceiveAll	(self);					// nötig, da Npc_GetNextTarget() auf der Liste der zuletzt Wahrgenommenen VOBs beruht, und das kann hier schon ne Weile her sein, denn ZS_Attack hat keine aktiven Wahrnehmungen
+		Npc_GetNextTarget (self);
+	};
+	
+	// ----- ist neues Ziel gefunden, in Reichweite, nicht down, nicht im Dialog, nicht FakeBandit und ich selbst Bandit? Dann neues Ziel, sonst End ------
+	if (Hlp_IsValidNpc(other))
+	{
+		if (!C_NpcIsDown(other))
 		&& ( (Npc_GetDistToNpc(self, other) < PERC_DIST_INTERMEDIAT) || (Npc_IsPlayer(other)) ) //Bei Nicht-Player Enemies nur auf 1000m reagieren (sonst PERC_DIST_ACTIVE_MAX)
 		&& (Npc_GetHeightToNpc(self, other) < PERC_DIST_HEIGHT)
 		&& (other.aivar[AIV_INVINCIBLE] == FALSE)
@@ -286,20 +291,19 @@ func int ZS_Attack_Loop ()
 			};
 			
 			return LOOP_CONTINUE;
-		}
-		else 									// wenn false, wird other gelöscht!
-		{
-			Npc_ClearAIQueue(self);
-			
-			if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_CANCEL)
-			&& (self.aivar[AIV_LASTTARGET] != Hlp_GetInstanceID (hero)) //letztes Ziel NICHT Player
-			{
-				self.aivar[AIV_LastFightComment] = TRUE; //kein Kommentar abegeben
-			};
-			
-			return LOOP_END;
 		};
 	};
+
+	// wenn false, wird other gelöscht!
+	Npc_ClearAIQueue(self);
+	
+	if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_CANCEL)
+	&& (self.aivar[AIV_LASTTARGET] != Hlp_GetInstanceID (hero)) //letztes Ziel NICHT Player
+	{
+		self.aivar[AIV_LastFightComment] = TRUE; //kein Kommentar abegeben
+	};
+	
+	return LOOP_END;
 };
 
 func void ZS_Attack_End ()
