@@ -37,6 +37,7 @@ func void INIT_GLOBAL()
 	// Ultimate Stranger
 	InitBuffTalents();
 	InitCustomDamageHook();
+	FixEquipBestWeapons_Init();
 	Install_Character_Menu_Hook();
 	//UltimateStrangerLoopInit();
 };

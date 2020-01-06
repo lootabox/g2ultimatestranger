@@ -1,5 +1,56 @@
 
 //************************************************
+//   Prevent NPCs (mainly traders) from equipping "best" weapon if they already have a weapon equipped
+// https://forum.worldofplayers.de/forum/threads/?p=25954713
+//************************************************
+
+func void FixEquipBestWeapons_Init() {
+    const int once = 0;
+    if (!once) {
+        MEM_InitAll();
+
+        const int oCNpc__Enable_equipBestWeapons_G1 = 6955616; //0x6A2260
+        const int oCNpc__Enable_equipBestWeapons_G2 = 7626662; //0x745FA6
+        var int addr; addr = MEMINT_SwitchG1G2(oCNpc__Enable_equipBestWeapons_G1, oCNpc__Enable_equipBestWeapons_G2);
+
+        // Remove default equipping of best melee and ranged weapon to add more conditions
+        const int nop20Bytes[5] = { -1869574000, -1869574000, -1869574000, -1869574000, -1869574000 }; //0x90 * 20
+        MemoryProtectionOverride(addr, 18);
+        MEM_CopyBytes(_@(nop20Bytes), addr, 18);
+
+        HookEngineF(addr, 5, _FixEquipBestWeapons);
+
+        once = 1;
+    };
+};
+
+func void NpcEquipBestWeaponByType(var C_Npc npc, var int type) {
+    const int oCNpc__EquipBestWeapon_G1 = 6988320; //0x6AA220
+    const int oCNpc__EquipBestWeapon_G2 = 7663408; //0x74EF30
+    var int npcPtr; npcPtr = _@(npc);
+    const int call = 0;
+    if (CALL_Begin(call)) {
+        CALL_IntParam(_@(type));
+        CALL__thiscall(_@(npcPtr), MEMINT_SwitchG1G2(oCNpc__EquipBestWeapon_G1, oCNpc__EquipBestWeapon_G2));
+        call = CALL_End();
+    };
+};
+
+func void _FixEquipBestWeapons() {
+    var C_Npc npc; npc = _^(ESI);
+
+    if (!Npc_HasEquippedMeleeWeapon(npc))
+    && (!Npc_HasReadiedMeleeWeapon(npc)) {
+        NpcEquipBestWeaponByType(npc, ITEM_KAT_NF);
+    };
+
+    if (!Npc_HasEquippedRangedWeapon(npc))
+    && (!Npc_HasReadiedRangedWeapon(npc)) {
+        NpcEquipBestWeaponByType(npc, ITEM_KAT_FF);
+    };
+};
+
+//************************************************
 //   Update status menu when opened
 // https://forum.worldofplayers.de/forum/threads/1126551-Skriptpaket-LeGo-2/page11?p=20906914&viewfull=1#post20906914
 //************************************************
@@ -99,11 +150,11 @@ func void InitUltimateStrangerSettings()
     else if (hitpointGainPerLevel == 3) { optionValue = "25%"; }
     else if (hitpointGainPerLevel == 4) { optionValue = "none"; };
     Log_AddEntry(optionsTopic, ConcatStrings("Hitpoint gain per level: ", optionValue));
-
 };
 
 //************************************************
 //   Stop all sounds
+// https://forum.worldofplayers.de/forum/threads/1299679-Skriptpaket-Ikarus-4/page18?p=25562544&viewfull=1#post25562544
 //************************************************
 
 func void stopAllSounds() {
@@ -125,6 +176,7 @@ func void stopAllSounds() {
 
 //************************************************
 //   Alpha-Vob Fix
+// https://forum.worldofplayers.de/forum/threads/1039918-Skript-Mehr-Alpha-Vobs-und-Alpha-Polys-in-Gothic-2
 //************************************************
 
 func void MoreAlphaVobs(var int newCount) {
