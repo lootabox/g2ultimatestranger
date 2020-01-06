@@ -250,6 +250,8 @@ Highwayman hides if he sees NH coming with Lares.
 Highwayman is not a friendly to Seekers, he will be dead in chapter 3.
 Highwayman only appears after returning from the Valley of Mines.
 Hilda only takes the required 20 turnips instead of all of them.
+Hilda will continue her normal routine in the next chapter if she is cured of her illness.
+Hilda will stop her dialog when she says she will see whether the new pan is any good.
 Hodges can be asked about why Bennet was arrested after asking what happened.
 Huno does not complain about Esteban if he is dead.
 Huno only makes a vague comment about high price of his armor once Esteban is dead and does not say that he takes a share.

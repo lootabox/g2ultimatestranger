@@ -265,7 +265,7 @@ func void DIA_Hilda_PfanneGeholt_Info ()
 	MIS_Hilda_PfanneKaufen = LOG_SUCCESS;
 	B_GivePlayerXP (XP_HildaHolPfanne);
 	
-	
+	AI_StopProcessInfos(self);
 };
 
 
@@ -294,15 +294,15 @@ func int DIA_Hilda_PfanneTooLate_Condition ()
 
 func void DIA_Hilda_PfanneTooLate_Info ()
 {
-		if (hero.guild == GIL_NONE)
-		{
-			AI_Output (self, other, "DIA_Hilda_PfanneTooLate_17_00"); //You still dare come back here? What have you done with my money, you good-for-nothing?!
-		}
-		else
-		{
-			AI_Output (self, other, "DIA_Hilda_PfanneTooLate_17_01"); //You've had enough time now. Where's the money I gave you for the pan?
-		};
-		
+	if (hero.guild == GIL_NONE)
+	{
+		AI_Output (self, other, "DIA_Hilda_PfanneTooLate_17_00"); //You still dare come back here? What have you done with my money, you good-for-nothing?!
+	}
+	else
+	{
+		AI_Output (self, other, "DIA_Hilda_PfanneTooLate_17_01"); //You've had enough time now. Where's the money I gave you for the pan?
+	};
+	
 	if (Npc_HasItems(other, itmi_pan) > 0)
 	{
 		AI_Output (other, self, "DIA_Hilda_PfanneTooLate_15_02"); //Sorry, it took me a while. Here's your frying pan!
