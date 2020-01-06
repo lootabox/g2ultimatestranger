@@ -287,6 +287,7 @@ instance DIA_Coragon_Schuldenbuch	(C_INFO)
 func int DIA_Coragon_Schuldenbuch_Condition ()
 {	
 	if (Npc_HasItems (other, ItWr_Schuldenbuch) > 0)
+	&& (SchuldBuchNamesKnown == TRUE))
 	{
 		return TRUE;
 	};

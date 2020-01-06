@@ -314,6 +314,7 @@ INSTANCE DIA_Thorben_Schuldenbuch(C_INFO)
 FUNC INT DIA_Thorben_Schuldenbuch_Condition()
 {	
 	if (Npc_HasItems (other, ItWr_Schuldenbuch) > 0)
+	&& ((SchuldBuchNamesKnown == TRUE) || Npc_KnowsInfo(other,DIA_Thorben_Gritta))
 	{
 		return TRUE;
 	};
@@ -324,11 +325,46 @@ FUNC VOID DIA_Thorben_Schuldenbuch_Info()
 	AI_Output (self, other,"DIA_Thorben_Schuldenbuch_06_01"); //(suspiciously) Where did you get that?
 	AI_Output (other, self,"DIA_Thorben_Schuldenbuch_15_02"); //That shouldn't interest you so much as the fact that your name is in it.
 	AI_Output (self, other,"DIA_Thorben_Schuldenbuch_06_03"); //Give it to me!
-	B_GiveInvItems (other, self, ItWr_Schuldenbuch, 1);
-	Npc_RemoveInvItem(self,ItWr_Schuldenbuch);
+	//B_GiveInvItems (other, self, ItWr_Schuldenbuch, 1);
+	//Npc_RemoveInvItem(self,ItWr_Schuldenbuch);
 	AI_Output (other, self,"DIA_Thorben_Schuldenbuch_15_04"); //What will you give me, then?
 	AI_Output (self, other,"DIA_Thorben_Schuldenbuch_06_05"); //I have no money to spare and can give you nothing but my heartfelt gratitude.
-	B_GivePlayerXP (XP_Schuldenbuch);
+	//B_GivePlayerXP (XP_Schuldenbuch);
+};
+
+instance DIA_Thorben_GiveBook(C_Info)
+{
+	npc = VLK_462_Thorben;
+	nr = 2;
+	condition = DIA_Thorben_GiveBook_Condition;
+	information = DIA_Thorben_GiveBook_Info;
+	permanent = FALSE;
+	description = "Here is the book.";
+};
+
+
+func int DIA_Thorben_GiveBook_Condition()
+{
+	if(Npc_KnowsInfo(other,DIA_Thorben_Schuldenbuch) && Npc_HasItems(other,ItWr_Schuldenbuch))
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Thorben_GiveBook_Info()
+{
+	AI_Output (other, self,"DIA_Coragon_Add_15_18"); //Here is the book.
+	B_GiveInvItems(other,self,ItWr_Schuldenbuch,1);
+	Npc_RemoveInvItem(self,ItWr_Schuldenbuch);
+	if(Thorben_TeachPlayer == TRUE)
+	{
+		AI_Output (self, other,"DIA_Thorben_PleaseTeach_06_01"); //If it weren't for you, I'd be paying Lehmar for the rest of my life.
+	}
+	else
+	{
+		B_Say(self,other,"$ABS_GOOD");
+	};
+	B_GivePlayerXP(XP_Schuldenbuch);
 };
 
 // ************************************************************
@@ -356,7 +392,8 @@ FUNC VOID DIA_Thorben_PleaseTeach_Info()
 {	
 	AI_Output (other, self,"DIA_Thorben_PleaseTeach_15_00"); //Can you teach me how to pick locks?
 		
-	if (Npc_HasItems (self, ItWr_Schuldenbuch) > 0)
+	//if (Npc_HasItems (self, ItWr_Schuldenbuch) > 0)
+	if (Npc_KnowsInfo(other,DIA_Thorben_GiveBook))
 	{
 		AI_Output (self, other,"DIA_Thorben_PleaseTeach_06_01"); //If it weren't for you, I'd be paying Lehmar for the rest of my life.
 		AI_Output (self, other,"DIA_Thorben_PleaseTeach_06_02"); //I shall teach you what you want to know.

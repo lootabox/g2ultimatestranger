@@ -150,6 +150,7 @@ var int Knows_GregsHut;
 var int Francis_ausgeschissen;				//bei Greg
 var int MIS_Brandon_BringHering;
 var int SC_KnowsAkilsHof;
+var int SchuldBuchNamesKnown;				// Lares book of debt
 
 //Missing People
 var int Lares_CanBringScToPlaces;				//= TRUE Lares braucht die Boote im Hafen nicht mehr im Auge behalten.

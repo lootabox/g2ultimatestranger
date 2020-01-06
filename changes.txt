@@ -114,6 +114,7 @@ Fixed wrong or inconsistent style of text for most dialogs.
 Removed Goblin Berries and Pepper bags from ambient inventories.
 Removed option to discuss joining the mercenaries once part of any guild for Alvares, Raoul, Wolf.
 Removed option to discuss rent after completing related quest for Onar, Sekob.
+Removed option to discuss Lehmar's book of debt before reading it or otherwise learning of the debt for Coragon, Hanna, Thorben.
 Removed visual transforming to Seekers of possessed NPCs.
 
 
@@ -244,6 +245,7 @@ Hagen will not make NH paladin before delivering the report from Valley of Mines
 Hagens dialog has 1 more previously inaccessible dialogue lines.
 Halvor is not given the compromising note for reading.
 Hanna has 16 lines of dialogue and new interaction restored related to the thieves' guild.
+Hanna will not take Lehmar's book of debts if NH ratted out on thieves' guild.
 Harad accepts any orc weapon for his quest.
 Harad will take the best orc weapon NH has and inspect it before commenting on it.
 Henry will consider all higher tier armor as luxurious and will comment appropriately.
@@ -260,6 +262,7 @@ Isgaroth can be asked for a blessing after he tells who he is.
 Isgaroth can be traded with as a mage, even if he was never spoken to before.
 Isgaroth's blessing creates a log entry for Thorben's quest.
 Jorgen wields a Short Sword in Irdorath instead of a Sickle.
+Kardif cannot be asked about who's in debt to Lehmar if NH already read the book.
 Kardif cannot be talked about Attila if he is nearby and the dialog option does not kill him.
 Kati can be asked about location of Bengar and Sekobs farms only before talking to them.
 Kati can die during his fight with the mercenaries.
@@ -359,6 +362,7 @@ Talbin wields a Wolf Blade instead of a branch.
 Talbin will teach NH hunting once escorted to Khorinis.
 Talbins dialog creates a journal note of him being a teacher only after he agrees to teach NH.
 Thekla now grants previously omitted XP bonus for defeating Bullco.
+Thorben does not immediately take Lehmar's book of debts, instead another dialog option is created just for giving the book.
 Torlof won't be asked about location of Bengar or Sekobs farm if player already met them.
 Ulf does not randomly die in the beginning of chapter 3.
 Ulf smokes a joint as well instead of watching as NH smokes one.

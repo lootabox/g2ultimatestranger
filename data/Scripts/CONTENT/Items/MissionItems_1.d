@@ -1566,6 +1566,8 @@ INSTANCE ItWr_Schuldenbuch (C_ITEM)
 					//Absatz
 					Doc_PrintLines	( nDocID,  1, "");
 					Doc_Show		( nDocID );
+
+		SchuldBuchNamesKnown = TRUE;
 };
 
 //**********************************************************************************

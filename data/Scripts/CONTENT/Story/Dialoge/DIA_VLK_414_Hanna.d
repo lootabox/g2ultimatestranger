@@ -506,6 +506,7 @@ INSTANCE DIA_Hanna_Schuldenbuch(C_INFO)
 FUNC INT DIA_Hanna_Schuldenbuch_Condition()
 {
 	if (Npc_HasItems (other, ItWr_Schuldenbuch) >= 1)
+	&& (SchuldBuchNamesKnown == TRUE) && (Andre_Diebesgilde_aufgeraeumt == FALSE)
 	{
 		return TRUE;
 	};
@@ -534,6 +535,7 @@ FUNC INT DIA_Hanna_GiveSchuldenbuch_Condition()
 {
 	if (Npc_KnowsInfo (other, DIA_Hanna_Schuldenbuch))
 	&& (Npc_HasItems (other, ItWr_Schuldenbuch) >= 1)
+	&& (Andre_Diebesgilde_aufgeraeumt == FALSE)
 	{
 		return TRUE;
 	};

@@ -300,6 +300,7 @@ func int DIA_Kardif_Lehmar_Condition ()
 	if (DIA_Kardif_Lehmar_permanent == FALSE)
 	&& (Kardif_OneQuestion == TRUE)
 	&& (DIA_Kardif_Buerger_permanent == TRUE) //(Knows perm Info)
+	&& (SchuldBuchNamesKnown == FALSE)
 	{
 		return TRUE;
 	};
