@@ -88,6 +88,7 @@ Changed dialog option for trading to what NH will actually say with Fisk, Garett
 Changed option to comment about fake mining shares to only appear after browsing wares for Bosper, Canthar, Elena, Hakon, Matteo, Orlan, Rosi, Zuris.
 Changed what drinks NPCs drink, depending on gender and class.
 
+Fixed NPCs not always equipping correct armor after Ring of Water meeting for Cavalorn, Cord, Gaan, Lares, Martin, Orlan.
 Fixed NPCs not considering Heavy Militia armor as militia armor for Borka, Kardif, Meldor, Nagur, Nadja.
 Fixed NPCs referring to Lord Andre when telling NH to go settle his crimes for  Fajeth, Tengron, Knight 263.
 Fixed NPCs showing wrong pick pocket difficulty in Valley of Mines for Carlos, Sylvio.

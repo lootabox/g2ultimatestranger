@@ -3,16 +3,49 @@
 func void B_MakeRangerReadyForMeeting (VAR C_NPC Ranger)	
 {				
 	CreateInvItems 	(Ranger, ITAR_RANGER_Addon_Broken, 1 );	
-	AI_UnequipArmor	(Ranger);
+	//AI_UnequipArmor	(Ranger);
 	AI_EquipArmor 	(Ranger, ITAR_RANGER_Addon_Broken);
 	Ranger.npctype		= NPCTYPE_FRIEND;
 };
 func void B_MakeRangerReadyToLeaveMeeting (VAR C_NPC Ranger)	
 {				
-	AI_UnequipArmor	(Ranger);
-	Npc_RemoveInvItems	(Ranger, ITAR_RANGER_Addon,	Npc_HasItems (Ranger, ITAR_RANGER_Addon ) );
-	Npc_RemoveInvItems	(Ranger, ITAR_RANGER_Addon_Broken,	Npc_HasItems (Ranger, ITAR_RANGER_Addon_Broken ) );
-	AI_EquipBestArmor (Ranger); //Joly:ITAR_RANGER_Addon_Broken wegen diesem hier, falls die Armor nicht gelöscht wurde.
+	//AI_UnequipArmor	(Ranger);
+	//Npc_RemoveInvItems	(Ranger, ITAR_RANGER_Addon,	Npc_HasItems (Ranger, ITAR_RANGER_Addon ) );
+	//Npc_RemoveInvItems	(Ranger, ITAR_RANGER_Addon_Broken,	Npc_HasItems (Ranger, ITAR_RANGER_Addon_Broken ) );
+	//AI_EquipBestArmor (Ranger); //Joly:ITAR_RANGER_Addon_Broken wegen diesem hier, falls die Armor nicht gelöscht wurde.
+	if(Hlp_GetInstanceID(Ranger) == Hlp_GetInstanceID(Martin))
+	{
+		AI_EquipArmor(Ranger,ITAR_MIL_M);
+		Npc_RemoveInvItems	(Ranger, ITAR_RANGER_Addon_Broken,	Npc_HasItems (Ranger, ITAR_RANGER_Addon_Broken ) );
+	};
+	if(Hlp_GetInstanceID(Ranger) == Hlp_GetInstanceID(Lares))
+	{
+		AI_EquipArmor(Ranger,ITAR_Vlk_L);
+		Npc_RemoveInvItems	(Ranger, ITAR_RANGER_Addon_Broken,	Npc_HasItems (Ranger, ITAR_RANGER_Addon_Broken ) );
+	};
+	if(Hlp_GetInstanceID(Ranger) == Hlp_GetInstanceID(Cord))
+	{
+		AI_EquipArmor(Ranger,ITAR_SLD_H);
+		Npc_RemoveInvItems	(Ranger, ITAR_RANGER_Addon_Broken,	Npc_HasItems (Ranger, ITAR_RANGER_Addon_Broken ) );
+	};
+	if(Hlp_GetInstanceID(Ranger) == Hlp_GetInstanceID(Gaan))
+	{
+		AI_EquipArmor(Ranger,ITAR_Bau_L);
+		Npc_RemoveInvItems	(Ranger, ITAR_RANGER_Addon_Broken,	Npc_HasItems (Ranger, ITAR_RANGER_Addon_Broken ) );
+	};
+	if(Hlp_GetInstanceID(Ranger) == Hlp_GetInstanceID(Orlan))
+	{
+		AI_EquipArmor(Ranger,ITAR_Bau_M);
+		Npc_RemoveInvItems	(Ranger, ITAR_RANGER_Addon_Broken,	Npc_HasItems (Ranger, ITAR_RANGER_Addon_Broken ) );
+	};
+	if(Hlp_GetInstanceID(Ranger) == Hlp_GetInstanceID(Cavalorn))
+	{
+		if(MIS_Addon_Cavalorn_GetOrnamentFromPAL != FALSE)
+		{
+			AI_EquipArmor(Ranger,ITAR_Bau_L);
+			Npc_RemoveInvItems	(Ranger, ITAR_RANGER_Addon_Broken,	Npc_HasItems (Ranger, ITAR_RANGER_Addon_Broken ) );
+		};
+	};
 };
 func void B_MakeRangerReadyForMeetingALL ()
 {
