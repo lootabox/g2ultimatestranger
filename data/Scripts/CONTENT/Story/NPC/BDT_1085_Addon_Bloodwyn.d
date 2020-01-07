@@ -20,6 +20,7 @@ instance BDT_1085_Addon_Bloodwyn (Npc_Default)
 	EquipItem (self, ItMw_2h_Sld_Sword);
 	
 	// ------ Inventory ------
+	B_CreateAmbientInv 	(self);
 	CreateInvItems (self, ITKE_Addon_Bloodwyn_01,1);
 	CreateInvItems (self, ItMi_Addon_Bloodwyn_Kopf,1);
 

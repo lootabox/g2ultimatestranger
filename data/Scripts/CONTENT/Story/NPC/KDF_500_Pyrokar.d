@@ -18,7 +18,7 @@ INSTANCE KDF_500_Pyrokar (Npc_Default)
 	
 	
 	// ------ Inventory ------
-
+	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_N_ImportantOld , BodyTex_N, ITAR_KDF_H);		

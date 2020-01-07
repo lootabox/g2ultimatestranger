@@ -23,7 +23,8 @@ instance SLD_814_Sentenza (Npc_Default)
 	EquipItem			(self, ItMw_1h_Sld_Sword);
 
 	// ------ Inventory ------
-	CreateInvItems (self, itfo_apple, 1); //KEIN Ambient-Inv
+	B_CreateAmbientInv 	(self);
+	//CreateInvItems (self, itfo_apple, 1); //KEIN Ambient-Inv
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Tough_Okyl, BodyTex_N, ITAR_SLD_H);		

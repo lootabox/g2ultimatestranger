@@ -22,7 +22,7 @@ instance Bau_4300_Addon_Cavalorn (Npc_Default)
 	CreateInvItems (self, ITAR_BAU_L, 1);	
 
 	// ------ Inventory ------
-	// Händler
+	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_B_Cavalorn, BodyTex_B, ITAR_RANGER_ADDON);	 

@@ -19,9 +19,9 @@ instance BDT_1086_Addon_Scatty (Npc_Default)
 	EquipItem (self, ItMw_Schwert5);
 	
 	// ------ Inventory ------
-	
-	CreateInvItems (self,ItMi_GoldNugget_Addon,5);
-	CreateInvItems (self,ItPo_Health_03,2);
+	// Händler!
+	//CreateInvItems (self,ItMi_GoldNugget_Addon,5);
+	//CreateInvItems (self,ItPo_Health_03,2);
 	
 	
 	// ------ visuals ------																			

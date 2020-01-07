@@ -23,7 +23,7 @@ instance BDT_1075_Addon_Fortuno (Npc_Default)
 	EquipItem (self, ItMw_1H_Sword_L_03);
 	
 	// ------ Inventory ------
-	
+	B_CreateAmbientInv 	(self);
 	CreateInvItems (self,ItMi_Joint,5);
 	CreateInvItems (self,ItPl_SwampHerb,3);
 	CreateInvItems (self,ItPl_Mushroom_01,5);

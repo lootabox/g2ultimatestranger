@@ -26,6 +26,7 @@ instance BDT_10400_Addon_DeadBandit (Npc_Default)
 	CreateInvItems (self, ItMi_Gold, 50);									
 	CreateInvItems (self, ItWr_DexStonePlate1_Addon, 1);									
 	CreateInvItems (self, ItWr_OneHStonePlate1_Addon, 1);									
+	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_L_Ian, BodyTex_L, ITAR_BDT_M);	

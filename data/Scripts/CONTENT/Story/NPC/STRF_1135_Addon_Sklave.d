@@ -19,7 +19,7 @@ instance STRF_1135_Addon_Sklave (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Inventory ------
-	
+	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
 	

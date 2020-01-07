@@ -34,6 +34,7 @@ instance VLK_439_Vatras (Npc_Default)
 	CreateInvItems 		(self, ItSc_Icebolt,2);
 	CreateInvItems 		(self, ItSc_Light,2);
 	CreateInvItems 		(self, ItSc_TrfScavenger,1);	
+	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_B_Saturas, BodyTex_B, ITAR_KDW_H );	

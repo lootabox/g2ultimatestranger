@@ -24,6 +24,7 @@ instance PAL_2002_Leiche  (Npc_Default)
 	// ------ Equippte Waffen ------																	
 	
 	// ------ Inventory ------
+	B_CreateAmbientInv 	(self);
 	CreateInvItems (self,ItWr_Silvestro_MIS,1);
 	CreateInvItems (self, ItPO_Mana_02,2);
 	CreateInvItems (self,ItmI_Gold,100);

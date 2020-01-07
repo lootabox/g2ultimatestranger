@@ -32,6 +32,7 @@ instance VLK_439_Vatras_DI (Npc_Default)
 
 	
 	// ------ Inventory ------
+	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_B_Saturas, BodyTex_B, ITAR_KDW_H );	

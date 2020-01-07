@@ -391,7 +391,7 @@ if 		InventorySet ==1
 	CreateInvItems (self, ItPl_Mana_Herb_01, 2);
 	CreateInvItems (self, ItMi_Sulfur, 1);
 	// CreateInvItems (self, ItPl_Dex_Herb_01, 1);
-	CreateInvItems (self, ItMi_gold, 23);
+	CreateInvItems (self, ItMi_gold, 43);
 	}
 	else if InventorySet ==4
 	{

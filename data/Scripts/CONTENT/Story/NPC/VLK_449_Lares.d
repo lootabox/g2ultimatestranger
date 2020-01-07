@@ -35,6 +35,7 @@ instance VLK_449_Lares (Npc_Default)
 	CreateInvItems (self, ItMi_Gold, 100);	
 	CreateInvItems (self, ItMi_OldCoin, 1);	//Joly: damit er gefunden wird, wenn er im Kampf stirbt
 	CreateInvItems (self, ItPo_Health_02, 5);	//Mattes: damit er frisch bei Taverne ankommt.								
+	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_N_Lares, BodyTex_N,ITAR_Vlk_L);	

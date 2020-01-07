@@ -23,6 +23,7 @@ instance Pal_205_Torwache (Npc_Default)
 	
 	
 	// ------ Inventory ------
+	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Weak05, BodyTex_N, ITAR_PAL_M);	

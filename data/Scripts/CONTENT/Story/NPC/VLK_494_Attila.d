@@ -26,6 +26,7 @@ instance VLK_494_Attila (Npc_Default)
 	EquipItem			(self, ItRw_Mil_Crossbow);
 	
 	// ------ Inventory ------
+	B_CreateAmbientInv 	(self);
 	CreateInvItem (self, ItKe_ThiefGuildKey_MIS);  // Schlüssel zur geheimen Diebesgilde
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird

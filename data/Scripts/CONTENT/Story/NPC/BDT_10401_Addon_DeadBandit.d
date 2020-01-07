@@ -28,6 +28,7 @@ instance BDT_10401_Addon_DeadBandit (Npc_Default)
 	CreateInvItems (self, ItMi_SilverRing, 1);									
 	CreateInvItems (self, ItPo_Health_02, 2);									
 	CreateInvItems (self, ItPo_Mana_01, 5);									
+	B_CreateAmbientInv 	(self);
 	// ------ Inventory ------
 	
 	// ------ visuals ------																			

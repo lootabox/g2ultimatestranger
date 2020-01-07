@@ -23,7 +23,7 @@ instance VLK_4302_Addon_Elvrich (Npc_Default)
 	//EquipItem	(self, ItMw_1h_VLK_Axe); 
 		
 	// ------ Inventory ------
-	// 
+	// Prisoner, no inventory
 
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_B_Normal01, BodyTex_B,ITAR_Bau_L);	

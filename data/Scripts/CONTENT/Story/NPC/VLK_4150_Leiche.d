@@ -24,7 +24,7 @@ instance VLK_4150_Leiche (Npc_Default)
 	
 	
 	// ------ Inventory ------
-	
+	B_CreateAmbientInv 	(self);
 	
 		
 	// ------ visuals ------																			

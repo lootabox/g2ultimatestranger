@@ -30,6 +30,7 @@ instance VLK_4112_Den (Npc_Default)
 	CreateInvItems (self, ItMi_GoldRing,   1);
 	CreateInvItems (self, ItMi_SilverCandleHolder, 1);
 	CreateInvItems (self, ItMi_GoldNecklace,   1);	
+	B_CreateAmbientInv 	(self);
 	// ------ visuals ------																			
 	
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_NormalBart_Grim, BodyTex_N, ITAR_MIL_L);	

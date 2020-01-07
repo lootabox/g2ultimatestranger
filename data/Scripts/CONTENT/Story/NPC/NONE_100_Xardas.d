@@ -26,7 +26,7 @@ INSTANCE NONE_100_Xardas (Npc_Default)
 	
 	
 	// ------ Inventory ------
-	//B_CreateAmbientInv 	(self);
+	B_CreateAmbientInv 	(self);
 	
 		
 	// ------ visuals ------																			

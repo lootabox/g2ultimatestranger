@@ -21,7 +21,8 @@ INSTANCE NONE_ADDON_115_Eremit (Npc_Default)
 	EquipItem (self, ItMw_1h_Bau_Mace);
 		
 	// ------ Inventory ------
-
+	B_CreateAmbientInv 	(self);
+	Npc_RemoveInvItems(self, ItMi_Gold, Npc_HasItems(self, ItMi_Gold)); //NICHT, Eremit soll nicht mehr Gold haben!
 		
 	// ------ visuals ------																			
 	

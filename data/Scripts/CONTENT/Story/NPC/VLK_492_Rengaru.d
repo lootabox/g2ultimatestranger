@@ -22,6 +22,7 @@ instance VLK_492_Rengaru (Npc_Default)
 	EquipItem (self, ItMw_1h_Sld_Sword);//ItMw_1h_Vlk_Sword
 	
 	// ------ Inventory ------
+	B_CreateAmbientInv 	(self);
 	CreateInvItems (self, ItMi_Gold, 50); //hat er Nagur geklaut! Muss genau 50 im Inv haben M.F. 
 		
 	// ------ visuals ------																			

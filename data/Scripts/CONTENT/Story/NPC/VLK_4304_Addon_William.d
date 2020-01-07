@@ -18,7 +18,7 @@ INSTANCE VLK_4304_Addon_William (Npc_Default)
 	// ------ Inventory ------
 	CreateInvItems (self,ITWr_Addon_William_01,1);//Joly: nicht austauschen oder umbenennen.
 	CreateInvItems (self,ITKe_Lockpick,2);
-	CreateInvItems (self,ITFo_Apple,1);
+	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_N_Homer, BodyTex_N, ITAR_BAU_L);	  

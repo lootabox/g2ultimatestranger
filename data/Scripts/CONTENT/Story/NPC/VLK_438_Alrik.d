@@ -29,7 +29,8 @@ instance VLK_438_Alrik (Npc_Default)
 	EquipItem(self, ItMw_1h_Bau_Mace);
 		
 	// ------ Inventory ------
-	//B_CreateAmbientInv 	(self); //NICHT, Alrik soll nicht mehr Gold haben!
+	B_CreateAmbientInv 	(self);
+	Npc_RemoveInvItems(self, ItMi_Gold, Npc_HasItems(self, ItMi_Gold)); //NICHT, Alrik soll nicht mehr Gold haben!
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Bloodwyn, BodyTex_N,ITAR_Vlk_L );	

@@ -20,7 +20,7 @@ instance PAL_217_Marcos  (Npc_Default)
 	EquipItem			(self, ItRw_Mil_Crossbow);
 	
 	// ------ Inventory ------
-	
+	B_CreateAmbientInv 	(self);
 	CreateInvItems (self, ItPo_Health_03,5);
 		
 	// ------ visuals ------																			

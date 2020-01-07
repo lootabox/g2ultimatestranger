@@ -25,7 +25,7 @@ instance VLK_418_Gritta (Npc_Default)
 		
 	// ------ Inventory ------
 	CreateInvItems (self,ItMi_Gold, 100);		//für die Matteo Mission
-	//KEIN AmbientInv!!!
+	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe8", FaceBabe_N_YoungBlonde, BodyTex_N, ITAR_VlkBabe_M);	

@@ -70,6 +70,7 @@ Young Wolves at the pass are now regular Wolves.
 
 	NPCs General
 
+Added ambient inventory for most NPCs alive or dead.
 Added logging for pickpocket failures and successes.
 Added pickpocketable items to NPCs inventories, except for traders.
 
@@ -96,8 +97,6 @@ Fixed NPCs speaking out NH's dialog lines for Pardos, Peck.
 Fixed NPCs talking to NH when he is transformed into an animal.
 Fixed XP award for pickpocketing Cavalorn, Dobar, Engor, Francis, Franco, Salandril, Valentino.
 Fixed XP award for recruiting Lares, Lester.
-Fixed ambient inventory generation for dead paladins in Valley of Mines.
-Fixed ambient inventory generation for pirates.
 Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
 Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patrick, Monty, Tonak, Telbor, Pardos.
 Fixed issue with dragon dialog restarting quest 'Dragon Eggs', if it was already completed.
@@ -119,7 +118,7 @@ Removed visual transforming to Seekers of possessed NPCs.
 All traders no longer equip their best weapons if they already have one of that type equipped.
 Cronos does not sell Pitch, Sulfur, Tongues of Fire, fire runebooks or any fire spell scrolls, he has some more ice/water spell scrolls for sale.
 Matteo only sells his leather armor until beginning of chapter 3, dialogue adjusted accordingly.
-Samuel gets a ring he was supposed to have in his trade inventory.
+Scatty does not generate extra gold nuggets and potions.
 Traders only sells blank rune stones for novices/mages.
 Zuris sells an Elixir of Strength in Chapter 3 and Elixir of Dexterity in Chapter 2 instead of 3.
 

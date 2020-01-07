@@ -27,6 +27,7 @@ instance Mil_328_Miliz (Npc_Default)
 	
 	// ------ Inventory ------
 	CreateInvItems (self, ItKe_Storage,1);
+	B_CreateAmbientInv 	(self);
 
 		
 	// ------ visuals ------																			
