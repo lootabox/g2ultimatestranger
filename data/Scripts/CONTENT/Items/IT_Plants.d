@@ -5,7 +5,7 @@
 // HP_:		Gibt an wieviel Lebenspunkte das Kraut beim Essen wiedergibt
 // ************************************************************************************************
 
-const int   Value_Weed				= 	20;		const int	Mana_Weed			=	10;
+const int   Value_Weed				= 	20;		const int	Mana_Weed			=	25;
 const int	Value_Beet				=	3;		const int	HP_Beet				=	2;
 const int	Value_SwampHerb			=	10;
  const int	Value_Mana_Herb_01		=	10;		//const int	Mana_Mana_Herb_01	=	10;
