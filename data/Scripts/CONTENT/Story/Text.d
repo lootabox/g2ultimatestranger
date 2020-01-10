@@ -943,7 +943,8 @@ const string PRINT_LearnCrossBow5			= "Crossbow + 5";
 // ************************************
 
 const string PRINT_SleepOver				= "You've slept well and feel rested!";
-const string PRINT_SleepOverObsessed		= "Nightmares prevent your resting!";
+const string PRINT_SleepOverObsessed		= "Nightmares prevent you from resting!";
+const string PRINT_SleepOverWounded			= "Your wounds prevent your rest!";
 const string PRINT_SmithSuccess				= "Weapon made!";
 const string PRINT_RuneSuccess				= "Rune created!";
 const string PRINT_AlchemySuccess			= "Potion brewed!";

@@ -16,6 +16,12 @@ func void PC_Sleep (var int t)
  		PrintScreen	(PRINT_SleepOverObsessed, -1,-1,FONT_Screen,3);
 		B_Say_Overlay(hero, hero, "$DONTKNOW");
 	}
+	else if (hero.attribute[ATR_HITPOINTS] < hero.attribute[ATR_HITPOINTS_MAX]/2)
+	{
+		AI_Wait(hero, 1);
+		PrintScreen (PRINT_SleepOverWounded, -1,-1,FONT_Screen,2);
+		return;
+	}
 	else
 	{
 		Wld_StopEffect("SLEEP_BLEND");
