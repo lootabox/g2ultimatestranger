@@ -3290,7 +3290,7 @@ INSTANCE MFX_LIGHT_ORIGIN (C_PARTICLEFX)
      vissizestart_s = "3 30";
      vissizeendscale = 5.000000000;
      visalphafunc_s = "ADD";
-     visalphaend = 255.000000000;
+     visalphaend = 100.000000000;
      useemittersfor = 1;
 };
 
@@ -3364,7 +3364,7 @@ INSTANCE MFX_PALLIGHT_ORIGIN (C_PARTICLEFX)
      vissizestart_s = "5 30";
      vissizeendscale = 5;
      visalphafunc_s = "ADD";
-     visalphastart = 255;
+     visalphastart = 100;
      useemittersfor = 1;
 };
 

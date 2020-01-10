@@ -1243,7 +1243,7 @@ INSTANCE spellFX_Light_ACTIVE	(CFx_Base_Proto)
      	emTrjOriginNode 	= "BIP01 Head";
 		emtrjloopmode_s 	= "HALT";
 		emtrjeasefunc_s 	= "LINEAR";
-		emtrjdynupdatedelay = 0.4;
+		emtrjdynupdatedelay = 0.05;
 		emTrjTargetRange	= 1.2;
 		emTrjTargetElev 	= 89;
 		lightPresetname 	= "JUSTWHITE";
@@ -1305,7 +1305,7 @@ INSTANCE spellFX_PalLight_ACTIVE	(CFx_Base_Proto)
      	emTrjOriginNode 	= "BIP01 Head";
 		emtrjloopmode_s 	= "HALT";
 		emtrjeasefunc_s 	= "LINEAR";
-		emtrjdynupdatedelay = 0.4;
+		emtrjdynupdatedelay = 0.05;
 		emTrjTargetRange	= 1.2;
 		emTrjTargetElev 	= 89;
 		lightPresetname 	= "AURA";
