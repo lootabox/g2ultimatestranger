@@ -14,6 +14,7 @@ const int	Value_FishSoup		=	20;		const int	HP_FishSoup			=	10;
 const int	Value_FishSoup_Edda	=	40;		const int	HP_FishSoup_Edda	=	20;
 const int	Value_Sausage		=	30;		const int	HP_Sausage			=	12;
 const int	Value_Honey			=	30;		const int	HP_Honey			=	12;
+const int	Value_XPStew		=	36;		const int	HP_XPStew			=	24;	const int	STR_XPStew		=	1;
 
 const int	Value_Water			=	10;		const int	HP_Water			=	8;
 const int	Value_Beer			=	20;		const int	HP_Beer				=	3;	const int	Mana_Beer		=	1;
@@ -282,7 +283,7 @@ INSTANCE ItFo_XPStew (C_Item)
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
 	
-	value 				=	Value_Stew;
+	value 				=	Value_XPStew;
 	
 //	visual 				=	"ItFo_Stew.3ds";
 	visual 				=	"ItFo_Stew_Theckla.3ds";
@@ -291,16 +292,15 @@ INSTANCE ItFo_XPStew (C_Item)
 	on_state[0]			=	Use_XPStew;
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_Bonus_HP;		COUNT[1]	= HP_Stew;
-	TEXT[2]				=  	NAME_Bonus_Str; 	COUNT[2]	= 1;
-	TEXT[5]				= 	NAME_Value;			COUNT[5]	= Value_Stew;
-
+	TEXT[1]				= 	NAME_Bonus_HP;		COUNT[1]	= HP_XPStew;
+	TEXT[2]				=  	NAME_Bonus_Str; 	COUNT[2]	= STR_XPStew;
+	TEXT[5]				= 	NAME_Value;			COUNT[5]	= Value_XPStew;
 };
 
 	FUNC VOID Use_XPStew()
 	{
-		B_RaiseAttribute (self, ATR_STRENGTH, 1);
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Stew);
+		B_RaiseAttribute (self, ATR_STRENGTH, STR_XPStew);
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_XPStew);
 		Snd_Play	("LevelUp");
 	};
 

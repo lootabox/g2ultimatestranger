@@ -18,7 +18,6 @@ const int Value_SchlafHammer = 60;
 const int Value_FireStew = 180;
 const int STR_FireStew	= 1;
 const int HP_FireStew	= 5;
-const int STR_MeatSoup	= 1;
 
 const int Value_Shellflesh	= 60;
 const int HP_Shellflesh		= 20;
@@ -276,7 +275,8 @@ INSTANCE ItFo_Addon_FireStew (C_Item)
 	on_state[0]			=	Use_FireStew;
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_Bonus_Str;		COUNT[1]	= STR_FireStew;
+	TEXT[1]				=	NAME_Bonus_HpMax;	COUNT[1]	= HP_FireStew;
+	TEXT[2]				= 	NAME_Bonus_Str;		COUNT[2]	= STR_FireStew;
 	TEXT[5]				= 	NAME_Value;			COUNT[5]	= Value_FireStew;
 
 };
@@ -288,7 +288,7 @@ INSTANCE ItFo_Addon_FireStew (C_Item)
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_FireStew);
 		
 		var string concatText;
-		concatText = ConcatStrings(PRINT_Learnhitpoints_MAX, IntToString(HP_Beer));
+		concatText = ConcatStrings(PRINT_Learnhitpoints_MAX, IntToString(HP_FireStew));
 		PrintScreen	(concatText, -1, 55, FONT_Screen, 2);
 		
 		Snd_Play	("LevelUp");
@@ -303,7 +303,7 @@ INSTANCE ItFo_Addon_Meatsoup (C_Item)
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
 	
-	value 				=	Value_FishSoup;
+	value 				=	Value_XPStew;
 	
 //	visual 				=	"ItFo_FishSoup.3ds";
 	visual 				=	"ItFo_Stew_Meat.3ds";
@@ -311,15 +311,19 @@ INSTANCE ItFo_Addon_Meatsoup (C_Item)
 	scemeName			=	"RICE";
 	on_state[0]			=	Use_MeatSoup;
 
-	description			= 	"Steaming meat stew";
-	TEXT[1]				= 	NAME_Bonus_STR;		COUNT[1]	= STR_MeatSoup;
-	TEXT[5]				= 	NAME_Value;			COUNT[5]	= Value_FishSoup;
+	description			= 	name;
+	TEXT[1]				= 	NAME_Bonus_HP;		COUNT[1]	= HP_XPStew;
+	TEXT[2]				=  	NAME_Bonus_Str; 	COUNT[2]	= STR_XPStew;
+	TEXT[5]				= 	NAME_Value;			COUNT[5]	= Value_XPStew;
 
 };
 
+
+
 	FUNC VOID Use_MeatSoup()
 	{
-		B_RaiseAttribute (self,	ATR_STRENGTH, STR_MeatSoup);
+		B_RaiseAttribute (self,	ATR_STRENGTH, STR_XPStew);
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_XPStew);
 		Snd_Play	("LevelUp");
 	};
 	
