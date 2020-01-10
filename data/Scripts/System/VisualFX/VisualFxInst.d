@@ -6412,3 +6412,26 @@ INSTANCE spellFX_Blink_FOV (CFx_Base_Proto)
     userString[3]           = ""; // Only distort along x-dimension
     emFXLifeSpan            = 1; // For safety (life is set by parent)
 };
+
+///                         XXXXXXXXXXXXXXXXXXXXXXXX                       ///
+///                         XX  M A G P A R A D E XX                       ///
+///                         XXXXXXXXXXXXXXXXXXXXXXXX                       ///
+
+INSTANCE spellFX_Block_Blast (CFx_Base_Proto)
+{
+    visName_S               = "MFX_MAGPARADE_BLAST";
+    emTrjOriginNode         = "ZS_SWORD";
+    emtrjmode_s             = "TARGET";
+};
+INSTANCE spellFX_Block_Suck (CFx_Base_Proto)
+{
+    visName_S               = "MFX_MAGPARADE_SUCK";
+    emTrjOriginNode         = "ZS_SWORD";
+    emtrjmode_s             = "TARGET";
+};
+INSTANCE spellFX_Block_Spread (CFx_Base_Proto)
+{
+    visName_S               = "MFX_MAGPARADE_SPREAD";
+    emTrjOriginNode         = "ZS_SWORD";
+    emtrjmode_s             = "TARGET";
+};

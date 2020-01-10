@@ -202,12 +202,15 @@ func int Move_Aim_Waypoint(var C_NPC slf)
 // Spells using this have to handle their "B_AssesMagic" logic here
 func void Spell_Cast_Focus(var int spellID, var int manaCost, var int spellDamage, var string spellFX)
 {
-	// Handle spell collision
-	var C_NPC selfTemp; selfTemp = Hlp_GetNpc (self);
-	var C_NPC otherTemp; otherTemp = Hlp_GetNpc (other);
-	self = Hlp_GetNpc(otherTemp); other = Hlp_GetNpc(selfTemp);
-	var int coll; coll = C_CanNpcCollideWithSpell(spellID);
-	self = Hlp_GetNpc(selfTemp); other = Hlp_GetNpc(otherTemp);
+	// Handle spell collision for npc
+	if (!Npc_IsPlayer(other))
+	{
+		var C_NPC selfTemp; selfTemp = Hlp_GetNpc (self);
+		var C_NPC otherTemp; otherTemp = Hlp_GetNpc (other);
+		self = Hlp_GetNpc(otherTemp); other = Hlp_GetNpc(selfTemp);
+		var int coll; coll = C_CanNpcCollideWithSpell(spellID);
+		self = Hlp_GetNpc(selfTemp); other = Hlp_GetNpc(otherTemp);
+	};
 
 	// Calculate damage and play vfx
 	if (coll & COLL_APPLYDOUBLEDAMAGE)	{ spellDamage *= 2; };

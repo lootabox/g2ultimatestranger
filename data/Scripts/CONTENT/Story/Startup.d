@@ -39,7 +39,6 @@ func void INIT_GLOBAL()
 	InitCustomDamageHook();
 	FixEquipBestWeapons_Init();
 	Install_Character_Menu_Hook();
-	//UltimateStrangerLoopInit();
 };
 
 

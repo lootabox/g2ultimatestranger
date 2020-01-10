@@ -13000,3 +13000,123 @@ INSTANCE MFX_BLINK_CAST (C_PARTICLEFX)
      visalphaend = 50.0;
      useemittersfor = 0;
 };
+
+///                         XXXXXXXXXXXXXXXXXXXXXXXX                       ///
+///                         XX  M A G P A R A D E XX                       ///
+///                         XXXXXXXXXXXXXXXXXXXXXXXX                       ///
+///                                mud-freak                               ///
+
+INSTANCE MFX_MAGPARADE_BLAST (C_PARTICLEFX)
+{
+     ppsvalue = 200.000000000;
+     ppsscalekeys_s = "1";
+     ppsissmooth = 1;
+     ppsislooping = 1;
+     ppsfps = 25.000000000;
+     shptype_s = "SPHERE";
+     shpfor_s = "object";
+     shpoffsetvec_s = "0 0 0";
+     shpdistribtype_s = "RAND";
+     shpdim_s = "3";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 25.000000000;
+     dirmode_s = "RAND";
+     dirfor_s = "object";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     dirangleheadvar = 180.000000000;
+     dirangleelevvar = 180.000000000;
+     velavg = 0.100000001;
+     lsppartavg = 140.000000000;
+     flygravity_s = "0 0 0";
+     flycolldet_b = 0;
+     visname_s = "DestroyUndead1.tga";
+     visorientation_s = "VELO";
+     vistexisquadpoly = 1;
+     vistexanifps = 18.000000000;
+     vistexaniislooping = 1;
+     vistexcolorstart_s = "255 255 255";
+     vistexcolorend_s = "50 100 255";
+     vissizestart_s = "40 40";
+     vissizeendscale = 1.000000000;
+     visalphafunc_s = "ADD";
+     visalphastart = 100.000000000;
+     visalphaend = 100.000000000;
+};
+
+INSTANCE MFX_MAGPARADE_SUCK (C_PARTICLEFX)
+{
+     ppsvalue = 550;
+     ppsscalekeys_s = "1";
+     ppsislooping = 1;
+     ppsfps = 1;
+     shptype_s = "MESH";
+     shpfor_s = "OBJECT";
+     shpoffsetvec_s = "0 0 0";
+     shpdistribtype_s = "RANDOM";
+     shpdim_s = "7";
+     shpmesh_s = "MAGSHIELD.3DS";
+     shpmeshrender_b = 0;
+     shpisvolume = 1;
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 1;
+     dirmode_s = "MESH_POLY";
+     dirfor_s = "object";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     velavg = 0.3;
+     lsppartavg = 100;
+     flygravity_s = "0 0 0";
+     visname_s = "Thunderstorm_Lightning.tga";
+     visorientation_s = "VELO";
+     vistexisquadpoly = 1;
+     vistexanifps = 15;
+     vistexaniislooping = 1;
+     vistexcolorstart_s = "143 128 255";
+     vistexcolorend_s = "143 128 255";
+     vissizestart_s = "20 20";
+     vissizeendscale = 0.75;
+     visalphafunc_s = "ADD";
+     visalphastart = 255;
+};
+
+INSTANCE MFX_MAGPARADE_SPREAD (C_PARTICLEFX)
+{
+     ppsvalue = 200.000000000;
+     ppsscalekeys_s = "";
+     ppsfps = 10.000000000;
+     shptype_s = "MESH";
+     shpmesh_s = "MAGSHIELD.3DS";
+     shpmeshrender_b = 0;
+     shpfor_s = "object";
+     shpoffsetvec_s = "0 0 0";
+     shpdistribtype_s = "RAND";
+     shpdim_s = "15";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 2.000000000;
+     dirmode_s = "MESH_POLY";
+     dirfor_s = "object";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     velavg = 0.100000001;
+     lsppartavg = 900.000000000;
+     flygravity_s = "0 0 0";
+     flycolldet_b = 0;
+     visname_s = "MFX_SLEEP_STAR.TGA";
+     visorientation_s = "NONE";
+     vistexisquadpoly = 1;
+     vistexanifps = 18.000000000;
+     vistexaniislooping = 1;
+     vistexcolorstart_s = "143 128 255";
+     vistexcolorend_s = "143 128 255";
+     vissizestart_s = "20 20";
+     vissizeendscale = 0.010000000;
+     visalphafunc_s = "ADD";
+     visalphastart = 255;
+};

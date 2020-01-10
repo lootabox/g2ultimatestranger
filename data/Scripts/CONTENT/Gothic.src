@@ -62,6 +62,7 @@ STORY\B_Content\B_SCUsesRake.d
 
 AI\MAGIC\B_MagicHurtNpc.d
 
+AI\HUMAN\C_Human\C_BodyStateContains.d
 AI\HUMAN\C_Human\C_NpcIsUndead.d
 AI\HUMAN\C_Human\C_NpcIsEvil.d
 AI\HUMAN\C_Human\C_NpcIsGolem.d
@@ -74,7 +75,6 @@ AI\HUMAN\C_Human\C_NpcIsDraconic.d
 UltimateStranger\items.d
 UltimateStranger\misc.d
 UltimateStranger\buff.d
-UltimateStranger\mainloop.d
 UltimateStranger\damage.d
 
 STORY\B_GiveTradeInv\B_ClearRuneInv.d
@@ -114,7 +114,6 @@ AI\AI_INTERN\B_RefreshAtInsert.d
 AI\HUMAN\GUILDS.d
 AI\HUMAN\B_RefreshArmor.d
 
-AI\HUMAN\C_Human\C_BodyStateContains.d
 AI\HUMAN\C_HUMAN\C_NpcIsBotheredByPlayerRoomGuild.d
 AI\HUMAN\C_HUMAN\C_IsUsedMobMyPossession.d
 AI\HUMAN\C_Human\C_IsTakenItemMyPossession.d

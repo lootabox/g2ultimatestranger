@@ -2687,3 +2687,6 @@ INSTANCE CONTROL_RETURN     	(C_SFX_DEF) {file= "Magic_6.wav" ;					};
                 INSTANCE MFX_QUAKE_STOMP                (C_SFX_DEF) {file= "M_STEP_HUGE01.WAV";             vol = 127;      pitchOff=-50;   };
                 INSTANCE MFX_QUAKE_EARTHQUAKE           (C_SFX_DEF) {file= "CS_PRAYER_MINECOLLIDE02.WAV";   vol = 110;          };
 
+// MagParade
+                INSTANCE MFX_MAGPARADE                  (C_SFX_DEF) {file= "WSP_ATTACK_02.WAV";             vol = 127;          };
+

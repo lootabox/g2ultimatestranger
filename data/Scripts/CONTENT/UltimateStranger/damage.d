@@ -72,6 +72,49 @@ Melee Crit	WDx2 + STR - AP				>= 5 (npc only)
 Range		WD   + DEX - AP
 */
 
+func int Check_Spell_Block(var c_npc vic, var int spellID)
+{
+	// Only player can block spells
+	if (Npc_IsPlayer(vic))
+	{
+		// Check for rune sword / rune power
+		var c_item wpn; wpn = Npc_GetReadiedWeapon(vic);
+		if (Npc_HasReadiedMeleeWeapon(vic))
+		{
+			if (Hlp_IsItem(wpn, ItMw_Runenschwert))
+			|| (Hlp_IsItem(wpn, ItMw_Zweihaender3))
+			{
+				if (C_BodyStateContains(vic, BS_PARADE))
+				{
+					// Some spells cant be blocked
+					if (spellID == SPL_BreathOfDeath)
+					|| (spellID == SPL_DestroyUndead)
+					|| (spellID == SPL_Earthquake)
+					|| (spellID == SPL_Explosion)
+					|| (spellID == SPL_Extricate)
+					|| (spellID == SPL_Firerain)
+					|| (spellID == SPL_Firestorm)
+					|| (spellID == SPL_Geyser)
+					|| (spellID == SPL_IceWave)
+					|| (spellID == SPL_LightningFlash)
+					|| (spellID == SPL_MassDeath)
+					|| (spellID == SPL_Pyrokinesis)
+					|| (spellID == SPL_Quake)
+					|| (spellID == SPL_Skull)
+					|| (spellID == SPL_Swarm)
+					|| (spellID == SPL_Thunderstorm)
+					|| (spellID == SPL_WindFist)
+					{
+						return FALSE;
+					};
+					return TRUE;
+				};
+			};
+		};
+	};
+	return FALSE;
+};
+
 func int Handle_Melee_Dmg(var c_npc vic, var c_npc att)
 {
 	// If melee weapon was used, it should be readied when dealing damage
@@ -326,6 +369,11 @@ func int DMG_OnDmg(var int victimPtr, var int attackerPtr, var int dmg, var int 
 		// Magic
 		else if (dmgDesc.spellID >= 0)
 		{
+			if (Check_Spell_Block(vic, dmgDesc.spellID))
+			{
+				Wld_PlayEffect("spellFX_Block_Suck",vic,vic,0,0,0,FALSE);
+				return 0;
+			};
 			dmg = Handle_Magic_Dmg(vic, att, dmgDesc.spellID, dmgDesc.dmgArray[DAM_INDEX_BARRIER] + dmgDesc.dmgArray[DAM_INDEX_FLY] + dmgDesc.dmgArray[DAM_INDEX_MAGIC]);
 		}
 		// Fist responsibly
