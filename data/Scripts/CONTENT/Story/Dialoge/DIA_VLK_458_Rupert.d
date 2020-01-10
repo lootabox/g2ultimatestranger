@@ -275,12 +275,7 @@ FUNC INT DIA_Rupert_Trade_Condition()
 	};	
 };
 FUNC VOID DIA_Rupert_Trade_Info()
-{	
-	if (Npc_HasItems (self, itfo_cheese) < 5)
-	{
-		CreateInvItems (self, ItFo_cheese, 5);
-	};
-	
+{
 	AI_Output (other,self ,"DIA_Rupert_Trade_15_00"); //Show me your wares.
 	if (hero.guild == GIL_KDF)
 	|| (hero.guild == GIL_PAL)

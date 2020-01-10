@@ -29,11 +29,6 @@ Status menu shows boosted and trained values for Strength and Dexterity.
 Only actual training received from NPCs influences how much more can be taught by NPCs. Random increases during dialogues are not counted. This means that any ability increases the NH comes across can be used right away without losing any end game potential.
 
 
-	Shrine of Innos
-
-Specific gold amounts cannot be donated. Instead for every level gained, up to 60, a donation can be made for an attribute bonus. The amount of gold required depends on donation prayers made and hero level. The bonus is not tied to guilds in any way and the different attributes receive bonuses inline with each other (pseudo random). The first 12 prayers always increase health. In addition the hero can pray without donating for full health or mana once per day.
-
-
 	Shrine of Beliar
 
 No stats can be sacrificed for gold.
@@ -118,6 +113,7 @@ Removed visual transforming to Seekers of possessed NPCs.
 All traders no longer equip their best weapons if they already have one of that type equipped.
 Cronos does not sell Pitch, Sulfur, Tongues of Fire, fire runebooks or any fire spell scrolls, he has some more ice/water spell scrolls for sale.
 Matteo only sells his leather armor until beginning of chapter 3, dialogue adjusted accordingly.
+Rupert does not endlessly generate cheese.
 Scatty does not generate extra gold nuggets and potions.
 Traders only sells blank rune stones for novices/mages.
 Zuris sells an Elixir of Strength in Chapter 3 and Elixir of Dexterity in Chapter 2 instead of 3.
