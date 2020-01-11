@@ -19,10 +19,7 @@ instance VLK_458_Rupert (Npc_Default)
 	EquipItem	(self, ItMw_1h_VLK_Dagger); 
 	
 	// ------ Inventory ------
-	// HÃ¤ndler
-	CreateInvItems (self, ItFo_Apple,12);
-	CreateInvItems (self, ItFo_Bread, 5);
-	CreateInvItems (self, ItFo_Milk,  5);
+	// Händler
 	
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal20, BodyTex_N,ITAR_Vlk_L);	

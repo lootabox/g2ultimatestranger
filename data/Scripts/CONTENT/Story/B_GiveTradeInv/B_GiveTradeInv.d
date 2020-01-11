@@ -63,6 +63,7 @@ func void B_GiveTradeInv (var C_NPC slf)
 	var C_NPC Trd_Salandril;	Trd_Salandril	= Hlp_GetNpc (VLK_422_Salandril);
 	var C_NPC Trd_Gaertner;		Trd_Gaertner	= Hlp_GetNpc (VLK_411_Gaertner);
 	var C_NPC Trd_Lutero;		Trd_Lutero		= Hlp_GetNpc (VLK_404_Lutero);
+	var C_NPC Trd_Rupert;		Trd_Rupert		= Hlp_GetNpc (VLK_458_Rupert);
 	
 //********************************************************************
 //		Hier auch!!!
@@ -126,6 +127,7 @@ func void B_GiveTradeInv (var C_NPC slf)
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Salandril)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Salandril	(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Gaertner)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Gaertner	(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Lutero)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Lutero	(slf);};
+		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Rupert)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Rupert	(slf);};
 		
 		
 		slf.aivar[AIV_ChapterInv] = (Kapitel +1);
@@ -191,6 +193,7 @@ func void B_GiveTradeInv (var C_NPC slf)
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Salandril)	{B_ClearDeadTrader	(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Gaertner)		{B_ClearDeadTrader	(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Lutero)		{B_ClearDeadTrader	(slf);};
+		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Rupert)		{B_ClearDeadTrader	(slf);};
 	};
 
 };
