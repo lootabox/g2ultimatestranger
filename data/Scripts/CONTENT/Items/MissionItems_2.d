@@ -457,6 +457,7 @@ INSTANCE ItWr_Pfandbrief_MIS		(C_Item)
 	scemeName			=	"MAP";
 	description			= 	name;
 };
+var int UsePfandbrief_Once;
 func void UsePfandbrief ()
 {   
 		var int nDocID;
@@ -479,7 +480,12 @@ func void UsePfandbrief ()
 					Doc_PrintLine	( nDocID,  0, " "					);
 					Doc_PrintLine	( nDocID,  0, "Lehmar, pawnbroker"					);
 					Doc_Show		( nDocID );
+
 		
+		if (MIS_CassiaKelche == LOG_RUNNING) && (UsePfandbrief_Once == FALSE) {
+			B_LogEntry(Topic_CassiaKelche, "Lutero pawned one Blood Chalice to Lehmar.");
+			UsePfandbrief_Once = TRUE;
+		};
 };
 
 instance ItWr_Map_OldWorld_Oremines_MIS (C_Item)

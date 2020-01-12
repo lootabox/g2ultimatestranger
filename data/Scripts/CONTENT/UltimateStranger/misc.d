@@ -18,10 +18,34 @@ func void HookLootItems_Init() {
 
 func void _HookRemoveItem()
 {
+    // Check for looting NPCs
+    var oCNpc her; her = Hlp_GetNpc(hero);
+    if(Hlp_Is_oCNpc(her.focus_vob)) {
+        const int oCNpcInventory_inventory2_owner_offset_G2 = 160; // 0x0704 - 0x0668
+        var C_NPC npc; npc = _^(MEM_ReadInt(ECX + oCNpcInventory_inventory2_owner_offset_G2));
+        Print(ConcatStrings("Took item from ", npc.name));
+
+        // check for steal
+    } else {
+        Print("Took item from container");
+    };
+
+    // Check for looted item(s)
+    var C_ITEM itm; itm = _^(MEM_ReadInt (ESP + 4));
+    Print(ConcatStrings("Item: ", itm.name));
+
+    B_PlayerLootedItem(itm);
+
+    // Close inventory (crashes)
+    //CALL__thiscall(_@(npc), oCNpc__CloseInventory);
 };
 
 func void _HookDoTakeVob()
 {
+    // Check for looted item(s)
+    var C_ITEM itm; itm = _^(MEM_ReadInt (ESP + 4));
+    Print(ConcatStrings("Picked up ", itm.name));
+    B_PlayerLootedItem(itm);
 };
 
 

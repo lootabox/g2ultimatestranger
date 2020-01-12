@@ -54,6 +54,7 @@ Many items have their description now on one line instead of multiple lines.
 
 	Quests
 
+Cavalorn's old hut quest only begins once NH finds the bag of ore, since before that the NH does not really have a task that he knows about.
 Finding Joe no longer has its own quest, since for all NH knows, he is just another missing person.
 Quest for Lucia is now just about delivering her note to Elvrich, after that she is just another missing person.
 
@@ -167,6 +168,7 @@ Biff can be asked to rejoin the crew in the Valley of Mines after refusing him.
 Biff can only be hired after asking what is he doing in the Valley of Mines.
 Biff does not grant NH experience before he is hired.
 Biff will not run down from the mountain when encountering Feomathar and stays within hearing distance.
+Bloodwyn's head is visually removed when his head is "looted".
 Boltan takes into account presence of Bennet, Borka, Cornelius and Fernardo when he says that all the cells are empty.
 Bosper makes a short comment for giving him skins for which he has no specific voice line for.
 Bosper will give the fake mining shares for free as he says.
@@ -365,6 +367,7 @@ Talbins dialog creates a journal note of him being a teacher only after he agree
 Thekla now grants previously omitted XP bonus for defeating Bullco.
 Thorben does not immediately take Lehmar's book of debts, instead another dialog option is created just for giving the book.
 Thorus can be pickpocketed for his key.
+Thorus will move to intercept player even if the player does not talk to Garaz after killing Bloodwyn.
 Torlof won't be asked about location of Bengar or Sekobs farm if NH already met them.
 Ulf does not randomly die in the beginning of chapter 3.
 Ulf smokes a joint as well instead of watching as NH smokes one.
@@ -482,12 +485,34 @@ Following items can no longer be bought or looted from certain NPCs:
 
 Following actions now create a log entry:
 * Using Oblivion spell while Ignaz' quest is running.
-* Bennet asking to find magic ore nuggets.
-* Grimbald agreeing to teach taking animal trophies.
-* Kati handing out Baltram's shipment.
-* Kervo asking to take care of lurkers outside his cave.
-* Randolph handing out Baltram's shipment.
-* Talbin asking for a cheese.
+* Dialog with Bennet, asking to find magic ore nuggets.
+* Dialog with Grimbald, agreeing to teach taking animal trophies.
+* Dialog with Kati, handing out Baltram's shipment.
+* Dialog with Kervo, asking to take care of lurkers outside his cave.
+* Dialog with Lord Hagen, when receiving the ornament piece.
+* Dialog with Randolph, handing out Baltram's shipment.
+* Dialog with Talbin, asking for a cheese.
+* Digging up Greg's treasures in Khorinis.
+* Finding Babo's documents.
+* Finding Blood Chaclices for Cassia's quest.
+* Finding Bosper's stolen bow.
+* Finding Bromor's golden bowl.
+* Finding Cavalorn's ore bag, opening it is not needed.
+* Finding Cipher's weed package.
+* Finding Constantino's ring for Cassia's quest.
+* Finding Daron's lost statuette.
+* Finding Diego's bag of gold.
+* Finding Garett's Golden Compass.
+* Finding Huno's steel delivery.
+* Finding a sextant for Ramirez.
+* Finding an orc weapon for Harad.
+* Finding ring and rapier for bandit trader quest.
+* Finding stone tablet for Franco.
+* Finding the Claw of Beliar.
+* Finding the Sun Aloe.
+* Finding the blank runestone for the Path of Believers quest.
+* Finding the recipe for Neoras.
+* Reading Lutero's note about pawning his Blood Chalice.
 
 Following events do not create overlapping messages:
 * Kati handing out bread, water and meat.

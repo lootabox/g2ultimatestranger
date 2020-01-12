@@ -540,8 +540,9 @@ func void DIA_Addon_Lord_Hagen_Ornament_Info ()
 	AI_Output	(self, other, "DIA_Addon_Lord_Hagen_GiveOrnament_04_01"); //If you mean this thing here... we suspected that it might be a magical rune, but it turned out to be completely worthless.
 	AI_Output	(self, other, "DIA_Addon_Lord_Hagen_GiveOrnament_04_02"); //You can have it if you like. I have no use for it.
 	
-	CreateInvItems (self, ItMi_Ornament_Addon, 1);									
-	B_GiveInvItems (self, other, ItMi_Ornament_Addon, 1);	
+	CreateInvItems (self, ItMi_Ornament_Addon, 1);
+	B_GiveInvItems (self, other, ItMi_Ornament_Addon, 1);
+	B_LogEntry(TOPIC_Addon_Ornament, "Lord Hagen handed me the ornament that the paladins took from the stone circle near Lobart's farm.");
 	Lord_Hagen_GotOrnament = TRUE;
 	B_GivePlayerXP (XP_Ambient);	
 };

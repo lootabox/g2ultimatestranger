@@ -195,9 +195,9 @@ func void DIA_Addon_Cavalorn_HALLO_Bauern ()
 	AI_Output			(self, other, "DIA_Addon_Cavalorn_HALLO_Bauern_08_02"); //When you're in the Valley of Mines, could you please look around and see if my old hut is still standing? I'd like to return there one day.
 	
 	MIS_Addon_Cavalorn_TheHut = LOG_RUNNING;	
-	Log_CreateTopic (TOPIC_Addon_CavalornTheHut, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_Addon_CavalornTheHut, LOG_RUNNING);
-	B_LogEntry (TOPIC_Addon_CavalornTheHut,"Cavalorn wants me to look and see if his old hut in the Valley of Mines is still standing. As far as I can remember, his hut is located in the hilly country west of the former Old Camp. I suspect he left something there.");
+	//Log_CreateTopic (TOPIC_Addon_CavalornTheHut, LOG_MISSION);
+	//Log_SetTopicStatus(TOPIC_Addon_CavalornTheHut, LOG_RUNNING);
+	//B_LogEntry (TOPIC_Addon_CavalornTheHut,"Cavalorn wants me to look and see if his old hut in the Valley of Mines is still standing. As far as I can remember, his hut is located in the hilly country west of the former Old Camp. I suspect he left something there.");
 	
 	Info_ClearChoices	(DIA_Addon_Cavalorn_HALLO);
 };

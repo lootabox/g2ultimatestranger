@@ -35,19 +35,23 @@ FUNC VOID B_SCGetTreasure_S1()
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,				"NW_LAKE_GREG_TREASURE_01"	)< RAKE_BUDDEL_DIST_MIN) 		&&  (RAKEPLACE[2]==FALSE)){
 				Wld_InsertItem 		(ItSe_GoldPocket100, 	"NW_LAKE_GREG_TREASURE_01"	); 							 		 RAKEPLACE[2]=TRUE;
-				RakeTreasureSuccess (ItSe_GoldPocket100);}
+				RakeTreasureSuccess (ItSe_GoldPocket100);
+				B_LogEntry (TOPIC_Addon_Greg_NW,"I digged up a bag of gold from an island in the lake near the waterfalls.");}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,				"NW_FARM3_GREGTREASURE_01"	)< RAKE_BUDDEL_DIST_MIN) 		&&  (RAKEPLACE[3]==FALSE)){
 				Wld_InsertItem 		(ItMi_GoldCup, 			"NW_FARM3_GREGTREASURE_01"	); 									 RAKEPLACE[3]=TRUE;
-				RakeTreasureSuccess (ItMi_GoldCup);}
+				RakeTreasureSuccess (ItMi_GoldCup);
+				B_LogEntry (TOPIC_Addon_Greg_NW,"I found a buried golden chalice behind a farm house on the high pastures.");}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,				"NW_FARM3_MOUNTAINLAKE_MONSTER_01"	)< RAKE_BUDDEL_DIST_MIN) && (RAKEPLACE[4]==FALSE)){	
 				Wld_InsertItem 		(ItMi_SilverChalice, 	"NW_FARM3_MOUNTAINLAKE_MONSTER_01"	); 							 RAKEPLACE[4]=TRUE;
-				RakeTreasureSuccess (ItMi_SilverChalice);}
+				RakeTreasureSuccess (ItMi_SilverChalice);
+				B_LogEntry (TOPIC_Addon_Greg_NW,"I uncovered a silver dish next to a waterfall near the pass.");}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,				"NW_BIGMILL_FARM3_01"	)< RAKE_BUDDEL_DIST_MIN) 			&& 	(RAKEPLACE[5]==FALSE)){
 				Wld_InsertItem 		(ItAm_Prot_Point_01, 			"NW_BIGMILL_FARM3_01"	); 						 		 RAKEPLACE[5]=TRUE;
-				RakeTreasureSuccess (ItAm_Prot_Point_01);}
+				RakeTreasureSuccess (ItAm_Prot_Point_01);
+				B_LogEntry (TOPIC_Addon_Greg_NW,"I found an amulet buried in a hollow near a bandit camp.");}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	

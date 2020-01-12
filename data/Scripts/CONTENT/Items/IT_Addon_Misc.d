@@ -176,9 +176,9 @@ FUNC VOID Use_CavalornsBeutel ()
 		CreateInvItems (hero, ItMi_Nugget ,1);
 		Print (PRINT_FoundOreNugget);
 		SC_OpenedCavalornsBeutel = TRUE;
-		Log_CreateTopic (TOPIC_Addon_CavalornTheHut, LOG_MISSION);
-		Log_SetTopicStatus(TOPIC_Addon_CavalornTheHut, LOG_RUNNING);
-		B_LogEntry (TOPIC_Addon_CavalornTheHut,"I found a bag with one lump of ore near Cavalorn's hut in the Valley of mines. That old rogue Cavalorn must have forgotten it here.");
+		//Log_CreateTopic (TOPIC_Addon_CavalornTheHut, LOG_MISSION);
+		//Log_SetTopicStatus(TOPIC_Addon_CavalornTheHut, LOG_RUNNING);
+		//B_LogEntry (TOPIC_Addon_CavalornTheHut,"I found a bag with one lump of ore near Cavalorn's hut in the Valley of mines. That old rogue Cavalorn must have forgotten it here.");
 };
 
 //**************************************

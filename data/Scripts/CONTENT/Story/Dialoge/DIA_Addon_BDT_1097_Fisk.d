@@ -180,7 +180,7 @@ FUNC VOID DIA_Addon_Fisk_Lieferung_Info()
 	Log_CreateTopic (Topic_Addon_Fisk,LOG_MISSION);
 	Log_SetTopicStatus (Topic_Addon_Fisk,LOG_RUNNING);
 	B_LogEntry	(TOPIC_Addon_KillJuan,"A guy named Juan was in on the deal with the bandits. They say he's hiding somewhere in the swamp.");
-	B_LogEntry (Topic_Addon_Fisk,"A fellow named Juan stole the delivery (a package of lock picks) from Fisk. He is hiding somewhere in the swamp.");
+	B_LogEntry (Topic_Addon_Fisk,"A fellow named Juan stole the delivery, a package of lock picks, from Fisk. He is hiding somewhere in the swamp.");
 };
 	
 //---------------------------------------------------------------------
