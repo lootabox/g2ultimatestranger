@@ -826,9 +826,9 @@ const string NAME_ItMw_1H_Common_01	 = "Sword"; //(40/30)
 const string NAME_ItMw_1H_Special_01 = "Ore Longsword";
 const string NAME_ItMw_2H_Special_01 = "Ore Two-Hander";
 const string NAME_ItMw_1H_Special_02 = "Ore Broadsword";
-const string NAME_ItMw_2H_Special_02 = "Heavy Ore Two-Hander";
+const string NAME_ItMw_2H_Special_02 = "Large Ore Two-Hander";
 const string NAME_ItMw_1H_Special_03 = "Ore Battle Blade";
-const string NAME_ItMw_2H_Special_03 = "Heavy Ore Battle Blade";
+const string NAME_ItMw_2H_Special_03 = "Large Ore Battle Blade";
 const string NAME_ItMw_1H_Special_04 = "Ore Dragon Slayer";
 const string NAME_ItMw_2H_Special_04 = "Large Ore Dragon Slayer";
 

@@ -346,7 +346,7 @@ const int Range_Stab01				= 120;
 const int Value_Stab01				= 900;
 //tatsächlicher Zauber Stab	- NEUE INSTANZ //ADDON
 const int Damage_Stab02				= 0; 
-const int Condition_Stab02			= 40;	// SPL_Cost_SummonWolf * 2
+const int Condition_Stab02			= 40;
 const int Range_Stab02				= 110;
 const int Value_Stab02				= 850;
 //Wassermagier	- NEUE INSTANZ //ADDON
@@ -372,7 +372,7 @@ const int Value_Stabkeule			= 700;
 //leichter Zweihänder	- NEUE INSTANZ
 const int Damage_Zweihaender1		= 32; 
 const int Condition_Zweihaender1	= 30;
-const int Range_Zweihaender1		= 110;
+const int Range_Zweihaender1		= 100; //110
 const int Value_Zweihaender1		= 750;
 //Steinbrecher - NEUE INSTANZ
 const int Damage_Steinbrecher 		= 35; 
@@ -580,7 +580,7 @@ const int Value_Orkschlaechter		= 1300;
 //Schwerer Zweihänder
 const int Damage_Zweihaender4 		= 68; 
 const int Condition_Zweihaender4	= 68; 
-const int Range_Zweihaender4		= 120;
+const int Range_Zweihaender4		= 100; //120
 const int Value_Zweihaender4		= 1350;
 //Schlachtaxt (2h) - NEUE INSTANZ
 const int Damage_Schlachtaxt 		= 70; 

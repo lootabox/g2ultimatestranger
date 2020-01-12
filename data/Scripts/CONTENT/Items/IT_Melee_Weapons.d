@@ -1685,7 +1685,7 @@ INSTANCE ItMw_2H_Special_01 (C_Item)
 	
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	Condition_Special_2H_1;
-	visual 				=	"ItMw_050_2h_Sword_smith_02.3DS";
+	visual 				=	"ItMw_055_2h_sword_light_05.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
@@ -1802,7 +1802,7 @@ INSTANCE ItMw_Zweihaender2 (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	Condition_Zweihaender2;
-	visual 				=	"ItMw_055_2h_sword_light_05.3DS";
+	visual 				=	"ItMw_050_2h_Sword_smith_02.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
@@ -2021,7 +2021,7 @@ INSTANCE ItMw_2H_Special_02 (C_Item)
 	
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	Condition_Special_2H_2;
-	visual 				=	"ItMw_070_2h_Sword_smith_03.3DS";
+	visual 				=	"ItMw_068_2h_sword_02.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
@@ -2173,7 +2173,7 @@ INSTANCE ItMw_Orkschlaechter (C_Item)
 /********************************************************************************/
 INSTANCE ItMw_Zweihaender4 (C_Item)
 {	
-	name 				=	"Heavy Two-Hander";  
+	name 				=	"Fine Two-Hander";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -2187,7 +2187,7 @@ INSTANCE ItMw_Zweihaender4 (C_Item)
 
 	cond_atr[2]   		=	ATR_STRENGTH;
 	cond_value[2]  		=	Condition_Zweihaender4;
-	visual 				=	"ItMw_068_2h_sword_02.3DS";
+	visual 				=	"ItMw_070_2h_Sword_smith_03.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;

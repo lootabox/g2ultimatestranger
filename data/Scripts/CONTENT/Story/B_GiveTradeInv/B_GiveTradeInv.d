@@ -29,7 +29,6 @@ func void B_GiveTradeInv (var C_NPC slf)
 	var C_NPC Trd_Matteo;		Trd_Matteo		= Hlp_GetNpc (VLK_416_Matteo);
 	var C_NPC Trd_Halvor;		Trd_Halvor		= Hlp_GetNpc (VLK_469_Halvor);
 	var C_NPC Trd_Bosper;		Trd_Bosper		= Hlp_GetNpc (VLK_413_Bosper);
-	var C_NPC Trd_Harad;		Trd_Harad		= Hlp_GetNpc (VLK_412_Harad);
 	var C_NPC Trd_Brian;		Trd_Brian		= Hlp_GetNpc (VLK_457_Brian);
 	var C_NPC Trd_Brahim;		Trd_Brahim		= Hlp_GetNpc (VLK_437_Brahim);
 	var C_NPC Trd_Constantino;	Trd_Constantino	= Hlp_GetNpc (VLK_417_Constantino);
@@ -93,7 +92,6 @@ func void B_GiveTradeInv (var C_NPC slf)
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Matteo)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Matteo 		(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Halvor)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Halvor		(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Bosper)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Bosper		(slf);};
-		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Harad)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Harad		(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Brian)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Brian		(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Brahim)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Brahim		(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Constantino)	{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Constantino	(slf);};
@@ -159,7 +157,6 @@ func void B_GiveTradeInv (var C_NPC slf)
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Matteo)		{B_ClearDeadTrader 	(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Halvor)		{B_ClearDeadTrader	(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Bosper)		{B_ClearDeadTrader	(slf);};
-		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Harad)		{B_ClearDeadTrader	(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Brian)		{B_ClearDeadTrader	(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Brahim)		{B_ClearDeadTrader	(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Constantino)	{B_ClearDeadTrader	(slf);};
