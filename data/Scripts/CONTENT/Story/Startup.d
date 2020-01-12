@@ -37,6 +37,7 @@ func void INIT_GLOBAL()
 	// Ultimate Stranger
 	InitBuffTalents();
 	InitCustomDamageHook();
+	HookLootItems_Init();
 	FixEquipBestWeapons_Init();
 	Install_Character_Menu_Hook();
 };
@@ -3336,7 +3337,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	// ------------------------------
 	
 	//ITEMS Türme
-	Wld_InsertItem (ItMw_Zweihaender1,"FP_CITY_WEAPON_01");//
+	Wld_InsertItem (ItMw_Hellebarde,"FP_CITY_WEAPON_01");//
 	Wld_InsertItem (ItMw_Schwert,"FP_CITY_WEAPON_02");//
 	Wld_InsertItem (ItMw_Zweihaender2,"FP_CITY_WEAPON_03");//
 	Wld_InsertItem (ItMw_Schwert4,"FP_CITY_WEAPON_04");//

@@ -1,5 +1,31 @@
 
 //************************************************
+//  Hook for looting items
+// https://forum.worldofplayers.de/forum/threads/1537258-Gothic1-Taschendiebstahl-Genauere-Analyse-und-Verbesserungspotential?p=26129042
+//************************************************
+
+func void HookLootItems_Init() {
+    const int hooked = 0;
+    if (!hooked) {
+        const int oCItemContainer__RemoveItem_G2 = 7378144; // 0x7094E0
+        const int oCNpc__DoTakeVob_G2 = 7621056; // 0x7449C0
+        HookEngineF(oCItemContainer__RemoveItem_G2, 6, _HookRemoveItem);
+        HookEngineF(oCNpc__DoTakeVob_G2, 6, _HookDoTakeVob);
+
+        hooked = 1;
+    };
+};
+
+func void _HookRemoveItem()
+{
+};
+
+func void _HookDoTakeVob()
+{
+};
+
+
+//************************************************
 //   Prevent NPCs (mainly traders) from equipping "best" weapon if they already have a weapon equipped
 // https://forum.worldofplayers.de/forum/threads/?p=25954713
 //************************************************
