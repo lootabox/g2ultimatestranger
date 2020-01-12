@@ -21,7 +21,7 @@ FUNC VOID B_GiveTradeInv_Hakon (var C_NPC slf)
 	if((Kapitel >= 2) && (Hakon_ItemsGiven_Chapter_2 == FALSE))
 	{
 		CreateInvItems(slf,ItMi_Gold,100);
-		CreateInvItems(slf,ItMw_Zweihaender1,1);
+		//CreateInvItems(slf,ItMw_Zweihaender1,1);
 		CreateInvItems(slf,ItMw_Steinbrecher,1);
 		CreateInvItems(slf,ItMw_Doppelaxt,1);
 		CreateInvItems(slf,ItMiSwordraw,5);

@@ -75,20 +75,20 @@ func void Use_Canthars_KomproBrief ()
 //****************************************************************************
 INSTANCE ItMw_2h_Rod (C_Item)
 {	
-	name 				=	"Rod's Two-Hander";  
+	name 				=	"Rod's Battle Blade";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;
 	material 			=	MAT_METAL;
 
-	value 				=	Value_Sld2hSchwert;
+	value 				=	Value_Zweihaender1;
 
-	damageTotal  		= 	Damage_Rod;
+	damageTotal  		= 	Damage_Zweihaender1;
 	damagetype 			=	DAM_EDGE;
-	range    			=  	RANGE_Sld2hSchwert;		
+	range    			=  	Range_Zweihaender1;		
 
 	cond_atr[2]   		=	ATR_STRENGTH;
-	cond_value[2]  		=	Condition_Rod;
+	cond_value[2]  		=	Condition_Zweihaender1;
 	visual 				=	"ItMw_035_2h_sld_sword_01.3DS";
 
 	description			= name;

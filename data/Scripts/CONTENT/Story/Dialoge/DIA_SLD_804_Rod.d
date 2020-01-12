@@ -482,8 +482,6 @@ func void DIA_Rod_Wette_KeepIt()
 // ************************************************************
 // 			  				Schwert zurück
 // ************************************************************
-var int Rod_SchwertXPGiven;
-
 instance DIA_Rod_GiveItBack (C_INFO)
 {
 	npc			= Sld_804_Rod;
@@ -508,12 +506,6 @@ FUNC VOID DIA_Rod_GiveItBack_Info()
 	
 	AI_Output (other, self, "DIA_Rod_GiveItBack_15_00"); //Here's your sword back!
 	AI_Output (self, other, "DIA_Rod_GiveItBack_06_01"); //High time, too!
-	
-	if (Rod_SchwertXPGiven == FALSE)
-	{
-		B_GivePlayerXP (XP_Ambient);
-		Rod_SchwertXPGiven = TRUE;
-	};
 };
 
 // ************************************************************

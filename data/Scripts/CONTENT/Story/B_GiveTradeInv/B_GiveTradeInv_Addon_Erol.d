@@ -35,7 +35,7 @@ FUNC VOID B_GiveTradeInv_Addon_Erol (var C_NPC slf)
 		CreateInvItems (slf,ItPl_Health_Herb_02, 3); 
 		CreateInvItems (slf,ItPl_Temp_Herb, 2); 
 
-		CreateInvItems (slf, ItMw_Zweihaender1, 1);
+		//CreateInvItems (slf, ItMw_Zweihaender1, 1);
 		
 		Erol_ItemsGiven_Chapter_2 = TRUE;
 	};

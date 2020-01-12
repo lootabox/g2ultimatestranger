@@ -26,7 +26,7 @@ FUNC VOID B_GiveTradeInv_Orlan (var C_NPC slf)
 	if((Kapitel >= 2) && (Orlan_ItemsGiven_Chapter_2 == FALSE))
 	{
 		CreateInvItems(slf,ItMi_Gold,50);
-		CreateInvItems(slf,ItMw_Zweihaender1,1);
+		//CreateInvItems(slf,ItMw_Zweihaender1,1);
 		CreateInvItems(slf,ItMw_Bartaxt,1);
 		CreateInvItems(slf,ItRw_Arrow,40);
 		CreateInvItems(slf,ItRw_Bolt,45);
@@ -46,7 +46,7 @@ FUNC VOID B_GiveTradeInv_Orlan (var C_NPC slf)
 	if((Kapitel >= 4) && (Orlan_ItemsGiven_Chapter_4 == FALSE))
 	{
 		CreateInvItems(slf,ItMi_Gold,200);
-		CreateInvItems(slf,ItMw_Zweihaender1,1);
+		//CreateInvItems(slf,ItMw_Zweihaender1,1);
 		CreateInvItems(slf,ItMw_Bartaxt,1);
 		Orlan_ItemsGiven_Chapter_4 = TRUE;
 	};

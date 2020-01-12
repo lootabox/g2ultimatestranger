@@ -314,8 +314,8 @@ Orlan can be given the wine only after asking who he is.
 Parcival can be asked about Diego only after asking about scrapers in general.
 Pardos can be given a potion of pure life energy for a greater reward.
 Pardos can be offered a potion or stew more than once.
-Parlan initiates dialog with non-monastery members for their first interaction.
 Parlan eventually gives the key to mercenary/dragon hunter NH in his dialog, instead of spawning it in front of the library door.
+Parlan initiates dialog with non-monastery members for their first interaction.
 Parlan's dialog has 3 more previously unused dialogue lines for when NH keeps distracting novices.
 Peck and Vanja are now properly caught with pants down.
 Pedro cannot be asked about life in the monastery if NH is magician.
@@ -331,16 +331,17 @@ Rengaru runs much further when confronted and if not caught will return to his r
 Rengaru will move to another location when threatened with prisonment.
 Rethon will only work with Jan after givent he permission from Garond.
 Riordian mentions William in the initial dialogue instead of the dialogue about the west.
+Rod will give no experience for returning his sword later.
 Rosi can only be asked about Bengar's farm if NH has not yet spoken with Bengar.
 Rosi will not create extra gold in her inventory when giving the reward to NH for escorting her.
 Rukhar drinks only beer during his drinking contest.
 Rupert can only be asked where Matteo can be found if NH did not find him yet.
-Samuel will actually drink Hasty Herrings with NH when he says so, but only once.
 Salandril can be commented about fake mining shares before knowing he is behind it.
 Salandril can only be accused of distributing the fake mining shares after reading one and seeing his signature.
 Salandril does not care about NH wearing weapons or magic while in the monastery.
 Salandril will eventually return to the city, but does not trade with NH.
 Salandril will give you his fake mining shares before when leaving to the monastery to be judged.
+Samuel will actually drink Hasty Herrings with NH when he says so, but only once.
 Sarah can only be asked about Akils farm if NH does yet know how to find it.
 Sarah gives a Rough Longsword instead of Pirate's Cutlass as the gift for not framing her.
 Saturas properly completes "The power of the guardians of the dead" when he tells NH about the chambers of Adanos.

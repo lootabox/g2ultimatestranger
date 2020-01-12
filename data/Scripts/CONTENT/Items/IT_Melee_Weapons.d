@@ -706,7 +706,7 @@ INSTANCE ItMw_2h_Sld_Sword (C_Item)
 
 	cond_atr[2]   		=	ATR_STRENGTH;
 	cond_value[2]  		=	Condition_Sld2hSchwert;
-	visual 				=	"ItMw_035_2h_sld_sword_01.3DS";
+	visual 				=	"ItMw_032_2h_sword_light_01.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
@@ -1343,7 +1343,7 @@ INSTANCE ItMw_Stabkeule (C_Item)
 /********************************************************************************/
 INSTANCE ItMw_Zweihaender1 (C_Item) 
 {	
-	name 				=	"Light Two-Hander";
+	name 				=	"Old Battle Blade";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -1357,7 +1357,7 @@ INSTANCE ItMw_Zweihaender1 (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	Condition_Zweihaender1;
-	visual 				=	"ItMw_032_2h_sword_light_01.3DS";
+	visual 				=	"ItMw_035_2h_sld_sword_01.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;

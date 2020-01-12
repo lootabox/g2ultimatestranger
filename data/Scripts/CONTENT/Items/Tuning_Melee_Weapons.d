@@ -170,10 +170,8 @@ const int Range_Sld2hAxe				= 80;
 const int Value_Sld2hAxe				= 60;
 //grober Zweihänder (2h) - SÖLDNER - ItMw_2h_Sld_Sword
 const int Damage_Sld2hSchwert			= 35;
-	const int Damage_Rod			= 30;
 const int Condition_Sld2hSchwert		= 40;
-	const int Condition_Rod			= 30;
-const int Range_Sld2hSchwert			= 130;
+const int Range_Sld2hSchwert			= 100; //130
 const int Value_Sld2hSchwert			= 60; 
 //Addon
 //PIR2hAxe
@@ -370,9 +368,9 @@ const int Condition_Stabkeule		= 20;
 const int Range_Stabkeule			= 130;
 const int Value_Stabkeule			= 700;
 //leichter Zweihänder	- NEUE INSTANZ
-const int Damage_Zweihaender1		= 32; 
+const int Damage_Zweihaender1		= 32;
 const int Condition_Zweihaender1	= 30;
-const int Range_Zweihaender1		= 100; //110
+const int Range_Zweihaender1		= 130; //110
 const int Value_Zweihaender1		= 750;
 //Steinbrecher - NEUE INSTANZ
 const int Damage_Steinbrecher 		= 35; 

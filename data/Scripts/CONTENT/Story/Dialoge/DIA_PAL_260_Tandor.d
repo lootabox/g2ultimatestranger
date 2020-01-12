@@ -165,7 +165,7 @@ FUNC VOID DIA_Tandor_Equipment_Zwei()
 {
 	AI_Output (other, self, "DIA_Tandor_Equipment_Zwei_15_00"); //Two-handed.
 	AI_Output (self, other, "DIA_Tandor_Equipment_Zwei_08_01"); //You are well-armed with this two-hander.
-	B_GiveInvItems (self,other,ItMw_Zweihaender1 ,1);
+	B_GiveInvItems (self,other,ItMw_Zweihaender2 ,1);
 	Info_ClearChoices (DIA_Tandor_Equipment);
 };
 FUNC VOID DIA_Tandor_Equipment_Bow()

@@ -36,7 +36,7 @@ PROTOTYPE Mst_Skeleton_Lord	(C_NPC)
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_HUMAN_STRONG;	
 	
-	EquipItem	(self,ItMw_Zweihaender2);
+	EquipItem	(self,ItMw_Zweihaender1);
 
 	//----- Senses & Ranges ----
 	senses			= 	SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
