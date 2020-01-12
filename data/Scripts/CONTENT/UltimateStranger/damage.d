@@ -132,10 +132,6 @@ func int Handle_Melee_Dmg(var c_npc vic, var c_npc att)
 		dmg += Value_Blessed_BonusDmg_3;
 	} else if ( wpn.weight == Value_Special_4_Weapon_ID && (vic.guild == GIL_DRAGON || vic.guild == GIL_DRACONIAN) ) {
 		dmg += Value_Special_4_BonusDmg;
-	} else if ( wpn.weight == Value_ManaSword_1h_Weapon_ID ) {
-		dmg += (att.attribute[ATR_MANA] * Value_ManaSword_1h_Percentage / 100);
-	} else if ( wpn.weight == Value_ManaSword_2h_Weapon_ID ) {
-		dmg += (att.attribute[ATR_MANA] * Value_ManaSword_2h_Percentage / 100);
 	} else if ( wpn.weight == Value_WolfSword_Weapon_ID && (vic.guild == GIL_WOLF || vic.guild == GIL_SUMMONED_WOLF || vic.guild == GIL_SUMMONED_BLACK_WOLF)) {
 		dmg += Value_WolfSword_BonusDmg;
 	} else if ( wpn.weight == Value_Inquisitor_Weapon_ID && C_NpcIsEvil(vic) ) {
@@ -154,13 +150,20 @@ func int Handle_Melee_Dmg(var c_npc vic, var c_npc att)
 Print(ConcatStrings(ConcatStrings(att.name," - "),wpn.name));
 var string pristr; pristr = IntToString(dmg);
 
-	// Handle protection
+	// Get protection
 	var int prot;
 	if 		wpn.damagetype == DAM_EDGE		{ prot = vic.protection[PROT_EDGE]; }
 	else if wpn.damagetype == DAM_BLUNT		{ prot = vic.protection[PROT_BLUNT]; }
 	else if wpn.damagetype == DAM_POINT		{ prot = vic.protection[PROT_POINT]; };
-	if (prot == IMMUNE) 	{ return 0; }
-	else 					{ dmg -= prot; };
+
+	// Check immunity
+	if (prot == IMMUNE) 	{ return 0; };
+
+	// Handle water protection
+	if (C_BodyStateContains(vic, BS_SWIM)) || (C_BodyStateContains(vic, BS_DIVE)) { prot *= 2; };
+
+	// Reduce protection
+	dmg -= prot;
 
 	// Handle combo
 	if (Npc_IsPlayer(att) && Npc_HasReadiedMeleeWeapon(att))

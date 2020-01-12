@@ -39,7 +39,6 @@ FUNC VOID B_GiveTradeInv_Matteo (var C_NPC slf)
 		CreateInvItems(slf,ItMi_Hammer,3);
 		CreateInvItems(slf,ItMi_Saw,2);
 		CreateInvItems(slf,ItMi_Pan,3);
-		CreateInvItems(slf,ItMi_Pliers,1);
 		CreateInvItems(slf,ItMi_Lute,1);
 		CreateInvItems(slf,ItMi_Broom,2);
 		CreateInvItems(slf,ItMi_Stomper,2);
