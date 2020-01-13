@@ -325,6 +325,7 @@ var int 	Senyan_CONTRA;
 var int		Senyan_Gold;
 
 var int 	Erol_Bonus;
+var int 	Erol_CanReturnTablets;
 
 var int 	PC_KnowsRedStone;
 var int 	MIS_Huno_Stahl;
@@ -463,6 +464,7 @@ var int Owen_ComesToHenry;
 var int Owen_Sc_FoundMalcom; //RAUS
 var int MALCOMEXIDENT; //RAUS
 var int Malcom_Accident;
+var int Malcom_Found;
 var int MIS_Owen_FindMalcom;
 var int MIS_Henry_HolOwen;
 

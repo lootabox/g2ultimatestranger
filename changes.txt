@@ -54,10 +54,12 @@ Many items have their description now on one line instead of multiple lines.
 
 	Quests
 
-Cavalorn's old hut quest only begins once NH finds the bag of ore, since before that the NH does not really have a task that he knows about.
-Finding Joe no longer has its own quest, since for all NH knows, he is just another missing person.
-Quest for Lucia is now just about delivering her note to Elvrich, after that she is just another missing person.
-
+"Cavalorn's old hut" only begins once NH finds the bag of ore, since before that the NH does not really have a task that he knows about.
+"Finding Joe" no longer has its own quest, since for all NH knows, he is just another missing person.
+"I gotta get out of here!" requires Talbin to be escorted through the pass and he doesn't spawn on Bengars farm right away.
+"Merchant raid" requires finding the bandits who took Erol's stone tablets, before returning any stone tablets.
+"Quest for Lucia" is now just about delivering her note to Elvrich, after that she is just another missing person.
+"The Claw of Beliar" requires talking to Saturas before praying to Beliar and the option to destroy is only presented once then.
 
 	Monster
 
@@ -257,7 +259,6 @@ Huno will sell armor even if NH asks about it without having enough gold and wil
 Igaraz can be asked about the living rock, even after moving north from the tavern.
 Isgaroth can be asked for a blessing after he tells who he is.
 Isgaroth can be traded with as a mage, even if he was never spoken to before.
-Isgaroth's blessing creates a log entry for Thorben's quest.
 Jorgen wields a Short Sword in Irdorath instead of a Sickle.
 Kardif cannot be asked about who's in debt to Lehmar if NH already read the book.
 Kardif cannot be talked about Attila if he is nearby and the dialog option does not kill him.
@@ -360,7 +361,6 @@ Snaf actually does something when preparing the fire strips.
 Snaf won't comment on information about Huno being free, if he already said the information will be free.
 Sylvio attacking NH causes Biff to attack Bullco as well, if he is with NH.
 Talbin can only be asked about people passing by the river once the Dragon Hunters have moved to the river banks.
-Talbin must actually be escorted through the pass to complete his quest and doesn't spawn on Bengars farm right away.
 Talbin wields a Wolf Blade instead of a branch.
 Talbin will teach NH hunting once escorted to Khorinis.
 Talbins dialog creates a journal note of him being a teacher only after he agrees to teach NH.
@@ -484,9 +484,9 @@ Following items can no longer be bought or looted from certain NPCs:
 * Wasili: Old coins.
 
 Following actions now create a log entry:
-* Using Oblivion spell while Ignaz' quest is running.
 * Dialog with Bennet, asking to find magic ore nuggets.
 * Dialog with Grimbald, agreeing to teach taking animal trophies.
+* Dialog with Isgaroth, when receiving his blessing for Thorben's quest.
 * Dialog with Kati, handing out Baltram's shipment.
 * Dialog with Kervo, asking to take care of lurkers outside his cave.
 * Dialog with Lord Hagen, when receiving the ornament piece.
@@ -512,7 +512,9 @@ Following actions now create a log entry:
 * Finding the Sun Aloe.
 * Finding the blank runestone for the Path of Believers quest.
 * Finding the recipe for Neoras.
+* Looting Malcom after Owen tells what happened to him.
 * Reading Lutero's note about pawning his Blood Chalice.
+* Using Oblivion spell while Ignaz' quest is running.
 
 Following events do not create overlapping messages:
 * Kati handing out bread, water and meat.

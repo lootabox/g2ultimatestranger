@@ -1088,9 +1088,11 @@ func void DIA_Addon_Saturas_BeliarsWeapon_geben ()
 	AI_Output			(self, other, "DIA_Addon_Saturas_BeliarsWeapon_geben_14_03"); //If you give it to me, then I shall render it harmless, so that it can no longer be misused.
 	AI_Output			(self, other, "DIA_Addon_Saturas_BeliarsWeapon_geben_14_04"); //So consider well what you will do.
 
-	Log_CreateTopic (TOPIC_Addon_Klaue, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_Addon_Klaue, LOG_RUNNING);
-	B_LogEntry (TOPIC_Addon_Klaue,"I can give the Claw of Beliar to Saturas, or keep it for myself."); 
+	//Log_CreateTopic (TOPIC_Addon_Klaue, LOG_MISSION);
+	//Log_SetTopicStatus(TOPIC_Addon_Klaue, LOG_RUNNING);
+	//B_LogEntry (TOPIC_Addon_Klaue,"I can give the Claw of Beliar to Saturas, or keep it for myself."); 
+	
+	Info_AddChoice	(DIA_Addon_Saturas_BeliarsWeapon, "Take the 'Claw of Beliar' and destroy it.", DIA_Addon_Saturas_BeliarsWeapon_geben2 );
 };
 
 func void DIA_Addon_Saturas_BeliarsWeapon_besser ()
@@ -1100,11 +1102,43 @@ func void DIA_Addon_Saturas_BeliarsWeapon_besser ()
 	AI_Output			(self, other, "DIA_Addon_Saturas_BeliarsWeapon_besser_14_02"); //But be careful. Beliar is malicious.
 	AI_Output			(self, other, "DIA_Addon_Saturas_BeliarsWeapon_besser_14_03"); //If you arouse his wrath, then he will let you feel it.
 	
-	Log_CreateTopic (TOPIC_Addon_Klaue, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_Addon_Klaue, LOG_RUNNING);
-	Log_AddEntry  (TOPIC_Addon_Klaue,"In order to subjugate the Claw to my will, I must pray to Beliar.");
+	//Log_CreateTopic (TOPIC_Addon_Klaue, LOG_MISSION);
+	//Log_SetTopicStatus(TOPIC_Addon_Klaue, LOG_RUNNING);
+	//Log_AddEntry  (TOPIC_Addon_Klaue,"In order to subjugate the Claw to my will, I must pray to Beliar.");
 
 	B_Say 	  	(other,self,"$VERSTEHE");
+
+	Info_AddChoice	(DIA_Addon_Saturas_BeliarsWeapon, "I'd rather keep it to myself.", DIA_Addon_Saturas_BeliarsWeapon_besser2 );
+};
+
+func void DIA_Addon_Saturas_BeliarsWeapon_geben2 ()
+{
+	AI_Output	(other, self, "DIA_Addon_Saturas_BeliarWeapGeben_15_00"); //Take the 'Claw of Beliar' and destroy it.
+	AI_Output	(self, other, "DIA_Addon_Saturas_BeliarWeapGeben_14_01"); //As you wish, my son. Give it to me.
+	B_ClearBeliarsWeapon ();
+	AI_PrintScreen (PRINT_ItemGegeben, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);	// "1 Gegenstand gegeben"	
+	AI_Output	(self, other, "DIA_Addon_Saturas_BeliarWeapGeben_14_02"); //So that it can do no more harm, I shall sink it in the depths of the sea.
+	AI_Output	(self, other, "DIA_Addon_Saturas_BeliarWeapGeben_14_03"); //Adanos' wisdom will watch over it.
+
+	Log_CreateTopic (TOPIC_Addon_Klaue, LOG_MISSION);
+	Log_SetTopicStatus(TOPIC_Addon_Klaue, LOG_RUNNING);
+	Log_AddEntry  (TOPIC_Addon_Klaue,"I gave the Claw to Saturas. He should be able to safely dispose of it.");
+
+	TOPIC_END_Klaue = TRUE;
+	B_GivePlayerXP (XP_Addon_BeliarsWeaponAbgegeben);
+	Saturas_KlaueInsMeer = TRUE;
+	
+	Info_ClearChoices	(DIA_Addon_Saturas_BeliarsWeapon);
+};
+
+func void DIA_Addon_Saturas_BeliarsWeapon_besser2 ()
+{
+	AI_Output	(other, self, "DIA_Girion_DI_OrcEliteRing_behalten_15_00"); //I'd rather keep it to myself.
+	AI_Output	(self, other, "DIA_Jack_BEMYCAPTAIN3_14_06"); //If you say so.
+	Log_CreateTopic (TOPIC_Addon_Klaue, LOG_MISSION);
+	Log_SetTopicStatus(TOPIC_Addon_Klaue, LOG_RUNNING);
+	Log_AddEntry  (TOPIC_Addon_Klaue,"I have chosen to keep the Claw for myself. In order to subjugate it to my will, I must pray to Beliar.");
+	Info_ClearChoices	(DIA_Addon_Saturas_BeliarsWeapon);
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -1143,42 +1177,6 @@ func void DIA_Addon_Saturas_PermENDE_ADDON_Info ()
 		AI_Output	(self, other, "DIA_Addon_Saturas_PermENDE_ADDON_14_07"); //No go and fulfill your destiny, Preserver. Our prayers will go with you.
 		DIA_Addon_Saturas_PermENDE_ADDON_OneTime = TRUE;
 	};
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info BeliarWeapGeben
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Saturas_BeliarWeapGeben		(C_INFO)
-{
-	npc		 = 	KDW_14000_Addon_Saturas_ADW;
-	nr		 = 	5;
-	condition	 = 	DIA_Addon_Saturas_BeliarWeapGeben_Condition;
-	information	 = 	DIA_Addon_Saturas_BeliarWeapGeben_Info;
-
-	description	 = 	"Take the 'Claw of Beliar' and destroy it.";
-};
-
-func int DIA_Addon_Saturas_BeliarWeapGeben_Condition ()
-{
-	if (C_ScHasBeliarsWeapon ())
-	&& (RavenIsDead == TRUE)
-	&& (Npc_KnowsInfo (other, DIA_Addon_Saturas_BeliarsWeapon))
-		{
-			return TRUE;
-		};
-};
-
-func void DIA_Addon_Saturas_BeliarWeapGeben_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Saturas_BeliarWeapGeben_15_00"); //Take the 'Claw of Beliar' and destroy it.
-	AI_Output	(self, other, "DIA_Addon_Saturas_BeliarWeapGeben_14_01"); //As you wish, my son. Give it to me.
-	B_ClearBeliarsWeapon ();
-	AI_PrintScreen (PRINT_ItemGegeben, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);	// "1 Gegenstand gegeben"	
-	AI_Output	(self, other, "DIA_Addon_Saturas_BeliarWeapGeben_14_02"); //So that it can do no more harm, I shall sink it in the depths of the sea.
-	AI_Output	(self, other, "DIA_Addon_Saturas_BeliarWeapGeben_14_03"); //Adanos' wisdom will watch over it.
-	TOPIC_END_Klaue = TRUE;
-	B_GivePlayerXP (XP_Addon_BeliarsWeaponAbgegeben);
-	Saturas_KlaueInsMeer = TRUE;
 };
 
 ///////////////////////////////////////////////////////////////////////

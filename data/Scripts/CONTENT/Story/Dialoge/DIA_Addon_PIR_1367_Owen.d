@@ -284,7 +284,8 @@ func int DIA_Addon_Owen_MalcomDead_Condition ()
 {
 	if (Npc_KnowsInfo (other, DIA_Addon_Owen_MalcomStunt))
 	&& (MIS_Owen_FindMalcom == LOG_RUNNING)
-	&& (Npc_HasItems (Malcom, ItWr_TwoHStonePlate3_Addon) == 0)
+	&& (Malcom_Found == TRUE)
+	//&& (Npc_HasItems (Malcom, ItWr_TwoHStonePlate3_Addon) == 0)
 	{
 		return TRUE;
 	};

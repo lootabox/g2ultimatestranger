@@ -243,109 +243,83 @@ instance DIA_Addon_Erol_Stoneplates		(C_INFO)
 func int DIA_Addon_Erol_Stoneplates_Condition ()
 {
 	if (MIS_Addon_Erol_BanditStuff == LOG_RUNNING)
-		{
-			return TRUE;
-		};
+	&& (Erol_CanReturnTablets == TRUE)
+	{
+		return TRUE;
+	};
 };
 
 var int StoneplatesCounter;
-const int Addon_ErolsStoneplatesOffer = (Value_StonePlateCommon + 5); //Joly:Kohle für eine StonePlateCommon
-
 func void DIA_Addon_Erol_Stoneplates_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Erol_Stoneplates_15_00"); //About those stone tablets...
-
 	if (Npc_HasItems (other,ItWr_StonePlateCommon_Addon) >= 1)
 	{
-			var int StoneplatesCount;
-			var int XP_Addon_BringStoneplates;
-			var int StoneplatesGeld;
-		
-			
-			StoneplatesCount = Npc_HasItems(other, ItWr_StonePlateCommon_Addon);
-		
-		
-			if (StoneplatesCount == 1)
-				{
-					AI_Output		(other, self, "DIA_Addon_Erol_Stoneplates_15_01"); //I've got one here.
-					B_GivePlayerXP (XP_Addon_BringStoneplate);
-					B_GiveInvItems (other, self, ItWr_StonePlateCommon_Addon, 1);
-				
-					StoneplatesCounter = StoneplatesCounter + 1;
-					
-				}
-				else
-				{
-					AI_Output		(other, self, "DIA_Addon_Erol_Stoneplates_15_02"); //I've got some.
-		
-					if ((StoneplatesCount + StoneplatesCounter) >= 3)
-					{
-						B_GiveInvItems (other, self, ItWr_StonePlateCommon_Addon, 3 - StoneplatesCounter);
-						XP_Addon_BringStoneplates = ((3 - StoneplatesCounter) * XP_Addon_BringStoneplate);
-						StoneplatesCounter = 3;
-					}
-					else
-					{
-						B_GiveInvItems (other, self, ItWr_StonePlateCommon_Addon, StoneplatesCount);
-						XP_Addon_BringStoneplates = (StoneplatesCount * XP_Addon_BringStoneplate);
-						StoneplatesCounter = (StoneplatesCounter + StoneplatesCount); 
-					};
-					B_GivePlayerXP (XP_Addon_BringStoneplates);
-				};
-				
-				
-			AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_03"); //Thank you.
-		
-			if (StoneplatesCounter == 1)
-			{
-				AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_04"); //Now I'm still missing two.
-			}
-			else if	(StoneplatesCounter == 2)
-			{
-				AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_05"); //I'm missing only one now.
-			}
-			else // mindestens 3 Steintafeln hat er schon.
-			{
-				AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_06"); //That's enough. Now I can keep my promise to the Water Mage in town, and then go home at last.
-				
-				MIS_Addon_Erol_BanditStuff = LOG_SUCCESS;
-				Wld_AssignRoomToGuild ("grpwaldhuette01",	GIL_PUBLIC);
-			};
-		
-			AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_07"); //I'll pay you for them, of course.
+		var int StoneplatesCount; StoneplatesCount = Npc_HasItems(other, ItWr_StonePlateCommon_Addon);
+		if ((StoneplatesCount + StoneplatesCounter) >= 3)
+		{
+			StoneplatesCount = 3 - StoneplatesCounter;
+		};
 
-			StoneplatesGeld	= (Addon_ErolsStoneplatesOffer * Npc_HasItems (self, ItWr_StonePlateCommon_Addon ));
+		if (StoneplatesCount == 1)
+		{
+			AI_Output		(other, self, "DIA_Addon_Erol_Stoneplates_15_01"); //I've got one here.
+		}
+		else
+		{
+			AI_Output		(other, self, "DIA_Addon_Erol_Stoneplates_15_02"); //I've got some.
+		};
+		B_GivePlayerXP (StoneplatesCount * XP_Addon_BringStoneplate);
+		B_GiveInvItems (other, self, ItWr_StonePlateCommon_Addon, StoneplatesCount);
+		StoneplatesCounter = StoneplatesCounter + StoneplatesCount;
+
+		AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_03"); //Thank you.
+		if (StoneplatesCounter == 1)
+		{
+			AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_04"); //Now I'm still missing two.
+		}
+		else if	(StoneplatesCounter == 2)
+		{
+			AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_05"); //I'm missing only one now.
+		}
+		else // mindestens 3 Steintafeln hat er schon.
+		{
+			AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_06"); //That's enough. Now I can keep my promise to the Water Mage in town, and then go home at last.
+			MIS_Addon_Erol_BanditStuff = LOG_SUCCESS;
+			Wld_AssignRoomToGuild ("grpwaldhuette01",	GIL_PUBLIC);
+		};
+
+		AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_07"); //I'll pay you for them, of course.
+		CreateInvItems (self, ItMi_Gold, (Value_StonePlateCommon + 5) * StoneplatesCount); 
+		B_GiveInvItems (self, other, ItMi_Gold, (Value_StonePlateCommon + 5) * StoneplatesCount);
 		
-			CreateInvItems (self, ItMi_Gold, StoneplatesGeld); 
-			B_GiveInvItems (self, other, ItMi_Gold, StoneplatesGeld);
+		Npc_RemoveInvItems	(self ,ItWr_StonePlateCommon_Addon 	, Npc_HasItems (self, ItWr_StonePlateCommon_Addon ));//Joly: weil er zum Händler wird.
+		
+		if (MIS_Addon_Erol_BanditStuff == LOG_SUCCESS)
+		{
+			AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_08"); //I'm going home now. Come with me if you like.
+			AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_09"); //Maybe I can sell you a few things that might interest you when we get there.
 			
-			Npc_RemoveInvItems	(self ,ItWr_StonePlateCommon_Addon 	, Npc_HasItems (self, ItWr_StonePlateCommon_Addon ));//Joly: weil er zum Händler wird.
-			
-			if (MIS_Addon_Erol_BanditStuff == LOG_SUCCESS)
-			{
-				AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_08"); //I'm going home now. Come with me if you like.
-				AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_09"); //Maybe I can sell you a few things that might interest you when we get there.
-				
-				AI_StopProcessInfos (self);
-				AI_UseMob			(self,"BENCH",-1);
-				AI_GotoWP 			(self,"NW_TAVERN_TO_FOREST_03");
-				Npc_ExchangeRoutine	(self,"Start");
-				Wld_AssignRoomToGuild ("grpwaldhuette01",	GIL_PUBLIC);
-			};
+			AI_StopProcessInfos (self);
+			AI_UseMob			(self,"BENCH",-1);
+			AI_GotoWP 			(self,"NW_TAVERN_TO_FOREST_03");
+			Npc_ExchangeRoutine	(self,"Start");
+			Wld_AssignRoomToGuild ("grpwaldhuette01",	GIL_PUBLIC);
+		};
 	}
 	else
 	{
-			if (C_ScHasMagicStonePlate () == TRUE)
-			{
-				AI_Output			(other, self, "DIA_Addon_Erol_Stoneplates_15_10"); //What about this one, then?
-				AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_11"); //No. This kind of stone tablet is magically charged.
-				AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_12"); //Alas, the Water Mage won't buy this kind of tablet.
-			}
-			else
-			{			
-				AI_Output			(other, self, "DIA_Addon_Erol_Stoneplates_15_13"); //How many were there?
-				AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_14"); //To save my reputation with the Water Mage in town, I need 3 tablets.
-			}; 
+		if (C_ScHasMagicStonePlate () == TRUE)
+		{
+			AI_Output			(other, self, "DIA_Addon_Erol_Stoneplates_15_10"); //What about this one, then?
+			AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_11"); //No. This kind of stone tablet is magically charged.
+			AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_12"); //Alas, the Water Mage won't buy this kind of tablet.
+		}
+		else
+		{			
+			AI_Output			(other, self, "DIA_Addon_Erol_Stoneplates_15_13"); //How many were there?
+			AI_Output			(self, other, "DIA_Addon_Erol_Stoneplates_10_14"); //To save my reputation with the Water Mage in town, I need 3 tablets.
+		}; 
 	};
 };
 

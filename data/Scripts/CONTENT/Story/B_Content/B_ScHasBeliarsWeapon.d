@@ -243,6 +243,12 @@ var int BeliarNextDamageChance;
                
 func int C_ScCanUpgrateBeliarsWeapon ()
 {
+	// Saturas must first tell hero how to upgrade the weapon
+	if (!Npc_KnowsInfo (other, DIA_Addon_Saturas_BeliarsWeapon))
+	{
+		return FALSE;
+	};
+
 	var int herolvl;
 	herolvl = hero.level;
 	
@@ -316,7 +322,7 @@ func void B_UpgrateBeliarsWeapon ()//Joly: vorher C_ScCanUpgrateBeliarsWeapon au
 	BeliarDamageChance = BeliarNextDamageChance;
 	BeliarWeapCurrentLvL = BeliarWeapNextLvL;
 
-	if (hero.guild == GIL_KDF)
+	/* if (hero.guild == GIL_KDF)
 	{
 		Info_ClearChoices (PC_PrayShrine_UPGRATEBELIARSWEAPON);
 		if 		(BeliarWeapCurrentLvL >= 1)	
@@ -344,7 +350,7 @@ func void B_UpgrateBeliarsWeapon ()//Joly: vorher C_ScCanUpgrateBeliarsWeapon au
 		};
 	}
 	else
-	{
+	{ */
 		if((hero.HitChance[NPC_TALENT_1H]) > (hero.HitChance[NPC_TALENT_2H]))
 		{
 			if 	 	(BeliarWeapCurrentLvL <= 1){CreateInvItem	(hero, ItMw_BeliarWeapon_1H_01);}
@@ -399,9 +405,9 @@ func void B_UpgrateBeliarsWeapon ()//Joly: vorher C_ScCanUpgrateBeliarsWeapon au
 			Snd_Play ("CS_Prayer_WaveOfInsanity");
 			BeliarsWeaponUpgrated = TRUE;
 		};
-	};
+	//};
 };
-
+/* 
 FUNC VOID PC_PrayShrine_UPGRATEBELIARSWEAPON_GreenTentacle ()
 {
 	CreateInvItem	(hero, ItRu_GreenTentacle);
@@ -465,5 +471,5 @@ FUNC VOID PC_PrayShrine_UPGRATEBELIARSWEAPON_SPL_Skull()
 	BeliarsWeaponUpgrated = TRUE;
 	Info_ClearChoices (PC_PrayShrine_UPGRATEBELIARSWEAPON);
 };
-
+ */
 	
