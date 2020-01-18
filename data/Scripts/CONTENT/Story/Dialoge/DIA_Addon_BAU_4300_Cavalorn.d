@@ -663,8 +663,8 @@ func void B_Addon_Cavalorn_VatrasBrief ()
 	{
 		AI_Output	(self, other, "DIA_Addon_Cavalorn_VatrasBrief_08_11"); //Oh, yeah, one more thing. First buy some decent clothes from the farmers.
 		AI_Output	(self, other, "DIA_Addon_Cavalorn_VatrasBrief_08_12"); //Otherwise you may be taken for a bandit. Here's a couple of coins.
-		CreateInvItems (self, ItMi_Gold, 50);									
-		B_GiveInvItems (self, other, ItMi_Gold, 50);	
+		CreateInvItems (self, ItMi_Gold, 5);									
+		B_GiveInvItems (self, other, ItMi_Gold, 5);	
 	};
 	
 	MIS_Addon_Cavalorn_KillBrago = LOG_SUCCESS;

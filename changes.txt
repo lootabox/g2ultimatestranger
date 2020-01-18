@@ -184,6 +184,7 @@ Carlos has slightly altered dialog if NH entered camp without killing Franco.
 Cassia can give the Blood Chalice quest, even if NH was a wanted thief.
 Cassia cannot be paid for learning to pickpocket if it's already learned.
 Cassias quests become obsolete if the paladins kill her.
+Cavalorn gives much less gold for buying the farmer's clothes.
 Cornelius' diary cannot be stolen before learning of him being a witness to the murder.
 Diego can teach strength in Khorinis.
 Diego cannot be led to Pedrakhan.

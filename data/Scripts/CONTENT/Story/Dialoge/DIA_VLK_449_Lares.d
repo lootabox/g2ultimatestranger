@@ -471,8 +471,13 @@ instance DIA_Addon_Lares_Geduld		(C_INFO)
 func int DIA_Addon_Lares_Geduld_Condition ()
 {
 	if (RangerMeetingRunning == LOG_RUNNING)
-	&& (Npc_GetDistToWP(self,"NW_TAVERNE_IN_RANGERMEETING_LARES")>200)
 	&& (Npc_IsInState (self,ZS_Talk))
+	&& ((Npc_GetDistToWP(self,"NW_TAVERNE_IN_RANGERMEETING_LARES")>200)
+	|| (!Npc_IsDead(Cavalorn)	&& Npc_GetDistToWP(Cavalorn,"NW_TAVERNE_IN_RANGERMEETING")>400	&& MIS_Addon_Cavalorn_GetOrnamentFromPAL > 0)
+	|| (!Npc_IsDead(Cord)		&& Npc_GetDistToWP(Cord,"NW_TAVERNE_IN_RANGERMEETING")>400)
+	|| (!Npc_IsDead(Gaan)		&& Npc_GetDistToWP(Gaan,"NW_TAVERNE_IN_RANGERMEETING")>400)
+	|| (!Npc_IsDead(Martin)		&& Npc_GetDistToWP(Martin,"NW_TAVERNE_IN_RANGERMEETING")>400)
+	|| (!Npc_IsDead(Orlan)		&& Npc_GetDistToWP(Orlan,"NW_TAVERNE_IN_RANGERMEETING")>400))
 		{
 			return TRUE;
 		};

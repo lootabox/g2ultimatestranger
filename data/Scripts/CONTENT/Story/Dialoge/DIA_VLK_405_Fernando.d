@@ -304,7 +304,7 @@ func void DIA_Addon_Fernando_BanditTrader_preis ()
 	AI_Output			(self, other, "DIA_Addon_Fernando_BanditTrader_preis_14_03"); //That will have to do. Will you give me the incriminating material now?
 
 	Info_ClearChoices	(DIA_Addon_Fernando_BanditTrader);
-	Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "Forget it. I'm not going to give that away.", DIA_Addon_Fernando_BanditTrader_nein );
+	Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "No. I think I'd rather keep it.", DIA_Addon_Fernando_BanditTrader_nein );
 	Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "Well, all right. Agreed.", DIA_Addon_Fernando_BanditTrader_ja );
 };
 func void DIA_Addon_Fernando_BanditTrader_ja ()

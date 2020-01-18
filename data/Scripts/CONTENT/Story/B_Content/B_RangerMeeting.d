@@ -15,7 +15,7 @@ func void B_MakeRangerReadyToLeaveMeeting (VAR C_NPC Ranger)
 	//AI_EquipBestArmor (Ranger); //Joly:ITAR_RANGER_Addon_Broken wegen diesem hier, falls die Armor nicht gelöscht wurde.
 	if(Hlp_GetInstanceID(Ranger) == Hlp_GetInstanceID(Martin))
 	{
-		AI_EquipArmor(Ranger,ITAR_MIL_M);
+		AI_EquipArmor(Ranger,ITAR_MIL_L);
 		Npc_RemoveInvItems	(Ranger, ITAR_RANGER_Addon_Broken,	Npc_HasItems (Ranger, ITAR_RANGER_Addon_Broken ) );
 	};
 	if(Hlp_GetInstanceID(Ranger) == Hlp_GetInstanceID(Lares))
