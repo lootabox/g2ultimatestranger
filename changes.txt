@@ -492,6 +492,7 @@ Following actions now create a log entry:
 * Dialog with Kervo, asking to take care of lurkers outside his cave.
 * Dialog with Lord Hagen, when receiving the ornament piece.
 * Dialog with Randolph, handing out Baltram's shipment.
+* Dialog with Saturas, when asked for the portal ring before having the letter from Vatras.
 * Dialog with Talbin, asking for a cheese.
 * Digging up Greg's treasures in Khorinis.
 * Finding Babo's documents.

@@ -594,6 +594,7 @@ func void DIA_Addon_Saturas_OpenPortal_Info ()
 		}
 		else
 		{
+			B_LogEntry (TOPIC_Addon_Ornament,"Saturas is still waiting for a message from Vatras. As long as the Water Mages are not ready, the expedition will not begin."); 
 			AI_StopProcessInfos (self);		
 		};
 	}
