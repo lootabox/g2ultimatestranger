@@ -871,18 +871,34 @@ instance DIA_Addon_Vatras_CloseMeeting		(C_INFO)
 	nr		 	= 5;
 	condition	= DIA_Addon_Vatras_CloseMeeting_Condition;
 	information	= DIA_Addon_Vatras_CloseMeeting_Info;
-	description = "The brothers of the 'Ring' have sent me to you.";
+	//description = "";
 };
 func int DIA_Addon_Vatras_CloseMeeting_Condition ()
 {
-	if (Lares_TakeFirstMissionFromVatras == TRUE)
+	//if (Lares_TakeFirstMissionFromVatras == TRUE)
+	if (Xardas_TakeFirstMissionFromVatras == TRUE)
 	{
+		if (Lares_TakeFirstMissionFromVatras == TRUE)
+		{
+			DIA_Addon_Vatras_CloseMeeting.description = "The brothers of the 'Ring' have sent me to you.";
+		}
+		else
+		{
+			DIA_Addon_Vatras_CloseMeeting.description = "I'm back from the Valley of Mines.";
+		};
 		return TRUE;
 	};
 };
 func void DIA_Addon_Vatras_CloseMeeting_Info ()
 {
-	AI_Output (other, self, "DIA_Addon_Vatras_CloseMeeting_15_00"); //The brothers of the 'Ring' have sent me to you.
+	if (Lares_TakeFirstMissionFromVatras == TRUE)
+	{
+		AI_Output (other, self, "DIA_Addon_Vatras_CloseMeeting_15_00"); //The brothers of the 'Ring' have sent me to you.
+	}
+	else
+	{
+		AI_Output (other, self, "DIA_Xardas_BACKFROMOW_15_00"); //I'm back from the Valley of Mines.
+	};
 	AI_Output (self, other, "DIA_Addon_Vatras_CloseMeeting_05_01"); //Good! I've been awaiting you!
 	AI_Output (self, other, "DIA_Addon_Vatras_CloseMeeting_05_02"); //I shall send you through the portal together with the other Water Mages.
 	AI_Output (self, other, "DIA_Addon_Vatras_CloseMeeting_05_03"); //You are to track down the former ore baron Raven and find out why he has taken the citizens of Khorinis.
@@ -903,8 +919,8 @@ func void DIA_Addon_Vatras_CloseMeeting_Info ()
 	B_LogEntry (TOPIC_Addon_Sklaven,"I am to find out why Raven captured the citizens of Khorinis."); 
 
 
-	RangerMeetingRunning = LOG_SUCCESS; //Joly:Muss hier stehen!Sonst Chaos mit Rangern! -> Meeting
-	B_SchlussMitRangerMeeting ();
+	//RangerMeetingRunning = LOG_SUCCESS; //Joly:Muss hier stehen!Sonst Chaos mit Rangern! -> Meeting
+	//B_SchlussMitRangerMeeting ();
 	B_GivePlayerXP (XP_Ambient);
 };
 

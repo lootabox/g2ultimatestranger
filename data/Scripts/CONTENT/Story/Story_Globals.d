@@ -205,6 +205,7 @@ var int Cord_RangerHelp_TorlofsProbe;			//= TRUE Cord erledigt die SC Probe von 
 var int RangerMeetingRunning;					//= TRUE Die Ranger meeten in Orlans Taverne
 var int Lares_ComeToRangerMeeting;				//= TRUE Lares schickt den Spieler zum Rangermeeting.
 var int Lares_TakeFirstMissionFromVatras;		//= TRUE Lares schickt den Spieler zum Vatras um seinen ersten Auftrag abzuholen.
+var int Xardas_TakeFirstMissionFromVatras;		//= TRUE Xardas told the player to go to Vatras to join them, enables starting of addon expedition
 var int MIS_Vatras_FindTheBanditTrader;			//Vatras will den Namen des Händler aus dem oberen Viertel, der den Banditen Waffen liefert.
 var int MIs_Martin_FindTheBanditTrader;			//Martin will den Namen des Händler aus dem oberen Viertel, der den Banditen Waffen liefert.
 var int BanditTrader_Lieferung_Gelesen;			//= TRUE SC hat den Lieferungsschein gelesen.

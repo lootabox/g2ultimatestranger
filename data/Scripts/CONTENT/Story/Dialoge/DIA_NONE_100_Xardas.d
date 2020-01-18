@@ -78,52 +78,6 @@ FUNC INT DIA_Xardas_Hello_Condition()
 {	
 	return TRUE;
 };
-/* FUNC VOID DIA_Xardas_Hello_Info()
-{	
-	AI_Output (self ,other, "DIA_Addon_Xardas_Hello_14_00"); //There you are again! (smiling) I never thought the two of us would meet again.
-	AI_Output (other, self, "DIA_Addon_Xardas_Hello_15_01"); //I feel like I spent three weeks lying under a load of rocks.
-	AI_Output (self ,other, "DIA_Addon_Xardas_Hello_14_02"); //Well, so you did. Only the magic within your armor kept you alive.
-	AI_Output (self ,other, "DIA_Addon_Xardas_Hello_14_03"); //I had feared I might not be able to rescue you from the debris of the temple.
-	AI_Output (self ,other, "DIA_Addon_Xardas_Hello_14_04"); //But enough of that. You're here now.
-	AI_Output (self ,other, "DIA_Addon_Xardas_Hello_14_05"); //There's a NEW threat that we have to deal with.
-
- 	Info_ClearChoices	(DIA_Xardas_Hello);
-	Info_AddChoice	(DIA_Xardas_Hello, "We've got plenty of time now. The Sleeper has been vanquished.", DIA_Addon_Xardas_Hello_Dragons );
-	Info_AddChoice	(DIA_Xardas_Hello, "What NEW threat are you talking about?", DIA_Addon_Xardas_Hello_Man );
-}; */
-func void DIA_Addon_Xardas_Hello_Man ()
-{
-	PlayVideo ("Intro_ADDON");
-	AI_Output (self, other, "DIA_Addon_Xardas_AddonIntro_Add_14_10"); //You must become their ally! That's the only way to stop Beliar.
-	
-	//Addon_zuerst = TRUE;
-};
-/* func void DIA_Addon_Xardas_Hello_Dragons ()
-{
-	AI_Output (other,self ,"DIA_Xardas_Hello_15_03"); //At least we have enough time now. I did it. The Sleeper...
-	AI_Output (self ,other,"DIA_Xardas_Hello_14_04"); //... has been banned. You vanquished him, so much is true - but it is not within our power to stop the war that ensues now.
-	AI_Output (other,self ,"DIA_Xardas_Hello_15_05"); //You're talking about the orcs?
-	AI_Output (self ,other,"DIA_Xardas_Hello_14_06"); //I am talking about much more terrible creatures.
-	AI_Output (self ,other,"DIA_Xardas_Hello_14_07"); //With his final, furious scream, the Sleeper has set into movement the armies of darkness.
-	AI_Output (self ,other,"DIA_Xardas_Hello_14_08"); //It was an order to all evil creatures. A word of power that they were all bound to obey.
-	AI_Output (self ,other,"DIA_Xardas_Hello_14_09"); //His last order was: COME! And they came. All of them. Even the dragons.
-	AI_Output (other,self ,"DIA_Xardas_Hello_15_10"); //(amazed) ... Dragons!
-	AI_Output (self ,other,"DIA_Xardas_Hello_14_11"); //They are creatures of ancient power. I can sense their presence - even here.
-	AI_Output (self ,other,"DIA_Xardas_Hello_14_12"); //And they have gathered an entire army of lowly servant creatures around them.
-	AI_Output (other,self ,"DIA_Xardas_Hello_15_13"); //Where's this army now?
-	AI_Output (self ,other,"DIA_Xardas_Hello_14_14"); //The army is camped not far from here, in the Valley of Mines near Khorinis, and they are getting ready to attack.
-		
-	if (Addon_zuerst == TRUE)
-	{
-		AI_Output (self ,other,"DIA_Xardas_Hello_14_15"); //(pensively) We do not have much time left.
-	}
-	else
-	{
-		AI_Output (self ,other, "DIA_Addon_Xardas_Hello_Dragons_14_06"); //But that's not all. There is ANOTHER threat of which I have learned only recently.
-		Info_ClearChoices	(DIA_Xardas_Hello);
-		Info_AddChoice	(DIA_Xardas_Hello, "What OTHER threat are you talking about?", DIA_Addon_Xardas_Hello_Man );
-	};
-}; */
 FUNC VOID DIA_Xardas_Hello_Info()
 {
 	AI_Output (self ,other, "DIA_XARDAS_HELLO_14_00"); //Finally! I've been trying to bring you here for days.
@@ -142,10 +96,7 @@ FUNC VOID DIA_Xardas_Hello_Info()
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_12"); //And they have gathered an entire army of lowly servant creatures around them.
 	AI_Output (other,self ,"DIA_Xardas_Hello_15_13"); //Where's this army now?
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_14"); //The army is camped not far from here, in the Valley of Mines near Khorinis, and they are getting ready to attack.
-
-	AI_Output (self ,other, "DIA_Addon_Xardas_Hello_Dragons_14_06"); //But that's not all. There is ANOTHER threat of which I have learned only recently.
-	Info_ClearChoices	(DIA_Xardas_Hello);
-	Info_AddChoice	(DIA_Xardas_Hello, "What OTHER threat are you talking about?", DIA_Addon_Xardas_Hello_Man );
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_15"); //(pensively) We do not have much time left.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info AWAY
@@ -204,13 +155,11 @@ func int DIA_Xardas_TODO_Condition ()
 func void DIA_Xardas_TODO_Info ()
 {
 	AI_Output (other, self, "DIA_Xardas_TODO_15_00"); //What can we do?
-	AI_Output (self, other, "DIA_Xardas_TODO_14_01"); //This time we cannot handle it by ourselves. Only the power of Innos can help us against those dragons.
+	AI_Output (self, other, "DIA_Xardas_TODO_14_01"); //This time we cannot handle it by ourselves. Only the power of Innos can help us against these dragons.
 	AI_Output (self, other, "DIA_Xardas_TODO_14_02"); //A group of paladins is stationed in the city of Khorinis, not far from here.
 	AI_Output (self, other, "DIA_Xardas_TODO_14_03"); //They possess a powerful artifact which could help us defeat the dragons.
 	AI_Output (self, other, "DIA_Xardas_TODO_14_04"); //They call it the 'Eye of Innos'. You need to get hold of this artifact.
 	AI_Output (self, other, "DIA_Xardas_TODO_14_05"); //Tell the paladins about the threat. You MUST convince their leader to support us!
-	AI_Output (self, other, "DIA_Addon_Xardas_Add_14_07"); //And once you have talked to him, you need to find the artifact of Beliar.
-	AI_Output (self, other, "DIA_Addon_Xardas_Add_14_08"); //It is the counterpiece to the Eye of Innos. It must not fall into the hands of Evil.
 	Log_CreateTopic (TOPIC_INNOSEYE, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_INNOSEYE, LOG_RUNNING);
 	B_LogEntry (TOPIC_INNOSEYE,"There's a group of paladins camping out in the city of Khorinis. They have a powerful artifact with them: The Eye of Innos. Its power should help us fend off the dragon threat. I'm going to have to persuade the paladins to rally to our cause."); 
@@ -267,6 +216,7 @@ instance DIA_Addon_Xardas_Portal (C_INFO)
 func int DIA_Addon_Xardas_Portal_Condition ()
 {
 	if (Npc_KnowsInfo (other, DIA_Addon_Saturas_WhatsOrnament))
+	&& (Npc_KnowsInfo(other, DIA_Xardas_DMTSINDDA))
 	&& (!C_SCHasBeliarsWeapon())
 	&& (Saturas_KlaueInsMeer == FALSE)
 	{
@@ -449,7 +399,7 @@ func void DIA_Xardas_PALADIN_Info ()
 	AI_Output (other, self, "DIA_Xardas_PALADIN_15_00"); //Why would the paladins give me the Eye of Innos?
 	AI_Output (self, other, "DIA_Xardas_PALADIN_14_01"); //Because you are the one who is destined to wear it.
 	AI_Output (other, self, "DIA_Xardas_PALADIN_15_02"); //How can you claim to know that?
-	AI_Output (self, other, "DIA_Xardas_PALADIN_14_03"); //There is a number of reasons, the most important being: you have defeated the Sleeper. If you weren't a favorite of the gods, you'd be dead by now.
+	AI_Output (self, other, "DIA_Xardas_PALADIN_14_03"); //There are a number of reasons, the most important being: you have defeated the Sleeper. If you weren't a favorite of the gods, you'd be dead by now.
 	AI_Output (other, self, "DIA_Xardas_PALADIN_15_04"); //Let's assume you are right, and I'm destined to bear the Eye of Innos. How would the paladins know that is true?
 	AI_Output (self, other, "DIA_Xardas_PALADIN_14_05"); //The Eye itself chooses the one who may wear it. Once you get hold of it and put it on, the paladins cannot doubt your words any longer.
 };
@@ -766,11 +716,9 @@ func void DIA_Xardas_DMTSINDDA_Info ()
 	{
 		AI_Output			(other, self, "DIA_Xardas_DMTSINDDA_15_00"); //Lester said you wanted to see me at once.
 	};
-//	AI_Output			(self,other,"DIA_Xardas_Hello_14_00");	//Finally! I've been trying to bring you here for days.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_14_02"); //The enemy has learned who you really are and that you are planning to get hold of the Eye of Innos.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_14_03"); //He has recognized the threat. It has forced him to leave his cover and openly attack.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_14_04"); //The game of hide-and-seek is over. Yesterday nobody knew what the enemy's attack would look like. Now it has become only too obvious.
-	AI_Output			(self ,other,"DIA_Xardas_Hello_14_15"); //(pensively) We do not have much time left.
 
 	B_LogEntry (TOPIC_INNOSEYE, "The enemy's found it I'm looking for the Eye of Innos. It's time I found it, before it's too late.");
 	
@@ -779,7 +727,6 @@ func void DIA_Xardas_DMTSINDDA_Info ()
 	Info_AddChoice	(DIA_Xardas_DMTSINDDA, "I've finally got the proof for Lord Hagen.", DIA_Xardas_DMTSINDDA_Beweis );
 
 };
-
 func void DIA_Xardas_DMTSINDDA_DMT ()
 {
 	AI_Output			(other, self, "DIA_Xardas_DMTSINDDA_DMT_15_00"); //I was attacked by magicians in black robes.
@@ -812,8 +759,25 @@ func void DIA_Xardas_DMTSINDDA_DMT_WhatToDo ()
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_DMT_WhatToDo_14_01"); //Go and bring Lord Hagen the letter from Garond so that he may grant you access to the Eye of Innos.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_DMT_WhatToDo_14_02"); //Then go to the monastery and talk to Pyrokar. He must give you the Eye.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_DMT_WhatToDo_14_03"); //Nothing is more important than getting this artifact away to safety.
+	B_LogEntry (TOPIC_INNOSEYE, "The Eye is in the monastery of the Fire Magicians. Hopefully, Lord Hagen will grant me access to it when I give him Lord Garond's message. The head Fire Magician Pyrokar won't let me near the amulet without Hagen's approval.");
+
+	AI_Output			(self ,other, "DIA_Addon_Xardas_Hello_Dragons_14_06"); //But that's not all. There is ANOTHER threat of which I have learned only recently.
+	Info_ClearChoices	(DIA_Xardas_DMTSINDDA);
+	Info_AddChoice	(DIA_Xardas_DMTSINDDA, "What other threat are you talking about?", DIA_Xardas_DMTSINDDA_Start_Addon );
+};
+func void DIA_Xardas_DMTSINDDA_Start_Addon ()
+{
+	PlayVideo ("Intro_ADDON");
+	AI_Output			(self, other, "DIA_Addon_Xardas_AddonIntro_Add_14_10"); //You must become their ally! That's the only way to stop Beliar.
+	AI_Output			(self, other, "DIA_Xardas_INNOSEYEBROKEN_wasnun_14_02_B"); //You should go to town and talk to Vatras the Water Mage.
+	AI_Output			(self, other, "DIA_Addon_Xardas_Add_14_07"); //And once you have talked to him, you need to find the artifact of Beliar.
+	AI_Output			(self, other, "DIA_Addon_Xardas_Add_14_08"); //It is the counterpiece to the Eye of Innos. It must not fall into the hands of Evil.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_DMT_WhatToDo_14_04"); //Go now before it is too late. The enemy will also try to lay his hands on it.
-	B_LogEntry (TOPIC_INNOSEYE, "The Eye is the the monastery of the Fire Magicians. Hopefully, Lord Hagen will grant me access to it when I give him Lord Garond's message. The head Fire Magician Pyrokar won't let me near the amulet without Hagen's approval.");
+
+	Log_CreateTopic (TOPIC_Addon_KDW, LOG_MISSION);
+	Log_SetTopicStatus(TOPIC_Addon_KDW, LOG_RUNNING);
+	B_LogEntry (TOPIC_Addon_KDW,"Beliar's henchmen are supposedly looking for a mighty artifact. I am to go and talk to Vatras in town and ally myself with the Water Mages. Xardas believes this is the only way to prevent Beliar's henchmen from using this artifact for Evil."); 
+	Xardas_TakeFirstMissionFromVatras = TRUE;
 };
 
 ///////////////////////////////////////////////////////////////////////

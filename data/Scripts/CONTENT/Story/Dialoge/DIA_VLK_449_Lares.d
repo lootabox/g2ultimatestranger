@@ -544,13 +544,17 @@ func void DIA_Addon_Lares_GetRangerArmor_weapons ()
 func void DIA_Addon_Lares_GetRangerArmor_end ()
 {
 	B_MakeRangerReadyToLeaveMeetingALL ();
+	B_RangerMeetingParking ();
 	AI_Output	(other, self, "DIA_Addon_Lares_GetRangerArmor_end_15_00"); //I've got to go.
 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_end_09_01"); //Fine, then don't let us keep you.
-	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_end_09_02"); //Now go directly to Vatras and have him give you your first task.
+	if (Xardas_TakeFirstMissionFromVatras == TRUE)
+	{
+		AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_end_09_02"); //Now go directly to Vatras and have him give you your first task.
+		Lares_TakeFirstMissionFromVatras = TRUE;
+	};
 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_end_09_03"); //Brothers of the 'Ring'. Let us now return to our duties.
 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_end_09_04"); //The bandit attacks are still going on. We must see to it that this menace is stopped.
 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_end_09_05"); //Adanos, preserve the balance of this world.
-	Lares_TakeFirstMissionFromVatras = TRUE;
 
 	Info_ClearChoices	(DIA_Addon_Lares_GetRangerArmor);
 	Info_AddChoice	(DIA_Addon_Lares_GetRangerArmor, DIALOG_ENDE, DIA_Addon_Lares_GetRangerArmor_weiter );
@@ -558,8 +562,17 @@ func void DIA_Addon_Lares_GetRangerArmor_end ()
 func void DIA_Addon_Lares_GetRangerArmor_weiter () 
 {
 	AI_StopProcessInfos (self);
-	B_RangerMeetingParking ();
+	RangerMeetingRunning = LOG_SUCCESS;
+	B_SchlussMitRangerMeeting();
+
+	if (Xardas_TakeFirstMissionFromVatras == TRUE)
+	{
 	B_LogEntry (TOPIC_Addon_RingOfWater,"I was given my armor during the secret meeting in Orlan's tavern. Now I am supposed to go see Vatras who will set me my first task as a member of the 'Ring'." ); 
+	}
+	else
+	{
+		B_LogEntry (TOPIC_Addon_RingOfWater,"I was given my armor during the secret meeting in Orlan's tavern. I should check later whether the Water Mages have anything for me to do." ); 	
+	};
 };
 
 func void DIA_Addon_Lares_GetRangerArmor_Learn ()

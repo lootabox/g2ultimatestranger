@@ -52,6 +52,11 @@ Main menu sounds are silenced after start a new game or loading one.
 Many items have their description now on one line instead of multiple lines.
 
 
+	Story
+
+Addon is only accessible in chapter 3. Xardas will give the addon introduction after returning from the Valley of Mines. Vatras will not give the letter for Saturas before this. Likewise, Lares will not mention Vatras if joining the ring before receiving the addon introduction from Xardas.
+
+
 	Quests
 
 "Cavalorn's old hut" only begins once NH finds the bag of ore, since before that the NH does not really have a task that he knows about.
@@ -494,6 +499,7 @@ Following actions now create a log entry:
 * Dialog with Randolph, handing out Baltram's shipment.
 * Dialog with Saturas, when asked for the portal ring before having the letter from Vatras.
 * Dialog with Talbin, asking for a cheese.
+* Dialog with Xardas, when he introduces the new threat (addon).
 * Digging up Greg's treasures in Khorinis.
 * Finding Babo's documents.
 * Finding Blood Chaclices for Cassia's quest.
