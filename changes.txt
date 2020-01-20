@@ -59,6 +59,7 @@ Addon is only accessible in chapter 3. Xardas will give the addon introduction a
 
 	Quests
 
+"Bottoms up" contest is only won by Randolph if Rukhar does not notice someone has been to his chest.
 "Cavalorn's old hut" only begins once NH finds the bag of ore, since before that the NH does not really have a task that he knows about.
 "Finding Joe" no longer has its own logged quest, since for all NH knows, he is just another missing person.
 "I gotta get out of here!" requires Talbin to be escorted through the pass and he doesn't spawn on Bengars farm right away.

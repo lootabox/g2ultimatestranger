@@ -714,8 +714,10 @@ func void DIA_Orlan_WETTKAMPFLAEUFT_Info ()
 			AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_02"); //The drinking contest is finally over.
 			AI_Output			(other, self, "DIA_Orlan_WETTKAMPFLAEUFT_15_03"); //Who won?
 	
-			if ((Mob_HasItems	("CHEST_RUKHAR", ItFo_Booze)) == FALSE)
-			&& ((Mob_HasItems	("CHEST_RUKHAR", ItFo_Water)) > 0)
+			if ((Mob_HasItems	("CHEST_RUKHAR", ItFo_Booze)) == 0)
+			&& ((Mob_HasItems	("CHEST_RUKHAR", ItFo_Water)) == 1)
+			&& ((Mob_HasItems	("CHEST_RUKHAR", ItMw_1H_VLK_Dagger)) == 1)
+			&& ((Mob_HasItems	("CHEST_RUKHAR", ItMi_Gold)) == 10)
 			{
 				AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_04"); //This time Randolph has won. Rukhar must have been having a bad day.
 			}
