@@ -400,6 +400,9 @@ func void DIA_Addon_Farim_WilliamReport_Info ()
 	AI_Output (self, other, "DIA_Addon_Farim_Add_11_03"); //(sighs) Yeah, that's what I'd been expecting.
 	AI_Output (self, other, "DIA_Addon_Farim_Add_11_04"); //Thanks for coming back here to tell me.
 	AI_Output (self, other, "DIA_Addon_Farim_Add_11_05"); //I'll go down to the pub and drink up his share of our last catch - that's what he would have wanted...
+
+	Farim.wp = "NW_CITY_HABOUR_TAVERN01_03";
+	AI_StartState(self, ZS_Stand_Drinking, 1, "");
 };
 
 

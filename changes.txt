@@ -60,12 +60,13 @@ Addon is only accessible in chapter 3. Xardas will give the addon introduction a
 	Quests
 
 "Cavalorn's old hut" only begins once NH finds the bag of ore, since before that the NH does not really have a task that he knows about.
-"Finding Joe" no longer has its own quest, since for all NH knows, he is just another missing person.
+"Finding Joe" no longer has its own logged quest, since for all NH knows, he is just another missing person.
 "I gotta get out of here!" requires Talbin to be escorted through the pass and he doesn't spawn on Bengars farm right away.
 "Merchant raid" requires finding the bandits who took Erol's stone tablets, before returning any stone tablets.
 "Quest for Lucia" is now just about delivering her note to Elvrich, after that she is just another missing person.
 "The Claw of Beliar" requires talking to Saturas before praying to Beliar and the option to destroy is only presented once then.
 "The Seekers" can be finished by bringing all of the Almanacs to Pyrokar before leaving for Irdorath.
+
 
 	Monster
 
@@ -205,6 +206,7 @@ Esteban does not turn to his guards if they are dead.
 Esteban first dialog sends Carlos to Ramon's guard post, if NH killed Ramon.
 Esteban only says Franco was a tough nut if he is dead.
 Esteban's bodyguards go running to meet Fisk.
+Farim will go down to the pub and drink one for his buddy William, just like he says he will.
 Fernando can only be accused after being told about the bandit weapons dealer by Vatras.
 Fernando will not consider a bandit rapier or the trade guild ring alone to be sufficient evidence.
 Fernando will properly close the bandit weapons dealer quest if NH gives him the evidence.

@@ -57,7 +57,7 @@ const string	LogText_Addon_SCKnowsMisspeapl 		=	"Many citizens of Khorinis are m
 const string	LogText_Addon_WilliamLeiche	 		=	"The body of a fisherman lies in the ruins east of the Water Mages' camp.";
 const string	LogText_Addon_RavensGoldmine	 	=	"Raven has a mine and is making the slaves dig for gold there.";
 const string	LogText_Addon_KDWRight			 	=	"Only a Water Mage has the right to admit somebody to the 'Ring of Water'.";
-const string	LogText_Addon_WilliamMissing	 	=	"Wiliiam, one of the fishermen of the Khorinis harbor, is among those missing.";
+const string	LogText_Addon_WilliamMissing	 	=	"William, one of the fishermen of the Khorinis harbor, is among those missing.";
 const string	LogText_Addon_Relicts	 			=	"In the temple of Adanos, the rulers of Jharkendar have erected 3 chambers full of deadly mysteries, designed to stop all intruders. The colored relics of the builders are the keys.";
 const string	LogText_Addon_SkipsRumToBaltram		=	"Skip gave me rum to take to Baltram.";
 
