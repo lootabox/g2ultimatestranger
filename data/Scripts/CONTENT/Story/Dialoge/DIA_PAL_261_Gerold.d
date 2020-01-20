@@ -480,7 +480,7 @@ func void DIA_Gerold_MoreFood ()
 {
 	Info_ClearChoices	(DIA_Gerold_FOOD);
 
-	if (Gerold_FoodCounter > 8)
+	if (Gerold_FoodCounter > 240)
 	{
 		AI_Output			(self, other, "DIA_Gerold_MoreFood_12_00"); //That's enough. That's enough. With that I'll be fine for a while.
 		AI_Output			(self, other, "DIA_Gerold_MoreFood_12_01"); //Here's my gold. I can't buy anything for it out here in any case, so you might as well have it.
@@ -501,7 +501,7 @@ func void DIA_Gerold_MoreFood ()
 		else
 		{
 			Info_AddChoice	(DIA_Gerold_FOOD, "That's all I have.", DIA_Gerold_FOOD_kaese_nichtmehr );
-			if (Gerold_FoodCounter < 5)
+			if (Gerold_FoodCounter < 150)
 			{
 				AI_Output			(self, other, "DIA_Gerold_MoreFood_12_03"); //Sure. Give it here. Do you have more?
 			}
@@ -535,7 +535,6 @@ func void DIA_Gerold_MoreFood ()
 		{
 			Info_AddChoice	(DIA_Gerold_FOOD, "(Give sausage)", DIA_Gerold_FOOD_Wurst );
 		};
-		Gerold_FoodCounter += 1;
 	};
 };
 
@@ -571,7 +570,7 @@ func void DIA_Gerold_FOOD_kaese_nichtmehr ()
 	var int XP_GeroldGiveFoodLow;
 	var int Teiler;
 	
-	if (Gerold_FoodCounter < 4)
+	if (Gerold_FoodCounter < 120)
 		{
 			Teiler = 3;
 		}
@@ -591,6 +590,7 @@ func void DIA_Gerold_FOOD_kaese ()
 {
 	AI_Output			(other, self, "DIA_Gerold_FOOD_kaese_15_00"); //What about a juicy hunk of cheese?
 	B_GiveInvItems (other,self , ItFo_Cheese, 1);	
+	Gerold_FoodCounter = (Gerold_FoodCounter + Value_Cheese);
 	DIA_Gerold_MoreFood ();
 };
 
@@ -598,6 +598,7 @@ func void DIA_Gerold_FOOD_Wurst ()
 {
 	AI_Output			(other, self, "DIA_Gerold_FOOD_Wurst_15_00"); //A piece of sausage?
 	B_GiveInvItems (other,self , ItFo_Sausage, 1);	
+	Gerold_FoodCounter = (Gerold_FoodCounter + Value_Sausage);
 	DIA_Gerold_MoreFood ();
 };
 
@@ -605,6 +606,7 @@ func void DIA_Gerold_FOOD_schinken ()
 {
 	AI_Output			(other, self, "DIA_Gerold_FOOD_schinken_15_00"); //I could give you this ham.
 	B_GiveInvItems (other,self , ItFo_Bacon, 1);	
+	Gerold_FoodCounter = (Gerold_FoodCounter + Value_Bacon);
 	DIA_Gerold_MoreFood ();
 };
 
@@ -612,6 +614,7 @@ func void DIA_Gerold_FOOD_fleisch ()
 {
 	AI_Output			(other, self, "DIA_Gerold_FOOD_fleisch_15_00"); //A chunk of meat?
 	B_GiveInvItems (other,self , ItFoMutton, 1);	
+	Gerold_FoodCounter = (Gerold_FoodCounter + Value_Meat);
 	DIA_Gerold_MoreFood ();
 };
 
@@ -619,6 +622,7 @@ func void DIA_Gerold_FOOD_Suppe ()
 {
 	AI_Output			(other, self, "DIA_Gerold_FOOD_Suppe_15_00"); //A good soup would hit the spot, don't you think?
 	B_GiveInvItems (other, self, ItFo_FishSoup,1);
+	Gerold_FoodCounter = (Gerold_FoodCounter + Value_FishSoup);
 	DIA_Gerold_MoreFood ();
 };
 
@@ -626,6 +630,7 @@ func void DIA_Gerold_FOOD_Stew()
 {
 	AI_Output			(other, self, "DIA_Gerold_FOOD_Suppe_15_00"); //A good soup would hit the spot, don't you think?
 	B_GiveInvItems (other,self , ItFo_Stew, 1);
+	Gerold_FoodCounter = (Gerold_FoodCounter + Value_Stew);
 	DIA_Gerold_MoreFood();
 };
 
