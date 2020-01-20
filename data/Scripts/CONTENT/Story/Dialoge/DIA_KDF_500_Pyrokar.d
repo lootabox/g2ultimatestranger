@@ -1625,11 +1625,11 @@ func int DIA_Pyrokar_SCOBSESSED_Condition ()
 	{
 		if (Lares_TakeFirstMissionFromVatras == TRUE)
 		{
-			DIA_Addon_Vatras_CloseMeeting.description = "Heal me, Master, for I am possessed.";
+			DIA_Pyrokar_SCOBSESSED.description = "Heal me, Master, for I am possessed.";
 		}
 		else
 		{
-			DIA_Addon_Vatras_CloseMeeting.description = "I think I am possessed. Can you heal me?";
+			DIA_Pyrokar_SCOBSESSED.description = "I think I am possessed. Can you heal me?";
 		};
 		return TRUE;
 	};
