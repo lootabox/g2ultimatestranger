@@ -736,7 +736,7 @@ INSTANCE ITAR_PAL_H (C_Item)
 // ******************************************************
 INSTANCE ITAR_BAU_L (C_Item)
 {
-	name 					=	"Farmer's Clothing 1";
+	name 					=	"Farmer's Clothing";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1401,7 +1401,7 @@ INSTANCE ITAR_NOV_L (C_Item)
 	protection [PROT_EDGE]	=	25;
 	protection [PROT_BLUNT] = 	25;
 	protection [PROT_POINT] = 	25;
-	protection [PROT_FIRE] 	= 	10;
+	protection [PROT_FIRE] 	= 	5;
 	protection [PROT_MAGIC] = 	0;
 
 	value 					=	VALUE_ITAR_NOV_L;
