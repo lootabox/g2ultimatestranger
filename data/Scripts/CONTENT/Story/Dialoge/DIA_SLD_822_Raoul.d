@@ -499,6 +499,7 @@ func void DIA_Raoul_TROLLFELL_Info ()
 	AI_Output			(other, self, "DIA_Raoul_TROLLFELL_15_00"); //I've got the hide of a black troll.
 	AI_Output			(self, other, "DIA_Raoul_TROLLFELL_01_01"); //Impossible. Show me.
 	B_GiveInvItems 		(other, self, ItAt_TrollBlackFur,1);
+	Npc_RemoveInvItems	(self, ItAt_TrollBlackFur,1);
 	AI_Output			(self, other, "DIA_Raoul_TROLLFELL_01_02"); //Incredible. What do you want for it?
 	AI_Output			(other, self, "DIA_Raoul_TROLLFELL_15_03"); //Give me what you've got.
 	AI_Output			(self, other, "DIA_Raoul_TROLLFELL_01_04"); //Okay. I'll give you 500 gold pieces and toss in three strong healing potions, what do you say?

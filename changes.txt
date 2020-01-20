@@ -475,6 +475,7 @@ Following items can no longer be bought or looted from certain NPCs:
 * Abuyin: Any tobacco given to him.
 * Anyone: Steel Blanks and Lab Water Bottles.
 * Bennet: Dragon Scales.
+* Bosper: Hide of a Black Troll.
 * Buster: Shadowbeast Horns and Gold given for his hint about Sentenza.
 * Coragon: Lehmar's book of debts and Valentino's ring.
 * Edda: Fish.
@@ -493,6 +494,7 @@ Following items can no longer be bought or looted from certain NPCs:
 * Neoras: Ingredients and Gold given to him for brewing potions.
 * Pedro: Valuable statue of Innos.
 * Pepe: Gold used to buy sheep.
+* Raoul: Hide of a Black Troll.
 * Sagitta: Sun Aloe and Thekla's Parcel.
 * Saturas: Vatras' letter for Saturas and the piece of the Ornament.
 * Serpentes: Khorinis Ore Mine Shares.

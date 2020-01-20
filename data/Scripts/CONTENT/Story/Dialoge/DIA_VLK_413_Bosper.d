@@ -941,6 +941,7 @@ func void DIA_Bosper_SellFur_Info ()
 				AI_Output (self, other, "DIA_Bosper_SellFur_11_11"); //And the hide of a black troll, at that!
 				B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_TrollBlackFur) * Value_TrollBlackFur) );
 				B_GiveInvItems(other, self, ItAt_TrollBlackFur, Npc_HasItems(other, ItAt_TrollBlackFur));
+				Npc_RemoveInvItems(self, ItAt_TrollBlackFur, Npc_HasItems(other, ItAt_TrollBlackFur));
 			};
 		};
 		
