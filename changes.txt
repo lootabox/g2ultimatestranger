@@ -59,14 +59,21 @@ Addon is only accessible in chapter 3. Xardas will give the addon introduction a
 
 	Quests
 
-"Bottoms up" contest is only won by Randolph if Rukhar does not notice someone has been to his chest.
-"Cavalorn's old hut" only begins once NH finds the bag of ore, since before that the NH does not really have a task that he knows about.
-"Finding Joe" no longer has its own logged quest, since for all NH knows, he is just another missing person.
-"I gotta get out of here!" requires Talbin to be escorted through the pass and he doesn't spawn on Bengars farm right away.
-"Merchant raid" requires finding the bandits who took Erol's stone tablets, before returning any stone tablets.
-"Quest for Lucia" is now just about delivering her note to Elvrich, after that she is just another missing person.
-"The Claw of Beliar" requires talking to Saturas before praying to Beliar and the option to destroy is only presented once then.
-"The Seekers" can be finished by bringing all of the Almanacs to Pyrokar before leaving for Irdorath.
+Quest changes which significantly affect how specific quests work or finish.
+This does not include minor changes to quest related dialog or obvious fixes, such as closing quests that can no longer be completed, etc.
+
+"A Brazen Thief"	Rengaru runs much further when confronted and if not caught will return to his regular spot.
+"Bottoms up"	Contest is only won by Randolph if Rukhar does not notice someone has been to his chest.
+"Cavalorn's old hut"	Only begins once NH finds the bag of ore, since before that the NH does not really have a task that he knows about.
+"Finding Joe"	No longer has its own logged quest, since for all NH knows, he is just another missing person.
+"I gotta get out of here!"	Requires Talbin to be escorted through the pass and he doesn't spawn on Bengars farm right away.
+"Merchant raid"	Requires finding the bandits who took Erol's stone tablets, before returning any stone tablets.
+"Quest for Lucia"	Is now just about delivering her note to Elvrich, after that she is just another missing person.
+"Rescue Gorn"	Can only be finished after scouting at least one mining site.
+"The Claw of Beliar"	Requires talking to Saturas before praying to Beliar and the option to destroy is only presented once then.
+"The Seekers"	Can be finished by bringing all of the Almanacs to Pyrokar before leaving for Irdorath.
+"The man with the eyepatch"	Cancels if the first treasure is not given to him.
+"Unnerving Lurkers"	Cancels in chapter 4 if not finished, causing Kervo and Geppert to be killed by a lurker instead of disappearing.
 
 
 	Monster
@@ -240,7 +247,7 @@ Gerold will not wait to say that he delivered the note if Gorn is already out of
 Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
 Gorn leads the NH to the rock fortress instead of running ahead of him.
-Greg's treasure hunt quest cancels if the first treasure is not given to him and he will comment in Jharkendar if the quest fails.
+Greg will comment in Jharkendar if the player did not finish his treasure hunt quest in Khorinis.
 Grimbald does not teach NH for free without finishing the hunt.
 Grimbald gives NH experience for killed snappers.
 Grimbald makes a remark once the hunt is over.
@@ -276,13 +283,12 @@ Karras does not offer his wares to non-mages.
 Kati can be asked about location of Bengar and Sekobs farms only before talking to them.
 Kati can die during his fight with the mercenaries.
 Kati can only be asked for Baltram's shipment and food after asking her whether she is alright.
-Kervo's quest cancels in chapter 4, causing Kervo and Geppert to be killed by a Lurker instead of them disappearing.
 Kervo's quest fails if he is killed.
 Knight 263 can be asked for a report only if NH is paladin.
 Landlord will not give more then 5 beers per chapter and only 1 per day.
 Lares can be asked for help with other issues after asking for money.
 Lares has same sword in Irdorath as in Khorinis and doesn't carry an extra sword.
-Lares has some dialog on the patch bug fix option, when retrieving the ornament from him in chapter 3.
+Lares has voiced dialog on the patched glitch correction option, when retrieving the ornament from him in chapter 3.
 Lares properly closes the quest "Relief for Lares" in his dialog.
 Lares wears the armor of the 'Ring of Water' instead of citizen clothes in Irdorath.
 Lares won't comment on NH's choice of guild if he never was talked to before.
@@ -341,9 +347,8 @@ Randolph gives the experience bonus for winning Rukhar in the drinking competiti
 Randolph runs away from the bandits on the bridge and avoids fighting them.
 Raoul turns toward Sentenza when he calls for him.
 Regis will tell the whole story of Bosper's bow thief, if talking to him after the bow was returned.
-Rengaru runs much further when confronted and if not caught will return to his regular spot.
 Rengaru will move to another location when threatened with prisonment.
-Rethon will only work with Jan after givent he permission from Garond.
+Rethon will only work with Jan after given the permission from Garond.
 Riordian mentions William in the initial dialogue instead of the dialogue about the west.
 Rod will give no experience for returning his sword later.
 Rosi can only be asked about Bengar's farm if NH has not yet spoken with Bengar.

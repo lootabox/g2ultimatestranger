@@ -360,7 +360,7 @@ FUNC VOID DIA_Garond_NeedProof_Info()
 	AI_Output (self ,other,"DIA_Garond_NeedProof_10_06"); //I've got three troops of scrapers out there, but they haven't sent me a single nugget.
 	AI_Output (self ,other,"DIA_Garond_NeedProof_10_07"); //Visit the mining sites and report back to me how much ore they have stored.
 	AI_Output (self ,other,"DIA_Garond_NeedProof_10_08"); //Then I'll write you a letter that you are going to take back to Lord Hagen.
-	AI_Output (other,self ,"DIA_Garond_NeedProof_15_09"); //Of well - I guess I have no choice.
+	AI_Output (other,self ,"DIA_Garond_NeedProof_15_09"); //Oh well - I guess I have no choice.
 	
 	MIS_ScoutMine = LOG_RUNNING;
 	B_StartOtherRoutine (Jergan,"FAJETH");
@@ -777,7 +777,7 @@ INSTANCE DIA_Garond_Gorn (C_INFO)
 	nr			= 4;
 	condition	= DIA_Garond_Gorn_Condition;
 	information	= DIA_Garond_Gorn_Info;
-	permanent	= FALSE;
+	permanent	= TRUE;
 	description = "I want you to let Gorn go.";
 };                       
 
@@ -786,21 +786,39 @@ FUNC INT DIA_Garond_Gorn_Condition()
 	if (Npc_KnowsInfo (other, DIA_MiltenOW_Gorn))
 	&& (Kapitel == 2)
 	&& (Npc_KnowsInfo (other, DIA_Garond_NeedProof))
+	&& (MIS_RescueGorn < LOG_RUNNING)
 	{
 		return TRUE;
 	};
 };
+var int DIA_Garond_Gorn_Fail_Once;
 FUNC VOID DIA_Garond_Gorn_Info()
 {		
 	AI_Output (other,self ,"DIA_Garond_Gorn_15_00"); //I want you to let Gorn go.
 	AI_Output (self ,other,"DIA_Garond_Gorn_10_01"); //I can't let him go. He has committed many crimes and they must be atoned for.
 	AI_Output (other,self ,"DIA_Garond_Gorn_15_02"); //Can I pay his penalty?
-	AI_Output (self ,other,"DIA_Garond_Gorn_10_03"); //That might be a possibility - but certainly not a cheap one. I want 1000 gold pieces for Gorn.
-	AI_Output (other,self ,"DIA_Garond_Gorn_15_04"); //That's a lot of gold.
-	AI_Output (self ,other,"DIA_Garond_Gorn_10_05"); //Gorn also has much to answer for. Bring me the gold and I'll set Gorn free.
-	
-	MIS_RescueGorn = LOG_RUNNING; 
-	B_LogEntry (TOPIC_RescueGorn,"Garond demands a thousand pieces of gold to set Gorn free.");
+
+	if (Ore_Counter < 1)
+	{
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_05"); //Let me explain something to you. We're all together in the same trap here.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_02"); //Murder is just about the last thing I need here.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_03"); //I need every single one of my people - and now I'm left with one less again!
+		AI_Output (self, other, "DIA_Garond_Gorn_10_02_EXT"); //So, I can't help you.
+		if (DIA_Garond_Gorn_Fail_Once == FALSE)
+		{
+			B_LogEntry (TOPIC_RescueGorn,"Garond won't let me buy Gorn's freedom. Perhaps he will change his mind if I gain his trust.");
+			DIA_Garond_Gorn_Fail_Once = TRUE;
+		};
+	}
+	else
+	{
+		AI_Output (self ,other,"DIA_Garond_Gorn_10_03"); //That might be a possibility - but certainly not a cheap one. I want 1000 gold pieces for Gorn.
+		AI_Output (other,self ,"DIA_Garond_Gorn_15_04"); //That's a lot of gold.
+		AI_Output (self ,other,"DIA_Garond_Gorn_10_05"); //Gorn also has much to answer for. Bring me the gold and I'll set Gorn free.
+		
+		MIS_RescueGorn = LOG_RUNNING; 
+		B_LogEntry (TOPIC_RescueGorn,"Garond demands a thousand pieces of gold to set Gorn free.");
+	};
 };
 // ************************************************************
 // Gorn freikaufen

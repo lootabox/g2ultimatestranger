@@ -1,7 +1,7 @@
 FILE   { CONTENT\LEGO\TRIALOGE.D }
 SYMBOL {     Ai_Output(hero,self,""); }
 LINE   { 270 }
-FILEPOS{ 9583 }
+FILEPOS{ 9580 }
 
 FILE   { CONTENT\STORY\B_CONTENT\B_LIESELMAEH.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Liesel_15_00");	//Baaah! }
@@ -12155,58 +12155,58 @@ FILEPOS{ 24178 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_ADDON_KDW_1400_SATURAS_NW.D }
 SYMBOL { 			AI_Output	(other, self, "DIA_Addon_Saturas_OpenPortal_15_03"); //I HAVE a message from Vatras for you. }
-LINE   { 558 }
-FILEPOS{ 24683 }
+LINE   { 557 }
+FILEPOS{ 24517 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_ADDON_KDW_1400_SATURAS_NW.D }
 SYMBOL { 				AI_Output	(self, other, "DIA_Addon_Saturas_OpenPortal_14_04"); //(annoyed) I see. Of course you couldn't restrain yourself and you absolutely had to open it, yes? }
-LINE   { 568 }
-FILEPOS{ 25364 }
+LINE   { 567 }
+FILEPOS{ 25198 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_ADDON_KDW_1400_SATURAS_NW.D }
 SYMBOL { 				AI_Output	(other, self, "DIA_Addon_Saturas_OpenPortal_15_05"); //Well, uhh... }
-LINE   { 569 }
-FILEPOS{ 25532 }
+LINE   { 568 }
+FILEPOS{ 25366 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_ADDON_KDW_1400_SATURAS_NW.D }
 SYMBOL { 				AI_Output	(self, other, "DIA_Addon_Saturas_OpenPortal_14_06"); //(threatening) I hope for your sake that my still very delicate trust in you will not be shaken. }
-LINE   { 570 }
-FILEPOS{ 25615 }
+LINE   { 569 }
+FILEPOS{ 25449 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_ADDON_KDW_1400_SATURAS_NW.D }
 SYMBOL { 				AI_Output	(self, other, "DIA_Addon_Saturas_OpenPortal_14_07"); //(amazed) Very interesting. All right. }
-LINE   { 574 }
-FILEPOS{ 25802 }
+LINE   { 573 }
+FILEPOS{ 25636 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_ADDON_KDW_1400_SATURAS_NW.D }
 SYMBOL { 			AI_Output	(self, other, "DIA_Addon_Saturas_OpenPortal_14_08"); //Here, take the ring. We shall gather at the portal and wait for you. }
-LINE   { 578 }
-FILEPOS{ 25958 }
+LINE   { 577 }
+FILEPOS{ 25792 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_ADDON_KDW_1400_SATURAS_NW.D }
 SYMBOL { 			AI_Output	(self, other, "DIA_Addon_Saturas_OpenPortal_14_09"); //If Nefarius is right, the portal will open as soon as you insert the ring there. }
-LINE   { 583 }
-FILEPOS{ 26217 }
+LINE   { 582 }
+FILEPOS{ 26051 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_ADDON_KDW_1400_SATURAS_NW.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Saturas_OpenPortal_14_10"); //As long as Vatras has not given me a clear sign that you are to be trusted, I shall keep the ring myself. }
 LINE   { 603 }
-FILEPOS{ 27074 }
+FILEPOS{ 27075 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_ADDON_KDW_1400_SATURAS_NW.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Saturas_PERM_15_00"); //Can you teach me anything about magic? }
 LINE   { 637 }
-FILEPOS{ 28149 }
+FILEPOS{ 28150 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_ADDON_KDW_1400_SATURAS_NW.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Saturas_PERM_14_01"); //So that you can once again interfere with the magical structure? }
 LINE   { 638 }
-FILEPOS{ 28249 }
+FILEPOS{ 28250 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_ADDON_KDW_1400_SATURAS_NW.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Saturas_PERM_14_02"); //No. I have no time for such games. }
 LINE   { 639 }
-FILEPOS{ 28375 }
+FILEPOS{ 28376 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_ADDON_KDW_14010_CRONOS_ADW.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Cronos_ADWHello_04_00"); //Nice to see you. We feared the worst. }
@@ -30975,68 +30975,68 @@ FILEPOS{ 26867 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_970_ORLAN.D }
 SYMBOL { 				AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_04"); //This time Randolph has won. Rukhar must have been having a bad day. }
-LINE   { 720 }
-FILEPOS{ 27072 }
+LINE   { 722 }
+FILEPOS{ 27193 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_970_ORLAN.D }
 SYMBOL { 				AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_05"); //Once again, Rukhar has gotten Randolph pickled. It was only to be expected. }
-LINE   { 724 }
-FILEPOS{ 27230 }
+LINE   { 726 }
+FILEPOS{ 27351 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_970_ORLAN.D }
 SYMBOL { 				AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_06"); //So, well, I hope that was the last time. I don't want that kind of to-do in my house ever again, remember that. }
-LINE   { 730 }
-FILEPOS{ 27487 }
+LINE   { 732 }
+FILEPOS{ 27608 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_970_ORLAN.D }
 SYMBOL { 			AI_Output	(self, other, "DIA_Orlan_EINGEBROCKT_05_00"); //That was a fine mess you got me into. Now I can play lookout for Rukhar again. }
-LINE   { 789 }
-FILEPOS{ 28977 }
+LINE   { 791 }
+FILEPOS{ 29098 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_970_ORLAN.D }
 SYMBOL { 			AI_Output	(other, self, "DIA_Orlan_EINGEBROCKT_15_01"); //Why? }
-LINE   { 790 }
-FILEPOS{ 29118 }
+LINE   { 792 }
+FILEPOS{ 29239 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_970_ORLAN.D }
 SYMBOL { 			AI_Output	(self, other, "DIA_Orlan_EINGEBROCKT_05_02"); //As long as he's holding his little contests in there, it's better if no outsider learns about it. It's not good for business, you see? }
-LINE   { 791 }
-FILEPOS{ 29185 }
+LINE   { 793 }
+FILEPOS{ 29306 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_970_ORLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Orlan_Perm_15_00"); //How's it going with your tavern? }
-LINE   { 817 }
-FILEPOS{ 29954 }
+LINE   { 819 }
+FILEPOS{ 30075 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_970_ORLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Orlan_Perm_05_01"); //Times have been better, you know? }
-LINE   { 821 }
-FILEPOS{ 30067 }
+LINE   { 823 }
+FILEPOS{ 30188 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_970_ORLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Orlan_Perm_05_02"); //People's purses aren't as open as they used to be. }
-LINE   { 822 }
-FILEPOS{ 30155 }
+LINE   { 824 }
+FILEPOS{ 30276 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_970_ORLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Orlan_Perm_05_03"); //Hopefully these black magicians will move on soon, otherwise I can close the tavern. }
-LINE   { 826 }
-FILEPOS{ 30293 }
+LINE   { 828 }
+FILEPOS{ 30414 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_970_ORLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Orlan_Perm_05_04"); //Almost nobody dares to come here anymore. }
-LINE   { 827 }
-FILEPOS{ 30432 }
+LINE   { 829 }
+FILEPOS{ 30553 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_970_ORLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Orlan_Minenanteil_15_00"); //You're selling mine shares? }
-LINE   { 857 }
-FILEPOS{ 31222 }
+LINE   { 859 }
+FILEPOS{ 31343 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_970_ORLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Orlan_Minenanteil_05_01"); //Sure. You can get anything from me, if the price is right. }
-LINE   { 858 }
-FILEPOS{ 31310 }
+LINE   { 860 }
+FILEPOS{ 31431 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_BAU_973_RUKHAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Rukhar_HALLO_15_00"); //Is the beer any good here? }
@@ -38199,629 +38199,629 @@ LINE   { 1602 }
 FILEPOS{ 69149 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
-SYMBOL { 					AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_15_00"); //Heal me, Master, for I am possessed. }
-LINE   { 1638 }
-FILEPOS{ 70254 }
+SYMBOL { 		AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_15_00"); //Heal me, Master, for I am possessed. }
+LINE   { 1643 }
+FILEPOS{ 70341 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
-SYMBOL { 					AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_01"); //So be it! Take this potion. It will relieve you of your nightmares. }
-LINE   { 1640 }
-FILEPOS{ 70364 }
+SYMBOL { 		AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_15_05"); //I think I am possessed. Can you heal me? }
+LINE   { 1647 }
+FILEPOS{ 70457 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
-SYMBOL { 					AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_02"); //May the mercy of Innos be your salvation. }
-LINE   { 1641 }
-FILEPOS{ 70499 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
-SYMBOL { 					AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_03"); //Act on his behalf and beware of the evil eye of the enemy. }
-LINE   { 1642 }
-FILEPOS{ 70608 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
-SYMBOL { 							AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_04"); //But be forewarned - if you expose yourself to their power too often, at some point there will be no turning back for you. Always remember that. }
-LINE   { 1646 }
-FILEPOS{ 70783 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
-SYMBOL { 					AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_15_05"); //I think I am possessed. Can you heal me? }
+SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_01"); //So be it! Take this potion. It will relieve you of your nightmares. }
 LINE   { 1655 }
-FILEPOS{ 71214 }
+FILEPOS{ 70751 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
-SYMBOL { 					AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_06"); //Not without a token of your respect for this monastery, my son. 300 gold coins. }
+SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_02"); //May the mercy of Innos be your salvation. }
 LINE   { 1656 }
-FILEPOS{ 71322 }
+FILEPOS{ 70884 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
-SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_07"); //But you only just had your healing potion. Don't come back to me until you really need my help. }
-LINE   { 1665 }
-FILEPOS{ 71753 }
+SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_03"); //Act on his behalf and beware of the evil eye of the enemy. }
+LINE   { 1657 }
+FILEPOS{ 70991 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
+SYMBOL { 				AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_04"); //But be forewarned - if you expose yourself to their power too often, at some point there will be no turning back for you. Always remember that. }
+LINE   { 1661 }
+FILEPOS{ 71157 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
+SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_06"); //Not without a token of your respect for this monastery, my son. 300 gold coins. }
+LINE   { 1670 }
+FILEPOS{ 71569 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
+SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_07"); //But you only just had your healing potion. Don't come back to me until you really need my help. }
+LINE   { 1679 }
+FILEPOS{ 71984 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_ok_15_00"); //Great. Here's the money. }
-LINE   { 1670 }
-FILEPOS{ 71968 }
+LINE   { 1684 }
+FILEPOS{ 72196 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_ok_11_01"); //Here, drink this. May the mercy of Innos be your salvation. }
-LINE   { 1674 }
-FILEPOS{ 72117 }
+LINE   { 1688 }
+FILEPOS{ 72345 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_ok_11_02"); //Bring me the money, and you will be helped. }
-LINE   { 1681 }
-FILEPOS{ 72430 }
+LINE   { 1695 }
+FILEPOS{ 72658 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_nein_15_00"); //That's too much. }
-LINE   { 1688 }
-FILEPOS{ 72645 }
+LINE   { 1702 }
+FILEPOS{ 72873 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_AlmanachBringen_15_00"); //I can tell you even more about those possessed. }
-LINE   { 1722 }
-FILEPOS{ 73634 }
+LINE   { 1736 }
+FILEPOS{ 73862 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_01"); //Speak, Brother. }
-LINE   { 1723 }
-FILEPOS{ 73750 }
+LINE   { 1737 }
+FILEPOS{ 73978 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output		(other, self, "DIA_Pyrokar_AlmanachBringen_15_02"); //I have found another almanac. }
-LINE   { 1737 }
-FILEPOS{ 74127 }
+LINE   { 1751 }
+FILEPOS{ 74355 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output		(other, self, "DIA_Pyrokar_AlmanachBringen_15_03"); //I've got even more books of the Seekers for you. }
-LINE   { 1744 }
-FILEPOS{ 74398 }
+LINE   { 1758 }
+FILEPOS{ 74626 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_04"); //That is good. I am afraid, however, that there are more of these to find. Go on searching. }
-LINE   { 1756 }
-FILEPOS{ 74814 }
+LINE   { 1770 }
+FILEPOS{ 75042 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_05"); //Many have been found already. But I do not think that we have all of them. }
-LINE   { 1761 }
-FILEPOS{ 75019 }
+LINE   { 1775 }
+FILEPOS{ 75247 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_06"); //You have already brought me a great number of the enemy's books. }
-LINE   { 1765 }
-FILEPOS{ 75178 }
+LINE   { 1779 }
+FILEPOS{ 75406 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_07"); //I should be surprised if they had many more in circulation. }
-LINE   { 1766 }
-FILEPOS{ 75312 }
+LINE   { 1780 }
+FILEPOS{ 75540 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_08"); //Take this. It is a gift from the monastery which will help you when you face evil. }
-LINE   { 1769 }
-FILEPOS{ 75448 }
+LINE   { 1785 }
+FILEPOS{ 75836 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_09"); //And remember to have a look in my magic letter once in a while. }
-LINE   { 1772 }
-FILEPOS{ 75655 }
+LINE   { 1788 }
+FILEPOS{ 76043 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_10"); //It is possible that they may try the same on others whose names were not yet found in the almanacs. }
-LINE   { 1773 }
-FILEPOS{ 75788 }
+LINE   { 1789 }
+FILEPOS{ 76176 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_DRACHENTOT_15_00"); //All the dragons are dead. }
-LINE   { 1870 }
-FILEPOS{ 78289 }
+LINE   { 1886 }
+FILEPOS{ 78677 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DRACHENTOT_11_01"); //That is good news indeed. But it does nothing to change our situation, which seems hopeless. }
-LINE   { 1871 }
-FILEPOS{ 78378 }
+LINE   { 1887 }
+FILEPOS{ 78766 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DRACHENTOT_11_02"); //The Seekers still have not left. On the contrary. I hear more and more reports that, during these last few days, their numbers have even increased. }
-LINE   { 1872 }
-FILEPOS{ 78534 }
+LINE   { 1888 }
+FILEPOS{ 78922 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DRACHENTOT_11_03"); //Killing off the dragons has dealt the enemy a blow, but it did not suffice. We need to dig this evil out by the roots. }
-LINE   { 1873 }
-FILEPOS{ 78745 }
+LINE   { 1889 }
+FILEPOS{ 79133 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_DERMEISTER_15_00"); //I talked to the dragons. }
-LINE   { 1900 }
-FILEPOS{ 79485 }
+LINE   { 1916 }
+FILEPOS{ 79873 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DERMEISTER_11_01"); //What did they say? }
-LINE   { 1901 }
-FILEPOS{ 79573 }
+LINE   { 1917 }
+FILEPOS{ 79961 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_DERMEISTER_15_02"); //They kept talking about the power of their master, and how he settled in the Halls of Irdorath. }
-LINE   { 1902 }
-FILEPOS{ 79655 }
+LINE   { 1918 }
+FILEPOS{ 80043 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DERMEISTER_11_03"); //Innos be with us. The Black Temple has regained its power and is now sending its henchmen into our world. }
-LINE   { 1903 }
-FILEPOS{ 79814 }
+LINE   { 1919 }
+FILEPOS{ 80202 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_WASISTIRDORATH_15_00"); //What are these halls of Irdorath? }
-LINE   { 1931 }
-FILEPOS{ 80630 }
+LINE   { 1947 }
+FILEPOS{ 81018 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_01"); //The eastern invocation temple of the god Beliar. There are four of them in the land of Myrtana. But this one is probably the most terrifying temple of all. }
-LINE   { 1932 }
-FILEPOS{ 80731 }
+LINE   { 1948 }
+FILEPOS{ 81119 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_02"); //About 40 years ago, the northern and western temples of this horrible deity were destroyed. }
-LINE   { 1933 }
-FILEPOS{ 80954 }
+LINE   { 1949 }
+FILEPOS{ 81342 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_03"); //The brave knights of that time gave their all to raze those mighty constructions to the ground. }
-LINE   { 1934 }
-FILEPOS{ 81113 }
+LINE   { 1950 }
+FILEPOS{ 81501 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_04"); //Back then, the black hordes of the enemy were helpless against the superior numbers and the heroic courage of the knights and paladins. }
-LINE   { 1935 }
-FILEPOS{ 81276 }
+LINE   { 1951 }
+FILEPOS{ 81664 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_05"); //It would have been easy to destroy the other two temples as well and rid the land of evil forever... }
-LINE   { 1936 }
-FILEPOS{ 81479 }
+LINE   { 1952 }
+FILEPOS{ 81867 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_06"); //... but after the second temple fell, they simply disappeared. }
-LINE   { 1937 }
-FILEPOS{ 81647 }
+LINE   { 1953 }
+FILEPOS{ 82035 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_WASISTIRDORATH_15_07"); //(mocking) Disappeared. An entire temple. Yeah, right. }
-LINE   { 1938 }
-FILEPOS{ 81777 }
+LINE   { 1954 }
+FILEPOS{ 82165 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_08"); //Do not mock me. The situation is serious. If the Halls of Irdorath have indeed regained their power, then it will not be easy to defeat the enemy. }
-LINE   { 1939 }
-FILEPOS{ 81898 }
+LINE   { 1955 }
+FILEPOS{ 82286 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_09"); //For that, you would have to find it first, and I think that this will be your next, and hardest, task. }
-LINE   { 1940 }
-FILEPOS{ 82112 }
+LINE   { 1956 }
+FILEPOS{ 82500 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_WASISTIRDORATH_15_10"); //We shall see. }
-LINE   { 1941 }
-FILEPOS{ 82282 }
+LINE   { 1957 }
+FILEPOS{ 82670 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_BUCHIRDORATH_15_00"); //Xardas' book which was believed to be lost - where is it? }
-LINE   { 1973 }
-FILEPOS{ 83235 }
+LINE   { 1989 }
+FILEPOS{ 83623 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHIRDORATH_11_01"); //I have been expecting you would ask that. But I fear that it will be of no help to you. }
-LINE   { 1974 }
-FILEPOS{ 83358 }
+LINE   { 1990 }
+FILEPOS{ 83746 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHIRDORATH_11_02"); //It has been magically sealed. I took it to one of our lower vaults, and even we have so far tried in vain to open it. }
-LINE   { 1975 }
-FILEPOS{ 83511 }
+LINE   { 1991 }
+FILEPOS{ 83899 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHIRDORATH_11_03"); //That accursed Xardas has played a dirty trick on us. }
-LINE   { 1976 }
-FILEPOS{ 83694 }
+LINE   { 1992 }
+FILEPOS{ 84082 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_BUCHIRDORATH_15_04"); //Can I see the book? }
-LINE   { 1977 }
-FILEPOS{ 83812 }
+LINE   { 1993 }
+FILEPOS{ 84200 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHIRDORATH_11_05"); //Be my guest. I cannot imagine you being successful where the greatest masters of our monastery have failed. }
-LINE   { 1978 }
-FILEPOS{ 83897 }
+LINE   { 1994 }
+FILEPOS{ 84285 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHIRDORATH_11_06"); //But go ahead and give it a try, Talamon is not going to stop you. }
-LINE   { 1979 }
-FILEPOS{ 84070 }
+LINE   { 1995 }
+FILEPOS{ 84458 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_IRDORATHBOOKOPEN_15_00"); //I've been able to open Xardas' book. }
-LINE   { 2010 }
-FILEPOS{ 85133 }
+LINE   { 2026 }
+FILEPOS{ 85521 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_11_01"); //What? How did you do that? It well-nigh drove me to despair. }
-LINE   { 2011 }
-FILEPOS{ 85239 }
+LINE   { 2027 }
+FILEPOS{ 85627 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_IRDORATHBOOKOPEN_glueck_15_00"); //Just dumb luck, I suppose. }
-LINE   { 2021 }
-FILEPOS{ 85717 }
+LINE   { 2037 }
+FILEPOS{ 86105 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_glueck_11_01"); //Don't talk nonsense. Luck! }
-LINE   { 2022 }
-FILEPOS{ 85820 }
+LINE   { 2038 }
+FILEPOS{ 86208 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_glueck_11_02"); //When not even I succeed in opening the book, and then someone like you comes waltzing in... }
-LINE   { 2023 }
-FILEPOS{ 85923 }
+LINE   { 2039 }
+FILEPOS{ 86311 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_glueck_11_03"); //... that gives me something to ponder about. }
-LINE   { 2024 }
-FILEPOS{ 86091 }
+LINE   { 2040 }
+FILEPOS{ 86479 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_glueck_11_04"); //Anyway. Since you were obviously the only one who was able to open the book, then may it be granted unto you to carry it. At least until we have weathered this crisis. }
-LINE   { 2025 }
-FILEPOS{ 86212 }
+LINE   { 2041 }
+FILEPOS{ 86600 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_IRDORATHBOOKOPEN_Xardas_15_00"); //Xardas told me the trick. }
-LINE   { 2034 }
-FILEPOS{ 86602 }
+LINE   { 2050 }
+FILEPOS{ 86990 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_Xardas_11_01"); //Ah, is that it. How interesting. I can only hope for you that Xardas' bad influence is not going to spoil you. }
-LINE   { 2035 }
-FILEPOS{ 86704 }
+LINE   { 2051 }
+FILEPOS{ 87092 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_Xardas_11_02"); //I am warning you. Do not fall for the tricks of that old devil. You might come to regret it. }
-LINE   { 2036 }
-FILEPOS{ 86891 }
+LINE   { 2052 }
+FILEPOS{ 87279 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_GEHEIMEBIBLIOTHEK_15_00"); //The book mentions a secret library. }
-LINE   { 2069 }
-FILEPOS{ 87909 }
+LINE   { 2085 }
+FILEPOS{ 88297 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_GEHEIMEBIBLIOTHEK_11_01"); //Whatever are you talking about? }
-LINE   { 2070 }
-FILEPOS{ 88015 }
+LINE   { 2086 }
+FILEPOS{ 88403 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_GEHEIMEBIBLIOTHEK_15_02"); //A library beneath these walls here. Does that ring a bell? }
-LINE   { 2071 }
-FILEPOS{ 88117 }
+LINE   { 2087 }
+FILEPOS{ 88505 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_GEHEIMEBIBLIOTHEK_11_03"); //No. Where is that library supposed to be, did you say? }
-LINE   { 2072 }
-FILEPOS{ 88246 }
+LINE   { 2088 }
+FILEPOS{ 88634 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_GEHEIMEBIBLIOTHEK_15_04"); //I see. You have no idea. Mmh. }
-LINE   { 2073 }
-FILEPOS{ 88371 }
+LINE   { 2089 }
+FILEPOS{ 88759 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_15_00"); //I know where to find the Halls of Irdorath. }
-LINE   { 2104 }
-FILEPOS{ 89361 }
+LINE   { 2120 }
+FILEPOS{ 89749 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_15_01"); //The temple is on an island. I've found a nautical chart which shows the way. }
-LINE   { 2105 }
-FILEPOS{ 89478 }
+LINE   { 2121 }
+FILEPOS{ 89866 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_11_02"); //That is great. Then you will need a ship and a crew in order to face the enemy. }
-LINE   { 2106 }
-FILEPOS{ 89628 }
+LINE   { 2122 }
+FILEPOS{ 90016 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_11_03"); //But remember you need to be well prepared if you want to vanquish the Master of Irdorath. }
-LINE   { 2107 }
-FILEPOS{ 89781 }
+LINE   { 2123 }
+FILEPOS{ 90169 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_15_04"); //Where can I find a crew? }
-LINE   { 2108 }
-FILEPOS{ 89944 }
+LINE   { 2124 }
+FILEPOS{ 90332 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_11_05"); //Your crew should consist of men you can trust. }
-LINE   { 2109 }
-FILEPOS{ 90042 }
+LINE   { 2125 }
+FILEPOS{ 90430 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_11_06"); //Talk to your friends and think about who could be useful to you once you are on the island. }
-LINE   { 2110 }
-FILEPOS{ 90162 }
+LINE   { 2126 }
+FILEPOS{ 90550 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_11_07"); //You are going to need a magician as well. But alas, I cannot spare a single man from the monastery. }
-LINE   { 2111 }
-FILEPOS{ 90327 }
+LINE   { 2127 }
+FILEPOS{ 90715 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_11_08"); //You will have to ask a magician who is not working within the monastery. }
-LINE   { 2112 }
-FILEPOS{ 90500 }
+LINE   { 2128 }
+FILEPOS{ 90888 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCWILLJORGEN_15_00"); //Jorgen is an experienced sailor. He could help me get to the Isle of Irdorath. }
-LINE   { 2141 }
-FILEPOS{ 91336 }
+LINE   { 2157 }
+FILEPOS{ 91724 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCWILLJORGEN_11_01"); //That will not be so easy, I fear. }
-LINE   { 2142 }
-FILEPOS{ 91480 }
+LINE   { 2158 }
+FILEPOS{ 91868 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCWILLJORGEN_11_02"); //He has signed on to work for the brotherhood. He has neither paid the tribute, nor brought us a sheep. }
-LINE   { 2143 }
-FILEPOS{ 91579 }
+LINE   { 2159 }
+FILEPOS{ 91967 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCWILLJORGEN_11_03"); //Jorgen must finish his work first, then you can take him if you like. }
-LINE   { 2144 }
-FILEPOS{ 91747 }
+LINE   { 2160 }
+FILEPOS{ 92135 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCWILLJORGEN_15_04"); //How long will it take? }
-LINE   { 2145 }
-FILEPOS{ 91882 }
+LINE   { 2161 }
+FILEPOS{ 92270 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCWILLJORGEN_11_05"); //He used up the provisions which would have lasted a novice three weeks, and all on the first day. }
-LINE   { 2146 }
-FILEPOS{ 91970 }
+LINE   { 2162 }
+FILEPOS{ 92358 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCWILLJORGEN_11_06"); //So I cannot let him go before he has worked hard in our gardens for three months. }
-LINE   { 2147 }
-FILEPOS{ 92133 }
+LINE   { 2163 }
+FILEPOS{ 92521 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_MACHDTFREI_15_00"); //What do I have to do so I can take Jorgen with me NOW? }
-LINE   { 2175 }
-FILEPOS{ 92927 }
+LINE   { 2191 }
+FILEPOS{ 93315 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_MACHDTFREI_11_01"); //Mmh. There is indeed one thing you could do for me. Your good rapport with Xardas could help you with that. }
-LINE   { 2176 }
-FILEPOS{ 93045 }
+LINE   { 2192 }
+FILEPOS{ 93433 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_MACHDTFREI_11_02"); //It has come to my attention that, during these last few days, strange things have been going on in his tower. }
-LINE   { 2177 }
-FILEPOS{ 93216 }
+LINE   { 2193 }
+FILEPOS{ 93604 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_MACHDTFREI_11_03"); //Many of the town people hear loud screams at night coming from there, and see strange lights dancing over his tower. }
-LINE   { 2178 }
-FILEPOS{ 93389 }
+LINE   { 2194 }
+FILEPOS{ 93777 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_MACHDTFREI_11_04"); //As if we didn't have our plate full already. Go check what is going on there, and make it stop. }
-LINE   { 2179 }
-FILEPOS{ 93569 }
+LINE   { 2195 }
+FILEPOS{ 93957 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_MACHDTFREI_11_05"); //Then you can have Jorgen. }
-LINE   { 2180 }
-FILEPOS{ 93728 }
+LINE   { 2196 }
+FILEPOS{ 94116 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_DTCLEARED_15_00"); //The thing with Xardas' tower has resolved itself. }
-LINE   { 2218 }
-FILEPOS{ 94957 }
+LINE   { 2234 }
+FILEPOS{ 95345 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DTCLEARED_11_01"); //So what was going on... no, wait, I do not even want to know. }
-LINE   { 2219 }
-FILEPOS{ 95069 }
+LINE   { 2235 }
+FILEPOS{ 95457 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DTCLEARED_11_02"); //If you still want Jorgen, then go ahead and take him on your journey. }
-LINE   { 2220 }
-FILEPOS{ 95193 }
+LINE   { 2236 }
+FILEPOS{ 95581 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DTCLEARED_11_03"); //May Innos protect you. }
-LINE   { 2221 }
-FILEPOS{ 95325 }
+LINE   { 2237 }
+FILEPOS{ 95713 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_AmulettofDeath_15_00"); //The prophesy mentions the sacred Aura of Innos. }
-LINE   { 2254 }
-FILEPOS{ 96276 }
+LINE   { 2270 }
+FILEPOS{ 96664 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_AmulettofDeath_11_01"); //The Aura of Innos is an amulet which only the greatest magicians of an era are destined to wear. }
-LINE   { 2255 }
-FILEPOS{ 96391 }
+LINE   { 2271 }
+FILEPOS{ 96779 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_15_00"); //Can I have it? }
-LINE   { 2270 }
-FILEPOS{ 97078 }
+LINE   { 2286 }
+FILEPOS{ 97466 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_11_01"); //What? What do you want to do with that? }
-LINE   { 2271 }
-FILEPOS{ 97167 }
+LINE   { 2287 }
+FILEPOS{ 97555 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_15_02"); //Go up against the dragon. }
-LINE   { 2272 }
-FILEPOS{ 97281 }
+LINE   { 2288 }
+FILEPOS{ 97669 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_11_03"); //Yes, of course. I shall give you the amulet, but handle it with care. }
-LINE   { 2273 }
-FILEPOS{ 97381 }
+LINE   { 2289 }
+FILEPOS{ 97769 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_15_04"); //Yeah, sure. }
-LINE   { 2274 }
-FILEPOS{ 97525 }
+LINE   { 2290 }
+FILEPOS{ 97913 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_11_05"); //I do not wish to have to buy it back from a merchant later. }
-LINE   { 2275 }
-FILEPOS{ 97611 }
+LINE   { 2291 }
+FILEPOS{ 97999 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_11_06"); //Use it well, and may Innos guard you at all times. }
-LINE   { 2276 }
-FILEPOS{ 97745 }
+LINE   { 2292 }
+FILEPOS{ 98133 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_AmulettofDeath_Amulett_15_00"); //What sort of amulet is that? }
-LINE   { 2286 }
-FILEPOS{ 98067 }
+LINE   { 2302 }
+FILEPOS{ 98455 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_AmulettofDeath_Amulett_11_01"); //They say that Innos himself forged it and gave it as a present to humankind. }
-LINE   { 2287 }
-FILEPOS{ 98168 }
+LINE   { 2303 }
+FILEPOS{ 98556 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_AmulettofDeath_Amulett_11_02"); //It protects the one who wears it from all kinds of damage. }
-LINE   { 2288 }
-FILEPOS{ 98317 }
+LINE   { 2304 }
+FILEPOS{ 98705 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output		(other, self, "DIA_Pyrokar_PotionofDeath_15_00"); //What are the Tears of Innos? }
-LINE   { 2315 }
-FILEPOS{ 99080 }
+LINE   { 2331 }
+FILEPOS{ 99468 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output		(self, other, "DIA_Pyrokar_PotionofDeath_11_01"); //The Tears of Innos are nothing but an old children's story. It tells of how the battle between Innos and Beliar started at the beginning of time. }
-LINE   { 2316 }
-FILEPOS{ 99174 }
+LINE   { 2332 }
+FILEPOS{ 99562 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_PotionofDeath_Aha_15_00"); //I see. }
-LINE   { 2325 }
-FILEPOS{ 99675 }
+LINE   { 2341 }
+FILEPOS{ 100063 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_PotionofDeath_Aha_11_01"); //I do not know whether you are fully aware of our situation, but I hardly believe that our enemy can be vanquished through an old children's tale. }
-LINE   { 2326 }
-FILEPOS{ 99749 }
+LINE   { 2342 }
+FILEPOS{ 100137 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_PotionofDeath_Potion_15_00"); //I found this potion. }
-LINE   { 2333 }
-FILEPOS{ 100069 }
+LINE   { 2349 }
+FILEPOS{ 100457 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_PotionofDeath_Potion_11_01"); //That cannot be. I cannot believe it. }
-LINE   { 2334 }
-FILEPOS{ 100160 }
+LINE   { 2350 }
+FILEPOS{ 100548 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_PotionofDeath_Potion_15_02"); //What's the matter? }
-LINE   { 2335 }
-FILEPOS{ 100267 }
+LINE   { 2351 }
+FILEPOS{ 100655 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_PotionofDeath_Potion_11_03"); //If these are really the genuine Tears of Innos, then... }
-LINE   { 2336 }
-FILEPOS{ 100356 }
+LINE   { 2352 }
+FILEPOS{ 100744 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_PotionofDeath_Potion_15_04"); //(interrupts) Hardly. }
-LINE   { 2337 }
-FILEPOS{ 100482 }
+LINE   { 2353 }
+FILEPOS{ 100870 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_PotionofDeath_Potion_11_05"); //Do not interrupt me. If these are the real Tears of Innos, then we have a powerful weapon against the enemy. }
-LINE   { 2338 }
-FILEPOS{ 100573 }
+LINE   { 2354 }
+FILEPOS{ 100961 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output	(other,self ,"DIA_Pyrokar_PotionofDeath_Teardrops_15_00"); //So what are the Tears of Innos? }
-LINE   { 2353 }
-FILEPOS{ 101283 }
+LINE   { 2369 }
+FILEPOS{ 101671 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Teardrops_11_01"); //When Innos realized that he had to fight Beliar, his own brother, in order to preserve creation, his sorrow was great. }
-LINE   { 2354 }
-FILEPOS{ 101388 }
+LINE   { 2370 }
+FILEPOS{ 101776 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Teardrops_11_02"); //He started to weep, and his tears fell down onto the world. There were many of them, for his heart was so full of grief that he wept for 13 years. }
-LINE   { 2355 }
-FILEPOS{ 101581 }
+LINE   { 2371 }
+FILEPOS{ 101969 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output	(other,self ,"DIA_Pyrokar_PotionofDeath_Teardrops_15_03"); //Get to the point. }
-LINE   { 2356 }
-FILEPOS{ 101802 }
+LINE   { 2372 }
+FILEPOS{ 102190 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Teardrops_11_04"); //The people who found his tears and tasted them were filled with supernatural strength and clarity. They recognized the wisdom of Innos' creation and began to serve him. }
-LINE   { 2357 }
-FILEPOS{ 101893 }
+LINE   { 2373 }
+FILEPOS{ 102281 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Teardrops_11_05"); //They were the first members of the Community of the Fire. The tears gave them strength, courage and wisdom. But that is all very long ago, and it has been more than 250 years since anyone last set eyes on a Tear of Innos. }
-LINE   { 2358 }
-FILEPOS{ 102136 }
+LINE   { 2374 }
+FILEPOS{ 102524 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(other,self ,"DIA_Pyrokar_PotionofDeath_Weapon_15_00"); //What do you mean by 'weapon'? }
-LINE   { 2365 }
-FILEPOS{ 102541 }
+LINE   { 2381 }
+FILEPOS{ 102929 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Weapon_11_01"); //Legend has it that, under the influence of this substance, the warriors of Innos were able to perform almost superhuman deeds. }
-LINE   { 2366 }
-FILEPOS{ 102642 }
+LINE   { 2382 }
+FILEPOS{ 103030 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Weapon_11_02"); //They were immune to all kinds of exhaustion and had the strength of two bears. }
-LINE   { 2367 }
-FILEPOS{ 102840 }
+LINE   { 2383 }
+FILEPOS{ 103228 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Weapon_11_03"); //The greatest heroic feats of the olden days were only made possible by the Tears of Innos. }
-LINE   { 2368 }
-FILEPOS{ 102990 }
+LINE   { 2384 }
+FILEPOS{ 103378 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(other,self ,"DIA_Pyrokar_PotionofDeath_Weapon_15_04"); //I understand. }
-LINE   { 2369 }
-FILEPOS{ 103152 }
+LINE   { 2385 }
+FILEPOS{ 103540 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Weapon_11_05"); //But the tears can bring suffering and death as well. Only the members of our order may drink this draught. }
-LINE   { 2370 }
-FILEPOS{ 103237 }
+LINE   { 2386 }
+FILEPOS{ 103625 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Weapon_11_06"); //Anyone else - even the paladins of our Lord - would face a cruel death. }
-LINE   { 2371 }
-FILEPOS{ 103415 }
+LINE   { 2387 }
+FILEPOS{ 103803 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_501_SERPENTES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Serpentes_NOTALK_10_00"); //(scolding) You dare to address me, novice? Return to your work. }
@@ -47249,14 +47249,14 @@ LINE   { 764 }
 FILEPOS{ 32575 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
-SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_INNOSEYEBROKEN_wasnun_14_02_B"); //You should go to town and talk to Vatras the Water Mage. }
+SYMBOL { 	AI_Output			(self, other, "DIA_Addon_Xardas_AddonIntro_Add_14_10"); //You must become their ally! That's the only way to stop Beliar. }
 LINE   { 771 }
 FILEPOS{ 32976 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
-SYMBOL { 	AI_Output			(self, other, "DIA_Addon_Xardas_AddonIntro_Add_14_10"); //You must become their ally! That's the only way to stop Beliar. }
+SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_INNOSEYEBROKEN_wasnun_14_02_B"); //You should go to town and talk to Vatras the Water Mage. }
 LINE   { 772 }
-FILEPOS{ 33108 }
+FILEPOS{ 33112 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Addon_Xardas_Add_14_07"); //And once you have talked to him, you need to find the artifact of Beliar. }
@@ -47276,272 +47276,272 @@ FILEPOS{ 33525 }
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_INNOSEYEBROKEN_15_00"); //The Eye of Innos has been destroyed. }
 LINE   { 808 }
-FILEPOS{ 34793 }
+FILEPOS{ 34839 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_INNOSEYEBROKEN_14_01"); //What are you saying? Destroyed! }
 LINE   { 809 }
-FILEPOS{ 34896 }
+FILEPOS{ 34942 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_INNOSEYEBROKEN_15_02"); //I found it up in the northern forests - unfortunately, I've only been able to salvage its fragments. }
 LINE   { 810 }
-FILEPOS{ 34994 }
+FILEPOS{ 35040 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_INNOSEYEBROKEN_14_03"); //That was our only chance to stand up to those dragons, and it's gone. We have failed. }
 LINE   { 811 }
-FILEPOS{ 35161 }
+FILEPOS{ 35207 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_INNOSEYEBROKEN_wasnun_15_00"); //What now? }
 LINE   { 823 }
-FILEPOS{ 35589 }
+FILEPOS{ 35635 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_INNOSEYEBROKEN_wasnun_14_01"); //This is a painful blow. We have to reorient ourselves. I shall retreat and ponder the matter. }
 LINE   { 824 }
-FILEPOS{ 35672 }
+FILEPOS{ 35718 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_INNOSEYEBROKEN_wasnun_14_02"); //In the meantime, you should go to town and talk to Vatras the Water Mage. I could imagine that maybe he knows what is to be done. }
 LINE   { 825 }
-FILEPOS{ 35839 }
+FILEPOS{ 35885 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_RITUALREQUEST_15_00"); //Vatras sent me to you. }
 LINE   { 858 }
-FILEPOS{ 36953 }
+FILEPOS{ 36999 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_RITUALREQUEST_14_01"); //That's good. What did he say? }
 LINE   { 859 }
-FILEPOS{ 37041 }
+FILEPOS{ 37087 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_RITUALREQUEST_15_02"); //He said something about a reversal ritual at the Circle of the Sun. }
 LINE   { 860 }
-FILEPOS{ 37136 }
+FILEPOS{ 37182 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_RITUALREQUEST_14_03"); //(laughs) That old devil. I think I know what he's up to. You have come to summon me to him. }
 LINE   { 861 }
-FILEPOS{ 37269 }
+FILEPOS{ 37315 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_RITUALREQUEST_15_04"); //Looks like it. When will you set out? }
 LINE   { 862 }
-FILEPOS{ 37426 }
+FILEPOS{ 37472 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Xardas_RITUALREQUEST_14_05"); //I must not keep Vatras waiting. I shall be on my way immediately. You must fulfill your tasks and then join me again. }
 LINE   { 868 }
-FILEPOS{ 37622 }
+FILEPOS{ 37668 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Xardas_RITUALREQUEST_14_06"); //I shall only assist with the ritual when I can be sure that you are ready to face the dragons. }
 LINE   { 877 }
-FILEPOS{ 38082 }
+FILEPOS{ 38128 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_WARUMNICHTJETZT_15_00"); //Why don't you go see Vatras RIGHT AWAY? }
 LINE   { 910 }
-FILEPOS{ 39022 }
+FILEPOS{ 39068 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_WARUMNICHTJETZT_15_01"); //Sometimes I just don't understand you. }
 LINE   { 911 }
-FILEPOS{ 39129 }
+FILEPOS{ 39175 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_WARUMNICHTJETZT_14_02"); //(irritated) Do not talk to me in that tone. If it weren't for ME, your wretched body would still be rotting in that temple. }
 LINE   { 912 }
-FILEPOS{ 39235 }
+FILEPOS{ 39281 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_WARUMNICHTJETZT_grund_15_00"); //Then, at least, explain to me why you hesitate. }
 LINE   { 919 }
-FILEPOS{ 39745 }
+FILEPOS{ 39791 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_WARUMNICHTJETZT_grund_14_01"); //Ever since I abandoned the Fire Magicians, I have stayed well away from them. }
 LINE   { 920 }
-FILEPOS{ 39866 }
+FILEPOS{ 39912 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_WARUMNICHTJETZT_grund_14_02"); //And I do not intend to change that, unless I do not have a choice. }
 LINE   { 921 }
-FILEPOS{ 40017 }
+FILEPOS{ 40063 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_WARUMNICHTJETZT_grund_14_03"); //But before I expose myself to the magicians' reproachful glances, I first want to be sure that you stand even the slightest chance against the dragons. }
 LINE   { 922 }
-FILEPOS{ 40157 }
+FILEPOS{ 40203 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_WARUMNICHTJETZT_grund_14_04"); //You will not get far, however, with that shabby equipment of yours. Come back, but only when you are strong enough. }
 LINE   { 923 }
-FILEPOS{ 40382 }
+FILEPOS{ 40428 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_WARUMNICHTJETZT_wastun_15_00"); //Never mind. Just tell me what I need to do. }
 LINE   { 929 }
-FILEPOS{ 40661 }
+FILEPOS{ 40707 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_WARUMNICHTJETZT_wastun_14_01"); //You are still too weak to fight the dragons. With this equipment, you stand no chance whatsoever. }
 LINE   { 930 }
-FILEPOS{ 40779 }
+FILEPOS{ 40825 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_WARUMNICHTJETZT_wastun_14_02"); //Do not come back until you are better prepared. Then I will go and join Vatras. }
 LINE   { 931 }
-FILEPOS{ 40951 }
+FILEPOS{ 40997 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_BEREIT_15_00"); //I'm ready to fight the dragons. }
 LINE   { 960 }
-FILEPOS{ 41799 }
+FILEPOS{ 41845 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_BEREIT_14_01"); //We must not lose any more time, then. I shall be on my way to the Circle of the Sun immediately. Fulfill your tasks. I shall meet you there. }
 LINE   { 961 }
-FILEPOS{ 41889 }
+FILEPOS{ 41935 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_BINGESPANNT_15_00"); //Is the reversal ritual going to work? }
 LINE   { 995 }
-FILEPOS{ 43034 }
+FILEPOS{ 43080 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_BINGESPANNT_14_01"); //I cannot be sure. That depends on what exactly Vatras is going to do. }
 LINE   { 996 }
-FILEPOS{ 43135 }
+FILEPOS{ 43181 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_PYROWILLNICHT_15_00"); //Pyrokar refuses to show up for the ritual. }
 LINE   { 1024 }
-FILEPOS{ 43959 }
+FILEPOS{ 44005 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_PYROWILLNICHT_15_01"); //First, he wants proof that he can trust you. }
 LINE   { 1025 }
-FILEPOS{ 44067 }
+FILEPOS{ 44113 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_02"); //Ah really. Pyrokar. How interesting. }
 LINE   { 1026 }
-FILEPOS{ 44177 }
+FILEPOS{ 44223 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_03"); //That old geezer is getting to be a nuisance. But I think I've got something for you that will be useful. }
 LINE   { 1027 }
-FILEPOS{ 44279 }
+FILEPOS{ 44325 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_04"); //Back when I left the Order of the Fire Magicians, I took a few things with me from the monastery. }
 LINE   { 1028 }
-FILEPOS{ 44449 }
+FILEPOS{ 44495 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_06"); //I didn't want a troop of paladins or Fire Magicians to turn my tower upside down at some point, and find all those things. }
 LINE   { 1029 }
-FILEPOS{ 44612 }
+FILEPOS{ 44658 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_07"); //So I hid them in safe places where the magicians would certainly never look for them. }
 LINE   { 1030 }
-FILEPOS{ 44800 }
+FILEPOS{ 44846 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_PYROWILLNICHT_15_08"); //And where? }
 LINE   { 1031 }
-FILEPOS{ 44951 }
+FILEPOS{ 44997 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_09"); //Some of them lie locked in a chest on Sekob's farm. }
 LINE   { 1032 }
-FILEPOS{ 45027 }
+FILEPOS{ 45073 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_PYROWILLNICHT_15_10"); //You trust that Sekob? }
 LINE   { 1034 }
-FILEPOS{ 45169 }
+FILEPOS{ 45215 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_11"); //No. But he can be bought and asks no awkward questions. Also, the chest is locked. Here's the key. }
 LINE   { 1035 }
-FILEPOS{ 45256 }
+FILEPOS{ 45302 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_12"); //There's a very old book among those things. When Pyrokar sees that book, he'll know it came from me. }
 LINE   { 1040 }
-FILEPOS{ 45561 }
+FILEPOS{ 45607 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_13"); //It is of no further use to me. So I guess it can at least fulfill this purpose. }
 LINE   { 1041 }
-FILEPOS{ 45727 }
+FILEPOS{ 45773 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Xardas_Add_14_06"); //Now that the Eye of Innos is healed, you must face the dragons! }
 LINE   { 1070 }
-FILEPOS{ 46700 }
+FILEPOS{ 46746 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Xardas_Add_14_07"); //They all serve Beliar, the god of darkness. }
 LINE   { 1071 }
-FILEPOS{ 46817 }
+FILEPOS{ 46863 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Xardas_Add_14_08"); //But there must be an earthly power that controls them. That much has become clear to me. }
 LINE   { 1072 }
-FILEPOS{ 46914 }
+FILEPOS{ 46960 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Xardas_Add_14_09"); //Find out what the source of their power is. }
 LINE   { 1073 }
-FILEPOS{ 47056 }
+FILEPOS{ 47102 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Xardas_Add_14_10"); //As soon as you have found that out, come back to me! }
 LINE   { 1074 }
-FILEPOS{ 47153 }
+FILEPOS{ 47199 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_WASNUN_15_00"); //The Eye of Innos is healed. So what next? }
 LINE   { 1114 }
-FILEPOS{ 48259 }
+FILEPOS{ 48305 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_WASNUN_14_01"); //Do not forget to wear it when you finally face the dragons. }
 LINE   { 1115 }
-FILEPOS{ 48359 }
+FILEPOS{ 48405 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Xardas_WASNUN_14_02"); //Do not lose any time. Now go to the Valley of Mines and kill those dragons. }
 LINE   { 1119 }
-FILEPOS{ 48519 }
+FILEPOS{ 48565 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Xardas_WASNUN_14_03"); //Go to Pyrokar and have him explain to you how to use the Eye. }
 LINE   { 1123 }
-FILEPOS{ 48669 }
+FILEPOS{ 48715 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Xardas_PERM4_15_00"); //What's new? }
 LINE   { 1186 }
-FILEPOS{ 50105 }
+FILEPOS{ 50151 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_PERM4_14_01"); //The Seekers have not left yet. They will not rest before they have hunted you down. }
 LINE   { 1187 }
-FILEPOS{ 50174 }
+FILEPOS{ 50220 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_100_XARDAS.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Xardas_PERM4_14_02"); //Kill the dragons in the Valley of Mines and find out who's behind those attacks. Otherwise, their strength will only grow more. }
 LINE   { 1188 }
-FILEPOS{ 50315 }
+FILEPOS{ 50361 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NONE_101_MARIO.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_None_101_Mario_Job_15_00"); //What are you doing here? }
@@ -54044,7 +54044,7 @@ LINE   { 362 }
 FILEPOS{ 14473 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
-SYMBOL { 	AI_Output (other,self ,"DIA_Garond_NeedProof_15_09"); //Of well - I guess I have no choice. }
+SYMBOL { 	AI_Output (other,self ,"DIA_Garond_NeedProof_15_09"); //Oh well - I guess I have no choice. }
 LINE   { 363 }
 FILEPOS{ 14607 }
 
@@ -54265,323 +54265,343 @@ FILEPOS{ 28560 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Garond_Gorn_15_00"); //I want you to let Gorn go. }
-LINE   { 795 }
-FILEPOS{ 29357 }
+LINE   { 797 }
+FILEPOS{ 29428 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Garond_Gorn_10_01"); //I can't let him go. He has committed many crimes and they must be atoned for. }
-LINE   { 796 }
-FILEPOS{ 29437 }
+LINE   { 798 }
+FILEPOS{ 29508 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Garond_Gorn_15_02"); //Can I pay his penalty? }
-LINE   { 797 }
-FILEPOS{ 29568 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
-SYMBOL { 	AI_Output (self ,other,"DIA_Garond_Gorn_10_03"); //That might be a possibility - but certainly not a cheap one. I want 1000 gold pieces for Gorn. }
-LINE   { 798 }
-FILEPOS{ 29644 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
-SYMBOL { 	AI_Output (other,self ,"DIA_Garond_Gorn_15_04"); //That's a lot of gold. }
 LINE   { 799 }
-FILEPOS{ 29792 }
+FILEPOS{ 29639 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
-SYMBOL { 	AI_Output (self ,other,"DIA_Garond_Gorn_10_05"); //Gorn also has much to answer for. Bring me the gold and I'll set Gorn free. }
-LINE   { 800 }
-FILEPOS{ 29867 }
+SYMBOL { 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_05"); //Let me explain something to you. We're all together in the same trap here. }
+LINE   { 803 }
+FILEPOS{ 29744 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
+SYMBOL { 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_02"); //Murder is just about the last thing I need here. }
+LINE   { 804 }
+FILEPOS{ 29880 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
+SYMBOL { 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_03"); //I need every single one of my people - and now I'm left with one less again! }
+LINE   { 805 }
+FILEPOS{ 29990 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
+SYMBOL { 		AI_Output (self, other, "DIA_Garond_Gorn_10_02_EXT"); //So, I can't help you. }
+LINE   { 806 }
+FILEPOS{ 30128 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
+SYMBOL { 		AI_Output (self ,other,"DIA_Garond_Gorn_10_03"); //That might be a possibility - but certainly not a cheap one. I want 1000 gold pieces for Gorn. }
+LINE   { 815 }
+FILEPOS{ 30446 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
+SYMBOL { 		AI_Output (other,self ,"DIA_Garond_Gorn_15_04"); //That's a lot of gold. }
+LINE   { 816 }
+FILEPOS{ 30595 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
+SYMBOL { 		AI_Output (self ,other,"DIA_Garond_Gorn_10_05"); //Gorn also has much to answer for. Bring me the gold and I'll set Gorn free. }
+LINE   { 817 }
+FILEPOS{ 30671 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Garond_Pay_15_00"); //I want to buy Gorn free. }
-LINE   { 829 }
-FILEPOS{ 30743 }
+LINE   { 847 }
+FILEPOS{ 31556 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 		AI_Output (self ,other,"DIA_Garond_Pay_10_01"); //Agreed. You can go to Gerold and tell him to release Gorn on my orders. }
-LINE   { 833 }
-FILEPOS{ 30878 }
+LINE   { 851 }
+FILEPOS{ 31691 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 		AI_Output (self ,other,"DIA_Garond_Pay_10_02"); //Then bring me the 1000 gold pieces. }
-LINE   { 840 }
-FILEPOS{ 31177 }
+LINE   { 858 }
+FILEPOS{ 31990 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Garond_Perm2_15_00"); //What are you planning to do now? }
-LINE   { 866 }
-FILEPOS{ 31865 }
+LINE   { 884 }
+FILEPOS{ 32678 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Garond_Perm2_10_01"); //I've tried everything. You're my only hope now - and that Lord Hagen will send me reinforcements. }
-LINE   { 867 }
-FILEPOS{ 31952 }
+LINE   { 885 }
+FILEPOS{ 32765 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Garond_Perm2_10_02"); //We'll continue to stand firm and pray to Innos that he won't leave us despondent in this dark hour. }
-LINE   { 868 }
-FILEPOS{ 32104 }
+LINE   { 886 }
+FILEPOS{ 32917 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Garond_WASGIBTSNEUES_15_00"); //What's new? }
-LINE   { 926 }
-FILEPOS{ 33606 }
+LINE   { 944 }
+FILEPOS{ 34419 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Garond_WASGIBTSNEUES_10_01"); //Damnit. What are you mucking about here for? I need those bloody reinforcements! }
-LINE   { 927 }
-FILEPOS{ 33681 }
+LINE   { 945 }
+FILEPOS{ 34494 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Garond_WASGIBTSNEUES_10_02"); //Even Milten has left the castle. But I don't need fewer people - I need more! }
-LINE   { 928 }
-FILEPOS{ 33825 }
+LINE   { 946 }
+FILEPOS{ 34638 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Garond_BACKINKAP4_15_00"); //I'm back. }
-LINE   { 987 }
-FILEPOS{ 35297 }
+LINE   { 1005 }
+FILEPOS{ 36110 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_01"); //I can see that for myself. Where are the reinforcements? }
-LINE   { 988 }
-FILEPOS{ 35367 }
+LINE   { 1006 }
+FILEPOS{ 36180 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Garond_BACKINKAP4_15_02"); //Lord Hagen will come as soon as he has settled everything. Much has happened. }
-LINE   { 989 }
-FILEPOS{ 35484 }
+LINE   { 1007 }
+FILEPOS{ 36297 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_03"); //I don't care. I need troops. There are more and more orcs and we can't hold out much longer. }
-LINE   { 990 }
-FILEPOS{ 35622 }
+LINE   { 1008 }
+FILEPOS{ 36435 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_04"); //My men are tired, and we're running out of provisions. }
-LINE   { 991 }
-FILEPOS{ 35775 }
+LINE   { 1009 }
+FILEPOS{ 36588 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Garond_BACKINKAP4_15_05"); //Some volunteers have arrived. }
-LINE   { 992 }
-FILEPOS{ 35890 }
+LINE   { 1010 }
+FILEPOS{ 36703 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_06"); //You mean yourself and your fellow dragon hunters, huh? You can help us, but there just aren't enough of you. }
-LINE   { 996 }
-FILEPOS{ 36015 }
+LINE   { 1014 }
+FILEPOS{ 36828 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_07"); //You mean the dragon hunters outside in the yard? They may help us, but there just aren't enough of them. }
-LINE   { 1000 }
-FILEPOS{ 36199 }
+LINE   { 1018 }
+FILEPOS{ 37012 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_08"); //If Hagen doesn't send some men soon, I can't make any guarantees. }
-LINE   { 1002 }
-FILEPOS{ 36369 }
+LINE   { 1020 }
+FILEPOS{ 37182 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 		AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_00"); //I've got news about the dragons. }
-LINE   { 1063 }
-FILEPOS{ 38401 }
+LINE   { 1081 }
+FILEPOS{ 39214 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Garond_DragonPlettBericht_10_01"); //Report. }
-LINE   { 1064 }
-FILEPOS{ 38503 }
+LINE   { 1082 }
+FILEPOS{ 39316 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 			AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_02"); //I killed the dragon in the swamp to the east of here. }
-LINE   { 1075 }
-FILEPOS{ 38834 }
+LINE   { 1093 }
+FILEPOS{ 39647 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 			AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_03"); //The dragon in the rock fortress to the south is dead. }
-LINE   { 1083 }
-FILEPOS{ 39149 }
+LINE   { 1101 }
+FILEPOS{ 39962 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 			AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_04"); //The fire dragon on the volcano to the south will wreak no more havoc. }
-LINE   { 1091 }
-FILEPOS{ 39463 }
+LINE   { 1109 }
+FILEPOS{ 40276 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 			AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_05"); //I went to the western ice region and did away with the dragon there. }
-LINE   { 1099 }
-FILEPOS{ 39791 }
+LINE   { 1117 }
+FILEPOS{ 40604 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Garond_DragonPlettBericht_10_06"); //That's good news. Here. I'll give you some money towards your equipment. }
-LINE   { 1104 }
-FILEPOS{ 40032 }
+LINE   { 1122 }
+FILEPOS{ 40845 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 		AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_07"); //Can you give me more information about the dragons? }
-LINE   { 1126 }
-FILEPOS{ 40742 }
+LINE   { 1144 }
+FILEPOS{ 41555 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Garond_DragonPlettBericht_10_08"); //I have other things to worry about. My strategic officer Oric can tell you more about that. }
-LINE   { 1127 }
-FILEPOS{ 40863 }
+LINE   { 1145 }
+FILEPOS{ 41676 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 		AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_09"); //Have there been any more dragon attacks in the meantime? }
-LINE   { 1133 }
-FILEPOS{ 41221 }
+LINE   { 1151 }
+FILEPOS{ 42034 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Garond_DragonPlettBericht_10_10"); //Luckily not. For the moment they're holding off. }
-LINE   { 1134 }
-FILEPOS{ 41347 }
+LINE   { 1152 }
+FILEPOS{ 42160 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Garond_AllDragonDead_15_00"); //All the dragons are dead. }
-LINE   { 1167 }
-FILEPOS{ 42328 }
+LINE   { 1185 }
+FILEPOS{ 43141 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_01"); //(in disbelief) All of them? So evil has been vanquished forever? }
-LINE   { 1168 }
-FILEPOS{ 42417 }
+LINE   { 1186 }
+FILEPOS{ 43230 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Garond_AllDragonDead_15_02"); //No, alas not. Their leader still remains. }
-LINE   { 1169 }
-FILEPOS{ 42545 }
+LINE   { 1187 }
+FILEPOS{ 43358 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_03"); //Weren't the dragons the leaders of the orcs? }
-LINE   { 1170 }
-FILEPOS{ 42650 }
+LINE   { 1188 }
+FILEPOS{ 43463 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Garond_AllDragonDead_15_04"); //Yes, true, but they also have their own master. We must get rid of him as well. }
-LINE   { 1171 }
-FILEPOS{ 42758 }
+LINE   { 1189 }
+FILEPOS{ 43571 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_05"); //I damn well can't go. I have to guard the ore, and the cursed orcs are still about, too. }
-LINE   { 1172 }
-FILEPOS{ 42901 }
+LINE   { 1190 }
+FILEPOS{ 43714 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_06"); //You'll have to take care of it yourself. I can't help you. }
-LINE   { 1173 }
-FILEPOS{ 43053 }
+LINE   { 1191 }
+FILEPOS{ 43866 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_07"); //May Innos protect you. }
-LINE   { 1174 }
-FILEPOS{ 43175 }
+LINE   { 1192 }
+FILEPOS{ 43988 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Garond_JanBecomeSmith_15_00"); //There is a problem with the smith. }
-LINE   { 1201 }
-FILEPOS{ 43908 }
+LINE   { 1219 }
+FILEPOS{ 44721 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(self ,other, "DIA_Garond_JanBecomeSmith_10_01"); //What smith? He's disappeared into the woodwork. }
-LINE   { 1202 }
-FILEPOS{ 44009 }
+LINE   { 1220 }
+FILEPOS{ 44822 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(self ,other, "DIA_Garond_JanBecomeSmith_10_02"); //Is he back? Then you can tell him... }
-LINE   { 1203 }
-FILEPOS{ 44123 }
+LINE   { 1221 }
+FILEPOS{ 44936 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(other,self , "DIA_Garond_JanBecomeSmith_15_03"); //No, I'm talking about Jan. }
-LINE   { 1204 }
-FILEPOS{ 44226 }
+LINE   { 1222 }
+FILEPOS{ 45039 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 		AI_Output			(other,self , "DIA_Garond_JanBecomeSmith_15_04"); //He is a dragon hunter, just like me, and a good blacksmith. }
-LINE   { 1208 }
-FILEPOS{ 44354 }
+LINE   { 1226 }
+FILEPOS{ 45167 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 		AI_Output			(other,self , "DIA_Garond_JanBecomeSmith_15_05"); //One of the dragon hunters. He's a smith. }
-LINE   { 1212 }
-FILEPOS{ 44496 }
+LINE   { 1230 }
+FILEPOS{ 45309 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Garond_JanBecomeSmith_10_06"); //That's good. Our previous smith just slinked off, the coward. }
-LINE   { 1215 }
-FILEPOS{ 44612 }
+LINE   { 1233 }
+FILEPOS{ 45425 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Garond_JanBecomeSmith_15_07"); //Jan would be willing to take over the smithy. }
-LINE   { 1216 }
-FILEPOS{ 44740 }
+LINE   { 1234 }
+FILEPOS{ 45553 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Garond_JanBecomeSmith_10_08"); //I see. So you think I can trust him. }
-LINE   { 1217 }
-FILEPOS{ 44852 }
+LINE   { 1235 }
+FILEPOS{ 45665 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Garond_JanBecomeSmith_15_09"); //Yes. }
-LINE   { 1218 }
-FILEPOS{ 44955 }
+LINE   { 1236 }
+FILEPOS{ 45768 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Garond_JanBecomeSmith_10_10"); //If you're so sure, then you can vouch for him. }
-LINE   { 1219 }
-FILEPOS{ 45026 }
+LINE   { 1237 }
+FILEPOS{ 45839 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Garond_JanBecomeSmith_10_11"); //If he causes any trouble, you'll answer for it. Agreed? }
-LINE   { 1220 }
-FILEPOS{ 45139 }
+LINE   { 1238 }
+FILEPOS{ 45952 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Garond_JanBecomeSmith_No_15_00"); //I'll think about it. }
-LINE   { 1229 }
-FILEPOS{ 45568 }
+LINE   { 1247 }
+FILEPOS{ 46381 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Garond_JanBecomeSmith_No_10_01"); //How can I trust him, if even you won't? }
-LINE   { 1230 }
-FILEPOS{ 45655 }
+LINE   { 1248 }
+FILEPOS{ 46468 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Garond_JanBecomeSmith_No_10_02"); //Without someone to stand for him, this Jan can keep his hands off the forge. }
-LINE   { 1231 }
-FILEPOS{ 45761 }
+LINE   { 1249 }
+FILEPOS{ 46574 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Garond_JanBecomeSmith_Yes_15_00"); //I'll vouch for Jan. }
-LINE   { 1238 }
-FILEPOS{ 46008 }
+LINE   { 1256 }
+FILEPOS{ 46821 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Garond_JanBecomeSmith_Yes_10_01"); //All right. He can use the smithy. Of course, he'll also have to provide my men with swords. }
-LINE   { 1239 }
-FILEPOS{ 46095 }
+LINE   { 1257 }
+FILEPOS{ 46908 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Garond_PERM5_15_00"); //How's the situation? }
-LINE   { 1304 }
-FILEPOS{ 47684 }
+LINE   { 1322 }
+FILEPOS{ 48497 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Garond_PERM5_10_01"); //What a damned mess! Some bastard left the main gate open. Now we're nothing more than fodder for the wolves. }
-LINE   { 1308 }
-FILEPOS{ 47798 }
+LINE   { 1326 }
+FILEPOS{ 48611 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Garond_PERM5_10_02"); //When I get my hands on the traitor... }
-LINE   { 1309 }
-FILEPOS{ 47964 }
+LINE   { 1327 }
+FILEPOS{ 48777 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_250_GAROND.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Garond_PERM5_10_03"); //We'll all die like flies here if Hagen doesn't come soon. }
-LINE   { 1313 }
-FILEPOS{ 48074 }
+LINE   { 1331 }
+FILEPOS{ 48887 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_251_ORIC.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Oric_HALLO_15_00"); //What is your task? }
@@ -55981,117 +56001,117 @@ FILEPOS{ 16183 }
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Gerold_MoreFood_12_00"); //That's enough. That's enough. With that I'll be fine for a while. }
 LINE   { 485 }
-FILEPOS{ 17017 }
+FILEPOS{ 17019 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Gerold_MoreFood_12_01"); //Here's my gold. I can't buy anything for it out here in any case, so you might as well have it. }
 LINE   { 486 }
-FILEPOS{ 17144 }
+FILEPOS{ 17146 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Gerold_MoreFood_12_02"); //I'd better go then, before somebody sees us. }
 LINE   { 487 }
-FILEPOS{ 17301 }
+FILEPOS{ 17303 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 				AI_Output			(self, other, "DIA_Gerold_MoreFood_12_03"); //Sure. Give it here. Do you have more? }
 LINE   { 506 }
-FILEPOS{ 17964 }
+FILEPOS{ 17968 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 				AI_Output			(self, other, "DIA_Gerold_MoreFood_12_04"); //Yeah. More, more! }
 LINE   { 510 }
-FILEPOS{ 18086 }
+FILEPOS{ 18090 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gerold_FOOD_12_00"); //There you are. So, what is it now? Do you have anything to eat for me? }
-LINE   { 544 }
-FILEPOS{ 19042 }
+LINE   { 543 }
+FILEPOS{ 19018 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Gerold_FOOD_nichts_15_00"); //I don't have anything right now. }
-LINE   { 551 }
-FILEPOS{ 19243 }
+LINE   { 550 }
+FILEPOS{ 19219 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gerold_FOOD_nichts_12_01"); //First you make such a big deal out of it and now you want to trick me? }
-LINE   { 552 }
-FILEPOS{ 19339 }
+LINE   { 551 }
+FILEPOS{ 19315 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Gerold_FOOD_kaese_nichtmehr_15_00"); //That's all I have. }
-LINE   { 564 }
-FILEPOS{ 19706 }
+LINE   { 563 }
+FILEPOS{ 19682 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gerold_FOOD_kaese_nichtmehr_12_01"); //And I'm supposed to believe that? All right, better than nothing. Here's a bit of gold for it. }
-LINE   { 565 }
-FILEPOS{ 19797 }
+LINE   { 564 }
+FILEPOS{ 19773 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gerold_FOOD_kaese_nichtmehr_12_02"); //Well. I need to get back to my post. }
-LINE   { 568 }
-FILEPOS{ 20069 }
+LINE   { 567 }
+FILEPOS{ 20045 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Gerold_FOOD_kaese_15_00"); //What about a juicy hunk of cheese? }
-LINE   { 592 }
-FILEPOS{ 20575 }
+LINE   { 591 }
+FILEPOS{ 20553 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Gerold_FOOD_Wurst_15_00"); //A piece of sausage? }
 LINE   { 599 }
-FILEPOS{ 20792 }
+FILEPOS{ 20830 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Gerold_FOOD_schinken_15_00"); //I could give you this ham. }
-LINE   { 606 }
-FILEPOS{ 20998 }
+LINE   { 607 }
+FILEPOS{ 21097 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Gerold_FOOD_fleisch_15_00"); //A chunk of meat? }
-LINE   { 613 }
-FILEPOS{ 21211 }
+LINE   { 615 }
+FILEPOS{ 21369 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Gerold_FOOD_Suppe_15_00"); //A good soup would hit the spot, don't you think? }
-LINE   { 620 }
-FILEPOS{ 21411 }
+LINE   { 623 }
+FILEPOS{ 21627 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Gerold_FOOD_Suppe_15_00"); //A good soup would hit the spot, don't you think? }
-LINE   { 627 }
-FILEPOS{ 21640 }
+LINE   { 631 }
+FILEPOS{ 21918 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Gerold_PERM4_15_00"); //Still hungry? }
-LINE   { 656 }
-FILEPOS{ 22393 }
+LINE   { 661 }
+FILEPOS{ 22729 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gerold_PERM4_12_01"); //If the orcs attack again, not even a full belly will help me. }
-LINE   { 660 }
-FILEPOS{ 22501 }
+LINE   { 665 }
+FILEPOS{ 22837 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gerold_PERM4_12_02"); //That must be a joke. I'm stuffed. Thanks again. }
-LINE   { 664 }
-FILEPOS{ 22674 }
+LINE   { 669 }
+FILEPOS{ 23010 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gerold_PERM4_12_03"); //Yeah. But thanks for your help anyway. }
-LINE   { 668 }
-FILEPOS{ 22834 }
+LINE   { 673 }
+FILEPOS{ 23170 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 			AI_Output			(self, other, "DIA_Gerold_PERM4_12_04"); //It's all right, Master. }
-LINE   { 674 }
-FILEPOS{ 22980 }
+LINE   { 679 }
+FILEPOS{ 23316 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_261_GEROLD.D }
 SYMBOL { 			AI_Output			(self, other, "DIA_Gerold_PERM4_12_05"); //Beat it! }
-LINE   { 678 }
-FILEPOS{ 23081 }
+LINE   { 683 }
+FILEPOS{ 23417 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_PAL_262_WACHE.D }
 SYMBOL { 	AI_Output (self, other, "DIA_PAL_262_GREET_10_00"); //Stop - who are you? }
@@ -68585,98 +68605,98 @@ FILEPOS{ 16858 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Raoul_TROLLFELL_01_02"); //Incredible. What do you want for it? }
-LINE   { 502 }
-FILEPOS{ 16995 }
+LINE   { 503 }
+FILEPOS{ 17046 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Raoul_TROLLFELL_15_03"); //Give me what you've got. }
-LINE   { 503 }
-FILEPOS{ 17092 }
+LINE   { 504 }
+FILEPOS{ 17143 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Raoul_TROLLFELL_01_04"); //Okay. I'll give you 500 gold pieces and toss in three strong healing potions, what do you say? }
-LINE   { 504 }
-FILEPOS{ 17177 }
+LINE   { 505 }
+FILEPOS{ 17228 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Raoul_TROLLFELL_ja_15_00"); //Sold. }
-LINE   { 516 }
-FILEPOS{ 17675 }
+LINE   { 517 }
+FILEPOS{ 17726 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Raoul_TROLLFELL_ja_01_01"); //It was a pleasure. }
-LINE   { 517 }
-FILEPOS{ 17744 }
+LINE   { 518 }
+FILEPOS{ 17795 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Raoul_TROLLFELL_nein_15_00"); //That's not enough. }
-LINE   { 528 }
-FILEPOS{ 18131 }
+LINE   { 529 }
+FILEPOS{ 18182 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Raoul_TROLLFELL_nein_01_01"); //Suit yourself. I'll keep the hide, anyway. }
-LINE   { 529 }
-FILEPOS{ 18215 }
+LINE   { 530 }
+FILEPOS{ 18266 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Raoul_TROLLFELL_nein_01_02"); //I'm not going to let this chance slip through my fingers. }
-LINE   { 530 }
-FILEPOS{ 18323 }
+LINE   { 531 }
+FILEPOS{ 18374 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Raoul_FELLZURUECK_15_00"); //Give me my troll hide back. }
-LINE   { 560 }
-FILEPOS{ 19175 }
+LINE   { 561 }
+FILEPOS{ 19226 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Raoul_FELLZURUECK_01_01"); //No. }
-LINE   { 561 }
-FILEPOS{ 19265 }
+LINE   { 562 }
+FILEPOS{ 19316 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Raoul_GotTrollFurBack_15_00"); //Never try to fleece me again, understood? }
-LINE   { 590 }
-FILEPOS{ 20100 }
+LINE   { 591 }
+FILEPOS{ 20151 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Raoul_GotTrollFurBack_01_01"); //All right. You know how things work around here, don't you? So calm down. }
-LINE   { 591 }
-FILEPOS{ 20208 }
+LINE   { 592 }
+FILEPOS{ 20259 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Raoul_Ship_15_00"); //Would you fancy an ocean cruise out of here? }
-LINE   { 721 }
-FILEPOS{ 23292 }
+LINE   { 722 }
+FILEPOS{ 23343 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Raoul_Ship_01_01"); //What are you planning? Are you going to capture the paladins' ship? (laughs) }
-LINE   { 722 }
-FILEPOS{ 23392 }
+LINE   { 723 }
+FILEPOS{ 23443 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Raoul_Ship_15_02"); //And what if I am? }
-LINE   { 723 }
-FILEPOS{ 23524 }
+LINE   { 724 }
+FILEPOS{ 23575 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Raoul_Ship_01_03"); //(serious) You are completely crazy. No, thanks. Not for me. }
-LINE   { 724 }
-FILEPOS{ 23597 }
+LINE   { 725 }
+FILEPOS{ 23648 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Raoul_Ship_01_04"); //I don't see any reason to leave Khorinis. Whether I earn my dough here or on the mainland - it's all the same to me. }
-LINE   { 725 }
-FILEPOS{ 23712 }
+LINE   { 726 }
+FILEPOS{ 23763 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Raoul_Ship_01_05"); //Find somebody else. }
-LINE   { 726 }
-FILEPOS{ 23884 }
+LINE   { 727 }
+FILEPOS{ 23935 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_822_RAOUL.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Raoul_Ship_01_06"); //Ask Torlof. He used to go to sea, as far as I know. }
-LINE   { 730 }
-FILEPOS{ 24001 }
+LINE   { 731 }
+FILEPOS{ 24052 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_SLD_823_KHALED.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Khaled_Hallo_15_00"); //Everything fine with you? }
@@ -74605,23 +74625,23 @@ FILEPOS{ 36272 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Bosper_SellFur_11_12"); //Good work. Come see me again when you have more... }
-LINE   { 947 }
-FILEPOS{ 36595 }
+LINE   { 948 }
+FILEPOS{ 36687 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Bosper_SellFur_11_13"); //But you know - I'm only interested in the skins of wolves, shadowbeasts and the like... }
-LINE   { 951 }
-FILEPOS{ 36719 }
+LINE   { 952 }
+FILEPOS{ 36811 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Bosper_Minenanteil_15_00"); //I see that you have mining shares for sale. }
-LINE   { 980 }
-FILEPOS{ 37533 }
+LINE   { 981 }
+FILEPOS{ 37625 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Bosper_Minenanteil_11_01"); //Ahem. I know nothing about that. You can have them if you want. }
-LINE   { 981 }
-FILEPOS{ 37638 }
+LINE   { 982 }
+FILEPOS{ 37730 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_4143_HAUPTTORWACHE.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Haupttorwache_AUFGABE_15_00"); //What's your task? }
@@ -84609,1369 +84629,1369 @@ LINE   { 488 }
 FILEPOS{ 19822 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
-SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_00"); //All right, my young friend. We have come together here to celebrate your admission to the 'Ring of Water'. }
-LINE   { 518 }
-FILEPOS{ 20816 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
-SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_01"); //The boys who are present here will keep an eye out for you from today on. }
-LINE   { 519 }
-FILEPOS{ 20992 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
-SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_02"); //Of course, there are others who also belong to the 'Ring of Water', so be careful. }
-LINE   { 520 }
-FILEPOS{ 21135 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
-SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_03"); //Whether you do us a service or mess things up - we are going to learn about it. }
-LINE   { 521 }
-FILEPOS{ 21287 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
-SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_04"); //Here, take the armor of our community. }
-LINE   { 522 }
-FILEPOS{ 21436 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
-SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_05"); //Wear it with pride, but never in town or in other inhabited areas. }
-LINE   { 525 }
-FILEPOS{ 21631 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
-SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_06"); //Remember, we must not be exposed. Nobody must therefore be told who the members of the 'Ring of Water' are. }
-LINE   { 526 }
-FILEPOS{ 21767 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
-SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_07"); //Nobody talks about the 'Ring of Water'. That's our foremost rule. Stick to it. }
-LINE   { 527 }
-FILEPOS{ 21944 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
-SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_08"); //Any more questions? }
-LINE   { 528 }
-FILEPOS{ 22092 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
-SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_GetRangerArmor_weapons_15_00"); //What about weapons, then? }
-LINE   { 541 }
-FILEPOS{ 22746 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
-SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_weapons_09_01"); //The weapon of the 'Ring' is the quarterstaff, but everyone uses whatever arms he is most comfortable with. }
-LINE   { 542 }
-FILEPOS{ 22849 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
-SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_weapons_09_02"); //Here's one of our staffs. I never really figured out how to use it, but maybe you can handle the thing. }
-LINE   { 543 }
-FILEPOS{ 23033 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Cavalorn_MeetingIsRunning_08_00"); //Welcome to the 'Ring', my friend. }
-LINE   { 558 }
-FILEPOS{ 23710 }
+LINE   { 508 }
+FILEPOS{ 20591 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Gaan_MeetingIsRunning_03_00"); //A fresh face in our midst. Welcome to the 'Ring of Water'. }
-LINE   { 563 }
-FILEPOS{ 23900 }
+LINE   { 513 }
+FILEPOS{ 20769 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Cord_MeetingIsRunning_07_00"); //So you're the new fellow, mh? Welcome among us, brother of the Ring. }
-LINE   { 568 }
-FILEPOS{ 24115 }
+LINE   { 518 }
+FILEPOS{ 20972 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Cord_MeetingIsRunning_14_00"); //Welcome to the 'Ring of Water', brother. }
+LINE   { 523 }
+FILEPOS{ 21181 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
+SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_00"); //All right, my young friend. We have come together here to celebrate your admission to the 'Ring of Water'. }
+LINE   { 548 }
+FILEPOS{ 21895 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
+SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_01"); //The boys who are present here will keep an eye out for you from today on. }
+LINE   { 549 }
+FILEPOS{ 22071 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
+SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_02"); //Of course, there are others who also belong to the 'Ring of Water', so be careful. }
+LINE   { 551 }
+FILEPOS{ 22261 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
+SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_03"); //Whether you do us a service or mess things up - we are going to learn about it. }
+LINE   { 552 }
+FILEPOS{ 22413 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
+SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_04"); //Here, take the armor of our community. }
+LINE   { 553 }
+FILEPOS{ 22562 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
+SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_05"); //Wear it with pride, but never in town or in other inhabited areas. }
+LINE   { 556 }
+FILEPOS{ 22757 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
+SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_06"); //Remember, we must not be exposed. Nobody must therefore be told who the members of the 'Ring of Water' are. }
+LINE   { 557 }
+FILEPOS{ 22893 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
+SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_07"); //Nobody talks about the 'Ring of Water'. That's our foremost rule. Stick to it. }
+LINE   { 558 }
+FILEPOS{ 23070 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
+SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_08"); //Any more questions? }
+LINE   { 559 }
+FILEPOS{ 23218 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
+SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_GetRangerArmor_weapons_15_00"); //What about weapons, then? }
+LINE   { 572 }
+FILEPOS{ 23872 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
+SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_weapons_09_01"); //The weapon of the 'Ring' is the quarterstaff, but everyone uses whatever arms he is most comfortable with. }
 LINE   { 573 }
-FILEPOS{ 24336 }
+FILEPOS{ 23975 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
+SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_weapons_09_02"); //Here's one of our staffs. I never really figured out how to use it, but maybe you can handle the thing. }
+LINE   { 574 }
+FILEPOS{ 24159 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_GetRangerArmor_end_15_00"); //I've got to go. }
-LINE   { 583 }
-FILEPOS{ 24626 }
+LINE   { 580 }
+FILEPOS{ 24518 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_end_09_01"); //Fine, then don't let us keep you. }
-LINE   { 584 }
-FILEPOS{ 24715 }
+LINE   { 581 }
+FILEPOS{ 24607 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_end_09_02"); //Now go directly to Vatras and have him give you your first task. }
-LINE   { 587 }
-FILEPOS{ 24875 }
+LINE   { 584 }
+FILEPOS{ 24767 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_end_09_03"); //Brothers of the 'Ring'. Let us now return to our duties. }
-LINE   { 590 }
-FILEPOS{ 25063 }
+LINE   { 587 }
+FILEPOS{ 24955 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_end_09_04"); //The bandit attacks are still going on. We must see to it that this menace is stopped. }
-LINE   { 591 }
-FILEPOS{ 25193 }
+LINE   { 588 }
+FILEPOS{ 25085 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_end_09_05"); //Adanos, preserve the balance of this world. }
-LINE   { 592 }
-FILEPOS{ 25352 }
+LINE   { 589 }
+FILEPOS{ 25244 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_GetRangerArmor_Learn_15_00"); //What kind of help can I get from you? }
-LINE   { 615 }
-FILEPOS{ 26310 }
+LINE   { 613 }
+FILEPOS{ 26243 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_Learn_09_01"); //I can show you how to become more dexterous. }
-LINE   { 616 }
-FILEPOS{ 26423 }
+LINE   { 614 }
+FILEPOS{ 26356 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_Learn_09_02"); //If you need help with wielding close-combat weapons, talk to Cord. He is a master of the blade. }
-LINE   { 620 }
-FILEPOS{ 26591 }
+LINE   { 618 }
+FILEPOS{ 26524 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_Learn_09_03"); //Gaan will gladly show you the proper way to gut animals. }
-LINE   { 624 }
-FILEPOS{ 26814 }
+LINE   { 622 }
+FILEPOS{ 26747 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_Learn_09_04"); //Martin can tell you a lot about the paladins. }
-LINE   { 628 }
-FILEPOS{ 27007 }
+LINE   { 626 }
+FILEPOS{ 26940 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_Learn_09_05"); //Cavalorn will teach you sneaking, one-handed combat and archery. }
-LINE   { 632 }
-FILEPOS{ 27192 }
+LINE   { 630 }
+FILEPOS{ 27125 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_Learn_09_06"); //Orlan will always have a warm chamber and a bed waiting for you. }
-LINE   { 636 }
-FILEPOS{ 27385 }
+LINE   { 634 }
+FILEPOS{ 27318 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_Learn_09_07"); //And for anything related to magic, talk to Vatras. }
-LINE   { 638 }
-FILEPOS{ 27531 }
+LINE   { 636 }
+FILEPOS{ 27464 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_Teleportstation_15_00"); //Have you ever used a teleporter stone? }
-LINE   { 666 }
-FILEPOS{ 28500 }
+LINE   { 664 }
+FILEPOS{ 28433 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_Teleportstation_09_01"); //No, but I've heard of them. The Water Mages aren't too sure about those things yet. }
-LINE   { 667 }
-FILEPOS{ 28609 }
+LINE   { 665 }
+FILEPOS{ 28542 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_Teleportstation_15_02"); //I've given it a try. }
-LINE   { 668 }
-FILEPOS{ 28763 }
+LINE   { 666 }
+FILEPOS{ 28696 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_Teleportstation_09_03"); //(laughs) Of course you have. You're not afraid of anything, are you? }
-LINE   { 669 }
-FILEPOS{ 28854 }
+LINE   { 667 }
+FILEPOS{ 28787 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_Teleportstation_09_04"); //Well. If you want to use the things, go ask Orlan the pub-owner whether he'll let you into his boarded-up cave. }
-LINE   { 670 }
-FILEPOS{ 28993 }
+LINE   { 668 }
+FILEPOS{ 28926 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_Teleportstation_09_05"); //I think he has hidden one of the teleporter stones for the Water Mages near his tavern. }
-LINE   { 671 }
-FILEPOS{ 29175 }
+LINE   { 669 }
+FILEPOS{ 29108 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_Teleportstation_09_06"); //Walk out of the eastern city gate and simply follow the path. You can't miss it. }
-LINE   { 672 }
-FILEPOS{ 29333 }
+LINE   { 670 }
+FILEPOS{ 29266 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_Ornament_15_00"); //Vatras gave me this ornament to bring to you. He said it is to be taken back. }
-LINE   { 705 }
-FILEPOS{ 30424 }
+LINE   { 703 }
+FILEPOS{ 30357 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Ornament_09_01"); //(sighs) Of course. It's up to me, as usual. I might have known. }
-LINE   { 707 }
-FILEPOS{ 30627 }
+LINE   { 705 }
+FILEPOS{ 30560 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Ornament_09_02"); //I'll have to walk halfway across the island to take it back to the Water Mages. }
-LINE   { 708 }
-FILEPOS{ 30754 }
+LINE   { 706 }
+FILEPOS{ 30687 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_OrnamentBringJob_15_00"); //I can take the ornament there for you! }
-LINE   { 732 }
-FILEPOS{ 31568 }
+LINE   { 730 }
+FILEPOS{ 31501 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_OrnamentBringJob_09_01"); //(pensively) Mmh. I think I had better take it there myself. But you could come with me. }
-LINE   { 733 }
-FILEPOS{ 31678 }
+LINE   { 731 }
+FILEPOS{ 31611 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_OrnamentBringJob_09_02"); //Only, I can't leave here at the moment. I need to keep an eye on the harbor. }
-LINE   { 734 }
-FILEPOS{ 31837 }
+LINE   { 732 }
+FILEPOS{ 31770 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_YourMission_15_00"); //What exactly do you do here at the harbor? }
-LINE   { 762 }
-FILEPOS{ 32851 }
+LINE   { 760 }
+FILEPOS{ 32784 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_01"); //I can't talk about that. }
-LINE   { 766 }
-FILEPOS{ 33029 }
+LINE   { 764 }
+FILEPOS{ 32962 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_02"); //Vatras would have my head... }
-LINE   { 767 }
-FILEPOS{ 33121 }
+LINE   { 765 }
+FILEPOS{ 33054 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_03"); //I'm doing what we all do. I fulfill the tasks the Water Mages give me. }
-LINE   { 771 }
-FILEPOS{ 33232 }
+LINE   { 769 }
+FILEPOS{ 33165 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_04"); //Some of the missing people were fishermen. They disappeared along with their boats. }
-LINE   { 772 }
-FILEPOS{ 33370 }
+LINE   { 770 }
+FILEPOS{ 33303 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_05"); //That's why I'm standing here, watching the harbor. Maybe something will happen yet. }
-LINE   { 773 }
-FILEPOS{ 33521 }
+LINE   { 771 }
+FILEPOS{ 33454 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_06"); //But you could help me. }
-LINE   { 774 }
-FILEPOS{ 33672 }
+LINE   { 772 }
+FILEPOS{ 33605 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_07"); //Listen. I shall give you my aquamarine ring. It signifies that the bearer belongs to the 'Ring of Water'. }
-LINE   { 775 }
-FILEPOS{ 33762 }
+LINE   { 773 }
+FILEPOS{ 33695 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_08"); //If you wear my ring, the rest of us will know that you're acting on my behalf. }
-LINE   { 780 }
-FILEPOS{ 34092 }
+LINE   { 778 }
+FILEPOS{ 34025 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_09"); //Get someone to take over my duties so that I can take the ornament back. }
-LINE   { 781 }
-FILEPOS{ 34238 }
+LINE   { 779 }
+FILEPOS{ 34171 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_10"); //One of us is always keeping an eye on the marketplace. But I don't know whose turn it is. }
-LINE   { 782 }
-FILEPOS{ 34378 }
+LINE   { 780 }
+FILEPOS{ 34311 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_11"); //You had better go talk to all those standing around there. Once the right man sees my aquamarine ring on you, he will let you know. }
-LINE   { 783 }
-FILEPOS{ 34535 }
+LINE   { 781 }
+FILEPOS{ 34468 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_YourMission_09_12"); //Tell him to see to it that somebody else takes over here at the harbor. }
-LINE   { 784 }
-FILEPOS{ 34734 }
+LINE   { 782 }
+FILEPOS{ 34667 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_BaltramAbloese_15_00"); //I have talked to Baltram. He will find someone to relieve you. }
-LINE   { 818 }
-FILEPOS{ 36091 }
+LINE   { 816 }
+FILEPOS{ 36024 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_BaltramAbloese_09_01"); //Ah. Very good. Then we can finally leave here. }
-LINE   { 819 }
-FILEPOS{ 36223 }
+LINE   { 817 }
+FILEPOS{ 36156 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_BaltramAbloese_09_02"); //You had better keep my aquamarine ring for now. }
-LINE   { 822 }
-FILEPOS{ 36371 }
+LINE   { 820 }
+FILEPOS{ 36304 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Addon_Lares_BaltramAbloese_09_03"); //(smiles) I assume it will come in handy for you. }
-LINE   { 826 }
-FILEPOS{ 36559 }
+LINE   { 824 }
+FILEPOS{ 36492 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Addon_Lares_BaltramAbloese_09_04"); //(smiles) Who knows, you might want to join us... }
-LINE   { 830 }
-FILEPOS{ 36697 }
+LINE   { 828 }
+FILEPOS{ 36630 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_PeopleMissing_15_00"); //About those missing people... }
-LINE   { 871 }
-FILEPOS{ 38196 }
+LINE   { 869 }
+FILEPOS{ 38129 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_PeopleMissing_TellMe_15_00"); //Tell me what you know. }
-LINE   { 904 }
-FILEPOS{ 39544 }
+LINE   { 902 }
+FILEPOS{ 39477 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_PeopleMissing_TellMe_09_01"); //The first was William, one of the fishermen here in Khorinis. One day, he simply didn't return. }
-LINE   { 905 }
-FILEPOS{ 39642 }
+LINE   { 903 }
+FILEPOS{ 39575 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_PeopleMissing_TellMe_09_02"); //At first we thought that one of those sea monsters out there had eaten him and his boat for breakfast. }
-LINE   { 906 }
-FILEPOS{ 39813 }
+LINE   { 904 }
+FILEPOS{ 39746 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_PeopleMissing_TellMe_09_03"); //But not too long afterwards, other people started disappearing from the town and the surroundings. Pretty random events, though. }
-LINE   { 907 }
-FILEPOS{ 39991 }
+LINE   { 905 }
+FILEPOS{ 39924 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_PeopleMissing_TellMe_09_04"); //Everyone's at a loss so far. The way it looks, we'll just have to wait until we finally stumble across a clue. }
-LINE   { 908 }
-FILEPOS{ 40195 }
+LINE   { 906 }
+FILEPOS{ 40128 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_PeopleMissing_MIL_15_00"); //Isn't this a case for the militia? }
-LINE   { 926 }
-FILEPOS{ 41010 }
+LINE   { 924 }
+FILEPOS{ 40943 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_PeopleMissing_MIL_09_01"); //The militia is pretty useless, if you ask me. }
-LINE   { 927 }
-FILEPOS{ 41117 }
+LINE   { 925 }
+FILEPOS{ 41050 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_PeopleMissing_MIL_09_02"); //They're never going to clear this up. The missing people have just vanished into thin air. }
-LINE   { 928 }
-FILEPOS{ 41235 }
+LINE   { 926 }
+FILEPOS{ 41168 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_PeopleMissing_Success_15_00"); //I know what has become of all the missing people! }
-LINE   { 933 }
-FILEPOS{ 41522 }
+LINE   { 931 }
+FILEPOS{ 41455 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_PeopleMissing_Success_09_01"); //(surprised) Really. }
-LINE   { 934 }
-FILEPOS{ 41648 }
+LINE   { 932 }
+FILEPOS{ 41581 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_PeopleMissing_Success_15_02"); //The former ore baron Raven had them kidnapped. }
-LINE   { 935 }
-FILEPOS{ 41744 }
+LINE   { 933 }
+FILEPOS{ 41677 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_PeopleMissing_Success_09_03"); //Are you sure? Then we need to get them out of there. }
-LINE   { 936 }
-FILEPOS{ 41867 }
+LINE   { 934 }
+FILEPOS{ 41800 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_PeopleMissing_Success_15_04"); //I'm working on it. }
-LINE   { 937 }
-FILEPOS{ 41996 }
+LINE   { 935 }
+FILEPOS{ 41929 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_PeopleMissing_Success_09_05"); //All right. But you know, whenever you need my help... }
-LINE   { 938 }
-FILEPOS{ 42091 }
+LINE   { 936 }
+FILEPOS{ 42024 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_PeopleMissing_Success_15_06"); //... then I'll know where to find you. Understood. }
-LINE   { 939 }
-FILEPOS{ 42221 }
+LINE   { 937 }
+FILEPOS{ 42154 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_PeopleMissing_SAVED_15_00"); //I've been able to rescue some of the missing people. }
-LINE   { 946 }
-FILEPOS{ 42558 }
+LINE   { 944 }
+FILEPOS{ 42491 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_PeopleMissing_SAVED_09_01"); //I knew you'd succeed. Then I can finally go about my own business now. }
-LINE   { 947 }
-FILEPOS{ 42685 }
+LINE   { 945 }
+FILEPOS{ 42618 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_RangerHelp_15_00"); //I need your help. }
-LINE   { 989 }
-FILEPOS{ 44109 }
+LINE   { 987 }
+FILEPOS{ 44042 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_RangerHelp_09_01"); //And what exactly were you thinking of? }
-LINE   { 990 }
-FILEPOS{ 44192 }
+LINE   { 988 }
+FILEPOS{ 44125 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_ruestung_15_00"); //What about some better armor? }
-LINE   { 1020 }
-FILEPOS{ 45313 }
+LINE   { 1018 }
+FILEPOS{ 45246 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_01"); //Mmh. Matteo sells armor. But he'll probably charge you an arm and a leg for it. }
-LINE   { 1021 }
-FILEPOS{ 45417 }
+LINE   { 1019 }
+FILEPOS{ 45350 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_02"); //There is a way you could get it cheaper, though, if you don't mind pulling a fast one on the militia... }
-LINE   { 1022 }
-FILEPOS{ 45571 }
+LINE   { 1020 }
+FILEPOS{ 45504 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_ruestung_15_03"); //What do you mean? }
-LINE   { 1023 }
-FILEPOS{ 45749 }
+LINE   { 1021 }
+FILEPOS{ 45682 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_04"); //There's a storage area next to Matteo's house. But all the merchandise has been confiscated by the militia. }
-LINE   { 1024 }
-FILEPOS{ 45841 }
+LINE   { 1022 }
+FILEPOS{ 45774 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_05"); //Go to Zuris at the marketplace and get yourself a sleeping spell. Then you send the guards off to dreamland. }
-LINE   { 1025 }
-FILEPOS{ 46023 }
+LINE   { 1023 }
+FILEPOS{ 45956 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_06"); //I'm sure you'll find some decent armor among Matteo's stock... }
-LINE   { 1026 }
-FILEPOS{ 46206 }
+LINE   { 1024 }
+FILEPOS{ 46139 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_waffe_15_00"); //I need a better weapon. }
-LINE   { 1031 }
-FILEPOS{ 46457 }
+LINE   { 1029 }
+FILEPOS{ 46390 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_waffe_09_01"); //There's nothing I can do about that, I'm afraid. Have you tried the marketplace? }
-LINE   { 1032 }
-FILEPOS{ 46552 }
+LINE   { 1030 }
+FILEPOS{ 46485 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_geld_15_00"); //I need some money. }
-LINE   { 1037 }
-FILEPOS{ 46814 }
+LINE   { 1035 }
+FILEPOS{ 46747 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_geld_09_01"); //Don't we all? Sorry, but I have none to give you. But Lehmar the moneylender still owes me a favor. }
-LINE   { 1038 }
-FILEPOS{ 46903 }
+LINE   { 1036 }
+FILEPOS{ 46836 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_geld_09_02"); //Go to him and borrow whatever money you need. I'll take care of the rest. You'll find Lehmar in the harbor district, where it borders on the lower part of town. }
-LINE   { 1039 }
-FILEPOS{ 47073 }
+LINE   { 1037 }
+FILEPOS{ 47006 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_Moe_15_00"); //That guy is pestering me... }
-LINE   { 1053 }
-FILEPOS{ 47736 }
+LINE   { 1051 }
+FILEPOS{ 47669 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Moe_09_01"); //Not for long... }
-LINE   { 1054 }
-FILEPOS{ 47822 }
+LINE   { 1052 }
+FILEPOS{ 47755 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Lares_Paladine_15_00"); //I must talk to the paladins, by any means! }
-LINE   { 1098 }
-FILEPOS{ 49102 }
+LINE   { 1096 }
+FILEPOS{ 49035 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_Paladine_09_01"); //What do you want from THEM? }
-LINE   { 1099 }
-FILEPOS{ 49202 }
+LINE   { 1097 }
+FILEPOS{ 49135 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Lares_Paladine_15_02"); //They've got a powerful amulet, the Eye of Innos. I must have it. }
-LINE   { 1100 }
-FILEPOS{ 49287 }
+LINE   { 1098 }
+FILEPOS{ 49220 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_Paladine_09_03"); //And you think they'll give it to you? You'll never get into the upper end of town. }
-LINE   { 1101 }
-FILEPOS{ 49409 }
+LINE   { 1099 }
+FILEPOS{ 49342 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (other, self, "DIA_Lares_Paladine_15_04"); //I'll find a way somehow. }
-LINE   { 1104 }
-FILEPOS{ 49607 }
+LINE   { 1102 }
+FILEPOS{ 49540 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Lares_Paladine_09_05"); //Sure, if you want to ingratiate yourself with the citizens or play errand boy for the militia... }
-LINE   { 1105 }
-FILEPOS{ 49690 }
+LINE   { 1103 }
+FILEPOS{ 49623 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Lares_WhyPalHere_15_00"); //Do you know why the paladins are here? }
-LINE   { 1139 }
-FILEPOS{ 50854 }
+LINE   { 1137 }
+FILEPOS{ 50787 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_WhyPalHere_09_01"); //Nobody knows for sure... Lots of people think it's because of the orcs, but I think there's another reason. }
-LINE   { 1140 }
-FILEPOS{ 50952 }
+LINE   { 1138 }
+FILEPOS{ 50885 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_WhyPalHere_09_02"); //It probably has something to do with the old penal colony. }
-LINE   { 1141 }
-FILEPOS{ 51119 }
+LINE   { 1139 }
+FILEPOS{ 51052 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_Gilde_15_00"); //Vatras said you could help me join a community. }
-LINE   { 1169 }
-FILEPOS{ 51969 }
+LINE   { 1167 }
+FILEPOS{ 51902 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_09_01"); //(laughs) Getting tired of being the underdog, are you? }
-LINE   { 1170 }
-FILEPOS{ 52077 }
+LINE   { 1168 }
+FILEPOS{ 52010 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_09_02"); //All right. I see your point. }
-LINE   { 1171 }
-FILEPOS{ 52192 }
+LINE   { 1169 }
+FILEPOS{ 52125 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_09_03"); //I can exert my influence with the mercenaries if you want to join Lee. }
-LINE   { 1172 }
-FILEPOS{ 52281 }
+LINE   { 1170 }
+FILEPOS{ 52214 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_09_04"); //And I'm sure we can find a way to get you into the monastery soon. }
-LINE   { 1173 }
-FILEPOS{ 52412 }
+LINE   { 1171 }
+FILEPOS{ 52345 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_09_05"); //But the easiest thing would certainly be for you to join the militia. }
-LINE   { 1174 }
-FILEPOS{ 52539 }
+LINE   { 1172 }
+FILEPOS{ 52472 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_09_06"); //Which community do you prefer? }
-LINE   { 1175 }
-FILEPOS{ 52669 }
+LINE   { 1173 }
+FILEPOS{ 52602 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_Gilde_BACK_15_00"); //I'll have to think about it... }
-LINE   { 1185 }
-FILEPOS{ 53223 }
+LINE   { 1183 }
+FILEPOS{ 53156 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_Gilde_SLD_15_00"); //The mercenaries. }
-LINE   { 1190 }
-FILEPOS{ 53411 }
+LINE   { 1188 }
+FILEPOS{ 53344 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_SLD_09_01"); //I'm sure that Lee will accept you. }
-LINE   { 1191 }
-FILEPOS{ 53492 }
+LINE   { 1189 }
+FILEPOS{ 53425 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_SLD_Add_09_01"); //But first you're going to have to pass a test. }
-LINE   { 1192 }
-FILEPOS{ 53591 }
+LINE   { 1190 }
+FILEPOS{ 53524 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_SLD_09_02"); //Go and talk to Cord on Onar's farm. }
-LINE   { 1193 }
-FILEPOS{ 53706 }
+LINE   { 1191 }
+FILEPOS{ 53639 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_SLD_Add_09_02"); //He can help you with your test. }
-LINE   { 1194 }
-FILEPOS{ 53806 }
+LINE   { 1192 }
+FILEPOS{ 53739 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_SLD_09_03"); //Tell him that you 'reside beneath my wing'. He'll understand. }
-LINE   { 1195 }
-FILEPOS{ 53906 }
+LINE   { 1193 }
+FILEPOS{ 53839 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_Gilde_MIL_15_00"); //The militia. }
-LINE   { 1207 }
-FILEPOS{ 54457 }
+LINE   { 1205 }
+FILEPOS{ 54390 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_MIL_09_01"); //(amused) Yes. I can imagine you'd like that, eh? Read the law to other people while you're pocketing their purses. }
-LINE   { 1208 }
-FILEPOS{ 54534 }
+LINE   { 1206 }
+FILEPOS{ 54467 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_MIL_09_02"); //The paladins have set up their provisions store by the harbor. Their provisions master is a good friend of mine. }
-LINE   { 1209 }
-FILEPOS{ 54713 }
+LINE   { 1207 }
+FILEPOS{ 54646 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_MIL_09_03"); //Maybe he can do something for you. His name is Martin. }
-LINE   { 1210 }
-FILEPOS{ 54890 }
+LINE   { 1208 }
+FILEPOS{ 54823 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_Gilde_KDF_15_00"); //The Fire Magicians. }
-LINE   { 1221 }
-FILEPOS{ 55467 }
+LINE   { 1219 }
+FILEPOS{ 55400 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_KDF_09_01"); //(laughs) I bet Vatras didn't foresee that, or he wouldn't have sent you to me. }
-LINE   { 1222 }
-FILEPOS{ 55551 }
+LINE   { 1220 }
+FILEPOS{ 55484 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_KDF_09_02"); //Joining the monastery is expensive. }
-LINE   { 1223 }
-FILEPOS{ 55694 }
+LINE   { 1221 }
+FILEPOS{ 55627 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_KDF_09_03"); //Those boys won't even let you in unless you pay them a tribute. }
-LINE   { 1224 }
-FILEPOS{ 55794 }
+LINE   { 1222 }
+FILEPOS{ 55727 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Gilde_KDF_09_04"); //And the only one who could do anything about that is Vatras himself. You had better talk to him again about this. }
-LINE   { 1225 }
-FILEPOS{ 55922 }
+LINE   { 1223 }
+FILEPOS{ 55855 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self,  "DIA_ADDON_Lares_AboutSld_15_00"); //Tell me more about Lee and his mercenaries... }
-LINE   { 1261 }
-FILEPOS{ 57140 }
+LINE   { 1259 }
+FILEPOS{ 57073 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_ADDON_Lares_AboutSld_09_01"); //What do you want to know? }
-LINE   { 1262 }
-FILEPOS{ 57249 }
+LINE   { 1260 }
+FILEPOS{ 57182 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self,  "DIA_Lares_AboutSld_15_00"); //Tell me more about the mercenaries. }
-LINE   { 1276 }
-FILEPOS{ 57920 }
+LINE   { 1274 }
+FILEPOS{ 57853 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_AboutSld_09_01"); //Well, if you're as tough as you were back then, you shouldn't have any problems with them. }
-LINE   { 1277 }
-FILEPOS{ 58013 }
+LINE   { 1275 }
+FILEPOS{ 57946 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_AboutSld_09_02"); //Most of them are ruffians and if you can't stand up to them, you won't get far. }
-LINE   { 1278 }
-FILEPOS{ 58161 }
+LINE   { 1276 }
+FILEPOS{ 58094 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_AboutSld_09_03"); //(laughs) If you're squeamish, you don't have a chance of landing with them... }
-LINE   { 1279 }
-FILEPOS{ 58298 }
+LINE   { 1277 }
+FILEPOS{ 58231 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Lares_WhyInCity_15_00"); //Why aren't YOU with Lee and his mercenaries? }
-LINE   { 1283 }
-FILEPOS{ 58483 }
+LINE   { 1281 }
+FILEPOS{ 58416 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_WhyInCity_09_01"); //But I am! Just not on the farm. }
-LINE   { 1284 }
-FILEPOS{ 58586 }
+LINE   { 1282 }
+FILEPOS{ 58519 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_WhyInCity_09_02"); //You could say I'm our outpost in the city. We don't want the ship to sail without us. }
-LINE   { 1285 }
-FILEPOS{ 58676 }
+LINE   { 1283 }
+FILEPOS{ 58609 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self , "DIA_Lares_Schiff_15_00"); //What ship were you talking about? }
-LINE   { 1292 }
-FILEPOS{ 59000 }
+LINE   { 1290 }
+FILEPOS{ 58933 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_Schiff_09_01"); //It's on the open sea harbor, behind the cliffs. Lee and a few of his people really want to get away from here. }
-LINE   { 1293 }
-FILEPOS{ 59089 }
+LINE   { 1291 }
+FILEPOS{ 59022 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_Schiff_09_02"); //But that could take a while... }
-LINE   { 1294 }
-FILEPOS{ 59255 }
+LINE   { 1292 }
+FILEPOS{ 59188 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self , "DIA_Lares_Schiff_15_03"); //Why? }
-LINE   { 1295 }
-FILEPOS{ 59341 }
+LINE   { 1293 }
+FILEPOS{ 59274 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_Schiff_09_04"); //You'd better ask Lee about that, if you meet him... He's got plans. }
-LINE   { 1296 }
-FILEPOS{ 59401 }
+LINE   { 1294 }
+FILEPOS{ 59334 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self, "DIA_Lares_WegZumHof_15_00"); //How do I find the landowner's farm? }
-LINE   { 1300 }
-FILEPOS{ 59573 }
+LINE   { 1298 }
+FILEPOS{ 59506 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_WegZumHof_09_00"); //It's quite simple. You leave the seaport by the east gate, and then follow the path towards the east. }
-LINE   { 1301 }
-FILEPOS{ 59666 }
+LINE   { 1299 }
+FILEPOS{ 59599 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_WegZumHof_09_01"); //I can take you there if you want. }
-LINE   { 1303 }
-FILEPOS{ 59875 }
+LINE   { 1301 }
+FILEPOS{ 59808 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Lares_WegZumHof_09_01"); //I can take you there if you want. I've hung around here too long anyway. }
-LINE   { 1307 }
-FILEPOS{ 59989 }
+LINE   { 1305 }
+FILEPOS{ 59922 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Lares_GuildOfThieves_15_00"); //Do you know anything about a thieves' guild in town? }
-LINE   { 1339 }
-FILEPOS{ 61094 }
+LINE   { 1337 }
+FILEPOS{ 61027 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_GuildOfThieves_09_01"); //The questions you ask... }
-LINE   { 1340 }
-FILEPOS{ 61210 }
+LINE   { 1338 }
+FILEPOS{ 61143 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_GuildOfThieves_09_02"); //Of course, there's a thieves' guild here. Just like in every big city. }
-LINE   { 1341 }
-FILEPOS{ 61298 }
+LINE   { 1339 }
+FILEPOS{ 61231 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_GuildOfThieves_09_03"); //And every petty pickpocket or fence is probably connected to it somehow. }
-LINE   { 1342 }
-FILEPOS{ 61432 }
+LINE   { 1340 }
+FILEPOS{ 61365 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Lares_WhereGuildOfThieves_15_00"); //Do you know where I can find the thieves' guild? }
-LINE   { 1366 }
-FILEPOS{ 62243 }
+LINE   { 1364 }
+FILEPOS{ 62176 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_WhereGuildOfThieves_09_01"); //(laughs) No offense, but even if I knew, I wouldn't tell you anything. }
-LINE   { 1367 }
-FILEPOS{ 62360 }
+LINE   { 1365 }
+FILEPOS{ 62293 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_WhereGuildOfThieves_09_02"); //These people usually react VERY sensitively to things like that. }
-LINE   { 1368 }
-FILEPOS{ 62499 }
+LINE   { 1366 }
+FILEPOS{ 62432 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_WhereGuildOfThieves_09_03"); //If you want to get involved with them, you should be very careful. }
-LINE   { 1369 }
-FILEPOS{ 62632 }
+LINE   { 1367 }
+FILEPOS{ 62565 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Lares_GotKey_15_00"); //I've got this key here. It's been corroded by sea salt... }
-LINE   { 1394 }
-FILEPOS{ 63451 }
+LINE   { 1392 }
+FILEPOS{ 63384 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_GotKey_09_01"); //So? }
-LINE   { 1395 }
-FILEPOS{ 63564 }
+LINE   { 1393 }
+FILEPOS{ 63497 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self, "DIA_Lares_GotKey_15_02"); //I think it will lead me to the hideout of the thieves' guild... }
-LINE   { 1396 }
-FILEPOS{ 63623 }
+LINE   { 1394 }
+FILEPOS{ 63556 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_GotKey_09_03"); //Well, it could be the key to the sewers. }
-LINE   { 1397 }
-FILEPOS{ 63741 }
+LINE   { 1395 }
+FILEPOS{ 63674 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self, "DIA_Lares_Kanalisation_15_00"); //Where can I find the sewers? }
-LINE   { 1421 }
-FILEPOS{ 64451 }
+LINE   { 1419 }
+FILEPOS{ 64384 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_Kanalisation_09_01"); //What do I know... they usually empty into the ocean. }
-LINE   { 1422 }
-FILEPOS{ 64540 }
+LINE   { 1420 }
+FILEPOS{ 64473 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Lares_OtherGuild_09_00"); //You're in the militia now! }
-LINE   { 1454 }
-FILEPOS{ 65425 }
+LINE   { 1452 }
+FILEPOS{ 65358 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Lares_OtherGuild_09_01"); //(laughs) I'm gonna laugh myself sick - a former convict in the militia... }
-LINE   { 1455 }
-FILEPOS{ 65513 }
+LINE   { 1453 }
+FILEPOS{ 65446 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Lares_OtherGuild_09_09"); //I heard you got accepted. }
-LINE   { 1459 }
-FILEPOS{ 65676 }
+LINE   { 1457 }
+FILEPOS{ 65609 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Lares_OtherGuild_09_02"); //So now you're one of the King's paladins! }
-LINE   { 1460 }
-FILEPOS{ 65763 }
+LINE   { 1458 }
+FILEPOS{ 65696 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Lares_OtherGuild_09_03"); //(mischievously) Only you could pull something like that... }
-LINE   { 1463 }
-FILEPOS{ 65875 }
+LINE   { 1461 }
+FILEPOS{ 65808 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Lares_OtherGuild_09_04"); //(concerned) You won't blow the whistle on me about working for Lee, will you? }
-LINE   { 1467 }
-FILEPOS{ 66035 }
+LINE   { 1465 }
+FILEPOS{ 65968 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (other,self , "DIA_Lares_OtherGuild_15_05"); //But you know me... }
-LINE   { 1468 }
-FILEPOS{ 66174 }
+LINE   { 1466 }
+FILEPOS{ 66107 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Lares_OtherGuild_09_06"); //I don't get it. You entered the monastery. What's it like there? }
-LINE   { 1475 }
-FILEPOS{ 66333 }
+LINE   { 1473 }
+FILEPOS{ 66266 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (other,self , "DIA_Lares_OtherGuild_15_07"); //Different. }
-LINE   { 1476 }
-FILEPOS{ 66458 }
+LINE   { 1474 }
+FILEPOS{ 66391 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Lares_OtherGuild_09_08"); //I can imagine. }
-LINE   { 1477 }
-FILEPOS{ 66529 }
+LINE   { 1475 }
+FILEPOS{ 66462 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_OtherGuild_09_00"); //I heard that you have been accepted to join Lee. }
-LINE   { 1483 }
-FILEPOS{ 66678 }
+LINE   { 1481 }
+FILEPOS{ 66611 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Lares_OtherGuild_09_10"); //Congratulations. }
-LINE   { 1484 }
-FILEPOS{ 66793 }
+LINE   { 1482 }
+FILEPOS{ 66726 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_Forest_15_00"); //Can you help me get through the thick woods in the east? }
-LINE   { 1514 }
-FILEPOS{ 67547 }
+LINE   { 1512 }
+FILEPOS{ 67480 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_Forest_09_01"); //Okay. But what do you want to go there for? }
-LINE   { 1515 }
-FILEPOS{ 67676 }
+LINE   { 1513 }
+FILEPOS{ 67609 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_Forest_15_02"); //Nefarius ordered me to find more ornaments. }
-LINE   { 1516 }
-FILEPOS{ 67792 }
+LINE   { 1514 }
+FILEPOS{ 67725 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_Forest_15_03"); //One of the places where I'm supposed to look is in the middle of the woods. }
-LINE   { 1517 }
-FILEPOS{ 67908 }
+LINE   { 1515 }
+FILEPOS{ 67841 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_Forest_09_04"); //I see. And that's still too dangerous for you alone, right? }
-LINE   { 1518 }
-FILEPOS{ 68056 }
+LINE   { 1516 }
+FILEPOS{ 67989 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_Forest_09_05"); //No problem. Let me know when you want to leave. }
-LINE   { 1519 }
-FILEPOS{ 68188 }
+LINE   { 1517 }
+FILEPOS{ 68121 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL {  	AI_Output (self, other, "DIA_Lares_GoNow_09_01"); //Then let's go... Follow me. }
-LINE   { 1555 }
-FILEPOS{ 69242 }
+LINE   { 1553 }
+FILEPOS{ 69175 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Lares_GoNow_15_00"); //Okay, let's go. }
-LINE   { 1569 }
-FILEPOS{ 69566 }
+LINE   { 1567 }
+FILEPOS{ 69499 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_GoNow_09_03"); //I cannot leave here until we know more about the missing people, or someone else takes over my duties. }
-LINE   { 1573 }
-FILEPOS{ 69684 }
+LINE   { 1571 }
+FILEPOS{ 69617 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Addon_Lares_GoNow_09_04"); //Where? }
-LINE   { 1581 }
-FILEPOS{ 70002 }
+LINE   { 1579 }
+FILEPOS{ 69935 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Addon_Lares_GoNow_Maya_15_00"); //Let us take Vatras' ornament back. }
-LINE   { 1606 }
-FILEPOS{ 70862 }
+LINE   { 1604 }
+FILEPOS{ 70795 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Addon_Lares_GoNow_Onar_15_00"); //To Onar's farm. }
-LINE   { 1614 }
-FILEPOS{ 71126 }
+LINE   { 1612 }
+FILEPOS{ 71059 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Addon_Lares_GoNow_Forest_15_00"); //To the dense forest in the east. }
-LINE   { 1622 }
-FILEPOS{ 71360 }
+LINE   { 1620 }
+FILEPOS{ 71293 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Lares_GUIDE_09_00"); //So, here we are. }
-LINE   { 1657 }
-FILEPOS{ 72293 }
+LINE   { 1655 }
+FILEPOS{ 72226 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Lares_GUIDE_09_01"); //So there you are. I was beginning to think you'd been eaten by wolves. }
-LINE   { 1661 }
-FILEPOS{ 72380 }
+LINE   { 1659 }
+FILEPOS{ 72313 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_GUIDE_09_02"); //So, the rest of the way you can manage alone. I have to get back to the city, I've got a few things to take care of... }
-LINE   { 1663 }
-FILEPOS{ 72511 }
+LINE   { 1661 }
+FILEPOS{ 72444 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Lares_GUIDE_09_03"); //Just follow this road here, and remember - stand up for yourself and don't take any crap, and it'll be smooth sailing. }
-LINE   { 1664 }
-FILEPOS{ 72684 }
+LINE   { 1662 }
+FILEPOS{ 72617 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortalInter1_09_00"); //Now that we're no longer in town and cannot be overheard, let me tell you a little more. }
-LINE   { 1699 }
-FILEPOS{ 73779 }
+LINE   { 1697 }
+FILEPOS{ 73712 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortalInter1_09_01"); //We are now going to take this ornament that you brought me back to Saturas. You remember Saturas, don't you? }
-LINE   { 1700 }
-FILEPOS{ 73943 }
+LINE   { 1698 }
+FILEPOS{ 73876 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Addon_Lares_ArrivedPortalInter1_teil2_09_00"); //We lads from the former New Camp still have good relations with the Water Mages. }
-LINE   { 1712 }
-FILEPOS{ 74516 }
+LINE   { 1710 }
+FILEPOS{ 74449 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Addon_Lares_ArrivedPortalInter1_teil2_09_01"); //Even Lee will still protect the Water Mages against any danger today if it is within his power. }
-LINE   { 1713 }
-FILEPOS{ 74679 }
+LINE   { 1711 }
+FILEPOS{ 74612 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Addon_Lares_ArrivedPortalInter1_teil2_09_02"); //To keep up the contact with the Water Mages, I'm in town most of the time, working together with Vatras. }
-LINE   { 1714 }
-FILEPOS{ 74857 }
+LINE   { 1712 }
+FILEPOS{ 74790 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Addon_Lares_ArrivedPortalInter1_teil2_09_03"); //And this is the armor that is issued to each of us by the Water Mages. The members of the Ring of Water have been wearing such armor since before the orc wars. }
-LINE   { 1716 }
-FILEPOS{ 75082 }
+LINE   { 1714 }
+FILEPOS{ 75015 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (other, self, "DIA_Addon_Lares_ArrivedPortalInter1_teil2_15_04"); //What is Cavalorn's part in this? He wasn't a follower of the New Camp as far as I know. }
-LINE   { 1720 }
-FILEPOS{ 75366 }
+LINE   { 1718 }
+FILEPOS{ 75299 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_ArrivedPortalInter1_teil2_09_05"); //You are right, our community has grown. Even I do not know how many there are by now. }
-LINE   { 1721 }
-FILEPOS{ 75535 }
+LINE   { 1719 }
+FILEPOS{ 75468 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Addon_Lares_ArrivedPortalInter1_teil2_09_06"); //But let us move on. I want to get further away from the city. We can talk more about it later. }
-LINE   { 1724 }
-FILEPOS{ 75709 }
+LINE   { 1722 }
+FILEPOS{ 75642 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Addon_Lares_ArrivedPortalInter1_wer_15_00"); //Saturas? Who is that? }
-LINE   { 1730 }
-FILEPOS{ 76008 }
+LINE   { 1728 }
+FILEPOS{ 75941 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Addon_Lares_ArrivedPortalInter1_wer_09_01"); //He was the head of the Water Mages in the New Camp, back in the Valley of Mines when the Barrier was still around us all. }
-LINE   { 1731 }
-FILEPOS{ 76110 }
+LINE   { 1729 }
+FILEPOS{ 76043 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Addon_Lares_ArrivedPortalInter1_wer_09_02"); //Lee and I had made a pact with the Water Mages back then. Together, we were strong enough to hold up against the Old Camp. }
-LINE   { 1732 }
-FILEPOS{ 76312 }
+LINE   { 1730 }
+FILEPOS{ 76245 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Addon_Lares_ArrivedPortalInter1_ja_15_00"); //Certainly. He was the leader of the Water Mages in the New Camp. }
-LINE   { 1738 }
-FILEPOS{ 76625 }
+LINE   { 1736 }
+FILEPOS{ 76558 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_ArrivedPortalInterWeiter_09_00"); //What's wrong? Are you still holding up? }
-LINE   { 1767 }
-FILEPOS{ 77589 }
+LINE   { 1765 }
+FILEPOS{ 77522 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(other, self, "DIA_Addon_Lares_ArrivedPortalInterWeiter_15_01"); //That fellow over there has problems with bandits. }
-LINE   { 1773 }
-FILEPOS{ 77858 }
+LINE   { 1771 }
+FILEPOS{ 77791 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Lares_ArrivedPortalInterWeiter_09_02"); //(snidely) Too bad for him, but we don't have time for that now. }
-LINE   { 1774 }
-FILEPOS{ 77988 }
+LINE   { 1772 }
+FILEPOS{ 77921 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_ArrivedPortalInterWeiter2_09_00"); //Don't you break down on me now. }
-LINE   { 1805 }
-FILEPOS{ 78947 }
+LINE   { 1803 }
+FILEPOS{ 78880 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortalInter2_09_00"); //The Water Mages are all beside themselves. They've been digging at an excavation site in the north-east for weeks. It's anybody's guess what they're trying to find there. }
-LINE   { 1834 }
-FILEPOS{ 79827 }
+LINE   { 1832 }
+FILEPOS{ 79760 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortalInter2_09_01"); //It all started when the earth began trembling like it did in the worst times of the Barrier. }
-LINE   { 1835 }
-FILEPOS{ 80073 }
+LINE   { 1833 }
+FILEPOS{ 80006 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortalInter2_09_02"); //Horrible stone creatures emerged from the ground, slaying everyone who went within 100 feet of them. }
-LINE   { 1836 }
-FILEPOS{ 80241 }
+LINE   { 1834 }
+FILEPOS{ 80174 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortalInter2_09_03"); //The Water Mages took the matter in hand and destroyed those hostile invaders. And now they're digging down there, searching for an explanation for these strange events. }
-LINE   { 1837 }
-FILEPOS{ 80417 }
+LINE   { 1835 }
+FILEPOS{ 80350 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortalInter2_09_04"); //But you will soon see for yourself. }
-LINE   { 1838 }
-FILEPOS{ 80661 }
+LINE   { 1836 }
+FILEPOS{ 80594 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_ArrivedPortalInterWeiter3_09_00"); //Can you still go on? }
-LINE   { 1869 }
-FILEPOS{ 81801 }
+LINE   { 1867 }
+FILEPOS{ 81734 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_ArrivedPortalInterWeiter4_09_00"); //Right. It could get dangerous here. }
-LINE   { 1898 }
-FILEPOS{ 82707 }
+LINE   { 1896 }
+FILEPOS{ 82640 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortal_09_00"); //We're here. }
-LINE   { 1930 }
-FILEPOS{ 83726 }
+LINE   { 1928 }
+FILEPOS{ 83659 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL {  	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortal_09_01"); //Here, take the ornament. The Water Mages must be in there somewhere. Take it to them. }
-LINE   { 1931 }
-FILEPOS{ 83807 }
+LINE   { 1929 }
+FILEPOS{ 83740 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortal_09_02"); //If you should meet any beasts down in that hole in the ground that look like they're too much for you, flee forward to Saturas. }
-LINE   { 1933 }
-FILEPOS{ 84031 }
+LINE   { 1931 }
+FILEPOS{ 83964 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortal_09_03"); //He'll take care of the beasts for you. I need to go back. }
-LINE   { 1934 }
-FILEPOS{ 84228 }
+LINE   { 1932 }
+FILEPOS{ 84161 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortal_09_04"); //And one more thing: Don't even think about strolling around for long with this ornament. Go DIRECTLY to Saturas. }
-LINE   { 1935 }
-FILEPOS{ 84355 }
+LINE   { 1933 }
+FILEPOS{ 84288 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output 	(self, other, "DIA_Addon_Lares_ArrivedPortal_09_05"); //See you. }
-LINE   { 1936 }
-FILEPOS{ 84537 }
+LINE   { 1934 }
+FILEPOS{ 84470 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_Albern_09_00"); //(strictly) Stop goofing off! Take that ornament to Saturas already! }
-LINE   { 1969 }
-FILEPOS{ 85566 }
+LINE   { 1967 }
+FILEPOS{ 85499 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_GOFORESTPRE_ja_15_00"); //Yes. }
-LINE   { 1997 }
-FILEPOS{ 86400 }
+LINE   { 1995 }
+FILEPOS{ 86333 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GOFORESTPRE_ja_09_01"); //All right, my friend. Then follow me. This is going to be gross. }
-LINE   { 1998 }
-FILEPOS{ 86474 }
+LINE   { 1996 }
+FILEPOS{ 86407 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_GOFORESTPRE_nein_15_00"); //No. You can go. }
-LINE   { 2005 }
-FILEPOS{ 86775 }
+LINE   { 2003 }
+FILEPOS{ 86708 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Lares_GOFORESTPRE_nein_09_01"); //I guess the matter has taken care of itself? All right. See you. }
-LINE   { 2006 }
-FILEPOS{ 86862 }
+LINE   { 2004 }
+FILEPOS{ 86795 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Lares_GOFORESTPRE_09_00"); //Do you still want to go into the woods with me? }
-LINE   { 2016 }
-FILEPOS{ 87225 }
+LINE   { 2014 }
+FILEPOS{ 87158 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Lares_GOFORESTPRE_09_01"); //Have you thought about going into the woods? Do you really want to do that? }
-LINE   { 2020 }
-FILEPOS{ 87355 }
+LINE   { 2018 }
+FILEPOS{ 87288 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output 	(self, other, "DIA_Addon_Lares_GOFOREST_09_00"); //There. You should be able to do the rest by yourself. I'm headed back, then. }
-LINE   { 2065 }
-FILEPOS{ 88685 }
+LINE   { 2063 }
+FILEPOS{ 88618 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output 	(self, other, "DIA_Addon_Lares_GOFOREST_09_01"); //Hurry up. I don't want to stay here any longer than I have to. }
-LINE   { 2073 }
-FILEPOS{ 89025 }
+LINE   { 2071 }
+FILEPOS{ 88958 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(other, self, "DIA_Addon_Lares_PortalInterWEITER_15_00"); //Stop blabbing. }
-LINE   { 2105 }
-FILEPOS{ 89936 }
+LINE   { 2103 }
+FILEPOS{ 89869 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(other, self, "DIA_Addon_Lares_PortalInterWEITER_15_01"); //(irritated) Yeah, yeah. }
-LINE   { 2109 }
-FILEPOS{ 90070 }
+LINE   { 2107 }
+FILEPOS{ 90003 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Lares_PortalInterWEITER_15_02"); //Let's move on. }
-LINE   { 2112 }
-FILEPOS{ 90174 }
+LINE   { 2110 }
+FILEPOS{ 90107 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Lares_PortalInterWEITER_09_03"); //Keep back a little. }
-LINE   { 2116 }
-FILEPOS{ 90301 }
+LINE   { 2114 }
+FILEPOS{ 90234 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Lares_PortalInterWEITER_09_04"); //Stay close behind me. }
-LINE   { 2120 }
-FILEPOS{ 90410 }
+LINE   { 2118 }
+FILEPOS{ 90343 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Lares_DEX_15_00"); //Can you teach me something? }
-LINE   { 2176 }
-FILEPOS{ 91898 }
+LINE   { 2174 }
+FILEPOS{ 91831 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Lares_DEX_Add_09_01"); //Sure. I can help you become stronger and more dexterous if you like. }
-LINE   { 2177 }
-FILEPOS{ 91978 }
+LINE   { 2175 }
+FILEPOS{ 91911 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Addon_Lares_Teach_15_00"); //Teach me something. }
-LINE   { 2212 }
-FILEPOS{ 93038 }
+LINE   { 2210 }
+FILEPOS{ 92971 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Lares_TEACH_BACK_09_00"); //You've already gotten more dexterous. }
-LINE   { 2228 }
-FILEPOS{ 94008 }
+LINE   { 2226 }
+FILEPOS{ 93941 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Lares_TEACH_BACK_Add_09_00"); //(appraisingly). Good. Your strength has increased. }
-LINE   { 2232 }
-FILEPOS{ 94169 }
+LINE   { 2230 }
+FILEPOS{ 94102 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Lares_AnyNews_15_00"); //Any news? }
-LINE   { 2364 }
-FILEPOS{ 99379 }
+LINE   { 2362 }
+FILEPOS{ 99312 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self ,other,"DIA_Lares_AnyNews_09_01"); //You're responsible for the best news yourself. They've let Bennet go again, he's back at the farm. }
-LINE   { 2367 }
-FILEPOS{ 99487 }
+LINE   { 2365 }
+FILEPOS{ 99420 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self ,other,"DIA_Lares_AnyNews_09_02"); //Go to him, I think he'd like to thank you himself. }
-LINE   { 2368 }
-FILEPOS{ 99642 }
+LINE   { 2366 }
+FILEPOS{ 99575 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output (self ,other,"DIA_Lares_AnyNews_09_03"); //You could say so. The paladins have arrested Bennet, our smith. }
-LINE   { 2372 }
-FILEPOS{ 99764 }
+LINE   { 2370 }
+FILEPOS{ 99697 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (other,self ,"DIA_Lares_AnyNews_15_04"); //So I've heard. That's a bad business. }
-LINE   { 2376 }
-FILEPOS{ 99933 }
+LINE   { 2374 }
+FILEPOS{ 99866 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (self ,other,"DIA_Lares_AnyNews_09_05"); //You can say that again. }
-LINE   { 2377 }
-FILEPOS{ 100028 }
+LINE   { 2375 }
+FILEPOS{ 99961 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (other,self ,"DIA_Lares_AnyNews_15_06"); //How did that happen? }
-LINE   { 2381 }
-FILEPOS{ 100127 }
+LINE   { 2379 }
+FILEPOS{ 100060 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (self ,other,"DIA_Lares_AnyNews_09_07"); //Bennet went to town to buy supplies. Well, he never came back. }
-LINE   { 2382 }
-FILEPOS{ 100205 }
+LINE   { 2380 }
+FILEPOS{ 100138 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 			AI_Output (self ,other,"DIA_Lares_AnyNews_09_08"); //If you want to learn more, you should ask Hodges, he was in the city with Bennet. }
-LINE   { 2383 }
-FILEPOS{ 100325 }
+LINE   { 2381 }
+FILEPOS{ 100258 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Lares_NewsAboutBennet_15_00"); //Any news of Bennet? }
-LINE   { 2411 }
-FILEPOS{ 101131 }
+LINE   { 2409 }
+FILEPOS{ 101064 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Lares_NewsAboutBennet_09_01"); //They seem to have taken him to the barracks and tossed him into the dungeon. }
-LINE   { 2412 }
-FILEPOS{ 101214 }
+LINE   { 2410 }
+FILEPOS{ 101147 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Lares_NewsAboutBennet_15_02"); //How can we get him out of there? }
-LINE   { 2413 }
-FILEPOS{ 101354 }
+LINE   { 2411 }
+FILEPOS{ 101287 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Lares_NewsAboutBennet_09_03"); //I don't have any ideas so far. I can't get to his cell to talk to him. }
-LINE   { 2414 }
-FILEPOS{ 101450 }
+LINE   { 2412 }
+FILEPOS{ 101383 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Lares_NewsAboutBennet_09_04"); //All I can do is keep my ears open, but there isn't much to learn around here. }
-LINE   { 2415 }
-FILEPOS{ 101584 }
+LINE   { 2413 }
+FILEPOS{ 101517 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Lares_Kap4_PERM_15_00"); //Why aren't you out hunting dragons? }
-LINE   { 2470 }
-FILEPOS{ 102938 }
+LINE   { 2468 }
+FILEPOS{ 102871 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Lares_Kap4_PERM_09_01"); //That's not my kind of thing, I'll leave that to the others. }
-LINE   { 2471 }
-FILEPOS{ 103031 }
+LINE   { 2469 }
+FILEPOS{ 102964 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Lares_Kap4_PERM_09_02"); //Nah, nah. Fresh sea air - that's what I need now. }
-LINE   { 2472 }
-FILEPOS{ 103148 }
+LINE   { 2470 }
+FILEPOS{ 103081 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Lares_KnowWhereEnemy_15_00"); //Would you fancy leaving this island? }
-LINE   { 2531 }
-FILEPOS{ 104755 }
+LINE   { 2529 }
+FILEPOS{ 104688 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Lares_KnowWhereEnemy_09_01"); //More than anything. What have you got in mind? }
-LINE   { 2532 }
-FILEPOS{ 104857 }
+LINE   { 2530 }
+FILEPOS{ 104790 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Lares_KnowWhereEnemy_15_02"); //I found out where the leader of the dragons is hiding. He's on an island, not far from here. }
-LINE   { 2533 }
-FILEPOS{ 104969 }
+LINE   { 2531 }
+FILEPOS{ 104902 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Lares_KnowWhereEnemy_15_03"); //I intend to get rid of him for good. }
-LINE   { 2534 }
-FILEPOS{ 105127 }
+LINE   { 2532 }
+FILEPOS{ 105060 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Lares_KnowWhereEnemy_09_04"); //Sounds like a blast. If you can use me, I'm in. }
-LINE   { 2535 }
-FILEPOS{ 105229 }
+LINE   { 2533 }
+FILEPOS{ 105162 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Lares_KnowWhereEnemy_09_05"); //Couldn't you use a teacher for dexterity or combat with one-handed weapons on your journey? }
-LINE   { 2536 }
-FILEPOS{ 105342 }
+LINE   { 2534 }
+FILEPOS{ 105275 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output			(other,self , "DIA_Lares_KnowWhereEnemy_15_06"); //The ship's already full, but I'll get back to you if there is a change. }
-LINE   { 2540 }
-FILEPOS{ 105542 }
+LINE   { 2538 }
+FILEPOS{ 105475 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Lares_KnowWhereEnemy_Yes_15_00"); //I knew I could rely on you. }
-LINE   { 2552 }
-FILEPOS{ 106006 }
+LINE   { 2550 }
+FILEPOS{ 105939 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Lares_KnowWhereEnemy_Yes_15_01"); //We're all going to meet at the ship. }
-LINE   { 2553 }
-FILEPOS{ 106100 }
+LINE   { 2551 }
+FILEPOS{ 106033 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Lares_KnowWhereEnemy_Yes_09_02"); //A man of action, that's what I like. See you later. }
-LINE   { 2554 }
-FILEPOS{ 106203 }
+LINE   { 2552 }
+FILEPOS{ 106136 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Lares_KnowWhereEnemy_No_15_00"); //I appreciate your offer, but I have no use for you. }
-LINE   { 2574 }
-FILEPOS{ 106699 }
+LINE   { 2572 }
+FILEPOS{ 106632 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Lares_KnowWhereEnemy_No_09_01"); //You must know what you want. If you want to talk about it later, you know where to find me. }
-LINE   { 2575 }
-FILEPOS{ 106816 }
+LINE   { 2573 }
+FILEPOS{ 106749 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Lares_LeaveMyShip_15_00"); //It's better if you don't come along. }
-LINE   { 2612 }
-FILEPOS{ 107820 }
+LINE   { 2610 }
+FILEPOS{ 107753 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Lares_LeaveMyShip_09_01"); //As you like, but in the future, think about what you promise to whom. }
-LINE   { 2613 }
-FILEPOS{ 107919 }
+LINE   { 2611 }
+FILEPOS{ 107852 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Lares_StillNeedYou_15_00"); //Are you still interested in the voyage? }
-LINE   { 2651 }
-FILEPOS{ 109063 }
+LINE   { 2649 }
+FILEPOS{ 108996 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Lares_StillNeedYou_09_01"); //Normally, I don't let people treat me like that, but since you're one of us, I'll let you get away with it this time. }
-LINE   { 2655 }
-FILEPOS{ 109212 }
+LINE   { 2653 }
+FILEPOS{ 109145 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Lares_StillNeedYou_09_02"); //We'll meet on the ship. }
-LINE   { 2656 }
-FILEPOS{ 109392 }
+LINE   { 2654 }
+FILEPOS{ 109325 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Lares_StillNeedYou_09_03"); //Don't take it personally, but I think you were right. }
-LINE   { 2672 }
-FILEPOS{ 109740 }
+LINE   { 2670 }
+FILEPOS{ 109673 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Lares_StillNeedYou_09_04"); //It's better if I stay here. }
-LINE   { 2673 }
-FILEPOS{ 109856 }
+LINE   { 2671 }
+FILEPOS{ 109789 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_449_LARES_DI.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Lares_DI_Hallo_15_00"); //How's it going? }
