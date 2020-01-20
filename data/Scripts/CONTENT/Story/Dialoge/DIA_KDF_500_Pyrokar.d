@@ -1622,48 +1622,62 @@ instance DIA_Pyrokar_SCOBSESSED		(C_INFO)
 func int DIA_Pyrokar_SCOBSESSED_Condition ()
 {
 	if (SC_IsObsessed == TRUE)
+	{
+		if (Lares_TakeFirstMissionFromVatras == TRUE)
 		{
-				return TRUE;
+			DIA_Addon_Vatras_CloseMeeting.description = "Heal me, Master, for I am possessed.";
+		}
+		else
+		{
+			DIA_Addon_Vatras_CloseMeeting.description = "I think I am possessed. Can you heal me?";
 		};
+		return TRUE;
+	};
 };
 
 var int Got_HealObsession_Day;
 func void DIA_Pyrokar_SCOBSESSED_Info ()
 {
+	if (hero.guild == GIL_KDF)
+	{
+		AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_15_00"); //Heal me, Master, for I am possessed.
+	}
+	else
+	{
+		AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_15_05"); //I think I am possessed. Can you heal me?
+	};
+
 	if ((Got_HealObsession_Day<=(Wld_GetDay()-2)) || (Got_HealObsession_Day == 0))
 	&& (Npc_HasItems (other,ItPo_HealObsession_MIS) == FALSE)  
+	{
+		if (hero.guild == GIL_KDF)
 		{
-			if (hero.guild == GIL_KDF)
-				{
-					AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_15_00"); //Heal me, Master, for I am possessed.
-				
-					AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_01"); //So be it! Take this potion. It will relieve you of your nightmares.
-					AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_02"); //May the mercy of Innos be your salvation.
-					AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_03"); //Act on his behalf and beware of the evil eye of the enemy.
-				
-					if (SC_ObsessionTimes > 3)
-						{	
-							AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_04"); //But be forewarned - if you expose yourself to their power too often, at some point there will be no turning back for you. Always remember that.
-						};
-					
-					CreateInvItems (self, ItPo_HealObsession_MIS, 2);									
-					B_GiveInvItems (self, other, ItPo_HealObsession_MIS, 2);					
-					Got_HealObsession_Day = Wld_GetDay(); 
-				}
-			else
-				{
-					AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_15_05"); //I think I am possessed. Can you heal me?
-					AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_06"); //Not without a token of your respect for this monastery, my son. 300 gold coins.
-				
-					Info_ClearChoices	(DIA_Pyrokar_SCOBSESSED);
-					Info_AddChoice	(DIA_Pyrokar_SCOBSESSED, "That's too much.", DIA_Pyrokar_SCOBSESSED_nein );
-					Info_AddChoice	(DIA_Pyrokar_SCOBSESSED, "Great. Here's the money.", DIA_Pyrokar_SCOBSESSED_ok );
-				};
-		 }
+			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_01"); //So be it! Take this potion. It will relieve you of your nightmares.
+			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_02"); //May the mercy of Innos be your salvation.
+			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_03"); //Act on his behalf and beware of the evil eye of the enemy.
+		
+			if (SC_ObsessionTimes > 3)
+			{	
+				AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_04"); //But be forewarned - if you expose yourself to their power too often, at some point there will be no turning back for you. Always remember that.
+			};
+			
+			CreateInvItems (self, ItPo_HealObsession_MIS, 1);									
+			B_GiveInvItems (self, other, ItPo_HealObsession_MIS, 1);					
+			Got_HealObsession_Day = Wld_GetDay(); 
+		}
+		else
+		{
+			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_06"); //Not without a token of your respect for this monastery, my son. 300 gold coins.
+		
+			Info_ClearChoices	(DIA_Pyrokar_SCOBSESSED);
+			Info_AddChoice	(DIA_Pyrokar_SCOBSESSED, "That's too much.", DIA_Pyrokar_SCOBSESSED_nein );
+			Info_AddChoice	(DIA_Pyrokar_SCOBSESSED, "Great. Here's the money.", DIA_Pyrokar_SCOBSESSED_ok );
+		};
+	}
 	 else
-		 {
-			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_07"); //But you only just had your healing potion. Don't come back to me until you really need my help.
-		 };
+	{
+		AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_07"); //But you only just had your healing potion. Don't come back to me until you really need my help.
+	};
 };
 func void DIA_Pyrokar_SCOBSESSED_ok ()
 {
@@ -1672,8 +1686,8 @@ func void DIA_Pyrokar_SCOBSESSED_ok ()
 	if (B_GiveInvItems (other, self, ItMi_Gold,300))
 		{
 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_ok_11_01"); //Here, drink this. May the mercy of Innos be your salvation.
-			CreateInvItems (self, ItPo_HealObsession_MIS, 2);									
-			B_GiveInvItems (self, other, ItPo_HealObsession_MIS, 2);
+			CreateInvItems (self, ItPo_HealObsession_MIS, 1);									
+			B_GiveInvItems (self, other, ItPo_HealObsession_MIS, 1);
 			Got_HealObsession_Day = Wld_GetDay(); 
 		}
 		else
@@ -1764,6 +1778,8 @@ func void DIA_Pyrokar_AlmanachBringen_Info ()
 	{
 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_06"); //You have already brought me a great number of the enemy's books.
 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_07"); //I should be surprised if they had many more in circulation.
+		B_LogEntry (TOPIC_DEMENTOREN,"Pyrokar is convinced I have taken all of the Almanacs of the Possessed out of circulation."); 
+		TOPIC_END_DEMENTOREN = TRUE;
 	};
 
 	AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_08"); //Take this. It is a gift from the monastery which will help you when you face evil.

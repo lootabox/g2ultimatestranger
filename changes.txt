@@ -65,6 +65,7 @@ Addon is only accessible in chapter 3. Xardas will give the addon introduction a
 "Merchant raid" requires finding the bandits who took Erol's stone tablets, before returning any stone tablets.
 "Quest for Lucia" is now just about delivering her note to Elvrich, after that she is just another missing person.
 "The Claw of Beliar" requires talking to Saturas before praying to Beliar and the option to destroy is only presented once then.
+"The Seekers" can be finished by bringing all of the Almanacs to Pyrokar before leaving for Irdorath.
 
 	Monster
 
@@ -103,7 +104,7 @@ Fixed XP award for recruiting Lares, Lester.
 Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
 Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patrick, Monty, Tonak, Telbor, Pardos.
 Fixed issue with dragon dialog restarting quest 'Dragon Eggs', if it was already completed.
-Fixed logical issues with dialogue of Baltram, Bennet, Diego, Fernando, Lobart, Lothar, Lucia, Ramon, Ulf, Vatras, Xardas.
+Fixed logical issues with dialogue of Baltram, Bennet, Diego, Fernando, Lobart, Lothar, Lucia, Pyrokar, Ramon, Ulf, Vatras, Xardas.
 Fixed mages to not loot the NH while in the city for Daron, Myxir and Vatras.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
 Fixed skipping of NH dialog line when talking to possessed NPCs for Bromor, Brutus, Engrom, Fernando, Malak, Sekob, Vino.
@@ -329,6 +330,7 @@ Parlan's dialog has 3 more previously unused dialogue lines for when NH keeps di
 Peck and Vanja are now properly caught with pants down.
 Pedro cannot be asked about life in the monastery if NH is magician.
 Pepe's dialog for buying a sheep is only available if NH knows he needs one and is not part of any guild yet.
+Pyrokar only gives one potion for healing possession, as he states in his dialog lines.
 Ramirez shows two dialogue options only after he sees the thieves' signal.
 Randolph always drinks the medicine when it is given to him.
 Randolph drinks only beer during his drinking contest.
