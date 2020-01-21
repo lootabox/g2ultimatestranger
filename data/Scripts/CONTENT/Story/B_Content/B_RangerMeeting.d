@@ -103,7 +103,7 @@ func VOID B_RangerMeetingParking () // im Lares dialog
 		B_StartOtherRoutine	(Cavalorn,"Stadt"); //Joly:nicht parking. Der plöppt sonst bei Vat vat rein.			
 	};
 	
-	B_StartOtherRoutine	(Orlan,"START");	
+	B_StartOtherRoutine	(Orlan,"Parking");	
 	
 	Lares_HaltsMaul = TRUE;
 	B_StartOtherRoutine	(Lares,"Parking"); 				

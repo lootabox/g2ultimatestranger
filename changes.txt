@@ -339,6 +339,7 @@ Opolos can only be told each bit of news once.
 Oric can still be talked about visiting the mining sites after visiting one or two of them.
 Oric still offers the potion after starting quest to kill Hosh-Pak.
 Orlan can be given the wine only after asking who he is.
+Orlan does not run to his counter while Lares is still giving a speech during the 'Ring of Water' meeting.
 Parcival can be asked about Diego only after asking about scrapers in general.
 Pardos can be given a potion of pure life energy for a greater reward.
 Pardos can be offered a potion or stew more than once.
