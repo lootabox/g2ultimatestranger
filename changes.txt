@@ -41,20 +41,10 @@ NPCs only loot gold from NH who was caught stealing or by people who are thieves
 NPCs only take the weapon from NH if he was caught doing something violent or threatening.
 
 
-		MINOR IMPROVEMENTS AND FIXES
-
-	Random
-
-Bloodfly poison is referred to as venom instead.
-Cannot level up when dead.
-Increased limit for alpha vobs/polys.
-Main menu sounds are silenced after start a new game or loading one.
-Many items have their description now on one line instead of multiple lines.
-
-
-	Story
+	Story progression
 
 Addon is only accessible in chapter 3. Xardas will give the addon introduction after returning from the Valley of Mines. Vatras will not give the letter for Saturas before this. Likewise, Lares will not mention Vatras if joining the ring before receiving the addon introduction from Xardas.
+Fire Mages are only promoted into the High Order of the Fire Magicians in chapter 5 instead of the end of chapter 3.
 
 
 	Quests
@@ -75,6 +65,17 @@ This does not include minor changes to quest related dialog or obvious fixes, su
 "The Seekers"	Can be finished by bringing all of the Almanacs to Pyrokar before leaving for Irdorath.
 "The man with the eyepatch"	Cancels if the first treasure is not given to him.
 "Unnerving Lurkers"	Cancels in chapter 4 if not finished, causing Kervo and Geppert to be killed by a lurker instead of disappearing.
+
+
+		MINOR IMPROVEMENTS AND FIXES
+
+	Random
+
+Bloodfly poison is referred to as venom instead.
+Cannot level up when dead.
+Increased limit for alpha vobs/polys.
+Main menu sounds are silenced after start a new game or loading one.
+Many items have their description now on one line instead of multiple lines.
 
 
 	Monster

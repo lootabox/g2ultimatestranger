@@ -1467,20 +1467,6 @@ func void DIA_Pyrokar_AUGEGEHEILT_Info ()
 {
 	AI_Output			(other, self, "DIA_Pyrokar_AUGEGEHEILT_15_00"); //You did it. The Eye of Innos is healed.
 	AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_01"); //I would hardly have believed it possible.
-
-	
-	if (hero.guild == GIL_KDF)
-		{
-			AI_Output			(other, self, "DIA_Pyrokar_AUGEGEHEILT_15_02"); //Yes, Master.
-			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_03"); //You have proven many times over that you are ready for the High Order of the Fire Magicians.
-			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_04"); //As of today, you are a member of the Council and will represent our order in the world. You are now one of the high Fire Magicians.
-			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_05"); //Wear the high robe with dignity and bring the order honor and wealth, my brother.
-		
-			CreateInvItem	(hero, ITAR_KDF_H);
-			AI_EquipArmor	(hero, ITAR_KDF_H);	
-			
-			heroGIL_KDF2 = TRUE;
-		};	
 };
 
 //////////////////////////////////////////////////////////////////////
@@ -1888,6 +1874,18 @@ func void DIA_Pyrokar_DRACHENTOT_Info ()
 	AI_Output			(self, other, "DIA_Pyrokar_DRACHENTOT_11_02"); //The Seekers still have not left. On the contrary. I hear more and more reports that, during these last few days, their numbers have even increased.
 	AI_Output			(self, other, "DIA_Pyrokar_DRACHENTOT_11_03"); //Killing off the dragons has dealt the enemy a blow, but it did not suffice. We need to dig this evil out by the roots.
 
+	if (hero.guild == GIL_KDF)
+		{
+			AI_Output			(other, self, "DIA_Pyrokar_AUGEGEHEILT_15_02"); //Yes, Master.
+			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_03"); //You have proven many times over that you are ready for the High Order of the Fire Magicians.
+			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_04"); //As of today, you are a member of the Council and will represent our order in the world. You are now one of the high Fire Magicians.
+			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_05"); //Wear the high robe with dignity and bring the order honor and wealth, my brother.
+		
+			CreateInvItem	(hero, ITAR_KDF_H);
+			AI_EquipArmor	(hero, ITAR_KDF_H);	
+			
+			heroGIL_KDF2 = TRUE;
+		};	
 };
 
 ///////////////////////////////////////////////////////////////////////
