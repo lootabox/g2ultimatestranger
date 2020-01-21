@@ -888,6 +888,7 @@ FUNC INT DIA_Constantino_NewRecipes_Condition()
 	if (Player_IsApprentice != APP_Constantino)
 	&& (Player_IsApprentice > APP_NONE)
 	&& (Npc_GetTalentSkill (other, NPC_TALENT_ALCHEMY) > 0)
+	&& (Kapitel >= 3)
 	{
 		return TRUE;
 	};

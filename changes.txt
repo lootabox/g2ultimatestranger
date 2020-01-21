@@ -127,7 +127,7 @@ Removed option to discuss Lehmar's book of debt before reading it or otherwise l
 Removed visual transforming to Seekers of possessed NPCs.
 
 
-	NPCs Traders
+	NPC Traders
 
 All traders no longer equip their best weapons if they already have one of that type equipped.
 Cronos does not sell Pitch, Sulfur, Tongues of Fire, fire runebooks or any fire spell scrolls, he has some more ice/water spell scrolls for sale.
@@ -140,6 +140,7 @@ Zuris sells an Elixir of Strength in Chapter 3 and Elixir of Dexterity in Chapte
 
 	NPC Teachers
 
+Constantino will not teach alchemy to non-apprentices until chapter 3.
 Diego can teach strength in Khorinis.
 Grimbald does not teach NH for free without finishing the hunt.
 Logan teaches skinning reptiles instead of skinning off furs.
