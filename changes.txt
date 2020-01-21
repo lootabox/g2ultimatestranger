@@ -138,7 +138,15 @@ Traders only sells blank rune stones for novices/mages.
 Zuris sells an Elixir of Strength in Chapter 3 and Elixir of Dexterity in Chapter 2 instead of 3.
 
 
-	NPCs Specific
+	NPC Teachers
+
+Diego can teach strength in Khorinis.
+Grimbald does not teach NH for free without finishing the hunt.
+Logan teaches skinning reptiles instead of skinning off furs.
+Talbin will teach NH hunting once escorted to Khorinis.
+
+
+	NPC Specific
 
 Agon ends the dialog after answering to "how's it going".
 Akil always notices return of Telbor and/or Tonak.
@@ -188,6 +196,7 @@ Biff does not grant NH experience before he is hired.
 Biff will not run down from the mountain when encountering Feomathar and stays within hearing distance.
 Bloodwyn's head is visually removed when his head is "looted".
 Boltan takes into account presence of Bennet, Borka, Cornelius and Fernardo when he says that all the cells are empty.
+Bosper gives less gold for skins, but still much more then other traders.
 Bosper makes a short comment for giving him skins for which he has no specific voice line for.
 Bosper will give the fake mining shares for free as he says.
 Bosper will take Ice Wolf Skin when delivering skins to him.
@@ -202,7 +211,6 @@ Cassia cannot be paid for learning to pickpocket if it's already learned.
 Cassias quests become obsolete if the paladins kill her.
 Cavalorn gives much less gold for buying the farmer's clothes.
 Cornelius' diary cannot be stolen before learning of him being a witness to the murder.
-Diego can teach strength in Khorinis.
 Diego cannot be led to Pedrakhan.
 Diego's dialog has 6 more previously unused dialogue lines and 9 more if NH never met him in Valley of Mines.
 Dragomir immediately equips his crossbow after receiving it.
@@ -249,7 +257,6 @@ Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
 Gorn leads the NH to the rock fortress instead of running ahead of him.
 Greg will comment in Jharkendar if the player did not finish his treasure hunt quest in Khorinis.
-Grimbald does not teach NH for free without finishing the hunt.
 Grimbald gives NH experience for killed snappers.
 Grimbald makes a remark once the hunt is over.
 Guard (1061) at Dexter's camp does not react to weapons or magic before talking to NH at least once.
@@ -304,7 +311,6 @@ Lehmar does not immediately notice the theft of his ledger.
 Lehmar does not lend money to NH if he attacked him, unless Oblivion is cast on him.
 Lobart will only give a discount for working clothes if NH has not already bought them or joined a guild.
 Lobart's quest for working clothes does not start if NH already has bought the clothes or has some other armor.
-Logan teaches skinning reptiles instead of skinning off furs.
 Lothar can only be told about getting proof of dragons after talking to him about the dragons.
 Lothar cannot be asked about the part of the metal ornament after already receiving it from Hagen.
 Lothar's dialog has 21 more previously unused dialogue lines.
@@ -379,7 +385,6 @@ Snaf won't comment on information about Huno being free, if he already said the 
 Sylvio attacking NH causes Biff to attack Bullco as well, if he is with NH.
 Talbin can only be asked about people passing by the river once the Dragon Hunters have moved to the river banks.
 Talbin wields a Wolf Blade instead of a branch.
-Talbin will teach NH hunting once escorted to Khorinis.
 Talbins dialog creates a journal note of him being a teacher only after he agrees to teach NH.
 Thekla now grants previously omitted XP bonus for defeating Bullco.
 Thorben does not immediately take Lehmar's book of debts, instead another dialog option is created just for giving the book.
