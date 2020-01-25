@@ -49,7 +49,7 @@ Fire Mages are only promoted into the High Order of the Fire Magicians in chapte
 
 	Quests
 
-Quest changes which significantly affect how specific quests work or finish.
+Quest changes which significantly affect specific quests requirements or rewards.
 This does not include minor changes to quest related dialog or obvious fixes, such as closing quests that can no longer be completed, etc.
 
 "A Brazen Thief"	Rengaru runs much further when confronted and if not caught will return to his regular spot.
@@ -64,6 +64,7 @@ This does not include minor changes to quest related dialog or obvious fixes, su
 "The Claw of Beliar"	Requires talking to Saturas before praying to Beliar and the option to destroy is only presented once then.
 "The Seekers"	Can be finished by bringing all of the Almanacs to Pyrokar before leaving for Irdorath.
 "The man with the eyepatch"	Cancels if the first treasure is not given to him.
+"The simple way to the monastery"	Only reduces the gold offering required.
 "Unnerving Lurkers"	Cancels in chapter 4 if not finished, causing Kervo and Geppert to be killed by a lurker instead of disappearing.
 
 
@@ -512,6 +513,7 @@ Following items can no longer be bought or looted from certain NPCs:
 
 Following actions now create a log entry:
 * Dialog with Bennet, asking to find magic ore nuggets.
+* Dialog with Daron, when he says to take the statuette to the monastery.
 * Dialog with Grimbald, agreeing to teach taking animal trophies.
 * Dialog with Isgaroth, when receiving his blessing for Thorben's quest.
 * Dialog with Kati, handing out Baltram's shipment.

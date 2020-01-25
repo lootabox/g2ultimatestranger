@@ -466,6 +466,8 @@ func void DIA_Addon_Daron_FoundStatue_Info ()
 		AI_Output	(self, other, "DIA_Addon_Daron_FoundStatue_10_06"); //But I'm sure you won't mind doing that if it means you can be of service to ME, right?
 	};
 	AI_Output	(self, other, "DIA_Addon_Daron_FoundStatue_10_07"); //Go with Innos, my son!
+	
+	B_LogEntry (TOPIC_Addon_RangerHelpKDF,"Daron told me to take the statuette to the monastery myself."); 
 };
 
 ///////////////////////////////////////////////////////////////////////

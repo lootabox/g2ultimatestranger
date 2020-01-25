@@ -105,7 +105,7 @@ func int DIA_Gorax_GOLD_Condition ()
 {	
 	if (other.guild == GIL_NOV)
 	&& (DIA_Gorax_GOLD_perm == FALSE) 
-	&& (Pedro_NOV_Aufnahme_LostInnosStatue_Daron == FALSE)//ADDON
+	&& ((Pedro_NOV_Aufnahme_LostInnosStatue_Daron == FALSE) || (MIS_Addon_Daron_GetStatue == LOG_SUCCESS)) //ADDON
 	{
 		return TRUE;
 	};
@@ -146,8 +146,9 @@ instance DIA_Addon_Gorax_DaronsStatue		(C_INFO)
 func int DIA_Addon_Gorax_DaronsStatue_Condition ()
 {
 	if (other.guild == GIL_NOV)
-	&& (DIA_Gorax_GOLD_perm == FALSE) 
+	//&& (DIA_Gorax_GOLD_perm == FALSE) 
 	&& (Pedro_NOV_Aufnahme_LostInnosStatue_Daron == TRUE)//ADDON
+	&& (MIS_Addon_Daron_GetStatue < LOG_SUCCESS)
 	{
 		return TRUE;
 	};
@@ -172,7 +173,7 @@ func void DIA_Addon_Gorax_DaronsStatue_Info ()
 		AI_Output	(self, other, "DIA_Addon_Gorax_DaronsStatue_14_03"); //I am very obliged to you, young novice.
 		MIS_Addon_Daron_GetStatue = LOG_SUCCESS;
 		B_GivePlayerXP (XP_Addon_ReturnedLostInnosStatue_Daron);
-		DIA_Gorax_GOLD_perm = TRUE; //WICHTIG
+		//DIA_Gorax_GOLD_perm = TRUE; //WICHTIG
 	}
 	else
 	{

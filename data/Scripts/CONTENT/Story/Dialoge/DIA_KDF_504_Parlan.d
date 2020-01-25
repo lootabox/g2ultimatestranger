@@ -340,13 +340,25 @@ func int DIA_Parlan_WELCOME_Condition ()
 
 func void B_DIA_Parlan_WELCOME_GoForTribute ()
 {
-			AI_Output (self, other, "DIA_Parlan_WELCOME_05_09"); //When you have done that, we shall speak about your work here in the monastery.
+	if (DIA_Gorax_GOLD_perm == FALSE) 
+	{
+		//ADDON>
+		if (Pedro_NOV_Aufnahme_LostInnosStatue_Daron == TRUE)
+		{
+			//AI_Output (self, other, "DIA_Addon_Parlan_WELCOME_05_00"); //Take your tribute to Gorax at the monastery at once. He will handle it further.
+			AI_Output (self, other, "DIA_Parlan_WELCOME_05_08"); //You can give your gold to Gorax, our steward. You will find him in the winery.
+		}
+		//ADDON<
+		else
+		{	
+			AI_Output (self, other, "DIA_Parlan_WELCOME_05_08"); //You can give your gold to Gorax, our steward. You will find him in the winery.
+		};
+	};
+	if (Liesel_Giveaway ==  FALSE)
+	{
+		AI_Output (self, other, "DIA_Parlan_WELCOME_05_07"); //But take your sheep to Opolos first, he will take care of it.
+	};
 };
-func void B_DIA_Parlan_WELCOME_BringTribute2Gorax ()
-{
-			AI_Output (self, other, "DIA_Addon_Parlan_WELCOME_05_00"); //Take your tribute to Gorax at the monastery at once. He will handle it further.
-};
-
 func void DIA_Parlan_WELCOME_Info ()
 {
 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_00"); //Welcome, new novice, I am Parlan.
@@ -364,28 +376,8 @@ func void DIA_Parlan_WELCOME_Info ()
 		Log_SetTopicStatus (Topic_Gemeinschaft,LOG_RUNNING);
 		B_LogEntry (Topic_Gemeinschaft, "It is my duty as a novice to perform tasks to serve the community.");
 	
-	if (Pedro_NOV_Aufnahme_LostInnosStatue_Daron == FALSE)//ADDON
-	{
-		if (Liesel_Giveaway ==  FALSE)
-		{
-			AI_Output (self, other, "DIA_Parlan_WELCOME_05_07"); //But take your sheep to Opolos first, he will take care of it.
-		};
-		if (DIA_Gorax_GOLD_perm == FALSE) 
-		{
-			AI_Output (self, other, "DIA_Parlan_WELCOME_05_08"); //You can give your gold to Gorax, our steward. You will find him in the winery.
-			B_DIA_Parlan_WELCOME_GoForTribute ();		
-		};
-	}
-	//ADDON>
-	else
-	{
-		if (DIA_Gorax_GOLD_perm == FALSE) 
-		{
-			B_DIA_Parlan_WELCOME_BringTribute2Gorax ();
-			B_DIA_Parlan_WELCOME_GoForTribute ();
-		};		
-	};
-	//ADDON<
+	B_DIA_Parlan_WELCOME_GoForTribute();
+	AI_Output (self, other, "DIA_Parlan_WELCOME_05_09"); //When you have done that, we shall speak about your work here in the monastery.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -501,26 +493,8 @@ func void DIA_Parlan_WORK_Info ()
 	|| (DIA_Gorax_GOLD_perm == FALSE)
 	{
 		AI_Output (self, other, "DIA_Parlan_WELCOME_05_06"); //First you will fulfill the duties of a novice. You will work and serve the Brotherhood.
-		
-		if 	(Liesel_Giveaway ==  FALSE)
-		{
-			AI_Output (self, other, "DIA_Parlan_WELCOME_05_07"); //But take your sheep to Opolos first, he will take care of it.
-		};
-		if  (DIA_Gorax_GOLD_perm == FALSE)
-		{
-				//ADDON>
-				if (Pedro_NOV_Aufnahme_LostInnosStatue_Daron == TRUE)
-				{
-					B_DIA_Parlan_WELCOME_BringTribute2Gorax ();
-					B_DIA_Parlan_WELCOME_GoForTribute ();
-				}
-				//ADDON<
-				else
-				{	
-					AI_Output (self, other, "DIA_Parlan_WELCOME_05_08"); //You can give your gold to Gorax, our steward. You will find him in the winery.
-					AI_Output (self, other, "DIA_Parlan_WELCOME_05_09"); //When you have done that, we shall speak about your work here in the monastery.
-				};
-		};
+		B_DIA_Parlan_WELCOME_GoForTribute();
+		AI_Output (self, other, "DIA_Parlan_WELCOME_05_09"); //When you have done that, we shall speak about your work here in the monastery.
 		
 		AI_StopProcessInfos (self);
 	}

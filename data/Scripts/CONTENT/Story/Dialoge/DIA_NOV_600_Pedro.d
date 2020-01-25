@@ -206,11 +206,16 @@ func void DIA_Addon_Pedro_Statuette_Info ()
 	AI_Output (other, self, "DIA_Addon_Pedro_Statuette_15_01"); //Can I come in now?
 	if (other.guild == GIL_NONE)
 	{
-		AI_Output (self, other, "DIA_Addon_Pedro_Statuette_09_02"); //Well, under these truly exceptional circumstances you are free to become a novice.
-
+		AI_Output (self, other, "DIA_Addon_Pedro_AUFNAHME_09_02"); //Is that really what you wish to do? For you must know that there will be no turning back for you then.
+		AI_Output (self, other, "DIA_Pedro_TEMPEL_09_03"); //Besides that, we require an offering to Innos from every new novice. A sheep and...
+		//AI_Output (self, other, "DIA_Addon_Pedro_Statuette_09_02"); //Well, under these truly exceptional circumstances you are free to become a novice.
+		AI_Output (self, other, "DIA_Addon_Pedro_Statuette_09_02_B"); //Well, under these truly exceptional circumstances...
+		Summe_Kloster = 300;
+		B_Say_Gold (self, other, Summe_Kloster);
 		Log_CreateTopic (TOPIC_Addon_RangerHelpKDF, LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_Addon_RangerHelpKDF, LOG_RUNNING);
-		B_LogEntry (TOPIC_Addon_RangerHelpKDF,"Pedro the novice let me into the monastery because I was carrying the missing stauette. I was supposed to give it to someone in the monastery."); 
+		//B_LogEntry (TOPIC_Addon_RangerHelpKDF,"Pedro the novice let me into the monastery because I was carrying the missing statuette. I was supposed to give it to someone in the monastery."); 
+		B_LogEntry (TOPIC_Addon_RangerHelpKDF,"Pedro the novice will let me into the monastery with less gold for the offering because I had the missing statuette. I was supposed to give it to someone in the monastery.");
 	}
 	else
 	{
@@ -320,11 +325,11 @@ func void DIA_Pedro_AUFNAHME_Info ()
 		DIA_Pedro_AUFNAHME_NOPERM = TRUE;
 	}
 	//ADDON>
-	else if (Npc_KnowsInfo (other, DIA_Addon_Pedro_Statuette))
+	/* else if (Npc_KnowsInfo (other, DIA_Addon_Pedro_Statuette))
 	{
 		AI_Output (self, other, "DIA_Addon_Pedro_AUFNAHME_09_02"); //Is that really what you wish to do? For you must know that there will be no turning back for you then.
 		B_DIA_Pedro_AUFNAHME_Choice ();
-	}
+	} */
 	//<ADDON
 	else if (hero.guild == GIL_NONE )
 	&& (Npc_HasItems (hero, ItMi_Gold) >= Summe_Kloster)
@@ -370,7 +375,7 @@ FUNC VOID DIA_Pedro_AUFNAHME_YES()
  	if (Npc_KnowsInfo (other, DIA_Addon_Pedro_Statuette))
  	{
 		Pedro_NOV_Aufnahme_LostInnosStatue_Daron = TRUE;
-		Liesel_Giveaway = LOG_OBSOLETE; //Joly: nix mehr mit Liesel
+		//Liesel_Giveaway = LOG_OBSOLETE; //Joly: nix mehr mit Liesel
 	};
 	//ADDON<
 	

@@ -38044,784 +38044,784 @@ LINE   { 1469 }
 FILEPOS{ 61278 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
-SYMBOL { 			AI_Output			(other, self, "DIA_Pyrokar_AUGEGEHEILT_15_02"); //Yes, Master. }
-LINE   { 1474 }
-FILEPOS{ 61423 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
-SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_03"); //You have proven many times over that you are ready for the High Order of the Fire Magicians. }
-LINE   { 1475 }
-FILEPOS{ 61502 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
-SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_04"); //As of today, you are a member of the Council and will represent our order in the world. You are now one of the high Fire Magicians. }
-LINE   { 1476 }
-FILEPOS{ 61661 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
-SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_05"); //Wear the high robe with dignity and bring the order honor and wealth, my brother. }
-LINE   { 1477 }
-FILEPOS{ 61859 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_KAP3_READY_15_00"); //What remains for me to do here? }
-LINE   { 1510 }
-FILEPOS{ 62743 }
+LINE   { 1496 }
+FILEPOS{ 62002 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_01"); //Do not waste your time on trivial things. Go and vanquish the dragons. Here, take the Eye. }
-LINE   { 1511 }
-FILEPOS{ 62838 }
+LINE   { 1497 }
+FILEPOS{ 62097 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_02"); //Bear in mind that you need to talk to a dragon first before you can attack it. }
-LINE   { 1514 }
-FILEPOS{ 63090 }
+LINE   { 1500 }
+FILEPOS{ 62349 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other, "DIA_Pyrokar_Add_11_01"); //The power of the Eye will force the dragons to speak to you and tell the truth. }
-LINE   { 1517 }
-FILEPOS{ 63561 }
+LINE   { 1503 }
+FILEPOS{ 62820 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other, "DIA_Pyrokar_Add_11_02"); //Furthermore, it offers protection against their attacks when you wear it. }
-LINE   { 1518 }
-FILEPOS{ 63695 }
+LINE   { 1504 }
+FILEPOS{ 62954 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_05"); //However, its power does not last. You will have to fill it up again with magical energy. }
-LINE   { 1519 }
-FILEPOS{ 63823 }
+LINE   { 1505 }
+FILEPOS{ 63082 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_06"); //To do that, you need the essence of a dragon's heart which you join with the Eye at an alchemist's bench. }
-LINE   { 1520 }
-FILEPOS{ 63975 }
+LINE   { 1506 }
+FILEPOS{ 63234 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_07"); //Only then can you dare face another dragon. }
-LINE   { 1521 }
-FILEPOS{ 64144 }
+LINE   { 1507 }
+FILEPOS{ 63403 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_KAP3_READY_15_08"); //Thanks. I'll remember that. }
-LINE   { 1522 }
-FILEPOS{ 64251 }
+LINE   { 1508 }
+FILEPOS{ 63510 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_09"); //You now have everything you need. Go, then. You do not have much time left. }
-LINE   { 1523 }
-FILEPOS{ 64342 }
+LINE   { 1509 }
+FILEPOS{ 63601 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_BUCHDERBESSENEN_15_00"); //I have found a strange almanac. }
-LINE   { 1566 }
-FILEPOS{ 66253 }
+LINE   { 1552 }
+FILEPOS{ 65512 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_01"); //Really? What kind of an almanac is that? }
-LINE   { 1567 }
-FILEPOS{ 66353 }
+LINE   { 1553 }
+FILEPOS{ 65612 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_BUCHDERBESSENEN_15_02"); //I'm not sure. I thought you would know what to do with it. }
-LINE   { 1568 }
-FILEPOS{ 66462 }
+LINE   { 1554 }
+FILEPOS{ 65721 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_03"); //Forsooth, that is very disquieting. I am glad that you brought it to me. That was very wise. }
-LINE   { 1570 }
-FILEPOS{ 66657 }
+LINE   { 1556 }
+FILEPOS{ 65916 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_04"); //I assume that there are more of these. Go and find more of these books of damnation. }
-LINE   { 1575 }
-FILEPOS{ 66885 }
+LINE   { 1561 }
+FILEPOS{ 66144 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_05"); //I suspect that it is an instrument of the Seekers' power. }
-LINE   { 1576 }
-FILEPOS{ 67039 }
+LINE   { 1562 }
+FILEPOS{ 66298 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_06"); //They use it to control the lost souls of their victims. }
-LINE   { 1577 }
-FILEPOS{ 67166 }
+LINE   { 1563 }
+FILEPOS{ 66425 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_07"); //They obviously write down the names of those whom they are planning to possess in these books. }
-LINE   { 1578 }
-FILEPOS{ 67291 }
+LINE   { 1564 }
+FILEPOS{ 66550 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_08"); //Listen. I am giving you this magical letter. It will show you the names which are written in the books. }
-LINE   { 1579 }
-FILEPOS{ 67455 }
+LINE   { 1565 }
+FILEPOS{ 66714 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_09"); //Find those victims and bring me their books. I shall dispose of them. }
-LINE   { 1582 }
-FILEPOS{ 67763 }
+LINE   { 1568 }
+FILEPOS{ 67022 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 				AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_10"); //But first, you ought to show at least one of them to Karras. Maybe that will help him in his studies. }
-LINE   { 1586 }
-FILEPOS{ 67948 }
+LINE   { 1572 }
+FILEPOS{ 67207 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_11"); //Do not make the mistake to try and destroy them yourself. You are not yet ready to withstand their power. }
-LINE   { 1589 }
-FILEPOS{ 68131 }
+LINE   { 1575 }
+FILEPOS{ 67390 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_12"); //Do not get to close to the Seekers, or they will take possession of you. }
-LINE   { 1594 }
-FILEPOS{ 68534 }
+LINE   { 1580 }
+FILEPOS{ 67793 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_13"); //If you still find yourself unable to resist their call, come back to me as fast as you can. }
-LINE   { 1595 }
-FILEPOS{ 68675 }
+LINE   { 1581 }
+FILEPOS{ 67934 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_14"); //Only here in the monastery can your soul be saved. }
-LINE   { 1596 }
-FILEPOS{ 68835 }
+LINE   { 1582 }
+FILEPOS{ 68094 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output			(other, self, "DIA_Pyrokar_BUCHDERBESSENEN_15_15"); //Is there no protection against their mental attacks? }
-LINE   { 1601 }
-FILEPOS{ 69026 }
+LINE   { 1587 }
+FILEPOS{ 68285 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_16"); //That is possible. Karras could know something about that. }
-LINE   { 1602 }
-FILEPOS{ 69149 }
+LINE   { 1588 }
+FILEPOS{ 68408 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_15_00"); //Heal me, Master, for I am possessed. }
-LINE   { 1643 }
-FILEPOS{ 70341 }
+LINE   { 1629 }
+FILEPOS{ 69600 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_15_05"); //I think I am possessed. Can you heal me? }
-LINE   { 1647 }
-FILEPOS{ 70457 }
+LINE   { 1633 }
+FILEPOS{ 69716 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_01"); //So be it! Take this potion. It will relieve you of your nightmares. }
-LINE   { 1655 }
-FILEPOS{ 70751 }
+LINE   { 1641 }
+FILEPOS{ 70010 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_02"); //May the mercy of Innos be your salvation. }
-LINE   { 1656 }
-FILEPOS{ 70884 }
+LINE   { 1642 }
+FILEPOS{ 70143 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_03"); //Act on his behalf and beware of the evil eye of the enemy. }
-LINE   { 1657 }
-FILEPOS{ 70991 }
+LINE   { 1643 }
+FILEPOS{ 70250 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 				AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_04"); //But be forewarned - if you expose yourself to their power too often, at some point there will be no turning back for you. Always remember that. }
-LINE   { 1661 }
-FILEPOS{ 71157 }
+LINE   { 1647 }
+FILEPOS{ 70416 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_06"); //Not without a token of your respect for this monastery, my son. 300 gold coins. }
-LINE   { 1670 }
-FILEPOS{ 71569 }
+LINE   { 1656 }
+FILEPOS{ 70828 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_11_07"); //But you only just had your healing potion. Don't come back to me until you really need my help. }
-LINE   { 1679 }
-FILEPOS{ 71984 }
+LINE   { 1665 }
+FILEPOS{ 71243 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_ok_15_00"); //Great. Here's the money. }
-LINE   { 1684 }
-FILEPOS{ 72196 }
+LINE   { 1670 }
+FILEPOS{ 71455 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_ok_11_01"); //Here, drink this. May the mercy of Innos be your salvation. }
-LINE   { 1688 }
-FILEPOS{ 72345 }
+LINE   { 1674 }
+FILEPOS{ 71604 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_SCOBSESSED_ok_11_02"); //Bring me the money, and you will be helped. }
-LINE   { 1695 }
-FILEPOS{ 72658 }
+LINE   { 1681 }
+FILEPOS{ 71917 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCOBSESSED_nein_15_00"); //That's too much. }
-LINE   { 1702 }
-FILEPOS{ 72873 }
+LINE   { 1688 }
+FILEPOS{ 72132 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_AlmanachBringen_15_00"); //I can tell you even more about those possessed. }
-LINE   { 1736 }
-FILEPOS{ 73862 }
+LINE   { 1722 }
+FILEPOS{ 73121 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_01"); //Speak, Brother. }
-LINE   { 1737 }
-FILEPOS{ 73978 }
+LINE   { 1723 }
+FILEPOS{ 73237 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output		(other, self, "DIA_Pyrokar_AlmanachBringen_15_02"); //I have found another almanac. }
-LINE   { 1751 }
-FILEPOS{ 74355 }
+LINE   { 1737 }
+FILEPOS{ 73614 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 			AI_Output		(other, self, "DIA_Pyrokar_AlmanachBringen_15_03"); //I've got even more books of the Seekers for you. }
-LINE   { 1758 }
-FILEPOS{ 74626 }
+LINE   { 1744 }
+FILEPOS{ 73885 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_04"); //That is good. I am afraid, however, that there are more of these to find. Go on searching. }
-LINE   { 1770 }
-FILEPOS{ 75042 }
+LINE   { 1756 }
+FILEPOS{ 74301 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_05"); //Many have been found already. But I do not think that we have all of them. }
-LINE   { 1775 }
-FILEPOS{ 75247 }
+LINE   { 1761 }
+FILEPOS{ 74506 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_06"); //You have already brought me a great number of the enemy's books. }
-LINE   { 1779 }
-FILEPOS{ 75406 }
+LINE   { 1765 }
+FILEPOS{ 74665 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_07"); //I should be surprised if they had many more in circulation. }
-LINE   { 1780 }
-FILEPOS{ 75540 }
+LINE   { 1766 }
+FILEPOS{ 74799 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_08"); //Take this. It is a gift from the monastery which will help you when you face evil. }
-LINE   { 1785 }
-FILEPOS{ 75836 }
+LINE   { 1771 }
+FILEPOS{ 75095 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_09"); //And remember to have a look in my magic letter once in a while. }
-LINE   { 1788 }
-FILEPOS{ 76043 }
+LINE   { 1774 }
+FILEPOS{ 75302 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 		AI_Output			(self, other, "DIA_Pyrokar_AlmanachBringen_11_10"); //It is possible that they may try the same on others whose names were not yet found in the almanacs. }
-LINE   { 1789 }
-FILEPOS{ 76176 }
+LINE   { 1775 }
+FILEPOS{ 75435 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_DRACHENTOT_15_00"); //All the dragons are dead. }
-LINE   { 1886 }
-FILEPOS{ 78677 }
+LINE   { 1872 }
+FILEPOS{ 77936 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DRACHENTOT_11_01"); //That is good news indeed. But it does nothing to change our situation, which seems hopeless. }
-LINE   { 1887 }
-FILEPOS{ 78766 }
+LINE   { 1873 }
+FILEPOS{ 78025 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DRACHENTOT_11_02"); //The Seekers still have not left. On the contrary. I hear more and more reports that, during these last few days, their numbers have even increased. }
-LINE   { 1888 }
-FILEPOS{ 78922 }
+LINE   { 1874 }
+FILEPOS{ 78181 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DRACHENTOT_11_03"); //Killing off the dragons has dealt the enemy a blow, but it did not suffice. We need to dig this evil out by the roots. }
-LINE   { 1889 }
-FILEPOS{ 79133 }
+LINE   { 1875 }
+FILEPOS{ 78392 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
+SYMBOL { 			AI_Output			(other, self, "DIA_Pyrokar_AUGEGEHEILT_15_02"); //Yes, Master. }
+LINE   { 1879 }
+FILEPOS{ 78610 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
+SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_03"); //You have proven many times over that you are ready for the High Order of the Fire Magicians. }
+LINE   { 1880 }
+FILEPOS{ 78689 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
+SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_04"); //As of today, you are a member of the Council and will represent our order in the world. You are now one of the high Fire Magicians. }
+LINE   { 1881 }
+FILEPOS{ 78848 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
+SYMBOL { 			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_05"); //Wear the high robe with dignity and bring the order honor and wealth, my brother. }
+LINE   { 1882 }
+FILEPOS{ 79046 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_DERMEISTER_15_00"); //I talked to the dragons. }
-LINE   { 1916 }
-FILEPOS{ 79873 }
+LINE   { 1914 }
+FILEPOS{ 79868 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DERMEISTER_11_01"); //What did they say? }
-LINE   { 1917 }
-FILEPOS{ 79961 }
+LINE   { 1915 }
+FILEPOS{ 79956 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_DERMEISTER_15_02"); //They kept talking about the power of their master, and how he settled in the Halls of Irdorath. }
-LINE   { 1918 }
-FILEPOS{ 80043 }
+LINE   { 1916 }
+FILEPOS{ 80038 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DERMEISTER_11_03"); //Innos be with us. The Black Temple has regained its power and is now sending its henchmen into our world. }
-LINE   { 1919 }
-FILEPOS{ 80202 }
+LINE   { 1917 }
+FILEPOS{ 80197 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_WASISTIRDORATH_15_00"); //What are these halls of Irdorath? }
-LINE   { 1947 }
-FILEPOS{ 81018 }
+LINE   { 1945 }
+FILEPOS{ 81013 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_01"); //The eastern invocation temple of the god Beliar. There are four of them in the land of Myrtana. But this one is probably the most terrifying temple of all. }
-LINE   { 1948 }
-FILEPOS{ 81119 }
+LINE   { 1946 }
+FILEPOS{ 81114 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_02"); //About 40 years ago, the northern and western temples of this horrible deity were destroyed. }
-LINE   { 1949 }
-FILEPOS{ 81342 }
+LINE   { 1947 }
+FILEPOS{ 81337 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_03"); //The brave knights of that time gave their all to raze those mighty constructions to the ground. }
-LINE   { 1950 }
-FILEPOS{ 81501 }
+LINE   { 1948 }
+FILEPOS{ 81496 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_04"); //Back then, the black hordes of the enemy were helpless against the superior numbers and the heroic courage of the knights and paladins. }
-LINE   { 1951 }
-FILEPOS{ 81664 }
+LINE   { 1949 }
+FILEPOS{ 81659 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_05"); //It would have been easy to destroy the other two temples as well and rid the land of evil forever... }
-LINE   { 1952 }
-FILEPOS{ 81867 }
+LINE   { 1950 }
+FILEPOS{ 81862 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_06"); //... but after the second temple fell, they simply disappeared. }
-LINE   { 1953 }
-FILEPOS{ 82035 }
+LINE   { 1951 }
+FILEPOS{ 82030 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_WASISTIRDORATH_15_07"); //(mocking) Disappeared. An entire temple. Yeah, right. }
-LINE   { 1954 }
-FILEPOS{ 82165 }
+LINE   { 1952 }
+FILEPOS{ 82160 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_08"); //Do not mock me. The situation is serious. If the Halls of Irdorath have indeed regained their power, then it will not be easy to defeat the enemy. }
-LINE   { 1955 }
-FILEPOS{ 82286 }
+LINE   { 1953 }
+FILEPOS{ 82281 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_WASISTIRDORATH_11_09"); //For that, you would have to find it first, and I think that this will be your next, and hardest, task. }
-LINE   { 1956 }
-FILEPOS{ 82500 }
+LINE   { 1954 }
+FILEPOS{ 82495 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_WASISTIRDORATH_15_10"); //We shall see. }
-LINE   { 1957 }
-FILEPOS{ 82670 }
+LINE   { 1955 }
+FILEPOS{ 82665 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_BUCHIRDORATH_15_00"); //Xardas' book which was believed to be lost - where is it? }
-LINE   { 1989 }
-FILEPOS{ 83623 }
+LINE   { 1987 }
+FILEPOS{ 83618 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHIRDORATH_11_01"); //I have been expecting you would ask that. But I fear that it will be of no help to you. }
-LINE   { 1990 }
-FILEPOS{ 83746 }
+LINE   { 1988 }
+FILEPOS{ 83741 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHIRDORATH_11_02"); //It has been magically sealed. I took it to one of our lower vaults, and even we have so far tried in vain to open it. }
-LINE   { 1991 }
-FILEPOS{ 83899 }
+LINE   { 1989 }
+FILEPOS{ 83894 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHIRDORATH_11_03"); //That accursed Xardas has played a dirty trick on us. }
-LINE   { 1992 }
-FILEPOS{ 84082 }
+LINE   { 1990 }
+FILEPOS{ 84077 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_BUCHIRDORATH_15_04"); //Can I see the book? }
-LINE   { 1993 }
-FILEPOS{ 84200 }
+LINE   { 1991 }
+FILEPOS{ 84195 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHIRDORATH_11_05"); //Be my guest. I cannot imagine you being successful where the greatest masters of our monastery have failed. }
-LINE   { 1994 }
-FILEPOS{ 84285 }
+LINE   { 1992 }
+FILEPOS{ 84280 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_BUCHIRDORATH_11_06"); //But go ahead and give it a try, Talamon is not going to stop you. }
-LINE   { 1995 }
-FILEPOS{ 84458 }
+LINE   { 1993 }
+FILEPOS{ 84453 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_IRDORATHBOOKOPEN_15_00"); //I've been able to open Xardas' book. }
-LINE   { 2026 }
-FILEPOS{ 85521 }
+LINE   { 2024 }
+FILEPOS{ 85516 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_11_01"); //What? How did you do that? It well-nigh drove me to despair. }
-LINE   { 2027 }
-FILEPOS{ 85627 }
+LINE   { 2025 }
+FILEPOS{ 85622 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_IRDORATHBOOKOPEN_glueck_15_00"); //Just dumb luck, I suppose. }
-LINE   { 2037 }
-FILEPOS{ 86105 }
+LINE   { 2035 }
+FILEPOS{ 86100 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_glueck_11_01"); //Don't talk nonsense. Luck! }
-LINE   { 2038 }
-FILEPOS{ 86208 }
+LINE   { 2036 }
+FILEPOS{ 86203 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_glueck_11_02"); //When not even I succeed in opening the book, and then someone like you comes waltzing in... }
-LINE   { 2039 }
-FILEPOS{ 86311 }
+LINE   { 2037 }
+FILEPOS{ 86306 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_glueck_11_03"); //... that gives me something to ponder about. }
-LINE   { 2040 }
-FILEPOS{ 86479 }
+LINE   { 2038 }
+FILEPOS{ 86474 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_glueck_11_04"); //Anyway. Since you were obviously the only one who was able to open the book, then may it be granted unto you to carry it. At least until we have weathered this crisis. }
-LINE   { 2041 }
-FILEPOS{ 86600 }
+LINE   { 2039 }
+FILEPOS{ 86595 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_IRDORATHBOOKOPEN_Xardas_15_00"); //Xardas told me the trick. }
-LINE   { 2050 }
-FILEPOS{ 86990 }
+LINE   { 2048 }
+FILEPOS{ 86985 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_Xardas_11_01"); //Ah, is that it. How interesting. I can only hope for you that Xardas' bad influence is not going to spoil you. }
-LINE   { 2051 }
-FILEPOS{ 87092 }
+LINE   { 2049 }
+FILEPOS{ 87087 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_Xardas_11_02"); //I am warning you. Do not fall for the tricks of that old devil. You might come to regret it. }
-LINE   { 2052 }
-FILEPOS{ 87279 }
+LINE   { 2050 }
+FILEPOS{ 87274 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_GEHEIMEBIBLIOTHEK_15_00"); //The book mentions a secret library. }
-LINE   { 2085 }
-FILEPOS{ 88297 }
+LINE   { 2083 }
+FILEPOS{ 88292 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_GEHEIMEBIBLIOTHEK_11_01"); //Whatever are you talking about? }
-LINE   { 2086 }
-FILEPOS{ 88403 }
+LINE   { 2084 }
+FILEPOS{ 88398 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_GEHEIMEBIBLIOTHEK_15_02"); //A library beneath these walls here. Does that ring a bell? }
-LINE   { 2087 }
-FILEPOS{ 88505 }
+LINE   { 2085 }
+FILEPOS{ 88500 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_GEHEIMEBIBLIOTHEK_11_03"); //No. Where is that library supposed to be, did you say? }
-LINE   { 2088 }
-FILEPOS{ 88634 }
+LINE   { 2086 }
+FILEPOS{ 88629 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_GEHEIMEBIBLIOTHEK_15_04"); //I see. You have no idea. Mmh. }
-LINE   { 2089 }
-FILEPOS{ 88759 }
+LINE   { 2087 }
+FILEPOS{ 88754 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_15_00"); //I know where to find the Halls of Irdorath. }
-LINE   { 2120 }
-FILEPOS{ 89749 }
+LINE   { 2118 }
+FILEPOS{ 89744 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_15_01"); //The temple is on an island. I've found a nautical chart which shows the way. }
-LINE   { 2121 }
-FILEPOS{ 89866 }
+LINE   { 2119 }
+FILEPOS{ 89861 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_11_02"); //That is great. Then you will need a ship and a crew in order to face the enemy. }
-LINE   { 2122 }
-FILEPOS{ 90016 }
+LINE   { 2120 }
+FILEPOS{ 90011 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_11_03"); //But remember you need to be well prepared if you want to vanquish the Master of Irdorath. }
-LINE   { 2123 }
-FILEPOS{ 90169 }
+LINE   { 2121 }
+FILEPOS{ 90164 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_15_04"); //Where can I find a crew? }
-LINE   { 2124 }
-FILEPOS{ 90332 }
+LINE   { 2122 }
+FILEPOS{ 90327 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_11_05"); //Your crew should consist of men you can trust. }
-LINE   { 2125 }
-FILEPOS{ 90430 }
+LINE   { 2123 }
+FILEPOS{ 90425 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_11_06"); //Talk to your friends and think about who could be useful to you once you are on the island. }
-LINE   { 2126 }
-FILEPOS{ 90550 }
+LINE   { 2124 }
+FILEPOS{ 90545 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_11_07"); //You are going to need a magician as well. But alas, I cannot spare a single man from the monastery. }
-LINE   { 2127 }
-FILEPOS{ 90715 }
+LINE   { 2125 }
+FILEPOS{ 90710 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCKNOWSWAYTOIRDORATH_11_08"); //You will have to ask a magician who is not working within the monastery. }
-LINE   { 2128 }
-FILEPOS{ 90888 }
+LINE   { 2126 }
+FILEPOS{ 90883 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCWILLJORGEN_15_00"); //Jorgen is an experienced sailor. He could help me get to the Isle of Irdorath. }
-LINE   { 2157 }
-FILEPOS{ 91724 }
+LINE   { 2155 }
+FILEPOS{ 91719 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCWILLJORGEN_11_01"); //That will not be so easy, I fear. }
-LINE   { 2158 }
-FILEPOS{ 91868 }
+LINE   { 2156 }
+FILEPOS{ 91863 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCWILLJORGEN_11_02"); //He has signed on to work for the brotherhood. He has neither paid the tribute, nor brought us a sheep. }
-LINE   { 2159 }
-FILEPOS{ 91967 }
+LINE   { 2157 }
+FILEPOS{ 91962 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCWILLJORGEN_11_03"); //Jorgen must finish his work first, then you can take him if you like. }
-LINE   { 2160 }
-FILEPOS{ 92135 }
+LINE   { 2158 }
+FILEPOS{ 92130 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_SCWILLJORGEN_15_04"); //How long will it take? }
-LINE   { 2161 }
-FILEPOS{ 92270 }
+LINE   { 2159 }
+FILEPOS{ 92265 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCWILLJORGEN_11_05"); //He used up the provisions which would have lasted a novice three weeks, and all on the first day. }
-LINE   { 2162 }
-FILEPOS{ 92358 }
+LINE   { 2160 }
+FILEPOS{ 92353 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_SCWILLJORGEN_11_06"); //So I cannot let him go before he has worked hard in our gardens for three months. }
-LINE   { 2163 }
-FILEPOS{ 92521 }
+LINE   { 2161 }
+FILEPOS{ 92516 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_MACHDTFREI_15_00"); //What do I have to do so I can take Jorgen with me NOW? }
-LINE   { 2191 }
-FILEPOS{ 93315 }
+LINE   { 2189 }
+FILEPOS{ 93310 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_MACHDTFREI_11_01"); //Mmh. There is indeed one thing you could do for me. Your good rapport with Xardas could help you with that. }
-LINE   { 2192 }
-FILEPOS{ 93433 }
+LINE   { 2190 }
+FILEPOS{ 93428 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_MACHDTFREI_11_02"); //It has come to my attention that, during these last few days, strange things have been going on in his tower. }
-LINE   { 2193 }
-FILEPOS{ 93604 }
+LINE   { 2191 }
+FILEPOS{ 93599 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_MACHDTFREI_11_03"); //Many of the town people hear loud screams at night coming from there, and see strange lights dancing over his tower. }
-LINE   { 2194 }
-FILEPOS{ 93777 }
+LINE   { 2192 }
+FILEPOS{ 93772 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_MACHDTFREI_11_04"); //As if we didn't have our plate full already. Go check what is going on there, and make it stop. }
-LINE   { 2195 }
-FILEPOS{ 93957 }
+LINE   { 2193 }
+FILEPOS{ 93952 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_MACHDTFREI_11_05"); //Then you can have Jorgen. }
-LINE   { 2196 }
-FILEPOS{ 94116 }
+LINE   { 2194 }
+FILEPOS{ 94111 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_DTCLEARED_15_00"); //The thing with Xardas' tower has resolved itself. }
-LINE   { 2234 }
-FILEPOS{ 95345 }
+LINE   { 2232 }
+FILEPOS{ 95340 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DTCLEARED_11_01"); //So what was going on... no, wait, I do not even want to know. }
-LINE   { 2235 }
-FILEPOS{ 95457 }
+LINE   { 2233 }
+FILEPOS{ 95452 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DTCLEARED_11_02"); //If you still want Jorgen, then go ahead and take him on your journey. }
-LINE   { 2236 }
-FILEPOS{ 95581 }
+LINE   { 2234 }
+FILEPOS{ 95576 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_DTCLEARED_11_03"); //May Innos protect you. }
-LINE   { 2237 }
-FILEPOS{ 95713 }
+LINE   { 2235 }
+FILEPOS{ 95708 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pyrokar_AmulettofDeath_15_00"); //The prophesy mentions the sacred Aura of Innos. }
-LINE   { 2270 }
-FILEPOS{ 96664 }
+LINE   { 2268 }
+FILEPOS{ 96659 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Pyrokar_AmulettofDeath_11_01"); //The Aura of Innos is an amulet which only the greatest magicians of an era are destined to wear. }
-LINE   { 2271 }
-FILEPOS{ 96779 }
+LINE   { 2269 }
+FILEPOS{ 96774 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_15_00"); //Can I have it? }
-LINE   { 2286 }
-FILEPOS{ 97466 }
+LINE   { 2284 }
+FILEPOS{ 97461 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_11_01"); //What? What do you want to do with that? }
-LINE   { 2287 }
-FILEPOS{ 97555 }
+LINE   { 2285 }
+FILEPOS{ 97550 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_15_02"); //Go up against the dragon. }
-LINE   { 2288 }
-FILEPOS{ 97669 }
+LINE   { 2286 }
+FILEPOS{ 97664 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_11_03"); //Yes, of course. I shall give you the amulet, but handle it with care. }
-LINE   { 2289 }
-FILEPOS{ 97769 }
+LINE   { 2287 }
+FILEPOS{ 97764 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_15_04"); //Yeah, sure. }
-LINE   { 2290 }
-FILEPOS{ 97913 }
+LINE   { 2288 }
+FILEPOS{ 97908 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_11_05"); //I do not wish to have to buy it back from a merchant later. }
-LINE   { 2291 }
-FILEPOS{ 97999 }
+LINE   { 2289 }
+FILEPOS{ 97994 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_AmulettofDeath_CanHaveIt_11_06"); //Use it well, and may Innos guard you at all times. }
-LINE   { 2292 }
-FILEPOS{ 98133 }
+LINE   { 2290 }
+FILEPOS{ 98128 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_AmulettofDeath_Amulett_15_00"); //What sort of amulet is that? }
-LINE   { 2302 }
-FILEPOS{ 98455 }
+LINE   { 2300 }
+FILEPOS{ 98450 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_AmulettofDeath_Amulett_11_01"); //They say that Innos himself forged it and gave it as a present to humankind. }
-LINE   { 2303 }
-FILEPOS{ 98556 }
+LINE   { 2301 }
+FILEPOS{ 98551 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_AmulettofDeath_Amulett_11_02"); //It protects the one who wears it from all kinds of damage. }
-LINE   { 2304 }
-FILEPOS{ 98705 }
+LINE   { 2302 }
+FILEPOS{ 98700 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output		(other, self, "DIA_Pyrokar_PotionofDeath_15_00"); //What are the Tears of Innos? }
-LINE   { 2331 }
-FILEPOS{ 99468 }
+LINE   { 2329 }
+FILEPOS{ 99463 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output		(self, other, "DIA_Pyrokar_PotionofDeath_11_01"); //The Tears of Innos are nothing but an old children's story. It tells of how the battle between Innos and Beliar started at the beginning of time. }
-LINE   { 2332 }
-FILEPOS{ 99562 }
+LINE   { 2330 }
+FILEPOS{ 99557 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_PotionofDeath_Aha_15_00"); //I see. }
-LINE   { 2341 }
-FILEPOS{ 100063 }
+LINE   { 2339 }
+FILEPOS{ 100058 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_PotionofDeath_Aha_11_01"); //I do not know whether you are fully aware of our situation, but I hardly believe that our enemy can be vanquished through an old children's tale. }
-LINE   { 2342 }
-FILEPOS{ 100137 }
+LINE   { 2340 }
+FILEPOS{ 100132 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_PotionofDeath_Potion_15_00"); //I found this potion. }
-LINE   { 2349 }
-FILEPOS{ 100457 }
+LINE   { 2347 }
+FILEPOS{ 100452 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_PotionofDeath_Potion_11_01"); //That cannot be. I cannot believe it. }
-LINE   { 2350 }
-FILEPOS{ 100548 }
+LINE   { 2348 }
+FILEPOS{ 100543 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_PotionofDeath_Potion_15_02"); //What's the matter? }
-LINE   { 2351 }
-FILEPOS{ 100655 }
+LINE   { 2349 }
+FILEPOS{ 100650 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_PotionofDeath_Potion_11_03"); //If these are really the genuine Tears of Innos, then... }
-LINE   { 2352 }
-FILEPOS{ 100744 }
+LINE   { 2350 }
+FILEPOS{ 100739 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pyrokar_PotionofDeath_Potion_15_04"); //(interrupts) Hardly. }
-LINE   { 2353 }
-FILEPOS{ 100870 }
+LINE   { 2351 }
+FILEPOS{ 100865 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pyrokar_PotionofDeath_Potion_11_05"); //Do not interrupt me. If these are the real Tears of Innos, then we have a powerful weapon against the enemy. }
-LINE   { 2354 }
-FILEPOS{ 100961 }
+LINE   { 2352 }
+FILEPOS{ 100956 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output	(other,self ,"DIA_Pyrokar_PotionofDeath_Teardrops_15_00"); //So what are the Tears of Innos? }
-LINE   { 2369 }
-FILEPOS{ 101671 }
+LINE   { 2367 }
+FILEPOS{ 101666 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Teardrops_11_01"); //When Innos realized that he had to fight Beliar, his own brother, in order to preserve creation, his sorrow was great. }
-LINE   { 2370 }
-FILEPOS{ 101776 }
+LINE   { 2368 }
+FILEPOS{ 101771 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Teardrops_11_02"); //He started to weep, and his tears fell down onto the world. There were many of them, for his heart was so full of grief that he wept for 13 years. }
-LINE   { 2371 }
-FILEPOS{ 101969 }
+LINE   { 2369 }
+FILEPOS{ 101964 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output	(other,self ,"DIA_Pyrokar_PotionofDeath_Teardrops_15_03"); //Get to the point. }
-LINE   { 2372 }
-FILEPOS{ 102190 }
+LINE   { 2370 }
+FILEPOS{ 102185 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Teardrops_11_04"); //The people who found his tears and tasted them were filled with supernatural strength and clarity. They recognized the wisdom of Innos' creation and began to serve him. }
-LINE   { 2373 }
-FILEPOS{ 102281 }
+LINE   { 2371 }
+FILEPOS{ 102276 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Teardrops_11_05"); //They were the first members of the Community of the Fire. The tears gave them strength, courage and wisdom. But that is all very long ago, and it has been more than 250 years since anyone last set eyes on a Tear of Innos. }
-LINE   { 2374 }
-FILEPOS{ 102524 }
+LINE   { 2372 }
+FILEPOS{ 102519 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(other,self ,"DIA_Pyrokar_PotionofDeath_Weapon_15_00"); //What do you mean by 'weapon'? }
-LINE   { 2381 }
-FILEPOS{ 102929 }
+LINE   { 2379 }
+FILEPOS{ 102924 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Weapon_11_01"); //Legend has it that, under the influence of this substance, the warriors of Innos were able to perform almost superhuman deeds. }
-LINE   { 2382 }
-FILEPOS{ 103030 }
+LINE   { 2380 }
+FILEPOS{ 103025 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Weapon_11_02"); //They were immune to all kinds of exhaustion and had the strength of two bears. }
-LINE   { 2383 }
-FILEPOS{ 103228 }
+LINE   { 2381 }
+FILEPOS{ 103223 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Weapon_11_03"); //The greatest heroic feats of the olden days were only made possible by the Tears of Innos. }
-LINE   { 2384 }
-FILEPOS{ 103378 }
+LINE   { 2382 }
+FILEPOS{ 103373 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(other,self ,"DIA_Pyrokar_PotionofDeath_Weapon_15_04"); //I understand. }
-LINE   { 2385 }
-FILEPOS{ 103540 }
+LINE   { 2383 }
+FILEPOS{ 103535 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Weapon_11_05"); //But the tears can bring suffering and death as well. Only the members of our order may drink this draught. }
-LINE   { 2386 }
-FILEPOS{ 103625 }
+LINE   { 2384 }
+FILEPOS{ 103620 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_500_PYROKAR.D }
 SYMBOL { 	AI_Output 	(self ,other,"DIA_Pyrokar_PotionofDeath_Weapon_11_06"); //Anyone else - even the paladins of our Lord - would face a cruel death. }
-LINE   { 2387 }
-FILEPOS{ 103803 }
+LINE   { 2385 }
+FILEPOS{ 103798 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_501_SERPENTES.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Serpentes_NOTALK_10_00"); //(scolding) You dare to address me, novice? Return to your work. }
@@ -40204,544 +40204,534 @@ LINE   { 311 }
 FILEPOS{ 11511 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
-SYMBOL { 			AI_Output (self, other, "DIA_Parlan_WELCOME_05_09"); //When you have done that, we shall speak about your work here in the monastery. }
-LINE   { 343 }
-FILEPOS{ 12462 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
-SYMBOL { 			AI_Output (self, other, "DIA_Addon_Parlan_WELCOME_05_00"); //Take your tribute to Gorax at the monastery at once. He will handle it further. }
-LINE   { 347 }
-FILEPOS{ 12661 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
-SYMBOL { 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_00"); //Welcome, new novice, I am Parlan. }
-LINE   { 352 }
-FILEPOS{ 12853 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
-SYMBOL { 	AI_Output (other, self, "DIA_Parlan_WELCOME_15_01"); //I am... }
-LINE   { 353 }
-FILEPOS{ 12944 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
-SYMBOL { 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_02"); //(interrupts) ... a NOVICE. It is not important who you were before. Now you are a servant of Innos. That is all that matters. }
-LINE   { 354 }
-FILEPOS{ 13009 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
-SYMBOL { 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_03"); //And with the acceptance into the Brotherhood of Fire, all of your previous transgressions will be forgiven. }
-LINE   { 355 }
-FILEPOS{ 13192 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
-SYMBOL { 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_04"); //May Innos bless this man, who places his life in his service, and wash away his sins. }
-LINE   { 356 }
-FILEPOS{ 13357 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
-SYMBOL { 	AI_Output (other, self, "DIA_Parlan_WELCOME_15_05"); //And now? }
-LINE   { 357 }
-FILEPOS{ 13500 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
-SYMBOL { 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_06"); //First you will fulfill the duties of a novice. You will work and serve the Brotherhood. }
-LINE   { 358 }
-FILEPOS{ 13566 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
-SYMBOL { 			AI_Output (self, other, "DIA_Parlan_WELCOME_05_07"); //But take your sheep to Opolos first, he will take care of it. }
-LINE   { 371 }
-FILEPOS{ 14097 }
+SYMBOL { 			AI_Output (self, other, "DIA_Parlan_WELCOME_05_08"); //You can give your gold to Gorax, our steward. You will find him in the winery. }
+LINE   { 349 }
+FILEPOS{ 12724 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Parlan_WELCOME_05_08"); //You can give your gold to Gorax, our steward. You will find him in the winery. }
-LINE   { 375 }
-FILEPOS{ 14267 }
+LINE   { 354 }
+FILEPOS{ 12893 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
+SYMBOL { 		AI_Output (self, other, "DIA_Parlan_WELCOME_05_07"); //But take your sheep to Opolos first, he will take care of it. }
+LINE   { 359 }
+FILEPOS{ 13079 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
+SYMBOL { 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_00"); //Welcome, new novice, I am Parlan. }
+LINE   { 364 }
+FILEPOS{ 13249 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
+SYMBOL { 	AI_Output (other, self, "DIA_Parlan_WELCOME_15_01"); //I am... }
+LINE   { 365 }
+FILEPOS{ 13340 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
+SYMBOL { 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_02"); //(interrupts) ... a NOVICE. It is not important who you were before. Now you are a servant of Innos. That is all that matters. }
+LINE   { 366 }
+FILEPOS{ 13405 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
+SYMBOL { 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_03"); //And with the acceptance into the Brotherhood of Fire, all of your previous transgressions will be forgiven. }
+LINE   { 367 }
+FILEPOS{ 13588 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
+SYMBOL { 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_04"); //May Innos bless this man, who places his life in his service, and wash away his sins. }
+LINE   { 368 }
+FILEPOS{ 13753 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
+SYMBOL { 	AI_Output (other, self, "DIA_Parlan_WELCOME_15_05"); //And now? }
+LINE   { 369 }
+FILEPOS{ 13896 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
+SYMBOL { 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_06"); //First you will fulfill the duties of a novice. You will work and serve the Brotherhood. }
+LINE   { 370 }
+FILEPOS{ 13962 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
+SYMBOL { 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_09"); //When you have done that, we shall speak about your work here in the monastery. }
+LINE   { 380 }
+FILEPOS{ 14425 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_Auge_15_00"); //I'm looking for the Eye of Innos. }
-LINE   { 412 }
-FILEPOS{ 15184 }
+LINE   { 404 }
+FILEPOS{ 15107 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_Auge_05_01"); //I don't know who told you about that - but the divine artifact is not accessible to anyone. }
-LINE   { 413 }
-FILEPOS{ 15272 }
+LINE   { 405 }
+FILEPOS{ 15195 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_Auge_15_02"); //Where is the Eye of Innos kept? }
-LINE   { 414 }
-FILEPOS{ 15418 }
+LINE   { 406 }
+FILEPOS{ 15341 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_Auge_05_03"); //The fewer people know this secret, the better it is protected. Seek for it - and you will not find it. }
-LINE   { 415 }
-FILEPOS{ 15504 }
+LINE   { 407 }
+FILEPOS{ 15427 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_Amulett_15_00"); //Tell me about the Eye of Innos. }
-LINE   { 441 }
-FILEPOS{ 16268 }
+LINE   { 433 }
+FILEPOS{ 16191 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_Amulett_05_01"); //All right. The Eye of Innos contains a part of the divine power of Innos. Only ONE chosen servant of Innos is permitted to bear the amulet. }
-LINE   { 442 }
-FILEPOS{ 16357 }
+LINE   { 434 }
+FILEPOS{ 16280 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_Amulett_05_02"); //It was created to protect us from the powers of Evil when the time has come. }
-LINE   { 443 }
-FILEPOS{ 16554 }
+LINE   { 435 }
+FILEPOS{ 16477 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_Hagen_15_00"); //I need to talk to the leader of the paladins! }
-LINE   { 467 }
-FILEPOS{ 17278 }
+LINE   { 459 }
+FILEPOS{ 17201 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_Hagen_05_01"); //Lord Hagen does not receive novices - only we magicians are permitted to see him. }
-LINE   { 468 }
-FILEPOS{ 17379 }
+LINE   { 460 }
+FILEPOS{ 17302 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Parlan_WORK_15_00"); //How can I serve the community? }
-LINE   { 497 }
-FILEPOS{ 18310 }
+LINE   { 489 }
+FILEPOS{ 18233 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_WELCOME_05_06"); //First you will fulfill the duties of a novice. You will work and serve the Brotherhood. }
-LINE   { 503 }
-FILEPOS{ 18482 }
+LINE   { 495 }
+FILEPOS{ 18405 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
-SYMBOL { 			AI_Output (self, other, "DIA_Parlan_WELCOME_05_07"); //But take your sheep to Opolos first, he will take care of it. }
-LINE   { 507 }
-FILEPOS{ 18672 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
-SYMBOL { 					AI_Output (self, other, "DIA_Parlan_WELCOME_05_08"); //You can give your gold to Gorax, our steward. You will find him in the winery. }
-LINE   { 520 }
-FILEPOS{ 19055 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
-SYMBOL { 					AI_Output (self, other, "DIA_Parlan_WELCOME_05_09"); //When you have done that, we shall speak about your work here in the monastery. }
-LINE   { 521 }
-FILEPOS{ 19195 }
+SYMBOL { 		AI_Output (self, other, "DIA_Parlan_WELCOME_05_09"); //When you have done that, we shall speak about your work here in the monastery. }
+LINE   { 497 }
+FILEPOS{ 18591 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_WORK_NIGHT_05_01"); //It is the time of peace. The work of the novices begins in the morning and continues until darkness. }
-LINE   { 529 }
-FILEPOS{ 19427 }
+LINE   { 503 }
+FILEPOS{ 18806 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_WORK_NIGHT_05_02"); //You should sleep, too. Come again when the time of work begins. }
-LINE   { 530 }
-FILEPOS{ 19589 }
+LINE   { 504 }
+FILEPOS{ 18968 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_WORK_05_03"); //Speak to the other magicians. They will give you tasks. }
-LINE   { 536 }
-FILEPOS{ 19765 }
+LINE   { 510 }
+FILEPOS{ 19144 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_WORK_05_04"); //I will oversee your work, and when you have fulfilled your duties adequately, you will receive permission to enter the library to study the word of Innos. }
-LINE   { 537 }
-FILEPOS{ 19876 }
+LINE   { 511 }
+FILEPOS{ 19255 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_Stand_15_00"); //Can I have access to the library? }
-LINE   { 569 }
-FILEPOS{ 20941 }
+LINE   { 543 }
+FILEPOS{ 20320 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Stand_05_01"); //You have obtained fire nettles for Brother Neoras. }
-LINE   { 573 }
-FILEPOS{ 21078 }
+LINE   { 547 }
+FILEPOS{ 20457 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Stand_05_02"); //You have found Brother Neoras' recipe. }
-LINE   { 578 }
-FILEPOS{ 21275 }
+LINE   { 552 }
+FILEPOS{ 20654 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Stand_05_03"); //You have vanquished the black wolf which threatened the shrine. }
-LINE   { 583 }
-FILEPOS{ 21460 }
+LINE   { 557 }
+FILEPOS{ 20839 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Stand_05_04"); //You have succeeded in finding four novices and thus cleaned the chambers. }
-LINE   { 588 }
-FILEPOS{ 21669 }
+LINE   { 562 }
+FILEPOS{ 21048 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Stand_05_05"); //You have distributed the food to the novices fairly, as Brother Gorax instructed you. }
-LINE   { 593 }
-FILEPOS{ 21887 }
+LINE   { 567 }
+FILEPOS{ 21266 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Stand_05_06"); //Gorax was not satisfied with you, because you did not hand out the food fairly. }
-LINE   { 598 }
-FILEPOS{ 22120 }
+LINE   { 572 }
+FILEPOS{ 21499 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Stand_05_07"); //You have sold the wine to Gorax's satisfaction. }
-LINE   { 602 }
-FILEPOS{ 22302 }
+LINE   { 576 }
+FILEPOS{ 21681 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Stand_05_08"); //The less said about the matter with the wine, the better... }
-LINE   { 607 }
-FILEPOS{ 22496 }
+LINE   { 581 }
+FILEPOS{ 21875 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Stand_05_09"); //Yes, you have worked enough. Now it is time for you to study the teachings of Innos. Speak to Master Hyglas in the library. }
-LINE   { 612 }
-FILEPOS{ 22652 }
+LINE   { 586 }
+FILEPOS{ 22031 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Stand_05_10"); //I hereby give you the key. }
-LINE   { 613 }
-FILEPOS{ 22832 }
+LINE   { 587 }
+FILEPOS{ 22211 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Stand_05_11"); //You have certainly worked, but it is your duty to continue serving the community. }
-LINE   { 654 }
-FILEPOS{ 23820 }
+LINE   { 628 }
+FILEPOS{ 23199 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Stand_05_12"); //First fulfill your duties in service to the community. When you're done working, we shall speak about this again. }
-LINE   { 658 }
-FILEPOS{ 23985 }
+LINE   { 632 }
+FILEPOS{ 23364 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_Aufgabe_15_00"); //Do you have an assignment for me? }
-LINE   { 683 }
-FILEPOS{ 24740 }
+LINE   { 657 }
+FILEPOS{ 24119 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_Aufgabe_05_01"); //Hmm... Yes, there is indeed something you can do for the community. }
-LINE   { 684 }
-FILEPOS{ 24831 }
+LINE   { 658 }
+FILEPOS{ 24210 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_Aufgabe_05_02"); //The novices' chambers could do with a good sweeping. Take care of that. }
-LINE   { 685 }
-FILEPOS{ 24956 }
+LINE   { 659 }
+FILEPOS{ 24335 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_Aufgabe_15_03"); //But that will take forever... }
-LINE   { 686 }
-FILEPOS{ 25085 }
+LINE   { 660 }
+FILEPOS{ 24464 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_Aufgabe_05_04"); //Then you had better start right away, hadn't you? }
-LINE   { 687 }
-FILEPOS{ 25172 }
+LINE   { 661 }
+FILEPOS{ 24551 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_Fegen_15_00"); //About the novices' chambers... }
-LINE   { 720 }
-FILEPOS{ 26274 }
+LINE   { 694 }
+FILEPOS{ 25653 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Fegen_05_01"); //You actually managed to find four novices to help you. I think they can now return to their daily work. }
-LINE   { 724 }
-FILEPOS{ 26390 }
+LINE   { 698 }
+FILEPOS{ 25769 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Fegen_05_02"); //Well done, novice. You have accomplished the task I set you. }
-LINE   { 725 }
-FILEPOS{ 26550 }
+LINE   { 699 }
+FILEPOS{ 25929 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_Fegen_05_03"); //Indisputably - it is not a simple task. But with the help of Innos you will manage. }
-LINE   { 737 }
-FILEPOS{ 26958 }
+LINE   { 711 }
+FILEPOS{ 26337 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_LEARN_15_00"); //How can I learn the art of magic? }
-LINE   { 763 }
-FILEPOS{ 27706 }
+LINE   { 737 }
+FILEPOS{ 27085 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_LEARN_05_01"); //You are not here to receive the gift of magic - you are here to serve Innos. }
-LINE   { 764 }
-FILEPOS{ 27795 }
+LINE   { 738 }
+FILEPOS{ 27174 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_LEARN_05_02"); //But I can show you how to increase your magic power. }
-LINE   { 765 }
-FILEPOS{ 27927 }
+LINE   { 739 }
+FILEPOS{ 27306 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_KNOWSJUDGE_15_00"); //I want to undergo the Test of Fire. }
-LINE   { 792 }
-FILEPOS{ 28809 }
+LINE   { 766 }
+FILEPOS{ 28188 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_KNOWSJUDGE_05_01"); //What..? Hm... (insistently) Are you really serious? }
-LINE   { 793 }
-FILEPOS{ 28905 }
+LINE   { 767 }
+FILEPOS{ 28284 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_KNOWSJUDGE_15_02"); //I insist. }
-LINE   { 794 }
-FILEPOS{ 29017 }
+LINE   { 768 }
+FILEPOS{ 28396 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_KNOWSJUDGE_05_03"); //You are an exceptional novice. All right, if you are serious, then speak to Master Pyrokar. }
-LINE   { 795 }
-FILEPOS{ 29087 }
+LINE   { 769 }
+FILEPOS{ 28466 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (other, self, "DIA_Parlan_TEACH_MANA_15_00"); //I want to increase my magic powers. }
-LINE   { 824 }
-FILEPOS{ 30074 }
+LINE   { 798 }
+FILEPOS{ 29453 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_TEACH_MANA_05_00"); //Your magic power has grown. I cannot help you to increase it more. }
-LINE   { 835 }
-FILEPOS{ 30725 }
+LINE   { 809 }
+FILEPOS{ 30104 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_TEACH_MANA_05_01"); //If you want to learn more, ask Pyrokar. }
-LINE   { 836 }
-FILEPOS{ 30853 }
+LINE   { 810 }
+FILEPOS{ 30232 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_MAGE_05_00"); //You have sworn your oath, Brother. Welcome to our ranks. }
-LINE   { 882 }
-FILEPOS{ 32711 }
+LINE   { 856 }
+FILEPOS{ 32090 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_MAGE_05_01"); //I will instruct you in the Circles of Magic when you have enough experience. }
-LINE   { 883 }
-FILEPOS{ 32822 }
+LINE   { 857 }
+FILEPOS{ 32201 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_MAGE_05_02"); //Take this runestone as a token that the power now lies in your hands. }
-LINE   { 884 }
-FILEPOS{ 32953 }
+LINE   { 858 }
+FILEPOS{ 32332 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_TECH_CIRCLE1_15_00"); //Teach me the first Circle of Magic. }
-LINE   { 911 }
-FILEPOS{ 33872 }
+LINE   { 885 }
+FILEPOS{ 33251 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE1_05_01"); //The first Circle of Magic allows you to use the runes which you have created. }
-LINE   { 915 }
-FILEPOS{ 34018 }
+LINE   { 889 }
+FILEPOS{ 33397 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE1_05_02"); //You can now learn the formulas of the spells to create your own runes. }
-LINE   { 916 }
-FILEPOS{ 34159 }
+LINE   { 890 }
+FILEPOS{ 33538 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE1_05_03"); //Each of us specializes in an area of magic. So consider well what sort of magic yours shall be. }
-LINE   { 917 }
-FILEPOS{ 34293 }
+LINE   { 891 }
+FILEPOS{ 33672 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_TECH_CIRCLE2_15_00"); //Teach me the second Circle of Magic. }
-LINE   { 943 }
-FILEPOS{ 35201 }
+LINE   { 917 }
+FILEPOS{ 34580 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE2_05_01"); //Enter now the second Circle and learn to work even more powerful magic. }
-LINE   { 949 }
-FILEPOS{ 35374 }
+LINE   { 923 }
+FILEPOS{ 34753 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE2_05_02"); //But also remember that you bear a responsibility. Not to me and not to Pyrokar - but to Innos. }
-LINE   { 950 }
-FILEPOS{ 35510 }
+LINE   { 924 }
+FILEPOS{ 34889 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE2_05_03"); //He shows you the direction - but your deeds form the path. }
-LINE   { 951 }
-FILEPOS{ 35669 }
+LINE   { 925 }
+FILEPOS{ 35048 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE2_05_04"); //The time has not yet come. }
-LINE   { 956 }
-FILEPOS{ 35813 }
+LINE   { 930 }
+FILEPOS{ 35192 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_TECH_CIRCLE3_15_00"); //Teach me the third Circle of Magic. }
-LINE   { 982 }
-FILEPOS{ 36651 }
+LINE   { 956 }
+FILEPOS{ 36030 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE3_05_01"); //Yes, the time has come. Enter now the third Circle of Magic. New spells await you. }
-LINE   { 988 }
-FILEPOS{ 36823 }
+LINE   { 962 }
+FILEPOS{ 36202 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE3_05_02"); //You will need them, for Evil draws nigh and it can be thwarted only with the power of Innos. }
-LINE   { 989 }
-FILEPOS{ 36970 }
+LINE   { 963 }
+FILEPOS{ 36349 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE3_05_03"); //I have now taught you all of the Circles that I can pass on. Karras will instruct you in the higher Circles. }
-LINE   { 990 }
-FILEPOS{ 37127 }
+LINE   { 964 }
+FILEPOS{ 36506 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_TECH_CIRCLE3_05_04"); //It is not yet time for you to learn the third Circle. }
-LINE   { 997 }
-FILEPOS{ 37472 }
+LINE   { 971 }
+FILEPOS{ 36851 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Parlan_TEACH_15_00"); //Teach me! }
-LINE   { 1024 }
-FILEPOS{ 38187 }
+LINE   { 998 }
+FILEPOS{ 37566 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Parlan_TEACH_05_01"); //I cannot teach you more formulas at the moment. }
-LINE   { 1085 }
-FILEPOS{ 41331 }
+LINE   { 1059 }
+FILEPOS{ 40710 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Parlan_EXIT_05_00"); //May Innos protect you. }
-LINE   { 1131 }
-FILEPOS{ 42389 }
+LINE   { 1105 }
+FILEPOS{ 41768 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self ,other,"DIA_Parlan_IAmParlan_05_00"); //I see that you have decided to fight on our side. I am glad. }
-LINE   { 1191 }
-FILEPOS{ 43909 }
+LINE   { 1165 }
+FILEPOS{ 43288 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self ,other,"DIA_Parlan_IAmParlan_05_01"); //We can use every man. You should go speak directly to Marduk, he is responsible for you paladins. }
-LINE   { 1192 }
-FILEPOS{ 44029 }
+LINE   { 1166 }
+FILEPOS{ 43408 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self ,other,"DIA_Parlan_IAmParlan_05_02"); //I do not know why you were allowed to enter the monastery. I am Parlan, and I am responsible for our novices. }
-LINE   { 1196 }
-FILEPOS{ 44201 }
+LINE   { 1170 }
+FILEPOS{ 43580 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self ,other,"DIA_Parlan_IAmParlan_05_03"); //I do not want you to keep them from their work with stupid questions. Is that clear? }
-LINE   { 1197 }
-FILEPOS{ 44370 }
+LINE   { 1171 }
+FILEPOS{ 43749 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Parlan_IAmParlan_MyChoice_15_00"); //I shall do what I please. }
-LINE   { 1210 }
-FILEPOS{ 44915 }
+LINE   { 1184 }
+FILEPOS{ 44294 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Parlan_IAmParlan_MyChoice_05_01"); //There must be reasons why you are tolerated here, but there is a limit to everything. }
-LINE   { 1211 }
-FILEPOS{ 45008 }
+LINE   { 1185 }
+FILEPOS{ 44387 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Parlan_IAmParlan_MyChoice_05_02"); //If you cause trouble, you'll pay for it. So stay away from the novices. }
-LINE   { 1212 }
-FILEPOS{ 45161 }
+LINE   { 1186 }
+FILEPOS{ 44540 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Parlan_IAmParlan_OK_15_00"); //Sure. }
-LINE   { 1219 }
-FILEPOS{ 45394 }
+LINE   { 1193 }
+FILEPOS{ 44773 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Parlan_IAmParlan_OK_05_01"); //I certainly hope so. }
-LINE   { 1220 }
-FILEPOS{ 45461 }
+LINE   { 1194 }
+FILEPOS{ 44840 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other ,self,"DIA_Parlan_Bibliothek_15_00"); //Have you got anything else for me? }
-LINE   { 1249 }
-FILEPOS{ 46337 }
+LINE   { 1223 }
+FILEPOS{ 45716 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self ,other,"DIA_Parlan_IAmParlan_05_00"); //I see that you have decided to fight on our side. I am glad. }
-LINE   { 1252 }
-FILEPOS{ 46494 }
+LINE   { 1226 }
+FILEPOS{ 45873 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Parlan_Bibliothek_05_01"); //Yes. As a member of the library, you are given the key to the library. There you will find Brothers Karras and Hyglas. }
-LINE   { 1254 }
-FILEPOS{ 46619 }
+LINE   { 1228 }
+FILEPOS{ 45998 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Parlan_Bibliothek_05_02"); //If you like, you can speak with them there. }
-LINE   { 1255 }
-FILEPOS{ 46797 }
+LINE   { 1229 }
+FILEPOS{ 46176 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 		AI_Output (self ,other,"DIA_Parlan_DontDisturb_05_03"); //But leave my novices alone! }
-LINE   { 1259 }
-FILEPOS{ 46937 }
+LINE   { 1233 }
+FILEPOS{ 46316 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Parlan_DontDisturb_05_00"); //(threatening) I do not like to repeat my self. Leave the novices alone. }
-LINE   { 1288 }
-FILEPOS{ 47837 }
+LINE   { 1262 }
+FILEPOS{ 47216 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Parlan_DontDisturb_05_01"); //They are supposed to purify their spirits with physical labor and prepare themselves for life in the monastery. }
-LINE   { 1289 }
-FILEPOS{ 47969 }
+LINE   { 1263 }
+FILEPOS{ 47348 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Parlan_DontDisturb_05_02"); //(energetic) I will not tolerate further distractions! }
-LINE   { 1290 }
-FILEPOS{ 48141 }
+LINE   { 1264 }
+FILEPOS{ 47520 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Parlan_Kap3_PERM_15_00"); //Where can I find... }
-LINE   { 1318 }
-FILEPOS{ 48941 }
+LINE   { 1292 }
+FILEPOS{ 48320 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Parlan_Kap3U4U5_PERM_Church_15_00"); //... the church? }
-LINE   { 1335 }
-FILEPOS{ 49694 }
+LINE   { 1309 }
+FILEPOS{ 49073 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_Add_05_00"); //Lord Almighty! Has Innos stricken you blind? }
-LINE   { 1337 }
-FILEPOS{ 49931 }
+LINE   { 1311 }
+FILEPOS{ 49310 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_Add_05_01"); //(cynically) Where is the church? Oh my, where could it possibly be? }
-LINE   { 1338 }
-FILEPOS{ 50029 }
+LINE   { 1312 }
+FILEPOS{ 49408 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Parlan_Kap3U4U5_PERM_Library_15_00"); //... the library? }
-LINE   { 1343 }
-FILEPOS{ 50205 }
+LINE   { 1317 }
+FILEPOS{ 49584 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_Add_05_02"); //The library is at the end of the colonnade to the left, directly across from the church. }
-LINE   { 1345 }
-FILEPOS{ 50438 }
+LINE   { 1319 }
+FILEPOS{ 49817 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Parlan_Kap3U4U5_PERM_Chapel_15_00"); //... the chapel? }
-LINE   { 1350 }
-FILEPOS{ 50634 }
+LINE   { 1324 }
+FILEPOS{ 50013 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_Add_05_03"); //The chapel is the room halfway along the left colonnade. That's where the paladins pray to Innos. }
-LINE   { 1352 }
-FILEPOS{ 50889 }
+LINE   { 1326 }
+FILEPOS{ 50268 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Parlan_Kap3U4U5_PERM_Cellar_15_00"); //... the cellars? }
-LINE   { 1357 }
-FILEPOS{ 51094 }
+LINE   { 1331 }
+FILEPOS{ 50473 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_504_PARLAN.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Parlan_Add_05_04"); //The entrance to the cellars lies halfway along the colonnade on the right. }
-LINE   { 1359 }
-FILEPOS{ 51348 }
+LINE   { 1333 }
+FILEPOS{ 50727 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_505_MARDUK.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Marduk_JOB_15_00"); //What's your job here? }
@@ -41706,277 +41696,277 @@ FILEPOS{ 2342 }
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Gorax_GOLD_15_00"); //I've brought a heap of gold. }
 LINE   { 115 }
-FILEPOS{ 3173 }
+FILEPOS{ 3222 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Gorax_GOLD_14_01"); //(with anticipation) Ah - you're bringing your offering for Innos. That's good of you, my son. }
 LINE   { 119 }
-FILEPOS{ 3318 }
+FILEPOS{ 3367 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Gorax_GOLD_14_02"); //I shall use your offering for the best of the monastery as it pleases Innos. }
 LINE   { 120 }
-FILEPOS{ 3466 }
+FILEPOS{ 3515 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Gorax_Orlan_14_02"); //What have you done with that gold? Did you spend it? Go get it and then come back! }
 LINE   { 127 }
-FILEPOS{ 3715 }
+FILEPOS{ 3764 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Gorax_DaronsStatue_15_00"); //Here, I've got the statuette that Daron was supposed to bring to the monastery. }
-LINE   { 158 }
-FILEPOS{ 4632 }
+LINE   { 159 }
+FILEPOS{ 4730 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Gorax_DaronsStatue_14_01"); //(sighs) It is truly embarrassing that such a valuable piece is brought to us by an aspiring novice. }
-LINE   { 162 }
-FILEPOS{ 4841 }
+LINE   { 163 }
+FILEPOS{ 4939 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Gorax_DaronsStatue_14_02"); //Nevertheless, this confirms your commitment to serve Innos. }
-LINE   { 163 }
-FILEPOS{ 5009 }
+LINE   { 164 }
+FILEPOS{ 5107 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Gorax_DaronsStatue_14_03"); //I am very obliged to you, young novice. }
-LINE   { 172 }
-FILEPOS{ 5335 }
+LINE   { 173 }
+FILEPOS{ 5433 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output	(self, other, "DIA_Addon_Gorax_DaronsStatue_14_04"); //Statuette? I see no statuette. Bring it to me, and I might believe your little story. }
-LINE   { 179 }
-FILEPOS{ 5603 }
+LINE   { 180 }
+FILEPOS{ 5703 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Gorax_SLEEP_15_00"); //I'm looking for a place to sleep. }
-LINE   { 204 }
-FILEPOS{ 6326 }
+LINE   { 205 }
+FILEPOS{ 6426 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_SLEEP_14_01"); //There's an empty bed right next door. The first on the right, next to the entrance. You can sleep there. }
-LINE   { 205 }
-FILEPOS{ 6414 }
+LINE   { 206 }
+FILEPOS{ 6514 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_SLEEP_14_02"); //You can store your belongings in one of the unused chests. }
-LINE   { 206 }
-FILEPOS{ 6573 }
+LINE   { 207 }
+FILEPOS{ 6673 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_SLEEP_14_03"); //And remember - you have no business entering the sleeping chambers of the magicians. You are also not allowed to enter the library unless you have been given permission. }
-LINE   { 207 }
-FILEPOS{ 6686 }
+LINE   { 208 }
+FILEPOS{ 6786 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Gorax_Aufgabe_15_00"); //Do you have an assignment for me? }
-LINE   { 230 }
-FILEPOS{ 7481 }
+LINE   { 231 }
+FILEPOS{ 7581 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_Aufgabe_14_01"); //You novices have worked hard lately. And those who work a lot shall eat a lot, too. }
-LINE   { 231 }
-FILEPOS{ 7571 }
+LINE   { 232 }
+FILEPOS{ 7671 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_Aufgabe_14_02"); //I'm giving you the key to the larder. You'll find some mutton sausages there. Distribute them among the novices - but fairly! }
-LINE   { 232 }
-FILEPOS{ 7711 }
+LINE   { 233 }
+FILEPOS{ 7811 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_Aufgabe_14_03"); //Once you have done that, you can come see me again. }
-LINE   { 233 }
-FILEPOS{ 7893 }
+LINE   { 234 }
+FILEPOS{ 7993 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Gorax_Wurst_15_00"); //I have distributed the sausages. }
-LINE   { 265 }
-FILEPOS{ 9079 }
+LINE   { 266 }
+FILEPOS{ 9179 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Gorax_Wurst_14_01"); //And you have done so fairly. Take these spell scrolls of healing - and go back to your work. }
-LINE   { 269 }
-FILEPOS{ 9200 }
+LINE   { 270 }
+FILEPOS{ 9300 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Gorax_Wurst_14_02"); //Really? Then you cannot have put much effort into fulfilling your task. }
-LINE   { 277 }
-FILEPOS{ 9488 }
+LINE   { 278 }
+FILEPOS{ 9588 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Gorax_Wurst_14_03"); //So, either you ate those sausages yourself, or you gave someone more than his share. }
-LINE   { 278 }
-FILEPOS{ 9615 }
+LINE   { 279 }
+FILEPOS{ 9715 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Gorax_Wurst_14_04"); //Listen, since you're new - and for that reason only - I shall let you get away with it. Keep that in mind, novice! }
-LINE   { 279 }
-FILEPOS{ 9755 }
+LINE   { 280 }
+FILEPOS{ 9855 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Gorax_Aufgabe2_15_00"); //Do you have another assignment for me? }
-LINE   { 308 }
-FILEPOS{ 10636 }
+LINE   { 309 }
+FILEPOS{ 10736 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_Aufgabe2_14_01"); //Yes. As you know, we make an excellent wine here and we sell it, too. }
-LINE   { 309 }
-FILEPOS{ 10732 }
+LINE   { 310 }
+FILEPOS{ 10832 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_Aufgabe2_14_02"); //Orlan, the landlord of the inn 'The Dead Harpy' has ordered a shipment. We've agreed on 240 gold pieces for the bottles. }
-LINE   { 310 }
-FILEPOS{ 10859 }
+LINE   { 311 }
+FILEPOS{ 10959 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_Aufgabe2_14_03"); //Bring him these bottles - but don't let him shortchange you. }
-LINE   { 311 }
-FILEPOS{ 11037 }
+LINE   { 312 }
+FILEPOS{ 11137 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output (other, self, "DIA_Gorax_Orlan_15_00"); //I went to see Orlan. }
-LINE   { 348 }
-FILEPOS{ 12283 }
+LINE   { 349 }
+FILEPOS{ 12383 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Gorax_Orlan_14_01"); //And, did you get the 240 gold coins? }
-LINE   { 349 }
-FILEPOS{ 12359 }
+LINE   { 350 }
+FILEPOS{ 12459 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Gorax_Orlan_14_02"); //What have you done with that gold? Did you spend it? Go get it and then come back! }
-LINE   { 359 }
-FILEPOS{ 12741 }
+LINE   { 360 }
+FILEPOS{ 12841 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Gorax_Orlan_100_15_00"); //He put one over on me! }
-LINE   { 365 }
-FILEPOS{ 12929 }
+LINE   { 366 }
+FILEPOS{ 13029 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_Orlan_100_14_01"); //You sold it to him cheaper? Oh no, why did I have to send YOU of all people? }
-LINE   { 366 }
-FILEPOS{ 13010 }
+LINE   { 367 }
+FILEPOS{ 13110 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_Orlan_100_14_02"); //You really are utterly and completely useless. Now get out of my sight. }
-LINE   { 367 }
-FILEPOS{ 13145 }
+LINE   { 368 }
+FILEPOS{ 13245 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Gorax_Orlan_240_15_00"); //I've got the gold. }
-LINE   { 379 }
-FILEPOS{ 13489 }
+LINE   { 380 }
+FILEPOS{ 13589 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Gorax_Orlan_240_14_01"); //Excellent. You're really useful. Take this spell scroll of healing as a reward. And now go and find yourself something else to do. }
-LINE   { 383 }
-FILEPOS{ 13624 }
+LINE   { 384 }
+FILEPOS{ 13724 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Gorax_Orlan_240_14_02"); //But you've already spent part of the money, haven't you? You're good for nothing - begone! }
-LINE   { 389 }
-FILEPOS{ 13898 }
+LINE   { 390 }
+FILEPOS{ 13998 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Gorax_JOB_15_00"); //What's your task here? }
-LINE   { 415 }
-FILEPOS{ 14707 }
+LINE   { 416 }
+FILEPOS{ 14807 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_JOB_14_01"); //My tasks are many and varied. Not only am I the steward, but I am also the treasurer. }
-LINE   { 416 }
-FILEPOS{ 14782 }
+LINE   { 417 }
+FILEPOS{ 14882 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_JOB_14_02"); //Moreover, I supervise the wine cellar, and I'm in control of the monastery's food supplies. }
-LINE   { 417 }
-FILEPOS{ 14920 }
+LINE   { 418 }
+FILEPOS{ 15020 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_JOB_14_03"); //So, if there's anything you need, you can always come to me and get it - for a modest contribution, that is. }
-LINE   { 418 }
-FILEPOS{ 15064 }
+LINE   { 419 }
+FILEPOS{ 15164 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Gorax_TRADE_15_00"); //I need a few things... }
-LINE   { 446 }
-FILEPOS{ 15976 }
+LINE   { 447 }
+FILEPOS{ 16076 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Gorax_KDF_15_00"); //I need a new place to sleep. }
-LINE   { 469 }
-FILEPOS{ 16599 }
+LINE   { 470 }
+FILEPOS{ 16699 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Gorax_KDF_14_01"); //There's a free chamber on the right here. Take the key. You'll find everything you need there. }
-LINE   { 470 }
-FILEPOS{ 16680 }
+LINE   { 471 }
+FILEPOS{ 16780 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_00"); //Wait, mercenary. I need to talk to you. }
-LINE   { 558 }
-FILEPOS{ 19034 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
-SYMBOL { 	AI_Output			(other, self, "DIA_Gorax_KILLPEDRO_15_01"); //What do you want? }
 LINE   { 559 }
 FILEPOS{ 19134 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
-SYMBOL { 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_02"); //The monastery is facing a very delicate situation. }
+SYMBOL { 	AI_Output			(other, self, "DIA_Gorax_KILLPEDRO_15_01"); //What do you want? }
 LINE   { 560 }
-FILEPOS{ 19212 }
+FILEPOS{ 19234 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
+SYMBOL { 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_02"); //The monastery is facing a very delicate situation. }
+LINE   { 561 }
+FILEPOS{ 19312 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_03"); //At the moment, everyone seems to mistrust everybody else. And then, this thing with Pedro, that's extremely... (gulps) }
-LINE   { 561 }
-FILEPOS{ 19323 }
+LINE   { 562 }
+FILEPOS{ 19423 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_04"); //I have an assignment for you from the highest authorities. You are not a member of the Brotherhood of the Fire, and therefore the only one here who can settle this matter for us. }
-LINE   { 562 }
-FILEPOS{ 19502 }
+LINE   { 563 }
+FILEPOS{ 19602 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_05"); //But I must warn you. If I give you this assignment, you'll be bound to fulfill it, too. Once you know what it's about, you'll have no choice. Do you understand? }
-LINE   { 563 }
-FILEPOS{ 19741 }
+LINE   { 564 }
+FILEPOS{ 19841 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Gorax_KILLPEDRO_nein_15_00"); //Forget it. That's too risky for me. }
-LINE   { 572 }
-FILEPOS{ 20288 }
+LINE   { 573 }
+FILEPOS{ 20388 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_nein_14_01"); //All right. In that case, forget I said anything. }
-LINE   { 573 }
-FILEPOS{ 20389 }
+LINE   { 574 }
+FILEPOS{ 20489 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Gorax_KILLPEDRO_ja_15_00"); //Tell me what you want. }
-LINE   { 579 }
-FILEPOS{ 20579 }
+LINE   { 580 }
+FILEPOS{ 20679 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_ja_14_01"); //All right. Then listen well, for I'm only going to say this once. }
-LINE   { 580 }
-FILEPOS{ 20665 }
+LINE   { 581 }
+FILEPOS{ 20765 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_ja_14_02"); //Serpentes wants you to kill Pedro for his treason as soon as you lay your hands on him. }
-LINE   { 581 }
-FILEPOS{ 20794 }
+LINE   { 582 }
+FILEPOS{ 20894 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_ja_14_03"); //You will be paid as soon as this task is fulfilled. }
-LINE   { 582 }
-FILEPOS{ 20945 }
+LINE   { 583 }
+FILEPOS{ 21045 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_508_GORAX.D }
 SYMBOL { 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_ja_14_04"); //I never said that. And you haven't heard anything either, understand? }
-LINE   { 583 }
-FILEPOS{ 21060 }
+LINE   { 584 }
+FILEPOS{ 21160 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_509_ISGAROTH.D }
 SYMBOL { 	AI_Output	(self ,other,"DIA_Isgaroth_EXIT_01_00"); //May Innos watch over you always. }
@@ -42720,98 +42710,98 @@ FILEPOS{ 18636 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 	AI_Output	(other, self, "DIA_Addon_Daron_ReturnedStatue_15_00"); //I took your statuette to the monastery. So you can relax now. }
-LINE   { 495 }
-FILEPOS{ 19404 }
+LINE   { 497 }
+FILEPOS{ 19513 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Daron_ReturnedStatue_10_01"); //That's good news. May Innos protect you. }
-LINE   { 496 }
-FILEPOS{ 19535 }
+LINE   { 498 }
+FILEPOS{ 19644 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 	AI_Output	(self, other, "DIA_Addon_Daron_ReturnedStatue_10_02"); //Take this as a small token of my gratitude, son. }
-LINE   { 497 }
-FILEPOS{ 19645 }
+LINE   { 499 }
+FILEPOS{ 19754 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 	AI_Output (other, self,"DIA_Daron_arm_15_00");//I am poor! }
-LINE   { 527 }
-FILEPOS{ 20554 }
+LINE   { 529 }
+FILEPOS{ 20663 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 	AI_Output (self, other,"DIA_Daron_arm_10_01");//So, you are impoverished. No wonder in these times. Take this gold, it should help you. }
-LINE   { 528 }
-FILEPOS{ 20615 }
+LINE   { 530 }
+FILEPOS{ 20724 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 	AI_Output (self, other,"DIA_Daron_arm_10_02");//But you should look for work, then you will see how quickly gold comes to you. And then you may give to the church of Innos, as she has given to you. }
-LINE   { 529 }
-FILEPOS{ 20753 }
+LINE   { 531 }
+FILEPOS{ 20862 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 	AI_Output (other, self,"DIA_Daron_Spende_15_00");//I want to make a donation... }
-LINE   { 562 }
-FILEPOS{ 21807 }
+LINE   { 564 }
+FILEPOS{ 21916 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 	 	AI_Output (self, other,"DIA_Daron_Spende_10_01");//You have donated more than 1000 gold pieces overall to me. }
-LINE   { 576 }
-FILEPOS{ 22304 }
+LINE   { 578 }
+FILEPOS{ 22413 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 	 	AI_Output (self, other,"DIA_Daron_Spende_10_02");//The blessing of the Lord Innos is always with you. }
-LINE   { 577 }
-FILEPOS{ 22418 }
+LINE   { 579 }
+FILEPOS{ 22527 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 	AI_Output (other, self,"DIA_Daron_Spende_BACK_15_00"); //But I didn't bring enough gold... }
-LINE   { 585 }
-FILEPOS{ 22637 }
+LINE   { 587 }
+FILEPOS{ 22746 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 	AI_Output (self, other,"DIA_Daron_Spende_BACK_10_01"); //That doesn't matter, my son. You can also donate as much as you want later. }
-LINE   { 586 }
-FILEPOS{ 22730 }
+LINE   { 588 }
+FILEPOS{ 22839 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Daron_Spende_50_10_00");//I bless you in the name of Innos. For he is light and righteousness. }
-LINE   { 597 }
-FILEPOS{ 23089 }
+LINE   { 599 }
+FILEPOS{ 23198 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Daron_Spende_50_10_01");//You can donate at any time if you have brought enough gold. }
-LINE   { 608 }
-FILEPOS{ 23456 }
+LINE   { 610 }
+FILEPOS{ 23565 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Daron_Spende_100_10_00");//Innos, you are the light which illuminates the path of the just. }
-LINE   { 616 }
-FILEPOS{ 23713 }
+LINE   { 618 }
+FILEPOS{ 23822 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Daron_Spende_100_10_01");//In your name, I bless this man. May your light shine upon him. }
-LINE   { 617 }
-FILEPOS{ 23836 }
+LINE   { 619 }
+FILEPOS{ 23945 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Daron_Spende_100_10_02");//The Lord says - if you wish to pray, open your spirit. And if you wish to donate, bring your gift along. }
-LINE   { 628 }
-FILEPOS{ 24199 }
+LINE   { 630 }
+FILEPOS{ 24308 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Daron_Spende_200_10_00");//Innos, bless this man. Let your light shine upon him. }
-LINE   { 636 }
-FILEPOS{ 24502 }
+LINE   { 638 }
+FILEPOS{ 24611 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Daron_Spende_200_10_01");//Give him strength to behave justly. }
-LINE   { 637 }
-FILEPOS{ 24614 }
+LINE   { 639 }
+FILEPOS{ 24723 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_KDF_511_DARON.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Daron_Spende_200_10_02");//If you want to donate that much gold, you should actually bring it, too. }
-LINE   { 648 }
-FILEPOS{ 24950 }
+LINE   { 650 }
+FILEPOS{ 25059 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_MIL_304_TORWACHE.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Mil_304_Torwache_WASMACHSTDU_15_00"); //So how are things? }
@@ -47899,159 +47889,164 @@ LINE   { 206 }
 FILEPOS{ 8128 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
-SYMBOL { 		AI_Output (self, other, "DIA_Addon_Pedro_Statuette_09_02"); //Well, under these truly exceptional circumstances you are free to become a novice. }
+SYMBOL { 		AI_Output (self, other, "DIA_Addon_Pedro_AUFNAHME_09_02"); //Is that really what you wish to do? For you must know that there will be no turning back for you then. }
 LINE   { 209 }
 FILEPOS{ 8246 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
+SYMBOL { 		AI_Output (self, other, "DIA_Pedro_TEMPEL_09_03"); //Besides that, we require an offering to Innos from every new novice. A sheep and... }
+LINE   { 210 }
+FILEPOS{ 8413 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
+SYMBOL { 		AI_Output (self, other, "DIA_Addon_Pedro_Statuette_09_02_B"); //Well, under these truly exceptional circumstances... }
+LINE   { 212 }
+FILEPOS{ 8703 }
+
+FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Pedro_Statuette_09_03"); //I can't let you in even with this precious gem, I'm afraid. }
-LINE   { 217 }
-FILEPOS{ 8724 }
+LINE   { 222 }
+FILEPOS{ 9439 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Addon_Pedro_Statuette_09_04"); //You have already decided upon a different path. The way into the monastery is closed to you. }
-LINE   { 218 }
-FILEPOS{ 8849 }
+LINE   { 223 }
+FILEPOS{ 9564 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Addon_Pedro_Statuette_Abgeben_15_00"); //Can I just hand the statuette over to you? }
-LINE   { 244 }
-FILEPOS{ 9669 }
+LINE   { 249 }
+FILEPOS{ 10384 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Addon_Pedro_Statuette_Abgeben_09_01"); //Of course, I shall take care of it. Thank you for this unselfish deed. }
-LINE   { 245 }
-FILEPOS{ 9784 }
+LINE   { 250 }
+FILEPOS{ 10499 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (other, self,"DIA_Pedro_Rules_15_00"); //What are the rules you live by? }
-LINE   { 272 }
-FILEPOS{ 10701 }
+LINE   { 277 }
+FILEPOS{ 11416 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self, other,"DIA_Pedro_Rules_09_01"); //Innos is the god of truth and law and thus we may NEVER lie or commit a crime. }
-LINE   { 273 }
-FILEPOS{ 10786 }
+LINE   { 278 }
+FILEPOS{ 11501 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self, other,"DIA_Pedro_Rules_09_02"); //Should you transgress against a brother of the community or steal our property, you will pay a penalty for it. }
-LINE   { 274 }
-FILEPOS{ 10918 }
+LINE   { 279 }
+FILEPOS{ 11633 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self, other,"DIA_Pedro_Rules_09_03"); //Innos is also the god of rule and fire. }
-LINE   { 275 }
-FILEPOS{ 11082 }
+LINE   { 280 }
+FILEPOS{ 11797 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self, other,"DIA_Pedro_Rules_09_04"); //As a novice you must show OBEDIENCE and RESPECT to all Magicians of Fire. }
-LINE   { 276 }
-FILEPOS{ 11175 }
+LINE   { 281 }
+FILEPOS{ 11890 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (other,self ,"DIA_Pedro_Rules_15_05"); //I see. }
-LINE   { 277 }
-FILEPOS{ 11302 }
+LINE   { 282 }
+FILEPOS{ 12017 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Pedro_Rules_09_06"); //Furthermore, it is the DUTY of a novice to carry out all the work in the monastery for the good of the community. }
-LINE   { 278 }
-FILEPOS{ 11362 }
+LINE   { 283 }
+FILEPOS{ 12077 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 		AI_Output (self ,other,"DIA_Pedro_Rules_09_07"); //If you are prepared to follow these rules and have the offering to Innos, we are willing to accept you into our monastery as a novice. }
-LINE   { 281 }
-FILEPOS{ 11563 }
+LINE   { 286 }
+FILEPOS{ 12278 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Pedro_AUFNAHME_15_00"); //I want to become a novice. }
-LINE   { 313 }
-FILEPOS{ 12712 }
+LINE   { 318 }
+FILEPOS{ 13427 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Pedro_AUFNAHME_09_01"); //You have already chosen your path. The path of magic is closed to you. }
-LINE   { 319 }
-FILEPOS{ 12862 }
-
-FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
-SYMBOL { 		AI_Output (self, other, "DIA_Addon_Pedro_AUFNAHME_09_02"); //Is that really what you wish to do? For you must know that there will be no turning back for you then. }
-LINE   { 325 }
-FILEPOS{ 13108 }
+LINE   { 324 }
+FILEPOS{ 13577 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 		AI_Output (self, hero, "DIA_Pedro_AUFNAHME_09_03"); //I see that you have brought the required offering. If you are truly willing, you are now free to become a novice. }
-LINE   { 335 }
-FILEPOS{ 13518 }
+LINE   { 340 }
+FILEPOS{ 14239 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 		AI_Output (self, hero, "DIA_Pedro_AUFNAHME_09_04"); //However, if you make this decision there is no going back - consider well if this is your path! }
-LINE   { 336 }
-FILEPOS{ 13689 }
+LINE   { 341 }
+FILEPOS{ 14410 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Pedro_AUFNAHME_09_02"); //You did not bring the required offering with you. }
-LINE   { 342 }
-FILEPOS{ 13896 }
+LINE   { 347 }
+FILEPOS{ 14617 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Pedro_AUFNAHME_YES_15_00"); //Yes, I want to dedicate my life to the service of Innos. }
-LINE   { 348 }
-FILEPOS{ 14054 }
+LINE   { 353 }
+FILEPOS{ 14775 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Pedro_AUFNAHME_YES_09_01"); //Then be welcome, Brother. I give to you the key to the monastery gate. }
-LINE   { 349 }
-FILEPOS{ 14172 }
+LINE   { 354 }
+FILEPOS{ 14893 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Pedro_AUFNAHME_YES_09_02"); //As a sign of your free decision, it is up to you to open the gate and step through. }
-LINE   { 352 }
-FILEPOS{ 14400 }
+LINE   { 357 }
+FILEPOS{ 15121 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Pedro_AUFNAHME_YES_09_03"); //You are now a novice. Wear this robe as a sign that you are now a member of this brotherhood. }
-LINE   { 353 }
-FILEPOS{ 14545 }
+LINE   { 358 }
+FILEPOS{ 15266 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Pedro_AUFNAHME_YES_09_04"); //When you are in the monastery, go to Parlan. He'll see to your needs from now on. }
-LINE   { 356 }
-FILEPOS{ 14783 }
+LINE   { 361 }
+FILEPOS{ 15504 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Pedro_AUFNAHME_YES_15_05"); //Will my transgressions be forgiven now? }
-LINE   { 357 }
-FILEPOS{ 14926 }
+LINE   { 362 }
+FILEPOS{ 15647 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Pedro_AUFNAHME_YES_09_06"); //Not yet. Speak to Master Parlan. He will bless you and wash you clean of your sins. }
-LINE   { 358 }
-FILEPOS{ 15027 }
+LINE   { 363 }
+FILEPOS{ 15748 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Pedro_AUFNAHME_NO_15_00"); //I'll think about it some more. }
-LINE   { 383 }
-FILEPOS{ 15731 }
+LINE   { 388 }
+FILEPOS{ 16454 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Pedro_AUFNAHME_NO_09_01"); //Come back when you are ready. }
-LINE   { 384 }
-FILEPOS{ 15822 }
+LINE   { 389 }
+FILEPOS{ 16545 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Pedro_Monastery_15_00"); //Tell me about life in the monastery. }
-LINE   { 409 }
-FILEPOS{ 16552 }
+LINE   { 414 }
+FILEPOS{ 17275 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Pedro_Monastery_09_01"); //We live in the monastery in order to serve Innos. We novices perform the work and study the scriptures when we have the opportunity. }
-LINE   { 410 }
-FILEPOS{ 16647 }
+LINE   { 415 }
+FILEPOS{ 17370 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Pedro_Monastery_09_02"); //The magicians watch over us, and they explore the arts of magic. }
-LINE   { 411 }
-FILEPOS{ 16838 }
+LINE   { 416 }
+FILEPOS{ 17561 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_NOV_600_PEDRO_DI.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Pedro_DI_YOU_15_00"); //Traitor! So I've found you at last. }
@@ -74571,77 +74566,77 @@ FILEPOS{ 32589 }
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Bosper_SellFur_11_01"); //A sheep skin? You didn't go slaughter some farmer's sheep in the pasture, did you? }
 LINE   { 881 }
-FILEPOS{ 33376 }
+FILEPOS{ 33384 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 			AI_Output (other, self, "DIA_Bosper_SellFur_15_02"); //I wouldn't dream of doing that... }
 LINE   { 882 }
-FILEPOS{ 33518 }
+FILEPOS{ 33526 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Bosper_SellFur_11_03"); //Wolf skin, that's good... }
 LINE   { 890 }
-FILEPOS{ 33907 }
+FILEPOS{ 33915 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Bosper_SellFur_11_04"); //A warg skin? Those beasts are tough... }
 LINE   { 906 }
-FILEPOS{ 34574 }
+FILEPOS{ 34590 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 			AI_Output (self, other, "DIA_Bosper_SellFur_11_05"); //Ah, even a shadowbeast skin - those are worth a lot. }
 LINE   { 913 }
-FILEPOS{ 34915 }
+FILEPOS{ 34939 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 				AI_Output (self, other, "DIA_Bosper_SellFur_11_06"); //What the hell is THIS skin? }
 LINE   { 923 }
-FILEPOS{ 35373 }
+FILEPOS{ 35401 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 				AI_Output (other, self, "DIA_Bosper_SellFur_15_07"); //I ripped a troll off for that one. }
 LINE   { 924 }
-FILEPOS{ 35461 }
+FILEPOS{ 35489 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 				AI_Output (self, other, "DIA_Bosper_SellFur_11_08"); //That... that is worth a small fortune. }
 LINE   { 925 }
-FILEPOS{ 35556 }
+FILEPOS{ 35584 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 				AI_Output (self, other, "DIA_Bosper_SellFur_11_09"); //Another huge troll hide... are you hunting those things down? }
 LINE   { 930 }
-FILEPOS{ 35716 }
+FILEPOS{ 35744 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 				AI_Output (other, self, "DIA_Bosper_SellFur_15_10"); //Whenever I stumble upon one, I seize the opportunity... }
 LINE   { 931 }
-FILEPOS{ 35838 }
+FILEPOS{ 35866 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 				AI_Output (self, other, "DIA_Bosper_SellFur_11_11"); //And the hide of a black troll, at that! }
 LINE   { 941 }
-FILEPOS{ 36272 }
+FILEPOS{ 36308 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Bosper_SellFur_11_12"); //Good work. Come see me again when you have more... }
 LINE   { 948 }
-FILEPOS{ 36687 }
+FILEPOS{ 36727 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 		AI_Output (self, other, "DIA_Bosper_SellFur_11_13"); //But you know - I'm only interested in the skins of wolves, shadowbeasts and the like... }
 LINE   { 952 }
-FILEPOS{ 36811 }
+FILEPOS{ 36851 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 	AI_Output (other, self, "DIA_Bosper_Minenanteil_15_00"); //I see that you have mining shares for sale. }
 LINE   { 981 }
-FILEPOS{ 37625 }
+FILEPOS{ 37665 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_413_BOSPER.D }
 SYMBOL { 	AI_Output (self, other, "DIA_Bosper_Minenanteil_11_01"); //Ahem. I know nothing about that. You can have them if you want. }
 LINE   { 982 }
-FILEPOS{ 37730 }
+FILEPOS{ 37770 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_4143_HAUPTTORWACHE.D }
 SYMBOL { 	AI_Output			(other, self, "DIA_Haupttorwache_AUFGABE_15_00"); //What's your task? }
@@ -76545,108 +76540,108 @@ FILEPOS{ 35352 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 	AI_Output (other, self,"DIA_Constantino_NewRecipes_15_00"); //I'm looking for new recipes for potions. }
-LINE   { 897 }
-FILEPOS{ 36342 }
+LINE   { 898 }
+FILEPOS{ 36362 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 	AI_Output (self, other,"DIA_Constantino_NewRecipes_10_01"); //Do you have any previous experience with alchemy? }
-LINE   { 898 }
-FILEPOS{ 36447 }
+LINE   { 899 }
+FILEPOS{ 36467 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 	AI_Output (other, self,"DIA_Constantino_NewRecipes_15_02"); //Yes, I do. }
-LINE   { 899 }
-FILEPOS{ 36561 }
+LINE   { 900 }
+FILEPOS{ 36581 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 	AI_Output (self, other,"DIA_Constantino_NewRecipes_10_03"); //Yet you are still alive... those aren't bad qualifications. }
-LINE   { 900 }
-FILEPOS{ 36636 }
+LINE   { 901 }
+FILEPOS{ 36656 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 	AI_Output (self, other,"DIA_Constantino_NewRecipes_10_04"); //I think I can tell you a few formulations. It depends, of course, on what you want to know. }
-LINE   { 901 }
-FILEPOS{ 36760 }
+LINE   { 902 }
+FILEPOS{ 36780 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 	AI_Output (other, self,"DIA_Constantino_TEACH_15_00"); //What recipes can you teach me? }
-LINE   { 929 }
-FILEPOS{ 37657 }
+LINE   { 930 }
+FILEPOS{ 37677 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Constantino_TEACH_10_01"); //I'm sorry. There is nothing else I could teach you. }
-LINE   { 939 }
-FILEPOS{ 38136 }
+LINE   { 940 }
+FILEPOS{ 38156 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Constantino_TEACH_10_02"); //I know a few - make your own choice. }
-LINE   { 943 }
-FILEPOS{ 38263 }
+LINE   { 944 }
+FILEPOS{ 38283 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Constantino_TEACH_Health01_10_00"); //The ingredients for an essence of healing are healing plants and meadow knotweed. }
-LINE   { 990 }
-FILEPOS{ 43967 }
+LINE   { 991 }
+FILEPOS{ 43987 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Constantino_TEACH_Health02_10_00"); //To prepare a healing extract, you need healing herbs and meadow knotweed. }
-LINE   { 998 }
-FILEPOS{ 44287 }
+LINE   { 999 }
+FILEPOS{ 44307 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Constantino_TEACH_Health02_10_01"); //Be sure to heat that extract very carefully. }
-LINE   { 999 }
-FILEPOS{ 44430 }
+LINE   { 1000 }
+FILEPOS{ 44450 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Constantino_TEACH_Health03_10_00"); //Creating an elixir of healing takes quite a bit of experience. }
-LINE   { 1007 }
-FILEPOS{ 44713 }
+LINE   { 1008 }
+FILEPOS{ 44733 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Constantino_TEACH_Health03_10_01"); //You need healing roots and meadow knotweed. Take special care when heating it this time. }
-LINE   { 1008 }
-FILEPOS{ 44845 }
+LINE   { 1009 }
+FILEPOS{ 44865 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Constantino_TEACH_PermHealth_10_00"); //The elixir of life! A rare brew. Not so much because of the effort - the potion actually isn't all that hard to make. }
-LINE   { 1016 }
-FILEPOS{ 45176 }
+LINE   { 1017 }
+FILEPOS{ 45196 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Constantino_TEACH_PermHealth_10_01"); //But the ingredients are very rare. You need healing roots and king's sorrel. }
-LINE   { 1017 }
-FILEPOS{ 45365 }
+LINE   { 1018 }
+FILEPOS{ 45385 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Constantino_TEACH_Mana01_10_00"); //The essence of magic is the simplest of magic potions. }
-LINE   { 1025 }
-FILEPOS{ 45678 }
+LINE   { 1026 }
+FILEPOS{ 45698 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Constantino_TEACH_Mana01_10_01"); //Take fire nettles and meadow knotweed and heat them slowly. }
-LINE   { 1026 }
-FILEPOS{ 45800 }
+LINE   { 1027 }
+FILEPOS{ 45820 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 	 	AI_Output (self, other,"DIA_Constantino_TEACH_Mana02_10_00"); //Since you can already prepare an essence of magic, with a little effort you should be able to produce an extract as well. }
-LINE   { 1034 }
-FILEPOS{ 46092 }
+LINE   { 1035 }
+FILEPOS{ 46112 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 	 	AI_Output (self, other,"DIA_Constantino_TEACH_Mana02_10_01"); //You need to put the right kind of feeling into decocting that brew. Use fireweed and meadow knotweed for this potion. }
-LINE   { 1035 }
-FILEPOS{ 46282 }
+LINE   { 1036 }
+FILEPOS{ 46302 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Constantino_TEACH_PermSTR_10_00"); //The elixir of strength! An excellent potion. You need the rare dragonroot and king's sorrel. }
-LINE   { 1043 }
-FILEPOS{ 46635 }
+LINE   { 1044 }
+FILEPOS{ 46655 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_417_CONSTANTINO.D }
 SYMBOL { 		AI_Output (self, other,"DIA_Constantino_TEACH_PermSTR_10_01"); //When boiling the brew, don't let the bubbles get too big or you'll be in for a nasty surprise! }
-LINE   { 1044 }
-FILEPOS{ 46796 }
+LINE   { 1045 }
+FILEPOS{ 46816 }
 
 FILE   { CONTENT\STORY\DIALOGE\DIA_VLK_418_GRITTA.D }
 SYMBOL { 	AI_Output (self ,other,"DIA_Gritta_Hello_16_00"); //What do you want, stranger? I f you have come to beg, I must disappoint you. I am a poor widow. }
