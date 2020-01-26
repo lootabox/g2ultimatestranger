@@ -143,6 +143,11 @@ func void B_AssessTalk ()
 			else if (rnd <= 75)	{	B_Say (other,self,"$SC_HEYTURNAROUND03");	}
 			else if (rnd <= 99) {	B_Say (other,self,"$SC_HEYTURNAROUND04");	};
 		};
+	}
+	else
+	{
+		Npc_ClearAIQueue(other);
+		AI_PlayAniBS(other, "", BS_STAND);
 	};
 
 	Npc_ClearAIQueue	(self);

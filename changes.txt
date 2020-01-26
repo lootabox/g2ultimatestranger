@@ -77,6 +77,7 @@ Cannot level up when dead.
 Increased limit for alpha vobs/polys.
 Main menu sounds are silenced after start a new game or loading one.
 Many items have their description now on one line instead of multiple lines.
+When NPC starts a dialog, NH stops moving.
 
 
 	Monster
