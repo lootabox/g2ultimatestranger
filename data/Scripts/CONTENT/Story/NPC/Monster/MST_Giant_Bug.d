@@ -104,7 +104,7 @@ INSTANCE YGiant_Bug	(Mst_Default_Giant_Bug)
 
 	//----- Visuals ----
 	B_SetVisuals_Giant_Bug();
-	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
+	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 	Npc_SetToFistMode(self);
 };
 
@@ -134,7 +134,7 @@ INSTANCE YGiant_Bug_VinoRitual1	(Mst_Default_Giant_Bug)
 
 	//----- Visuals ----
 	B_SetVisuals_Giant_Bug();
-	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
+	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 	Npc_SetToFistMode(self);
 };
 
@@ -163,7 +163,7 @@ INSTANCE YGiant_Bug_VinoRitual2	(Mst_Default_Giant_Bug)
 
 	//----- Visuals ----
 	B_SetVisuals_Giant_Bug();
-	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
+	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 	Npc_SetToFistMode(self);
 };
 

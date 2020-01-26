@@ -112,6 +112,7 @@ INSTANCE BlackWolf	(Mst_Default_Wolf)
 	B_SetVisuals_BLACKWOLF();
 	Npc_SetToFistMode(self);
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
+	Mdl_SetModelScale(self, 1.1, 1.1, 1.1);
 };
 
 //*****************
@@ -182,6 +183,7 @@ INSTANCE Summoned_BlackWolf	(Mst_Default_Wolf)
 	B_SetVisuals_BLACKWOLF();
 	Npc_SetToFistMode(self);
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
+	Mdl_SetModelScale(self, 1.1, 1.1, 1.1);
 };
 
 //************
@@ -211,6 +213,7 @@ INSTANCE YWolf	(Mst_Default_Wolf)
 	B_SetVisuals_Wolf();
 	Npc_SetToFistMode(self);
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
+	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 };
 
 
@@ -241,6 +244,7 @@ INSTANCE PEPES_YWolf1	(Mst_Default_Wolf)
 	B_SetVisuals_Wolf();
 	Npc_SetToFistMode(self);
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
+	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 };
 
 
@@ -264,6 +268,7 @@ INSTANCE PEPES_YWolf2	(Mst_Default_Wolf)
 	B_SetVisuals_Wolf();
 	Npc_SetToFistMode(self);
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
+	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 };
 
 
@@ -287,6 +292,7 @@ INSTANCE PEPES_YWolf3	(Mst_Default_Wolf)
 	B_SetVisuals_Wolf();
 	Npc_SetToFistMode(self);
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
+	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 };
 
 
@@ -310,6 +316,7 @@ INSTANCE PEPES_YWolf4	(Mst_Default_Wolf)
 	B_SetVisuals_Wolf();
 	Npc_SetToFistMode(self);
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
+	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 };
 
 instance WolfTransform(Mst_Default_Wolf)

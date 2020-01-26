@@ -54,8 +54,9 @@ func void B_GiveDeathInv (var C_NPC slf)
 	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Fur] == TRUE)
 	{
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_SHEEP)			{	CreateInvItems (slf, ItAt_SheepFur	, 1);	};
-		if (slf.aivar[AIV_MM_REAL_ID] == ID_WOLF)			{	CreateInvItems (slf, ItAt_WolfFur	, 1);	};
-		if (slf.aivar[AIV_MM_REAL_ID] == ID_ICEWOLF)		{	CreateInvItems (slf, ItAt_WolfFur	, 1);	};
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_WOLF) && (slf.level > 3)
+															{	CreateInvItems (slf, ItAt_WolfFur	, 1);	};
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_ICEWOLF)		{	CreateInvItems (slf, ItAt_IceWolfFur	, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_WARG)			{	CreateInvItems (slf, ItAt_WargFur	, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_SHADOWBEAST)	{	CreateInvItems (slf, ItAt_ShadowFur	, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_TROLL)			{	CreateInvItems (slf, ItAt_TrollFur	, 1);	};

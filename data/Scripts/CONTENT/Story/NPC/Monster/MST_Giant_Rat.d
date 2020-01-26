@@ -108,7 +108,7 @@ INSTANCE YGiant_Rat	(Mst_Default_Giant_Rat)
 
 	//----- Visuals ----
 	B_SetVisuals_Giant_Rat();
-	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
+	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 	Npc_SetToFistMode(self);
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
 };
