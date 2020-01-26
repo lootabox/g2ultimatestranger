@@ -763,7 +763,7 @@ func void DIA_Xardas_DMTSINDDA_DMT_WhatToDo ()
 
 	AI_Output			(self ,other, "DIA_Addon_Xardas_Hello_Dragons_14_06"); //But that's not all. There is ANOTHER threat of which I have learned only recently.
 	Info_ClearChoices	(DIA_Xardas_DMTSINDDA);
-	Info_AddChoice	(DIA_Xardas_DMTSINDDA, "What other threat are you talking about?", DIA_Xardas_DMTSINDDA_Start_Addon );
+	Info_AddChoice	(DIA_Xardas_DMTSINDDA, "(continue)", DIA_Xardas_DMTSINDDA_Start_Addon );
 };
 func void DIA_Xardas_DMTSINDDA_Start_Addon ()
 {
