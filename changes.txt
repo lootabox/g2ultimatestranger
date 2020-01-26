@@ -214,6 +214,10 @@ Cassia cannot be paid for learning to pickpocket if it's already learned.
 Cassias quests become obsolete if the paladins kill her.
 Cavalorn gives much less gold for buying the farmer's clothes.
 Cornelius' diary cannot be stolen before learning of him being a witness to the murder.
+Daron considers NH to be poor with less than 100 gold instead of 10.
+Daron can only be asked about paladins after he mentions them.
+Daron does not talk about donations when asked for a blessing if he has already given his blessing.
+Daron gives more learning points for donating, but only after donating all 1000 gold.
 Diego cannot be led to Pedrakhan.
 Diego's dialog has 6 more previously unused dialogue lines and 9 more if NH never met him in Valley of Mines.
 Dragomir immediately equips his crossbow after receiving it.

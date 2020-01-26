@@ -1,55 +1,38 @@
+var int Daron_Spende;
 FUNC VOID B_DaronSegen ()
 {
-	Daron_Segen = TRUE;
+	var int Bonus_1; // 2 mana -> xp
+	var int Bonus_2; // xp -> 5 life
+	var int Bonus_3; // 1 lp -> 2 mana
 
-	var string concatText;
-	
-	var int Bonus_1;
-	var int Bonus_2;
-	var int Bonus_3;
-
-	if (Daron_Spende < 100)
-	{
-		if other.attribute[ATR_HITPOINTS] <  other.attribute[ATR_HITPOINTS_MAX]
-		{
-			other.attribute [ATR_HITPOINTS] = other.attribute[ATR_HITPOINTS_MAX];
-			PrintScreen (PRINT_FullyHealed, - 1, - 1, FONT_Screen, 2);   
-		};
-	}	 	
-	else if (Daron_Spende < 250)
-	&&		(Bonus_1 == FALSE)
-	{
-		B_RaiseAttribute (other, ATR_MANA_MAX, 2);
-		
-		other.attribute[ATR_MANA] =  other.attribute[ATR_MANA_MAX];
-				
-		Bonus_1 = TRUE;
-	}
-	else if (Daron_Spende < 500)
-	&&		(Bonus_2 == FALSE)
-	{
-		B_GivePlayerXP (XP_Ambient);
-		Bonus_2 = TRUE;
-	}
-	else if (Daron_Spende >= 750) 	
-	&&		(Daron_Spende < 1000) 	
-	&& 		(Bonus_3 == FALSE)
-	{
-		other.lp = (other.lp + 1);
-		
-		concatText = ConcatStrings(PRINT_LearnLP, IntToString(1));
-		PrintScreen	(concatText, -1, -1, FONT_SCREEN, 2);
-		Bonus_3 = TRUE;
-	}
-	else 
-	{
+	if (Daron_Spende >= 800 && Bonus_3 == FALSE) {
+		B_BlessAttribute (other, ATR_MANA_MAX, 2);
+		other.attribute[ATR_MANA] += 2;
 		other.attribute[ATR_HITPOINTS] =  other.attribute[ATR_HITPOINTS_MAX];
-		other.attribute[ATR_MANA] =  other.attribute[ATR_MANA_MAX];
-
-		other.attribute[ATR_HITPOINTS_MAX] = (other.attribute[ATR_HITPOINTS_MAX] + 5);
-		
-		concatText = ConcatStrings(PRINT_Learnhitpoints_MAX, IntToString(5));
-		PrintScreen	(concatText, -1, -1, FONT_Screen, 2);
+		Bonus_3 = TRUE;
+		AI_Output (self, other,"DIA_Daron_Spende_100_10_00");//Innos, you are the light which illuminates the path of the just.
+		AI_Output (self, other,"DIA_Daron_Spende_100_10_01");//In your name, I bless this man. May your light shine upon him.
+		Daron_Segen = TRUE;
+		if (MIS_Thorben_GetBlessings == LOG_RUNNING)
+		{
+			B_LogEntry (TOPIC_Thorben,"Daron the Fire Magician has given me his blessing.");
+		};
+	} else if (Daron_Spende >= 500 && Bonus_2 == FALSE) {
+		B_BlessAttribute (other, ATR_HITPOINTS_MAX, 5);
+		Bonus_2 = TRUE;
+		AI_Output (self, other,"DIA_Daron_Spende_200_10_00");//Innos, bless this man. Let your light shine upon him.
+		AI_Output (self, other,"DIA_Daron_Spende_200_10_01");//Give him strength to behave justly.
+		Daron_Segen = TRUE;
+		if (MIS_Thorben_GetBlessings == LOG_RUNNING)
+		{
+			B_LogEntry (TOPIC_Thorben,"Daron the Fire Magician has given me his blessing.");
+		};
+	} else if (Daron_Spende >= 200 && Bonus_1 == FALSE) {
+		B_GivePlayerXP (XP_Ambient);
+		Bonus_1 = TRUE;
+		AI_Output (self, other,"DIA_Daron_Spende_100_10_02");//The Lord says - if you wish to pray, open your spirit. And if you wish to donate, bring your gift along.
+	} else {
+		AI_Output (self, other,"DIA_Daron_Spenden_10_07");//The church accepts your generous donation.
 	};
 };
 // ************************************************************
@@ -115,6 +98,7 @@ FUNC INT DIA_Daron_Paladine_Condition()
 {	
 	if (other.guild != GIL_KDF)
 	&& (Kapitel < 2)
+	&& (Npc_KnowsInfo(other, DIA_Daron_Stadt))
 	{
 		return TRUE;
 	};
@@ -153,8 +137,6 @@ FUNC INT DIA_Daron_AboutSegen_Condition()
 FUNC VOID DIA_Daron_AboutSegen_Info()
 {	
 	AI_Output (other, self,"DIA_Daron_AboutSegen_15_00"); //I've come to get your blessing!
-	AI_Output (self, other,"DIA_Daron_AboutSegen_10_01"); //That's good, that's good - then you will probably want to donate gold to the holy church of Innos, won't you?
-	AI_Output (other, self,"DIA_Daron_AboutSegen_15_02"); //Actually, I wanted your blessing so I can sign on as an apprentice in the lower part of town...
 	if (Daron_Segen == TRUE)
 	{
 		AI_Output (self, other,"DIA_Daron_AboutSegen_10_03"); //But I have already given you my blessing, my son.
@@ -162,6 +144,8 @@ FUNC VOID DIA_Daron_AboutSegen_Info()
 	}
 	else
 	{
+		AI_Output (self, other,"DIA_Daron_AboutSegen_10_01"); //That's good, that's good - then you will probably want to donate gold to the holy church of Innos, won't you?
+		AI_Output (other, self,"DIA_Daron_AboutSegen_15_02"); //Actually, I wanted your blessing so I can sign on as an apprentice in the lower part of town...
 		AI_Output (self, other,"DIA_Daron_AboutSegen_10_05"); //But, my son! Without a modest donation to the church, it is impossible for me to bless you.
 		AI_Output (self, other,"DIA_Daron_AboutSegen_10_06"); //How else can I be certain of your good intentions towards the holy church of Innos?
 	};
@@ -191,43 +175,20 @@ FUNC VOID DIA_Daron_Spenden_Info()
 	AI_Output (self, other,"DIA_Daron_Spenden_10_01");//Well, that depends on what percentage you want to give. Let me see how much you brought.
 	AI_Output (self, other,"DIA_Daron_Spenden_10_02");//(looking in money pouch) Mmmmh hmmm...
 	
-	if (Npc_HasItems (other, ItMi_Gold) < 10)
+	if (Npc_HasItems (other, ItMi_Gold) < 100)
 	{
 		AI_Output (self, other,"DIA_Daron_Spenden_10_03");//Hm, you're a poor soul, aren't you? Keep the little you have.
-		
 		if (MIS_Thorben_GetBlessings == LOG_RUNNING)
 		{
-			B_LogEntry (TOPIC_Thorben,"Daron the Fire Magician hasn't blessed me. I guess that means I have to get some gold and donate it to him to get him to bless me after all.");
+			B_LogEntry (TOPIC_Thorben,"Daron the Fire Magician hasn't blessed me. I guess I have to get some gold and donate it to him to get his blessing or find another priest of Innos to bless me.");
 		};
 	}
-	else //Gold >= 10
+	else
 	{
-		if (Npc_HasItems (other, ItMi_Gold) < 50)
-		{
-			AI_Output (self, other,"DIA_Daron_Spenden_10_04");//Well, you don't have much, but neither are you poor. 10 gold pieces for Innos - we live modestly.
-			B_GiveInvItems (other, self, ItMi_Gold, 10);
-			
-		}
-		else if (Npc_HasItems (other, ItMi_Gold) < 100)
-		{
-			AI_Output (self, other,"DIA_Daron_Spenden_10_05");//You have more than 50 gold coins. Donate 25 to Innos and receive his blessing.
-			B_GiveInvItems (other, self, ItMi_Gold, 25);
-		}
-		else
-		{
-			AI_Output (self, other,"DIA_Daron_Spenden_10_06");//You have more than a hundred gold pieces - the Lord says, give if you have.
-			AI_Output (self, other,"DIA_Daron_Spenden_10_07");//The church accepts your generous donation.
-			B_GiveInvItems (other, self, ItMi_Gold, 50);
-			
-		};
-		
-		AI_Output (self, other,"DIA_Daron_Spenden_10_08");//I bless you in the name of Innos. For he is light and righteousness.
-		Daron_Segen = TRUE;
-		B_GivePlayerXP (XP_InnosSegen);
-		
+		AI_Output (self, other,"DIA_Daron_Spenden_10_06");//You have more than a hundred gold pieces - the Lord says, give if you have.
 		if (MIS_Thorben_GetBlessings == LOG_RUNNING)
 		{
-			B_LogEntry (TOPIC_Thorben,"Daron the Fire Magician has given me his blessing.");
+			B_LogEntry (TOPIC_Thorben,"Daron the Fire Magician wants me to donate some gold to him in order to get him to bless me.");
 		};
 	};
 };
@@ -518,7 +479,7 @@ INSTANCE DIA_Daron_arm(C_INFO)
 FUNC INT DIA_Daron_arm_Condition()
 {	
 	if Npc_KnowsInfo (other, DIA_Daron_Stadt)
-	&& (Npc_HasItems  (other, ItMi_Gold) < 10) 
+	&& (Npc_HasItems  (other, ItMi_Gold) < 100) 
 	&& (other.guild == GIL_NONE)
 	{	
 		return TRUE;
@@ -569,14 +530,18 @@ FUNC VOID DIA_Daron_Spende_Info()
 	{
 		Info_AddChoice 	(DIA_Daron_Spende,"But I didn't bring enough gold...",DIA_Daron_Spende_BACK);
 		
-		Info_AddChoice 	(DIA_Daron_Spende,"(50  gold)",DIA_Daron_Spende_50);
 		Info_AddChoice 	(DIA_Daron_Spende,"(100 gold)",DIA_Daron_Spende_100);
-		Info_AddChoice 	(DIA_Daron_Spende,"(200 gold)",DIA_Daron_Spende_200);
+		if (Daron_Spende <= 900) {Info_AddChoice 	(DIA_Daron_Spende,"(200 gold)",DIA_Daron_Spende_200);};
 	 }
 	 else 
 	 {
 	 	AI_Output (self, other,"DIA_Daron_Spende_10_01");//You have donated more than 1000 gold pieces overall to me.
+		AI_Output (self, other,"DIA_Daron_Spende_50_10_00");//I bless you in the name of Innos. For he is light and righteousness.
 	 	AI_Output (self, other,"DIA_Daron_Spende_10_02");//The blessing of the Lord Innos is always with you.
+		
+		other.lp = (other.lp + 5);
+		PrintScreen	(ConcatStrings(PRINT_LearnLP, IntToString(5)), -1, -1, FONT_SCREEN, 2);
+		Snd_Play("LEVELUP");
 	 	
 	 	DIA_Daron_Spende_permanent = TRUE;	
 		B_DaronSegen ();
@@ -590,20 +555,12 @@ FUNC VOID DIA_Daron_Spende_BACK()
 	Info_ClearChoices (DIA_Daron_Spende);
 };	
 //----------------------------
-var int Daron_Spende;
-//----------------------------
-FUNC VOID DIA_Daron_Spende_50()
+FUNC VOID DIA_Daron_Spende_100()
 {
-	if B_GiveInvItems (other, self, ItMi_Gold, 50)
+	if B_GiveInvItems (other, self, ItMi_Gold, 100)
 	{
-		AI_Output (self, other,"DIA_Daron_Spende_50_10_00");//I bless you in the name of Innos. For he is light and righteousness.
-		Daron_Spende = (Daron_Spende + 50);
+		Daron_Spende = (Daron_Spende + 100);
 		B_DaronSegen ();
-		Daron_Segen = TRUE;
-		if (MIS_Thorben_GetBlessings == LOG_RUNNING)
-		{
-			B_LogEntry (TOPIC_Thorben,"Daron the Fire Magician has given me his blessing.");
-		};
 	}
 	else
 	{
@@ -611,39 +568,12 @@ FUNC VOID DIA_Daron_Spende_50()
 	};
 	Info_ClearChoices (DIA_Daron_Spende);
 };
-FUNC VOID DIA_Daron_Spende_100()
-{
-	if B_GiveInvItems (other, self, ItMi_Gold, 100)
-	{
-		AI_Output (self, other,"DIA_Daron_Spende_100_10_00");//Innos, you are the light which illuminates the path of the just.
-		AI_Output (self, other,"DIA_Daron_Spende_100_10_01");//In your name, I bless this man. May your light shine upon him.
-		Daron_Spende = (Daron_Spende + 100);
-		B_DaronSegen ();
-		Daron_Segen = TRUE;
-		if (MIS_Thorben_GetBlessings == LOG_RUNNING)
-		{
-			B_LogEntry (TOPIC_Thorben,"Daron the Fire Magician has given me his blessing.");
-		};
-	}
-	else
-	{
-		AI_Output (self, other,"DIA_Daron_Spende_100_10_02");//The Lord says - if you wish to pray, open your spirit. And if you wish to donate, bring your gift along.
-	};
-	Info_ClearChoices (DIA_Daron_Spende);
-};
 FUNC VOID DIA_Daron_Spende_200()
 {
 	if B_GiveInvItems (other, self, ItMi_Gold, 200)
 	{
-		AI_Output (self, other,"DIA_Daron_Spende_200_10_00");//Innos, bless this man. Let your light shine upon him.
-		AI_Output (self, other,"DIA_Daron_Spende_200_10_01");//Give him strength to behave justly.
 		Daron_Spende = (Daron_Spende + 200);
 		B_DaronSegen ();
-		Daron_Segen = TRUE;
-		if (MIS_Thorben_GetBlessings == LOG_RUNNING)
-		{
-			B_LogEntry (TOPIC_Thorben,"Daron the Fire Magician has given me his blessing.");
-		};
 	}
 	else
 	{
