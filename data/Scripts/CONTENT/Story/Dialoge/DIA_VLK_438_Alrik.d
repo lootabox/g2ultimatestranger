@@ -189,7 +189,7 @@ FUNC INT DIA_Alrik_NewFights3_Condition()
 {
 	if (Kapitel >= 3)
 	&& (Kapitel <= 4)
-	&& (Alrik_ArenaKampfVerloren <= 6)
+	&& (Alrik_ArenaKampfVerloren <= 4)
 	{
 		return TRUE;
 	};
@@ -219,7 +219,7 @@ INSTANCE DIA_Alrik_NewFights5(C_INFO)
 FUNC INT DIA_Alrik_NewFights5_Condition()
 {
 	if (Kapitel >= 5)
-	&& (Alrik_ArenaKampfVerloren <= 9)
+	&& (Alrik_ArenaKampfVerloren <= 6)
 	{
 		return TRUE;
 	};
@@ -299,7 +299,7 @@ FUNC VOID DIA_Alrik_WannaFight_Info()
 	
 	// ----- EXIT: ÜBER DREI MAL Alrik_ArenaKampfVerloren ------
 	else if (Kapitel <= 2)
-	&& (Alrik_ArenaKampfVerloren > 3)
+	&& (Alrik_ArenaKampfVerloren > 2)
 	{
 		AI_Output (self, other, "DIA_Alrik_Add_09_00"); //I think that should be enough for now...
 		AI_Output (self, other, "DIA_Alrik_Add_09_01"); //Let me have a short break.
@@ -308,14 +308,14 @@ FUNC VOID DIA_Alrik_WannaFight_Info()
 	
 	else if (Kapitel >= 3)
 	&& (Kapitel <= 4)
-	&& (Alrik_ArenaKampfVerloren > 6)
+	&& (Alrik_ArenaKampfVerloren > 4)
 	{
 		B_Alrik_Enough();
 		B_Alrik_ComeBackLater();
 	}
 	
 	else if (Kapitel >= 5)
-	&& (Alrik_ArenaKampfVerloren > 9)
+	&& (Alrik_ArenaKampfVerloren > 6)
 	{
 		B_Alrik_Enough();
 		AI_Output (self, other, "DIA_Alrik_Add_09_04"); //Besides, I've scraped enough gold together by now.

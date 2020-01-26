@@ -163,6 +163,7 @@ Akil's sheep dialog has options to tell the sheep to wait and "END".
 Akil's sheep stays at his farm once brought there, instead of going back to the bandit cave.
 Alligator Jack gives previously unused item Swamprat meat for his delivery quest.
 Alligator Jack only takes meat from Swamprats.
+Alrik can only be challenged twice per chapter, instead of three times.
 Alvares noticing a pick pocket attempt causes the fight with the farmers to start.
 Alwin is asked about buying a sheep if NH is looking for a sheep for the monastery.
 Alwin vocally disapproves murdering of Fellan and will remember the crime.
