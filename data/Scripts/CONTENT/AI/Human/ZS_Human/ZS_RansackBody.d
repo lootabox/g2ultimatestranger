@@ -104,6 +104,7 @@ func void ZS_RansackBody_End ()
 			|| (self.aivar[AIV_ATTACKREASON] == AR_GuardStopsIntruder)
 			|| (self.aivar[AIV_ATTACKREASON] == AR_HumanMurderedHuman)
 			|| ((Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Garwig)) && (Hlp_IsItem(item, Holy_Hammer_MIS)))
+			|| ((Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Rod)) && (Hlp_IsItem(item, ItMw_2h_Rod)))
 			{
 				if (Npc_GetDistToItem(self,item) < 500)
 				{
