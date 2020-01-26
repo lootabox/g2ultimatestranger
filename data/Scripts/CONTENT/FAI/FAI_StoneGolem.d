@@ -147,11 +147,8 @@ INSTANCE FA_MY_FK_NOFOCUS_FAR_8 (C_FightAI)
 INSTANCE FA_MY_FK_FOCUS_MAG_8 (C_FightAI)
 {
 	move[0] = MOVE_ATTACK; // --- STANDARDEINTRAG ---
-	move[1] = MOVE_WAIT_EXT;
+	move[1] = MOVE_ATTACK;
 	move[2] = MOVE_WAIT_EXT;
-	move[3] = MOVE_WAIT_EXT;
-	move[4] = MOVE_WAIT_EXT;
-	move[5] = MOVE_WAIT_EXT;
 };
 
 // ------ Gegner NICHT im Fokus -------

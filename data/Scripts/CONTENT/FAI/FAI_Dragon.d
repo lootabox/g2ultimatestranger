@@ -24,18 +24,18 @@ MOVE_WAIT				200 ms
 // ------ Gegner attackiert mich ------
 INSTANCE FA_ENEMY_PREHIT_39 (C_FightAI)
 {
-	move[0] = MOVE_STRAFE;
-	move[1] = MOVE_JUMPBACK;
+	//move[0] = MOVE_STRAFE;
+	move[0] = MOVE_JUMPBACK;
+	move[1] = MOVE_ATTACK;
 	move[2] = MOVE_ATTACK;
 	move[3] = MOVE_ATTACK;
-	move[4] = MOVE_ATTACK;
 };
 
 // ------ Gegner macht Sturmattacke ------
 INSTANCE FA_ENEMY_STORMPREHIT_39 (C_FightAI)
 {
-	move[0] = MOVE_STRAFE;
-	move[1] = MOVE_ATTACK;
+	//move[0] = MOVE_STRAFE;
+	move[0] = MOVE_ATTACK;
 };
 
 
@@ -64,10 +64,10 @@ INSTANCE FA_MY_W_STRAFE_39 (C_FightAI)
 // ------- Ich habe Gegner im Fokus (kann treffen) -------
 INSTANCE FA_MY_W_FOCUS_39 (C_FightAI)
 {
-	move[0] = MOVE_STRAFE;
+	//move[0] = MOVE_STRAFE;
+	move[0] = MOVE_ATTACK;
 	move[1] = MOVE_ATTACK;
 	move[2] = MOVE_ATTACK;
-	move[3] = MOVE_ATTACK;
 };
 
 // ------- Ich habe Gegner NICHT im Fokus -------
@@ -104,10 +104,10 @@ INSTANCE FA_MY_G_STRAFE_39 (C_FightAI)
 INSTANCE FA_MY_G_FOCUS_39 (C_FightAI)
 {
 	//move[0] = MOVE_RUN; // --- STANDARDEINTRAG ---
-	move[0] = MOVE_STRAFE;
+	//move[0] = MOVE_STRAFE;
+	move[0] = MOVE_ATTACK;
 	move[1] = MOVE_ATTACK;
 	move[2] = MOVE_ATTACK;
-	move[3] = MOVE_ATTACK;
 };
 
 // ***************************************
