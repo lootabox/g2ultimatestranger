@@ -21,7 +21,7 @@ instance VLK_4130_Talbin (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-
+	Npc_RemoveInvItems(self, ItFo_Cheese, Npc_HasItems(self, ItFo_Cheese));
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Bullit, BodyTex_N, ITAR_Leather_L);	

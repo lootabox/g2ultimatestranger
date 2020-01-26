@@ -228,6 +228,7 @@ Edda gives her own fish soup instead of normal soup.
 Elvrich won't react to weapons until he's returned to town.
 Engardo noticing a pick pocket attempt causes the fight with the farmers to start.
 Engor will not have his trade inventory on his body once the castle gate is breached.
+Engrom never spawns with Cheese in his inventory.
 Esteban does not turn to his guards if they are dead.
 Esteban first dialog sends Carlos to Ramon's guard post, if NH killed Ramon.
 Esteban only says Franco was a tough nut if he is dead.
@@ -394,6 +395,7 @@ Snaf actually does something when preparing the fire strips.
 Snaf won't comment on information about Huno being free, if he already said the information will be free.
 Sylvio attacking NH causes Biff to attack Bullco as well, if he is with NH.
 Talbin can only be asked about people passing by the river once the Dragon Hunters have moved to the river banks.
+Talbin never spawns with Cheese in his inventory in the Valley of Mines.
 Talbin wields a Wolf Blade instead of a branch.
 Talbins dialog creates a journal note of him being a teacher only after he agrees to teach NH.
 Thekla now grants previously omitted XP bonus for defeating Bullco.
