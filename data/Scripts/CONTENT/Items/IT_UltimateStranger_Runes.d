@@ -108,7 +108,7 @@ INSTANCE ItRu_Explosion (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_Explosion;
 
-	TEXT	[3]			=	ConcatStrings(NAME_Dot_Third, NAME_Sec_Duration);
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Half, NAME_Sec_Duration);
 	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
 
     TEXT    [5]         =   NAME_Value;

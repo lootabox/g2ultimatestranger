@@ -718,7 +718,7 @@ const string NAME_Dam_Magic		= "Magic damage:";
 //const string NAME_Dam_Fly		= "Wind damage:";
 const string NAME_Dam_Magic_Per	= "Magic damage per tier:";
 
-const string NAME_Dot_Third		= "Third of damage is dealt over time. ";
+const string NAME_Dot_Half		= "Half damage is dealt over time. ";
 const string NAME_Dot_Full		= "All damage is dealt over time. ";
 const string NAME_Ice_Freeze	= "Freezes targets while dealing damage over time. ";
 const string NAME_Rage			= "Forces the target to attack the nearest creature. ";

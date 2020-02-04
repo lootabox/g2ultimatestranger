@@ -675,7 +675,7 @@ INSTANCE ItRu_FireBolt (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_FIREBOLT;
 
-	TEXT	[3]			=	ConcatStrings(NAME_Dot_Third, NAME_Sec_Duration);
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Half, NAME_Sec_Duration);
 	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
 
 	TEXT	[5]			=	NAME_Value;
@@ -820,7 +820,7 @@ INSTANCE ItRu_InstantFireball (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_InstantFireball;
 
-	TEXT	[3]			=	ConcatStrings(NAME_Dot_Third, NAME_Sec_Duration);
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Half, NAME_Sec_Duration);
 	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
 	
 	TEXT	[5]			=	NAME_Value;
@@ -1073,7 +1073,7 @@ INSTANCE ItRu_ChargeFireball (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic_Per;
 	count 	[2]			=   SPL_Damage_ChargeFireball;
 
-	TEXT	[3]			=	ConcatStrings(NAME_Dot_Third, NAME_Sec_Duration);
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Half, NAME_Sec_Duration);
 	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
 	
 	TEXT	[5]			=	NAME_Value;
@@ -1330,7 +1330,7 @@ INSTANCE ItRu_Pyrokinesis (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic_Per;
 	count 	[2]			=   SPL_Damage_Firestorm;
 
-	TEXT	[3]			=	ConcatStrings(NAME_Dot_Third, NAME_Sec_Duration);
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Half, NAME_Sec_Duration);
 	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
 
 	TEXT	[4]			=	NAME_AreaOfEffect_Small;
@@ -1372,7 +1372,7 @@ INSTANCE ItRu_Firestorm (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_INSTANTFIRESTORM;
 
-	TEXT	[3]			=	ConcatStrings(NAME_Dot_Third, NAME_Sec_Duration);
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Half, NAME_Sec_Duration);
 	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
 
 	TEXT	[4]			=	NAME_AreaOfEffect_Small;

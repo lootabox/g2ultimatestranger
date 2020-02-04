@@ -207,6 +207,9 @@ var string pristr; pristr = IntToString(dmg);
 	else							{ prot = vic.protection[PROT_MAGIC]; };
 	if (prot == IMMUNE)				{ return 0; };
 
+	// Handle protection
+	dmg -= prot;
+
 	// Get equipped staff
 	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(att);
 	// FIRE SPELLS ---------------------------------------------------------------------------
@@ -221,7 +224,7 @@ var string pristr; pristr = IntToString(dmg);
 		// Figure out burn dot
 		var int fireDot;
 		if		(spellID == SPL_Firerain)	{ fireDot = dmg; }
-		else								{ fireDot = dmg / 3; };
+		else								{ fireDot = dmg / 2; };
 		dmg -= fireDot;
 
 		if (Hlp_IsValidItem(wpn))
@@ -230,40 +233,30 @@ var string pristr; pristr = IntToString(dmg);
 			if (Hlp_IsItem(wpn, ItMW_Addon_Stab01))
 			|| (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
 			{
-				// Bonus 2: Burning (+50%)
-				if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
-				{
-					fireDot = fireDot * 3 / 2;
-				};
 				// Bonus 1: Damage Bonus vs. burning (+10)
 				if (Buff_Has(vic, burn_dot))
 				{
 					dmg += 10;
 				};
+				// Bonus 2: Burning (+20%)
+				if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
+				{
+					fireDot = fireDot * 6 / 5;
+				};
 			};
 		};
 		// Play burn FX on corpses for flavor in any case
-		if (dmg - prot >= vic.attribute[ATR_HITPOINTS])
+		if (dmg >= vic.attribute[ATR_HITPOINTS])
 		{
 			Wld_StopEffect_Ext("VOB_MAGICBURN", vic, vic, FALSE);
 			Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
 		}
-		else if (dmg + fireDot > prot)
+		// Create dot debuff
+		else if (fireDot > 0)
 		{
-			// Reduce protection not negated by instant damage from dot
-			if (dmg < prot)
-			{
-				fireDot -= (prot - dmg);
-				prot = dmg;
-			};
-
-			// Create dot debuff
-			if (fireDot > 0)
-			{
-				burn_dot_apply(vic, fireDot, att);
-				Wld_StopEffect_Ext("VOB_MAGICBURN", vic, vic, FALSE);
-				Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
-			};
+			burn_dot_apply(vic, fireDot, att);
+			Wld_StopEffect_Ext("VOB_MAGICBURN", vic, vic, FALSE);
+			Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
 		};
 	}
 	// ICE SPELLS ---------------------------------------------------------------------------
@@ -286,18 +279,15 @@ var string pristr; pristr = IntToString(dmg);
 		
 
 		// Apply ice cube dot, add remainder to main damage
-		if ((spellID == SPL_IceCube)
-		||	(spellID == SPL_IceWave))
-		&& (!C_NpcIsFireBase(vic)) // firebase immune to freeze
-		&& (!C_NpcIsIceBase(vic)) // icebase immune to freeze
+		if	(spellID == SPL_IceCube)
+		||	(spellID == SPL_IceWave)
 		{
 			// Calculate freeze dot
 			var int freezeDot; freezeDot = SPL_FREEZE_DAMAGE;
-			if		(C_NpcIsFireBase(vic)) { freezeDot *= 2; }
-			else if	(C_NpcIsIceBase(vic)) { freezeDot /= 2; };
+			if		(C_NpcIsFireBase(vic))	{ freezeDot *= 2; }
+			else if	(C_NpcIsIceBase(vic))	{ freezeDot /= 2; };
 
-			var int freezeDurationMax; freezeDurationMax = dmg / SPL_FREEZE_DAMAGE;
-			var int freezeDuration; freezeDuration = (dmg - prot) / freezeDot;
+			var int freezeDuration; freezeDuration = dmg / freezeDot;
 			if	(freezeDuration > 0)
 			{
 				// Initialize freeze effect duration and reduce dot from dmg
@@ -343,14 +333,11 @@ var string pristr; pristr = IntToString(dmg);
 	// OTHER SPELLS ---------------------------------------------------------------------------
 	else if	(spellID == SPL_DestroyUndead)
 	{
-		if (dmg < vic.attribute[ATR_HITPOINTS] + prot)
+		if (dmg < vic.attribute[ATR_HITPOINTS])
 		{
 			dmg = 0;
 		};
 	};
-
-	// Handle protection
-	dmg -= prot;
 
 Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 	return dmg;
@@ -367,6 +354,8 @@ func int DMG_OnDmg(var int victimPtr, var int attackerPtr, var int dmg, var int 
 		// Weapon was associated with attack -> was melee/ranged attack
 		if (dmgDesc.itemWeapon)
 		{
+			// var oCItem wpn; wpn = _^(dmgDesc.itemWeapon);
+			// if (wpn.mainflag == ITEM_KAT_MUN) { dmg = Handle_Ranged_Dmg(vic, att); };
 			if (Npc_HasReadiedMeleeWeapon(att))	{ dmg = Handle_Melee_Dmg(vic, att); };
 		}
 		// Magic
