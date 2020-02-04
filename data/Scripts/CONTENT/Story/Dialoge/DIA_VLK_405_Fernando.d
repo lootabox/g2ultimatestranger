@@ -321,8 +321,8 @@ func void DIA_Addon_Fernando_BanditTrader_ja ()
 	B_GiveInvItems (self, other, ItMi_Gold, 200);
 
 	AI_Output			(self, other, "DIA_Addon_Fernando_BanditTrader_ja_14_02"); //And the ring. We're even now.
-	CreateInvItems (self, ItRi_Prot_Point_01, 1);
-	B_GiveInvItems (self, other, ItRi_Prot_Point_01, 1);
+	CreateInvItems (self, ItRi_Fernando, 1);
+	B_GiveInvItems (self, other, ItRi_Fernando, 1);
 
 	MIS_Martin_FindTheBanditTrader = LOG_FAILED;
 	MIS_Vatras_FindTheBanditTrader = LOG_FAILED;

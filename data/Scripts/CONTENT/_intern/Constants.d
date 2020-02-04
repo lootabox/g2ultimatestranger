@@ -1131,8 +1131,8 @@ const int ORCGRAVEYARD_ZEN				= 6;
 //	Kamera für Inventory-Items
 // ****************************************
 
-const int INVCAM_ENTF_RING_STANDARD 	= 400;
-const int INVCAM_ENTF_AMULETTE_STANDARD = 150;
+const int INVCAM_ENTF_RING_STANDARD 	= 250;
+const int INVCAM_ENTF_AMULETTE_STANDARD = 120;
 const int INVCAM_ENTF_MISC_STANDARD 	= 200;
 const int INVCAM_ENTF_MISC2_STANDARD 	= 250;
 const int INVCAM_ENTF_MISC3_STANDARD 	= 500;

@@ -2265,7 +2265,7 @@ func int DIA_Pyrokar_AmulettofDeath_Condition ()
 
 func void DIA_Pyrokar_AmulettofDeath_Info ()
 {
-	AI_Output			(other, self, "DIA_Pyrokar_AmulettofDeath_15_00"); //The prophesy mentions the sacred Aura of Innos.
+	AI_Output			(other, self, "DIA_Pyrokar_AmulettofDeath_15_00"); //The prophecy mentions the sacred Aura of Innos.
 	AI_Output			(self, other, "DIA_Pyrokar_AmulettofDeath_11_01"); //The Aura of Innos is an amulet which only the greatest magicians of an era are destined to wear.
 	
 	Info_ClearChoices (DIA_Pyrokar_AmulettofDeath);
