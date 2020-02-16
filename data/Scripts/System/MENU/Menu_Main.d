@@ -43,8 +43,8 @@ instance MENUITEM_MAIN_NEWGAME(C_MENU_ITEM_DEF)
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*0;
 	dimx		= 8100;		dimy		=  750;
 	// Aktionen
-	onSelAction[0]	= SEL_ACTION_CLOSE;
-	onSelAction_S[0]= "NEW_GAME";
+	onSelAction[0]	= SEL_ACTION_STARTMENU; //SEL_ACTION_CLOSE
+	onSelAction_S[0]= "MENU_NEW_GAME"; //"NEW_GAME"
 	// Weitere Eigenschaften
 	flags			= flags | IT_TXT_CENTER;
 };
