@@ -359,7 +359,7 @@ func int DMG_OnDmg(var int victimPtr, var int attackerPtr, var int dmg, var int 
 			if (Npc_HasReadiedMeleeWeapon(att))	{ dmg = Handle_Melee_Dmg(vic, att); };
 		}
 		// Magic
-		else if (dmgDesc.spellID >= 0)
+		else if (dmgDesc.spellLevel > 0) //(dmgDesc.spellID >= 0)
 		{
 			if (Check_Spell_Block(vic, dmgDesc.spellID))
 			{
