@@ -78,7 +78,7 @@ FUNC INT DIA_Gritta_Hello_Condition()
 };
 FUNC VOID DIA_Gritta_Hello_Info()
 {	
-	AI_Output (self ,other,"DIA_Gritta_Hello_16_00"); //What do you want, stranger? I f you have come to beg, I must disappoint you. I am a poor widow.
+	AI_Output (self ,other,"DIA_Gritta_Hello_16_00"); //What do you want, stranger? If you have come to beg, I must disappoint you. I am a poor widow.
 	AI_Output (self ,other,"DIA_Gritta_Hello_16_01"); //My name is Gritta. Ever since my husband died, I have been running the household for my uncle, Thorben.
 };
 //*************************************************************

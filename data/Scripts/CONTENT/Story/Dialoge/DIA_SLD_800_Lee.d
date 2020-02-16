@@ -906,7 +906,7 @@ func void DIA_Lee_AboutGorn_Yes()
 {
 	AI_Output (other, self, "DIA_Lee_AboutGorn_Yes_15_00"); //Sure.
 	AI_Output (self, other, "DIA_Lee_AboutGorn_Yes_04_01"); //He got caught by the paladins and was sent back to the Valley of Mines with a penal convoy.
-	AI_Output (self, other, "DIA_Lee_AboutGorn_Yes_04_02"); //If the road to the Valley of Mines weren't plastered with paladins and orcs, I'd have sent a couple of the boys already to free him.
+	AI_Output (self, other, "DIA_Lee_AboutGorn_Yes_04_02"); //If the road to the Valley of Mines wasn't plastered with paladins and orcs, I'd have sent a couple of the boys already to free him.
 	AI_Output (self, other, "DIA_Lee_AboutGorn_Yes_04_03"); //But the way things are, there's no point. Poor devil.
 	Info_ClearChoices (DIA_Lee_AboutGorn);
 };

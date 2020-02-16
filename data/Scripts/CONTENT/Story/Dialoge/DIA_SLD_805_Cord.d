@@ -162,7 +162,7 @@ FUNC VOID DIA_Cord_WannaJoin_Info()
 	if (Npc_GetTalentSkill(other, NPC_TALENT_1H) > 0)
 	|| (Npc_GetTalentSkill(other, NPC_TALENT_2H) > 0)
 	{
-		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_10"); //Well, at least you're not a bloody beginner. All right. I'm going to vote you in.
+		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_10"); //Well, at least you're not a damned beginner. All right. I'm going to vote you in.
 		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_11"); //Whatever else you need to know, you can learn from me.
 		Cord_Approved = TRUE;
 		B_GivePlayerXP (XP_Cord_Approved);

@@ -68,7 +68,7 @@ FUNC INT DIA_Addon_Pardos_save_Condition()
 FUNC VOID DIA_Addon_Pardos_save_Info()
 {
 	AI_Output (other, self, "DIA_Addon_Pardos_save_15_00");//Hang in there. Your rescue is near.
-	AI_Output (self, other, "DIA_Addon_Pardos_save_03_01");//(wearily) Thanks. Thank you for your words.
+	AI_Output (self, other, "DIA_Addon_Pardos_save_03_01");//(wearily) Thanks. Thanks for your words.
 	//Falsche Stimm Nummer M.F.//AI_Output (self, other, "DIA_Addon_Pardos_save_03_02");//Hey, du wirst doch jetzt nicht schlappmachen, oder? Gib jetzt nicht auf - klar?!
 };
 //---------------------------------------------------------------------

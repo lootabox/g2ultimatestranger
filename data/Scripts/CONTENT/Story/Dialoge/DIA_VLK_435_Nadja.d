@@ -168,7 +168,7 @@ instance DIA_Addon_Nadja_LuciaInfo		(C_INFO)
 	condition	 = 	DIA_Addon_Nadja_LuciaInfo_Condition;
 	information	 = 	DIA_Addon_Nadja_LuciaInfo_Info;
 
-	description	 = 	"Can we talk now?";
+	description	 = 	"So can we talk NOW?";
 };
 func int DIA_Addon_Nadja_LuciaInfo_Condition ()
 {

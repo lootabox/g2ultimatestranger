@@ -396,7 +396,7 @@ INSTANCE DIA_Addon_Esteban_fight   (C_INFO)
 	condition   = DIA_Addon_Esteban_fight_Condition;
 	information = DIA_Addon_Esteban_fight_Info;
 	permanent   = FALSE;
-	description = "Are you trying to pull my leg?";
+	description = "Are you trying to play me for a fool?";
 };
 FUNC INT DIA_Addon_Esteban_fight_Condition()
 {	

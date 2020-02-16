@@ -133,7 +133,7 @@ FUNC INT DIA_Addon_Juan_AufsMaul_Condition()
 FUNC VOID DIA_Addon_Juan_AufsMaul_Info()
 {	
 	AI_Output (other,self,"DIA_Addon_Juan_AufsMaul_15_00"); //I don't come from Esteban!
-	AI_Output (self,other,"DIA_Addon_Juan_AufsMaul_13_01"); //Oh? Well then... eh... Just a moment! Hold still for a bit, you have a critter on your shoulder.
+	AI_Output (self,other,"DIA_Addon_Juan_AufsMaul_13_01"); //Oh? Well then... eh... Just a moment! Hold still for a second, you have a critter on your shoulder.
 	
 	AI_StopProcessInfos (self);
 	B_Attack (self, other, AR_NONE, 1);

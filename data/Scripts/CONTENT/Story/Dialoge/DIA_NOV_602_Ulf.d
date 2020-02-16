@@ -86,7 +86,7 @@ func void DIA_Ulf_Wirte_Info ()
 {
 	AI_Output (other, self, "DIA_Ulf_Wirte_15_00"); //Who are the three innkeepers?
 	AI_Output (self, other, "DIA_Ulf_Wirte_03_01"); //One of them is the good man here behind the bar.
-	AI_Output (self, other, "DIA_Ulf_Wirte_03_02"); //Then there is Caragon, who has his tavern on the temple square, and Kardif, the owner of the pub in the harbor district.
+	AI_Output (self, other, "DIA_Ulf_Wirte_03_02"); //Then there is Coragon, who has his tavern on the temple square, and Kardif, the owner of the pub in the harbor district.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Kloster

@@ -128,7 +128,7 @@ instance DIA_Brian_WhyLeave (C_INFO)
 	condition	= DIA_Brian_WhyLeave_Condition;
 	information	= DIA_Brian_WhyLeave_Info;
 	permanent 	= FALSE;
-	description = "Why do you want to leave the town?";
+	description = "Why do you want to leave this town?";
 };
 
 func int DIA_Brian_WhyLeave_Condition ()
@@ -141,7 +141,7 @@ func int DIA_Brian_WhyLeave_Condition ()
 
 func void DIA_Brian_WhyLeave_Info ()
 {
-	AI_Output (other,self , "DIA_Brian_WhyLeave_15_00"); //Why do you want to leave the town?
+	AI_Output (other,self , "DIA_Brian_WhyLeave_15_00"); //Why do you want to leave this town?
 	AI_Output (self,other , "DIA_Brian_WhyLeave_04_00"); //Because the people here are getting on my nerves! Above all the other masters.
 	AI_Output (self, other, "DIA_Brian_WhyLeave_04_01"); //I still remember what a fuss it was getting accepted as an apprentice with Harad.
 	AI_Output (self, other, "DIA_Brian_WhyLeave_04_02"); //Really, every one of those jokers had something to say about it.
