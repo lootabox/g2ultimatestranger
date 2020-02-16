@@ -163,7 +163,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	else if (slf.aivar[AIV_MM_REAL_ID] == ID_GOBBO_SKELETON){	CreateInvItems (slf, ItAt_GoblinBone	, 1);	}
 	else if (slf.aivar[AIV_MM_REAL_ID] == ID_SKELETON)		{	CreateInvItems (slf, ItAt_SkeletonBone	, 1);	}
 	//----------------ADDON-----------------------
-	else if (self.aivar[AIV_MM_REAL_ID] == ID_BLATTCRAWLER) {	CreateInvItems (slf, ItAt_Addon_BCKopf		, 1);};
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_BLATTCRAWLER) {	CreateInvItems (slf, ItAt_Addon_BCKopf		, 1);};
 
 	//ROHES FLEISCH IN NPC_SCRIPTEN!!! - HOGE
 	
