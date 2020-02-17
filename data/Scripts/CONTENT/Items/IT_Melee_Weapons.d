@@ -1990,8 +1990,7 @@ INSTANCE ItMw_1H_Special_02 (C_Item)
 		
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	Condition_Special_1H_2;
-//	visual 				=	"ItMw_060_1h_Sword_smith_03.3DS";
-	visual 				=	"ItMw_045_1h_Sword_smith_02.3DS";
+	visual 				=	"ItMw_060_1h_Sword_smith_03.3DS";
 
 	description			= name;
 	
