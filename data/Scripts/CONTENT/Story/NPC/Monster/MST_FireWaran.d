@@ -27,11 +27,11 @@ PROTOTYPE Mst_Default_FireWaran(C_Npc)
 	protection	[PROT_MAGIC]		=	0;
 	
 	//----- Damage Types ----
-	damagetype 						=	DAM_FIRE; //Opfer fängt an zu brennen
+	damagetype 						=	DAM_BLUNT; //DAM_FIRE is handled by damage script to bypass engine burn effect
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
+	damage		[DAM_INDEX_FIRE]	=	attribute[ATR_STRENGTH];
 //	damage		[DAM_INDEX_FLY]		=	0;
 //	damage		[DAM_INDEX_MAGIC]	=	0;
 

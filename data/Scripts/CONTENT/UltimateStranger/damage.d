@@ -179,7 +179,17 @@ Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 
 func int Handle_Fist_Dmg(var c_npc vic, var c_npc att)
 {
-	// Monster specials
+	// Handle protection and calculate damage
+	var int dmg; dmg = att.attribute[ATR_STRENGTH];
+	if		(att.damage[DAM_INDEX_FIRE] > 0) ||
+			(att.damagetype & DAM_FIRE)		{ dmg -= vic.protection[PROT_FIRE]; }
+	else if	(att.damagetype & DAM_EDGE)		{ dmg -= vic.protection[PROT_EDGE]; }
+	else if	(att.damagetype & DAM_BLUNT)	{ dmg -= vic.protection[PROT_BLUNT]; }
+	else if	(att.damagetype & DAM_POINT)	{ dmg -= vic.protection[PROT_POINT]; }
+	else if	(att.damagetype & DAM_MAGIC)	{ dmg -= vic.protection[PROT_MAGIC]; }
+	else									{ dmg -= vic.protection[PROT_BLUNT]; }; // failsafe
+
+	// Bloodfly / Swampdrone
 	if (att.aivar[AIV_MM_REAL_ID] == ID_BLOODFLY || att.aivar[AIV_MM_REAL_ID] == ID_SWAMPDRONE)
 	{
 		if (att.level > 3)
@@ -189,13 +199,16 @@ func int Handle_Fist_Dmg(var c_npc vic, var c_npc att)
 			Buff_Apply(vic, venom_small_bloodfly, att);
 		};
 	};
+	// Fire lizard / dragon breath
+	if (dmg > 1 && (att.aivar[AIV_MM_REAL_ID] == ID_FIREWARAN || att.guild == GIL_DRAGON))
+	{
+		var int fireDot; fireDot = dmg;
+		burn_dot_apply(vic, fireDot, att);
+		Wld_StopEffect_Ext("VOB_BURN", vic, vic, FALSE);
+		Wld_PlayEffect ("VOB_BURN", vic, vic, 0, 0, 0, FALSE);
+	};
 
-	// Fist damage
-	if		(att.damagetype & DAM_EDGE)		{ return att.attribute[ATR_STRENGTH] - vic.protection[PROT_EDGE]; }
-	else if	(att.damagetype & DAM_POINT)	{ return att.attribute[ATR_STRENGTH] - vic.protection[PROT_POINT]; }
-	else if	(att.damagetype & DAM_MAGIC)	{ return att.attribute[ATR_STRENGTH] - vic.protection[PROT_MAGIC]; }
-	else if	(att.damagetype & DAM_FIRE)		{ return att.attribute[ATR_STRENGTH] - vic.protection[PROT_FIRE]; }
-	else									{ return att.attribute[ATR_STRENGTH] - vic.protection[PROT_BLUNT]; };
+	return dmg;
 };
 
 func int Handle_Magic_Dmg(var c_npc vic, var c_npc att, var int spellID, var int dmg)
