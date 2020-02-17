@@ -124,8 +124,8 @@ func void DIA_Marduk_Evil_Info ()
 	AI_Output (other, self, "DIA_Marduk_Evil_15_00"); //What is 'Evil'?
 	AI_Output (self ,other, "DIA_Marduk_Evil_05_01"); //Evil is everywhere. It is the power of Beliar, the eternal adversary of Innos.
 	AI_Output (self ,other, "DIA_Marduk_Evil_05_02"); //It is the all-encompassing blackness which seeks to blot out the Light of Innos forever.
-	AI_Output (self ,other, "DIA_Marduk_Evil_05_03"); //Beliar is the Lord of Darkness, of Hate and Destruction.
-	AI_Output (self ,other, "DIA_Marduk_Evil_05_04"); //Only those among us in whose hearts blazes the Holy Fire of Innos will bear the radiant Light of Innos into the world and banish the darkness.
+	AI_Output (self ,other, "DIA_Marduk_Evil_05_03"); //Beliar is the Lord of Darkness, of Hate and of Destruction.
+	AI_Output (self ,other, "DIA_Marduk_Evil_05_04"); //Only those among us in whose hearts burns the Holy Fire of Innos will bear the radiant Light of Innos into the world and banish the darkness.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Paladine
@@ -174,7 +174,7 @@ func int DIA_Marduk_BEFORETEACH_Condition ()
 func void DIA_Marduk_BEFORETEACH_Info ()
 {
 	AI_Output (other, self, "DIA_Marduk_BEFORETEACH_15_00"); //Is there anything you can teach me?
-	AI_Output (self, other, "DIA_Marduk_BEFORETEACH_05_01"); //I am an expert in the magics of ice and thunder. I can teach you their power.
+	AI_Output (self, other, "DIA_Marduk_BEFORETEACH_05_01"); //I am an expert in the magic of ice and the magic of thunder. I can teach you their power.
 	
 	if (other.guild != GIL_KDF)
 	{
@@ -499,7 +499,7 @@ FUNC INT DIA_Marduk_SwordBlessing_Condition()
 FUNC VOID DIA_Marduk_SwordBlessing_Info()
 {
 	AI_Output (other,self ,"DIA_Marduk_SwordBlessing_15_00"); //I want to consecrate my sword.
-	AI_Output (self ,other,"DIA_Marduk_SwordBlessing_05_01"); //If you are determined to take this step, you will first need a magic blade.
+	AI_Output (self ,other,"DIA_Marduk_SwordBlessing_05_01"); //If you are determined to take this step, you will first need a blade of tempered ore.
 	AI_Output (self ,other,"DIA_Marduk_SwordBlessing_05_02"); //With this, you should then retreat to the chapel and pray.
 	AI_Output (self ,other,"DIA_Marduk_SwordBlessing_05_03"); //During the prayer, and after a reasonable donation to our Lord Innos, you should ask Innos for his grace and guidance in the battle against Evil.
 	AI_Output (self ,other,"DIA_Marduk_SwordBlessing_05_04"); //If Innos is well disposed toward you, your sword will be consecrated to our Lord from that moment on.
@@ -526,7 +526,7 @@ FUNC VOID DIA_Marduk_SwordBlessing_OreBlade ()
 {
 	AI_Output (other,self ,"DIA_Marduk_SwordBlessing_OreBlade_15_00"); //Where can I get a magic blade?
 	AI_Output (self ,other,"DIA_Marduk_SwordBlessing_OreBlade_05_01"); //Try in the city with Harad the smith.
-	AI_Output (self ,other,"DIA_Marduk_SwordBlessing_OreBlade_05_02"); //He provides the paladins with magic blades while they are on the island.
+	AI_Output (self ,other,"DIA_Marduk_SwordBlessing_OreBlade_05_02"); //He provides the paladins with specially tempered blades while they are on the island.
 	if (Npc_IsDead (HARAD) == TRUE)
 	{
 		AI_Output (other,self ,"DIA_Marduk_SwordBlessing_OreBlade_15_03"); //Harad is dead.
@@ -559,7 +559,7 @@ FUNC VOID DIA_Marduk_Kap3_PERM_Info()
 	
 	if (MIS_NovizenChase == LOG_RUNNING)
 	{
-		AI_Output (self, other,"DIA_Marduk_Kap3_PERM_05_01"); //Yes, Tthe enemy has succeeded in planting a traitor in our sacred halls.
+		AI_Output (self, other,"DIA_Marduk_Kap3_PERM_05_01"); //Yes, the enemy has succeeded in planting a traitor in our sacred halls.
 		AI_Output (self, other,"DIA_Marduk_Kap3_PERM_05_02"); //He has stolen the Eye of Innos, one of our most important artifacts. And that is only the tip of the iceberg.
 		//Joly:AI_Output (other,self ,"DIA_Marduk_Kap3_PERM_15_03"); //Was meinst du?
 	};

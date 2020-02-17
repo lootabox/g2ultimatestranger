@@ -86,7 +86,7 @@ func void DIA_Gestath_HALLO_was ()
 func void DIA_Gestath_HALLO_waszusehen ()
 {
 	AI_Output			(other, self, "DIA_Gestath_HALLO_waszusehen_15_00"); //What is there to see here?
-	AI_Output			(self, other, "DIA_Gestath_HALLO_waszusehen_09_01"); //A bunch of fire lizards, orcs and I don't know what all. Haven't been farther up on the high plain.
+	AI_Output			(self, other, "DIA_Gestath_HALLO_waszusehen_09_01"); //A bunch of fire lizards, orcs and I don't know what else. Haven't been farther up on the high plain.
 	AI_Output			(self, other, "DIA_Gestath_HALLO_waszusehen_09_02"); //I'd advise you against trying it. The things that live up there don't sound too friendly.
 };
 

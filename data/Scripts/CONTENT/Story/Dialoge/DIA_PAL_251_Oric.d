@@ -257,7 +257,7 @@ FUNC VOID DIA_Oric_IAmBack_Info()
 	
 	if (hero.guild == GIL_PAL)
 	{
-		AI_Output (self, other, "DIA_Oric_IAmBack_11_02"); //I bid you welcome in the name of our order.
+		AI_Output (self, other, "DIA_Oric_IAmBack_11_02"); //I welcome you into our order.
 	}
 	else if (hero.guild == GIL_KDF)
 	{

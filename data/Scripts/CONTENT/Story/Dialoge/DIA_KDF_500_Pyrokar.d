@@ -1503,7 +1503,7 @@ func void DIA_Pyrokar_KAP3_READY_Info ()
 	AI_Output (self ,other, "DIA_Pyrokar_Add_11_01"); //The power of the Eye will force the dragons to speak to you and tell the truth.
 	AI_Output (self ,other, "DIA_Pyrokar_Add_11_02"); //Furthermore, it offers protection against their attacks when you wear it.
 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_05"); //However, its power does not last. You will have to fill it up again with magical energy.
-	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_06"); //To do that, you need the essence of a dragon's heart which you join with the Eye at an alchemist's bench.
+	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_06"); //To do that, you need the essence of a dragon's heart which you merge with the Eye on an alchemist's bench.
 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_07"); //Only then can you dare face another dragon.
 	AI_Output			(other, self, "DIA_Pyrokar_KAP3_READY_15_08"); //Thanks. I'll remember that.
 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_09"); //You now have everything you need. Go, then. You do not have much time left.

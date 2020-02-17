@@ -44,7 +44,7 @@ func void DIA_Bullco_Hallo_Info ()
 	AI_Output (other, self, "DIA_Bullco_HALLO_15_00"); //The two of us should have a chat...
 	if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
 	{
-		AI_Output (self, other, "DIA_Bullco_HALLO_06_01"); //Listen, you win! Now leave me alone.
+		AI_Output (self, other, "DIA_Bullco_HALLO_06_01"); //Listen, you won! Now leave me alone.
 	}
 	else
 	{
