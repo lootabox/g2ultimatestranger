@@ -103,7 +103,7 @@ func void DIA_Pedro_DI_YOU_Serpentes ()
 func void DIA_Pedro_DI_YOU_verschon ()
 {
 	AI_Output			(other, self, "DIA_Pedro_DI_YOU_verschon_15_00"); //Tell me what you know, then.
-	AI_Output			(self, other, "DIA_Pedro_DI_YOU_verschon_09_01"); //(relieved) Yes, of course. I'll tell you everything you want to know. Under one condition. You have to get me off of this accursed island, do you hear?
+	AI_Output			(self, other, "DIA_Pedro_DI_YOU_verschon_09_01"); //(relieved) Yes, of course. I'll tell you everything you want to know. Under one condition. You have to get me off this accursed island, do you hear?
 	
 	Info_ClearChoices	(DIA_Pedro_DI_YOU);
 	Info_AddChoice	(DIA_Pedro_DI_YOU, "I don't have to do a thing. I'm going to kill you now.", DIA_Pedro_DI_YOU_tot );
@@ -251,7 +251,7 @@ func void DIA_Pedro_DI_PERM_Info ()
 		{
 			AI_Output			(self, other, "DIA_Pedro_DI_PERM_09_04"); //I'm completely done in.
 			AI_Output			(other, self, "DIA_Pedro_DI_PERM_15_05"); //Go hit the sack. We'll soon be at sea again.
-			AI_Output			(self, other, "DIA_Pedro_DI_PERM_09_06"); //Thanks, man. I already thought I'd fall right off this bench. Good night.
+			AI_Output			(self, other, "DIA_Pedro_DI_PERM_09_06"); //Thank you. I already thought I'd fall right off this bench. Good night.
 			AI_StopProcessInfos (self);
 			Npc_ExchangeRoutine	(self,"SleepShip");
 			self.aivar[AIV_PARTYMEMBER] = FALSE;
