@@ -294,11 +294,7 @@ FUNC VOID Use_Sting()
 	else
 	{
 		Print (PRINT_Bloodfly);
-		
-		if (self.attribute[ATR_HITPOINTS] > 1) 
-		{
-			self.attribute[ATR_HITPOINTS] =  (self.attribute[ATR_HITPOINTS] -1);
-		};
+		dot_venom_apply(self, 4, self);
 	};
 };
 

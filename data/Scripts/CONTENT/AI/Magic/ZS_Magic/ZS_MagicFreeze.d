@@ -30,7 +30,7 @@ func int ZS_MagicFreeze()
 {
 	Npc_PercEnable		(self, PERC_ASSESSMAGIC, B_RestartFreeze); 		// falls ein NSC nochmal von einem Freezespell getroffen wurde, so muss die State Time reseted werden
 
-	Npc_StopAni(self, "S_FIRE_VICTIM");										// falls der NSC am Zappeln ist, brich die Ani ab
+	//Npc_StopAni(self, "S_FIRE_VICTIM");										// falls der NSC am Zappeln ist, brich die Ani ab
 
 	// Opfer wird in Bodystate Unconscious versetzt
 	if (!C_BodyStateContains(self, BS_UNCONSCIOUS)) 
@@ -55,9 +55,9 @@ func int ZS_MagicFreeze_Loop ()
 	if (Npc_GetStateTime(self) != self.aivar[AIV_FreezeStateTime])
 	{
 		self.aivar[AIV_FreezeStateTime] = Npc_GetStateTime(self);
-		Print(IntToString(self.aivar[AIV_FreezeStateTime]));
 		if		(C_NpcIsFireBase(self))	{ B_MagicHurtNpc(other, self, SPL_FREEZE_DAMAGE * 2); }
-		else if	(C_NpcIsIceBase(self))	{ B_MagicHurtNpc(other, self, SPL_FREEZE_DAMAGE / 2); };
+		else if	(C_NpcIsIceBase(self))	{ B_MagicHurtNpc(other, self, SPL_FREEZE_DAMAGE / 2); }
+		else							{ B_MagicHurtNpc(other, self, SPL_FREEZE_DAMAGE); };
 	};
 	
 	return				LOOP_CONTINUE;

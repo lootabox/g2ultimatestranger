@@ -189,23 +189,16 @@ func int Handle_Fist_Dmg(var c_npc vic, var c_npc att)
 	else if	(att.damagetype & DAM_MAGIC)	{ dmg -= vic.protection[PROT_MAGIC]; }
 	else									{ dmg -= vic.protection[PROT_BLUNT]; }; // failsafe
 
-	// Bloodfly / Swampdrone
+	// Bloodfly / Swampdrone venom
 	if (att.aivar[AIV_MM_REAL_ID] == ID_BLOODFLY || att.aivar[AIV_MM_REAL_ID] == ID_SWAMPDRONE)
 	{
-		if (att.level > 3)
-		{
-			Buff_Apply(vic, venom_bloodfly, att);
-		} else {
-			Buff_Apply(vic, venom_small_bloodfly, att);
-		};
+		dot_venom_apply(vic, att.damage[DAM_INDEX_POINT], att);
 	};
 	// Fire lizard / dragon breath
 	if (dmg > 1 && (att.aivar[AIV_MM_REAL_ID] == ID_FIREWARAN || att.guild == GIL_DRAGON))
 	{
 		var int fireDot; fireDot = dmg;
-		burn_dot_apply(vic, fireDot, att);
-		Wld_StopEffect_Ext("VOB_BURN", vic, vic, FALSE);
-		Wld_PlayEffect ("VOB_BURN", vic, vic, 0, 0, 0, FALSE);
+		dot_burn_apply(vic, fireDot, att);
 	};
 
 	return dmg;
@@ -247,7 +240,7 @@ var string pristr; pristr = IntToString(dmg);
 			|| (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
 			{
 				// Bonus 1: Damage Bonus vs. burning (+10)
-				if (Buff_Has(vic, burn_dot))
+				if (Buff_Has(vic, dot_burn))
 				{
 					dmg += 10;
 				};
@@ -261,15 +254,14 @@ var string pristr; pristr = IntToString(dmg);
 		// Play burn FX on corpses for flavor in any case
 		if (dmg >= vic.attribute[ATR_HITPOINTS])
 		{
-			Wld_StopEffect_Ext("VOB_MAGICBURN", vic, vic, FALSE);
-			Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
+			Wld_StopEffect_Ext("VOB_BURN", vic, vic, FALSE);
+			Wld_PlayEffect ("VOB_BURN", vic, vic, 0, 0, 0, FALSE);
 		}
 		// Create dot debuff
 		else if (fireDot > 0)
 		{
-			burn_dot_apply(vic, fireDot, att);
-			Wld_StopEffect_Ext("VOB_MAGICBURN", vic, vic, FALSE);
-			Wld_PlayEffect ("VOB_MAGICBURN", vic, vic, 0, 0, 0, FALSE);
+			dot_burn_apply(vic, fireDot, att);
+pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(fireDot)));
 		};
 	}
 	// ICE SPELLS ---------------------------------------------------------------------------
@@ -301,11 +293,12 @@ var string pristr; pristr = IntToString(dmg);
 			else if	(C_NpcIsIceBase(vic))	{ freezeDot /= 2; };
 
 			var int freezeDuration; freezeDuration = dmg / freezeDot;
-			if	(freezeDuration > 0)
+			if	(!C_NpcIsLarge(vic) && freezeDuration > 0)
 			{
 				// Initialize freeze effect duration and reduce dot from dmg
 				vic.aivar[AIV_FreezeStateTime] = SPL_FREEZE_TIME - freezeDuration;
 				dmg -= freezeDot * freezeDuration;
+pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot * freezeDuration)));
 			}
 			else
 			{

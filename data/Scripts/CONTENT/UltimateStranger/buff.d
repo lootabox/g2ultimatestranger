@@ -4,12 +4,16 @@
 // Buff talents
 //######################################################
 
-var int TAL_DOT_VENOM;
-var int TAL_DOT_BURN;
+var int TAL_DOT_VENOM_TOTAL;    // Percentage
+var int TAL_DOT_VENOM_SPEED;    // Percentage per second
+var int TAL_DOT_BURN_TOTAL;     // Damage
+var int TAL_DOT_BURN_TICK;      // Tick number
 func void InitBuffTalents() {
-    if (!TAL_DOT_VENOM) {
-        TAL_DOT_VENOM = TAL_CreateTalent();
-        TAL_DOT_BURN = TAL_CreateTalent();
+    if (!TAL_DOT_VENOM_TOTAL) {
+        TAL_DOT_VENOM_TOTAL = TAL_CreateTalent();
+        TAL_DOT_VENOM_SPEED = TAL_CreateTalent();
+        TAL_DOT_BURN_TOTAL = TAL_CreateTalent();
+        TAL_DOT_BURN_TICK = TAL_CreateTalent();
     };
 };
 
@@ -17,16 +21,8 @@ func void InitBuffTalents() {
 // Buff constants
 //######################################################
 
-const int VENOM_SMALL_BLOODFLY_TOTAL_DAMAGE = 10;
-const int VENOM_SMALL_BLOODFLY_DURATION_SEC = 10;
-
-const int VENOM_BLOODFLY_TOTAL_DAMAGE = 20;
-const int VENOM_BLOODFLY_DURATION_SEC = 20;
-
-const int VENOM_SWAMPDRONE_EXPLOSION_TOTAL_DAMAGE = 50;
-const int VENOM_SWAMPDRONE_EXPLOSION_DURATION_SEC = 10;
-
-const int FIRE_SPELL_DOT_VFX_DURATION_MS = 4000;
+const int BURN_DOT_VFX_DURATION_SEC = 4;
+const int VENOM_DEFAULT_SPEED_PERCENTAGE = 4;
 
 //######################################################
 // DOT general methods and dot prototype
@@ -42,121 +38,117 @@ func void TAL_ModValue(var c_npc n, var int talent, var int value) {
 };
 
 //######################################################
-// Bloodfly / Swampgas drone venom
+// DOT tick methods
 //######################################################
 
-func void venom_dot_apply(var int bh, var int total_damage) {
-    var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
-    TAL_ModValue(n, TAL_DOT_VENOM, total_damage);
-};
-
-func void venom_dot_tick(var int bh) {
+func void dot_venom_tick(var int bh) {
     var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
     var lCBuff b; b = get(bh);
 
-    if (n.attribute[ATR_HITPOINTS] > 0 && TAL_GetValue(n, TAL_DOT_VENOM) > 0)
-    {
+    // Check whether envenomed
+    var int venom_total; venom_total = TAL_GetValue(n, TAL_DOT_VENOM_TOTAL);
+    if (n.attribute[ATR_HITPOINTS] > 0) && (venom_total > 0) {
+        // Get speed
+        var int speed; speed = TAL_GetValue(n, TAL_DOT_VENOM_SPEED);
+        if      (speed > venom_total) { speed = venom_total; }
+        else if (speed <= 0) { speed = VENOM_DEFAULT_SPEED_PERCENTAGE; };
+        TAL_ModValue(n, TAL_DOT_VENOM_TOTAL, -speed);
+
+        // Deal damage and check for murder
+        var int dot; dot = n.attribute[ATR_HITPOINTS_MAX] * speed / 100;
         ptr = Buff_GetNpcOrigin(bh);
-        if (!ptr)
-        {
-            Npc_ChangeAttribute (n, ATR_HITPOINTS, -1);
-        }
-        else
-        {
+        if (!ptr) { Npc_ChangeAttribute (n, ATR_HITPOINTS, -dot); }
+        else {
             var c_npc o; o = _^(ptr);
-            B_MagicHurtNpc(o, n, 1);
-            if (n.attribute[ATR_HITPOINTS] <= 0)
-            {
+            B_MagicHurtNpc(o, n, dot);
+            if (n.attribute[ATR_HITPOINTS] <= 0) {
                 Npc_SendPassivePerc (o, PERC_ASSESSMURDER, o, o);
             };
         };
-        TAL_ModValue(n, TAL_DOT_VENOM, -1);
     } else {
-        TAL_SetValue(n, TAL_DOT_VENOM, 0);
+        TAL_SetValue(n, TAL_DOT_VENOM_TOTAL, 0);
         Buff_Remove(bh);
     };
 };
 
-func void venom_dot_remove(var int bh) {
-    var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
-    var lCBuff b; b = get(bh);
-    TAL_ModValue(n, TAL_DOT_VENOM, -(b.durationMS / b.tickMS - (b.nextTickNr - 1)));
-};
-
-func void venom_small_bloodfly_apply(var int bh)        { venom_dot_apply(bh, VENOM_SMALL_BLOODFLY_TOTAL_DAMAGE); };
-func void venom_bloodfly_apply(var int bh)              { venom_dot_apply(bh, VENOM_BLOODFLY_TOTAL_DAMAGE); };
-func void venom_swampdrone_explosion_apply(var int bh)  { venom_dot_apply(bh, VENOM_SWAMPDRONE_EXPLOSION_TOTAL_DAMAGE); };
-
-instance venom_small_bloodfly(lCBuff) {
-    durationMS = 1000 * VENOM_SMALL_BLOODFLY_DURATION_SEC;
-    tickMS = 1000 * VENOM_SMALL_BLOODFLY_DURATION_SEC / VENOM_SMALL_BLOODFLY_TOTAL_DAMAGE;
-    OnApply = SAVE_GetFuncID(venom_small_bloodfly_apply);
-    OnRemoved = SAVE_GetFuncID(venom_dot_remove);
-};
-instance venom_bloodfly(lCBuff) {
-    durationMS = 1000 * VENOM_BLOODFLY_DURATION_SEC;
-    tickMS = 1000 * VENOM_BLOODFLY_DURATION_SEC / VENOM_BLOODFLY_TOTAL_DAMAGE;
-    OnApply = SAVE_GetFuncID(venom_bloodfly_apply);
-    OnRemoved = SAVE_GetFuncID(venom_dot_remove);
-};
-instance venom_swampdrone_explosion(lCBuff) {
-    durationMS = 1000 * VENOM_SWAMPDRONE_EXPLOSION_DURATION_SEC;
-    tickMS = 1000 * VENOM_SWAMPDRONE_EXPLOSION_DURATION_SEC / VENOM_SWAMPDRONE_EXPLOSION_TOTAL_DAMAGE;
-    OnApply = SAVE_GetFuncID(venom_swampdrone_explosion_apply);
-    OnRemoved = SAVE_GetFuncID(venom_dot_remove);
-};
-
-//######################################################
-// Fire spell burn
-//######################################################
-
-func void burn_dot_tick(var int bh) {
+func void dot_burn_tick(var int bh) {
     var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
     var lCBuff b; b = get(bh);
 
-    if (n.attribute[ATR_HITPOINTS] > 0 && TAL_GetValue(n, TAL_DOT_BURN) > 0)
-    {
-        var int tickdmg; tickdmg = (TAL_GetValue(n, TAL_DOT_BURN)) / (b.durationMS / b.tickMS - (b.nextTickNr - 1));
+    // Calculate dot
+    var int burn_total; burn_total = TAL_GetValue(n, TAL_DOT_BURN_TOTAL);
+    if (n.attribute[ATR_HITPOINTS] > 0) && (burn_total) > 0 {
+        var int burn_tick; burn_tick = TAL_GetValue(n, TAL_DOT_BURN_TICK);
+        var int dot; dot = burn_total / (BURN_DOT_VFX_DURATION_SEC - burn_tick);
+        TAL_ModValue(n, TAL_DOT_BURN_TOTAL, -dot);
+        TAL_ModValue(n, TAL_DOT_BURN_TICK, 1);
+
+        // Deal damage and check for murder
         ptr = Buff_GetNpcOrigin(bh);
-        if (!ptr)
-        {
-            Npc_ChangeAttribute (n, ATR_HITPOINTS, -tickdmg);
-        }
-        else
-        {
+        if (!ptr) { Npc_ChangeAttribute (n, ATR_HITPOINTS, -dot); }
+        else {
             var c_npc o; o = _^(ptr);
-            B_MagicHurtNpc(o, n, tickdmg);
-            if (n.attribute[ATR_HITPOINTS] <= 0)
-            {
+            B_MagicHurtNpc(o, n, dot);
+            if (n.attribute[ATR_HITPOINTS] <= 0) {
                 Npc_SendPassivePerc (o, PERC_ASSESSMURDER, o, o);
             };
         };
-        TAL_ModValue(n, TAL_DOT_BURN, -tickdmg);
     } else {
-        TAL_SetValue(n, TAL_DOT_BURN, 0);
+        TAL_SetValue(n, TAL_DOT_BURN_TOTAL, 0);
+        TAL_SetValue(n, TAL_DOT_BURN_TICK, 0);
         Buff_Remove(bh);
     };
 };
 
-instance burn_dot(lCBuff)
-{
-    durationMS = FIRE_SPELL_DOT_VFX_DURATION_MS;
+//######################################################
+// DOT lCBuff's
+//######################################################
+
+instance dot_venom(lCBuff) {
+    durationMS = 86400000;
     tickMS = 1000;
-    OnTick = SAVE_GetFuncID(burn_dot_tick);
+    OnTick = SAVE_GetFuncID(dot_venom_tick);
 };
 
-func void burn_dot_apply(var c_npc npc, var int total_damage, var c_npc origin)
-{
-    Buff_RemoveAll(npc, burn_dot);
-    TAL_ModValue(npc, TAL_DOT_BURN, total_damage);
-    Buff_Apply(npc, burn_dot, origin);
+instance dot_burn(lCBuff) {
+    durationMS = 86400000;
+    tickMS = 1000;
+    OnTick = SAVE_GetFuncID(dot_burn_tick);
 };
 
 //######################################################
-// Destroy Undead
+// DOT apply / remove methods
 //######################################################
 
+// Venom is applied and removed in "counts"
+func void dot_venom_apply(var c_npc npc, var int percentage, var c_npc origin) {
+    Buff_RemoveAll(npc, dot_venom);
+    TAL_ModValue(npc, TAL_DOT_VENOM_TOTAL, percentage);
+    Buff_Apply(npc, dot_venom, origin);
+};
+func void dot_venom_remove(var c_npc npc, var int percentage) {
+    TAL_ModValue(npc, TAL_DOT_VENOM_TOTAL, -percentage);
+    if (TAL_GetValue(npc, TAL_DOT_VENOM_TOTAL) <= 0) {
+        Buff_RemoveAll(npc, dot_venom);
+        TAL_SetValue(npc, TAL_DOT_VENOM_TOTAL, 0);
+    };
+};
 
+// Burn is applied by damage and can only be removed fully
+func void dot_burn_apply(var c_npc npc, var int damage, var c_npc origin) {
+    Buff_RemoveAll(npc, dot_burn);
+    TAL_ModValue(npc, TAL_DOT_BURN_TOTAL, damage);
+    TAL_SetValue(npc, TAL_DOT_BURN_TICK, 0);
+    Buff_Apply(npc, dot_burn, origin);
+    Wld_StopEffect_Ext("VOB_BURN", npc, npc, FALSE);
+    Wld_PlayEffect ("VOB_BURN", npc, npc, 0, 0, 0, FALSE);
+};
+func void dot_burn_remove(var c_npc npc) {
+    Buff_RemoveAll(npc, dot_venom);
+    TAL_SetValue(npc, TAL_DOT_BURN_TOTAL, 0);
+    TAL_SetValue(npc, TAL_DOT_BURN_TICK, 0);
+    Wld_StopEffect_Ext("VOB_BURN", npc, npc, FALSE);
+};
 
 //######################################################
 // Special

@@ -28,6 +28,7 @@ func void lCBuff_Archiver(var lCBuff this) {
 	PM_SaveString("name", this.name);
 	PM_SaveInt("bufftype", this.bufftype);
 	PM_SaveInt("targetID", this.targetID);
+	PM_SaveInt("originID", this.originID);
 	PM_SaveInt("durationMS", this.durationMS);
 	PM_SaveInt("tickMS", this.tickMS);
 	PM_SaveInt("nextTickNr", this.nextTickNr);
@@ -45,10 +46,6 @@ func void lCBuff_Archiver(var lCBuff this) {
 	};
 
 	PM_SaveString("buffTex", this.buffTex);
-
-	if (this.originID > 0) {
-		PM_SaveFuncID("originID", this.originID);
-	};
 };
 
 func void lCBuff_Unarchiver(var lCBuff this) {
@@ -56,6 +53,7 @@ func void lCBuff_Unarchiver(var lCBuff this) {
 	if (PM_Exists("name")) { this.name = PM_LoadString("name"); };
 	if (PM_Exists("bufftype")) { this.bufftype = PM_Load("bufftype"); };
 	if (PM_Exists("targetID")) { this.targetID = PM_Load("targetID"); };
+	if (PM_Exists("originID")) { this.originID = PM_Load("originID"); };
 	if (PM_Exists("durationMS")) { this.durationMS = PM_Load("durationMS"); };
 	if (PM_Exists("tickMS")) { this.tickMS = PM_Load("tickMS"); };
 	if (PM_Exists("nextTickNr")) { this.nextTickNr = PM_Load("nextTickNr"); };
@@ -88,16 +86,6 @@ func void lCBuff_Unarchiver(var lCBuff this) {
 	};
 
 	if (PM_Exists("buffTex")) { this.buffTex = PM_LoadString("buffTex"); };
-
-	if (PM_Exists("originID")) {
-		PM_SaveFuncID("originID", this.originID);
-		obj = _PM_SearchObj("originID");
-		if (_PM_ObjectType(obj) == _PM_String) {
-			this.originID = PM_LoadFuncID("originID");
-		} else {
-			this.originID = PM_Load("originID");
-		};
-	};
 };
 
 

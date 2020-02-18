@@ -359,7 +359,7 @@ INSTANCE ItSc_Firebolt (C_Item)
 	COUNT	[2]			=	SPL_DAMAGE_FIREBOLT;
 
 	TEXT	[3]			=	ConcatStrings(NAME_Dot_Half, NAME_Sec_Duration);
-	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
+	COUNT	[3]			=	BURN_DOT_VFX_DURATION_SEC / 1000;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -492,7 +492,7 @@ INSTANCE ItSc_InstantFireball (C_Item)
 	COUNT	[2]			=	SPL_DAMAGE_InstantFireball;
 
 	TEXT	[3]			=	ConcatStrings(NAME_Dot_Half, NAME_Sec_Duration);
-	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
+	COUNT	[3]			=	BURN_DOT_VFX_DURATION_SEC / 1000;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -762,7 +762,7 @@ INSTANCE ItSc_ChargeFireball (C_Item)
 	count 	[2]			=   SPL_Damage_ChargeFireball;
 
 	TEXT	[3]			=	ConcatStrings(NAME_Dot_Half, NAME_Sec_Duration);
-	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
+	COUNT	[3]			=	BURN_DOT_VFX_DURATION_SEC / 1000;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1002,7 +1002,7 @@ INSTANCE ItSc_Pyrokinesis (C_Item)
 	count 	[2]			=   SPL_Damage_Firestorm;
 
 	TEXT	[3]			=	ConcatStrings(NAME_Dot_Half, NAME_Sec_Duration);
-	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
+	COUNT	[3]			=	BURN_DOT_VFX_DURATION_SEC / 1000;
 
 	TEXT	[4]			=	NAME_AreaOfEffect_Small;
 	
@@ -1040,7 +1040,7 @@ INSTANCE ItSc_Firestorm (C_Item)
 	COUNT	[2]			=	SPL_DAMAGE_INSTANTFIRESTORM;
 
 	TEXT	[3]			=	ConcatStrings(NAME_Dot_Half, NAME_Sec_Duration);
-	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
+	COUNT	[3]			=	BURN_DOT_VFX_DURATION_SEC / 1000;
 
 	TEXT	[4]			=	NAME_AreaOfEffect_Small;
 	
@@ -1180,7 +1180,7 @@ INSTANCE ItSc_Firerain (C_Item)
 	//COUNT	[2]			=	SPL_DAMAGE_FIRERAIN;
 
 	TEXT	[3]			=	ConcatStrings(NAME_Dot_Full, NAME_Sec_Duration);
-	COUNT	[3]			=	FIRE_SPELL_DOT_VFX_DURATION_MS / 1000;
+	COUNT	[3]			=	BURN_DOT_VFX_DURATION_SEC / 1000;
 
 	TEXT	[4]			=	NAME_AreaOfEffect_Large;
 	

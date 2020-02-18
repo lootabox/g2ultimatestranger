@@ -27,10 +27,10 @@ PROTOTYPE Mst_Default_Bloodfly(C_Npc)
 	protection	[PROT_MAGIC]		=	0;
 	
 	//----- Damage Types ----	
-	damagetype 						=	DAM_EDGE;
+	damagetype 						=	DAM_POINT;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
+	damage		[DAM_INDEX_POINT]	=	20; // venom percentage
 //	damage		[DAM_INDEX_FIRE]	=	0;
 //	damage		[DAM_INDEX_FLY]		=	0;
 //	damage		[DAM_INDEX_MAGIC]	=	0;
@@ -99,7 +99,9 @@ INSTANCE YBloodfly	(Mst_Default_Bloodfly)
 	protection	[PROT_FIRE]			=	0;
 	protection	[PROT_FLY]			=	0;
 	protection	[PROT_MAGIC]		=	0;
-		
+
+	damage		[DAM_INDEX_POINT]	=	10; // venom percentage
+
 	B_SetVisuals_Bloodfly();
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
