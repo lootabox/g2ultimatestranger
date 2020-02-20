@@ -23,8 +23,8 @@ FUNC VOID DIA_Carl_EXIT_Info()
 ///////////////////////////////////////////////////////////////////////
 FUNC VOID B_CarlSayHallo ()
 {
-	AI_Output (self, other, "DIA_Carl_Hallo_05_00"); //It would seem that we have a few thieves in the city who steal stuff from the rich people.
-	AI_Output (self, other, "DIA_Carl_Hallo_05_01"); //The city guard recently turned the harbor district upside-down - but they didn't find anything.
+	AI_Output (self, other, "DIA_Carl_Hallo_05_00"); //It would seem that we have a few thieves in the city who would steal stuff from the rich people.
+	AI_Output (self, other, "DIA_Carl_Hallo_05_01"); //The city guard recently turned the harbor district upside down - but they didn't find anything.
 	
 };
 // ************************************************************

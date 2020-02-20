@@ -269,7 +269,7 @@ func void DIA_Igaraz_METOO_Info ()
 	Info_ClearChoices	 (DIA_Igaraz_METOO);
 	Info_AddChoice 		 (DIA_Igaraz_METOO,DIALOG_BACK,DIA_Igaraz_METOO_BACK);
 	Info_AddChoice 		 (DIA_Igaraz_METOO,"Maybe we could work together...",DIA_Igaraz_METOO_HELP);
-	Info_AddChoice 		 (DIA_Igaraz_METOO,"So, found anything out yet?",DIA_Igaraz_METOO_TELL);
+	Info_AddChoice 		 (DIA_Igaraz_METOO,"And, found out anything yet?",DIA_Igaraz_METOO_TELL);
 	Info_AddChoice 		 (DIA_Igaraz_METOO,"Have you seen Agon or Ulf?",DIA_Igaraz_METOO_AGON);
 };
 FUNC VOID DIA_Igaraz_METOO_BACK()

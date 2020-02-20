@@ -82,7 +82,7 @@ FUNC INT DIA_Moe_Hallo_Condition()
 };
 FUNC VOID DIA_Moe_Hallo_Info()
 {
-	AI_Output (self ,other,"DIA_Moe_Hallo_01_00"); //Hey, I don't know you. What do you want here? Are you headed for the pub?
+	AI_Output (self ,other,"DIA_Moe_Hallo_01_00"); //Hey, I don't know you. What do you want here? Are you headed for the tavern?
 	
 	Info_ClearChoices (DIA_Moe_Hallo);
 	Info_AddChoice    (DIA_Moe_Hallo,"No, I'm not headed for the tavern...",DIA_Moe_Hallo_Gehen);
@@ -91,10 +91,10 @@ FUNC VOID DIA_Moe_Hallo_Info()
 };
 FUNC VOID DIA_Moe_Hallo_Gehen()
 {
-	AI_Output (other ,self,"DIA_Moe_Hallo_Gehen_15_00"); //No, I'm not headed for the pub...
+	AI_Output (other ,self,"DIA_Moe_Hallo_Gehen_15_00"); //No, I'm not headed for the tavern...
 	AI_Output (self ,other,"DIA_Moe_Hallo_Gehen_01_01"); //Yeah, that's what I would have said. But that isn't important - and that's why we can get straight down to business.
 	AI_Output (self ,other,"DIA_Moe_Hallo_Gehen_01_02"); //Since you're new here, I'll make you an offer. You give me 50 gold pieces, and you can go.
-	AI_Output (self ,other,"DIA_Moe_Hallo_Gehen_01_03"); //That's your entrance fee for the pub.
+	AI_Output (self ,other,"DIA_Moe_Hallo_Gehen_01_03"); //That's your entrance fee for the tavern.
 	
 	Info_ClearChoices (DIA_Moe_Hallo);
 	Info_AddChoice    (DIA_Moe_Hallo,"Let's find out what the militia thinks of that...",DIA_Moe_Hallo_Miliz);
@@ -104,7 +104,7 @@ FUNC VOID DIA_Moe_Hallo_Gehen()
 };
 FUNC VOID DIA_Moe_Hallo_Kneipe()
 {
-	AI_Output (other ,self,"DIA_Moe_Hallo_Kneipe_15_00"); //But I don't want to go to the pub!
+	AI_Output (other ,self,"DIA_Moe_Hallo_Kneipe_15_00"); //But I don't want to go to the tavern!
 	AI_Output (self ,other,"DIA_Moe_Hallo_Kneipe_01_01"); //You know, sooner or later, everyone wants to go into the pub. So you can pay right now - then you'll have it over with.
 };
 FUNC VOID  DIA_Moe_Hallo_Witz()

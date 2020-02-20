@@ -114,7 +114,7 @@ instance DIA_Parlaf_HUNGRIG		(C_INFO)
 	condition	 = 	DIA_Parlaf_HUNGRIG_Condition;
 	information	 = 	DIA_Parlaf_HUNGRIG_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"What's new?";
+	description	 = 	"What's up?";
 };
 
 func int DIA_Parlaf_HUNGRIG_Condition ()
@@ -141,7 +141,7 @@ instance DIA_Parlaf_SATT		(C_INFO)
 	condition	 = 	DIA_Parlaf_SATT_Condition;
 	information	 = 	DIA_Parlaf_SATT_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"What's new?";
+	description	 = 	"What's up?";
 };
 
 func int DIA_Parlaf_SATT_Condition ()

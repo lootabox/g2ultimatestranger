@@ -9,7 +9,7 @@ INSTANCE DIA_Brutus_EXIT   (C_INFO)
 	condition   = DIA_Brutus_EXIT_Condition;
 	information = DIA_Brutus_EXIT_Info;
 	permanent	= TRUE;
-	description = DIALOG_ENDE ;
+	description = DIALOG_ENDE;
 };
 
 FUNC INT DIA_Brutus_EXIT_Condition()
