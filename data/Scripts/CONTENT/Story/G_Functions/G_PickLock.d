@@ -50,13 +50,14 @@ func void G_PickLock (var int bSuccess, var int bBrokenOpen)
 			Snd_Play3D 	(self, "PICKLOCK_BROKEN");
 			Print (PRINT_PICKLOCK_BROKEN);
 			var int rnd; rnd = Hlp_Random(100);
+			var int sound_chance; sound_chance = 50;
 			PickLockFailCounter += 1;
 			
 			if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 			{
-				rnd -= 25;
+				sound_chance -= 25;
 			};
-			if (rnd <= 25)
+			if (rnd < sound_chance)
 			{
 				Npc_SendPassivePerc (hero, PERC_ASSESSQUIETSOUND, hero, hero);
 				return;
