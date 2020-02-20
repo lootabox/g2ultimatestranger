@@ -371,3 +371,42 @@ INSTANCE Skeleton_Mario4	(Mst_Default_Skeleton)
 	//EquipItem (self, ItMw_2H_Sword_M_01);
 	EquipItem (self, ItMw_1h_Misc_Axe);
 };
+
+//****************************
+//	Xardas servant
+//****************************
+
+INSTANCE NONE_102_Xardas_Skeleton (Mst_Default_Skeleton)
+{
+	// ------ NSC ------
+	name 		= "Undead Servant";
+	guild 		= GIL_NONE;
+	id 			= 102;
+	npctype		= NPCTYPE_FRIEND;
+
+	// ------ AIVARs ------
+	aivar[AIV_DropDeadAndKill] = TRUE;
+	
+	// ------ Equippte Waffen ------
+	EquipItem (self, ItMw_1H_Mace_L_01);
+
+	// ------ visuals ------
+	B_SetVisuals_Lesser_Skeleton();
+
+	// ------ TA anmelden ------
+	daily_routine 		= Rtn_Start_102;
+};
+
+FUNC VOID Rtn_Start_102 ()
+{
+	TA_Cook_Stove		(00,00,06,00,"NW_XARDAS_TOWER_IN1_32");
+	TA_Stand_Sweeping	(06,00,12,00,"NW_XARDAS_TOWER_IN1_22");
+	TA_Stand_Sweeping	(12,00,18,00,"NW_XARDAS_TOWER_IN1_21");
+	TA_Stand_Sweeping	(18,00,00,00,"NW_XARDAS_TOWER_IN1_30");
+};
+
+FUNC VOID Rtn_Tot_102 ()
+{
+	TA_SLEEP	(08,00,23,00,"TOT");
+	TA_SLEEP	(23,00,08,00,"TOT");
+};

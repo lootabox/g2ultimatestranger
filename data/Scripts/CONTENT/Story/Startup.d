@@ -3951,6 +3951,7 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 
 	//---NSCs---
 	Wld_InsertNpc		(NONE_100_Xardas, 	"NW_XARDAS_START");
+	Wld_InsertNpc		(NONE_102_Xardas_Skeleton, 	"NW_XARDAS_TOWER_IN1_21");
 	Wld_InsertNpc		(PC_Psionic, 		"NW_XARDAS_TOWER_PATH_01");
 		
 	Wld_InsertItem 		(ItWr_StonePlateCommon_Addon,		"FP_ITEM_XARDAS_STPLATE_01");//ADDON

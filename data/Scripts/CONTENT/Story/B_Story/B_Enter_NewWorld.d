@@ -770,7 +770,9 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_5 ()
 		// ------ Immortal-Flags löschen ------
 
 		// ------ TAs ändern ------
-	B_RemoveNpc	(Xardas); 
+	B_RemoveNpc	(Xardas);
+	var c_npc xardas_servant; xardas_servant = Hlp_GetNpc(NONE_102_Xardas_Skeleton);
+	B_RemoveNpc	(xardas_servant);
 	B_StartOtherRoutine	(Lester,"XardasWeg"); 
 
 	//if (Npc_GetDistToWP(Salandril,"ALTAR")<10000)
