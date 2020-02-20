@@ -245,7 +245,7 @@ instance ItWr_Map_NewWorld_Dexter (C_Item)
 
 PROTOTYPE Rangerring_Prototype (C_ITEM)
 {
-	name 					=	"Aquamarine ring";
+	name 					=	NAME_Ring;
 
 	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_RING|ITEM_MISSION; //Joly:kein Multiitem. Die ringe sind individuell
@@ -260,7 +260,7 @@ PROTOTYPE Rangerring_Prototype (C_ITEM)
 	on_equip				=	Equip_ItRi_Ranger_Addon;
 	on_unequip				=	UnEquip_ItRi_Ranger_Addon;
 
-	description				= "Recognition sign of the 'Ring of Water'";
+	description				= "Aquamarine ring";
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
@@ -303,18 +303,21 @@ FUNC VOID UnEquip_ItRi_Ranger_Addon ()
 //Lares Ring
 INSTANCE ItRi_Ranger_Lares_Addon (Rangerring_Prototype)
 {
-	TEXT[1]					= "This ring belongs to Lares";
+	TEXT[1]					= "Recognition sign of the 'Ring of Water'";
+	TEXT[2]					= "This ring belongs to Lares";
 };
 
 //PCs Ring
 INSTANCE ItRi_Ranger_Addon (Rangerring_Prototype)
 {
-	TEXT[1]					= "This ring belongs to me";
+	TEXT[1]					= "Recognition sign of the 'Ring of Water'";
+	TEXT[2]					= "This ring belongs to me";
 };
 //Lance Ring
 INSTANCE ItRi_LanceRing (Rangerring_Prototype)
 {
-	TEXT[1]					= "This ring belongs to Lance";
+	TEXT[1]					= "Recognition sign of the 'Ring of Water'";
+	TEXT[2]					= "This ring belonged to Lance";
 };
 
 
@@ -636,7 +639,7 @@ func void Use_Rake()
 /******************************************************************************************/
 INSTANCE ItRi_Addon_BanditTrader(C_Item)	//Händlergildenring
 {
-	name 					=	"Guild ring";
+	name 					=	NAME_Ring;
 
 	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_RING;
@@ -786,7 +789,7 @@ INSTANCE ItWr_Vatras2Saturas_FindRaven_opened	(C_Item)
 //------------------------------------------------------------------------------------------
 	INSTANCE  ItAm_Addon_WispDetector (C_Item)  
 {
-	name 			=	"Ore amulet";
+	name 			=	NAME_Amulett;
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -875,7 +878,7 @@ INSTANCE ItFo_Addon_Krokofleisch_Mission (C_Item)
 
 INSTANCE ItRi_Addon_MorgansRing_Mission (C_Item)
 {	
-	name 				=	"Morgan's ring";
+	name 				=	NAME_Ring;
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING|ITEM_MISSION;
@@ -892,7 +895,7 @@ INSTANCE ItRi_Addon_MorgansRing_Mission (C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= name;
+	description		= "Morgan's ring";
 	
 	
 	TEXT[1]			= "The ring is decorated with many fine runes.";
