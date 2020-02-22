@@ -23,7 +23,7 @@ instance PAL_2004_Bruder  (Npc_Default)
 	// ------ Equippte Waffen ------																	
 	B_CreateAmbientInv 	(self);
 	// ------ Inventory ------
-	CreateInvItems (self,ItRu_PalLight,1);
+	CreateInvItems (self,ItSc_PalLight,1);
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal02, BodyTex_N, ITAR_PAL_H);	
 	Mdl_SetModelFatness	(self, 0);

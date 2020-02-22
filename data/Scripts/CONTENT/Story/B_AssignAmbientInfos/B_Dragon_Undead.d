@@ -87,6 +87,13 @@ FUNC VOID DIA_Dragon_Undead_Hello_Info()
 	AI_Output (self, other, "DIA_Addon_UndeadDragon_Add_20_01"); //There is only one thing that was not predetermined!
 	AI_Output (self, other, "DIA_Addon_UndeadDragon_Add_20_02"); //You have destroyed one of my servants! He was chosen to bear the claw.
 	AI_Output (self, other, "DIA_Addon_UndeadDragon_Add_20_03"); //As I see, you now bear it. For this outrage, you will die!
+	if (C_ScHasEquippedBeliarsWeapon())
+	|| (C_ScHasReadiedBeliarsWeapon())
+	|| (C_ScHasBeliarsRune())
+	{
+		AI_Output (self, other, "DIA_Addon_UndeadDragon_Add_20_04"); //Do you really believe you can injure me with the claw? (laughs)
+	};
+	//ADDON ENDE
 	
 	Info_AddChoice	(DIA_Dragon_Undead_Hello, "Enough said.", DIA_Dragon_Undead_Hello_attack );
 	Info_AddChoice	(DIA_Dragon_Undead_Hello, "On whose behalf are you leading your minions to war against humankind?", DIA_Dragon_Undead_Hello_Auftraggeber );
@@ -147,14 +154,6 @@ func void DIA_Dragon_Undead_Hello_attack ()
 {
 	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_attack_15_00"); //Enough said. I shall chase you back under the rock from whence you crept, you monster.
 	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_attack_20_01"); //(laughs) You are not yet ready to defeat me. Only one brief moment and I shall have reached my goal.
-	//ADDON
-	if (C_ScHasEquippedBeliarsWeapon())
-	|| (C_ScHasReadiedBeliarsWeapon())
-	|| (C_ScHasBeliarsRune())
-	{
-		AI_Output (self, other, "DIA_Addon_UndeadDragon_Add_20_04"); //Do you really believe you can injure me with the claw? (laughs)
-	};
-	//ADDON ENDE
 	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_attack_20_02"); //Your bones will serve me to let the ill winds of death blow across the world.
 		
 	Npc_RemoveInvItems (other,ItMi_InnosEye_MIS,1);
