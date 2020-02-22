@@ -1293,7 +1293,7 @@ INSTANCE ItRu_HarmUndead (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic_Per;
 	count 	[2]			=   SPL_DAMAGE_DESTROYUNDEAD;
 	
-	TEXT	[3]			=	ConcatStrings(NAME_DestroyUndead_Dmg, NAME_DestroyUndead_Info);
+	TEXT	[3]			=	ConcatStrings(NAME_MustBeFatal, NAME_MustBeUndead);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1559,6 +1559,8 @@ INSTANCE ItRu_BreathOfDeath (C_Item)
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_BREATHOFDEATH;
+
+	TEXT	[3]			=	ConcatStrings(NAME_MustBeFatal, NAME_MustBeLiving);
 		
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1595,6 +1597,8 @@ INSTANCE ItRu_MassDeath (C_Item)
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_MASSDEATH;
+	
+	TEXT	[3]			=	ConcatStrings(NAME_MustBeFatal, NAME_MustBeLiving);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

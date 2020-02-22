@@ -104,9 +104,14 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 			return COLL_DONOTHING;
 		};
 		
-		if (C_NpcIsUndead(self))
+/* 		if (C_NpcIsUndead(self))
 		{
 			return COLL_APPLYHALVEDAMAGE;
+		}; */
+
+		if (!C_NpcIsEvil(self))
+		{
+			return COLL_APPLYDOUBLEDAMAGE;
 		};
 		
 		return COLL_DOEVERYTHING;
@@ -245,6 +250,15 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		
 		if (spellType == SPL_Firestorm)
 		&& (self.guild == GIL_DMT)
+		{
+			return COLL_DONOTHING;
+		};
+	};
+
+	if (other.guild = GIL_DRACONIAN)
+	{
+		if (self.guild == GIL_FIREGOLEM)
+		&& (spellType == SPL_Firestorm)
 		{
 			return COLL_DONOTHING;
 		};
@@ -414,8 +428,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		if (Npc_GetDistToNpc (other,self) < 1000)
 		&& (!C_NpcIsUndead(self))
 		{
-			if (self.guild == GIL_DRAGON)
-			|| (Hlp_GetInstanceID(self) != Hlp_GetInstanceID(hero))
+			if (self.guild == GIL_SKELETON_MAGE)
 			{
 				return COLL_APPLYHALVEDAMAGE;
 			};
@@ -429,10 +442,6 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	{
 		if (!C_NpcIsUndead(self))
 		{
-			if (self.guild == GIL_DRAGON)
-			{
-				return COLL_APPLYHALVEDAMAGE;
-			};
 			return COLL_DOEVERYTHING;
 		};
 		return COLL_DONOTHING;

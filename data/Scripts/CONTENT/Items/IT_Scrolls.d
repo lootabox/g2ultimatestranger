@@ -966,7 +966,7 @@ INSTANCE ItSc_HarmUndead (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic_Per;
 	COUNT	[2]			=	SPL_DAMAGE_DESTROYUNDEAD;
 	
-	TEXT	[3]			=	ConcatStrings(NAME_DestroyUndead_Dmg, NAME_DestroyUndead_Info);
+	TEXT	[3]			=	ConcatStrings(NAME_MustBeFatal, NAME_MustBeUndead);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1216,6 +1216,8 @@ INSTANCE ItSc_BreathOfDeath (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarz
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_BREATHOFDEATH;
+	
+	TEXT	[3]			=	ConcatStrings(NAME_MustBeFatal, NAME_MustBeLiving);
 
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1249,6 +1251,8 @@ INSTANCE ItSc_MassDeath (C_Item)
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_MASSDEATH;
+	
+	TEXT	[3]			=	ConcatStrings(NAME_MustBeFatal, NAME_MustBeLiving);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

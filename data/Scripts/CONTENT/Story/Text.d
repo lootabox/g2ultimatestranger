@@ -361,7 +361,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 
 	// ...
 	"Acid",						// 90	SPL_Acid
-	"Stun Ray",				// 91	SPL_AdanosBall
+	"Lightning Bolt",			// 91	SPL_AdanosBall
 	"Explosion",				// 92	SPL_Explosion
 	"Extricate",				// 93	SPL_Extricate
 	"HealOther",				// 94	SPL_HealOther
@@ -504,7 +504,7 @@ const string NAME_SPL_SummonMud				= "Summon Mud";
 
 // ...
 const string NAME_SPL_Acid					= "Acid";
-const string NAME_SPL_AdanosBall			= "Stun Ray";
+const string NAME_SPL_AdanosBall			= "Lightning Bolt";
 const string NAME_SPL_Explosion				= "Explosion";
 const string NAME_SPL_Extricate				= "Extricate";
 const string NAME_SPL_HealOther				= "HealOther";
@@ -727,6 +727,9 @@ const string NAME_Stagger		= "Staggers living targets. ";
 const string NAME_Nonlethal		= "Non-lethal. ";
 const string NAME_Instant		= "Instant effect. ";
 const string NAME_ShortRange	= "Short range. ";
+const string NAME_MustBeFatal	= "Deals no damage unless fatal. ";
+const string NAME_MustBeLiving	= "Only affects the living. ";
+const string NAME_MustBeUndead	= "Only affects undead. ";
 
 const string NAME_AreaOfEffect_Small	= "Small area of effect. ";
 const string NAME_AreaOfEffect_Default	= "Area of effect. ";
@@ -735,10 +738,9 @@ const string NAME_AreaOfEffect_Large	= "Large area of effect. ";
 const string NAME_Shrink_Penalty		= "Attribute and protection reduction (percentage):";
 const string NAME_Shrink_Info			= "Only affects living non-humans. ";
 
-const string NAME_DestroyUndead_Dmg		= "Deals no damage unless fatal. ";
-const string NAME_DestroyUndead_Info	= "Only affects undead. ";
-
 const string NAME_Stun_AdanosBall	= "Stuns all targets, undead for twice as long. ";
+
+const string NAME_BeliarsRage_Info	= "Deals double damage against non-evil targets. ";
 
 // MAX LENGTH						"------------------------------------------------------------";
 const string NAME_Staff_Fire_1		= "Fire spells deal +10 damage against burning targets.";
@@ -766,6 +768,7 @@ const string NAME_Prot_Magic	= "Magic protection:";
 
 const string NAME_Bonus_HP		= "Hitpoint bonus:";
 const string NAME_Bonus_Mana	= "Mana bonus:";
+const string NAME_Venom_Neutralized	= "Venom neutralized (percentage):";
 
 const string NAME_Bonus_HpMax	= "Bonus for maximum Hitpoints:";
 const string NAME_Bonus_ManaMax	= "Bonus for maximum Mana:";

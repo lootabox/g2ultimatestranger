@@ -2,8 +2,8 @@
 // SPL_Deathball
 // ***************
 
-const int SPL_Cost_Deathball	= 35;
-const int SPL_Damage_Deathball	= 175;
+const int SPL_Cost_Deathball	= 25;
+const int SPL_Damage_Deathball	= 120;
 
 
 INSTANCE Spell_Deathball (C_Spell_Proto)

@@ -2,8 +2,8 @@
 // SPL_Deathbolt
 // ***************
 
-const int SPL_Cost_Deathbolt	= 25;
-const int SPL_Damage_Deathbolt	= 120;
+const int SPL_Cost_Deathbolt	= 15;
+const int SPL_Damage_Deathbolt	= 80;
 
 
 INSTANCE Spell_Deathbolt (C_Spell_Proto)

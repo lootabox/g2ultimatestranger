@@ -338,6 +338,8 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 	}
 	// OTHER SPELLS ---------------------------------------------------------------------------
 	else if	(spellID == SPL_DestroyUndead)
+		||	(spellID == SPL_BreathOfDeath) && (att.guild != GIL_SKELETON_MAGE)
+		||	(spellID == SPL_MassDeath)
 	{
 		if (dmg < vic.attribute[ATR_HITPOINTS])
 		{

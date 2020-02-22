@@ -242,6 +242,8 @@ INSTANCE ItRu_BeliarsRage	(C_Item)
 	
 	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Energyball;
+
+	TEXT	[3]			=	NAME_BeliarsRage_Info;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;

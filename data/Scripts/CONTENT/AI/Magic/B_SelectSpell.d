@@ -36,9 +36,9 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	&& (slf.aivar[AIV_MagicUser] == MAGIC_ALWAYS)	//Joly: "Mario und seine Freunde", Besessene Menschen (GIL_DMT) mit Nahkampfwaffen.
 	{
 			// ------- in die Taschen -------
-			if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)	{	CreateInvItems (slf, ItRu_InstantFireball, 1);	};
 			if (Npc_HasItems (slf, ItRu_Deathbolt) == 0) 		{	CreateInvItems (slf, ItRu_Deathbolt, 1); };
 			if (Npc_HasItems (slf, ItRu_Deathball) == 0) 		{	CreateInvItems (slf, ItRu_Deathball, 1); };
+			if (Npc_HasItems (slf, ItRu_BeliarsRage) == 0) 		{	CreateInvItems (slf, ItRu_BeliarsRage, 1); };
 			if (Npc_HasItems (slf, ItRu_Firerain) == 0) 		{	CreateInvItems (slf, ItRu_Firerain, 1); };
 			if (Npc_HasItems (slf, ItRu_Thunderstorm) == 0) 	{	CreateInvItems (slf, ItRu_Thunderstorm, 1); };
 			if (Npc_HasItems (slf, ItRu_LightningFlash) == 0) 	{	CreateInvItems (slf, ItRu_LightningFlash, 1); };
@@ -68,9 +68,9 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 			
 			if (slf.aivar[AIV_SelectSpell] < 10)
 			{
-				if 		(Kapitel <= 3)	{	B_ReadySpell (slf, SPL_InstantFireball , SPL_Cost_InstantFireball); return TRUE; }
-				else if (Kapitel <= 4)	{	B_ReadySpell (slf, SPL_DeathBolt , SPL_Cost_DeathBolt);				return TRUE; }
-				else /*Kap 5+*/			{	B_ReadySpell (slf, SPL_DeathBall , SPL_Cost_DeathBall);				return TRUE; };
+				if 		(Kapitel <= 3)	{	B_ReadySpell (slf, SPL_DeathBolt , SPL_Cost_DeathBolt); 			return TRUE; }
+				else if (Kapitel <= 4)	{	B_ReadySpell (slf, SPL_DeathBall , SPL_Cost_DeathBall);				return TRUE; }
+				else /*Kap 5+*/			{	B_ReadySpell (slf, SPL_EnergyBall , SPL_Cost_EnergyBall);			return TRUE; };
 			}
 			else if (slf.aivar[AIV_SelectSpell] == 10)
 			{	
@@ -93,52 +93,26 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 
 	// ------ Magier ------
 	if (slf.guild == GIL_KDF)
-	|| (slf.aivar[AIV_MagicUser] == MAGIC_ALWAYS)
 	{
-		if (Npc_HasItems (slf, ItRu_Concussionbolt) == 0)
-		{
-			CreateInvItems (slf, ItRu_Concussionbolt, 1);
-		};
-		
-		if (Npc_HasItems (slf, ItRu_InstantFireBall) == 0)
-		{
-			CreateInvItems (slf, ItRu_InstantFireBall, 1);
-		};
-		
-		if (Npc_HasItems (slf, ItRu_Deathball) == 0)
-		{
-			CreateInvItems (slf, ItRu_Deathball, 1);
-		};
-		
-		if (Npc_HasItems (slf, ItRu_FullHeal) == 0)
-		{
-			CreateInvItems (slf, ItRu_FullHeal, 1);
-		};
-		
-		if (Npc_HasItems (slf, ItRu_Extricate) == 0)
-		{
-			CreateInvItems (slf, ItRu_Extricate, 1);
-		};
+		if (Npc_HasItems (slf, ItRu_Concussionbolt) == 0)	{	CreateInvItems (slf, ItRu_Concussionbolt, 1); };
+		if (Npc_HasItems (slf, ItRu_Deathbolt) == 0)		{	CreateInvItems (slf, ItRu_Deathbolt, 1); };
+		if (Npc_HasItems (slf, ItRu_Explosion) == 0)		{	CreateInvItems (slf, ItRu_Explosion, 1); };
+		if (Npc_HasItems (slf, ItRu_FullHeal) == 0)			{	CreateInvItems (slf, ItRu_FullHeal, 1); };
 
-		if (self.attribute[ATR_HITPOINTS] < 100) 
+		if (slf.attribute[ATR_HITPOINTS] < 100) 
 		{
 			B_ReadySpell (slf, SPL_FullHeal, SPL_Cost_FullHeal);
 			return TRUE;
 		}
-		else if (C_NpcHasAttackReasonToKill (self))
+		else if (C_NpcHasAttackReasonToKill (slf))
 		{
-			if (self.flags == NPC_FLAG_IMMORTAL)
-			|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Raven))
+			if (slf.flags == NPC_FLAG_IMMORTAL)
 			{
-				B_ReadySpell (slf, SPL_Deathball, SPL_Cost_Deathball);
-			}
-			else if (Npc_GetDistToNpc(slf, oth) < FIGHT_DIST_MELEE)
-			{
-				B_ReadySpell (slf, SPL_Extricate, SPL_Cost_Extricate);
+				B_ReadySpell (slf, SPL_Explosion, SPL_Cost_Explosion);
 			}
 			else
 			{
-				B_ReadySpell (slf, SPL_InstantFireball, SPL_Cost_InstantFireBall);
+				B_ReadySpell (slf, SPL_DeathBolt, SPL_Cost_DeathBolt);
 			};
 			return TRUE;
 		}
@@ -157,10 +131,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 			return FALSE;
 		};
 			
-		if (Npc_HasItems (slf, ItRu_PalHolyBolt) == 0)
-		{
-			CreateInvItems (slf, ItRu_PalHolyBolt, 1);
-		};
+		if (Npc_HasItems (slf, ItRu_PalHolyBolt) == 0)	{	CreateInvItems (slf, ItRu_PalHolyBolt, 1); };
 		
 		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_MELEE)
 		&& (C_NpcIsEvil(oth))
@@ -177,20 +148,10 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Skelett Magier ------
 	if (slf.guild == GIL_SKELETON_MAGE)
 	{
-		if (Npc_HasItems (slf, ItRu_SumSkel) == 0)
-		{
-			CreateInvItems (slf, ItRu_SumSkel, 1);
-		};
-		
-		if (Npc_HasItems (slf, ItRu_IceCube) == 0)
-		{
-			CreateInvItems (slf, ItRu_IceCube, 1);
-		};
-		
-		if (Npc_HasItems (slf, ItRu_Icebolt) == 0)
-		{
-			CreateInvItems (slf, ItRu_Icebolt, 1);
-		};
+		if (Npc_HasItems (slf, ItRu_SumSkel) == 0)			{	CreateInvItems (slf, ItRu_SumSkel, 1); };
+		if (Npc_HasItems (slf, ItRu_MagicCage) == 0)		{	CreateInvItems (slf, ItRu_MagicCage, 1); };
+		if (Npc_HasItems (slf, ItRu_BreathOfDeath) == 0)	{	CreateInvItems (slf, ItRu_BreathOfDeath, 1); };
+		if (Npc_HasItems (slf, ItRu_Acid) == 0)				{	CreateInvItems (slf, ItRu_Acid, 1); };
 		
 			// ------ Spruchzyklus bei SUMMON beginnen ------
 			if (slf.aivar[AIV_SelectSpell] >= 6)
@@ -198,10 +159,10 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 				slf.aivar[AIV_SelectSpell] = 1;
 			};
 		
-		if (!Npc_IsInState (oth, ZS_MagicFreeze))
+		if (!Npc_IsInState (oth, ZS_MagicCage))
 		&& (slf.aivar[AIV_SelectSpell] == 0)
 		{
-			B_ReadySpell (slf, SPL_IceCube,	SPL_Cost_IceCube);
+			B_ReadySpell (slf, SPL_MagicCage,	SPL_Cost_MagicCage);
 			return TRUE;
 		}
 		else if (slf.aivar[AIV_SelectSpell] == 1)
@@ -209,9 +170,14 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 			B_ReadySpell (slf, SPL_SummonSkeleton, SPL_Cost_SummonSkeleton);
 			return TRUE;
 		}
+		else if (Npc_GetDistToNpc(slf,oth) < 800) // 200 less then max dmg dist for breath of death
+		{
+			B_ReadySpell (slf, SPL_BreathOfDeath, SPL_Cost_BreathOfDeath);
+			return TRUE;
+		}
 		else
 		{
-			B_ReadySpell (slf, SPL_Icebolt, SPL_Cost_Icebolt);
+			B_ReadySpell (slf, SPL_Acid, SPL_Cost_Acid);
 			return TRUE;
 		};
 	};
@@ -219,10 +185,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Eisgolem ------
 	if (slf.guild == GIL_ICEGOLEM)
 	{
-		if (Npc_HasItems (slf, ItRu_IceCube) == 0)
-		{
-			CreateInvItems (slf, ItRu_IceCube, 1);
-		};
+		if (Npc_HasItems (slf, ItRu_IceCube) == 0)	{	CreateInvItems (slf, ItRu_IceCube, 1); };
 		
 		if (Npc_GetDistToNpc(slf,oth) < FIGHT_DIST_MELEE) 
 		|| (Npc_IsInState (oth, ZS_MagicFreeze))								
@@ -240,14 +203,11 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Feuergolem ------
 	if (slf.guild == GIL_FIREGOLEM)
 	{
-		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)
-		{
-			CreateInvItems (slf, ItRu_InstantFireball, 1);
-		};
+		if (Npc_HasItems (slf, ItRu_Firestorm) == 0)	{	CreateInvItems (slf, ItRu_Firestorm, 1); };
 		
 		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_MELEE)
 		{
-			B_ReadySpell (slf, SPL_InstantFireball,	SPL_Cost_InstantFireball);
+			B_ReadySpell (slf, SPL_Firestorm,	SPL_Cost_InstantFireStorm);
 			return TRUE;
 		}
 		else
@@ -260,10 +220,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Sumpfdrache ------
 	if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_SWAMP)
 	{
-		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)
-		{
-			CreateInvItems (slf, ItRu_InstantFireball, 1);
-		};
+		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)	{	CreateInvItems (slf, ItRu_InstantFireball, 1); };
 		
 		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_DRAGON_MAGIC)
 		{
@@ -279,10 +236,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Felsdrache ------
 	if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ROCK)
 	{
-		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)
-		{
-			CreateInvItems (slf, ItRu_InstantFireball, 1);
-		};
+		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)	{	CreateInvItems (slf, ItRu_InstantFireball, 1); };
 		
 		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_DRAGON_MAGIC)
 		{
@@ -298,10 +252,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Feuerdrache ------
 	if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_FIRE)
 	{
-		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)
-		{
-			CreateInvItems (slf, ItRu_InstantFireball, 1);
-		};
+		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)	{	CreateInvItems (slf, ItRu_InstantFireball, 1); };
 		
 		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_DRAGON_MAGIC)
 		{
@@ -317,10 +268,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Eisdrache ------
 	if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ICE)
 	{
-		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)
-		{
-			CreateInvItems (slf, ItRu_InstantFireball, 1);
-		};
+		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)	{	CreateInvItems (slf, ItRu_InstantFireball, 1); };
 		
 		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_DRAGON_MAGIC)
 		{
@@ -336,11 +284,8 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Untoter Drache (ENDGEGNER) ------
 	if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_UNDEAD)
 	{
-		Npc_ClearAIQueue(self);
-		if (Npc_HasItems (slf, ItRu_Deathball) == 0)
-		{
-			CreateInvItems (slf, ItRu_Deathball, 1);
-		};
+		Npc_ClearAIQueue(slf);
+		if (Npc_HasItems (slf, ItRu_Deathball) == 0)	{	CreateInvItems (slf, ItRu_Deathball, 1); };
 		
 		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_DRAGON_MAGIC)
 		{
@@ -356,20 +301,25 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Ork Schamane ------
 	if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCSHAMAN)
 	{
-		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)
-		{
-			CreateInvItems (slf, ItRu_InstantFireball, 1);
-		};
+		if (Npc_HasItems (slf, ItRu_ChargeFireball) == 0)	{	CreateInvItems (slf, ItRu_ChargeFireball, 1); };
 				
 		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_MELEE)
 		{
-			B_ReadySpell (slf, SPL_InstantFireball, SPL_Cost_InstantFireball);
+			B_ReadySpell (slf, SPL_ChargeFireball, SPL_Cost_ChargeFireball);
 			return TRUE;
 		}
 		else
 		{
 			return FALSE; //Nahkampfangriff
 		};
+	};
+	// ------ Raven ------
+	if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Raven))
+	&& (slf.aivar[AIV_MagicUser] == MAGIC_ALWAYS)
+	{
+		if (Npc_HasItems (slf, ItRu_BeliarsRage) == 0) 		{	CreateInvItems (slf, ItRu_BeliarsRage, 1); };
+		B_ReadySpell (slf, SPL_EnergyBall , SPL_Cost_EnergyBall);
+		return TRUE;
 	};
 	// ------ Hanna ------
 	if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(VLK_414_Hanna))

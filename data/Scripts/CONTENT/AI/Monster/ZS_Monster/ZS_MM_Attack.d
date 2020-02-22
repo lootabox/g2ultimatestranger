@@ -66,6 +66,16 @@ func int ZS_MM_Attack_Loop ()
 			AI_RemoveWeapon(self);
 		};
 	};
+	// ------ Orc Shaman ------
+	if((self.aivar[AIV_MM_REAL_ID] == ID_ORCSHAMAN))
+	{
+		// Switch to melee
+		if (Npc_IsInFightMode(self,FMODE_FIST) || Npc_IsInFightMode(self,FMODE_MELEE))
+		&& (Npc_GetDistToNpc(self,other) > FIGHT_DIST_MELEE)
+		{
+			AI_RemoveWeapon(self);
+		};
+	};
 	// ------ Dragon ------
 	if (self.guild == GIL_DRAGON)
 	{

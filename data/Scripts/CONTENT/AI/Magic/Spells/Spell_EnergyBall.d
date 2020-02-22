@@ -2,8 +2,8 @@
 // SPL_EnergyBall	//k3 - Beliars Rage
 // ******************
 
-const int SPL_Cost_EnergyBall 		= 100;
-const int SPL_Damage_EnergyBall 	= 200;
+const int SPL_Cost_EnergyBall 		= 40;
+const int SPL_Damage_EnergyBall 	= 80;
 
 INSTANCE Spell_EnergyBall (C_Spell_Proto)
 {							
