@@ -927,7 +927,7 @@ const string spellFxAniLetters[MAX_SPELL] =
 
 	// ...
 	"FRZ",  				// 90	SPL_Acid
-	"FIB",  				// 91	SPL_AdanosBall
+	"FBT",  				// 91	SPL_AdanosBall
 	"FRZ",  				// 92	SPL_Explosion
 	"EXP",  				// 93	SPL_Extricate
 	"SLE",  				// 94	SPL_HealOther

@@ -188,6 +188,9 @@ INSTANCE ItMW_Addon_Stab04 (C_Item)
 	damagetype 			=	DAM_BLUNT;
 	range    			=  	RANGE_Stab04;
 	
+	on_equip			=	Equip_Addon_Stab04;
+	on_unequip			=	UnEquip_Addon_Stab04;
+
 	cond_atr[2]   		=	ATR_MANA_MAX;
 	cond_value[2]  		=	Condition_Stab04;
 	visual 				=	"ItMW_MageStaff_Good_2H_02.3DS"; 
@@ -208,6 +211,26 @@ INSTANCE ItMW_Addon_Stab04_Infused (C_Item) {
 	B_CopyWeapon(ItMW_Addon_Stab04_Infused, ItMW_Addon_Stab04);
 	description			= ConcatStrings(description, " (Infused)");
 	TEXT[1]				= NAME_Staff_Ulthar_2;
+};
+FUNC VOID Equip_Addon_Stab04() {
+	spellFxAniLetters[SPL_AdanosBall] = "RPF";
+	spellFxAniLetters[SPL_Firebolt] = "RPF";
+	spellFxAniLetters[SPL_IceLance] = "RPF";
+	spellFxAniLetters[SPL_Icebolt] = "RPF";
+	spellFxAniLetters[SPL_InstantFireball] = "RPF";
+	spellFxAniLetters[SPL_Zap] = "RPF";
+};
+FUNC VOID UnEquip_Addon_Stab04() {
+	// Deactive timer if active
+	if (FF_Active(FF_RapidSpellCombo_Reset)) {
+		FF_Remove(FF_RapidSpellCombo_Reset);
+	};
+	spellFxAniLetters[SPL_AdanosBall] = "FBT";
+	spellFxAniLetters[SPL_Firebolt] = "FBT";
+	spellFxAniLetters[SPL_IceLance] = "FBT";
+	spellFxAniLetters[SPL_Icebolt] = "FBT";
+	spellFxAniLetters[SPL_InstantFireball] = "FBT";
+	spellFxAniLetters[SPL_Zap] = "FBT";
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab05 (C_Item)

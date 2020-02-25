@@ -4188,6 +4188,40 @@ Model ("HuS")
             ani         ("s_FotShoot"           1   "s_FotShoot"    0.0 0.0 M.  "HUM_MAGFOOT_1_60.ASC"      F   42  42)
             ani         ("t_FotShoot_2_Stand"   1   ""              0.0 0.1 M.  "HUM_MAGFOOT_1_60.ASC"      F   43  60)
 
+
+//////////////////////////////////////
+// MAGIC FIGHTING (Cast-Animations) //
+//////////////////////////////////////
+
+//  Rapidfire
+    // RPF Keine Kombo (Ausgangsposition) mit Investphase von 30 Frames (dauert länger)
+            ani         ("t_MagRun_2_RpfShoot"  1   "s_RpfShoot"    0.1 0.0 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F    31  35)
+            ani         ("s_RpfShoot"           1   "s_RpfShoot"    0.0 0.0 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   36  36)
+            ani         ("t_RpfShoot_2_Stand"   1   ""              0.0 0.7 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   38  40)
+    // RP2 Kombo 1
+            ani         ("t_MagRun_2_Rp2Shoot"  1   "s_Rp2Shoot"    0.0 0.0 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   56  60)
+            ani         ("s_Rp2Shoot"           1   "s_Rp2Shoot"    0.0 0.0 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   61  61)
+            ani         ("t_Rp2Shoot_2_Stand"   1   ""              0.0 0.7 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   62  64)
+    // RP3 Kombo 2
+            ani         ("t_MagRun_2_Rp3Shoot"  1   "s_Rp3Shoot"    0.0 0.0 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   31  35)
+            ani         ("s_Rp3Shoot"           1   "s_Rp3Shoot"    0.0 0.0 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   36  36)
+            ani         ("t_Rp3Shoot_2_Stand"   1   ""              0.0 0.7 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   38  40)
+
+
+//  Rapidfire original
+    // RPF Keine Kombo (Ausgangsposition) mit Investphase von 30 Frames (dauert länger)
+            //ani         ("t_MagRun_2_RpfShoot"  1   "s_RpfShoot"    0.1 0.0 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F    1  35)
+            //ani         ("s_RpfShoot"           1   "s_RpfShoot"    0.0 0.0 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   36  36)
+            //ani         ("t_RpfShoot_2_Stand"   1   ""              0.0 0.7 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   37  40)
+    // RP2 Kombo 1
+            //ani         ("t_MagRun_2_Rp2Shoot"  1   "s_Rp2Shoot"    0.0 0.0 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   55  60)
+            //ani         ("s_Rp2Shoot"           1   "s_Rp2Shoot"    0.0 0.0 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   61  61)
+            //ani         ("t_Rp2Shoot_2_Stand"   1   ""              0.0 0.7 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   62  65)
+    // RP3 Kombo 2
+            //ani         ("t_MagRun_2_Rp3Shoot"  1   "s_Rp3Shoot"    0.0 0.0 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   31  35)
+            //ani         ("s_Rp3Shoot"           1   "s_Rp3Shoot"    0.0 0.0 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   36  36)
+            //ani         ("t_Rp3Shoot_2_Stand"   1   ""              0.0 0.7 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   37  40)
+
         }
 }
 

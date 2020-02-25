@@ -1,4 +1,15 @@
 
+// For timing out rapid spell combo animations
+func void FF_RapidSpellCombo_Reset() {
+	spellFxAniLetters[SPL_AdanosBall] = "RPF";
+	spellFxAniLetters[SPL_Firebolt] = "RPF";
+	spellFxAniLetters[SPL_IceLance] = "RPF";
+	spellFxAniLetters[SPL_Icebolt] = "RPF";
+	spellFxAniLetters[SPL_InstantFireball] = "RPF";
+	spellFxAniLetters[SPL_Zap] = "RPF";
+	hero.aivar[AIV_RapidSpellCombo] = 0;
+};
+
 func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 {
 	if (Npc_GetActiveSpellIsScroll(slf) && (slf.attribute[ATR_MANA] >= C_GetScrollCost(manaCost)))
@@ -6,15 +17,58 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 		return SPL_SENDCAST;
 	};
 
-	// Check for Ulthar's
+	// Check for Water mage staff and Ulthar's staves
 	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 	if (Hlp_IsValidItem(wpn))
 	{
-		if (Hlp_IsItem(wpn, ItMW_Addon_Stab04) || Hlp_IsItem(wpn, ItMW_Addon_Stab04_Infused)) { manaCost -= 5; };
+		if (Hlp_IsItem(wpn, ItMW_Addon_Stab03) || Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused)) { manaCost -= 3; };
 	};
 
 	if (slf.attribute[ATR_MANA] >= manaCost)
-	{	
+	{
+		if (Hlp_IsValidItem(wpn)) {
+			if (Hlp_IsItem(wpn, ItMw_Addon_Stab04) || Hlp_IsItem(wpn, ItMw_Addon_Stab04_Infused)) {
+				// Deactive timer if active
+				if (FF_Active(FF_RapidSpellCombo_Reset)) {
+					FF_Remove(FF_RapidSpellCombo_Reset);
+				};
+				// Set animation for next (!) Casting
+				if (slf.aivar[AIV_RapidSpellCombo] == 0) {
+					// From the cast animation to the first rapid-fire combo (left)
+					spellFxAniLetters[SPL_AdanosBall] = "RP2";
+					spellFxAniLetters[SPL_Firebolt] = "RP2";
+					spellFxAniLetters[SPL_IceLance] = "RP2";
+					spellFxAniLetters[SPL_Icebolt] = "RP2";
+					spellFxAniLetters[SPL_InstantFireball] = "RP2";
+					spellFxAniLetters[SPL_Zap] = "RP2";
+					slf.aivar[AIV_RapidSpellCombo] = 1;
+					// Set time window for next combo (is longer than usual!)
+					FF_ApplyExt(FF_RapidSpellCombo_Reset, 600, 1);
+				} else if (slf.aivar[AIV_RapidSpellCombo] == 1) {
+					// From the first rapid-fire combo (left) to the second (right)
+					spellFxAniLetters[SPL_AdanosBall] = "RP3";
+					spellFxAniLetters[SPL_Firebolt] = "RP3";
+					spellFxAniLetters[SPL_IceLance] = "RP3";
+					spellFxAniLetters[SPL_Icebolt] = "RP3";
+					spellFxAniLetters[SPL_InstantFireball] = "RP3";
+					spellFxAniLetters[SPL_Zap] = "RP3";
+					slf.aivar[AIV_RapidSpellCombo] = 2;
+					// Set timer for next combo
+					FF_ApplyExt(FF_RapidSpellCombo_Reset, 600, 1);
+				} else {
+					// From the second rapid-fire combo (right) to the first (left)
+					spellFxAniLetters[SPL_AdanosBall] = "RP2";
+					spellFxAniLetters[SPL_Firebolt] = "RP2";
+					spellFxAniLetters[SPL_IceLance] = "RP2";
+					spellFxAniLetters[SPL_Icebolt] = "RP2";
+					spellFxAniLetters[SPL_InstantFireball] = "RP2";
+					spellFxAniLetters[SPL_Zap] = "RP2";
+					slf.aivar[AIV_RapidSpellCombo] = 1;
+					// Set timer for next combo
+					FF_ApplyExt(FF_RapidSpellCombo_Reset, 600, 1);
+				};
+			};
+		};
 		return SPL_SENDCAST;
 	}
 	else

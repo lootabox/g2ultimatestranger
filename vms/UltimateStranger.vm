@@ -75,6 +75,9 @@ _work\Data\Anims\_compiled\HUMANS-S_PILLAR_S0.MAN -r
 _work\Data\Anims\_compiled\HUMANS-S_PILLAR_S1.MAN -r
 _work\Data\Anims\_compiled\HUMANS-S_PRIESTGRAVE_S0.MAN -r
 _work\Data\Anims\_compiled\HUMANS-S_PRIESTGRAVE_S1.MAN -r
+_work\Data\Anims\_compiled\HUMANS-S_RP2SHOOT.MAN -r
+_work\Data\Anims\_compiled\HUMANS-S_RP3SHOOT.MAN -r
+_work\Data\Anims\_compiled\HUMANS-S_RPFSHOOT.MAN -r
 _work\Data\Anims\_compiled\HUMANS-S_SPORTAL_S0.MAN -r
 _work\Data\Anims\_compiled\HUMANS-S_SPORTAL_S1.MAN -r
 _work\Data\Anims\_compiled\HUMANS-T_BARRELO_S0_2_S1.MAN -r
@@ -96,6 +99,9 @@ _work\Data\Anims\_compiled\HUMANS-T_FOTCAST_2_FOTSHOOT.MAN -r
 _work\Data\Anims\_compiled\HUMANS-T_FOTSHOOT_2_STAND.MAN -r
 _work\Data\Anims\_compiled\HUMANS-T_MAGRUN_2_EXPCAST.MAN -r
 _work\Data\Anims\_compiled\HUMANS-T_MAGRUN_2_FOTCAST.MAN -r
+_work\Data\Anims\_compiled\HUMANS-T_MAGRUN_2_RP2SHOOT.MAN -r
+_work\Data\Anims\_compiled\HUMANS-T_MAGRUN_2_RP3SHOOT.MAN -r
+_work\Data\Anims\_compiled\HUMANS-T_MAGRUN_2_RPFSHOOT.MAN -r
 _work\Data\Anims\_compiled\HUMANS-T_MAGWND_AIM_HURT.MAN -r
 _work\Data\Anims\_compiled\HUMANS-T_MAG_AIM_HURT.MAN -r
 _work\Data\Anims\_compiled\HUMANS-T_PILLAR_S0_2_S1.MAN -r
@@ -106,6 +112,9 @@ _work\Data\Anims\_compiled\HUMANS-T_PRIESTGRAVE_S0_2_S1.MAN -r
 _work\Data\Anims\_compiled\HUMANS-T_PRIESTGRAVE_S0_2_STAND.MAN -r
 _work\Data\Anims\_compiled\HUMANS-T_PRIESTGRAVE_S1_2_STAND.MAN -r
 _work\Data\Anims\_compiled\HUMANS-T_PRIESTGRAVE_STAND_2_S0.MAN -r
+_work\Data\Anims\_compiled\HUMANS-T_RP2SHOOT_2_STAND.MAN -r
+_work\Data\Anims\_compiled\HUMANS-T_RP3SHOOT_2_STAND.MAN -r
+_work\Data\Anims\_compiled\HUMANS-T_RPFSHOOT_2_STAND.MAN -r
 _work\Data\Anims\_compiled\HUMANS-T_SPORTAL_S0_2_S1.MAN -r
 _work\Data\Anims\_compiled\HUMANS-T_SPORTAL_S0_2_STAND.MAN -r
 _work\Data\Anims\_compiled\HUMANS-T_SPORTAL_S1_2_STAND.MAN -r

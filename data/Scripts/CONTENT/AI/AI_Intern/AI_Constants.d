@@ -344,9 +344,10 @@ const int REAL_TALENT_CROSSBOW				= 87;
 const int AIV_SpellLevel 					= 88;
 
 // ***************************************************
-// CUSTOM AIVAR (min 90, max 99)
+// CUSTOM AIVAR (min 89, max 99)
 // ***************************************************
 
+const int AIV_RapidSpellCombo				= 89;
 const int REAL_LEVEL						= 90;
 const int AIV_RageStateTime                 = 91;
 const int AIV_CageStateTime                 = 92;
