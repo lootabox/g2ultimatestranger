@@ -363,13 +363,13 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 			if	(!C_NpcIsUndead(self))
 			&&	(self.attribute[ATR_HITPOINTS] == self.attribute[ATR_HITPOINTS_MAX])
 			{
-				// Thunder staff
+				// Typhoon
 				var c_npc wpn; wpn = Npc_GetEquippedMeleeWeapon(other);
 				if (Hlp_IsValidItem(wpn))
 				{
 					// Bonus 1: Stun on full hp
-					if (Hlp_IsItem(wpn, ItMW_Addon_Stab02))
-					|| (Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused))
+					if (Hlp_IsItem(wpn, ItMW_Addon_Stab05))
+					|| (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
 					{
 						applyState = applyState | COLL_APPLYVICTIMSTATE;
 					};

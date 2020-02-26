@@ -743,17 +743,16 @@ const string NAME_Stun_AdanosBall	= "Stuns all targets, undead for twice as long
 const string NAME_BeliarsRage_Info	= "Deals double damage against non-evil targets. ";
 
 // MAX LENGTH						"------------------------------------------------------------";
-const string NAME_Staff_Fire_1		= "Fire spells deal +10 damage against burning targets.";
-const string NAME_Staff_Fire_2		= "Fire spells deal 50% more damage over time.";
-const string NAME_Staff_Thunder_1	= "Lightning spells stun targets on full hit points.";
-const string NAME_Staff_Thunder_2	= "Lightning spells penetrate +20 magic protection.";
-const string NAME_Staff_Water_1		= "Ice and Water spells cost 3 less mana to cast.";
+const string NAME_Staff_Fire_1		= "Fire spell burn rate increase (percentage):";
+const string NAME_Staff_Fire_2		= "Fire spell burn damage and rate increase (percentage):";
+const string NAME_Staff_Magic_1		= "Mana cost on full mana (percentage):";
+const string NAME_Staff_Magic_2		= "Mana cost and recovery rate on full mana (percentage):";
+const string NAME_Staff_Water_1		= "Ice spell mana cost reduction:";
 const string NAME_Staff_Water_2		= "";
 const string NAME_Staff_Ulthar_1	= "Simple projectile spells can be cast rapidly.";
 const string NAME_Staff_Ulthar_2	= "Chargeable spells are charged 30% faster.";
-const string NAME_Staff_Typhoon_1	= "";
-const string NAME_Staff_Typhoon_2	= "";
-
+const string NAME_Staff_Typhoon_1	= "Lightning spells stun targets on full hitpoints.";
+const string NAME_Staff_Typhoon_2	= "Lightning spells penetrate +20 magic protection.";
 
 //const string NAME_Damage		= "Damage:";
 //const string NAME_Damage_Max	= "Maximum damage:";

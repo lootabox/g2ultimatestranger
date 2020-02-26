@@ -109,7 +109,7 @@ INSTANCE ItRu_Explosion (C_Item)
 	COUNT	[2]			=	SPL_Damage_Explosion;
 
 	TEXT	[3]			=	ConcatStrings(NAME_Dot_Half, NAME_Sec_Duration);
-	COUNT	[3]			=	BURN_DOT_VFX_DURATION_SEC / 1000;
+	COUNT	[3]			=	BURN_DOT_VFX_DURATION_SEC;
 
     TEXT    [5]         =   NAME_Value;
     COUNT   [5]         =   value;

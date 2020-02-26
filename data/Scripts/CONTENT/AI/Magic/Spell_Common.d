@@ -17,11 +17,26 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 		return SPL_SENDCAST;
 	};
 
-	// Check for Water mage staff and Ulthar's staves
+	// Check for Water mage staff and magic staff
 	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 	if (Hlp_IsValidItem(wpn))
 	{
-		if (Hlp_IsItem(wpn, ItMW_Addon_Stab03) || Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused)) { manaCost -= 3; };
+		if (Hlp_IsItem(wpn, ItMW_Addon_Stab03) || Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused)) {
+			var int spellID; spellID = Npc_GetActiveSpell(self);
+			if	(spellID == SPL_Icebolt)
+			||	(spellID == SPL_IceLance)
+			||	(spellID == SPL_IceCube)
+			||	(spellID == SPL_IceWave)
+			||	(spellID == SPL_Geyser)
+			||	(spellID == SPL_WaterFist)
+			||	(spellID == SPL_Thunderstorm)
+			{
+				manaCost -= 3;
+			};
+		}
+		else if (Hlp_IsItem(wpn, ItMW_Addon_Stab02) || Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused)) {
+			if (slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) { manaCost /= 2; };
+		};
 	};
 
 	if (slf.attribute[ATR_MANA] >= manaCost)
@@ -100,8 +115,11 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 				||	(spellID == SPL_WaterFist)
 				||	(spellID == SPL_Thunderstorm)
 				{
-					manaCost -= 5;
+					manaCost -= 3;
 				};
+			}
+			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab02) || Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused)) {
+				if (slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) { manaCost /= 2; };
 			};
 		};
 
@@ -123,6 +141,9 @@ func int Spell_Logic_Invest(var C_NPC slf, var int manaInvested, var int STEP_si
 			if (Hlp_IsItem(wpn, ItMW_Addon_Stab04_Infused))
 			{
 				STEP_size = STEP_size * 7 / 10;
+			}
+			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab02) || Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused)) {
+				if (slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) { STEP_cost /= 2; };
 			};
 		};
 	};

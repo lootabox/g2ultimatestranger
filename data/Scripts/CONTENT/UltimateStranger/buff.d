@@ -7,13 +7,13 @@
 var int TAL_DOT_VENOM_TOTAL;    // Percentage
 var int TAL_DOT_VENOM_SPEED;    // Percentage per second
 var int TAL_DOT_BURN_TOTAL;     // Damage
-var int TAL_DOT_BURN_TICK;      // Tick number
+var int TAL_DOT_BURN_TICKS;      // Tick number
 func void InitBuffTalents() {
     if (!TAL_DOT_VENOM_TOTAL) {
         TAL_DOT_VENOM_TOTAL = TAL_CreateTalent();
         TAL_DOT_VENOM_SPEED = TAL_CreateTalent();
         TAL_DOT_BURN_TOTAL = TAL_CreateTalent();
-        TAL_DOT_BURN_TICK = TAL_CreateTalent();
+        TAL_DOT_BURN_TICKS = TAL_CreateTalent();
     };
 };
 
@@ -78,10 +78,10 @@ func void dot_burn_tick(var int bh) {
     // Calculate dot
     var int burn_total; burn_total = TAL_GetValue(n, TAL_DOT_BURN_TOTAL);
     if (n.attribute[ATR_HITPOINTS] > 0) && (burn_total) > 0 {
-        var int burn_tick; burn_tick = TAL_GetValue(n, TAL_DOT_BURN_TICK);
-        var int dot; dot = burn_total / (BURN_DOT_VFX_DURATION_SEC - burn_tick);
+        var int burn_tick; burn_tick = TAL_GetValue(n, TAL_DOT_BURN_TICKS);
+        var int dot; dot = burn_total / burn_tick;
         TAL_ModValue(n, TAL_DOT_BURN_TOTAL, -dot);
-        TAL_ModValue(n, TAL_DOT_BURN_TICK, 1);
+        TAL_ModValue(n, TAL_DOT_BURN_TICKS, -1);
 
         // Deal damage and check for murder
         ptr = Buff_GetNpcOrigin(bh);
@@ -95,7 +95,7 @@ func void dot_burn_tick(var int bh) {
         };
     } else {
         TAL_SetValue(n, TAL_DOT_BURN_TOTAL, 0);
-        TAL_SetValue(n, TAL_DOT_BURN_TICK, 0);
+        TAL_SetValue(n, TAL_DOT_BURN_TICKS, 0);
         Buff_Remove(bh);
     };
 };
@@ -135,10 +135,10 @@ func void dot_venom_remove(var c_npc npc, var int percentage) {
 };
 
 // Burn is applied by damage and can only be removed fully
-func void dot_burn_apply(var c_npc npc, var int damage, var c_npc origin) {
+func void dot_burn_apply(var c_npc npc, var int damage, var int ticks, var c_npc origin) {
     Buff_RemoveAll(npc, dot_burn);
+    TAL_SetValue(npc, TAL_DOT_BURN_TICKS, ticks);
     TAL_ModValue(npc, TAL_DOT_BURN_TOTAL, damage);
-    TAL_SetValue(npc, TAL_DOT_BURN_TICK, 0);
     Buff_Apply(npc, dot_burn, origin);
     Wld_StopEffect_Ext("VOB_BURN", npc, npc, FALSE);
     Wld_PlayEffect ("VOB_BURN", npc, npc, 0, 0, 0, FALSE);
@@ -146,7 +146,7 @@ func void dot_burn_apply(var c_npc npc, var int damage, var c_npc origin) {
 func void dot_burn_remove(var c_npc npc) {
     Buff_RemoveAll(npc, dot_venom);
     TAL_SetValue(npc, TAL_DOT_BURN_TOTAL, 0);
-    TAL_SetValue(npc, TAL_DOT_BURN_TICK, 0);
+    TAL_SetValue(npc, TAL_DOT_BURN_TICKS, 0);
     Wld_StopEffect_Ext("VOB_BURN", npc, npc, FALSE);
 };
 

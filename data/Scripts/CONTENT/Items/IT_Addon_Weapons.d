@@ -90,8 +90,8 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 
 	description			= 	"Staff of the Fire Magicians";
 
-	TEXT[0]				= NAME_Staff_Fire_1;
-	//TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
+	TEXT[0]				= NAME_Staff_Fire_1;			COUNT[0]	= 100;
+	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
@@ -101,12 +101,12 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 INSTANCE ItMW_Addon_Stab01_Infused (C_Item) {
 	B_CopyWeapon(ItMW_Addon_Stab01_Infused, ItMW_Addon_Stab01);
 	description			= ConcatStrings(description, " (Infused)");
-	TEXT[1]				= NAME_Staff_Fire_2;
+	TEXT[0]				= NAME_Staff_Fire_2;			COUNT[0]	= 50;
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab02 (C_Item)
 {	
-	name 				=	"Staff of Thunder";  
+	name 				=	"Magic Staff";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -126,8 +126,8 @@ INSTANCE ItMW_Addon_Stab02 (C_Item)
 
 	description			= 	name;
 
-	TEXT[0]				= NAME_Staff_Thunder_1;
-	//TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
+	TEXT[0]				= NAME_Staff_Magic_1;			COUNT[0]	= 50;
+	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_TwoHanded;
@@ -136,7 +136,7 @@ INSTANCE ItMW_Addon_Stab02 (C_Item)
 INSTANCE ItMW_Addon_Stab02_Infused (C_Item) {
 	B_CopyWeapon(ItMW_Addon_Stab02_Infused, ItMW_Addon_Stab02);
 	description			= ConcatStrings(description, " (Infused)");
-	TEXT[1]				= NAME_Staff_Thunder_2;
+	TEXT[0]				= NAME_Staff_Magic_2;			COUNT[0]	= 50;
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab03 (C_Item)
@@ -162,7 +162,7 @@ INSTANCE ItMW_Addon_Stab03 (C_Item)
 	description			= 	"Staff of the Water Mages";
 
 	TEXT[0]				= NAME_Staff_Water_1;
-	//TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
+	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
@@ -171,7 +171,7 @@ INSTANCE ItMW_Addon_Stab03 (C_Item)
 INSTANCE ItMW_Addon_Stab03_Infused (C_Item) {
 	B_CopyWeapon(ItMW_Addon_Stab03_Infused, ItMW_Addon_Stab03);
 	description			= ConcatStrings(description, " (Infused)");
-	TEXT[1]				= NAME_Staff_Water_2;
+	TEXT[0]				= NAME_Staff_Water_2;
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab04 (C_Item)
@@ -201,7 +201,7 @@ INSTANCE ItMW_Addon_Stab04 (C_Item)
 
 	//TEXT[0]				= "Ulthar enchanted this staff.";
 	TEXT[0]				= NAME_Staff_Ulthar_1;
-	//TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
+	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
@@ -210,7 +210,7 @@ INSTANCE ItMW_Addon_Stab04 (C_Item)
 INSTANCE ItMW_Addon_Stab04_Infused (C_Item) {
 	B_CopyWeapon(ItMW_Addon_Stab04_Infused, ItMW_Addon_Stab04);
 	description			= ConcatStrings(description, " (Infused)");
-	TEXT[1]				= NAME_Staff_Ulthar_2;
+	TEXT[0]				= NAME_Staff_Ulthar_2;
 };
 FUNC VOID Equip_Addon_Stab04() {
 	spellFxAniLetters[SPL_AdanosBall] = "RPF";
@@ -255,7 +255,7 @@ INSTANCE ItMW_Addon_Stab05 (C_Item)
 	description			= 	name;
 
 	TEXT[0]				=  NAME_Staff_Typhoon_1;
-	//TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
+	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
@@ -264,7 +264,7 @@ INSTANCE ItMW_Addon_Stab05 (C_Item)
 INSTANCE ItMW_Addon_Stab05_Infused (C_Item) {
 	B_CopyWeapon(ItMW_Addon_Stab05_Infused, ItMW_Addon_Stab05);
 	description			= ConcatStrings(description, " (Infused)");
-	TEXT[1]				= NAME_Staff_Typhoon_2;
+	TEXT[0]				= NAME_Staff_Typhoon_2;
 };
 /********************************************************************************/
 INSTANCE ItMW_Addon_Hacker_1h_01 (C_Item) 

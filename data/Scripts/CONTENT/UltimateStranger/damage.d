@@ -198,7 +198,7 @@ func int Handle_Fist_Dmg(var c_npc vic, var c_npc att)
 	if (dmg > 1 && (att.aivar[AIV_MM_REAL_ID] == ID_FIREWARAN || att.guild == GIL_DRAGON))
 	{
 		var int fireDot; fireDot = dmg;
-		dot_burn_apply(vic, fireDot, att);
+		dot_burn_apply(vic, fireDot, 4, att);
 	};
 
 	return dmg;
@@ -228,7 +228,7 @@ var string pristr; pristr = IntToString(dmg);
 	||	(spellID == SPL_Explosion)
 	{
 		// Figure out burn dot
-		var int fireDot;
+		var int fireDot; var int fireTicks; fireTicks = BURN_DOT_VFX_DURATION_SEC;
 		if		(spellID == SPL_Firerain)	{ fireDot = dmg; }
 		else								{ fireDot = dmg / 2; };
 		dmg -= fireDot;
@@ -239,15 +239,13 @@ var string pristr; pristr = IntToString(dmg);
 			if (Hlp_IsItem(wpn, ItMW_Addon_Stab01))
 			|| (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
 			{
-				// Bonus 1: Damage Bonus vs. burning (+10)
-				if (Buff_Has(vic, dot_burn))
-				{
-					dmg += 10;
-				};
-				// Bonus 2: Burning (+20%)
+				// Bonus 1: Faster burn
+				fireTicks = BURN_DOT_VFX_DURATION_SEC / 2;
+				// Bonus 2: Burning (+50%)
 				if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
 				{
-					fireDot = fireDot * 6 / 5;
+					fireDot = fireDot * 3 / 2;
+					fireTicks = BURN_DOT_VFX_DURATION_SEC * 3 / 2;
 				};
 			};
 		};
@@ -260,7 +258,7 @@ var string pristr; pristr = IntToString(dmg);
 		// Create dot debuff
 		else if (fireDot > 0)
 		{
-			dot_burn_apply(vic, fireDot, att);
+			dot_burn_apply(vic, fireDot, fireTicks, att);
 pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(fireDot)));
 		};
 	}
@@ -323,11 +321,11 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 				AI_PlayAni(vic, "T_STUMBLE");
 			};
 		};
-		// Thunder staff
+		// Typhoon
 		if (Hlp_IsValidItem(wpn))
 		{
 			// Bonus 2: Ignore protection
-			if (Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused))
+			if (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
 			{
 				if (prot < 20)
 				{ dmg += prot; }
