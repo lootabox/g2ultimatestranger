@@ -82,14 +82,14 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		};
 		if (C_NpcIsFireBase(self))
 		{
-			return COLL_APPLYDOUBLEDAMAGE;
+			return COLL_APPLYDOUBLEDAMAGE | COLL_APPLYVICTIMSTATE;
 		};
 		if (C_NpcIsLarge(self))
 		{
 			return COLL_APPLYHALVEDAMAGE;
 		};
 		
-		return COLL_APPLYDAMAGE | COLL_DONTKILL;
+		return COLL_APPLYDAMAGE | COLL_APPLYVICTIMSTATE | COLL_DONTKILL;
 	};
 
 	//###	Beliar	###
@@ -255,7 +255,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		};
 	};
 
-	if (other.guild = GIL_DRACONIAN)
+	if (other.guild == GIL_DRACONIAN)
 	{
 		if (self.guild == GIL_FIREGOLEM)
 		&& (spellType == SPL_Firestorm)
@@ -355,26 +355,10 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		// Check for APPLYVICTIMSTATE
 		var int applyState; applyState = COLL_DONOTHING;
 		if	(spellType == SPL_AdanosBall)
+		||	(!C_NpcIsUndead(self))
+		&&	(self.attribute[ATR_HITPOINTS] >= self.attribute[ATR_HITPOINTS_MAX])
 		{
 			applyState = applyState | COLL_APPLYVICTIMSTATE;
-		}
-		else
-		{
-			if	(!C_NpcIsUndead(self))
-			&&	(self.attribute[ATR_HITPOINTS] == self.attribute[ATR_HITPOINTS_MAX])
-			{
-				// Typhoon
-				var c_npc wpn; wpn = Npc_GetEquippedMeleeWeapon(other);
-				if (Hlp_IsValidItem(wpn))
-				{
-					// Bonus 1: Stun on full hp
-					if (Hlp_IsItem(wpn, ItMW_Addon_Stab05))
-					|| (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
-					{
-						applyState = applyState | COLL_APPLYVICTIMSTATE;
-					};
-				};
-			};
 		};
 
 		if (C_NpcIsWaterBase(self))

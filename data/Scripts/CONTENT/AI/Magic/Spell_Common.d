@@ -17,10 +17,10 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 		return SPL_SENDCAST;
 	};
 
-	// Check for Water mage staff and magic staff
 	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 	if (Hlp_IsValidItem(wpn))
 	{
+		// Staff of water mage
 		if (Hlp_IsItem(wpn, ItMW_Addon_Stab03) || Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused)) {
 			var int spellID; spellID = Npc_GetActiveSpell(self);
 			if	(spellID == SPL_Icebolt)
@@ -34,6 +34,7 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 				manaCost -= 3;
 			};
 		}
+		// Magic staff
 		else if (Hlp_IsItem(wpn, ItMW_Addon_Stab02) || Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused)) {
 			if (slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) { manaCost /= 2; };
 		};
@@ -42,7 +43,8 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 	if (slf.attribute[ATR_MANA] >= manaCost)
 	{
 		if (Hlp_IsValidItem(wpn)) {
-			if (Hlp_IsItem(wpn, ItMw_Addon_Stab04) || Hlp_IsItem(wpn, ItMw_Addon_Stab04_Infused)) {
+			// Typhoon
+			if (Hlp_IsItem(wpn, ItMw_Addon_Stab05) || Hlp_IsItem(wpn, ItMw_Addon_Stab05_Infused)) {
 				// Deactive timer if active
 				if (FF_Active(FF_RapidSpellCombo_Reset)) {
 					FF_Remove(FF_RapidSpellCombo_Reset);
@@ -100,10 +102,10 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 	}
 	else
 	{
-		// Check for water staff mana cost reduction
 		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 		if (Hlp_IsValidItem(wpn))
 		{
+			// Staff of water mage
 			if (Hlp_IsItem(wpn, ItMW_Addon_Stab03) || Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
 			{
 				var int spellID; spellID = Npc_GetActiveSpell(self);
@@ -118,6 +120,7 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 					manaCost -= 3;
 				};
 			}
+			// Magic staff
 			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab02) || Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused)) {
 				if (slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) { manaCost /= 2; };
 			};
@@ -134,14 +137,15 @@ func int Spell_Logic_Invest(var C_NPC slf, var int manaInvested, var int STEP_si
 	if (Npc_GetActiveSpellIsScroll(slf)) {STEP_cost = C_GetScrollCost(STEP_cost);}
 	else
 	{
-		// Check for Ulthar's
 		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 		if (Hlp_IsValidItem(wpn))
 		{
-			if (Hlp_IsItem(wpn, ItMW_Addon_Stab04_Infused))
+			// Typhoon
+			if (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
 			{
 				STEP_size = STEP_size * 7 / 10;
 			}
+			// Magic staff
 			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab02) || Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused)) {
 				if (slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) { STEP_cost /= 2; };
 			};

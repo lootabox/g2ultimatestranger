@@ -312,25 +312,14 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 		||	(spellID == SPL_LightningFlash)
 		||	(spellID == SPL_AdanosBall)
 	{
-		// Lightning spell stagger
+		// Lightning spell stagger at full hitpoints
 		if	(!C_NpcIsUndead(vic))
-		||	(spellID == SPL_AdanosBall)
+		&&	(spellID != SPL_AdanosBall)
+		&&	(self.attribute[ATR_HITPOINTS] >= self.attribute[ATR_HITPOINTS_MAX])
 		{
 			if (!Npc_HasBodyFlag(vic, BS_FLAG_INTERRUPTABLE))
 			{
 				AI_PlayAni(vic, "T_STUMBLE");
-			};
-		};
-		// Typhoon
-		if (Hlp_IsValidItem(wpn))
-		{
-			// Bonus 2: Ignore protection
-			if (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
-			{
-				if (prot < 20)
-				{ dmg += prot; }
-				else
-				{ dmg += 20; };
 			};
 		};
 	}

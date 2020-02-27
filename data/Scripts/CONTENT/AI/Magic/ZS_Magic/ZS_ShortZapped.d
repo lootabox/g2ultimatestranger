@@ -5,8 +5,7 @@
 // aus ZS_Zapped aufgerufen
 // **************************************
 
-const int SPL_TIME_SHORTZAPPED = 3;
-const int SPL_TIME_SHORTZAPPED_UNDEAD = SPL_TIME_SHORTZAPPED * 2;
+const int SPL_TIME_SHORTZAPPED = 2;
 
 // **********************************
 // ZS_ShortZapped
@@ -25,10 +24,7 @@ func int ZS_ShortZapped()
 	{
 		AI_StandUpQuick (self);
 	};
-	if (TRUE)
-	{
-		AI_PlayAni			(self, "T_STAND_2_LIGHTNING_VICTIM" );
-	};
+	AI_PlayAni			(self, "T_STAND_2_LIGHTNING_VICTIM" );
 
 	Wld_PlayEffect ("spellFX_Lightning_TARGET", self, self, 0, 0, 0, FALSE);
 	self.aivar[AIV_FreezeStateTime] = 0;
@@ -37,9 +33,7 @@ func int ZS_ShortZapped()
 
 func int ZS_ShortZapped_Loop ()
 {	
-	if	(Npc_GetStateTime(self) >= SPL_TIME_SHORTZAPPED_UNDEAD)
-	||	(Npc_GetStateTime(self) >= SPL_TIME_SHORTZAPPED)
-	&&	(!C_NpcIsUndead(self))
+	if	(Npc_GetStateTime(self) >= SPL_TIME_SHORTZAPPED)
 	{
 		return LOOP_END;
 	};
@@ -49,8 +43,7 @@ func int ZS_ShortZapped_Loop ()
 		self.aivar[AIV_FreezeStateTime] = Npc_GetStateTime(self);
 
 		// Make sure to keep playing vfx
-		if	(C_NpcIsUndead(self))
-		&&	(Npc_GetStateTime(self) == SPL_TIME_SHORTZAPPED)
+		if	(Npc_GetStateTime(self) == SPL_TIME_SHORTZAPPED)
 		{
 			Wld_PlayEffect ("spellFX_Lightning_TARGET", self, self, 0, 0, 0, FALSE);
 		};

@@ -5963,7 +5963,7 @@ INSTANCE spellFX_Adanosball (CFx_Base_Proto)
     {
         visname_S           = "MFX_ADANOSBALL_CAST";
         emtrjmode_s         = "TARGET";
-        emtrjeasevel        = 3000;
+        emtrjeasevel        = 2000;
         sfxid               = "MFX_Thunderball_Collide3";
         lightrange          = 100;
         emCheckCollision    = 1;
