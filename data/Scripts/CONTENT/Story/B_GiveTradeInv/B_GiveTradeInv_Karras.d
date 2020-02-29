@@ -22,6 +22,10 @@ FUNC VOID B_GiveTradeInv_Karras (var C_NPC slf)
 		CreateInvItems(slf,ItSc_TrfWolf,1);
 		CreateInvItems(slf,ItSc_SumGobSkel,1);
 		CreateInvItems(slf,ItSc_SumWolf,1);
+		if((hero.guild == GIL_NOV) || (hero.guild == GIL_KDF))
+		{
+			CreateInvItems(slf,ItMw_Addon_Stab02,1);
+		};
 		Karras_ItemsGiven_Chapter_2 = TRUE;
 	};
 	if((Kapitel >= 3) && (Karras_ItemsGiven_Chapter_3 == FALSE))

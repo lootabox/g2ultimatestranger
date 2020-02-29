@@ -49,6 +49,7 @@ FUNC VOID B_GiveTradeInv_Addon_Cronos_ADW (var C_NPC slf)
 		if((hero.guild == GIL_NOV) || (hero.guild == GIL_KDF))
 		{
 			CreateInvItems(slf,ItMi_RuneBlank,2);
+			CreateInvItems(slf,ItMw_Addon_Stab03,1);
 		};
 		//***********************************
 		

@@ -355,7 +355,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		// Check for APPLYVICTIMSTATE
 		var int applyState; applyState = COLL_DONOTHING;
 		if	(spellType == SPL_AdanosBall)
-		||	(!C_NpcIsUndead(self))
+		&&	(!C_NpcIsUndead(self))
 		&&	(self.attribute[ATR_HITPOINTS] >= self.attribute[ATR_HITPOINTS_MAX])
 		{
 			applyState = applyState | COLL_APPLYVICTIMSTATE;

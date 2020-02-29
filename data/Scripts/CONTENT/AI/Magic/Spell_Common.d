@@ -1,4 +1,7 @@
 
+// Rather crude, but should be fine since there is only one water mage staff in the game
+var int Staff_Water_Charged;
+
 // For timing out rapid spell combo animations
 func void FF_RapidSpellCombo_Reset() {
 	spellFxAniLetters[SPL_AdanosBall] = "RPF";
@@ -21,7 +24,7 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 	if (Hlp_IsValidItem(wpn))
 	{
 		// Staff of water mage
-		if (Hlp_IsItem(wpn, ItMW_Addon_Stab03) || Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused)) {
+		if (Hlp_IsItem(wpn, ItMW_Addon_Stab03)) {
 			var int spellID; spellID = Npc_GetActiveSpell(self);
 			if	(spellID == SPL_Icebolt)
 			||	(spellID == SPL_IceLance)
@@ -31,12 +34,15 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 			||	(spellID == SPL_WaterFist)
 			||	(spellID == SPL_Thunderstorm)
 			{
-				manaCost -= 3;
+				manaCost = manaCost * 4 / 5;
 			};
 		}
-		// Magic staff
-		else if (Hlp_IsItem(wpn, ItMW_Addon_Stab02) || Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused)) {
-			if (slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) { manaCost /= 2; };
+		else if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
+		{
+			if (Staff_Water_Charged == TRUE)
+			{
+				manaCost = manaCost * 3 / 4;
+			};
 		};
 	};
 
@@ -106,7 +112,7 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 		if (Hlp_IsValidItem(wpn))
 		{
 			// Staff of water mage
-			if (Hlp_IsItem(wpn, ItMW_Addon_Stab03) || Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
+			if (Hlp_IsItem(wpn, ItMW_Addon_Stab03))
 			{
 				var int spellID; spellID = Npc_GetActiveSpell(self);
 				if	(spellID == SPL_Icebolt)
@@ -117,12 +123,26 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 				||	(spellID == SPL_WaterFist)
 				||	(spellID == SPL_Thunderstorm)
 				{
-					manaCost -= 3;
+					manaCost = manaCost * 4 / 5;
 				};
 			}
-			// Magic staff
-			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab02) || Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused)) {
-				if (slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) { manaCost /= 2; };
+			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
+			{
+				if (Staff_Water_Charged == TRUE)
+				{
+					manaCost = manaCost * 3 / 4;
+					Staff_Water_Charged = FALSE;
+				};
+				if	(spellID == SPL_Icebolt)
+				||	(spellID == SPL_IceLance)
+				||	(spellID == SPL_IceCube)
+				||	(spellID == SPL_IceWave)
+				||	(spellID == SPL_Geyser)
+				||	(spellID == SPL_WaterFist)
+				||	(spellID == SPL_Thunderstorm)
+				{
+					Staff_Water_Charged = TRUE;
+				};
 			};
 		};
 
@@ -140,14 +160,21 @@ func int Spell_Logic_Invest(var C_NPC slf, var int manaInvested, var int STEP_si
 		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 		if (Hlp_IsValidItem(wpn))
 		{
+			// Staff of water mage
+			if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
+			{
+				if (Staff_Water_Charged == TRUE)
+				&& (firstTierNoManaCost == FALSE)
+				{
+					STEP_cost = STEP_cost * 3 / 4;
+					Staff_Water_Charged = FALSE;
+					// no charged ice/water spells
+				};
+			}
 			// Typhoon
-			if (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
+			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
 			{
 				STEP_size = STEP_size * 7 / 10;
-			}
-			// Magic staff
-			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab02) || Hlp_IsItem(wpn, ItMW_Addon_Stab02_Infused)) {
-				if (slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) { STEP_cost /= 2; };
 			};
 		};
 	};

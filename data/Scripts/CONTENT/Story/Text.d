@@ -718,20 +718,20 @@ const string NAME_Dam_Magic		= "Magic damage:";
 //const string NAME_Dam_Fly		= "Wind damage:";
 const string NAME_Dam_Magic_Per	= "Magic damage per tier:";
 
-const string NAME_Dot_Half		= "Half damage is dealt over time. ";
-const string NAME_Dot_Full		= "All damage is dealt over time. ";
-const string NAME_Ice_Freeze	= "Freezes targets while dealing damage over time. ";
-const string NAME_Rage			= "Forces the target to attack the nearest creature. ";
+const string NAME_Dot_Half				= "Half damage is dealt over time. ";
+const string NAME_Dot_Full				= "All damage is dealt over time. ";
+const string NAME_Ice_Freeze			= "Freezes targets while dealing damage over time. ";
+const string NAME_Rage					= "Forces the target to attack the nearest creature. ";
 
-// MAX LENGTH					"------------------------------------------------------------";
-const string NAME_Zap			= "Shocks unharmed living targets. ";
-const string NAME_Stagger		= "Staggers living targets. ";
-const string NAME_Nonlethal		= "Non-lethal. ";
-const string NAME_Instant		= "Instant effect. ";
-const string NAME_ShortRange	= "Short range. ";
-const string NAME_MustBeFatal	= "Deals no damage unless fatal. ";
-const string NAME_MustBeLiving	= "Only affects the living. ";
-const string NAME_MustBeUndead	= "Only affects undead. ";
+// MAX LENGTH							"------------------------------------------------------------";
+const string NAME_Zap					= "Shocks unharmed living targets. ";
+const string NAME_Stagger				= "Staggers living targets. ";
+const string NAME_Nonlethal				= "Non-lethal. ";
+const string NAME_Instant				= "Instant effect. ";
+const string NAME_ShortRange			= "Short range. ";
+const string NAME_MustBeFatal			= "Deals no damage unless fatal. ";
+const string NAME_MustBeLiving			= "Only affects the living. ";
+const string NAME_MustBeUndead			= "Only affects undead. ";
 
 const string NAME_AreaOfEffect_Small	= "Small area of effect. ";
 const string NAME_AreaOfEffect_Default	= "Area of effect. ";
@@ -740,22 +740,19 @@ const string NAME_AreaOfEffect_Large	= "Large area of effect. ";
 const string NAME_Shrink_Penalty		= "Attribute and protection reduction (percentage):";
 const string NAME_Shrink_Info			= "Only affects living non-humans. ";
 
-const string NAME_Zap_AdanosBall		= "Shocks unharmed targets. ";
-const string NAME_Stagger_AdanosBall	= "Staggers targets. ";
+const string NAME_BeliarsRage_Info		= "Deals double damage against non-evil targets. ";
 
-const string NAME_BeliarsRage_Info	= "Deals double damage against non-evil targets. ";
-
-// MAX LENGTH						"------------------------------------------------------------";
-const string NAME_Staff_Fire_1		= "Fire spell burn rate increase (percentage):";
-const string NAME_Staff_Fire_2		= "Fire spell burn damage and rate increase (percentage):";
-const string NAME_Staff_Magic_1		= "Mana recovery rate on full mana (percentage):";
-const string NAME_Staff_Magic_2		= "Mana cost and recovery rate on full mana (percentage):";
-const string NAME_Staff_Water_1		= "Lightning spell protection penetration (percentage)";
-const string NAME_Staff_Water_2		= "Ice spell mana cost reduction (percentage):";
-const string NAME_Staff_Ulthar_1	= "";
-const string NAME_Staff_Ulthar_2	= "";
-const string NAME_Staff_Typhoon_1	= "Simple thrown spells cast speed (percentage):";
-const string NAME_Staff_Typhoon_2	= "Charged and simple thrown spells cast speed (percentage):";
+// MAX LENGTH							"------------------------------------------------------------";
+const string NAME_Staff_Fire_1			= "Fire spell burn rate doubled.";
+const string NAME_Staff_Fire_2			= "Fire spell burn rate and burn damage increased by half.";
+const string NAME_Staff_Magic_1			= "Mana recovery rate doubled.";
+const string NAME_Staff_Magic_2			= "Mana recovery rate halved on full mana, doubled otherwise.";
+const string NAME_Staff_Water_1			= "Ice and water spells mana cost reduced by a fifth.";
+const string NAME_Staff_Water_2			= "Ice and water spells reduce next spells cost by a quarter.";
+const string NAME_Staff_Ulthar_1		= "Alters the properties of fire spells.";
+const string NAME_Staff_Ulthar_2		= "Alters the properties of elemental spells.";
+const string NAME_Staff_Typhoon_1		= "Simple thrown spells can be cast faster.";
+const string NAME_Staff_Typhoon_2		= "Simple thrown and charged spells can be cast faster.";
 
 //const string NAME_Damage		= "Damage:";
 //const string NAME_Damage_Max	= "Maximum damage:";

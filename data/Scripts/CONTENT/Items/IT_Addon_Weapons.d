@@ -90,7 +90,7 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 
 	description			= 	"Staff of the Fire Magicians";
 
-	TEXT[0]				= NAME_Staff_Fire_1;			COUNT[0]	= 100;
+	TEXT[0]				= NAME_Staff_Fire_1;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
@@ -101,7 +101,7 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 INSTANCE ItMW_Addon_Stab01_Infused (C_Item) {
 	B_CopyWeapon(ItMW_Addon_Stab01_Infused, ItMW_Addon_Stab01);
 	description			= ConcatStrings(description, " (Infused)");
-	TEXT[0]				= NAME_Staff_Fire_2;			COUNT[0]	= 50;
+	TEXT[0]				= NAME_Staff_Fire_2;
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab02 (C_Item)
@@ -126,7 +126,7 @@ INSTANCE ItMW_Addon_Stab02 (C_Item)
 
 	description			= 	name;
 
-	TEXT[0]				= NAME_Staff_Magic_1;			COUNT[0]	= 50;
+	TEXT[0]				= NAME_Staff_Magic_1;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
@@ -136,7 +136,7 @@ INSTANCE ItMW_Addon_Stab02 (C_Item)
 INSTANCE ItMW_Addon_Stab02_Infused (C_Item) {
 	B_CopyWeapon(ItMW_Addon_Stab02_Infused, ItMW_Addon_Stab02);
 	description			= ConcatStrings(description, " (Infused)");
-	TEXT[0]				= NAME_Staff_Magic_2;			COUNT[0]	= 50;
+	TEXT[0]				= NAME_Staff_Magic_2;
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab03 (C_Item)
@@ -150,7 +150,7 @@ INSTANCE ItMW_Addon_Stab03 (C_Item)
 	value 				=	Value_Stab03;
 
 	damageTotal  		= 	Damage_Stab03;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_EDGE;
 	range    			=  	RANGE_Stab03;
 	
 	cond_atr[2]   		=	ATR_MANA_MAX;
@@ -162,7 +162,7 @@ INSTANCE ItMW_Addon_Stab03 (C_Item)
 	description			= 	"Staff of the Water Mages";
 
 	TEXT[0]				= NAME_Staff_Water_1;
-	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
+	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
@@ -234,8 +234,8 @@ INSTANCE ItMW_Addon_Stab05 (C_Item)
 
 	description			= 	name;
 
-	TEXT[0]				=  NAME_Staff_Typhoon_1;		COUNT[0]	= 30;
-	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
+	TEXT[0]				= NAME_Staff_Typhoon_1;			COUNT[0]	= 30;
+	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
