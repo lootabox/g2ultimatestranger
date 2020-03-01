@@ -1520,7 +1520,7 @@ INSTANCE ItRu_Firerain (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_FIRERAIN;
 
-	TEXT	[3]			=	ConcatStrings(NAME_Dot_Full, NAME_Sec_Duration);
+	TEXT	[3]			=	ConcatStrings(NAME_Dot_Half, NAME_Sec_Duration);
 	COUNT	[3]			=	BURN_DOT_VFX_DURATION_SEC;
 
 	TEXT	[4]			=	NAME_AreaOfEffect_Large;

@@ -236,7 +236,7 @@ func void UseJOLY_Storyhelpletter ()
 	CreateInvItems (hero, ItMW_Addon_Stab01	, 1);   
 	CreateInvItems (hero, ItMW_Addon_Stab02	, 1);   
 	CreateInvItems (hero, ItMW_Addon_Stab03	, 1);   
-	CreateInvItems (hero, ItMW_Addon_Stab04	, 1);   
+	//CreateInvItems (hero, ItMW_Addon_Stab04	, 1);   
 	CreateInvItems (hero, ItMW_Addon_Stab05	, 1);   
 	CreateInvItems (hero, ItRw_Addon_MagicArrow	, 100);   
 	CreateInvItems (hero, ItRw_Addon_FireArrow	, 100);   

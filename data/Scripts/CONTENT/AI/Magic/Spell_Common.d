@@ -34,7 +34,7 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 			||	(spellID == SPL_WaterFist)
 			||	(spellID == SPL_Thunderstorm)
 			{
-				manaCost = manaCost * 4 / 5;
+				manaCost -= 3;
 			};
 		}
 		else if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
@@ -123,7 +123,7 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 				||	(spellID == SPL_WaterFist)
 				||	(spellID == SPL_Thunderstorm)
 				{
-					manaCost = manaCost * 4 / 5;
+					manaCost -= 3;
 				};
 			}
 			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
@@ -167,8 +167,6 @@ func int Spell_Logic_Invest(var C_NPC slf, var int manaInvested, var int STEP_si
 				&& (firstTierNoManaCost == FALSE)
 				{
 					STEP_cost = STEP_cost * 3 / 4;
-					Staff_Water_Charged = FALSE;
-					// no charged ice/water spells
 				};
 			}
 			// Typhoon
@@ -189,10 +187,11 @@ func int Spell_Logic_Invest(var C_NPC slf, var int manaInvested, var int STEP_si
 	if (slf.aivar[AIV_SpellLevel] < tier)
 	{
 		if (tier == maxLevel)
+		|| (slf.attribute[ATR_MANA] < STEP_cost)
 		{
-			return SPL_SENDCAST; // fire latest at max level
+			Staff_Water_Charged = FALSE; // no charged ice/water spells, so no need to check for turning flag TRUE
+			return SPL_SENDCAST; // fire latest at max level or if trying to advance without enough mana
 		};
-		if (slf.attribute[ATR_MANA] < STEP_cost) { return SPL_SENDCAST; }; // fire instead of advancing if not enough mana
 		slf.attribute[ATR_MANA] -= STEP_cost;
 		slf.aivar[AIV_SpellLevel] = tier;
 		return SPL_NEXTLEVEL; // advance tier

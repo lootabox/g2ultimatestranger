@@ -11883,13 +11883,13 @@ INSTANCE MAGESTAFF1(C_PARTICLEFX)
 	vistexaniislooping	= 1;
 	//vistexcolorstart_s	= "255 255 255";
 	//vistexcolorend_s	= "000 100 255";
-	vissizestart_s		= "8 8";
+	vissizestart_s		= "5 5";
 	//vissizeendscale	= 10; 
 	visalphafunc_s		= "ADD";
 	visalphastart		= 255;
 	useemittersfor		= 0;
 	visname_s		= "mfx_sleep_star.TGA";
-	vistexcolorstart_s	= "0 0 255";
+	vistexcolorstart_s	= "255 127 0";
 	vistexcolorend_s	= "255 255 255";
 	vissizeendscale		= 5; 
 };
@@ -11963,7 +11963,7 @@ INSTANCE MAGESTAFF3(C_PARTICLEFX)
 	visalphastart		= 255;
 	useemittersfor		= 0;
 	visname_s		= "mfx_sleep_star.TGA";
-	vistexcolorstart_s	= "0 0 255";
+	vistexcolorstart_s	= "0 127 255";
 	vistexcolorend_s	= "255 255 255";
 	vissizeendscale		= 3; 
 };
@@ -12000,7 +12000,7 @@ INSTANCE MAGESTAFF4(C_PARTICLEFX)
 	visalphastart		= 255;
 	useemittersfor		= 0;
 	visname_s		= "mfx_sleep_star.TGA";
-	vistexcolorstart_s	= "0 0 255";
+	vistexcolorstart_s	= "255 0 127";
 	vistexcolorend_s	= "255 255 255";
 	vissizeendscale		= 3; 
 };
@@ -12037,7 +12037,7 @@ INSTANCE MAGESTAFF5(C_PARTICLEFX)
 	visalphastart		= 255;
 	useemittersfor		= 0;
 	visname_s		= "mfx_sleep_star.TGA";
-	vistexcolorstart_s	= "0 0 255";
+	vistexcolorstart_s	= "127 127 255";
 	vistexcolorend_s	= "255 255 255";
 	vissizeendscale		= 3; 
 };

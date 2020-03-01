@@ -1,3 +1,7 @@
+
+// Rather crude, but should be fine since there is only one fire mage staff in the game
+var int Staff_Fire_Charged;
+
 // https://forum.worldofplayers.de/forum/threads/1149697-Script-Eigene-Schadensberechnung
 
 class oSDamageDescriptor {
@@ -207,6 +211,13 @@ func int Handle_Fist_Dmg(var c_npc vic, var c_npc att)
 func int Handle_Magic_Dmg(var c_npc vic, var c_npc att, var int spellID, var int dmg)
 {
 var string pristr; pristr = IntToString(dmg);
+
+	// Handle infused fire mage staff
+	if (Staff_Fire_Charged == TRUE)
+	{
+		dmg = dmg * 5 / 4;
+	};
+
 	// Get protection amount
 	var int prot;
 	if (att.guild == GIL_DRAGON)	{ prot = vic.protection[PROT_FIRE]; }
@@ -228,25 +239,19 @@ var string pristr; pristr = IntToString(dmg);
 	||	(spellID == SPL_Explosion)
 	{
 		// Figure out burn dot
-		var int fireDot; var int fireTicks; fireTicks = BURN_DOT_VFX_DURATION_SEC;
-		if		(spellID == SPL_Firerain)	{ fireDot = dmg; }
-		else								{ fireDot = dmg / 2; };
-		dmg -= fireDot;
+		var int fireDot; fireDot = dmg / 2; dmg -= fireDot;
+		var int fireTicks; fireTicks = BURN_DOT_VFX_DURATION_SEC;
 
 		if (Hlp_IsValidItem(wpn))
 		{
 			// Fire staff
 			if (Hlp_IsItem(wpn, ItMW_Addon_Stab01))
-			|| (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
 			{
-				// Bonus 1: Faster burn
-				fireTicks = BURN_DOT_VFX_DURATION_SEC / 2;
-				// Bonus 2: Burning (+50%)
-				if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
-				{
-					fireDot = fireDot * 3 / 2;
-					fireTicks = BURN_DOT_VFX_DURATION_SEC * 3 / 2;
-				};
+				dmg += 10;
+			}
+			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
+			{
+				Staff_Fire_Charged = TRUE;
 			};
 		};
 		// Play burn FX on corpses for flavor in any case

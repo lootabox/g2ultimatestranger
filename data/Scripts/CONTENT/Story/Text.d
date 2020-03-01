@@ -743,16 +743,20 @@ const string NAME_Shrink_Info			= "Only affects living non-humans. ";
 const string NAME_BeliarsRage_Info		= "Deals double damage against non-evil targets. ";
 
 // MAX LENGTH							"------------------------------------------------------------";
-const string NAME_Staff_Fire_1			= "Fire spell burn rate doubled.";
-const string NAME_Staff_Fire_2			= "Fire spell burn rate and burn damage increased by half.";
-const string NAME_Staff_Magic_1			= "Mana recovery rate doubled.";
-const string NAME_Staff_Magic_2			= "Mana recovery rate halved on full mana, doubled otherwise.";
-const string NAME_Staff_Water_1			= "Ice and water spells mana cost reduced by a fifth.";
+const string NAME_Staff_Fire_1			= "Fire spell damage vs. burning targets increased by ten.";
+const string NAME_Staff_Fire_2			= "Spell damage vs. burning targets increased by a quarter.";
+const string NAME_Staff_Magic_1			= "Mana recovery rate is halved on full mana.";
+const string NAME_Staff_Magic_2			= "Mana can overflow its natural limit temporarily.";
+const string NAME_Staff_Water_1			= "Ice and water spells mana cost reduced by three.";
 const string NAME_Staff_Water_2			= "Ice and water spells reduce next spells cost by a quarter.";
-const string NAME_Staff_Ulthar_1		= "Alters the properties of fire spells.";
-const string NAME_Staff_Ulthar_2		= "Alters the properties of elemental spells.";
 const string NAME_Staff_Typhoon_1		= "Simple thrown spells can be cast faster.";
 const string NAME_Staff_Typhoon_2		= "Simple thrown and charged spells can be cast faster.";
+const string NAME_Staff_Ulthar_Fire_Magic		= "Staff of fire fused with the staff of magic.";
+const string NAME_Staff_Ulthar_Fire_Water		= "Staff of fire fused with the staff of water.";
+const string NAME_Staff_Ulthar_Fire_Typhoon		= "Staff of fire fused with the staff of typhoons.";
+const string NAME_Staff_Ulthar_Magic_Water		= "Staff of magic fused with the staff of water.";
+const string NAME_Staff_Ulthar_Magic_Typhoon	= "Staff of magic fused with the staff of typhoons.";
+const string NAME_Staff_Ulthar_Water_Typhoon	= "Staff of water fused with the staff of typhoons.";
 
 //const string NAME_Damage		= "Damage:";
 //const string NAME_Damage_Max	= "Maximum damage:";

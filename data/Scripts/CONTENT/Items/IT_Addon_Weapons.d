@@ -174,7 +174,7 @@ INSTANCE ItMW_Addon_Stab03_Infused (C_Item) {
 	TEXT[0]				= NAME_Staff_Water_2;
 };
 // *****************************************************
-INSTANCE ItMW_Addon_Stab04 (C_Item)
+PROTOTYPE ItMW_Addon_Stab04 (C_Item)
 {	
 	name 				=	"Ulthar's staff";  
 
@@ -196,18 +196,30 @@ INSTANCE ItMW_Addon_Stab04 (C_Item)
 
 	description			= 	name;
 
-	//TEXT[0]				= "Ulthar enchanted this staff.";
-	TEXT[0]				= NAME_Staff_Ulthar_1;
+	TEXT[0]				= "Ulthar enchanted this staff.";
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
-INSTANCE ItMW_Addon_Stab04_Infused (C_Item) {
-	B_CopyWeapon(ItMW_Addon_Stab04_Infused, ItMW_Addon_Stab04);
-	description			= ConcatStrings(description, " (Infused)");
-	TEXT[0]				= NAME_Staff_Ulthar_2;
+INSTANCE ItMW_Addon_Stab04_Fire_Magic (ItMW_Addon_Stab04) {
+	TEXT[0]				= NAME_Staff_Ulthar_Fire_Magic;
+};
+INSTANCE ItMW_Addon_Stab04_Fire_Water (ItMW_Addon_Stab04) {
+	TEXT[0]				= NAME_Staff_Ulthar_Fire_Water;
+};
+INSTANCE ItMW_Addon_Stab04_Fire_Typhoon (ItMW_Addon_Stab04) {
+	TEXT[0]				= NAME_Staff_Ulthar_Fire_Typhoon;
+};
+INSTANCE ItMW_Addon_Stab04_Magic_Water (ItMW_Addon_Stab04) {
+	TEXT[0]				= NAME_Staff_Ulthar_Magic_Water;
+};
+INSTANCE ItMW_Addon_Stab04_Magic_Typhoon (ItMW_Addon_Stab04) {
+	TEXT[0]				= NAME_Staff_Ulthar_Magic_Typhoon;
+};
+INSTANCE ItMW_Addon_Stab04_Water_Typhoon (ItMW_Addon_Stab04) {
+	TEXT[0]				= NAME_Staff_Ulthar_Water_Typhoon;
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab05 (C_Item)

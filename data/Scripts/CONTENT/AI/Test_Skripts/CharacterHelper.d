@@ -67,7 +67,7 @@ INSTANCE ItSe_Addon_Sack (C_Item)
 		CreateInvItems (self, ItMW_Addon_Stab01,1);
 		CreateInvItems (self, ItMW_Addon_Stab02,1);
 		CreateInvItems (self, ItMW_Addon_Stab03,1);
-		CreateInvItems (self, ItMW_Addon_Stab04,1);
+		//CreateInvItems (self, ItMW_Addon_Stab04,1);
 		CreateInvItems (self, ItMW_Addon_Stab05,1);
 		CreateInvItems (self, ItMW_Addon_Hacker_1h_01,1);
 		CreateInvItems (self, ItMW_Addon_Hacker_2h_01,1);

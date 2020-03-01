@@ -50,6 +50,7 @@ FUNC VOID B_GiveTradeInv_Addon_Cronos_ADW (var C_NPC slf)
 		{
 			CreateInvItems(slf,ItMi_RuneBlank,2);
 			CreateInvItems(slf,ItMw_Addon_Stab03,1);
+			CreateInvItems(slf,ItMw_Addon_Stab05,1);
 		};
 		//***********************************
 		
