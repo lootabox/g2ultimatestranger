@@ -578,6 +578,7 @@ INSTANCE SPELLFX_WATERFIST_ABYSS (CFX_BASE_PROTO)
      emfxlifespan = -1;
      emselfrotvel_s = "0 0 0";
      secsperdamage = -1;
+     emfxcolldynperc_S = "spellFX_Waterfist_Abyss_SENDPERCEPTION";
 };
 		
 		INSTANCE spellFX_Waterfist_Abyss_KEY_CAST (C_ParticleFXEmitKey)
@@ -592,6 +593,11 @@ INSTANCE SPELLFX_WATERFIST_ABYSS (CFX_BASE_PROTO)
 		     	emtrjeasevel 			= 0.000001;
 };
 
+INSTANCE spellFX_Waterfist_Abyss_SENDPERCEPTION (CFx_Base_Proto)  // Send perception
+{
+	visname_S               = "";
+	sendAssessMagic         = 1;
+};
 
 
 
@@ -786,7 +792,7 @@ instance spellFX_Geyser_FOUNTAIN	(CFx_Base_Proto)  //FLASH
 
 	emtrjmode_s 		= "FIXED";
 	emTrjOriginNode 	= "BIP01";
-	//sendAssessMagic		= 1;
+	sendAssessMagic		= 1;
 
 	sfxid				= "MFX_Geyser_Fountain";
 	sfxisambient		= 1;
@@ -3792,7 +3798,8 @@ INSTANCE spellFX_WindFist(CFx_Base_Proto)
 		emTrjTargetRange	= 100;
 		emTrjTargetElev 	= 1;
 		emActionCollDyn_S 	= "CREATEONCE";
-		emFXCollDyn_S	   	= "spellFX_Windfist_COLLIDEDYNFX";	//Sendet perception
+		//emFXCollDyn_S	   	= "spellFX_Windfist_COLLIDEDYNFX";	//Sendet perception
+		emFXCollDynPerc_S	   	= "spellFX_Windfist_COLLIDEDYNFX";	//Sendet perception
 		emFXInvestOrigin_S	= "spellFX_Windfist_Invest";
 
 
