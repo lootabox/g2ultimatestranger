@@ -123,24 +123,18 @@ func void B_AssessMagic ()
 		return;
 	};
 	
+	// ---- Extricate / Geyser / Waterfist / Windfist ----
 	// ---- Extricate ----
-	if (Npc_GetLastHitSpellID(self) == SPL_Extricate) {
-		// Ich weiss nicht mehr, ob man damit noch rumspielen muss (sonst gibt der Zauber zu viel Schaden?)
-		// self.protection[PROT_FALL] = 100000; //Fall damage ausschalten? Temporär? Wie?
+	if (Npc_GetLastHitSpellID(self) == SPL_Extricate)
+	|| (Npc_GetLastHitSpellID(self) == SPL_Geyser)
+	|| (Npc_GetLastHitSpellID(self) == SPL_Waterfist)
+	|| (Npc_GetLastHitSpellID(self) == SPL_Windfist) {
+		// Protect from fall damage
+		// self.protection[PROT_FALL] = 100000;
 
-		// Menschen brauchen besondere Abfragen.
-		// Monster brauchen das alles nicht, weil sie sonst nicht richtig fliegen.
-		if (self.guild < GIL_SEPERATOR_HUM) {
-			Npc_ClearAIQueue(self);
-			B_ClearPerceptions(self);   //Sonst reagiert der NPC nicht!
-
-			// Das ist wichtig, falls self noch nicht im Kampfmodus (hostile) ist
-			Npc_SetTarget(self, other);
-			B_AssessDamage();
-		};
-		// Und das ist wichtig, damit self nicht plötzlich aufhört mit dem Kämpfen
-		Npc_SetTarget(self, other);
-		Npc_SetTempAttitude(self, ATT_HOSTILE); // Falls nicht schon Gilden-Attitüde hostile ist
+		//Npc_ClearAIQueue (self);
+		//B_ClearPerceptions(self);
+		AI_StartState (self, ZS_MagicPush, 0, "");
 		return;
 	};
 
