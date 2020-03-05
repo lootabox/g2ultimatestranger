@@ -1,5 +1,53 @@
 
 //************************************************
+// Methods for fetching dialog info, used to block dialog when npc's have nothing to say.
+// https://forum.worldofplayers.de/forum/threads/1299679-Skriptpaket-Ikarus-4/page23?p=26035301&viewfull=1#post26035301
+//************************************************
+
+func int oCInfoManager_GetInfoCount (var int npcInstance, var int herInstance) //oCInfo *
+{
+    //00664A30  .text     Debug data           ?GetInfoCount@oCInfoManager@@QAEHPAVoCNpc@@0@Z
+    const int oCInfoManager__GetInfoCount_G1 = 6703664;
+
+    //0x00702940 public: int __thiscall oCInfoManager::GetInfoCount(class oCNpc *,class oCNpc *)
+    const int oCInfoManager__GetInfoCount_G2 = 7350592;
+
+    var int oCInfoManager__GetInfo;
+    oCInfoManager__GetInfo = MEMINT_SwitchG1G2(oCInfoManager__GetInfoCount_G1, oCInfoManager__GetInfoCount_G2);
+    
+    var oCNpc slf;    slf = Hlp_GetNpc (npcInstance);
+    var oCNpc her;    Her = Hlp_GetNpc (herInstance);
+    
+    CALL_PtrParam (MEM_InstToPtr (slf));
+    CALL_PtrParam (MEM_InstToPtr (Her));
+    CALL__thiscall (MEM_Game.infoman, oCInfoManager__GetInfo);
+    
+    return CALL_RetValAsPtr();
+};
+
+func int oCInfoManager_GetInfo (var int npcInstance, var int herInstance, var int index) //oCInfo *
+{
+    //00664E50  .text     Debug data           ?GetInfo@oCInfoManager@@QAEPAVoCInfo@@PAVoCNpc@@0H@Z
+    const int oCInfoManager__GetInfo_G1 = 6704720;
+
+    //0x00702D60 public: class oCInfo * __thiscall oCInfoManager::GetInfo(class oCNpc *,class oCNpc *,int)
+    const int oCInfoManager__GetInfo_G2 = 7351648;
+    
+    var int oCInfoManager__GetInfo;
+    oCInfoManager__GetInfo = MEMINT_SwitchG1G2(oCInfoManager__GetInfo_G1, oCInfoManager__GetInfo_G2);
+    
+    var oCNpc slf;    slf = Hlp_GetNpc (npcInstance);
+    var oCNpc her;    Her = Hlp_GetNpc (herInstance);
+    
+    CALL_IntParam (index);
+    CALL_PtrParam (MEM_InstToPtr (slf));
+    CALL_PtrParam (MEM_InstToPtr (Her));
+    CALL__thiscall (MEM_Game.infoman, oCInfoManager__GetInfo);
+    
+    return CALL_RetValAsPtr();
+};
+
+//************************************************
 //  Hook for looting items
 // https://forum.worldofplayers.de/forum/threads/1537258-Gothic1-Taschendiebstahl-Genauere-Analyse-und-Verbesserungspotential?p=26129042
 //************************************************
