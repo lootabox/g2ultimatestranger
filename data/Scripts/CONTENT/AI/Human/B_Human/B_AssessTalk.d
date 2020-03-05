@@ -125,6 +125,64 @@ func void B_AssessTalk ()
 		};
 	};
 	
+	// ------ No dialog for ambient npcs when they are in the middle of something ------
+	var int infoCount; infoCount = oCInfoManager_GetInfoCount (self, other);
+	if (infoCount == 1)
+	{
+		var int infoPtr;
+		infoPtr = oCInfoManager_GetInfo (self, other, 0);
+		
+		if (infoPtr)
+		{
+			var oCInfo dlgInstance; dlgInstance = _^ (infoPtr);
+			if (Hlp_StrCmp(dlgInstance.description, DIALOG_ENDE))
+			|| (Hlp_StrCmp(dlgInstance.description, "ENDE"))
+			{
+				infoCount = 0;
+			};
+		};
+	};
+	if (infoCount == 0)
+	&& ((self.npctype == NPCTYPE_AMBIENT)
+	||	(self.npctype == NPCTYPE_OCAMBIENT)
+	||	(self.npctype == NPCTYPE_BL_AMBIENT)
+	||	(self.npctype == NPCTYPE_TAL_AMBIENT))
+	{
+		if (self.guild == GIL_VLK) { // Various workers and citizens in Khorinis
+			if (Npc_IsInState(self, ZS_Repair_Hut))
+			|| (Npc_IsInState(self, ZS_Saw))
+			|| (Npc_IsInState(self, ZS_Smith_Sharp))
+			|| (Npc_IsInState(self, ZS_Smoke_Joint))
+			|| (Npc_IsInState(self, ZS_Smoke_Waterpipe))
+			|| (Npc_IsInState(self, ZS_Stomp_Herb)) {
+				B_Say_Overlay (self, other, "$NOTNOW");
+				return;
+			};
+		} else if (self.guild == GIL_MIL || self.guild == GIL_PAL) { // Training Militia in Khorinis and Paladins in VoM
+			if (Npc_IsInState(self, ZS_Practice_Sword)) {
+				B_Say_Overlay (self, other, "$NOTNOW");
+				return;
+			};
+		} else if (self.guild == GIL_NOV) { // Novices praying and stomping herbs
+			if (Npc_IsInState(self, ZS_Pray_Innos))
+			|| (Npc_IsInState(self, ZS_Pray_Innos_FP)) {
+				return;
+			} else if (Npc_IsInState(self, ZS_Stomp_Herb)) {
+				B_Say_Overlay (self, other, "$NOTNOW");
+				return;
+			};
+		} else if (self.guild == GIL_BDT) { // Bandits picking at gold
+			if (Npc_IsInState(self, ZS_Pick_Ore)) {
+				B_Say_Overlay (self, other, "$NOTNOW");
+				return;
+			};
+		} else if (self.guild == GIL_STRF) { // Convicts/slaves picking at ore/gold
+			if (Npc_IsInState(self, ZS_Pick_Ore)) {
+				B_Say_Overlay (self, other, "$SPAREME");
+				return;
+			};
+		};
+	};
 		
 	// FUNC
 	

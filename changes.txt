@@ -101,6 +101,7 @@ Changed NPCs to receive varying guild specific weapon on spawn, instead of alway
 Changed NPCs to refuse joining the crew with previously unused dialogue if dismissed twice for Lee, Lester, Mario.
 Changed NPCs to return to monastery after surviving the Trial of Fire for Agon, Igaraz, Ulf.
 Changed NPCs to wear farmer clothing and equip sickles after returning to Khorinis for Pardok, Telbor, Tonak.
+Changed ambient NPCs to not engage in dialog if they are in the middle of something.
 Changed default weapon from Heavy Branch to something that makes sense for Akil, Cornelius, Judge, Larius, Onar, Sekob.
 Changed dialog option for trading to what NH will actually say with Fisk, Garett, Huno, Juan, Miguel, Scatty.
 Changed option to comment about fake mining shares to only appear after browsing wares for Bosper, Canthar, Elena, Hakon, Matteo, Orlan, Rosi, Zuris.
