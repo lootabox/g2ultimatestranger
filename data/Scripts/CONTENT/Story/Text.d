@@ -738,9 +738,9 @@ const string NAME_AreaOfEffect_Default	= "Area of effect. ";
 const string NAME_AreaOfEffect_Large	= "Large area of effect. ";
 
 const string NAME_Shrink_Penalty		= "Attribute and protection reduction (percentage):";
-const string NAME_Shrink_Info			= "Only affects living non-humans. ";
+const string NAME_Shrink_Info			= "Only affects living monsters. ";
 
-const string NAME_BeliarsRage_Info		= "Deals double damage against non-evil targets. ";
+const string NAME_BeliarsRage_Info		= "Deals halved damage against evil targets. ";
 
 // MAX LENGTH							"------------------------------------------------------------";
 const string NAME_Staff_Fire_1			= "Fire spell damage vs. burning targets increased by ten.";

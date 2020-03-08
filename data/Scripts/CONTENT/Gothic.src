@@ -63,19 +63,23 @@ STORY\B_Content\B_SCUsesRake.d
 
 AI\MAGIC\B_MagicHurtNpc.d
 
+UltimateStranger\items.d
+UltimateStranger\misc.d
+UltimateStranger\buff.d
+
 AI\HUMAN\C_Human\C_BodyStateContains.d
 AI\HUMAN\C_Human\C_NpcIsUndead.d
 AI\HUMAN\C_Human\C_NpcIsEvil.d
 AI\HUMAN\C_Human\C_NpcIsGolem.d
 AI\HUMAN\C_Human\C_NpcIsFireBase.d
 AI\HUMAN\C_Human\C_NpcIsIceBase.d
-AI\HUMAN\C_Human\C_NpcIsWaterBase.d
 AI\HUMAN\C_Human\C_NpcIsLarge.d
 AI\HUMAN\C_Human\C_NpcIsDraconic.d
+AI\HUMAN\C_Human\C_NpcIsWeakToFire.d
+AI\HUMAN\C_Human\C_NpcIsWeakToIce.d
+AI\HUMAN\C_Human\C_NpcIsWeakToLightning.d
+AI\HUMAN\C_Human\C_NpcIsWeakToWater.d
 
-UltimateStranger\items.d
-UltimateStranger\misc.d
-UltimateStranger\buff.d
 UltimateStranger\damage.d
 
 STORY\B_GiveTradeInv\B_ClearRuneInv.d

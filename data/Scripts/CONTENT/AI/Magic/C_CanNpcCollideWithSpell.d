@@ -74,19 +74,9 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 			return COLL_DONOTHING;
 		};
 
-		// counters each other out
-		if (C_NpcIsLarge(self))
-		&& (C_NpcIsFireBase(self))
-		{
-			return COLL_APPLYDAMAGE;
-		};
-		if (C_NpcIsFireBase(self))
-		{
-			return COLL_APPLYDOUBLEDAMAGE | COLL_APPLYVICTIMSTATE;
-		};
 		if (C_NpcIsLarge(self))
 		{
-			return COLL_APPLYHALVEDAMAGE;
+			return COLL_APPLYDAMAGE | COLL_DONTKILL;
 		};
 		
 		return COLL_APPLYDAMAGE | COLL_APPLYVICTIMSTATE | COLL_DONTKILL;
@@ -103,15 +93,10 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		{
 			return COLL_DONOTHING;
 		};
-		
-/* 		if (C_NpcIsUndead(self))
+
+		if (C_NpcIsEvil(self))
 		{
 			return COLL_APPLYHALVEDAMAGE;
-		}; */
-
-		if (!C_NpcIsEvil(self))
-		{
-			return COLL_APPLYDOUBLEDAMAGE;
 		};
 		
 		return COLL_DOEVERYTHING;
@@ -216,51 +201,30 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		return COLL_DOEVERYTHING;
 	};
 
-	//----- Betäubung -----
-
-	if (spellType == SPL_Concussionbolt)
-	//|| (spellType == SPL_ChargeZap)
-	//|| (spellType == SPL_Zap)
-	{
-		if (C_NpcIsDown(self))
-		{
-			return COLL_DONOTHING;
-		};
-		
-		return COLL_APPLYDAMAGE | COLL_DONTKILL;
-	};
-
-
 	// ------ Sonderfall: Dmt ------
 	if (other.guild == GIL_DMT)
 	{
-		if (spellType == SPL_Firerain)
-		|| (spellType == SPL_Thunderstorm)
-		|| (spellType == SPL_LightningFlash)
+		if (self.guild == GIL_DMT)
 		{
-			if (self.guild == GIL_DMT)
+			if (spellType == SPL_Firerain)
+			|| (spellType == SPL_Thunderstorm)
+			|| (spellType == SPL_LightningFlash)
+			|| (spellType == SPL_Firestorm)
 			{
 				return COLL_DONOTHING;
-			}
-			else if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(hero))
-			{
-				return COLL_APPLYHALVEDAMAGE;
 			};
-		};
-		
-		if (spellType == SPL_Firestorm)
-		&& (self.guild == GIL_DMT)
-		{
-			return COLL_DONOTHING;
 		};
 	};
 
+	// ------ Sonderfall: Firegolem ------
 	if (other.guild == GIL_DRACONIAN)
 	{
 		if (self.guild == GIL_FIREGOLEM)
-		&& (spellType == SPL_Firestorm)
 		{
-			return COLL_DONOTHING;
+			if (spellType == SPL_Firestorm)
+			{
+				return COLL_DONOTHING;
+			};
 		};
 	};
 
@@ -281,25 +245,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		{
 			return COLL_DONOTHING;
 		};
-		
-		// feuer monster bekommen halben schaden, und kein opfer zs
-		if (C_NpcIsFireBase(self))
-		{
-			return COLL_APPLYHALVEDAMAGE;
-		};
-		
-		// grosse eis monster kriegen den doppelten schaden, brennen aber nicht
-		if (C_NpcIsIceBase(self))
-		{
-			return COLL_APPLYDOUBLEDAMAGE;
-		};
-		
-		// alle grosse monster bekommen nur schaden, kein opfer zs
-		if (C_NpcIsLarge(self)) //andere
-		{	
-			return COLL_APPLYDAMAGE;
-		};
-		
+
 		// Collision burn FX is handled by damage script
 		//return COLL_DOEVERYTHING;
 		return COLL_APPLYDAMAGE;
@@ -320,19 +266,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 			return COLL_DONOTHING;
 		};
 		
-		// feuer wesen erhalten doppelten schaden, kein opfer zs
-		if (C_NpcIsFireBase(self))
-		{
-			return COLL_APPLYDOUBLEDAMAGE | COLL_APPLYVICTIMSTATE;
-		};
-
-		// eis wesen erhalten halben schaden, kein opfer zs
-		if (C_NpcIsIceBase(self))
-		{
-			return COLL_APPLYHALVEDAMAGE | COLL_APPLYVICTIMSTATE;
-		};
-		
-		// grosse monster erhalten nur schaden, kein opfer zs		
+		// large monsters cant be frozen
 		if (C_NpcIsLarge(self)) //andere
 		{
 			return COLL_APPLYDAMAGE;
@@ -346,6 +280,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	|| (spellType == SPL_ChargeZap)
 	|| (spellType == SPL_LightningFlash)
 	|| (spellType == SPL_AdanosBall)
+	|| (spellType == SPL_Concussionbolt)
 	{
 		if (C_NpcIsDown(self))
 		{
@@ -361,17 +296,11 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 			applyState = applyState | COLL_APPLYVICTIMSTATE;
 		};
 
-		if (C_NpcIsWaterBase(self))
+		if (spellType == SPL_LightningFlash)
+		|| (spellType == SPL_AdanosBall)
 		|| (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
 		|| (GetWaterLevel(self) == WATERLEVEL_WADE)
-		//|| (Wld_IsRaining() && (CurrentLevel == NEWWORLD_ZEN || CurrentLevel == OLDWORLD_ZEN || CurrentLevel == ADDONWORLD_ZEN))
-		{
-			return COLL_APPLYDOUBLEDAMAGE | applyState;
-		};
-
-		if (spellType == SPL_LightningFlash)
-		|| (spellType == SPL_AdanosBall)
 		{
 			return COLL_APPLYDAMAGE | applyState;
 		}
@@ -442,19 +371,6 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 			return COLL_DOEVERYTHING;
 		};
 		return COLL_DONOTHING;
-	};
-
-	//schrumpfen
-	if (spellType 	== SPL_Shrink)
-	{
-		if (C_NpcIsDown(self))
-		|| (C_BodyStateContains(self,BS_SWIM))
-		|| (C_BodyStateContains(self,BS_DIVE))
-		|| (self.guild == GIL_DRAGON)
-		{
-			return COLL_DONOTHING;
-		};
-		return COLL_DOEVERYTHING;
 	};
 
 	//----- Paladin Sprüche -----	

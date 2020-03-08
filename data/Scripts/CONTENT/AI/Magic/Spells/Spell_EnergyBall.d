@@ -3,7 +3,7 @@
 // ******************
 
 const int SPL_Cost_EnergyBall 		= 40;
-const int SPL_Damage_EnergyBall 	= 80;
+const int SPL_Damage_EnergyBall 	= 160;
 
 INSTANCE Spell_EnergyBall (C_Spell_Proto)
 {							

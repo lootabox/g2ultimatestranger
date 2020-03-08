@@ -15,17 +15,34 @@ INSTANCE Spell_Shrink (C_Spell_Proto)
 	targetCollectRange		= 1000;					//10m
 };
 
-func int Spell_Logic_Shrink	(var int manaInvested) 	//Parameter manaInvested wird hier nicht benutzt
-{
-	return Spell_Logic_Basic(self, SPL_Cost_Shrink);
-};
-
-func void Spell_Cast_Shrink()
+// Unlike sleep etc, shrink can only be cast on valid targets
+func int Spell_Shrink_Condition()
 {
 	if (other.flags != NPC_FLAG_IMMORTAL)		//nicht auf Immortals
 	&& (!C_NpcIsUndead(other)) 					//nicht auf Untote
 	&& (other.guild > GIL_SEPERATOR_HUM)		//nicht auf Humans
 	&& (other.aivar[AIV_MM_ShrinkState]==0)		//nur auf bisher ungeschrumpfte Monster!
+	{
+		return TRUE;
+	}
+	else
+	{
+		return FALSE;
+	};
+};
+
+func int Spell_Logic_Shrink	(var int manaInvested) 	//Parameter manaInvested wird hier nicht benutzt
+{
+	if (Spell_Shrink_Condition())
+	{
+		return SPL_SENDSTOP;
+	};
+	return Spell_Logic_Basic(self, SPL_Cost_Shrink);
+};
+
+func void Spell_Cast_Shrink()
+{
+	if (Spell_Shrink_Condition())
 	{		
 		Npc_ClearAIQueue	(other);
 		B_ClearPerceptions	(other);

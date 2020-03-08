@@ -224,9 +224,6 @@ var string pristr; pristr = IntToString(dmg);
 	else							{ prot = vic.protection[PROT_MAGIC]; };
 	if (prot == IMMUNE)				{ return 0; };
 
-	// Handle protection
-	dmg -= prot;
-
 	// Get equipped staff
 	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(att);
 	// FIRE SPELLS ---------------------------------------------------------------------------
@@ -238,6 +235,11 @@ var string pristr; pristr = IntToString(dmg);
 	||	(spellID == SPL_Firerain)
 	||	(spellID == SPL_Explosion)
 	{
+		// Handle protection
+		if		(C_NpcIsWeakToFire(vic))	{ dmg -= prot / 2; }
+		else if	(C_NpcIsFireBase(vic))		{ dmg -= prot * 2; }
+		else								{ dmg -= prot; };
+
 		// Figure out burn dot
 		var int fireDot; fireDot = dmg / 2; dmg -= fireDot;
 		var int fireTicks; fireTicks = BURN_DOT_VFX_DURATION_SEC;
@@ -272,19 +274,12 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(fireDot)));
 		||	(spellID == SPL_IceLance)
 		||	(spellID == SPL_IceCube)
 		||	(spellID == SPL_IceWave)
-		||	(spellID == SPL_Geyser)
-		||	(spellID == SPL_WaterFist)
 		||	(spellID == SPL_Thunderstorm)
 	{
-		if (Hlp_IsValidItem(wpn))
-		{
-			// Ice staff
-			if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
-			{
-				Print ( "ICE DEBUFF 2" );
-			};
-		};
-		
+		// Handle protection
+		if		(C_NpcIsWeakToIce(vic))		{ dmg -= prot / 2; }
+		else if	(C_NpcIsIceBase(vic))		{ dmg -= prot * 2; }
+		else								{ dmg -= prot; };
 
 		// Apply ice cube dot, add remainder to main damage
 		if	(spellID == SPL_IceCube)
@@ -317,6 +312,11 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 		||	(spellID == SPL_LightningFlash)
 		||	(spellID == SPL_AdanosBall)
 	{
+		// Handle protection
+		if		(C_NpcIsWeakToLightning(vic))	{ dmg -= prot / 2; }
+		else if	(C_NpcIsIceBase(vic))			{ dmg -= prot * 2; }
+		else									{ dmg -= prot; };
+
 		// Lightning spell stagger at full hitpoints
 		if	(!C_NpcIsUndead(vic))
 		&&	(spellID != SPL_AdanosBall)
@@ -328,15 +328,36 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 			};
 		};
 	}
-	// OTHER SPELLS ---------------------------------------------------------------------------
+	// WATER SPELLS ---------------------------------------------------------------------------
+	else if	(spellID == SPL_Geyser)
+		||	(spellID == SPL_WaterFist)
+	{
+		// Handle protection
+		if	(C_NpcIsWeakToWater(vic)) {
+			if (C_NpcIsLarge(vic)) {
+				dmg -= prot;
+			} else {
+				dmg -= prot / 2;
+			};
+		}
+		else if	(C_NpcIsLarge(vic))			{ dmg -= prot * 2; }
+		else								{ dmg -= prot; };
+	}
+	// FATAL ONLY SPELLS -----------------------------------------------------------------------
 	else if	(spellID == SPL_DestroyUndead)
 		||	(spellID == SPL_BreathOfDeath) && (att.guild != GIL_SKELETON_MAGE)
 		||	(spellID == SPL_MassDeath)
 	{
+		dmg -= prot;
 		if (dmg < vic.attribute[ATR_HITPOINTS])
 		{
 			dmg = 0;
 		};
+	}
+	// OTHER SPELLS -----------------------------------------------------------------------
+	else
+	{
+		dmg -= prot;
 	};
 
 Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
