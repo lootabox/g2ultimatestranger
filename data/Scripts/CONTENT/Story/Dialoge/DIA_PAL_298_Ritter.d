@@ -104,7 +104,7 @@ instance DIA_PAL_298_Perm2		(C_INFO)
 	condition	 = 	DIA_PAL_298_Perm2_Condition;
 	information	 = 	DIA_PAL_298_Perm2_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"How are things?";
+	description	 = 	"How's the situation?";
 };
 func int DIA_PAL_298_Perm2_Condition ()
 {	

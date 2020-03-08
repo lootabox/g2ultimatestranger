@@ -145,7 +145,7 @@ INSTANCE DIA_Marcos_Perm(C_INFO)
 	condition	= DIA_Marcos_Perm_Condition;
 	information	= DIA_Marcos_Perm_Info;
 	permanent	= TRUE;
-	description	= "How are things?";
+	description	= "How's the situation?";
 };                       
 
 FUNC INT DIA_Marcos_Perm_Condition()

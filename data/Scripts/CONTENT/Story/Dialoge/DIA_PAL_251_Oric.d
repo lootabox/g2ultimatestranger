@@ -127,7 +127,7 @@ instance DIA_Oric_Perm		(C_INFO)
 	condition	 = 	DIA_Oric_Perm_Condition;
 	information	 = 	DIA_Oric_Perm_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"How are things?";
+	description	 = 	"How's the situation?";
 };
 
 func int DIA_Oric_Perm_Condition ()

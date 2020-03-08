@@ -242,7 +242,7 @@ INSTANCE DIA_Pablo_Perm   (C_INFO)
 	condition   = DIA_Pablo_Perm_Condition;
 	information = DIA_Pablo_Perm_Info;
 	permanent   = TRUE;
-	description = "How are things?";
+	description = "How's the situation?";
 };
 FUNC INT DIA_Pablo_Perm_Condition()
 {	

@@ -121,7 +121,7 @@ instance DIA_Parcival_DRAGON		(C_INFO)
 	nr			 =  2;
 	condition	 = 	DIA_Parcival_DRAGON_Condition;
 	information	 = 	DIA_Parcival_DRAGON_Info;
-	description	 =	"How are things?";
+	description	 =	"How's the situation?";
 };
 func int DIA_Parcival_DRAGON_Condition ()	
 {

@@ -60,7 +60,7 @@ instance DIA_Jarvis_DieLage (C_INFO)
 	condition	= DIA_Jarvis_DieLage_Condition;
 	information	= DIA_Jarvis_DieLage_Info;
 	permanent	= FALSE;
-	description = "How are things?";
+	description = "How's the situation?";
 };                       
 
 FUNC INT DIA_Jarvis_DieLage_Condition()

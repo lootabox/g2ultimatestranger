@@ -912,7 +912,7 @@ INSTANCE DIA_Lord_Hagen_KAP3U4_PERM(C_INFO)
 	condition	= DIA_Lord_Hagen_KAP3U4_PERM_Condition;
 	information	= DIA_Lord_Hagen_KAP3U4_PERM_Info;
 	permanent	= TRUE;
-	description = "How are things?";
+	description = "How's the situation?";
 };                       
 FUNC INT DIA_Lord_Hagen_KAP3U4_PERM_Condition()
 {

@@ -58,7 +58,7 @@ instance DIA_PAL_263_PERM_OTH		(C_INFO)
 	condition	 = 	DIA_PAL_263_PERM_OTH_Condition;
 	information	 = 	DIA_PAL_263_PERM_OTH_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"How are things?";
+	description	 = 	"How's the situation?";
 };
 
 func int DIA_PAL_263_PERM_OTH_Condition ()

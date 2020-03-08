@@ -1306,7 +1306,7 @@ instance DIA_Garond_PERM5		(C_INFO)
 	information	 = 	DIA_Garond_PERM5_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"How are things?";
+	description	 = 	"How's the situation?";
 };
 
 func int DIA_Garond_PERM5_Condition ()
