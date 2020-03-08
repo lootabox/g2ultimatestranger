@@ -7,7 +7,7 @@ const int SPL_Damage_ChargeZap 		= 30;
 
 INSTANCE Spell_ChargeZap (C_Spell_Proto)
 {
-	time_per_mana			= 100;
+	time_per_mana			= 60; // 600/cost
 	damage_per_level		= SPL_Damage_ChargeZap;
 	damageType				= DAM_MAGIC;
 };

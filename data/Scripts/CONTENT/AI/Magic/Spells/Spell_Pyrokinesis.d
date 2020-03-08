@@ -11,7 +11,7 @@ const int SPL_Damage_FireStorm 		= 60;
 
 INSTANCE Spell_Pyrokinesis (C_Spell_Proto)
 {
-	time_per_mana			= 30;
+	time_per_mana			= 33; // 1000/cost
 	damage_per_level		= SPL_Damage_FireStorm;
 	damageType				= DAM_MAGIC;
 };

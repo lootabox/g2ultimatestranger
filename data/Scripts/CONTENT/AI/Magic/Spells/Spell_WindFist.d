@@ -7,7 +7,7 @@ const int SPL_Damage_WindFist			= 15;
 
 INSTANCE Spell_WindFist (C_Spell_Proto)
 {
-	time_per_mana			= 30;
+	time_per_mana			= 80; // 400/cost
 	damage_per_level		= SPL_Damage_WindFist;			//pro Level !!!
 	damageType				= DAM_FLY;
 	

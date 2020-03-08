@@ -212,10 +212,11 @@ func int Handle_Magic_Dmg(var c_npc vic, var c_npc att, var int spellID, var int
 {
 var string pristr; pristr = IntToString(dmg);
 
-	// Handle infused fire mage staff
+	// Infused fire mage staff effect
 	if (Staff_Fire_Charged == TRUE)
 	{
 		dmg = dmg * 5 / 4;
+		Staff_Fire_Charged = FALSE;
 	};
 
 	// Get protection amount
@@ -246,14 +247,24 @@ var string pristr; pristr = IntToString(dmg);
 
 		if (Hlp_IsValidItem(wpn))
 		{
-			// Fire staff
+			// Fire staff non-infused effect and infused trigger
 			if (Hlp_IsItem(wpn, ItMW_Addon_Stab01))
 			{
-				dmg += 10;
+				if (Buff_Has(vic, dot_burn))
+				{
+					dmg += 5;
+					fireDot += 5;
+				};
 			}
-			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
+			else if	(fireDot > 0)
 			{
-				Staff_Fire_Charged = TRUE;
+				if	(Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
+				||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Magic))
+				||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Water))
+				||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Typhoon))
+				{
+					Staff_Fire_Charged = TRUE;
+				};
 			};
 		};
 		// Play burn FX on corpses for flavor in any case

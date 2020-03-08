@@ -174,7 +174,7 @@ INSTANCE ItMW_Addon_Stab03_Infused (C_Item) {
 	TEXT[0]				= NAME_Staff_Water_2;
 };
 // *****************************************************
-PROTOTYPE ItMW_Addon_Stab04 (C_Item)
+PROTOTYPE ItMW_Addon_Stab04_Proto (C_Item)
 {	
 	name 				=	"Ulthar's staff";  
 
@@ -196,30 +196,38 @@ PROTOTYPE ItMW_Addon_Stab04 (C_Item)
 
 	description			= 	name;
 
-	TEXT[0]				= "Ulthar enchanted this staff.";
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
-INSTANCE ItMW_Addon_Stab04_Fire_Magic (ItMW_Addon_Stab04) {
+INSTANCE ItMW_Addon_Stab04 (ItMW_Addon_Stab04_Proto) {
+	TEXT[0]				= NAME_Staff_Ulthar;
+};
+INSTANCE ItMW_Addon_Stab04_Fire_Magic (ItMW_Addon_Stab04_Proto) {
 	TEXT[0]				= NAME_Staff_Ulthar_Fire_Magic;
 };
-INSTANCE ItMW_Addon_Stab04_Fire_Water (ItMW_Addon_Stab04) {
+INSTANCE ItMW_Addon_Stab04_Fire_Water (ItMW_Addon_Stab04_Proto) {
 	TEXT[0]				= NAME_Staff_Ulthar_Fire_Water;
 };
-INSTANCE ItMW_Addon_Stab04_Fire_Typhoon (ItMW_Addon_Stab04) {
+INSTANCE ItMW_Addon_Stab04_Fire_Typhoon (ItMW_Addon_Stab04_Proto) {
 	TEXT[0]				= NAME_Staff_Ulthar_Fire_Typhoon;
+	on_equip			=	Equip_Addon_Stab05;
+	on_unequip			=	UnEquip_Addon_Stab05;
 };
-INSTANCE ItMW_Addon_Stab04_Magic_Water (ItMW_Addon_Stab04) {
+INSTANCE ItMW_Addon_Stab04_Magic_Water (ItMW_Addon_Stab04_Proto) {
 	TEXT[0]				= NAME_Staff_Ulthar_Magic_Water;
 };
-INSTANCE ItMW_Addon_Stab04_Magic_Typhoon (ItMW_Addon_Stab04) {
+INSTANCE ItMW_Addon_Stab04_Magic_Typhoon (ItMW_Addon_Stab04_Proto) {
 	TEXT[0]				= NAME_Staff_Ulthar_Magic_Typhoon;
+	on_equip			=	Equip_Addon_Stab05;
+	on_unequip			=	UnEquip_Addon_Stab05;
 };
-INSTANCE ItMW_Addon_Stab04_Water_Typhoon (ItMW_Addon_Stab04) {
+INSTANCE ItMW_Addon_Stab04_Water_Typhoon (ItMW_Addon_Stab04_Proto) {
 	TEXT[0]				= NAME_Staff_Ulthar_Water_Typhoon;
+	on_equip			=	Equip_Addon_Stab05;
+	on_unequip			=	UnEquip_Addon_Stab05;
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab05 (C_Item)

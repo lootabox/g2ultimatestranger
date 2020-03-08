@@ -2,12 +2,12 @@
 // SPL_DestroyUndead
 // *****************
 
-const int	SPL_Cost_DESTROYUNDEAD		=	30; //*6
+const int	SPL_Cost_DESTROYUNDEAD		=	20; //*6
 const int 	SPL_Damage_DESTROYUNDEAD	=	75; //soll halt wirklich killen!
 
 INSTANCE Spell_DestroyUndead(C_Spell_Proto)
 {
-	time_per_mana			= 30;
+	time_per_mana			= 30; // 600/cost
 	damage_per_level 		= SPL_Damage_DESTROYUNDEAD;
 	spelltype				= SPELL_NEUTRAL;
 };

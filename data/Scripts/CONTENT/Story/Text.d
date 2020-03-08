@@ -743,14 +743,15 @@ const string NAME_Shrink_Info			= "Only affects living monsters. ";
 const string NAME_BeliarsRage_Info		= "Deals halved damage against evil targets. ";
 
 // MAX LENGTH							"------------------------------------------------------------";
-const string NAME_Staff_Fire_1			= "Fire spell damage vs. burning targets increased by ten.";
-const string NAME_Staff_Fire_2			= "Spell damage vs. burning targets increased by a quarter.";
+const string NAME_Staff_Fire_1			= "Fire spell damage against burning foes increased by ten.";
+const string NAME_Staff_Fire_2			= "Igniting a foe increases next spell damage by a quarter.";
 const string NAME_Staff_Magic_1			= "Mana recovery rate is halved on full mana.";
 const string NAME_Staff_Magic_2			= "Mana can overflow its natural limit temporarily.";
 const string NAME_Staff_Water_1			= "Ice and water spells mana cost reduced by three.";
 const string NAME_Staff_Water_2			= "Ice and water spells reduce next spells cost by a quarter.";
 const string NAME_Staff_Typhoon_1		= "Simple thrown spells can be cast faster.";
 const string NAME_Staff_Typhoon_2		= "Simple thrown and charged spells can be cast faster.";
+const string NAME_Staff_Ulthar			= "Ulthar enchanted this staff for fusing two staves together.";
 const string NAME_Staff_Ulthar_Fire_Magic		= "Staff of fire fused with the staff of magic.";
 const string NAME_Staff_Ulthar_Fire_Water		= "Staff of fire fused with the staff of water.";
 const string NAME_Staff_Ulthar_Fire_Typhoon		= "Staff of fire fused with the staff of typhoons.";

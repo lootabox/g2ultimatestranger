@@ -20,10 +20,16 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 		return SPL_SENDCAST;
 	};
 
+	// Staff of water mage effect
+	if (Staff_Water_Charged == TRUE)
+	{
+		manaCost = manaCost * 3 / 4;
+	};
+
 	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 	if (Hlp_IsValidItem(wpn))
 	{
-		// Staff of water mage
+		// Staff of water mage non-infused effect
 		if (Hlp_IsItem(wpn, ItMW_Addon_Stab03)) {
 			var int spellID; spellID = Npc_GetActiveSpell(self);
 			if	(spellID == SPL_Icebolt)
@@ -36,21 +42,18 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 			{
 				manaCost -= 3;
 			};
-		}
-		else if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
-		{
-			if (Staff_Water_Charged == TRUE)
-			{
-				manaCost = manaCost * 3 / 4;
-			};
 		};
 	};
 
 	if (slf.attribute[ATR_MANA] >= manaCost)
 	{
 		if (Hlp_IsValidItem(wpn)) {
-			// Typhoon
-			if (Hlp_IsItem(wpn, ItMw_Addon_Stab05) || Hlp_IsItem(wpn, ItMw_Addon_Stab05_Infused)) {
+			// Typhoon non-infused effect
+			if	(Hlp_IsItem(wpn, ItMw_Addon_Stab05))
+			||	(Hlp_IsItem(wpn, ItMw_Addon_Stab05_Infused))
+			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Typhoon))
+			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Magic_Typhoon))
+			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Water_Typhoon)) {
 				// Deactive timer if active
 				if (FF_Active(FF_RapidSpellCombo_Reset)) {
 					FF_Remove(FF_RapidSpellCombo_Reset);
@@ -108,10 +111,17 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 	}
 	else
 	{
+		// Staff of water mage effect
+		if (Staff_Water_Charged == TRUE)
+		{
+			manaCost = manaCost * 3 / 4;
+			Staff_Water_Charged = FALSE;
+		};
+
 		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 		if (Hlp_IsValidItem(wpn))
 		{
-			// Staff of water mage
+			// Staff of water mage non-infused effect and infused trigger
 			if (Hlp_IsItem(wpn, ItMW_Addon_Stab03))
 			{
 				var int spellID; spellID = Npc_GetActiveSpell(self);
@@ -127,12 +137,10 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 				};
 			}
 			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
+				||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Water))
+				||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Magic_Water))
+				||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Water_Typhoon))
 			{
-				if (Staff_Water_Charged == TRUE)
-				{
-					manaCost = manaCost * 3 / 4;
-					Staff_Water_Charged = FALSE;
-				};
 				if	(spellID == SPL_Icebolt)
 				||	(spellID == SPL_IceLance)
 				||	(spellID == SPL_IceCube)
@@ -157,20 +165,21 @@ func int Spell_Logic_Invest(var C_NPC slf, var int manaInvested, var int STEP_si
 	if (Npc_GetActiveSpellIsScroll(slf)) {STEP_cost = C_GetScrollCost(STEP_cost);}
 	else
 	{
+		// Staff of water mage effect
+		if (Staff_Water_Charged == TRUE)
+		&& (firstTierNoManaCost == FALSE)
+		{
+			STEP_cost = STEP_cost * 3 / 4;
+		};
+
 		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 		if (Hlp_IsValidItem(wpn))
 		{
-			// Staff of water mage
-			if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
-			{
-				if (Staff_Water_Charged == TRUE)
-				&& (firstTierNoManaCost == FALSE)
-				{
-					STEP_cost = STEP_cost * 3 / 4;
-				};
-			}
-			// Typhoon
-			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
+			// Typhoon infused effect
+			if	(Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
+			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Typhoon))
+			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Magic_Typhoon))
+			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Water_Typhoon))
 			{
 				STEP_size = STEP_size * 7 / 10;
 			};

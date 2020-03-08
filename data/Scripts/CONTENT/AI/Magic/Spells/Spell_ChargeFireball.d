@@ -7,7 +7,7 @@ const int SPL_Damage_ChargeFireball 	= 60;
 
 INSTANCE Spell_ChargeFireball (C_Spell_Proto)
 {
-	time_per_mana			= 30;
+	time_per_mana			= 40; // 800/cost
 	damage_per_level		= SPL_Damage_ChargeFireball;
 	damageType				= DAM_MAGIC;
 };
