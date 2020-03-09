@@ -519,31 +519,30 @@ func void DIA_Addon_Lares_GetRangerArmor_Info ()
 	if (!Npc_IsDead(Martin))	{ TRIA_Invite(Martin); };
 	TRIA_Start();
 
-	TRIA_Next(Lares);
-	DIAG_Reset();
+	TRIA_Next(Lares); AI_LookAtNpc(hero, Lares);
 
 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_00"); //All right, my young friend. We have come together here to celebrate your admission to the 'Ring of Water'.
 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_01"); //The boys who are present here will keep an eye out for you from today on.
 
 	if (MIS_Addon_Cavalorn_GetOrnamentFromPAL != 0)
 	&& (!Npc_IsDead(Cavalorn)) {
-		TRIA_Next(Cavalorn);
+		TRIA_Next(Cavalorn); AI_LookAtNpc(hero, Cavalorn);
 		AI_Output	(self, other, "DIA_Addon_Cavalorn_MeetingIsRunning_08_00"); //Welcome to the 'Ring', my friend.
 	};
 	if (!Npc_IsDead(Gaan)) {
-		TRIA_Next(Gaan);
+		TRIA_Next(Gaan); AI_LookAtNpc(hero, Gaan);
 		AI_Output	(self, other, "DIA_Addon_Gaan_MeetingIsRunning_03_00"); //A fresh face in our midst. Welcome to the 'Ring of Water'.
 	};
 	if (!Npc_IsDead(Martin)) {
-		TRIA_Next(Martin);
+		TRIA_Next(Martin); AI_LookAtNpc(hero, Martin);
 		AI_Output	(self, other, "DIA_Addon_Cord_MeetingIsRunning_07_00"); //So you're the new fellow, mh? Welcome among us, brother of the Ring.
 	};
 	if (!Npc_IsDead(Cord)) {
-		TRIA_Next(Cord);
+		TRIA_Next(Cord); AI_LookAtNpc(hero, Cord);
 		AI_Output	(self, other, "DIA_Addon_Cord_MeetingIsRunning_14_00"); //Welcome to the 'Ring of Water', brother.
 	};
 
-	TRIA_Next(Lares);
+	TRIA_Next(Lares); AI_LookAtNpc(hero, Lares);
 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_02"); //Of course, there are others who also belong to the 'Ring of Water', so be careful.
 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_03"); //Whether you do us a service or mess things up - we are going to learn about it.
 	AI_Output	(self, other, "DIA_Addon_Lares_GetRangerArmor_09_04"); //Here, take the armor of our community.

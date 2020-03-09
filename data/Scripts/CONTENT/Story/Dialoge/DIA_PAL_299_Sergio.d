@@ -327,7 +327,7 @@ func int DIA_Sergio_Ende_Condition ()
 func void DIA_Sergio_Ende_Info ()
 {
 	AI_Output (self, other, "DIA_Sergio_Ende_04_00"); //We are there. Whatever awaits you in the Valley of the Mines, I hope that you find your way back.
-	AI_Output (other, self, "DIA_Sergio_Ende_15_01"); //Don't fear - I shall return.
+	AI_Output (other, self, "DIA_Sergio_Ende_15_01"); //Never fear - I shall return.
 	AI_Output (self, other, "DIA_Sergio_Ende_04_02"); //Go with Innos. May he always protect you.
 	
 	self.aivar[AIV_PARTYMEMBER] = FALSE; 

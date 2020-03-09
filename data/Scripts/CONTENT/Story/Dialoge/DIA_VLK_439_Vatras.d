@@ -2409,7 +2409,7 @@ func void DIA_Vatras_BEGINN_los ()
  	Npc_ExchangeRoutine	(self,"RITUALINNOSEYE");
 	B_StartOtherRoutine   (Xardas,"RITUALINNOSEYE");
 	B_StartOtherRoutine   (Pyrokar,"RITUALINNOSEYE");
-	Npc_SetRefuseTalk (self,60);
+	Npc_SetRefuseTalk (self,40);
 
 	RitualInnosEyeRuns = LOG_RUNNING;
 };
@@ -2437,7 +2437,7 @@ func int DIA_Vatras_AUGEGEHEILT_Condition ()
 		};
 };
 
-func void DIA_Vatras_AUGEGEHEILT_Info ()
+/* func void DIA_Vatras_AUGEGEHEILT_Info ()
 {
 	AI_Output			(self, other, "DIA_Vatras_AUGEGEHEILT_05_00"); //It is finished. We have succeeded in thwarting the enemy's plan and restoring the Eye.
 	AI_Output			(self, other, "DIA_Vatras_AUGEGEHEILT_05_01"); //Let Pyrokar explain to you how to use its power.
@@ -2458,6 +2458,113 @@ func void DIA_Vatras_AUGEGEHEILT_Info ()
 	B_StartOtherRoutine  (VLK_450_Buerger,"START");
 	B_StartOtherRoutine  (VLK_426_Buergerin,"START");
 	B_StartOtherRoutine  (VLK_421_Valentino,"START");
+}; */
+
+/** Combined trialoge between hero, Pyrokar, Vatras and Xardas
+	DIA_Vatras_AUGEGEHEILT_Info
+	DIA_Pyrokar_AUGEGEHEILT
+	DIA_Pyrokar_KAP3_READY
+	DIA_Xardas_RitualInnosEyeRepairImportant
+*/
+func void DIA_Vatras_AUGEGEHEILT_HeroTalks ()		{ /* Hero looks at previous */	AI_LookAtNpc(Pyrokar, hero);	AI_LookAtNpc(Vatras, hero);		AI_LookAtNpc(Xardas, hero); };
+func void DIA_Vatras_AUGEGEHEILT_PyrokarTalks ()	{ AI_LookAtNpc(hero, Pyrokar);	AI_LookAtNpc(Pyrokar, hero);	AI_LookAtNpc(Vatras, Pyrokar);	AI_LookAtNpc(Xardas, Pyrokar); };
+func void DIA_Vatras_AUGEGEHEILT_VatrasTalks ()		{ AI_LookAtNpc(hero, Vatras);	AI_LookAtNpc(Pyrokar, Vatras);	AI_LookAtNpc(Vatras, hero);		AI_LookAtNpc(Xardas, Vatras); };
+func void DIA_Vatras_AUGEGEHEILT_XardasTalks ()		{ AI_LookAtNpc(hero, Xardas);	AI_LookAtNpc(Pyrokar, Xardas);	AI_LookAtNpc(Vatras, Xardas);	AI_LookAtNpc(Xardas, hero); };
+func void DIA_Vatras_AUGEGEHEILT_Info ()
+{
+	B_StartOtherRoutine   (Pyrokar,"RitualInnosEyeRepair");
+	B_StartOtherRoutine   (Xardas, "RitualInnosEyeRepair");
+
+	TRIA_Invite(Pyrokar);
+	TRIA_Invite(Xardas);
+	TRIA_Start();
+
+	TRIA_Next(Vatras);
+
+	TRIA_Next(Vatras); DIA_Vatras_AUGEGEHEILT_VatrasTalks();
+	AI_Output			(self, other, "DIA_Vatras_AUGEGEHEILT_05_00"); //It is finished. We have succeeded in thwarting the enemy's plan and restoring the Eye.
+	DIA_Vatras_AUGEGEHEILT_HeroTalks();
+	AI_Output			(other, self, "DIA_Pyrokar_AUGEGEHEILT_15_00"); //You did it. The Eye of Innos is healed.
+	
+	TRIA_Next(Pyrokar); DIA_Vatras_AUGEGEHEILT_PyrokarTalks();
+	AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_01"); //I would hardly have believed it possible.
+	
+	TRIA_Next(Xardas); DIA_Vatras_AUGEGEHEILT_XardasTalks();
+	AI_Output (self, other, "DIA_Xardas_Add_14_06"); //Now that the Eye of Innos is healed, you must face the dragons!
+	AI_Output (self, other, "DIA_Xardas_Add_14_07"); //They all serve Beliar, the god of darkness.
+	AI_Output (self, other, "DIA_Xardas_Add_14_08"); //But there must be an earthly power that controls them. That much has become clear to me.
+	AI_Output (self, other, "DIA_Xardas_Add_14_09"); //Find out what the source of their power is.
+	AI_Output (self, other, "DIA_Xardas_Add_14_10"); //As soon as you have found that out, come back to me!
+	DIA_Vatras_AUGEGEHEILT_HeroTalks();
+	AI_Output			(other, self, "DIA_Pyrokar_KAP3_READY_15_00"); //What remains to be done here?
+
+	TRIA_Next(Pyrokar); DIA_Vatras_AUGEGEHEILT_PyrokarTalks();
+	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_01"); //Do not waste your time on trivial things. Go and vanquish the dragons. Here, take the Eye.
+
+	TRIA_Next(Vatras); DIA_Vatras_AUGEGEHEILT_VatrasTalks();
+	AI_Output			(self, other, "DIA_Vatras_AUGEGEHEILT_05_01"); //Let Pyrokar explain to you how to use its power.
+
+	TRIA_Next(Pyrokar); DIA_Vatras_AUGEGEHEILT_PyrokarTalks();
+	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_02"); //Bear in mind that you need to talk to a dragon first before you can attack it.
+	AI_Output			(self ,other, "DIA_Pyrokar_Add_11_01"); //The power of the Eye will force the dragons to speak to you and tell the truth.
+	AI_Output			(self ,other, "DIA_Pyrokar_Add_11_02"); //Furthermore, it offers protection against their attacks when you wear it.
+	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_05"); //However, its power does not last. You will have to fill it up again with magical energy.
+	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_06"); //To do that, you need the essence of a dragon's heart which you merge with the Eye on an alchemist's bench.
+	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_07"); //Only then can you dare face another dragon.
+	DIA_Vatras_AUGEGEHEILT_HeroTalks();
+	AI_Output			(other, self, "DIA_Pyrokar_KAP3_READY_15_08"); //Thanks. I'll remember that.
+	
+	CreateInvItems (Pyrokar,ItMi_InnosEye_MIS,1);
+	B_GiveInvItems (Pyrokar, hero, ItMi_InnosEye_MIS,1);
+	
+	TRIA_Next(Pyrokar); DIA_Vatras_AUGEGEHEILT_PyrokarTalks();
+	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_09"); //You now have everything you need. Go, then. You do not have much time left.
+
+	TRIA_Next(Vatras); DIA_Vatras_AUGEGEHEILT_VatrasTalks();
+	AI_Output			(self, other, "DIA_Vatras_AUGEGEHEILT_05_02"); //I hope that I shall see you again, once you have accomplished your mission. Farewell.
+
+	AI_StopLookAt(hero);
+	AI_StopLookAt(Pyrokar);
+	AI_StopLookAt(Vatras);
+	AI_StopLookAt(Xardas);
+
+	TRIA_Finish();
+
+	AI_StopProcessInfos (self);
+
+	// ---------------------------------------------------- DIA_Vatras_AUGEGEHEILT_Info START
+	B_LogEntry (TOPIC_INNOSEYE, "The Eye has been healed. Pyrokar has handed it to me, and now it's off to dragon hunting.");
+
+	RitualInnosEyeRuns = LOG_SUCCESS;
+	MIS_RitualInnosEyeRepair = LOG_SUCCESS;	
+
+	B_StartOtherRoutine  (VLK_455_Buerger,"START");
+	B_StartOtherRoutine  (VLK_454_Buerger,"START");
+	B_StartOtherRoutine  (VLK_428_Buergerin,"START");
+	B_StartOtherRoutine  (VLK_450_Buerger,"START");
+	B_StartOtherRoutine  (VLK_426_Buergerin,"START");
+	B_StartOtherRoutine  (VLK_421_Valentino,"START");
+	// ---------------------------------------------------- DIA_Vatras_AUGEGEHEILT_Info END
+	// ---------------------------------------------------- DIA_Xardas_RitualInnosEyeRepairImportant START
+	B_StartOtherRoutine (Xardas,"Start");
+	B_StartOtherRoutine	(Vatras,"Start");
+	// ---------------------------------------------------- DIA_Xardas_RitualInnosEyeRepairImportant END
+	// ---------------------------------------------------- DIA_Pyrokar_KAP3_READY START
+	PLAYER_TALENT_ALCHEMY[Charge_InnosEye] 		= TRUE;	
+	PrintScreen	(PRINT_LearnAlchemyInnosEye, -1, -1, FONT_Screen, 2);
+	TOPIC_END_INNOSEYE = TRUE;
+	B_GivePlayerXP (XP_Ambient);	
+
+	CreateInvItems   (Gorax, ItMi_RuneBlank, 1);
+
+	Log_CreateTopic (TOPIC_DRACHENJAGD, LOG_MISSION);
+	Log_SetTopicStatus(TOPIC_DRACHENJAGD, LOG_RUNNING);
+	B_LogEntry (TOPIC_DRACHENJAGD,"I am now ready to face the dragons. The Eye of Innos will aid me to destroy them. But I must not forget to wear it when entering into battle with the beasts. I must speak to the dragons before I stand a chance against them. The trouble is that the Eye loses power every time I speak to one of them. I need the heart of a dragon and an empty laboratory flask to bring the weakened stone of the amulet and the extract of a dragon's heart together on an alchemist's bench before facing another dragon."); 
+
+	MIS_ReadyforChapter4 = TRUE; //Joly: Mit dieser Varible in den Levelchange zur OW -> Kapitel 4
+	B_NPC_IsAliveCheck (NEWWORLD_ZEN);
+	Npc_ExchangeRoutine	(Pyrokar,"Start");
+	// ---------------------------------------------------- DIA_Pyrokar_KAP3_READY END
 };
 
 

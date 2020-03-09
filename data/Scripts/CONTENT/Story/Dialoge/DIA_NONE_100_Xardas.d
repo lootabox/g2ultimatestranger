@@ -1046,7 +1046,7 @@ func void DIA_Xardas_PYROWILLNICHT_Info ()
 ///////////////////////////////////////////////////////////////////////
 //	Info RitualInnosEyeRepairImportant
 ///////////////////////////////////////////////////////////////////////
-instance DIA_Xardas_RitualInnosEyeRepairImportant		(C_INFO)
+/* instance DIA_Xardas_RitualInnosEyeRepairImportant		(C_INFO)
 {
 	npc		 = 	NONE_100_Xardas;
 	nr		 = 	36;
@@ -1085,7 +1085,7 @@ func void DIA_Xardas_RitualInnosEyeRepairImportant_Info ()
   	B_StartOtherRoutine	(Vatras,"Start");
 
  };
-
+ */
 ///////////////////////////////////////////////////////////////////////
 //	Info wasnun
 ///////////////////////////////////////////////////////////////////////

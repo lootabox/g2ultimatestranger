@@ -1444,7 +1444,7 @@ func void DIA_Pyrokar_PRERITUAL_Info ()
 ///////////////////////////////////////////////////////////////////////
 //	Info AugeGeheilt
 ///////////////////////////////////////////////////////////////////////
-instance DIA_Pyrokar_AUGEGEHEILT		(C_INFO)
+/* instance DIA_Pyrokar_AUGEGEHEILT		(C_INFO)
 {
 	npc		 = 	KDF_500_Pyrokar;
 	nr		 = 	30;
@@ -1468,11 +1468,11 @@ func void DIA_Pyrokar_AUGEGEHEILT_Info ()
 	AI_Output			(other, self, "DIA_Pyrokar_AUGEGEHEILT_15_00"); //You did it. The Eye of Innos is healed.
 	AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_01"); //I would hardly have believed it possible.
 };
-
+ */
 //////////////////////////////////////////////////////////////////////
 //	Info Kap4_Ready
 ///////////////////////////////////////////////////////////////////////
-instance DIA_Pyrokar_KAP3_READY		(C_INFO)
+/* instance DIA_Pyrokar_KAP3_READY		(C_INFO)
 {
 	npc		 = 	KDF_500_Pyrokar;
 	nr		 = 	30;
@@ -1493,7 +1493,7 @@ func int DIA_Pyrokar_KAP3_READY_Condition ()
 
 func void DIA_Pyrokar_KAP3_READY_Info ()
 {
-	AI_Output			(other, self, "DIA_Pyrokar_KAP3_READY_15_00"); //What remains for me to do here?
+	AI_Output			(other, self, "DIA_Pyrokar_KAP3_READY_15_00"); //What remains to be done here?
 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_01"); //Do not waste your time on trivial things. Go and vanquish the dragons. Here, take the Eye.
 	CreateInvItems (self,ItMi_InnosEye_MIS,1);
 	B_GiveInvItems (self, other, ItMi_InnosEye_MIS,1);
@@ -1524,7 +1524,7 @@ func void DIA_Pyrokar_KAP3_READY_Info ()
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine	(self,"Start");
 };
-
+ */
 ///////////////////////////////////////////////////////////////////////
 //	Info BuchderBessenen
 ///////////////////////////////////////////////////////////////////////
