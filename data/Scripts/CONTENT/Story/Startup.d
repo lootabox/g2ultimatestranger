@@ -25,7 +25,7 @@ func void INIT_GLOBAL()
 	//MEM_InitAll();
 
 	// LeGo
-	LeGo_Init(GFA_LEGO_FLAGS | LeGo_Focusnames | LeGo_Bars | LeGo_Buffs | LeGo_Names);
+	LeGo_Init(GFA_LEGO_FLAGS | LeGo_Focusnames | LeGo_Bars | LeGo_Buffs | LeGo_Names | LeGo_Trialoge);
 
 	// Prevent alpha issues
 	MoreAlphaVobs(2048); //normal: 256

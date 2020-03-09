@@ -75,6 +75,7 @@ func void LeGo_InitFlags(var int f) {
 	if(f & LeGo_Names)			{ f = f | LeGo_PermMem; };
     if(f & LeGo_PermMem)        { f = f | LeGo_Saves; };
     if(f & LeGo_Saves)          { f = f | LeGo_HookEngine; };
+    if(f & LeGo_Trialoge)       { f = f | LeGo_AI_Function; };
     _LeGo_Flags = f;
 };
 
