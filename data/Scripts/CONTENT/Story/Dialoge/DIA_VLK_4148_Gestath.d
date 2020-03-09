@@ -37,7 +37,7 @@ instance DIA_Gestath_HALLO		(C_INFO)
 	condition	 = 	DIA_Gestath_HALLO_Condition;
 	information	 = 	DIA_Gestath_HALLO_Info;
 
-	description	 = 	"What's up?";
+	description	 = 	"How's it going?";
 };
 
 func int DIA_Gestath_HALLO_Condition ()

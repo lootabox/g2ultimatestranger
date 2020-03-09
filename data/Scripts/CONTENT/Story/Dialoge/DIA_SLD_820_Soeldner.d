@@ -100,7 +100,7 @@ INSTANCE DIA_Sld_820_PERM(C_INFO)
 	condition	= DIA_Sld_820_PERM_Condition;
 	information	= DIA_Sld_820_PERM_Info;
 	permanent	= TRUE;
-	description = "What's up?";
+	description = "How's it going?";
 };                       
 
 FUNC INT DIA_Sld_820_PERM_Condition()

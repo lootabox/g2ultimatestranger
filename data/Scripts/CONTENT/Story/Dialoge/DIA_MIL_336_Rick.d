@@ -31,7 +31,7 @@ instance DIA_Rick_HALLO		(C_INFO)
 	condition	= DIA_Rick_HALLO_Condition;
 	information	= DIA_Rick_HALLO_Info;
 	permanent	= TRUE;
-	description	= "What's up?";
+	description	= "How's it going?";
 };
 
 func int DIA_Rick_HALLO_Condition ()

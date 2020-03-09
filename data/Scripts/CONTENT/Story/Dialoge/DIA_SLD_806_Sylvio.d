@@ -31,7 +31,7 @@ instance DIA_Sylvio_Hallo		(C_INFO)
 	condition	= DIA_Sylvio_Hallo_Condition;
 	information	= DIA_Sylvio_Hallo_Info;
 	permanent	= TRUE;
-	description	= "What's up?";
+	description	= "How's it going?";
 };
 
 func int DIA_Sylvio_Hallo_Condition ()

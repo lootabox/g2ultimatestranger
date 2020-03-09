@@ -285,7 +285,7 @@ instance DIA_Sergio_Guide		(C_INFO)
 	condition	 = 	DIA_Sergio_Guide_Condition;
 	information	 = 	DIA_Sergio_Guide_Info;
 	permanent	 =  TRUE;
-	description	 = 	"What's up?";
+	description	 = 	"Shall we go?";
 };
 func int DIA_Sergio_Guide_Condition ()
 {	
@@ -297,7 +297,7 @@ func int DIA_Sergio_Guide_Condition ()
 };
 func void DIA_Sergio_Guide_Info ()
 {
-	AI_Output (other, self, "DIA_Sergio_Guide_15_00"); //How's it going?
+	AI_Output (other, self, "DIA_Sergio_Guide_15_00"); //Shall we go?
 	AI_Output (self, other, "DIA_Sergio_Guide_04_01"); //I shall take you to the pass. But the dangerous part of the journey only begins there.
 	AI_Output (self, other, "DIA_Sergio_Guide_04_02"); //But let us waste no time. We need to be on our way.
 	

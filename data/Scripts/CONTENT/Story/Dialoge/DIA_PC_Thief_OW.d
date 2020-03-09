@@ -775,7 +775,7 @@ instance DIA_Addon_ThiefOW_PERM (C_INFO)
 	condition	= DIA_Addon_ThiefOW_PERM_Condition;
 	information	= DIA_Addon_ThiefOW_PERM_Info;
 	permanent	= TRUE;
-	description = "Everything all right?";
+	description = "How's it going?";
 };                       
 FUNC INT DIA_Addon_ThiefOW_PERM_Condition()
 {

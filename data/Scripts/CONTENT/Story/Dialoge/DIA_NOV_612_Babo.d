@@ -519,7 +519,7 @@ INSTANCE DIA_Babo_HowIsIt   (C_INFO)
 	condition   = DIA_Babo_HowIsIt_Condition;
 	information = DIA_Babo_HowIsIt_Info;
 	permanent   = TRUE;
-	description	= "How's it going?";
+	description	= "How are you?";
 };
 FUNC INT DIA_Babo_HowIsIt_Condition()
 {

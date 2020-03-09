@@ -131,7 +131,7 @@ func int DIA_Orlan_WERBISTDU_Condition ()
 func void DIA_Orlan_WERBISTDU_Info ()
 {
 	AI_Output			(other, self, "DIA_Orlan_WERBISTDU_15_00"); //Who are you?
-	AI_Output			(self, other, "DIA_Orlan_WERBISTDU_05_01"); //I'm Orlan, the keeper of this modest tavern.
+	AI_Output			(self, other, "DIA_Orlan_WERBISTDU_05_01"); //I'm Orlan, the keeper of this here modest tavern.
 	AI_Output			(self, other, "DIA_Orlan_WERBISTDU_05_02"); //What are you looking for, stranger? Maybe a decent sword, or a good piece of armor?
 	AI_Output			(self, other, "DIA_Orlan_WERBISTDU_05_03"); //A good swig from the country stills, or just some information?
 	AI_Output			(self, other, "DIA_Orlan_WERBISTDU_05_04"); //I can give you all that and more, if your coins ring.

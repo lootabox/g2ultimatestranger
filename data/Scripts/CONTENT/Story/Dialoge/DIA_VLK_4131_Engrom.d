@@ -34,7 +34,7 @@ instance DIA_Engrom_HALLO		(C_INFO)
 	condition	 = 	DIA_Engrom_HALLO_Condition;
 	information	 = 	DIA_Engrom_HALLO_Info;
 
-	description	 = 	"What's up?";
+	description	 = 	"How's it going?";
 };
 
 func int DIA_Engrom_HALLO_Condition ()

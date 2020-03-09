@@ -34,7 +34,7 @@ INSTANCE DIA_Lares_DI_Hallo (C_INFO)
 	information	= DIA_Lares_DI_Hallo_Info;
 	permanent	 = 	TRUE;
 
-	description = "What's up?";
+	description = "How's it going?";
 };                       
 FUNC INT DIA_Lares_DI_Hallo_Condition()
 {

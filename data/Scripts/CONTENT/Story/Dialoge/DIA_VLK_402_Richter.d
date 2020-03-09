@@ -84,7 +84,7 @@ INSTANCE DIA_Richter_Perm(C_INFO)
 	condition	= DIA_Richter_Perm_Condition;
 	information	= DIA_Richter_Perm_Info;
 	permanent	= TRUE;
-	description = "What's up?";
+	description = "How's it going?";
 };                       
 
 FUNC INT DIA_Richter_Perm_Condition()

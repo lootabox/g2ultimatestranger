@@ -519,7 +519,7 @@ instance DIA_Rod_PERM (C_INFO)
 	condition	= DIA_Rod_PERM_Condition;
 	information	= DIA_Rod_PERM_Info;
 	permanent	= TRUE;
-	description	= "What's up?"; 
+	description	= "How's it going?"; 
 };                       
 
 FUNC INT DIA_Rod_PERM_Condition()

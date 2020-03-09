@@ -124,7 +124,7 @@ INSTANCE DIA_Larius_DieLage(C_INFO)
 	condition	= DIA_Larius_DieLage_Condition;
 	information	= DIA_Larius_DieLage_Info;
 	permanent	= TRUE;
-	description	= "What's up?";
+	description	= "How's it going?";
 };                       
 
 FUNC INT DIA_Larius_DieLage_Condition()

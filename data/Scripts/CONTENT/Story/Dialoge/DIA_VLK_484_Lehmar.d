@@ -30,7 +30,7 @@ instance DIA_Lehmar_ENTSCHULDIGUNG		(C_INFO)
 	condition	 = 	DIA_Lehmar_ENTSCHULDIGUNG_Condition;
 	information	 = 	DIA_Lehmar_ENTSCHULDIGUNG_Info;
 	permanent 	 =  FALSE;
-	description	 = 	"What's up?";
+	description	 = 	"How's it going?";
 };
 
 func int DIA_Lehmar_ENTSCHULDIGUNG_Condition ()

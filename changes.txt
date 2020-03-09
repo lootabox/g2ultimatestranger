@@ -88,6 +88,7 @@ Young Wolves at the pass are now regular Wolves.
 	NPCs General
 
 Added ambient inventory for most NPCs alive or dead.
+Added dialog involving multiple NPCs to Ring of Water welcoming ceremony.
 Added logging for pickpocket failures and successes.
 Added pickpocketable items to NPCs inventories, except for traders.
 

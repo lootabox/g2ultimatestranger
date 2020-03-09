@@ -245,7 +245,7 @@ INSTANCE DIA_Hanna_AnyNews(C_INFO)
 	condition	= DIA_Hanna_AnyNews_Condition;
 	information	= DIA_Hanna_AnyNews_Info;
 	permanent	= FALSE;
-	description = "What's up?";
+	description = "How's it going?";
 };                       
 FUNC INT DIA_Hanna_AnyNews_Condition()
 {
