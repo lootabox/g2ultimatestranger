@@ -56,6 +56,7 @@ This does not include minor changes to quest related dialog or obvious fixes, su
 "Bottoms up"	Contest is only won by Randolph if Rukhar does not notice someone has been to his chest.
 "Cavalorn's old hut"	Only begins once NH finds the bag of ore, since before that the NH does not really have a task that he knows about.
 "Finding Joe"	No longer has its own logged quest, since for all NH knows, he is just another missing person.
+"Gold for Brutus"	Den can only be found after Brutus mentions him, he will have spent some of the gold for provisions and the XP reward is only received upon finding Den.
 "Hunger"	Gerold is more satisfied with more valuable food.
 "I gotta get out of here!"	Requires Talbin to be escorted through the pass and he doesn't spawn on Bengars farm right away.
 "Merchant raid"	Requires finding the bandits who took Erol's stone tablets, before returning any stone tablets.

@@ -60,7 +60,7 @@ func void DIA_Brutus_AFTER_FIGHT_Info ()
 	else if  (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
 	{
 		AI_Output (other, self, "DIA_Brutus_AFTER_FIGHT_15_02"); //I think you broke every single one of my ribs.
-		AI_Output (self, other, "DIA_Brutus_AFTER_FIGHT_06_03"); //And I didn't even hit you all that hard. Oh well, never mind, I like a guy who can take a few blows in stride.
+		AI_Output (self, other, "DIA_Brutus_AFTER_FIGHT_06_03"); //And I didn't even hit you that hard. Oh well, never mind, I like a guy who can take a few blows in his stride.
 		
 		if (Brutus_einmalig == FALSE)
 		{
@@ -182,6 +182,11 @@ func void DIA_Brutus_Kasse_Info ()
 	Log_CreateTopic (TopicBrutusKasse,LOG_MISSION);
 	Log_SetTopicStatus (TopicBrutusKasse,LOG_RUNNING);
 	B_LogEntry (TopicBrutusKasse,"Brutus' partner Den made off with 200 in gold and some jewelry. If I bring him 200 pieces of gold, he'll help me become stronger.");
+
+	// Den can only be found after Brutus mentions him
+	Wld_InsertNpc		(VLK_4112_Den 	,"OC1"); //Leiche Den 		
+	VLK_Leiche3				= Hlp_GetNpc(VLK_4112_Den);
+	B_KillNpc (VLK_Leiche3);
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Wo ist Den?
@@ -212,7 +217,7 @@ func void DIA_Brutus_Den_Info ()
 	AI_Output (other, self, "DIA_Brutus_Den_15_02"); //Thanks, that's very helpful.
 	AI_Output (self, other, "DIA_Brutus_Den_06_03"); //Well, what can I say? I have no idea where he went.
 	
-	B_LogEntry (TopicBrutusKasse,"Den wanted to try and cross the pass.");
+	B_LogEntry (TopicBrutusKasse,"Den may have wanted to try and cross the pass.");
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Gold
@@ -246,7 +251,7 @@ func void DIA_Brutus_Gold_Info ()
 		Brutus_TeachSTR = TRUE;
 		Log_CreateTopic	(TOPIC_Teacher_OC, LOG_NOTE);
 		B_LogEntry		(TOPIC_Teacher_OC, "Brutus can help me to become stronger.");
-		B_GivePlayerXP  (XP_Ambient);
+		//B_GivePlayerXP  (XP_Ambient);
 	}
 	else 
 	{

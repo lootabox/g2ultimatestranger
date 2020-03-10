@@ -946,6 +946,7 @@ var int 	Brutus_einmalig;
 
 var int 	Garond_Kerkerauf;
 var int		TengronRing;
+var int		MIS_BrutusKasse;
 var int		OricBruder;
 var int 	MIS_Kervo_KillLurker;  
 

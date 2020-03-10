@@ -25,11 +25,12 @@ instance VLK_4112_Den (Npc_Default)
 	EquipItem (self, ItMw_1H_Vlk_Dagger);
 	
 	// ------ Inventory ------
-	CreateInvItems (self, ItMi_Gold, 200);
+	CreateInvItems (self, ItMi_Gold, 100); // he must have spent some gold for another ambient inventory
 	CreateInvItems (self, ItMi_SilverRing, 1);
 	CreateInvItems (self, ItMi_GoldRing,   1);
 	CreateInvItems (self, ItMi_SilverCandleHolder, 1);
 	CreateInvItems (self, ItMi_GoldNecklace,   1);	
+	B_CreateAmbientInv 	(self);
 	B_CreateAmbientInv 	(self);
 	// ------ visuals ------																			
 	

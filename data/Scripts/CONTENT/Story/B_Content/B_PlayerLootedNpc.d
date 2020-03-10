@@ -24,10 +24,15 @@ func void B_PlayerLootedNpc(var c_npc npc)
 		B_LogEntry(TOPIC_Addon_MalcomsStunt, "I found Malcom. Looks like the lurker won their fight.");
 		Malcom_Found = TRUE;
 
+	} else if (~PLI_flag & (1 << 3)) && (inst == VLK_4112_Den) {
+		PLI_flag = PLI_flag | (1 << 3);
+		B_LogEntry(TopicBrutusKasse, "I found Den along with the gold and jewelry he took.");
+		MIS_BrutusKasse = TRUE;
+		B_GivePlayerXP  (XP_Ambient);
+
 	};
 		// TOPIC_Addon_KillJuan
 		// TOPIC_Addon_Lance
-		// TopicBrutusKasse
 
 		// MIS_Maria_BringPlate
 		// MIS_Coragon_Silber

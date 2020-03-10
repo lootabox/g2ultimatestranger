@@ -9,7 +9,7 @@ func void ENTER_OLDWORLD_FIRSTTIME_TRIGGER ()
 			// ------ Tote NPCs (Leichen)------
 			// Start 
 			B_KillNpc (Bruder);
-			B_KillNpc (VLK_Leiche3);
+			//B_KillNpc (VLK_Leiche3);
 			//Weg von Mine2 zu Cavalorns Hütte
 			B_KillNpc (VLK_Leiche2);
 			B_KillNpc (STRF_Leiche1);
