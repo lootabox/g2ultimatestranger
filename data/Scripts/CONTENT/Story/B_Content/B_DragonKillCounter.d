@@ -30,6 +30,7 @@ func int B_DragonKillCounter (var C_NPC current_dragon)
 		{
 			MIS_KilledDragons = (MIS_KilledDragons + 1);
 			SwapDragnIsDead = TRUE;
+			B_LogEntry(TOPIC_DRACHENJAGD,"I killed the dragon in the swamp west from the castle.");
 		};
 		
 		if  ((Hlp_GetInstanceID (current_dragon)) == (Hlp_GetInstanceID (RckDragn)))
@@ -37,6 +38,7 @@ func int B_DragonKillCounter (var C_NPC current_dragon)
 		{
 			MIS_KilledDragons = (MIS_KilledDragons + 1);
 			RckDragnIsDead = TRUE;
+			B_LogEntry(TOPIC_DRACHENJAGD,"I killed the dragon that took over the old rock fortress to the south.");
 		};
 		
 		if  ((Hlp_GetInstanceID (current_dragon)) == (Hlp_GetInstanceID (FreDragn)))
@@ -44,6 +46,7 @@ func int B_DragonKillCounter (var C_NPC current_dragon)
 		{
 			MIS_KilledDragons = (MIS_KilledDragons + 1);
 			FreDragnIsDead = TRUE;
+			B_LogEntry(TOPIC_DRACHENJAGD,"I defeated the dragon within the volcano!");
 		};
 	
 		if  ((Hlp_GetInstanceID (current_dragon)) == (Hlp_GetInstanceID (IcDragn)))
@@ -51,6 +54,7 @@ func int B_DragonKillCounter (var C_NPC current_dragon)
 		{
 			MIS_KilledDragons = (MIS_KilledDragons + 1);
 			IcDragnIsDead = TRUE;
+			B_LogEntry(TOPIC_DRACHENJAGD,"I defeated the dragon in the western ice region!");
 			if(Npc_IsDead(IceGolem_Sylvio1) && Npc_IsDead(IceGolem_Sylvio2))
 			{
 				if(!Npc_IsDead(DJG_Sylvio))

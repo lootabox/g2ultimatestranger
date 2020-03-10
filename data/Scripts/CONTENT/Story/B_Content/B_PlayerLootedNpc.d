@@ -35,8 +35,4 @@ func void B_PlayerLootedNpc(var c_npc npc)
 		B_LogEntry(TOPIC_Addon_Lance, "I found Lance's body in the swamp.");
 
 	};
-		// TOPIC_Addon_KillJuan
-
-		// MIS_Maria_BringPlate
-		// MIS_Coragon_Silber
 };

@@ -556,6 +556,10 @@ Following actions now create a log entry:
 * Finding the Sun Aloe.
 * Finding the blank runestone for the Path of Believers quest.
 * Finding the recipe for Neoras.
+* Killing Hosk-Pak.
+* Killing Juan.
+* Killing Orc Colonel.
+* Killing dragons in the Valley of Mines.
 * Looting Malcom after Owen tells what happened to him.
 * Reading Lutero's note about pawning his Blood Chalice.
 * Using Oblivion spell while Ignaz' quest is running.

@@ -315,7 +315,7 @@ FUNC VOID DIA_Addon_Bill_KilledEsteban_Info()
 	AI_Output (other,self ,"DIA_Addon_Bill_KilledEsteban_15_02"); //Come off it, kid!
 	AI_Output (self ,other,"DIA_Addon_Bill_KilledEsteban_03_03"); //(sighs) Oh well. Just as long as you killed the swine.
 	
-	B_LogEntry	(TOPIC_Addon_KillJuan,"Juan is finished. Bill was very pleased.");
+	B_LogEntry	(TOPIC_Addon_KillJuan,"Bill was very pleased to hear of Juan's passing.");
 	MIS_Addon_Bill_SearchAngusMurder = LOG_SUCCESS;
 	B_GivePlayerXP (XP_Addon_Bill_KillAngusMurder);
 	

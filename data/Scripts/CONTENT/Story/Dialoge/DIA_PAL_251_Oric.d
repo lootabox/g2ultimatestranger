@@ -484,7 +484,7 @@ FUNC VOID DIA_Oric_WillHelp_Info()
 	
 	Log_CreateTopic (TOPIC_KillHoshPak, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_KillHoshPak, LOG_RUNNING);
-	B_LogEntry (TOPIC_KillHoshPak,"Oric wants me to eliminate the orc shaman Hosh-Pak. His tent is on a small clif not far from the back of the castle."); 
+	B_LogEntry (TOPIC_KillHoshPak,"Oric wants me to eliminate the orc shaman Hosh-Pak. His tent is on a small cliff not far from the back of the castle."); 
 
 	MIS_KillHoshPak = LOG_RUNNING;
 };

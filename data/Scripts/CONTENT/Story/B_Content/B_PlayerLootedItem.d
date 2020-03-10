@@ -134,4 +134,6 @@ func void B_PlayerLootedItem(var c_item itm)
 		B_LogEntry(TOPIC_HaradOrk, "I managed to get an orc weapon! I could take it to Harad for his approval.");
 
 	};
+	// MIS_Maria_BringPlate
+	// MIS_Coragon_Silber
 };

@@ -32,7 +32,7 @@ func void ZS_Dead ()
 			B_CountCanyonRazor ();
 		};
 	};
-	
+
 	// ------ Sumpfdrohne -------
 	if (self.aivar[AIV_MM_REAL_ID] == ID_SWAMPDRONE)
 	{
@@ -70,7 +70,31 @@ func void ZS_Dead ()
 			MIS_Kervo_KillLurker = LOG_FAILED;
 		};
 	};
-	
+	// ------ Juan ------
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Juan))
+	{
+		if(MIS_Addon_Bill_SearchAngusMurder == LOG_Running)
+		{
+			B_LogEntry(TOPIC_Addon_KillJuan, "Juan is finished. I should let Bill know when I get back to the pirate's camp.");
+		};
+	};
+	// ------ Hosk_Pak ------
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Hosh_Pak))
+	{
+		if(MIS_KillHoshPak == LOG_Running)
+		{
+			B_LogEntry(TOPIC_KillHoshPak, "Hosk-Pak is dead! I should report this back to Oric.");
+		};
+	};
+	// ------ OrkElite_AntiPaladinOrkOberst ------
+	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(OrkElite_AntiPaladinOrkOberst))
+	{
+		if(MIS_KillOrkOberst == LOG_Running)
+		{
+			B_LogEntry(TOPIC_OrcElite, "I managed to find and defeat the orcish colonel! I should report this back to Ingmar.");
+		};
+	};
+
 	if (Npc_IsPlayer(other))
 	{
 		self.aivar[AIV_KilledByPlayer] = TRUE;
