@@ -2,7 +2,7 @@ INSTANCE KDW_140300_Addon_Myxir_CITY (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Myxir";
-	guild 		= GIL_KDW; 
+	guild 		= GIL_VLK; 
 	id 			= 140300;
 	voice 		= 12;
 	flags       = NPC_FLAG_IMMORTAL;																	

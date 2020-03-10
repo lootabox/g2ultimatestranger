@@ -9,6 +9,7 @@ INSTANCE NONE_100_Xardas (Npc_Default)
 	npctype		= NPCTYPE_FRIEND;
 	
 	// ------ AIVARS ------
+	aivar[AIV_MagicUser] = MAGIC_ALWAYS;
 	aivar[AIV_ToughGuy] 			= TRUE;
 	aivar[AIV_ToughGuyNewsOverride] = TRUE;
 	aivar[AIV_IGNORE_Murder]		= TRUE;

@@ -93,6 +93,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 
 	// ------ Magier ------
 	if (slf.guild == GIL_KDF)
+	|| (Hlp_GetInstanceID(slf) != Hlp_GetInstanceID(KDF_511_Daron))
 	{
 		if (Npc_HasItems (slf, ItRu_Concussionbolt) == 0)	{	CreateInvItems (slf, ItRu_Concussionbolt, 1); };
 		if (Npc_HasItems (slf, ItRu_Deathbolt) == 0)		{	CreateInvItems (slf, ItRu_Deathbolt, 1); };
@@ -119,6 +120,32 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 		else
 		{
 			B_ReadySpell (slf, SPL_Concussionbolt, SPL_Cost_Concussionbolt);
+			return TRUE;
+		};
+	};
+
+	// ------ Water Mages ------
+	if (slf.guild == GIL_KDW)
+	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Vatras))
+	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Myxir_CITY))
+	{
+		if (Npc_HasItems (slf, ItRu_Waterfist) == 0)		{	CreateInvItems (slf, ItRu_Waterfist, 1); };
+		if (Npc_HasItems (slf, ItRu_Deathbolt) == 0)		{	CreateInvItems (slf, ItRu_Deathbolt, 1); };
+		if (Npc_HasItems (slf, ItRu_FullHeal) == 0)			{	CreateInvItems (slf, ItRu_FullHeal, 1); };
+		
+		if (slf.attribute[ATR_HITPOINTS] < 100) 
+		{
+			B_ReadySpell (slf, SPL_FullHeal, SPL_Cost_FullHeal);
+			return TRUE;
+		}
+		else if (C_NpcHasAttackReasonToKill (slf))
+		{
+			B_ReadySpell (slf, SPL_DeathBolt, SPL_Cost_DeathBolt);
+			return TRUE;
+		}
+		else
+		{
+			B_ReadySpell (slf, SPL_WaterFist, SPL_Cost_WaterFist);
 			return TRUE;
 		};
 	};
@@ -313,9 +340,10 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 			return FALSE; //Nahkampfangriff
 		};
 	};
-	// ------ Raven ------
+	// ------ Raven / Xardas ------
 	if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Raven))
 	&& (slf.aivar[AIV_MagicUser] == MAGIC_ALWAYS)
+	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Xardas))
 	{
 		if (Npc_HasItems (slf, ItRu_BeliarsRage) == 0) 		{	CreateInvItems (slf, ItRu_BeliarsRage, 1); };
 		B_ReadySpell (slf, SPL_EnergyBall , SPL_Cost_EnergyBall);
