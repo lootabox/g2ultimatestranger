@@ -2586,41 +2586,62 @@ INSTANCE spellFX_PalHolyBolt	(CFx_Base_Proto)
 
 		INSTANCE spellFX_PalHolyBolt_KEY_INIT (C_ParticleFXEmitKey)
 		{
-				visname_S 			= "MFX_PalHolyBolt_INIT";
-				scaleDuration		= 0.5;
+				//visname_S 			= "MFX_DestroyUndead_INIT";
 		};
 
 		INSTANCE spellFX_PalHolyBolt_KEY_CAST (C_ParticleFXEmitKey)
 		{
-				visname_S 				= "MFX_PalHolyBolt_CAST";
+				//visname_S 				= "MFX_PalHolyBolt_CAST";
 				emtrjmode_s 			= "TARGET";
 		     	emtrjeasevel 			= 1600.;
 	 			sfxid					= "MFX_Thunderbolt_Cast";
+	 			sfxisambient			= 1;
 	 			emCheckCollision		= 1;
-				//emCreateFXID 			= "FX_CAST2";
+	 			emCreateFXID			= "spellFX_PalHolyBolt_TRAIL";
 		};
 
 		INSTANCE spellFX_PalHolyBolt_KEY_COLLIDE (C_ParticleFXEmitKey)
 		{
-		     	pfx_flygravity_s		= "0 0.0002 0";
+				emtrjeasevel = 0.0001;
+
+};
+
+instance spellFX_PalHolyBolt_TRAIL		(CFx_Base_Proto)
+{
+		emtrjeasevel 	= 1600.;
+		visname_S 		= "MFX_PalHolyBolt_TRAIL";
+		visAlpha		= 1;
+		emtrjmode_s 	= "TARGET";
+		emCheckCollision 		= 1;
+		emActionCollStat_S		= "COLLIDE";
+     	emActionCollDyn_S 		= "COLLIDE";
+		};
+
+		INSTANCE spellFX_PalHolyBolt_TRAIL_COLLIDE (C_ParticleFXEmitKey)
+		{
 		     	emtrjeasevel 			= 0.000001;
-	 			emCheckCollision		= 0;
 };
 
 instance spellFX_PalHolyBolt_COLLIDE		(CFx_Base_Proto)
 {
-		visname_S 		= "MFX_PalHolyBolt_Collide";
-		visAlpha		= 1;
-		emtrjmode_s 	= "FIXED";
-		sfxid			= "Torch_Enlight";
+	emTrjOriginNode		= "BIP01 FIRE";
+	visname_S 			= "MFX_PalHolyBolt_Collide";
+	emtrjmode_s 		= "FIXED";
+	emtrjdynupdatedelay = 0.;
+	lightpresetname		= "AURA";
+	sfxid				= "Torch_Enlight";
+	sfxisambient		= 1;
 };
 
 instance spellFX_PalHolyBolt_COLLIDEDYNFX		(CFx_Base_Proto)
 {
-		visname_S 		= "MFX_PalHolyBolt_Collide";
-		visAlpha		= 1;
-		emtrjmode_s 	= "FIXED";
-		sfxid			= "Torch_Enlight";
+	emTrjOriginNode		= "BIP01 FIRE";
+	visname_S 			= "MFX_PalHolyBolt_Collide";
+	emtrjmode_s 		= "FIXED";
+	emtrjdynupdatedelay = 0.;
+	lightpresetname		= "AURA";
+	sfxid				= "Torch_Enlight";
+	sfxisambient		= 1;
 };
 
 ///   													XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -3572,7 +3593,8 @@ INSTANCE spellFX_PalRepelEvil(CFx_Base_Proto)
 
 		INSTANCE spellFX_PalRepelEvil_KEY_INIT (C_ParticleFXEmitKey)
 		{
-				//visname_S 			= "MFX_DestroyUndead_INIT";
+				visname_S 			= "MFX_RepelEvil_INIT";
+				scaleDuration		= 0.5;
 		};
 
 		INSTANCE spellFX_PalRepelEvil_KEY_CAST (C_ParticleFXEmitKey)
@@ -3581,52 +3603,33 @@ INSTANCE spellFX_PalRepelEvil(CFx_Base_Proto)
 				emtrjmode_s 			= "TARGET";
 		     	emtrjeasevel 			= 800.;
 	 			sfxid					= "MFX_DestroyUndead_Cast";
-	 			emCreateFXID			= "spellFX_RepelEvil_TRAIL";
 	 			sfxisambient			= 1;
 				emCheckCollision 		= 1;
 		};
 
 		INSTANCE spellFX_PalRepelEvil_KEY_COLLIDE (C_ParticleFXEmitKey)
 		{
-			emtrjeasevel = 0.0001;
+			pfx_flygravity_s		= "0 0.0002 0";
+			emtrjeasevel 			= 0.000001;
+			emCheckCollision		= 0;
 
-};
-
-instance spellFX_REPELEVIL_TRAIL		(CFx_Base_Proto)
-{
-		emtrjeasevel 	= 800.;
-		visname_S 		= "MFX_REPELEVIL_TRAIL";
-		visAlpha		= 1;
-		emtrjmode_s 	= "TARGET";
-		emCheckCollision 		= 1;
-		emActionCollStat_S		= "COLLIDE";
-     	emActionCollDyn_S 		= "COLLIDE";
-		};
-
-		INSTANCE spellFX_REPELEVIL_TRAIL_COLLIDE (C_ParticleFXEmitKey)
-		{
-		     	emtrjeasevel 			= 0.000001;
 };
 
 
 INSTANCE spellFX_PalRepelEvil_COLLIDE		(CFx_Base_Proto)
 {
-	emTrjOriginNode 	= "BIP01";
 	visname_S 			= "MFX_RepelEvil_COLLIDE";
+	visAlpha			= 1;
 	emtrjmode_s 		= "FIXED";
-	emtrjdynupdatedelay = 0.;
-	lightpresetname		= "AURA";
 	sfxid				= "MFX_DESTROYUNDEAD_COLLIDE";
 	sfxisambient		= 1;
 };
 
 INSTANCE spellFX_PalRepelEvil_COLLIDEDYNFX(CFx_Base_Proto)
 {
-	emTrjOriginNode 	= "BIP01";
 	visname_S 			= "MFX_RepelEvil_COLLIDE";
+	visAlpha			= 1;
 	emtrjmode_s 		= "FIXED";
-	emtrjdynupdatedelay = 0.;
-	lightpresetname		= "AURA";
 	sfxid				= "MFX_DESTROYUNDEAD_COLLIDE";
 	sfxisambient		= 1;
 };
