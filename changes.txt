@@ -543,9 +543,11 @@ Following actions now create a log entry:
 * Finding Cipher's weed package.
 * Finding Constantino's ring for Cassia's quest.
 * Finding Daron's lost statuette.
+* Finding Den's body.
 * Finding Diego's bag of gold.
 * Finding Garett's Golden Compass.
 * Finding Huno's steel delivery.
+* Finding Lance's body.
 * Finding a sextant for Ramirez.
 * Finding an orc weapon for Harad.
 * Finding ring and rapier for bandit trader quest.

@@ -30,9 +30,12 @@ func void B_PlayerLootedNpc(var c_npc npc)
 		MIS_BrutusKasse = TRUE;
 		B_GivePlayerXP  (XP_Ambient);
 
+	} else if (~PLI_flag & (1 << 4)) && (inst == NONE_Addon_114_Lance_ADW) {
+		PLI_flag = PLI_flag | (1 << 4);
+		B_LogEntry(TOPIC_Addon_Lance, "I found Lance's body in the swamp.");
+
 	};
 		// TOPIC_Addon_KillJuan
-		// TOPIC_Addon_Lance
 
 		// MIS_Maria_BringPlate
 		// MIS_Coragon_Silber
