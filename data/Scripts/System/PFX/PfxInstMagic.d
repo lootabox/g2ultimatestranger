@@ -3231,66 +3231,75 @@ INSTANCE MFX_SPAWN_CHILD (C_PARTICLEFX)
 
 INSTANCE MFX_LIGHT_INIT (C_PARTICLEFX)
 {
-     ppsvalue = 200.000000000;
-     ppsscalekeys_s = "1.0";
+     ppsvalue = 30;
+     ppsscalekeys_s = "1";
      ppsislooping = 1;
-     ppsfps = 0.020000000;
      shptype_s = "POINT";
      shpfor_s = "object";
-     shpoffsetvec_s = "0 15 0";
+     shpoffsetvec_s = "0 0 0";
      shpdistribtype_s = "RAND";
-     shpdistribwalkspeed = 0.000300000;
-     shpisvolume = 1;
-     shpdim_s = "15";
-     shpscalekeys_s = "1 0.3 1.2 0.8.0.1 1";
-     shpscaleislooping = 1;
+     shpdim_s = "30";
+     shpmeshrender_b = 1;
+     shpscalekeys_s = "1";
      shpscaleissmooth = 1;
-     shpscalefps = 5.000000000;
      dirmode_s = "RAND";
      dirfor_s = "object";
-     velavg = 0.001000000;
-     lsppartavg = 150.000000000;
-     visname_s = "MFX_LIGHT_SINGLERAY.TGA";
-     visorientation_s = "VELO";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     dirangleheadvar = 180;
+     dirangleelevvar = 180;
+     velavg = 0.00999999978;
+     lsppartavg = 1000;
+     lsppartvar = 100;
+     flygravity_s = "0 0 0";
+     visname_s = "FIRETRAIL.TGA";
+     visorientation_s = "VELO3D";
      vistexisquadpoly = 1;
+     vistexanifps = 18;
+     vistexaniislooping = 1;
      vistexcolorstart_s = "255 255 255";
-     vistexcolorend_s = "0 0 0";
-     vissizestart_s = "3 20";
-     vissizeendscale = 3.000000000;
+     vistexcolorend_s = "255 255 255";
+     vissizestart_s = "3 10";
+     vissizeendscale = 3;
      visalphafunc_s = "ADD";
-     visalphaend = 255.000000000;
+     visalphastart = 255;
+     useemittersfor = 1;
 };
 
 INSTANCE MFX_LIGHT_ORIGIN (C_PARTICLEFX)
 {
-     ppsvalue = 250.000000000;
-     //60 scalekeys:
+     ppsvalue = 50;
      ppsscalekeys_s = "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.9 0.8 0.7 0.6 0.5 0.4 0.3 0.2 0.1";
-     ppsfps = 0.2;
+     ppsfps = 0.200000003;
      shptype_s = "POINT";
      shpfor_s = "object";
+     shpoffsetvec_s = "0 0 0";
      shpdistribtype_s = "RAND";
-     shpdistribwalkspeed = 0.000300000;
-     shpisvolume = 1;
-     shpdim_s = "15";
-     shpscalekeys_s = "1 0.3 1.2 0.8.0.1 1";
-     shpscaleislooping = 1;
+     shpdim_s = "30";
+     shpmeshrender_b = 1;
+     shpscalekeys_s = "1";
      shpscaleissmooth = 1;
-     shpscalefps = 5.000000000;
      dirmode_s = "RAND";
      dirfor_s = "object";
-     velavg = 0.001000000;
-     lsppartavg = 300.000000000;
-     lsppartvar = 100.000000000;
-     visname_s = "MFX_LIGHT_SINGLERAY.TGA";
-     visorientation_s = "VELO";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     dirangleheadvar = 180;
+     dirangleelevvar = 180;
+     velavg = 0.00999999978;
+     lsppartavg = 1000;
+     lsppartvar = 100;
+     flygravity_s = "0 0 0";
+     visname_s = "FIRETRAIL.TGA";
+     visorientation_s = "VELO3D";
      vistexisquadpoly = 1;
+     vistexanifps = 18;
+     vistexaniislooping = 1;
      vistexcolorstart_s = "255 255 255";
-     vistexcolorend_s = "0 0 0";
-     vissizestart_s = "3 30";
-     vissizeendscale = 5.000000000;
+     vistexcolorend_s = "255 255 255";
+     vissizestart_s = "10 30";
+     vissizeendscale = 3;
      visalphafunc_s = "ADD";
-     visalphaend = 100.000000000;
+     visalphastart = 120;
      useemittersfor = 1;
 };
 
@@ -3364,7 +3373,7 @@ INSTANCE MFX_PALLIGHT_ORIGIN (C_PARTICLEFX)
      vissizestart_s = "5 30";
      vissizeendscale = 5;
      visalphafunc_s = "ADD";
-     visalphastart = 100;
+     visalphastart = 120;
      useemittersfor = 1;
 };
 
@@ -7515,6 +7524,173 @@ INSTANCE MFX_MASTEROFDISASTER_TRAIL (C_PARTICLEFX)
 };
 
 INSTANCE MFX_MASTEROFDISASTER_COLLIDE (C_PARTICLEFX)
+{
+     ppsvalue = 30;
+     ppsscalekeys_s = "1";
+     ppsissmooth = 1;
+     ppsfps = 1;
+     shptype_s = "POINT";
+     shpfor_s = "object";
+     shpoffsetvec_s = "0 0 0";
+     shpdistribtype_s = "RAND";
+     shpisvolume = 1;
+     shpdim_s = "100";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 2;
+     dirmode_s = "RAND";
+     dirfor_s = "OBJECT";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     dirangleheadvar = 180;
+     dirangleelev = -90;
+     velavg = 0.00100000005;
+     lsppartavg = 4000;
+     lsppartvar = 1000;
+     flygravity_s = "0 -0.0000001 0";
+     visname_s = "mfx_masterofdisaster_aura_16bit.tga";
+     visorientation_s = "VELO";
+     vistexisquadpoly = 1;
+     vistexanifps = 18;
+     vistexaniislooping = 2;
+     vistexcolorstart_s = "255 255 200";
+     vistexcolorend_s = "255 0 0 ";
+     vissizestart_s = "50 50";
+     vissizeendscale = 5;
+     visalphafunc_s = "ADD";
+     visalphastart = 255;
+     useemittersfor = 1;
+};
+
+
+///   													XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+///   													XX  DESTROY EVIL                    XX
+///   													XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+INSTANCE MFX_PALDESTROYEVIL_INIT (C_PARTICLEFX)
+{
+     ppsvalue = 5;
+     ppsscalekeys_s = "1";
+     ppsislooping = 1;
+     ppsissmooth = 1;
+     ppsfps = 2;
+     shptype_s = "POINT";
+     shpfor_s = "object";
+     shpoffsetvec_s = "0 0 0";
+     shpdistribtype_s = "RAND";
+     shpisvolume = 1;
+     shpdim_s = "100";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 2;
+     dirmode_s = "RAND";
+     dirfor_s = "OBJECT";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     dirangleheadvar = 180;
+     dirangleelev = -90;
+     velavg = 0.00100000005;
+     lsppartavg = 2000;
+     lsppartvar = 500;
+     flygravity_s = "0 -0.0000001 0";
+     visname_s = "mfx_masterofdisaster_aura_16bit.tga";
+     visorientation_s = "VELO";
+     vistexisquadpoly = 1;
+     vistexanifps = 18;
+     vistexaniislooping = 2;
+     vistexcolorstart_s = "255 255 200";
+     vistexcolorend_s = "255 200 200";
+     vissizestart_s = "100 100";
+     vissizeendscale = 3;
+     visalphafunc_s = "ADD";
+     visalphastart = 255;
+     useemittersfor = 1;
+};
+
+INSTANCE MFX_PALDESTROYEVIL_CAST (C_PARTICLEFX)
+{
+     ppsvalue = 40;
+     ppsscalekeys_s = "1";
+     ppsislooping = 1;
+     ppsissmooth = 1;
+     ppsfps = 2;
+     shptype_s = "POINT";
+     shpfor_s = "object";
+     shpoffsetvec_s = "0 0 0";
+     shpdistribtype_s = "RAND";
+     shpisvolume = 1;
+     shpdim_s = "100";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 2;
+     dirmode_s = "RAND";
+     dirfor_s = "OBJECT";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     dirangleheadvar = 180;
+     dirangleelev = -90;
+     velavg = 0.00100000005;
+     lsppartavg = 4000;
+     lsppartvar = 1000;
+     flygravity_s = "0 -0.0000001 0";
+     visname_s = "HEAVENLIGHT.TGA";
+     visorientation_s = "VELO";
+     vistexisquadpoly = 1;
+     vistexanifps = 18;
+     vistexaniislooping = 1;
+     vistexcolorstart_s = "255 255 255";
+     vistexcolorend_s = "225 0 255";
+     vissizestart_s = "1 50";
+     vissizeendscale = 10;
+     visalphafunc_s = "ADD";
+     visalphastart = 255;
+     useemittersfor = 1;
+};
+
+INSTANCE MFX_PALDESTROYEVIL_TRAIL (C_PARTICLEFX)
+{
+     ppsvalue = 20;
+     ppsscalekeys_s = "1";
+     ppsislooping = 1;
+     ppsissmooth = 1;
+     ppsfps = 2;
+     shptype_s = "POINT";
+     shpfor_s = "object";
+     shpoffsetvec_s = "0 0 0";
+     shpdistribtype_s = "RAND";
+     shpdim_s = "5";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 2;
+     dirmode_s = "RAND";
+     dirfor_s = "OBJECT";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     dirangleheadvar = 180;
+     dirangleelev = -90;
+     velavg = 0.0199999996;
+     velvar = 0.00999999978;
+     lsppartavg = 2000;
+     flygravity_s = "0 0 0";
+     visname_s = "HEAVENLIGHT.TGA";
+     visorientation_s = "VELO";
+     vistexisquadpoly = 1;
+     vistexanifps = 18;
+     vistexaniislooping = 1;
+     vistexcolorstart_s = "100";
+     vistexcolorend_s = "255 255 255";
+     vissizestart_s = "1 15";
+     vissizeendscale = 50;
+     visalphafunc_s = "ADD";
+     visalphastart = 255;
+     useemittersfor = 1;
+};
+
+INSTANCE MFX_PALDESTROYEVIL_COLLIDE (C_PARTICLEFX)
 {
      ppsvalue = 30;
      ppsscalekeys_s = "1";

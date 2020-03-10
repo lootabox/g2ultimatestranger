@@ -1142,7 +1142,7 @@ INSTANCE spellFX_ItemAusbuddeln	(CFx_Base_Proto)
 
 		INSTANCE spellFX_ItemAusbuddeln_KEY_CAST 	(C_ParticleFXEmitKey)
 		{
-				visName_S		= "MFX_Light_ORIGIN";
+				visName_S		= "MFX_PALLIGHT_ORIGIN"; //"MFX_Light_ORIGIN";
 				lightRange		= 1000;
 				sfxid			= "MFX_Light_CAST";
 				sfxisambient	= 1;
@@ -1252,7 +1252,7 @@ INSTANCE spellFX_Light_ACTIVE	(CFx_Base_Proto)
 		emtrjdynupdatedelay = 0.05;
 		emTrjTargetRange	= 1.2;
 		emTrjTargetElev 	= 89;
-		lightPresetname 	= "JUSTWHITE";
+		lightPresetname 	= "FIRESMALL";
 		
 		};
 
@@ -1314,7 +1314,7 @@ INSTANCE spellFX_PalLight_ACTIVE	(CFx_Base_Proto)
 		emtrjdynupdatedelay = 0.05;
 		emTrjTargetRange	= 1.2;
 		emTrjTargetElev 	= 89;
-		lightPresetname 	= "AURA";
+		lightPresetname 	= "JUSTWHITE";
 
 		};
 
@@ -2624,22 +2624,22 @@ instance spellFX_PalHolyBolt_TRAIL		(CFx_Base_Proto)
 
 instance spellFX_PalHolyBolt_COLLIDE		(CFx_Base_Proto)
 {
-	emTrjOriginNode		= "BIP01 FIRE";
+	emTrjOriginNode		= "BIP01";
 	visname_S 			= "MFX_PalHolyBolt_Collide";
 	emtrjmode_s 		= "FIXED";
 	emtrjdynupdatedelay = 0.;
-	lightpresetname		= "AURA";
+	//lightpresetname		= "AURA";
 	sfxid				= "Torch_Enlight";
 	sfxisambient		= 1;
 };
 
 instance spellFX_PalHolyBolt_COLLIDEDYNFX		(CFx_Base_Proto)
 {
-	emTrjOriginNode		= "BIP01 FIRE";
+	emTrjOriginNode		= "BIP01";
 	visname_S 			= "MFX_PalHolyBolt_Collide";
 	emtrjmode_s 		= "FIXED";
 	emtrjdynupdatedelay = 0.;
-	lightpresetname		= "AURA";
+	//lightpresetname		= "AURA";
 	sfxid				= "Torch_Enlight";
 	sfxisambient		= 1;
 };
@@ -3725,7 +3725,7 @@ INSTANCE spellFX_MasterOfDisaster_COLLIDEDYNFX(CFx_Base_Proto)
 INSTANCE spellFX_PalDestroyEvil(CFx_Base_Proto)
 {
 
-     	visname_S 				= "MFX_DestroyUndead_INIT";
+     	visname_S 				= "MFX_PalDestroyEvil_INIT";
 
      	emtrjmode_s 			= "FIXED";
 		emTrjOriginNode 		= "ZS_RIGHTHAND";
@@ -3748,23 +3748,39 @@ INSTANCE spellFX_PalDestroyEvil(CFx_Base_Proto)
 
 		INSTANCE spellFX_PalDestroyEvil_KEY_CAST (C_ParticleFXEmitKey)
 		{
-				visname_S 				= "MFX_DestroyUndead_CAST";
+				//visname_S 				= "MFX_PalDestroyEvil_CAST";
 				emtrjmode_s 			= "TARGET";
 		     	emtrjeasevel 			= 800.;
 	 			sfxid					= "MFX_DestroyUndead_Cast";
 	 			sfxisambient			= 1;
-				//emCreateFXID 			= "FX_CAST2";
 				emCheckCollision 		= 1;
+	 			emCreateFXID			= "spellFX_PalDestroyEvil_TRAIL";
 };
 
+
+instance spellFX_PalDestroyEvil_TRAIL		(CFx_Base_Proto)
+{
+		emtrjeasevel 	= 800.;
+		visname_S 		= "MFX_PalDestroyEvil_TRAIL";
+		visAlpha		= 1;
+		emtrjmode_s 	= "TARGET";
+		emCheckCollision 		= 1;
+		emActionCollStat_S		= "COLLIDE";
+     	emActionCollDyn_S 		= "COLLIDE";
+		};
+
+		INSTANCE spellFX_PalDestroyEvil_TRAIL_COLLIDE (C_ParticleFXEmitKey)
+		{
+		     	emtrjeasevel 			= 0.000001;
+};
 
 INSTANCE spellFX_PalDestroyEvil_COLLIDE		(CFx_Base_Proto)
 {
 	emTrjOriginNode 	= "BIP01";
-	visname_S 			= "MFX_DESTROYUNDEAD_COLLIDE";
+	visname_S 			= "MFX_PalDestroyEvil_COLLIDE";
 	emtrjmode_s 		= "FIXED";
 	emtrjdynupdatedelay = 0.;
-	lightpresetname		= "AURA";
+	lightpresetname		= "JUSTWHITE";
 	sfxid				= "MFX_DESTROYUNDEAD_COLLIDE";
 	sfxisambient		= 1;
 };
@@ -3772,10 +3788,10 @@ INSTANCE spellFX_PalDestroyEvil_COLLIDE		(CFx_Base_Proto)
 INSTANCE spellFX_PalDestroyEvil_COLLIDEDYNFX(CFx_Base_Proto)
 {
 	emTrjOriginNode 	= "BIP01";
-	visname_S 			= "MFX_DESTROYUNDEAD_COLLIDE";
+	visname_S 			= "MFX_PalDestroyEvil_COLLIDE";
 	emtrjmode_s 		= "FIXED";
 	emtrjdynupdatedelay = 0.;
-	lightpresetname		= "AURA";
+	lightpresetname		= "JUSTWHITE";
 	sfxid				= "MFX_DESTROYUNDEAD_COLLIDE";
 	sfxisambient		= 1;
 };
