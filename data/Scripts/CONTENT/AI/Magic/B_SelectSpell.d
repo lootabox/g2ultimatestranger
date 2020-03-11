@@ -93,7 +93,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 
 	// ------ Magier ------
 	if (slf.guild == GIL_KDF)
-	|| (Hlp_GetInstanceID(slf) != Hlp_GetInstanceID(KDF_511_Daron))
+	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(KDF_511_Daron))
 	{
 		if (Npc_HasItems (slf, ItRu_Concussionbolt) == 0)	{	CreateInvItems (slf, ItRu_Concussionbolt, 1); };
 		if (Npc_HasItems (slf, ItRu_Deathbolt) == 0)		{	CreateInvItems (slf, ItRu_Deathbolt, 1); };
