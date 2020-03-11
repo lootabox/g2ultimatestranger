@@ -2,8 +2,8 @@
 // SPL_FireRain
 // ************
 
-const int SPL_Cost_FireRain			= 80;
-const int SPL_Damage_FireRain 		= 300;
+const int SPL_Cost_FireRain			= 60;
+const int SPL_Damage_FireRain 		= 240;
 
 
 INSTANCE Spell_FireRain (C_Spell_Proto)

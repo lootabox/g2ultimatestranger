@@ -2,8 +2,8 @@
 // SPL_PalDestroyEvil
 // ******************
 
-const int SPL_Cost_PalDestroyEvil 			= 60;	
-const int SPL_Damage_PalDestroyEvil 		= 600; 
+const int SPL_Cost_PalDestroyEvil 			= 40;	
+const int SPL_Damage_PalDestroyEvil 		= 400; 
 
 INSTANCE Spell_PalDestroyEvil (C_Spell_Proto)
 {

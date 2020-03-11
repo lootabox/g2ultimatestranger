@@ -354,16 +354,14 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 		else if	(C_NpcIsLarge(vic))			{ dmg -= prot * 2; }
 		else								{ dmg -= prot; };
 	}
-	// FATAL ONLY SPELLS -----------------------------------------------------------------------
+	// DESTROY UNDEAD -----------------------------------------------------------------------
 	else if	(spellID == SPL_DestroyUndead)
-		||	(spellID == SPL_BreathOfDeath) && (att.guild != GIL_SKELETON_MAGE)
-		||	(spellID == SPL_MassDeath)
 	{
-		dmg -= prot;
-		if (dmg < vic.attribute[ATR_HITPOINTS])
+		if (dmg < vic.attribute[ATR_HITPOINTS] + prot)
 		{
-			dmg = 0;
+			dmg /= 2;
 		};
+		dmg -= prot;
 	}
 	// OTHER SPELLS -----------------------------------------------------------------------
 	else

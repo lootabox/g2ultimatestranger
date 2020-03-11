@@ -2,8 +2,8 @@
 // SPL_PalHolyBolt
 // ***************
 
-const int SPL_Cost_PalHolyBolt	 = 10;
-const int SPL_Damage_PalHolyBolt = 100;
+const int SPL_Cost_PalHolyBolt	 = 20;
+const int SPL_Damage_PalHolyBolt = 150;
 
 INSTANCE Spell_PalHolyBolt (C_Spell_Proto)
 {

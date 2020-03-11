@@ -328,8 +328,8 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	if (spellType == SPL_DestroyUndead)
 	{
 		if (C_NpcIsUndead(self))
-		//&& (self.attribute[ATR_HITPOINTS_MAX] <= SPL_Damage_DESTROYUNDEAD)
 		{	
+			// Need to handle half damage check in damage calculation, because spell level is not available here
 			return COLL_DOEVERYTHING;
 		};
 		return COLL_DONOTHING;
@@ -341,11 +341,11 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		if (Npc_GetDistToNpc (other,self) < 1000)
 		&& (!C_NpcIsUndead(self))
 		{
-			if (self.guild == GIL_SKELETON_MAGE)
+			if (self.attribute[ATR_HITPOINTS] + self.protection[PROT_MAGIC] <= SPL_Damage_BreathOfDeath)
 			{
-				return COLL_APPLYHALVEDAMAGE;
+				return COLL_DOEVERYTHING;
 			};
-			return COLL_DOEVERYTHING;
+			return COLL_APPLYHALVEDAMAGE;
 		};
 		return COLL_DONOTHING;
 	};
@@ -355,7 +355,11 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	{
 		if (!C_NpcIsUndead(self))
 		{
-			return COLL_DOEVERYTHING;
+			if (self.attribute[ATR_HITPOINTS] + self.protection[PROT_MAGIC] <= SPL_Damage_MassDeath)
+			{
+				return COLL_DOEVERYTHING;
+			};
+			return COLL_APPLYHALVEDAMAGE;
 		};
 		return COLL_DONOTHING;
 	};
@@ -375,34 +379,23 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 
 	//----- Paladin Sprüche -----	
 	if (spellType == SPL_PalHolyBolt)
+	|| (spellType == SPL_PalRepelEvil)
 	{
 		if (C_NpcIsEvil(self))
 		{
 			return COLL_DOEVERYTHING;
 		};
-		return COLL_DONOTHING;
-	}
-	else if (spellType == SPL_PalRepelEvil)
-	{
-		if (C_NpcIsEvil(self))
-		{
-			if (self.attribute[ATR_HITPOINTS_MAX] <= SPL_Damage_PalRepelEvil)
-			{
-				return COLL_DOEVERYTHING;
-			}
-			else 
-			{
-				return COLL_APPLYHALVEDAMAGE;
-			};
-		};
-		return COLL_DONOTHING;
+		return COLL_APPLYHALVEDAMAGE;
 	}
 	else if (spellType == SPL_PalDestroyEvil)
 	{
 		if (C_NpcIsEvil(self))
-		&& (self.attribute[ATR_HITPOINTS_MAX] <= SPL_Damage_PalDestroyEvil)
 		{
-			return COLL_DOEVERYTHING;
+			if (self.attribute[ATR_HITPOINTS_MAX] + self.protection[PROT_MAGIC] <= SPL_Damage_PalDestroyEvil)
+			{
+				return COLL_DOEVERYTHING;
+			}
+			return COLL_APPLYHALVEDAMAGE;
 		};
 		return COLL_DONOTHING;
 	};
