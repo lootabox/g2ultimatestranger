@@ -230,6 +230,12 @@ func void DIA_Marduk_TEACH_Info ()
 			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_Icelance, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icelance)) ,TeachPlayerTalentRunes_SPL_Icelance);
 			abletolearn = (abletolearn +1);
 		};
+		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2) 
+		&& (PLAYER_TALENT_RUNES [SPL_AdanosBall] == FALSE) 
+		{
+			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_AdanosBall, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_AdanosBall)) ,TeachPlayerTalentRunes_SPL_AdanosBall);
+			abletolearn = (abletolearn +1);
+		};
 		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3) 
 		&& (PLAYER_TALENT_RUNES [SPL_IceCube] == FALSE) 
 		{

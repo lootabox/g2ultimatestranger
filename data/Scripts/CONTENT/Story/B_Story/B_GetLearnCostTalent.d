@@ -175,47 +175,52 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 		else if (skill == SPL_PalDestroyEvil  	) 	{	kosten = (10);	}
 		else if (skill == SPL_PalTeleportSecret ) 	{	kosten = (5);	}
 		// 1                                                            
-		else if (skill == SPL_Light 			) 	{	kosten = (1);	}
 		else if (skill == SPL_Firebolt			) 	{	kosten = (5);	}
+		else if (skill == SPL_Icebolt			) 	{	kosten = (5);	}
+		else if (skill == SPL_Light 			) 	{	kosten = (1);	}
 		else if (skill == SPL_LightHeal			) 	{	kosten = (3);	}
-		else if (skill == SPL_SummonGoblinSkeleton)	{	kosten = (3);	}
+		else if (skill == SPL_SummonWolf		) 	{	kosten = (5);	}
 		else if (skill == SPL_Zap				) 	{	kosten = (3);	}
 		// 2                                                            
-		else if (skill == SPL_Icebolt			) 	{	kosten = (5);	}
+		else if (skill == SPL_Acid				)	{	kosten = (5);	}
+		else if (skill == SPL_AdanosBall		) 	{	kosten = (5);	}
+		else if (skill == SPL_IceLance			) 	{	kosten = (5);	}
 		else if (skill == SPL_InstantFireball	) 	{	kosten = (10);	}
-		else if (skill == SPL_SummonWolf		) 	{	kosten = (5);	}
-		else if (skill == SPL_WindFist			) 	{	kosten = (5);	}
-		else if (skill == SPL_Sleep				) 	{	kosten = (5);	}
-		else if (skill == SPL_Charm				) 	{	kosten = (5);	}
-		else if (skill == SPL_IceLance			) 	{	kosten = (5);	}  
+		else if (skill == SPL_SummonGoblinSkeleton)	{	kosten = (3);	}
 		else if (skill == SPL_Whirlwind			) 	{	kosten = (5);	}
+		else if (skill == SPL_WindFist			) 	{	kosten = (5);	}
 		// 3                                                            
-		else if (skill == SPL_MediumHeal	    ) 	{	kosten = (5);	}
-		else if (skill == SPL_LightningFlash  	) 	{	kosten = (5);	}
-		else if (skill == SPL_ChargeFireball  	) 	{	kosten = (10);	}
-		else if (skill == SPL_SummonSkeleton  	) 	{	kosten = (10);	}
-		else if (skill == SPL_Fear				) 	{	kosten = (5);	}
+		else if (skill == SPL_ChargeZap			) 	{	kosten = (10);	}
+		else if (skill == SPL_DestroyUndead		) 	{	kosten = (10);	}
+		else if (skill == SPL_Firestorm			) 	{	kosten = (15);	}
 		else if (skill == SPL_IceCube		    ) 	{	kosten = (10);	}
-		else if (skill == SPL_Thunderstorm		)	{	kosten = (5);	}
+		else if (skill == SPL_MediumHeal	    ) 	{	kosten = (5);	}
+		else if (skill == SPL_SummonSkeleton  	) 	{	kosten = (10);	}
         else if (skill == SPL_Geyser			) 	{	kosten = (10);	}
 		// 4                                                            
-		else if (skill == SPL_ChargeZap			) 	{	kosten = (10);	}
+		else if (skill == SPL_ChargeFireball  	) 	{	kosten = (10);	}
+		else if (skill == SPL_LightningFlash  	) 	{	kosten = (5);	}
+		else if (skill == SPL_MagicCage			)	{	kosten = (5);	}
 		else if (skill == SPL_SummonGolem	    ) 	{	kosten = (15);	}
-		else if (skill == SPL_DestroyUndead		) 	{	kosten = (10);	}
-		else if (skill == SPL_Pyrokinesis	    ) 	{	kosten = (10);	}
-		else if (skill == SPL_WaterFist			) 	{	kosten = (10);	}   
+		else if (skill == SPL_Thunderstorm		)	{	kosten = (5);	}
+		else if (skill == SPL_WaterFist			) 	{	kosten = (10);	}
 		// 5                                                            
-		else if (skill == SPL_Firestorm			) 	{	kosten = (15);	}
-		else if (skill == SPL_IceWave		    ) 	{	kosten = (20);	}
-		else if (skill == SPL_SummonDemon	    ) 	{	kosten = (20);	}
-		else if (skill == SPL_FullHeal			) 	{	kosten = (10);	}
-		else if (skill == SPL_MasterOfDisaster	)	{	kosten = (15);	}
-		// 6                                                            
-		else if (skill == SPL_Firerain			) 	{	kosten = (20);	}
 		else if (skill == SPL_BreathOfDeath		) 	{	kosten = (20);	}
-		else if (skill == SPL_MassDeath			) 	{	kosten = (20);	}
+		else if (skill == SPL_FullHeal			) 	{	kosten = (10);	}
+		else if (skill == SPL_IceWave		    ) 	{	kosten = (20);	}
+		else if (skill == SPL_Pyrokinesis	    ) 	{	kosten = (10);	}
+		else if (skill == SPL_SummonDemon	    ) 	{	kosten = (20);	}
+		// 6                                                            
 		else if (skill == SPL_ArmyOfDarkness  	) 	{	kosten = (20);	}
+		else if (skill == SPL_Explosion			) 	{	kosten = (20);	}
+		else if (skill == SPL_Firerain			) 	{	kosten = (20);	}
+		else if (skill == SPL_MassDeath			) 	{	kosten = (20);	}
 		else if (skill == SPL_Shrink		    ) 	{	kosten = (20);	}
+		// X
+		else if (skill == SPL_Charm				) 	{	kosten = (5);	}
+		else if (skill == SPL_Fear				) 	{	kosten = (5);	}
+		else if (skill == SPL_Sleep				) 	{	kosten = (5);	}
+		else if (skill == SPL_MasterOfDisaster	)	{	kosten = (15);	}
 
 		else 										{	kosten = (5);	};
 	};

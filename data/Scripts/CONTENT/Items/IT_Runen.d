@@ -1285,7 +1285,7 @@ INSTANCE ItRu_HarmUndead (C_Item)
 	spell				= 	SPL_DESTROYUNDEAD;
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_COST_DESTROYUNDEAD;
-	mag_circle			= 	4;
+	mag_circle			= 	3;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1552,7 +1552,7 @@ INSTANCE ItRu_BreathOfDeath (C_Item)
 	spell				= 	SPL_BREATHOFDEATH;
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_COST_BREATHOFDEATH;
-	mag_circle 			=	6;
+	mag_circle 			=	5;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -1694,7 +1694,7 @@ INSTANCE ItRu_Shrink (C_Item)
 	spell				= 	SPL_SHRINK;
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_COST_SHRINK;
-	mag_circle			=	6;
+	mag_circle			=	5;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";

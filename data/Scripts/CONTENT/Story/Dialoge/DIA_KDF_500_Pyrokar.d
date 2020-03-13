@@ -845,6 +845,7 @@ instance DIA_Pyrokar_SPELLS		(C_INFO)
 };
 func int DIA_Pyrokar_SPELLS_Condition ()
 {	
+	return FALSE;
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) >= 6)
 	{
 		return TRUE;
@@ -859,21 +860,11 @@ func void DIA_Pyrokar_SPELLS_Info ()
 	Info_ClearChoices 	(DIA_Pyrokar_SPELLS);
 	Info_AddChoice		(DIA_Pyrokar_SPELLS, DIALOG_BACK, DIA_Pyrokar_SPELLS_BACK);
 	
-	if (PLAYER_TALENT_RUNES [SPL_Firerain] == FALSE)
+/* 	if (PLAYER_TALENT_RUNES [SPL_Firerain] == FALSE)
 	{
 		Info_AddChoice	(DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,TeachPlayerTalentRunes_SPL_Firerain);
 		abletolearn = (abletolearn +1);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_BreathOfDeath] == FALSE)
-	{
-		Info_AddChoice	(DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_BreathOfDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_BreathOfDeath)) ,TeachPlayerTalentRunes_SPL_BreathOfDeath);
-		abletolearn = (abletolearn +1);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_MassDeath] == FALSE)
-	{
-		Info_AddChoice	(DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_MassDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MassDeath)) ,TeachPlayerTalentRunes_SPL_MassDeath);
-		abletolearn = (abletolearn +1);
-	};
+	}; */
 	if (abletolearn < 1)
 	{
 		AI_Output (self, other, "DIA_Pyrokar_SPELLS_11_01"); //There is nothing more that I could teach you.

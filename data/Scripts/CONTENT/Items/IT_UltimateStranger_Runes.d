@@ -21,7 +21,7 @@ INSTANCE ItRu_Acid (C_Item)
     material            =   MAT_STONE;
 
     spell               =   SPL_Acid;
-    mag_circle          =   3;
+    mag_circle          =   2;
 
     wear                =   WEAR_EFFECT;
     effect              =   "SPELLFX_WEAKGLIMMER";
@@ -96,7 +96,7 @@ INSTANCE ItRu_Explosion (C_Item)
     material            =   MAT_STONE;
 
     spell               =   SPL_Explosion;
-    mag_circle          =   3;
+    mag_circle          =   6;
 
     wear                =   WEAR_EFFECT;
     effect              =   "SPELLFX_WEAKGLIMMER_YELLOW";
@@ -194,7 +194,7 @@ INSTANCE ItRu_MagicCage (C_Item)
     material            =   MAT_STONE;
 
     spell               =   SPL_MagicCage;
-    mag_circle          =   3;
+    mag_circle          =   4;
 
     wear                =   WEAR_EFFECT;
     effect              =   "SPELLFX_WEAKGLIMMER";

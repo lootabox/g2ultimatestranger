@@ -174,7 +174,7 @@ FUNC INT PC_Circle_03_Condition ()
 {	
 	if( (PLAYER_MOBSI_PRODUCTION	==	MOBSI_MAKERUNE)
 	&& ( (PLAYER_TALENT_RUNES[SPL_MediumHeal] == TRUE)
-	
+	||   (PLAYER_TALENT_RUNES[SPL_DestroyUndead] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_SummonSkeleton] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_Fear] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_IceCube] == TRUE)
@@ -194,6 +194,10 @@ FUNC VOID PC_Circle_03_Info()
 	if (PLAYER_TALENT_RUNES[SPL_MediumHeal] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_MediumHeal,PC_ItRu_MediumHeal_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_DestroyUndead] == TRUE)
+	{
+		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_DestroyUndead,PC_ItRu_HarmUndead_Info);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_SummonSkeleton] == TRUE)
 	{
@@ -237,8 +241,7 @@ INSTANCE PC_Circle_04 (C_Info)
 FUNC INT PC_Circle_04_Condition ()
 {	
 	if( (PLAYER_MOBSI_PRODUCTION	==	MOBSI_MAKERUNE) 
-	&& ( (PLAYER_TALENT_RUNES[SPL_DestroyUndead] == TRUE)
-	|| 	 (PLAYER_TALENT_RUNES[SPL_LightningFlash] == TRUE)
+	&& ( (PLAYER_TALENT_RUNES[SPL_LightningFlash] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_ChargeFireball] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_SummonGolem] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_Waterfist] == TRUE) ) )
@@ -255,10 +258,6 @@ FUNC VOID PC_Circle_04_Info()
 	if (PLAYER_TALENT_RUNES[SPL_SummonGolem] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Circle_04,NAME_SPL_SummonGolem,PC_ItRu_SumGol_Info);
-	};
-	if (PLAYER_TALENT_RUNES[SPL_DestroyUndead] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_04,NAME_SPL_DestroyUndead,PC_ItRu_HarmUndead_Info);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_ChargeFireball] == TRUE)
 	{
@@ -295,6 +294,7 @@ FUNC INT PC_Circle_05_Condition ()
 	if( (PLAYER_MOBSI_PRODUCTION	==	MOBSI_MAKERUNE) 
 	&& ( (PLAYER_TALENT_RUNES[SPL_IceWave] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_SummonDemon] == TRUE)
+	|| 	 (PLAYER_TALENT_RUNES[SPL_BreathOfDeath] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_FullHeal] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_Pyrokinesis] == TRUE) ) )
 	{
@@ -323,9 +323,9 @@ FUNC VOID PC_Circle_05_Info()
 	{
 		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_Pyrokinesis,PC_ItRu_Pyrokinesis_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_Shrink] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_BreathOfDeath] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_Shrink,PC_ItRu_Shrink_Info);
+		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_BreathOfDeath,PC_ItRu_BreathOfDeath_Info);
 	};
 };			
 FUNC VOID PC_Circle_05_BACK()
@@ -346,7 +346,6 @@ FUNC INT PC_Circle_06_Condition ()
 {	
 	if( (PLAYER_MOBSI_PRODUCTION	==	MOBSI_MAKERUNE) 
 	&& ( (PLAYER_TALENT_RUNES[SPL_Firerain] == TRUE)
-	|| 	 (PLAYER_TALENT_RUNES[SPL_BreathOfDeath] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_MassDeath] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_ArmyOfDarkness] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_Shrink] == TRUE) ) )
@@ -363,10 +362,6 @@ FUNC VOID PC_Circle_06_Info()
 	{
 		Info_AddChoice 	  (PC_Circle_06,NAME_SPL_Firerain,PC_ItRu_Firerain_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_BreathOfDeath] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_06,NAME_SPL_BreathOfDeath,PC_ItRu_BreathOfDeath_Info);
-	};
 	if (PLAYER_TALENT_RUNES[SPL_MassDeath] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Circle_06,NAME_SPL_MassDeath,PC_ItRu_MassDeath_Info);
@@ -374,6 +369,10 @@ FUNC VOID PC_Circle_06_Info()
 	if (PLAYER_TALENT_RUNES[SPL_ArmyOfDarkness] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Circle_06,NAME_SPL_ArmyOfDarkness,PC_ItRu_ArmyOfDarkness_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Shrink] == TRUE)
+	{
+		Info_AddChoice 	  (PC_Circle_06,NAME_SPL_Shrink,PC_ItRu_Shrink_Info);
 	};
 };	
 FUNC VOID PC_Circle_06_BACK()

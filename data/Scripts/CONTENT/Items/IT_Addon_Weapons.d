@@ -86,7 +86,7 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 	cond_value[2]  		=	Condition_Stab01;
 	visual 				=	"ItMW_MageStaff_Good_2H_01.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF1";
-	mag_circle 			=	1;
+	mag_circle 			=	2;
 
 	description			= 	"Staff of the Fire Magicians";
 
@@ -122,7 +122,7 @@ INSTANCE ItMW_Addon_Stab02 (C_Item)
 	cond_value[2]  		=	Condition_Stab02;
 	visual 				=	"ItMW_MageStaff_Good_2H_02.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF2";
-	mag_circle 			=	1;
+	mag_circle 			=	2;
 
 	description			= 	name;
 
@@ -157,7 +157,7 @@ INSTANCE ItMW_Addon_Stab03 (C_Item)
 	cond_value[2]  		=	Condition_Stab03;
 	visual 				=	"ItMW_MageStaff_Blades_2H_01.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF3";
-	mag_circle 			=	1;
+	mag_circle 			=	2;
 
 	description			= 	"Staff of the Water Mages";
 
@@ -192,7 +192,7 @@ PROTOTYPE ItMW_Addon_Stab04_Proto (C_Item)
 	cond_value[2]  		=	Condition_Stab04;
 	visual 				=	"ItMW_MageStaff_Good_2H_02.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF4";
-	mag_circle 			=	1;
+	mag_circle 			=	4;
 
 	description			= 	name;
 
@@ -250,7 +250,7 @@ INSTANCE ItMW_Addon_Stab05 (C_Item)
 	cond_value[2]  		=	Condition_Stab05;
 	visual 				=	"ItMW_MageStaff_Blades_2H_01.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF5";
-	mag_circle 			=	1;
+	mag_circle 			=	2;
 
 	description			= 	name;
 
