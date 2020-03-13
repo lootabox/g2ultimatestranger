@@ -2,8 +2,8 @@
 // SPL_DestroyUndead
 // *****************
 
-const int	SPL_Cost_DESTROYUNDEAD		=	20; //*6
-const int 	SPL_Damage_DESTROYUNDEAD	=	75; //soll halt wirklich killen!
+const int	SPL_Cost_DESTROYUNDEAD		=	20; //*4
+const int 	SPL_Damage_DESTROYUNDEAD	=	100; //soll halt wirklich killen!
 
 INSTANCE Spell_DestroyUndead(C_Spell_Proto)
 {
@@ -15,7 +15,7 @@ INSTANCE Spell_DestroyUndead(C_Spell_Proto)
 func int Spell_Logic_DestroyUndead	(var int manaInvested)
 {
 	//return Spell_Logic_Basic(self, SPL_Cost_DESTROYUNDEAD);
-	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_DESTROYUNDEAD, 6, FALSE);
+	return Spell_Logic_Invest(self, manaInvested, SPL_Cost_DESTROYUNDEAD, 4, FALSE);
 };
 
 

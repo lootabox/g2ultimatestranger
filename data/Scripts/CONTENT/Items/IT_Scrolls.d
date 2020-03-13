@@ -227,7 +227,7 @@ INSTANCE ItSc_PalRepelEvil (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_PalRepelEvil;
 
-	TEXT	[3]			=	NAME_EvilOrHalf;
+	TEXT	[4]			=	NAME_MustBeEvil;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -295,7 +295,7 @@ INSTANCE ItSc_PalDestroyEvil (C_Item)
 
 	TEXT	[3]			=	NAME_FatalOrHalf;
 
-	TEXT	[4]			=	NAME_PalDestroyEvil_Info;
+	TEXT	[4]			=	NAME_MustBeEvil;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

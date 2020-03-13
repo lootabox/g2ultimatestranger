@@ -3582,29 +3582,30 @@ INSTANCE spellFX_PalRepelEvil(CFx_Base_Proto)
      	emtrjtargetnode 		= "BIP01 FIRE";
      	emtrjloopmode_s 		= "NONE";
      	emtrjeasefunc_s 		= "LINEAR";
-     	emActionCollStat_S		= "COLLIDE CREATE";
-     	emActionCollDyn_S 		= "COLLIDE CREATEONCE";
-		emFXCollStat_S	   		= "spellFX_PalRepelEvil_COLLIDE";
-		emFXCollDyn_S     		= "spellFX_PalRepelEvil_COLLIDEDYNFX";
-		emTrjTargetRange	 	= 20;
-		emTrjTargetElev 		= 0;
-		emTrjDynUpdateDelay		= 20000;
+     	//emActionCollStat_S		= "COLLIDE CREATE";
+     	//emActionCollDyn_S 		= "COLLIDE CREATEONCE";
+		//emFXCollStat_S	   		= "spellFX_PalRepelEvil_COLLIDE";
+		//emFXCollDyn_S     		= "spellFX_PalRepelEvil_COLLIDEDYNFX";
+		//emTrjTargetRange	 	= 20;
+		//emTrjTargetElev 		= 0;
+		//emTrjDynUpdateDelay		= 20000;
 		};
 
 		INSTANCE spellFX_PalRepelEvil_KEY_INIT (C_ParticleFXEmitKey)
 		{
-				visname_S 			= "MFX_RepelEvil_INIT";
+				//visname_S 			= "MFX_RepelEvil_INIT";
 				scaleDuration		= 0.5;
 		};
 
 		INSTANCE spellFX_PalRepelEvil_KEY_CAST (C_ParticleFXEmitKey)
 		{
 				//visname_S 				= "MFX_RepelEvil_CAST";
-				emtrjmode_s 			= "TARGET";
-		     	emtrjeasevel 			= 800.;
-	 			sfxid					= "MFX_DestroyUndead_Cast";
+				visname_S				= "MFX_ICEBOLT_COLLIDE";
+				emtrjmode_s 			= "NONE";
+		     	//emtrjeasevel 			= 800.;
+	 			sfxid					= "MFX_Control_Cast";
 	 			sfxisambient			= 1;
-				emCheckCollision 		= 1;
+				//emCheckCollision 		= 1;
 		};
 
 		INSTANCE spellFX_PalRepelEvil_KEY_COLLIDE (C_ParticleFXEmitKey)
@@ -3615,7 +3616,7 @@ INSTANCE spellFX_PalRepelEvil(CFx_Base_Proto)
 
 };
 
-
+/* 
 INSTANCE spellFX_PalRepelEvil_COLLIDE		(CFx_Base_Proto)
 {
 	visname_S 			= "MFX_RepelEvil_COLLIDE";
@@ -3633,7 +3634,7 @@ INSTANCE spellFX_PalRepelEvil_COLLIDEDYNFX(CFx_Base_Proto)
 	sfxid				= "MFX_DESTROYUNDEAD_COLLIDE";
 	sfxisambient		= 1;
 };
-
+ */
 
 ///   													XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ///   													XX     M A S T E R   O F  D I S A S T E R   XX

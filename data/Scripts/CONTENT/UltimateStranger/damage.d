@@ -119,7 +119,7 @@ func int Check_Spell_Block(var c_npc vic, var int spellID)
 	return FALSE;
 };
 
-func int Handle_Melee_Dmg(var c_npc vic, var c_npc att)
+func int Handle_Melee_Dmg(var c_npc att, var c_npc vic)
 {
 	// If melee weapon was used, it should be readied when dealing damage
 	var c_item wpn; wpn = Npc_GetReadiedWeapon(att);
@@ -181,7 +181,7 @@ Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 	return dmg;
 };
 
-func int Handle_Fist_Dmg(var c_npc vic, var c_npc att)
+func int Handle_Fist_Dmg(var c_npc att, var c_npc vic)
 {
 	// Handle protection and calculate damage
 	var int dmg; dmg = att.attribute[ATR_STRENGTH];
@@ -208,7 +208,7 @@ func int Handle_Fist_Dmg(var c_npc vic, var c_npc att)
 	return dmg;
 };
 
-func int Handle_Magic_Dmg(var c_npc vic, var c_npc att, var int spellID, var int dmg)
+func int Handle_Magic_Dmg(var c_npc att, var c_npc vic, var int spellID, var int dmg)
 {
 var string pristr; pristr = IntToString(dmg);
 
@@ -243,7 +243,6 @@ var string pristr; pristr = IntToString(dmg);
 
 		// Figure out burn dot
 		var int fireDot; fireDot = dmg / 2; dmg -= fireDot;
-		var int fireTicks; fireTicks = BURN_DOT_VFX_DURATION_SEC;
 
 		if (Hlp_IsValidItem(wpn))
 		{
@@ -276,7 +275,7 @@ var string pristr; pristr = IntToString(dmg);
 		// Create dot debuff
 		else if (fireDot > 0)
 		{
-			dot_burn_apply(vic, fireDot, fireTicks, att);
+			dot_burn_apply(vic, fireDot, BURN_DOT_VFX_DURATION_SEC, att);
 pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(fireDot)));
 		};
 	}
@@ -325,7 +324,6 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 	{
 		// Handle protection
 		if		(C_NpcIsWeakToLightning(vic))	{ dmg -= prot / 2; }
-		else if	(C_NpcIsIceBase(vic))			{ dmg -= prot * 2; }
 		else									{ dmg -= prot; };
 
 		// Lightning spell stagger at full hitpoints
@@ -363,6 +361,18 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 		};
 		dmg -= prot;
 	}
+	// PAL REPEL EVIL -----------------------------------------------------------------------
+	else if	(spellID == SPL_PalRepelEvil)
+	{
+		dmg -= prot;
+		// Create dot debuff
+		if (dmg > 0)
+		{
+			dot_burn_apply(vic, dmg, BURN_DOT_VFX_DURATION_SEC, att);
+pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(dmg)));
+			dmg = 0;
+		};
+	}
 	// OTHER SPELLS -----------------------------------------------------------------------
 	else
 	{
@@ -385,8 +395,8 @@ func int DMG_OnDmg(var int victimPtr, var int attackerPtr, var int dmg, var int 
 		if (dmgDesc.itemWeapon)
 		{
 			// var oCItem wpn; wpn = _^(dmgDesc.itemWeapon);
-			// if (wpn.mainflag == ITEM_KAT_MUN) { dmg = Handle_Ranged_Dmg(vic, att); };
-			if (Npc_HasReadiedMeleeWeapon(att))	{ dmg = Handle_Melee_Dmg(vic, att); };
+			// if (wpn.mainflag == ITEM_KAT_MUN) { dmg = Handle_Ranged_Dmg(att, vic); };
+			if (Npc_HasReadiedMeleeWeapon(att))	{ dmg = Handle_Melee_Dmg(att, vic); };
 		}
 		// Magic
 		else if (dmgDesc.spellLevel > 0) //(dmgDesc.spellID >= 0)
@@ -396,12 +406,12 @@ func int DMG_OnDmg(var int victimPtr, var int attackerPtr, var int dmg, var int 
 				Wld_PlayEffect("spellFX_Block_Suck",vic,vic,0,0,0,FALSE);
 				return 0;
 			};
-			dmg = Handle_Magic_Dmg(vic, att, dmgDesc.spellID, dmgDesc.dmgArray[DAM_INDEX_BARRIER] + dmgDesc.dmgArray[DAM_INDEX_FLY] + dmgDesc.dmgArray[DAM_INDEX_MAGIC]);
+			dmg = Handle_Magic_Dmg(att, vic, dmgDesc.spellID, dmgDesc.dmgArray[DAM_INDEX_BARRIER] + dmgDesc.dmgArray[DAM_INDEX_FLY] + dmgDesc.dmgArray[DAM_INDEX_MAGIC]);
 		}
 		// Fist responsibly
 		else if (Npc_IsInFightMode(att, FMODE_FIST))
 		{
-			dmg = Handle_Fist_Dmg(vic, att);
+			dmg = Handle_Fist_Dmg(att, vic);
 		};
 		if (dmg < 0) { dmg = 0; };
 	};

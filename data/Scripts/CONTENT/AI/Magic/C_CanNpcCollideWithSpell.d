@@ -379,13 +379,20 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 
 	//----- Paladin Sprüche -----	
 	if (spellType == SPL_PalHolyBolt)
-	|| (spellType == SPL_PalRepelEvil)
 	{
 		if (C_NpcIsEvil(self))
 		{
 			return COLL_DOEVERYTHING;
 		};
 		return COLL_APPLYHALVEDAMAGE;
+	}
+	else if (spellType == SPL_PalRepelEvil)
+	{
+		if (C_NpcIsEvil(self))
+		{
+			return COLL_DOEVERYTHING;
+		};
+		return COLL_DONOTHING;
 	}
 	else if (spellType == SPL_PalDestroyEvil)
 	{
@@ -394,7 +401,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 			if (self.attribute[ATR_HITPOINTS_MAX] + self.protection[PROT_MAGIC] <= SPL_Damage_PalDestroyEvil)
 			{
 				return COLL_DOEVERYTHING;
-			}
+			};
 			return COLL_APPLYHALVEDAMAGE;
 		};
 		return COLL_DONOTHING;

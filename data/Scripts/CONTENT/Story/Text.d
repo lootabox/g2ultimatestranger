@@ -731,8 +731,9 @@ const string NAME_Instant				= "Instant effect. ";
 const string NAME_ShortRange			= "Short range. ";
 const string NAME_FatalOrHalf			= "Deals halved damage if not fatal. ";
 const string NAME_EvilOrHalf			= "Deals halved damage if target is not evil. ";
-const string NAME_MustBeLiving			= "Only affects the living. ";
+const string NAME_MustBeLiving			= "Only affects living. ";
 const string NAME_MustBeUndead			= "Only affects undead. ";
+const string NAME_MustBeEvil			= "Only affects evil. ";
 
 const string NAME_AreaOfEffect_Small	= "Small area of effect. ";
 const string NAME_AreaOfEffect_Default	= "Area of effect. ";
@@ -742,7 +743,6 @@ const string NAME_Shrink_Penalty		= "Attribute and protection reduction (percent
 const string NAME_Shrink_Info			= "Only affects living monsters. ";
 
 const string NAME_BeliarsRage_Info		= "Deals halved damage against evil targets. ";
-const string NAME_PalDestroyEvil_Info	= "Deals no damage if target is not evil. ";
 
 // MAX LENGTH							"------------------------------------------------------------";
 const string NAME_Staff_Fire_1			= "Fire spell damage against burning foes increased by ten.";
