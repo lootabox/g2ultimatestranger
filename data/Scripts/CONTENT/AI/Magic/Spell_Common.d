@@ -335,7 +335,7 @@ func void Spell_Cast_Focus(var int spellID, var int manaCost, var int spellDamag
 	if (coll > COLL_DONOTHING)
 	{
 		var int dmg; dmg = Handle_Magic_Dmg(self, other, spellID, spellDamage);
-		B_MagicHurtNpc(self, other, dmg);
+		if (dmg > 0) { B_MagicHurtNpc(self, other, dmg); };
 
 		// Send percs depending on outcome
 		if (other.attribute[ATR_HITPOINTS] > 0)

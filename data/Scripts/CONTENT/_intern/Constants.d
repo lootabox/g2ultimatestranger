@@ -806,9 +806,9 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"HEA",  				// 1	 SPL_PalLightHeal
 	"FIB",  				// 2	 SPL_PalHolyBolt
 	"HEA",  				// 3	 SPL_PalMediumHeal
-	"SUM",					// 4	 SPL_PalRepelEvil
+	"FIB",					// 4	 SPL_PalRepelEvil
 	"HEA",  				// 5	 SPL_PalFullHeal
-	"FIB",  				// 6	 SPL_PalDestroyEvil
+	"SUM",  				// 6	 SPL_PalDestroyEvil
 
 	// Teleport-Runen
 	"HEA",  				// 7	SPL_PalTeleportSecret

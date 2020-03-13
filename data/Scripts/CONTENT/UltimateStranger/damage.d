@@ -361,18 +361,6 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 		};
 		dmg -= prot;
 	}
-	// PAL REPEL EVIL -----------------------------------------------------------------------
-	else if	(spellID == SPL_PalRepelEvil)
-	{
-		dmg -= prot;
-		// Create dot debuff
-		if (dmg > 0)
-		{
-			dot_burn_apply(vic, dmg, BURN_DOT_VFX_DURATION_SEC, att);
-pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(dmg)));
-			dmg = 0;
-		};
-	}
 	// OTHER SPELLS -----------------------------------------------------------------------
 	else
 	{
