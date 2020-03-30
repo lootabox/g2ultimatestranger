@@ -776,7 +776,7 @@ INSTANCE ItRu_SumGobSkel (C_Item)
 	spell				= 	SPL_SummonGoblinSkeleton;
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_COST_SummonGoblinSkeleton;
-	mag_circle			= 	1;
+	mag_circle			= 	2;
 	
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -786,11 +786,12 @@ INSTANCE ItRu_SumGobSkel (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	SPL_Cost_SummonGoblinSkeleton;
 	
-	TEXT 	[2]			=   "The wandering bones";
-	TEXT 	[3]			=   "of dead goblins.";
+	TEXT 	[2]			=   "The wandering bones of dead goblins.";
+
+	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Normal, NAME_ShortRange);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -886,7 +887,7 @@ INSTANCE ItRu_SumWolf (C_Item)
 	spell				= 	SPL_SummonWolf;
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_COST_SummonWolf;
-	mag_circle			= 	2;
+	mag_circle			= 	1;
 	
 
 	wear				= 	WEAR_EFFECT;
@@ -897,9 +898,13 @@ INSTANCE ItRu_SumWolf (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	SPL_Cost_SummonWolf;
 	
+	TEXT 	[2]			=   "Warm pelts of loyal companions.";
+
+	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Slow, NAME_ShortRange);
+
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
@@ -1113,8 +1118,12 @@ INSTANCE ItRu_SumSkel (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	SPL_COST_SUMMONSKELETON;
+	
+	TEXT 	[2]			=   "The rattling bones of forgotten warriors.";
+
+	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Normal, NAME_ShortRange);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1266,6 +1275,12 @@ INSTANCE ItRu_SumGol (C_Item)
 	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_SummonGolem;
 	
+	TEXT 	[2]			=   "Rocky heart for moving mountains.";
+
+	TEXT	[3]			=	ConcatStrings(NAME_SummonGolem_Info, NAME_ShortRange);
+
+	TEXT	[4]			=	ConcatStrings(NAME_SummonIngredient_Info, "Heart of a Golem");
+
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
@@ -1454,8 +1469,12 @@ INSTANCE ItRu_SumDemon (C_Item)
 	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;
 	
-	TEXT	[1]			=	NAME_Manakosten;
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	SPL_COST_SUMMONDEMON;
+	
+	TEXT 	[2]			=   "The beating heart of evil incarnate.";
+
+	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Fast, NAME_ShortRange);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

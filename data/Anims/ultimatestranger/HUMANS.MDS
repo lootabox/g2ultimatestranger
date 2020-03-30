@@ -4222,6 +4222,31 @@ Model ("HuS")
             //ani         ("s_Rp3Shoot"           1   "s_Rp3Shoot"    0.0 0.0 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   36  36)
             //ani         ("t_Rp3Shoot_2_Stand"   1   ""              0.0 0.7 M.  "HUM_MAGRAPIDFIRE_1_79.ASC" F   37  40)
 
+//////////////////////////////////////
+// Zombie rise (summon spell)       //
+//////////////////////////////////////
+
+            //T_DEADB from HUMANS_ZOMBIE.MDS - just renamed, and with removed eventSFX ZOM_DIE
+            ani            ("t_ZDeadB"                        1    "s_DeadB"        0.1    0.0    M.    "Zom_DeadB_M01.asc"        F    1    159    FPS:15)
+            {
+                //*eventSFX    (2    "ZOM_DIE"    EMPTY_SLOT    )
+                *eventPFX        (1     1    "MFX_DESTROYUNDEAD_SOUL_BACK"    "BIP01 SPINE2"        ATTACH    )
+                *eventPFX        (10     2    "MFX_DESTROYUNDEAD_SOUL_CLOUD"    "BIP01 L Hand"        ATTACH    )
+                *eventPFX        (20     3    "MFX_DESTROYUNDEAD_SOUL_CLOUD"    "BIP01 R Hand"        ATTACH    )
+                *eventPFX        (30     4    "MFX_DESTROYUNDEAD_SOUL_CLOUD"    "BIP01 L Foot"        ATTACH    )
+                *eventSFX    (34    "M_FALL_SMALL"    EMPTY_SLOT    )
+                *eventPFX        (40     5    "MFX_DESTROYUNDEAD_SOUL_CLOUD"    "BIP01 R Foot"        ATTACH    )
+                *eventPFX        (50     6    "MFX_DESTROYUNDEAD_SOUL_CLOUD"    "BIP01 Head"        ATTACH    )
+                *eventPFX        (60     7    "MFX_DESTROYUNDEAD_SOUL_CLOUD"    "BIP01 L UpperArm"    ATTACH    )
+                *eventPFX        (70     8    "MFX_DESTROYUNDEAD_SOUL_CLOUD"    "BIP01 R UpperArm"    ATTACH    )
+                *eventPFX        (80     9    "MFX_DESTROYUNDEAD_SOUL_CLOUD"    "BIP01"            ATTACH    )
+
+                *eventPFX        (120     1    "MFX_DESTROYUNDEAD_SOUL_BACK"    "BIP01 SPINE2"        ATTACH    )
+            }
+
+            //Reversed animation t_ZDeadB
+            aniAlias        ("t_ZDeadB_2_Stand"                    1    ""            0.0    0.0    M.    "t_ZDeadB"            R)
+
         }
 }
 

@@ -31,7 +31,7 @@ INSTANCE ItSc_Acid (C_Item)
 
     TEXT    [0]         =   Name_MageScroll ;
 
-    TEXT    [1]         =   NAME_Mana_needed;
+    TEXT    [1]         =   NAME_Manakosten;
     COUNT   [1]         =   C_GetScrollCost(SPL_Cost_Acid);
 
     TEXT    [2]         =   NAME_Dam_Magic; // Die +5 kommen vom SFX, der ausspielt
@@ -70,7 +70,7 @@ INSTANCE ItSc_AdanosBall (C_Item)
 
     TEXT    [0]         =   Name_MageScroll ;
 
-    TEXT    [1]         =   NAME_Mana_needed;
+    TEXT    [1]         =   NAME_Manakosten;
     COUNT   [1]         =   C_GetScrollCost(SPL_Cost_AdanosBall);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -108,7 +108,7 @@ INSTANCE ItSc_Explosion (C_Item)
 
     TEXT    [0]         =   Name_MageScroll ;
 
-    TEXT    [1]         =   NAME_Mana_needed;
+    TEXT    [1]         =   NAME_Manakosten;
     COUNT   [1]         =   C_GetScrollCost(SPL_Cost_Explosion);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -144,7 +144,7 @@ INSTANCE ItSc_Extricate (C_Item)
 
     TEXT    [0]         =   Name_MageScroll ;
 
-    TEXT    [1]         =   NAME_Mana_needed;
+    TEXT    [1]         =   NAME_Manakosten;
     COUNT   [1]         =   C_GetScrollCost(SPL_Cost_Extricate);
 
     TEXT    [5]         =   NAME_Value;
@@ -174,7 +174,7 @@ INSTANCE ItSc_HealOther (C_Item)
 
     TEXT    [0]         =   Name_MageScroll ;
 
-    TEXT    [1]         =   NAME_Mana_needed;
+    TEXT    [1]         =   NAME_Manakosten;
     COUNT   [1]         =   C_GetScrollCost(SPL_Cost_HealOther);
 	
 	TEXT	[2]			=	NAME_HealingPerCast;
@@ -209,7 +209,7 @@ INSTANCE ItSc_MagicCage (C_Item)
 
     TEXT    [0]         =   Name_MageScroll ;
 
-    TEXT    [1]         =   NAME_Mana_needed;
+    TEXT    [1]         =   NAME_Manakosten;
     COUNT   [1]         =   C_GetScrollCost(SPL_Cost_MagicCage);
 
     TEXT    [3]         =   NAME_Sec_Duration;
@@ -242,7 +242,7 @@ INSTANCE ItSc_Quake (C_Item)
 
     TEXT    [0]         =   Name_MageScroll ;
 
-    TEXT    [1]         =   NAME_Mana_needed;
+    TEXT    [1]         =   NAME_Manakosten;
     COUNT   [1]         =   C_GetScrollCost(SPL_Cost_Quake);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -275,7 +275,7 @@ INSTANCE ItSc_Rage (C_Item)
 
     TEXT    [0]         =   Name_MageScroll ;
 
-    TEXT    [1]         =   NAME_Mana_needed;
+    TEXT    [1]         =   NAME_Manakosten;
     COUNT   [1]         =   C_GetScrollCost(SPL_Cost_Rage);
 
     TEXT    [2]         =   NAME_Rage;
@@ -310,7 +310,7 @@ INSTANCE ItSc_Teleport_Maya (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_COST_TELEPORT);
 	
 	TEXT	[5]			=	NAME_Value;

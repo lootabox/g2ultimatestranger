@@ -430,6 +430,12 @@ INSTANCE ItRu_SummonZombie	(C_Item)
 	
 	TEXT	[1]			=	NAME_Manakosten;			
 	COUNT	[1]			=	SPL_Cost_SummonZombie;
+
+	TEXT 	[2]			=   "A coin for a vessel.";
+
+	TEXT	[3]			=	ConcatStrings(NAME_SummonIngredient_Info, "Old Coin");
+
+	TEXT	[4]			=	ConcatStrings(NAME_SummonZombie_Info, NAME_ShortRange);
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;

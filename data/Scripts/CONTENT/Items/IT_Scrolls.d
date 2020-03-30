@@ -87,7 +87,7 @@ INSTANCE ItSc_PalLight (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalLight);
 	
 	TEXT	[2]			=	NAME_Duration;
@@ -120,7 +120,7 @@ INSTANCE ItSc_PalLightHeal (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalLightHeal);
 	
 	TEXT	[2]			=	NAME_HealingPerCast;
@@ -154,7 +154,7 @@ INSTANCE ItSc_PalHolyBolt (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalHolyBolt);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -189,7 +189,7 @@ INSTANCE ItSc_PalMediumHeal (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalMediumHeal);
 	
 	TEXT	[2]			=	NAME_HealingPerCast;
@@ -221,7 +221,7 @@ INSTANCE ItSc_PalRepelEvil (C_Item)
 	description			=	NAME_SPL_PalRepelEvil;
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalRepelEvil);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -255,7 +255,7 @@ INSTANCE ItSc_PalFullHeal (C_Item)
 	description			=	NAME_SPL_PalFullHeal;
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalFullHeal);
 	
 	TEXT	[2]			=	NAME_HealingPerCast;
@@ -287,7 +287,7 @@ INSTANCE ItSc_PalDestroyEvil (C_Item)
 	description			=	NAME_SPL_PalDestroyEvil;
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalDestroyEvil);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -327,7 +327,7 @@ instance ItSc_Light (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
 	TEXT	[2]			=	NAME_Duration;
@@ -360,7 +360,7 @@ INSTANCE ItSc_Firebolt (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Firebolt);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -396,7 +396,7 @@ INSTANCE ItSc_Icebolt (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Icebolt);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -429,7 +429,7 @@ INSTANCE ItSc_LightHeal (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_LightHeal);
 	
 	TEXT	[2]			=	NAME_HealingPerCast;
@@ -463,8 +463,12 @@ INSTANCE ItSc_SumGobSkel (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonGoblinSkeleton);
+	
+	TEXT 	[2]			=   "The wandering bones of dead goblins.";
+
+	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Normal, NAME_ShortRange);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -493,7 +497,7 @@ INSTANCE ItSc_InstantFireball (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_InstantFireball);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -529,7 +533,7 @@ INSTANCE ItSc_Zap (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Zap);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -564,8 +568,12 @@ INSTANCE ItSc_SumWolf (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonWolf);
+	
+	TEXT 	[2]			=   "Warm pelts of loyal companions.";
+
+	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Slow, NAME_ShortRange);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -627,7 +635,7 @@ INSTANCE ItSc_Sleep (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Sleep);
 	
 	TEXT	[2]			=	NAME_Sec_Duration;
@@ -664,7 +672,7 @@ INSTANCE ItSc_Charm(C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Charm);
 	
 	TEXT	[5]			=	NAME_Value;
@@ -695,7 +703,7 @@ INSTANCE ItSc_MediumHeal (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_MediumHeal);
 	
 	TEXT	[2]			=	NAME_HealingPerCast;
@@ -728,7 +736,7 @@ INSTANCE ItSc_LightningFlash (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_LightningFlash);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -799,8 +807,12 @@ INSTANCE ItSc_SumSkel (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonSkeleton);
+	
+	TEXT 	[2]			=   "The rattling bones of forgotten warriors.";
+
+	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Normal, NAME_ShortRange);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -829,7 +841,7 @@ INSTANCE ItSc_Fear (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Fear);
 	
 	TEXT	[2]			=	NAME_Sec_Duration;
@@ -864,7 +876,7 @@ INSTANCE ItSc_IceCube (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_IceCube);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -938,8 +950,14 @@ INSTANCE ItSc_SumGol (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonGolem);
+	
+	TEXT 	[2]			=   "Rocky heart for moving mountains.";
+
+	TEXT	[3]			=	ConcatStrings(NAME_SummonIngredient_Info, "Heart of a Golem");
+
+	TEXT	[4]			=	ConcatStrings(NAME_SummonGolem_Info, NAME_ShortRange);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1041,7 +1059,7 @@ INSTANCE ItSc_Firestorm (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_InstantFirestorm);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -1079,7 +1097,7 @@ INSTANCE ItSc_IceWave (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_IceWave);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -1117,8 +1135,12 @@ INSTANCE ItSc_SumDemon (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonDemon);
+
+	TEXT 	[2]			=   "The beating heart of evil incarnate.";
+
+	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Fast, NAME_ShortRange);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1148,7 +1170,7 @@ INSTANCE ItSc_FullHeal (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_FullHeal);
 	
 	TEXT	[2]			=	NAME_HealingPerCast;
@@ -1181,7 +1203,7 @@ INSTANCE ItSc_Firerain (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_FireRain);
 	
 	//TEXT	[2]			=	NAME_Dam_Magic;
@@ -1219,7 +1241,7 @@ INSTANCE ItSc_BreathOfDeath (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarz
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_BreathOfDeath);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -1254,7 +1276,7 @@ INSTANCE ItSc_MassDeath (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_MassDeath);
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
@@ -1289,7 +1311,7 @@ INSTANCE ItSc_ArmyOfDarkness (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_ArmyOfDarkness);
 	
 	TEXT	[5]			=	NAME_Value;
@@ -1320,7 +1342,7 @@ INSTANCE ItSc_Shrink (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarzmagiern
 	
 	TEXT	[0]			=	Name_MageScroll;
 	
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Shrink);
 
 	TEXT	[2]			=	NAME_Shrink_Penalty;
@@ -1357,7 +1379,7 @@ INSTANCE ItSc_TrfSheep (C_Item)
 
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_TrfSheep);
 
 	TEXT	[5]			=	NAME_Value;
@@ -1387,7 +1409,7 @@ INSTANCE ItSc_TrfScavenger (C_Item)
 
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_TrfScavenger);
 
 	TEXT	[5]			=	NAME_Value;
@@ -1417,7 +1439,7 @@ INSTANCE ItSc_TrfGiantRat (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_TrfGiantRat);
 
 	TEXT	[5]			=	NAME_Value;
@@ -1447,7 +1469,7 @@ INSTANCE ItSc_TrfGiantBug (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_TrfGiantBug);
 
 	TEXT	[5]			=	NAME_Value;
@@ -1478,7 +1500,7 @@ INSTANCE ItSc_TrfWolf (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_TrfWolf);
 
 	TEXT	[5]			=	NAME_Value;
@@ -1508,7 +1530,7 @@ INSTANCE ItSc_TrfWaran (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_TrfWaran);
 
 	TEXT	[5]			=	NAME_Value;
@@ -1538,7 +1560,7 @@ INSTANCE ItSc_TrfSnapper (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_TrfSnapper);
 
 	TEXT	[5]			=	NAME_Value;
@@ -1568,7 +1590,7 @@ INSTANCE ItSc_TrfWarg (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_TrfWarg);
 
 	TEXT	[5]			=	NAME_Value;
@@ -1598,7 +1620,7 @@ INSTANCE ItSc_TrfFireWaran (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_TrfFireWaran);
 
 	TEXT	[5]			=	NAME_Value;
@@ -1628,7 +1650,7 @@ INSTANCE ItSc_TrfLurker (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_TrfLurker);
 
 	TEXT	[5]			=	NAME_Value;
@@ -1658,7 +1680,7 @@ INSTANCE ItSc_TrfShadowbeast (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_TrfShadowbeast);
 
 	TEXT	[5]			=	NAME_Value;
@@ -1688,7 +1710,7 @@ INSTANCE ItSc_TrfDragonSnapper (C_Item)//Joly:Auf Dracheninsel in Truhe der Schw
 	
 	TEXT	[0]			=	Name_MageScroll	;
 
-	TEXT	[1]			=	NAME_Mana_needed;
+	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_TrfDragonSnapper);
 
 	TEXT	[5]			=	NAME_Value;

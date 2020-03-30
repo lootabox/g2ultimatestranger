@@ -69,11 +69,11 @@ func int GFA_ShiftAimVob(var int spellID, var int posPtr) {
 	if (spellID == SPL_SummonGoblinSkeleton)
 	|| (spellID == SPL_SummonWolf)
 	|| (spellID == SPL_SummonSkeleton)
-	|| (spellID == SPL_SummonGolem)
+	//|| (spellID == SPL_SummonGolem)
 	|| (spellID == SPL_SummonDemon)
 	|| (spellID == SPL_ArmyOfDarkness)
 	|| (spellID == SPL_SummonGuardian)
-	|| (spellID == SPL_SummonZombie)
+	//|| (spellID == SPL_SummonZombie)
 	|| (spellID == SPL_SummonMud)
 	{
 		MEM_PushIntParam(posPtr);

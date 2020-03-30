@@ -1,5 +1,147 @@
 
 //************************************************
+// Broadcasting methods
+// https://forum.worldofplayers.de/forum/threads/775333-Script-Broadcasts?p=25881558&viewfull=1#post25881558
+//************************************************
+
+//************************************************
+//   The Core: Iterating through Lists.
+//************************************************
+
+func void _BC_ForAll(var int funcID, var int sphereOnly) {
+    MEM_InitAll(); //safety, don't know if user did it.
+
+    var int busy;
+    if (busy) {
+        MEM_Error("Broadcast-System: Nesting is not allowed!");
+        return;
+    };
+    
+    busy = true;
+    
+    var C_NPC slfBak; slfBak = Hlp_GetNpc(self);
+    var C_NPC othBak; othBak = Hlp_GetNpc(other);
+    
+    if (sphereOnly) {
+        /* to speed things up (and do the filtering)
+         * we only search the (small) active Vob List */
+        var int i;    i    = 0;
+        var int loop; loop = MEM_StackPos.position;
+        
+        if (i < MEM_World.activeVobList_numInArray) {
+            var int vob;
+            vob = MEM_ReadIntArray(MEM_World.activeVobList_array, i);
+            
+            if (Hlp_Is_oCNpc(vob)) {
+                var C_NPC npc;
+                npc = MEM_PtrToInst(vob);
+                MEM_PushInstParam(npc);
+                MEM_CallByID(funcID);
+            };
+            
+            i += 1;
+            MEM_StackPos.position = loop;
+        };
+    } else {
+        /* walk through the entire Npc List (possibly large). */
+        var int listPtr; listPtr = MEM_World.voblist_npcs;
+        loop = MEM_StackPos.position;
+        
+        if (listPtr) {
+            vob = MEM_ReadInt(listPtr + 4);
+            
+            if (Hlp_Is_oCNpc(vob)) {
+                npc = MEM_PtrToInst(vob);
+                MEM_PushInstParam(npc);
+                MEM_CallByID(funcID);
+            };
+            
+            listPtr = MEM_ReadInt(listPtr + 8);
+            MEM_StackPos.position = loop;
+        };
+    };
+    
+    self  = Hlp_GetNpc(slfbak);
+    other = Hlp_GetNpc(othbak);
+    
+    busy = false;
+};
+
+func void DoForAll    (var func _) {
+    var MEMINT_HelperClass symb;
+    var int theHandlerInt;
+    theHandlerInt = MEM_ReadInt(MEM_ReadIntArray(contentSymbolTableAddress, symb - 1) + zCParSymbol_content_offset);
+
+    _BC_ForAll(theHandlerInt, 0);
+};
+
+func void DoForSphere(var func _) {
+    var MEMINT_HelperClass symb;
+    var int theHandlerInt;
+    theHandlerInt = MEM_ReadInt(MEM_ReadIntArray(contentSymbolTableAddress, symb - 1) + zCParSymbol_content_offset);
+    
+    _BC_ForAll(theHandlerInt, 1);
+};
+
+//************************************************
+//   Building on that: The Broadcast
+//************************************************
+
+var int   _BC_funcID;
+var int   _BC_CasterPtr;
+var C_NPC _BC_Caster;
+var int   _BC_ExcludeCaster;
+var int   _BC_SendToDead;
+
+func void _BC_CallAssessFunc(var C_NPC slf) {
+    //ignore dead, unless they are explicitly included
+    if (!slf.attribute[ATR_HITPOINTS] && !_BC_SendToDead) {
+        return;
+    };
+    
+    //ignore caster if this is wanted
+    if (_BC_ExcludeCaster) {
+        if (_BC_CasterPtr == MEM_InstToPtr(slf)) {
+            return;
+        };
+    };
+    
+    MEM_PushInstParam(slf);
+    MEM_PushInstParam(_BC_Caster);
+    MEM_CallByID(_BC_funcID);
+};
+
+func void _BC_Broadcast(var C_NPC caster, var int funcID, var int excludeCaster, var int includeDead, var int includeShrinked) {
+    _BC_ExcludeCaster = excludeCaster;
+    _BC_Caster        = Hlp_GetNpc(caster);
+    _BC_CasterPtr     = MEM_InstToPtr(caster);
+    _BC_SendToDead    = includeDead;
+    _BC_funcID        = funcID;
+    
+    if (includeShrinked) {
+        DoForAll(_BC_CallAssessFunc);
+    } else {
+        DoForSphere(_BC_CallAssessFunc);
+    };
+};
+
+func void Broadcast  (var C_NPC caster, var func _) {
+    var MEMINT_HelperClass symb;
+    var int reactionFuncID;
+    reactionFuncID = MEM_ReadInt(MEM_ReadIntArray(contentSymbolTableAddress, symb - 1) + zCParSymbol_content_offset);
+    
+    _BC_Broadcast(caster, reactionFuncID, 0, 0, 0);
+};
+
+func void BroadcastEx(var C_NPC caster, var func _, var int excludeCaster, var int includeDead, var int includeShrinked) {
+    var MEMINT_HelperClass symb;
+    var int reactionFuncID;
+    reactionFuncID = MEM_ReadInt(MEM_ReadIntArray(contentSymbolTableAddress, symb - 4) + zCParSymbol_content_offset);
+    
+    _BC_Broadcast(caster, reactionFuncID, excludeCaster, includeDead, includeShrinked);
+};
+
+//************************************************
 // Methods for fetching dialog info, used to block dialog when npc's have nothing to say.
 // https://forum.worldofplayers.de/forum/threads/1299679-Skriptpaket-Ikarus-4/page23?p=26035301&viewfull=1#post26035301
 //************************************************
