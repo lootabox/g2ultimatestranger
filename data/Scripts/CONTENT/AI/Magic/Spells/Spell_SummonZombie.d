@@ -3,7 +3,6 @@
 // ******************
 
 const int SPL_Cost_SummonZombie			= 80;
-const int SPL_Degen_SummonZombie		= 4;
 
 
 INSTANCE Spell_SummonZombie (C_Spell_Proto)	

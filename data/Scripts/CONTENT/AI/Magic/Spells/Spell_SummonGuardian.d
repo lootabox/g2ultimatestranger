@@ -3,7 +3,6 @@
 // ******************
 
 const int SPL_Cost_SummonGuardian			= 60;
-const int SPL_Degen_SummonGuardian			= 3;
 
 
 INSTANCE Spell_SummonGuardian (C_Spell_Proto)	

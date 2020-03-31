@@ -265,7 +265,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 
 	// Kreis 1
 	"Heal Light Wounds",	// 21	SPL_LightHeal
-	"Goblin Skeleton",			// 22	SPL_SummonGoblinSkeleton
+	"Summon Goblin Skeleton",			// 22	SPL_SummonGoblinSkeleton
 
 	// Kreis 2
 	"Fireball",				// 23	SPL_InstantFireball
@@ -282,7 +282,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"Heal Medium Wounds",	// 28	SPL_MediumHeal
 	"Lightning",				// 29	SPL_LightningFlash
 	"Large Fireball",		// 30	SPL_ChargeFireball
-	"Skeleton",					// 31	SPL_SummonSkeleton
+	"Summon Skeleton",					// 31	SPL_SummonSkeleton
 	"Fear",					// 32	SPL_Fear
 	"Ice Block",					// 33	SPL_IceCube
 	"Ball Lightning",				// 34	SPL_ChargeZap
@@ -295,7 +295,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 	// Kreis 5
 	"Small Fire Storm",		// 38	SPL_Firestorm
 	"Ice Wave",					// 39	SPL_IceWave
-	"Demon",					// 40	SPL_SummonDemon
+	"Summon Demon",					// 40	SPL_SummonDemon
 	"Heal Heavy Wounds",				// 41	SPL_FullHeal
 
 	// Kreis 6
@@ -336,7 +336,7 @@ const string TXT_SPELLS[MAX_SPELL] =
   	"TXT_SPL_RESERVED_69",		// 69	SPL_Reserved_69
   
   	// Magick (Wasser)
- 	"Storm",					// 70	SPL_Thunderstorm
+ 	"Ice Storm",					// 70	SPL_Thunderstorm
 	"Dust Devil",					// 71	SPL_Whirlwind
 	"Waterfist",				// 72	SPL_WaterFist
 	"Ice Lance",					// 73	SPL_IceLance
@@ -431,7 +431,7 @@ const string NAME_SPL_ChargeZap				= "Ball Lightning";
 
 // Kreis 4
 const string NAME_SPL_LightningFlash		= "Lightning";
-const string NAME_SPL_SummonGolem			= "Summon Golem";
+const string NAME_SPL_SummonGolem			= "Create Golem";
 const string NAME_SPL_DestroyUndead			= "Destroy Undead";
 const string NAME_SPL_ChargeFireball		= "Large Fireball";
 
@@ -499,7 +499,7 @@ const string NAME_SPL_SummonGuardian		= "Summon Stone Sentinel";
 const string NAME_SPL_BeliarsRage			= "Beliar's Wrath";
 const string NAME_SPL_SuckEnergy			= "Steal energy";
 const string NAME_SPL_Skull					= "Cry of the Dead";
-const string NAME_SPL_SummonZombie			= "Summon Zombie";
+const string NAME_SPL_SummonZombie			= "Create Zombie";
 const string NAME_SPL_SummonMud				= "Summon Mud";
 
 // ...

@@ -2,28 +2,21 @@
 // ZS_MM_Rtn_Summoned
 // ******************
 
-func void HandleSummonDegen(var c_npc summon)
+func void HandleSummonDegen(var c_npc summon, var int isInCombat)
 {
-	/*
-		GIL_SUMMONED_WOLF			SPL_Degen_SummonWolf
-		GIL_SUMMONED_GOBBO_SKELETON	SPL_Degen_SummonGoblinSkeleton
-		GIL_SUMMONED_SKELETON		SPL_Degen_SummonSkeleton
-		GIL_SummonedGuardian		SPL_Degen_SummonGuardian
-		GIL_SUMMONED_GOLEM			SPL_Degen_SummonGolem
-		GIL_SummonedZombie			SPL_Degen_SummonZombie
-		GIL_SUMMONED_DEMON			SPL_Degen_SummonDemon
-	*/
-
 	var int degen;
-	if		(summon.guild == GIL_SUMMONED_WOLF)				{ degen = SPL_Degen_SummonWolf; }
-	else if	(summon.guild == GIL_SUMMONED_GOBBO_SKELETON)	{ degen = SPL_Degen_SummonGoblinSkeleton; }
-	else if	(summon.guild == GIL_SUMMONED_SKELETON)			{ degen = SPL_Degen_SummonSkeleton; }
-	else if	(summon.guild == GIL_SummonedGuardian)			{ degen = SPL_Degen_SummonGuardian; }
-	else if	(summon.guild == GIL_SUMMONED_GOLEM)			{ degen = SPL_Degen_SummonGolem; }
-	else if	(summon.guild == GIL_SummonedZombie)			{ degen = SPL_Degen_SummonZombie; }
-	else if	(summon.guild == GIL_SUMMONED_DEMON)			{ degen = SPL_Degen_SummonDemon; };
+	if		(summon.guild == GIL_SUMMONED_WOLF)				{ degen = 2 * summon.attribute[ATR_HITPOINTS_MAX]; }
+	else if	(summon.guild == GIL_SUMMONED_GOBBO_SKELETON)	{ degen = 4 * summon.attribute[ATR_HITPOINTS_MAX]; }
+	else if	(summon.guild == GIL_SUMMONED_SKELETON)			{ degen = 4 * summon.attribute[ATR_HITPOINTS_MAX]; }
+	else if	(summon.guild == GIL_SummonedGuardian)			{ degen = 4 * summon.attribute[ATR_HITPOINTS_MAX]; }
+	else if	(summon.guild == GIL_SUMMONED_DEMON)			{ degen = 8 * summon.attribute[ATR_HITPOINTS_MAX]; }
+	else if (summon.guild == GIL_SummonedZombie)			{ return; }
+	else if (summon.guild == GIL_SUMMONED_GOLEM)			{ return; };
 
-	Npc_ChangeAttribute(summon, ATR_HITPOINTS, -degen);
+	if (!isInCombat) { degen /= 2; };
+
+	if (degen > 1)	{ Npc_ChangeAttribute(summon, ATR_HITPOINTS, -degen); }
+	else			{ Npc_ChangeAttribute(summon, ATR_HITPOINTS, -1); };
 };
 
 
@@ -79,15 +72,11 @@ func int ZS_MM_Rtn_Summoned_Loop()
 			};
 			
 			// ------ Summon Time -------
-			self.aivar[AIV_SummonTime] = (self.aivar[AIV_SummonTime] + Npc_GetStateTime(self)); //weil AI_Goto länger dauern kann
-			HandleSummonDegen(self);
+			self.aivar[AIV_SummonTime] = (self.aivar[AIV_SummonTime] + 1); //weil AI_Goto länger dauern kann
+			HandleSummonDegen(self, FALSE);
 
-			/* if (self.aivar[AIV_SummonTime] >= MONSTER_SUMMON_TIME)
-			{
-				 Npc_ChangeAttribute (self, ATR_HITPOINTS, -self.attribute[ATR_HITPOINTS_MAX]);
-			}; */
-			
 			Npc_SetStateTime (self, 0);
+
 		};
 	};
 	

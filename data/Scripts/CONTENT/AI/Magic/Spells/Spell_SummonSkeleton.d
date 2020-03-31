@@ -2,8 +2,7 @@
 // SPL_SummonSkeleton
 // ******************
 
-const int SPL_Cost_SummonSkeleton			= 60;
-const int SPL_Degen_SummonSkeleton			= 4;
+const int SPL_Cost_SummonSkeleton			= 30;
 
 
 INSTANCE Spell_SummonSkeleton (C_Spell_Proto)	//ehem. Spell_Skeleton

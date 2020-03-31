@@ -3,7 +3,6 @@
 // **************
 
 const int SPL_Cost_SummonWolf			= 20;
-const int SPL_Degen_SummonWolf			= 2;
 
 
 INSTANCE Spell_SummonWolf (C_Spell_Proto)

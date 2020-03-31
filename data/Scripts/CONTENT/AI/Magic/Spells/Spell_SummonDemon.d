@@ -2,8 +2,7 @@
 // SPL_SummonDemon
 // ***************
 
-const int SPL_Cost_SummonDemon		= 120;
-const int SPL_Degen_SummonDemon		= 20;
+const int SPL_Cost_SummonDemon		= 100;
 
 
 INSTANCE Spell_SummonDemon (C_Spell_Proto)	//ehem. Spell_Demon

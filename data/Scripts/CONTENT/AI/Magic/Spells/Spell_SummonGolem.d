@@ -2,8 +2,7 @@
 // SPL_SummonGolem
 // ***************
 
-const int SPL_Cost_SummonGolem		= 80;
-const int SPL_Degen_SummonGolem		= 6;
+const int SPL_Cost_SummonGolem		= 50;
 
 
 INSTANCE Spell_SummonGolem (C_Spell_Proto)	//ehem. Spell_Golem

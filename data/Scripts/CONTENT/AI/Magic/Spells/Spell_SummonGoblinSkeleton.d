@@ -2,8 +2,7 @@
 // SPL_SummonGoblinSkeleton
 // ************************
 
-const int SPL_Cost_SummonGoblinSkeleton		= 40;
-const int SPL_Degen_SummonGoblinSkeleton	= 3;
+const int SPL_Cost_SummonGoblinSkeleton		= 20;
 
 
 INSTANCE Spell_SummonGoblinSkeleton (C_Spell_Proto)	//ehem. Spell_Skeleton
