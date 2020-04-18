@@ -31,8 +31,17 @@ func void BC_AnimateZombie(var C_NPC slf, var C_NPC npc)
 	// Find nearby dead humans
 	if (slf.guild < GIL_SEPERATOR_HUM)
 	&& (Npc_IsDead (slf) == TRUE)
-	&& (Npc_GetDistToNpc (slf, npc) < 1000)
+	&& (Npc_GetDistToNpc (slf, npc) < 500)
+	&& (Npc_HasItems(npc, ItMi_OldCoin))
+	&& (!C_NpcIsImmuneToMindSpells(slf))
+	&& ((slf.flags != NPC_FLAG_IMMORTAL)
+	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Richter))
+	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(VLK_400_Larius))
+	|| (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Cornelius)))
 	{
+		// Take resource
+		Npc_RemoveInvItems(npc, ItMi_OldCoin, 1);
+
 		// We don't want to talk to zombie
 		NPC_PercDisable (slf, PERC_ASSESSTALK);
 
@@ -61,6 +70,7 @@ func void BC_AnimateZombie(var C_NPC slf, var C_NPC npc)
 		if (slf.protection[PROT_MAGIC] < 50)		{ slf.protection[PROT_MAGIC] = 50; };
 		if (slf.protection[PROT_POINT] < 100)		{ slf.protection[PROT_POINT] = 100; };
 		slf.attribute[ATR_HITPOINTS] = slf.attribute[ATR_HITPOINTS_MAX];
+		slf.bodyStateInterruptableOverride = TRUE;
 
 		// Play animation - reversal of the one used for dying zombie
 		AI_PlayAni (slf, "t_ZDeadB_2_Stand");

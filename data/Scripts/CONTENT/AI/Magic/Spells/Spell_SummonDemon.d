@@ -21,7 +21,7 @@ func int Spell_Logic_SummonDemon(var int manaInvested)
 
 func void Spell_Cast_SummonDemon(var int spellLevel)
 {
-	Spell_Cast_Summon(self, spellLevel, Demon, Summoned_Demon, Summoned_DemonLord);
+	Spell_Cast_Summon(self, spellLevel, Demon, Summoned_Demon_Hostile, Summoned_Demon);
 };
 
 

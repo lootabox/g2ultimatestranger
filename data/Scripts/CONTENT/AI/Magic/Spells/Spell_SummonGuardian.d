@@ -21,5 +21,5 @@ func int Spell_Logic_SummonGuardian(var int manaInvested)
 
 func void Spell_Cast_SummonGuardian(var int spellLevel)
 {
-	Spell_Cast_Summon(self, spellLevel, Stoneguardian, Summoned_Guardian, Summoned_Large_Guardian);
+	Spell_Cast_Summon(self, spellLevel, Stoneguardian, Summoned_Guardian, Summoned_Guardian);
 };

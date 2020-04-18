@@ -27,7 +27,7 @@ func void BC_AwakenGolem(var C_NPC slf, var C_NPC npc)
 	// Find nearby dead golems
 	if (C_NpcIsGolem (slf))
 	&& (Npc_IsDead (slf) == TRUE)
-	&& (Npc_GetDistToNpc (slf, npc) < 1000)
+	&& (Npc_GetDistToNpc (slf, npc) < 500)
 	{
 		// Make sure there isnt already a closer golem
 		if (Hlp_IsValidNpc(BC_AwakenGolem_Closest))

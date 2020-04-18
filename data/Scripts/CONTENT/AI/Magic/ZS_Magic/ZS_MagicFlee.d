@@ -58,11 +58,7 @@ func void ZS_MagicFlee ()
 			return;
 		};
 	};
-	if((self.guild == GIL_KDF) || (self.guild == GIL_PAL) || (self.guild == GIL_KDW)
-	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Xardas))
-	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Vatras))
-	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Myxir_CITY))
-	|| (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(KDF_511_Daron)))
+	if (C_NpcIsImmuneToMindSpells(other))
 	{
 		if(Hlp_GetInstanceID(self) != Hlp_GetInstanceID(Xardas))
 		{

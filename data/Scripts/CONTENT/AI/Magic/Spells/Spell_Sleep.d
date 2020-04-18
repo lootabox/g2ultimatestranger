@@ -52,14 +52,7 @@ func void Spell_Cast_Sleep()
 	|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(VLK_400_Larius))
 	|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Cornelius)))
 	&& (Npc_GetDistToNpc (self,other) <= 1000)
-	&& ((other.guild != GIL_KDF)
-	&& (other.guild != GIL_PAL)
-	|| (Npc_IsPlayer(other)))
-	&& (other.guild != GIL_DMT)
-	&& (other.guild != GIL_KDW)
-	&& (Hlp_GetInstanceID(other) != Hlp_GetInstanceID(Vatras))
-	&& (Hlp_GetInstanceID(other) != Hlp_GetInstanceID(Myxir_CITY))
-	&& (Hlp_GetInstanceID(other) != Hlp_GetInstanceID(KDF_511_Daron))
+	&& (!C_NpcIsImmuneToMindSpells(other))
 	{
 		Npc_ClearAIQueue	(other);
 		B_ClearPerceptions	(other);

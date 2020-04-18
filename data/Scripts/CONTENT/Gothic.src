@@ -79,6 +79,7 @@ AI\HUMAN\C_Human\C_NpcIsWeakToFire.d
 AI\HUMAN\C_Human\C_NpcIsWeakToIce.d
 AI\HUMAN\C_Human\C_NpcIsWeakToLightning.d
 AI\HUMAN\C_Human\C_NpcIsWeakToWater.d
+AI\HUMAN\C_Human\C_NpcIsImmuneToMindSpells.d
 
 UltimateStranger\damage.d
 

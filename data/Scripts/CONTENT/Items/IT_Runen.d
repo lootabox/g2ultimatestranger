@@ -788,8 +788,8 @@ INSTANCE ItRu_SumGobSkel (C_Item)
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	SPL_Cost_SummonGoblinSkeleton;
-	
-	TEXT 	[2]			=   "The wandering bones of dead goblins.";
+
+	TEXT	[2]			=	NAME_SumGobSkel_Info;
 
 	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Normal, NAME_ShortRange);
 	
@@ -888,7 +888,6 @@ INSTANCE ItRu_SumWolf (C_Item)
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_COST_SummonWolf;
 	mag_circle			= 	1;
-	
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -900,8 +899,8 @@ INSTANCE ItRu_SumWolf (C_Item)
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	SPL_Cost_SummonWolf;
-	
-	TEXT 	[2]			=   "Warm pelts of loyal companions.";
+
+	TEXT	[2]			=	NAME_SumWolf_Info;
 
 	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Slow, NAME_ShortRange);
 
@@ -1120,8 +1119,8 @@ INSTANCE ItRu_SumSkel (C_Item)
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	SPL_COST_SUMMONSKELETON;
-	
-	TEXT 	[2]			=   "The rattling bones of forgotten warriors.";
+
+	TEXT	[2]			=	NAME_SumSkel_Info;
 
 	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Normal, NAME_ShortRange);
 	
@@ -1262,7 +1261,6 @@ INSTANCE ItRu_SumGol (C_Item)
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_COST_SummonGolem;
 	mag_circle			= 	4;
-	
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1274,12 +1272,10 @@ INSTANCE ItRu_SumGol (C_Item)
 	
 	TEXT	[1]			=	NAME_Manakosten;
 	COUNT	[1]			=	SPL_Cost_SummonGolem;
-	
-	TEXT 	[2]			=   "Rocky heart for moving mountains.";
 
-	TEXT	[3]			=	ConcatStrings(NAME_SummonGolem_Info, NAME_ShortRange);
+	TEXT	[2]			=	NAME_SumGol_Info;
 
-	TEXT	[4]			=	ConcatStrings(NAME_SummonIngredient_Info, "Heart of a Golem");
+	TEXT	[3]			=	ConcatStrings(NAME_SummonIngredient_Info, "Heart of a Golem");
 
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1471,8 +1467,8 @@ INSTANCE ItRu_SumDemon (C_Item)
 	
 	TEXT	[1]			=	NAME_ManaCostPerCharge;
 	COUNT	[1]			=	SPL_COST_SUMMONDEMON;
-	
-	TEXT 	[2]			=   "The beating heart of evil incarnate.";
+
+	TEXT	[2]			=	NAME_SumDemon_Info;
 
 	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Fast, NAME_ShortRange);
 	

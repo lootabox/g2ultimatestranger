@@ -15,6 +15,8 @@ func void HandleSummonDegen(var c_npc summon, var int isInCombat)
 
 	if (!isInCombat) { degen /= 2; };
 
+	degen /= 100;
+
 	if (degen > 1)	{ Npc_ChangeAttribute(summon, ATR_HITPOINTS, -degen); }
 	else			{ Npc_ChangeAttribute(summon, ATR_HITPOINTS, -1); };
 };
