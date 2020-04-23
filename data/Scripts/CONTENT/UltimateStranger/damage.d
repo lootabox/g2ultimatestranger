@@ -356,10 +356,32 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 	else if	(spellID == SPL_DestroyUndead)
 	{
 		if (dmg < vic.attribute[ATR_HITPOINTS] + prot)
-		{
-			dmg /= 2;
-		};
+		{ dmg /= 2; };
 		dmg -= prot;
+	}
+	// HOLY ARROW -----------------------------------------------------------------------
+	else if	(spellID == SPL_PalHolyBolt)
+	{
+		if (C_NpcIsEvil(vic))
+		{	dmg = att.attribute[ATR_MANA_MAX]     - prot;	}
+		else
+		{	dmg = att.attribute[ATR_MANA_MAX] / 2 - prot;	};
+	}
+	// HARM EVIL -----------------------------------------------------------------------
+	else if	(spellID == SPL_PalRepelEvil)
+	{
+		if (self.attribute[ATR_HITPOINTS] >= self.attribute[ATR_HITPOINTS_MAX])
+		{	dmg = att.attribute[ATR_MANA_MAX] * 2 - prot;	}
+		else
+		{	dmg = att.attribute[ATR_MANA_MAX]     - prot;	};
+	}
+	// DESTROY EVIL -----------------------------------------------------------------------
+	else if	(spellID == SPL_PalDestroyEvil)
+	{
+		if (self.attribute[ATR_HITPOINTS] + self.protection[PROT_MAGIC] <= other.attribute[ATR_MANA_MAX]*4)
+		{	dmg = att.attribute[ATR_MANA_MAX] * 4 - prot;	}
+		else
+		{	dmg = att.attribute[ATR_MANA_MAX] * 2 - prot;	};
 	}
 	// OTHER SPELLS -----------------------------------------------------------------------
 	else

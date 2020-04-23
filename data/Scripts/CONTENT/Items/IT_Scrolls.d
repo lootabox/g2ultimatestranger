@@ -120,12 +120,14 @@ INSTANCE ItSc_PalLightHeal (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Manakosten;
+//	TEXT	[1]			=	NAME_Manakosten;
+	TEXT	[1]			=	NAME_PalManakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalLightHeal);
 	
-	TEXT	[2]			=	NAME_HealingPerCast;
-	COUNT	[2]			=	SPL_Heal_PalLightHeal;
-	
+	TEXT	[2]			=	NAME_PalLightHeal_Info;
+//	TEXT	[2]			=	NAME_HealingPerCast;
+//	COUNT	[2]			=	SPL_Heal_PalLightHeal;
+
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
@@ -154,12 +156,14 @@ INSTANCE ItSc_PalHolyBolt (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Manakosten;
+//	TEXT	[1]			=	NAME_Manakosten;
+	TEXT	[1]			=	NAME_PalManakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalHolyBolt);
 	
-	TEXT	[2]			=	NAME_Dam_Magic;
-	COUNT	[2]			=	SPL_Damage_PalHolyBolt;
-
+	TEXT	[2]			=	NAME_PalHolyBolt_Info;
+//	TEXT	[2]			=	NAME_Dam_Magic;
+//	COUNT	[2]			=	SPL_Damage_PalHolyBolt;
+	
 	TEXT	[3]			=	NAME_EvilOrHalf;
 	
 	TEXT	[5]			=	NAME_Value;
@@ -189,11 +193,13 @@ INSTANCE ItSc_PalMediumHeal (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Manakosten;
+//	TEXT	[1]			=	NAME_Manakosten;
+	TEXT	[1]			=	NAME_PalManakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalMediumHeal);
 	
-	TEXT	[2]			=	NAME_HealingPerCast;
-	COUNT	[2]			=	SPL_Heal_PalMediumHeal;
+	TEXT	[2]			=	NAME_PalMediumHeal_Info;
+//	TEXT	[2]			=	NAME_HealingPerCast;
+//	COUNT	[2]			=	SPL_Heal_PalMediumHeal;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -221,11 +227,15 @@ INSTANCE ItSc_PalRepelEvil (C_Item)
 	description			=	NAME_SPL_PalRepelEvil;
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Manakosten;
+//	TEXT	[1]			=	NAME_Manakosten;
+	TEXT	[1]			=	NAME_PalManakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalRepelEvil);
 	
-	TEXT	[2]			=	NAME_Dam_Magic;
-	COUNT	[2]			=	SPL_Damage_PalRepelEvil;
+	TEXT	[2]			=	NAME_PalRepelEvil_Info;
+//	TEXT	[2]			=	NAME_Dam_Magic;
+//	COUNT	[2]			=	SPL_Damage_PalRepelEvil;
+
+	TEXT	[3]			=	NAME_UninjuredOrHalf;
 
 	TEXT	[4]			=	NAME_MustBeEvil;
 	
@@ -255,11 +265,13 @@ INSTANCE ItSc_PalFullHeal (C_Item)
 	description			=	NAME_SPL_PalFullHeal;
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Manakosten;
+//	TEXT	[1]			=	NAME_Manakosten;
+	TEXT	[1]			=	NAME_PalManakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalFullHeal);
 	
-	TEXT	[2]			=	NAME_HealingPerCast;
-	COUNT	[2]			=	SPL_Heal_PalFullHeal;
+	TEXT	[2]			=	NAME_PalFullHeal_Info;
+//	TEXT	[2]			=	NAME_HealingPerCast;
+//	COUNT	[2]			=	SPL_Heal_PalFullHeal;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -287,11 +299,13 @@ INSTANCE ItSc_PalDestroyEvil (C_Item)
 	description			=	NAME_SPL_PalDestroyEvil;
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Manakosten;
+//	TEXT	[1]			=	NAME_Manakosten;
+	TEXT	[1]			=	NAME_PalManakosten;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalDestroyEvil);
 	
-	TEXT	[2]			=	NAME_Dam_Magic;
-	COUNT	[2]			=	SPL_Damage_PalDestroyEvil;
+	TEXT	[2]			=	NAME_PalDestroyEvil_Info;
+//	TEXT	[2]			=	NAME_Dam_Magic;
+//	COUNT	[2]			=	SPL_Damage_PalDestroyEvil;
 
 	TEXT	[3]			=	NAME_FatalOrHalf;
 

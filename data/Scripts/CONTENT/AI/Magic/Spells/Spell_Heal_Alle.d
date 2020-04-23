@@ -2,20 +2,20 @@
 // Alle Heal Spells
 // ****************
 
-const int SPL_Cost_PalLightHeal		= 10;
-const int SPL_Cost_PalMediumHeal	= 20;
-const int SPL_Cost_PalFullHeal		= 40;
-const int SPL_Cost_LightHeal		= 10;
-const int SPL_Cost_MediumHeal		= 20;
-const int SPL_Cost_FullHeal			= 40;
+const int SPL_Cost_PalLightHeal		= 20;
+const int SPL_Cost_PalMediumHeal	= 40;
+const int SPL_Cost_PalFullHeal		= 60;
+const int SPL_Cost_LightHeal		= 20;
+const int SPL_Cost_MediumHeal		= 40;
+const int SPL_Cost_FullHeal			= 80;
 
-const int SPL_Heal_PalLightHeal		= 75;
-const int SPL_Heal_PalMediumHeal	= 150;
-const int SPL_Heal_PalFullHeal		= 300;
+//const int SPL_Heal_PalLightHeal		= 100;
+//const int SPL_Heal_PalMediumHeal	= 200;
+//const int SPL_Heal_PalFullHeal		= 400;
 
-const int SPL_Heal_LightHeal		= 50;
-const int SPL_Heal_MediumHeal		= 100;
-const int SPL_Heal_FullHeal			= 200;
+const int SPL_Heal_LightHeal		= 100;
+const int SPL_Heal_MediumHeal		= 200;
+const int SPL_Heal_FullHeal			= 400;
 
 // ------ Instanz für alle normalen Heal-Sprüche ------
 instance Spell_Heal (C_Spell_Proto)
@@ -38,20 +38,20 @@ instance Spell_PalHeal (C_Spell_Proto)
 // ------ SPL_PalLightHeal -------
 func int Spell_Logic_PalLightHeal (var int manaInvested)
 {	
-	return Spell_Logic_Basic(self, SPL_Cost_PalLightHeal);
+	return Spell_Logic_Pal(self, SPL_Cost_PalLightHeal);
 };
 
 // ------ SPL_PalMediumHeal -------
 func int Spell_Logic_PalMediumHeal (var int manaInvested)
 {
-	return Spell_Logic_Basic(self, SPL_Cost_PalMediumHeal);
+	return Spell_Logic_Pal(self, SPL_Cost_PalMediumHeal);
 };
 
 
 // ------ PalFullHeal -------
 func int Spell_Logic_PalFullHeal (var int manaInvested)
 {
-	return Spell_Logic_Basic(self, SPL_Cost_PalFullHeal);
+	return Spell_Logic_Pal(self, SPL_Cost_PalFullHeal);
 };
 
 
@@ -106,22 +106,22 @@ func void Spell_Cast_PalHeal()
 {
 	if ( Npc_GetActiveSpell(self) == SPL_PalLightHeal		)	
 	{	
-		Spell_Cast_Basic(self, SPL_Cost_PalLightHeal);
-		Npc_ChangeAttribute	(self,ATR_HITPOINTS, +SPL_Heal_PalLightHeal);
+		Spell_Cast_Pal(self, SPL_Cost_PalLightHeal);
+		Npc_ChangeAttribute	(self,ATR_HITPOINTS, +self.attribute[ATR_MANA_MAX]);
 		return;
 	};
 	
 	if ( Npc_GetActiveSpell(self) == SPL_PalMediumHeal		)	
 	{	
-		Spell_Cast_Basic(self, SPL_Cost_PalMediumHeal);
-		Npc_ChangeAttribute	(self,ATR_HITPOINTS, +SPL_Heal_PalMediumHeal);
+		Spell_Cast_Pal(self, SPL_Cost_PalMediumHeal);
+		Npc_ChangeAttribute	(self,ATR_HITPOINTS, +self.attribute[ATR_MANA_MAX]*2);
 		return;
 	};
 	
 	if ( Npc_GetActiveSpell(self) == SPL_PalFullHeal		)	
 	{	
-		Spell_Cast_Basic(self, SPL_Cost_PalFullHeal);
-		Npc_ChangeAttribute	(self,ATR_HITPOINTS, +SPL_Heal_PalFullHeal);
+		Spell_Cast_Pal(self, SPL_Cost_PalFullHeal);
+		Npc_ChangeAttribute	(self,ATR_HITPOINTS, +self.attribute[ATR_MANA_MAX]*3);
 		return;
 	};
 	

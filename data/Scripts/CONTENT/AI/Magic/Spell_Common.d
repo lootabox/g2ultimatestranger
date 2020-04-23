@@ -159,6 +159,36 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 	slf.aivar[AIV_SelectSpell] += 1;
 };
 
+func int Spell_Logic_Pal (var c_npc slf, var int manaCost)
+{
+	if (Npc_GetActiveSpellIsScroll(slf) && (slf.attribute[ATR_MANA] * 100 / slf.attribute[ATR_MANA_MAX] >= C_GetScrollCost(manaCost)))
+	{
+		return SPL_SENDCAST;
+	};
+
+	if (slf.attribute[ATR_MANA] * 100 / slf.attribute[ATR_MANA_MAX] >= manaCost)
+	{
+		return SPL_SENDCAST;
+	}
+	else
+	{
+		return SPL_SENDSTOP;
+	};
+};
+
+func void Spell_Cast_Pal (var c_npc slf, var int manaCost)
+{
+	if (Npc_GetActiveSpellIsScroll(slf))
+	{
+		slf.attribute[ATR_MANA] -= (slf.attribute[ATR_MANA_MAX] * C_GetScrollCost(manaCost) / 100);
+	}
+	else
+	{
+		slf.attribute[ATR_MANA] -= (slf.attribute[ATR_MANA_MAX] * manaCost / 100);
+	};
+	slf.aivar[AIV_SelectSpell] += 1;
+};
+
 func int Spell_Logic_Invest(var C_NPC slf, var int manaInvested, var int STEP_size, var int maxLevel, var int firstTierNoManaCost)
 {
 	var int STEP_cost; STEP_cost = STEP_size;
@@ -314,7 +344,7 @@ func int Move_Aim_Waypoint(var C_NPC slf)
 };
 
 // Spells using this have to handle their "B_AssesMagic" logic here
-func void Spell_Cast_Focus(var int spellID, var int manaCost, var int spellDamage, var string spellFX)
+func void Spell_Cast_Focus(var int spellID, var int spellDamage, var string spellFX)
 {
 	// Handle spell collision for npc
 	if (!Npc_IsPlayer(other))
@@ -358,8 +388,6 @@ func void Spell_Cast_Focus(var int spellID, var int manaCost, var int spellDamag
 			Npc_SendPassivePerc (other, PERC_ASSESSMURDER, other, self);
 		};
 	};
-
-	Spell_Cast_Basic(self, manaCost);
 };
 
 func int Spell_Logic_Invest_Summon(var C_NPC slf, var int manaInvested, var int manaCost)

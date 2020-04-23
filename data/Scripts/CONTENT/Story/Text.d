@@ -238,7 +238,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"Holy Light",			// 0	SPL_PalLight
 	"Lesser Healing",		// 1	SPL_PalLightHeal
 	"Holy Arrow",			// 2	SPL_PalHolyBolt
-	"Medium Healing",		// 3	SPL_PalMediumHeal
+	"Moderate Healing",		// 3	SPL_PalMediumHeal
 	"Harm Evil",			// 4	SPL_PalRepelEvil
 	"Greater Healing",		// 5	SPL_PalFullHeal
 	"Destroy Evil",			// 6	SPL_PalDestroyEvil
@@ -381,7 +381,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 const string NAME_SPL_PalLight				= "Holy Light";
 const string NAME_SPL_PalLightHeal			= "Lesser Healing";
 const string NAME_SPL_PalHolyBolt			= "Holy Arrow";
-const string NAME_SPL_PalMediumHeal			= "Medium Healing";
+const string NAME_SPL_PalMediumHeal			= "Moderate Healing";
 const string NAME_SPL_PalRepelEvil			= "Banish Evil";
 const string NAME_SPL_PalFullHeal			= "Greater Healing";
 const string NAME_SPL_PalDestroyEvil		= "Destroy Evil";
@@ -731,6 +731,7 @@ const string NAME_Instant				= "Instant effect. ";
 const string NAME_ShortRange			= "Short range. ";
 const string NAME_FatalOrHalf			= "Deals halved damage if not fatal. ";
 const string NAME_EvilOrHalf			= "Deals halved damage if target is not evil. ";
+const string NAME_UninjuredOrHalf		= "Deals halved damage if target is harmed. ";
 const string NAME_MustBeLiving			= "Only affects living. ";
 const string NAME_MustBeUndead			= "Only affects undead. ";
 const string NAME_MustBeEvil			= "Only affects evil. ";
@@ -755,6 +756,17 @@ const string NAME_SumGol_Info			= "Awakens a nearby golem. ";
 const string NAME_SumDemon_Info			= "Summons a demon which is only subdued if charged. ";
 const string NAME_SummonZombie_Info		= "Animates nearby human corpses. ";
 const string NAME_SummonIngredient_Info	= "Required spell component: ";
+
+const string NAME_PalManakosten			= "Mana cost (percentage):";
+const string NAME_PalLight_Info			= "Duration is increased by maximum mana. ";
+
+const string NAME_PalHolyBolt_Info		= "Magic damage is equal to maximum mana.";
+const string NAME_PalRepelEvil_Info		= "Magic damage is equal to maximum mana (doubled).";
+const string NAME_PalDestroyEvil_Info	= "Magic damage is equal to maximum mana (quadrupled).";
+
+const string NAME_PalLightHeal_Info		= "Healing is equal to maximum mana.";
+const string NAME_PalMediumHeal_Info	= "Healing is equal to maximum mana (doubled).";
+const string NAME_PalFullHeal_Info		= "Healing is equal to maximum mana (tripled).";
 
 // MAX LENGTH							"------------------------------------------------------------";
 const string NAME_Staff_Fire_1			= "Fire spell damage against burning foes increased by ten.";
