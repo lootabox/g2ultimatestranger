@@ -696,11 +696,12 @@ const string NAME_Value			= "Value:";
 
 const string NAME_Mag_Circle	= "Circle:";
 const string NAME_Manakosten	= "Mana cost:";
+const string NAME_Manakosten_Per= "Mana cost per tier:";
 const string NAME_MinManakosten = "Mana cost (min):";
-const string NAME_ManaCostPerCharge		= "Mana cost per tier:";
 //const string NAME_ManakostenMax	= "Mana cost (max):";
 //const string NAME_ManaPerSec	= "Mana per sec.:";
 const string NAME_Duration		= "Duration (minutes):";
+const string NAME_Duration_Per	= "Duration per tier (minutes):";
 const string NAME_Sec_Duration	= "Duration (seconds):";
 
 const string NAME_Mana_needed	= "Mana required:";
@@ -757,7 +758,7 @@ const string NAME_SumDemon_Info			= "Summons a demon which is only subdued if ch
 const string NAME_SummonZombie_Info		= "Animates nearby human corpses. ";
 const string NAME_SummonIngredient_Info	= "Required spell component: ";
 
-const string NAME_PalManakosten			= "Mana cost (percentage):";
+const string NAME_Manakosten_Pal		= "Mana cost (percentage):";
 const string NAME_PalLight_Info			= "Duration is increased by maximum mana. ";
 
 const string NAME_PalHolyBolt_Info		= "Magic damage is equal to maximum mana.";

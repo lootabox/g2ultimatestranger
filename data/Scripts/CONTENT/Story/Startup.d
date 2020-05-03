@@ -38,10 +38,18 @@ func void INIT_GLOBAL()
 	InitBuffTalents();
 	InitCustomDamageHook();
 	HookLootItems_Init();
+	HookChangeLevel_Init();
 	FixEquipBestWeapons_Init();
 	Install_Character_Menu_Hook();
+
+	// Delay hero init
+	FF_ApplyExtGT(INIT_HERO, 3000, 1);
 };
 
+// Hero might not be ready at INIT_GLOBAL
+func void INIT_HERO() {
+	light_persister_reset(hero);
+};
 
 // *********
 // Testlevel
@@ -1864,7 +1872,7 @@ func void STARTUP_SURFACE ()
 		
 	Wld_InsertNpc		(VLK_4110_Jergan,"OC1"); //Späher		
 	Wld_InsertNpc		(PAL_2004_Bruder,"OC1"); //Leiche 	
-	Wld_InsertNpc		(VLK_4112_Den 	,"OC1"); //Leiche Den 		
+	//Wld_InsertNpc		(VLK_4112_Den 	,"OC1"); //Leiche Den 		
 	
 	//Im Versteck der 4 Freunde
 	//------------------------------------------

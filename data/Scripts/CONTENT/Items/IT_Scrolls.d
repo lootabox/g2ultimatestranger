@@ -87,10 +87,10 @@ INSTANCE ItSc_PalLight (C_Item)
 	
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
-	TEXT	[1]			=	NAME_Manakosten;
-	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalLight);
+	//TEXT	[1]			=	NAME_Manakosten;
+	//COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalLight);
 	
-	TEXT	[2]			=	NAME_Duration;
+	TEXT	[2]			=	NAME_Duration_Per;
 	COUNT	[2]			=	SPL_Duration_PalLIGHT;
 	
 	TEXT	[5]			=	NAME_Value;
@@ -121,7 +121,7 @@ INSTANCE ItSc_PalLightHeal (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 //	TEXT	[1]			=	NAME_Manakosten;
-	TEXT	[1]			=	NAME_PalManakosten;
+	TEXT	[1]			=	NAME_Manakosten_Pal;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalLightHeal);
 	
 	TEXT	[2]			=	NAME_PalLightHeal_Info;
@@ -157,7 +157,7 @@ INSTANCE ItSc_PalHolyBolt (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 //	TEXT	[1]			=	NAME_Manakosten;
-	TEXT	[1]			=	NAME_PalManakosten;
+	TEXT	[1]			=	NAME_Manakosten_Pal;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalHolyBolt);
 	
 	TEXT	[2]			=	NAME_PalHolyBolt_Info;
@@ -194,7 +194,7 @@ INSTANCE ItSc_PalMediumHeal (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 //	TEXT	[1]			=	NAME_Manakosten;
-	TEXT	[1]			=	NAME_PalManakosten;
+	TEXT	[1]			=	NAME_Manakosten_Pal;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalMediumHeal);
 	
 	TEXT	[2]			=	NAME_PalMediumHeal_Info;
@@ -228,7 +228,7 @@ INSTANCE ItSc_PalRepelEvil (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 //	TEXT	[1]			=	NAME_Manakosten;
-	TEXT	[1]			=	NAME_PalManakosten;
+	TEXT	[1]			=	NAME_Manakosten_Pal;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalRepelEvil);
 	
 	TEXT	[2]			=	NAME_PalRepelEvil_Info;
@@ -266,7 +266,7 @@ INSTANCE ItSc_PalFullHeal (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 //	TEXT	[1]			=	NAME_Manakosten;
-	TEXT	[1]			=	NAME_PalManakosten;
+	TEXT	[1]			=	NAME_Manakosten_Pal;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalFullHeal);
 	
 	TEXT	[2]			=	NAME_PalFullHeal_Info;
@@ -300,7 +300,7 @@ INSTANCE ItSc_PalDestroyEvil (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 //	TEXT	[1]			=	NAME_Manakosten;
-	TEXT	[1]			=	NAME_PalManakosten;
+	TEXT	[1]			=	NAME_Manakosten_Pal;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalDestroyEvil);
 	
 	TEXT	[2]			=	NAME_PalDestroyEvil_Info;
@@ -341,10 +341,10 @@ instance ItSc_Light (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_Manakosten;
+	TEXT	[1]			=	NAME_Manakosten_Per;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Light);
 	
-	TEXT	[2]			=	NAME_Duration;
+	TEXT	[2]			=	NAME_Duration_Per;
 	COUNT	[2]			=	SPL_Duration_LIGHT;
 	
 	TEXT	[5]			=	NAME_Value;
@@ -477,7 +477,7 @@ INSTANCE ItSc_SumGobSkel (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_ManaCostPerCharge;
+	TEXT	[1]			=	NAME_Manakosten_Per;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonGoblinSkeleton);
 
 	TEXT	[2]			=	NAME_SumGobSkel_Info;
@@ -582,7 +582,7 @@ INSTANCE ItSc_SumWolf (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_ManaCostPerCharge;
+	TEXT	[1]			=	NAME_Manakosten_Per;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonWolf);
 
 	TEXT	[2]			=	NAME_SumWolf_Info;
@@ -616,7 +616,7 @@ INSTANCE ItSc_Windfist (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_ManaCostPerCharge;
+	TEXT	[1]			=	NAME_Manakosten_Per;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_WindFist);
 	
 	TEXT	[2]			=	NAME_Dam_Magic_Per;
@@ -785,7 +785,7 @@ INSTANCE ItSc_ChargeFireball (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_ManaCostPerCharge;
+	TEXT	[1]			=	NAME_Manakosten_Per;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_ChargeFireball);
 	
 	TEXT	[2]			=	NAME_Dam_Magic_Per;
@@ -821,7 +821,7 @@ INSTANCE ItSc_SumSkel (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_ManaCostPerCharge;
+	TEXT	[1]			=	NAME_Manakosten_Per;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonSkeleton);
 
 	TEXT	[2]			=	NAME_SumSkel_Info;
@@ -929,7 +929,7 @@ INSTANCE ItSc_ThunderBall (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_ManaCostPerCharge;
+	TEXT	[1]			=	NAME_Manakosten_Per;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_ChargeZap);
 	
 	TEXT	[2]			=	NAME_Dam_Magic_Per;
@@ -998,7 +998,7 @@ INSTANCE ItSc_HarmUndead (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_ManaCostPerCharge;
+	TEXT	[1]			=	NAME_Manakosten_Per;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_DestroyUndead);
 	
 	TEXT	[2]			=	NAME_Dam_Magic_Per;
@@ -1033,7 +1033,7 @@ INSTANCE ItSc_Pyrokinesis (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_ManaCostPerCharge;
+	TEXT	[1]			=	NAME_Manakosten_Per;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_Firestorm);
 	
 	TEXT	[2]			=	NAME_Dam_Magic_Per;
@@ -1147,7 +1147,7 @@ INSTANCE ItSc_SumDemon (C_Item)
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	
-	TEXT	[1]			=	NAME_ManaCostPerCharge;
+	TEXT	[1]			=	NAME_Manakosten_Per;
 	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_SummonDemon);
 
 	TEXT	[2]			=	NAME_SumDemon_Info;

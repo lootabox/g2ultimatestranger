@@ -151,6 +151,38 @@ func void dot_burn_remove(var c_npc npc) {
 };
 
 //######################################################
+// Light persister lCBuff
+//######################################################
+
+func void light_persister_removed(var int bh) {
+    var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
+	var lCBuff b; b = get(bh);
+    Wld_StopEffect_Ext(b.name, 0, n, TRUE);
+};
+
+instance light_persister(lCBuff) {
+    durationMS = 5000; // placeholder, replaced on apply
+    OnRemoved = SAVE_GetFuncID(light_persister_removed);
+};
+
+func void light_persister_apply(var c_npc npc, var string visualFX, var int durationSeconds) {
+    if (Buff_ApplyUnique(npc, light_persister, npc)) {
+        var int bh; bh = Buff_Has(npc, light_persister);
+        var lCBuff b; b = get(bh);
+        b.durationMs = durationSeconds * 1000;
+        b.name = visualFX;
+    };
+};
+
+func void light_persister_reset(var c_npc npc) {
+    var int bh; bh = Buff_Has(npc, light_persister);
+    if (bh) {
+        var lCBuff b; b = get(bh);
+        Wld_PlayEffect (b.name, npc, npc, 0, 0, 0, FALSE);
+    };
+};
+
+//######################################################
 // Special
 //######################################################
 /* 

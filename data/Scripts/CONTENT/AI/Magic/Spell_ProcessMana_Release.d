@@ -19,15 +19,15 @@ func int Spell_ProcessMana_Release (var int manaInvested)
 	else if	(activeSpell == SPL_WINDFIST				)	{	Staff_Water_Charged = FALSE;	return	SPL_SENDCAST;	}
 
 	else if	(activeSpell == SPL_DestroyUndead			)	{	Staff_Water_Charged = FALSE;	return	SPL_SENDCAST;	}
+	else if	(activeSpell == SPL_Light					)	{	Staff_Water_Charged = FALSE;	return	SPL_SENDCAST;	}
+	else if	(activeSpell == SPL_PalLight				)	{	Staff_Water_Charged = FALSE;	return	SPL_SENDCAST;	}
 
 	else if	(activeSpell == SPL_SummonWolf				)	{	Staff_Water_Charged = FALSE;	return	SPL_SENDCAST;	}
 	else if	(activeSpell == SPL_SummonGoblinSkeleton	)	{	Staff_Water_Charged = FALSE;	return	SPL_SENDCAST;	}
 	else if	(activeSpell == SPL_SummonSkeleton			)	{	Staff_Water_Charged = FALSE;	return	SPL_SENDCAST;	}
-	else if	(activeSpell == SPL_SummonGolem				)	{	Staff_Water_Charged = FALSE;	return	SPL_SENDCAST;	}
 	else if	(activeSpell == SPL_SummonDemon				)	{	Staff_Water_Charged = FALSE;	return	SPL_SENDCAST;	}
 	else if	(activeSpell == SPL_ArmyOfDarkness			)	{	Staff_Water_Charged = FALSE;	return	SPL_SENDCAST;	}
 	else if	(activeSpell == SPL_SummonGuardian			)	{	Staff_Water_Charged = FALSE;	return	SPL_SENDCAST;	}
-	else if	(activeSpell == SPL_SummonZombie			)	{	Staff_Water_Charged = FALSE;	return	SPL_SENDCAST;	}
 	else if	(activeSpell == SPL_SummonMud				)	{	Staff_Water_Charged = FALSE;	return	SPL_SENDCAST;	};
 
 	// ------ Alle anderen Spells (Aufrechterhaltung oder Loslassen OHNE gecastet zu haben (zu wenig investiert) ------	

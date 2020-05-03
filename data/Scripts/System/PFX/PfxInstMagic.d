@@ -3273,7 +3273,7 @@ INSTANCE MFX_LIGHT_ORIGIN (C_PARTICLEFX)
      ppsfps = 0.200000003;
      shptype_s = "POINT";
      shpfor_s = "object";
-     shpoffsetvec_s = "0 0 0";
+     shpoffsetvec_s = "0 80 0";
      shpdistribtype_s = "RAND";
      shpdim_s = "30";
      shpmeshrender_b = 1;
@@ -3347,7 +3347,7 @@ INSTANCE MFX_PALLIGHT_ORIGIN (C_PARTICLEFX)
      ppsfps = 0.200000003;
      shptype_s = "POINT";
      shpfor_s = "object";
-     shpoffsetvec_s = "0 0 0";
+     shpoffsetvec_s = "0 80 0";
      shpdistribtype_s = "RAND";
      shpdim_s = "30";
      shpmeshrender_b = 1;
