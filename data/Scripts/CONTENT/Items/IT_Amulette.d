@@ -428,21 +428,11 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	FUNC VOID Equip_ItAm_Mana_01()
 	{
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + Am_Mana;
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + Am_Mana;
 	};
 
 	FUNC VOID UnEquip_ItAm_Mana_01 ()
 	{
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - Am_Mana;
-		if (self.attribute[ATR_MANA] > (Am_Mana))
-		{
-			self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - Am_Mana;
-		}
-		else
-		{
-			self.attribute[ATR_MANA] = 0;
-		};	
-		
 	};
 
 /******************************************************************************************/

@@ -24,11 +24,6 @@ Music is changed to the installation theme.
 Status menu shows boosted and trained values for Strength and Dexterity.
 
 
-	Character progression
-
-Only actual training received from NPCs influences how much more can be taught by NPCs. Random increases during dialogues are not counted. This means that any ability increases the NH comes across can be used right away without losing any end game potential.
-
-
 	Shrine of Beliar
 
 No stats can be sacrificed for gold.

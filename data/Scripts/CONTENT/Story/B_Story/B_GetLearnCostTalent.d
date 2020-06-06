@@ -28,10 +28,10 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 	// ------ Kosten für Einhand % ------
 	if (talent == NPC_TALENT_1H)
 	{	
-		if (oth.aivar[REAL_TALENT_1H] >= 120)		{	kosten = (5);	}
-		else if (oth.aivar[REAL_TALENT_1H] >= 90)	{	kosten = (4);	}
-		else if (oth.aivar[REAL_TALENT_1H] >= 60)	{	kosten = (3);	}
-		else if (oth.aivar[REAL_TALENT_1H] >= 30)	{	kosten = (2);	}
+		if (oth.aivar[REAL_TALENT_1H] >= 80)		{	kosten = (5);	}
+		else if (oth.aivar[REAL_TALENT_1H] >= 60)	{	kosten = (4);	}
+		else if (oth.aivar[REAL_TALENT_1H] >= 40)	{	kosten = (3);	}
+		else if (oth.aivar[REAL_TALENT_1H] >= 20)	{	kosten = (2);	}
 		else 										{	kosten = (1);	};
 		
 		kosten = (kosten * skill);
@@ -40,10 +40,10 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 	// ------ Kosten für Zweihand % ------
 	if (talent == NPC_TALENT_2H)
 	{	
-		if (oth.aivar[REAL_TALENT_2H] >= 120)		{	kosten = (5);	}
-		else if (oth.aivar[REAL_TALENT_2H] >= 90)	{	kosten = (4);	}
-		else if (oth.aivar[REAL_TALENT_2H] >= 60)	{	kosten = (3);	}
-		else if (oth.aivar[REAL_TALENT_2H] >= 30)	{	kosten = (2);	}
+		if (oth.aivar[REAL_TALENT_2H] >= 80)		{	kosten = (5);	}
+		else if (oth.aivar[REAL_TALENT_2H] >= 60)	{	kosten = (4);	}
+		else if (oth.aivar[REAL_TALENT_2H] >= 40)	{	kosten = (3);	}
+		else if (oth.aivar[REAL_TALENT_2H] >= 20)	{	kosten = (2);	}
 		else 										{	kosten = (1);	};
 		
 		kosten = (kosten * skill);
@@ -52,10 +52,10 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 		// ------ Kosten für Bogen % ------
 	if (talent == NPC_TALENT_BOW)
 	{	
-		if (oth.aivar[REAL_TALENT_BOW] >= 120)		{	kosten = (5);	}
-		else if (oth.aivar[REAL_TALENT_BOW] >= 90)	{	kosten = (4);	}
-		else if (oth.aivar[REAL_TALENT_BOW] >= 60)	{	kosten = (3);	}
-		else if (oth.aivar[REAL_TALENT_BOW] >= 30)	{	kosten = (2);	}
+		if (oth.aivar[REAL_TALENT_BOW] >= 80)		{	kosten = (5);	}
+		else if (oth.aivar[REAL_TALENT_BOW] >= 60)	{	kosten = (4);	}
+		else if (oth.aivar[REAL_TALENT_BOW] >= 40)	{	kosten = (3);	}
+		else if (oth.aivar[REAL_TALENT_BOW] >= 20)	{	kosten = (2);	}
 		else 										{	kosten = (1);	};
 		
 		kosten = (kosten * skill);
@@ -64,10 +64,10 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 	// ------ Kosten für Crossbow % ------
 	if (talent == NPC_TALENT_CROSSBOW)
 	{	
-		if (oth.aivar[REAL_TALENT_CROSSBOW] >= 120)		{	kosten = (5);	}
-		else if (oth.aivar[REAL_TALENT_CROSSBOW] >= 90)	{	kosten = (4);	}
-		else if (oth.aivar[REAL_TALENT_CROSSBOW] >= 60)	{	kosten = (3);	}
-		else if (oth.aivar[REAL_TALENT_CROSSBOW] >= 30)	{	kosten = (2);	}
+		if (oth.aivar[REAL_TALENT_CROSSBOW] >= 80)		{	kosten = (5);	}
+		else if (oth.aivar[REAL_TALENT_CROSSBOW] >= 60)	{	kosten = (4);	}
+		else if (oth.aivar[REAL_TALENT_CROSSBOW] >= 40)	{	kosten = (3);	}
+		else if (oth.aivar[REAL_TALENT_CROSSBOW] >= 20)	{	kosten = (2);	}
 		else 											{	kosten = (1);	};
 		
 		kosten = (kosten * skill);
@@ -146,9 +146,9 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 	// ------ Kosten für Sprache der Erbauer ------
 	if (talent == NPC_TALENT_FOREIGNLANGUAGE) 	//ADDON
 	{
-		if 		(skill == LANGUAGE_1			) 	{	kosten = (5);	}
-		else if (skill == LANGUAGE_2			) 	{	kosten = (10);	}
-		else if (skill == LANGUAGE_3			) 	{	kosten = (15);	};
+		if 		(skill == LANGUAGE_1			) 	{	kosten = (20);	}
+		else if (skill == LANGUAGE_2			) 	{	kosten = (20);	}
+		else if (skill == LANGUAGE_3			) 	{	kosten = (20);	};
 	};
 
 	if (talent == NPC_TALENT_WISPDETECTOR) 	//ADDON

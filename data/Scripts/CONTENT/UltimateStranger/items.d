@@ -101,11 +101,7 @@ func void Unequip_Item (var C_NPC slf, var int item)
 //************************************************
 func int C_GetScrollCost(var int cost)
 {
-    if (cost < 10)
-    {
-        return 5;
-    };
-    return (cost / 6) * 5;
+    return (cost + 1) / 2;
 };
 
 //************************************************

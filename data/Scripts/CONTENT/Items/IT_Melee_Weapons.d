@@ -433,26 +433,14 @@ FUNC VOID Equip_NoviceMace()
 	if Npc_IsPlayer (self)
 	{ 
 		Npc_ChangeAttribute (self, ATR_MANA_MAX,10);
-		Npc_ChangeAttribute (self, ATR_MANA,10);
 	};
 };
 FUNC VOID UnEquip_NoviceMace()
 {
 	if Npc_IsPlayer (self)
 	{ 
-		Npc_ChangeAttribute (self, ATR_MANA_MAX, - 10);
-		
-		if self.attribute [ATR_MANA]	>= 10
-		{
-			Npc_ChangeAttribute (self, ATR_MANA, - 10);
-		}
-		else
-		{
-			self.attribute[ATR_MANA] = 0;
-		};
+		Npc_ChangeAttribute (self, ATR_MANA_MAX, -10);
 	};
-	
-	
 };
 // *****************************************************
 INSTANCE ItMw_2h_Bau_Axe (C_Item)

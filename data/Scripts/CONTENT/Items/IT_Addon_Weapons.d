@@ -538,26 +538,14 @@ FUNC VOID Equip_RingOfWaterStaff()
 	if Npc_IsPlayer (self)
 	{ 
 		Npc_ChangeAttribute (self, ATR_MANA_MAX,5);
-		Npc_ChangeAttribute (self, ATR_MANA,5);
 	};
 };
 FUNC VOID UnEquip_RingOfWaterStaff()
 {
 	if Npc_IsPlayer (self)
 	{ 
-		Npc_ChangeAttribute (self, ATR_MANA_MAX, - 5);
-		
-		if self.attribute [ATR_MANA]	>= 5
-		{
-			Npc_ChangeAttribute (self, ATR_MANA, - 5);
-		}
-		else
-		{
-			self.attribute[ATR_MANA] = 0;
-		};
+		Npc_ChangeAttribute (self, ATR_MANA_MAX, -5);
 	};
-	
-	
 };
 //*********************************************************
 

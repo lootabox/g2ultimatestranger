@@ -837,24 +837,11 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	FUNC VOID Equip_ItRi_Mana_01()
 	{
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + Ri_Mana;
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + Ri_Mana;
 	};
-
 
 	FUNC VOID UnEquip_ItRi_Mana_01()
 	{
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - Ri_Mana;
-		
-		if self.attribute [ATR_MANA]	>= Ri_Mana
-		{
-			self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - Ri_Mana;
-		}
-		else
-		{
-			self.attribute[ATR_MANA] = 0;
-		};
-		
-		
 	};
 /******************************************************************************************/
 INSTANCE ItRi_Mana_02(C_Item)
@@ -893,7 +880,6 @@ INSTANCE ItRi_Mana_02(C_Item)
 	FUNC VOID Equip_ItRi_Mana_02()
 	{
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + Ri_Mana02;
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + Ri_Mana02;
 		
 	};
 
@@ -901,16 +887,6 @@ INSTANCE ItRi_Mana_02(C_Item)
 	FUNC VOID UnEquip_ItRi_Mana_02()
 	{
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - Ri_Mana02;
-		
-		if self.attribute [ATR_MANA]	>= Ri_Mana02
-		{
-			self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - Ri_Mana02;
-		}
-		else
-		{
-			self.attribute[ATR_MANA] = 0;
-		};
-		
 	};	
 /******************************************************************************************/
 		INSTANCE ItRi_Hp_Mana_01(C_Item)
@@ -951,11 +927,8 @@ INSTANCE ItRi_Mana_02(C_Item)
 	FUNC VOID Equip_ItRi_Hp_Mana_01()
 	{
 		
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + Ri_HpMana_Mana;
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + Ri_HpMana_Mana;
-		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + Ri_HpMana_Hp;
 		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + Ri_HpMana_Hp;
-		
 	};
 
 
@@ -963,23 +936,6 @@ INSTANCE ItRi_Mana_02(C_Item)
 	{
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - Ri_HpMana_Mana;
 		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] - Ri_HpMana_Hp;
-		
-		if (self.attribute [ATR_HITPOINTS] > Ri_HpMana_Hp+1)
-		{
-			self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - Ri_HpMana_Hp;
-		}
-		else
-		{
-			self.attribute [ATR_HITPOINTS] = 2;
-		};
-		if self.attribute [ATR_MANA]	>= Ri_HpMana_Mana
-		{
-			self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - Ri_HpMana_Mana;
-		}
-		else
-		{
-			self.attribute[ATR_MANA] = 0;
-		};
 	};
 		
 /******************************************************************************************/
