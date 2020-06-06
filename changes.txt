@@ -89,7 +89,7 @@ Young Wolves at the pass are now regular Wolves.
 	NPCs General
 
 Added ambient inventory for most NPCs alive or dead.
-Added dialog involving multiple NPCs at Ring of Water welcoming ceremony, reversal ritual at the Circle of the Sun.
+Added dialog involving multiple NPCs at Ring of Water welcoming ceremony, reversal ritual at the Circle of the Sun, gate to the Valley of Mines.
 Added logging for pickpocket failures and successes.
 Added pickpocketable items to NPCs inventories, except for traders.
 

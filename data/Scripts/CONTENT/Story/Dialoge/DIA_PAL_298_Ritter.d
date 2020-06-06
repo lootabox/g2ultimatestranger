@@ -65,9 +65,41 @@ func int DIA_PAL_298_TRESPASS_Condition ()
 };
 func void DIA_PAL_298_TRESPASS_Info ()
 {
-	AI_Output (self, other, "DIA_PAL_298_TRESPASS_09_00");//Are you sure you want to go in there? I'm afraid you won't get very far - the orcs are on the other side.
-	AI_Output (other, self, "DIA_PAL_298_TRESPASS_15_01");//If there's a way into the Valley of Mines, I shall find it.
-	AI_Output (self, other, "DIA_PAL_298_TRESPASS_09_02");//Good, then go. Go with Innos.
+	var c_npc PAL_297; PAL_297 = Hlp_GetNpc(PAL_297_Ritter);
+	var c_npc PAL_298; PAL_298 = Hlp_GetNpc(PAL_298_Ritter);
+
+	if (Npc_IsDead(PAL_297) || Npc_GetDistToNpc(hero, PAL_297) > PERC_DIST_DIALOG * 2)
+	{
+		AI_Output (self, other, "DIA_PAL_298_TRESPASS_09_00");//Are you sure you want to go in there? I'm afraid you won't get very far - the orcs are on the other side.
+		AI_Output (other, self, "DIA_PAL_298_TRESPASS_15_01");//If there's a way into the Valley of Mines, I shall find it.
+		AI_Output (self, other, "DIA_PAL_298_TRESPASS_09_02");//Good, then go. Go with Innos.
+	}
+	else
+	{
+		TRIA_Invite(PAL_297);
+		TRIA_Start();
+		
+		TRIA_Next(PAL_298); AI_LookAtNpc(hero, PAL_298);
+		AI_Output (self, other, "DIA_PAL_298_TRESPASS_09_00");//Are you sure you want to go in there? I'm afraid you won't get very far - the orcs are on the other side.
+		AI_Output (other, self, "DIA_PAL_298_TRESPASS_15_01");//If there's a way into the Valley of Mines, I shall find it.
+		
+		TRIA_Next(PAL_297); AI_LookAtNpc(hero, PAL_297);
+		AI_Output (self, other, "DIA_PAL_297_TRESPAS_04_02"); //It is very courageous of you to enter the valley. Just as long as you have enough healing potions with you.
+
+		if (Npc_HasItems(hero, ItPo_Health_01) + Npc_HasItems(hero, ItPo_Health_02) + Npc_HasItems(hero, ItPo_Health_03) + Npc_HasItems(hero, ItPo_Health_Addon_04) > 1)
+		{
+			AI_Output (other, self,"DIA_Constantino_NewRecipes_15_02"); //Yes, I do.
+		}
+		else
+		{
+			AI_Output (other, self, "DIA_Dar_Pilztabak_15_04"); //Well...
+		};
+
+		TRIA_Next(PAL_298); AI_LookAtNpc(hero, PAL_298);
+		AI_Output (self, other, "DIA_PAL_298_TRESPASS_09_02");//Good, then go. Go with Innos.
+
+		TRIA_Finish();
+	};
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Perm 
