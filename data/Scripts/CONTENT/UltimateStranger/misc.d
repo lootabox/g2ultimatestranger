@@ -326,7 +326,7 @@ func void Install_Character_Menu_Hook() {
 func string getAttributeString(var int boosted, var int max, var int trained)
 {
     var string s; s = IntToString(boosted);
-    if (max > 0)
+    if (max >= 0)
     {
         s = ConcatStrings(s, "/");
         s = ConcatStrings(s, IntToString(max));

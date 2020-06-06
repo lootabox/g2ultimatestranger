@@ -1723,7 +1723,7 @@ INSTANCE ItRu_Shrink (C_Item)
 	spell				= 	SPL_SHRINK;
 	cond_atr[2]			=	ATR_MANA_MAX;
 	cond_value[2]		=	SPL_COST_SHRINK;
-	mag_circle			=	5;
+	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";

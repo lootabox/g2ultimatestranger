@@ -772,9 +772,9 @@ const string NAME_PalFullHeal_Info		= "Healing is equal to maximum mana (tripled
 // MAX LENGTH							"------------------------------------------------------------";
 const string NAME_Staff_Fire_1			= "Fire spell damage against burning foes increased by ten.";
 const string NAME_Staff_Fire_2			= "Igniting a foe increases next spell damage by a quarter.";
-const string NAME_Staff_Magic_1			= "Mana recovery rate is halved on full mana.";
-const string NAME_Staff_Magic_2			= "Mana can overflow its natural limit temporarily.";
-const string NAME_Staff_Water_1			= "Ice and water spells mana cost reduced by three.";
+const string NAME_Staff_Magic_1			= "Mana can overflow its natural limit temporarily.";
+const string NAME_Staff_Magic_2			= "";
+const string NAME_Staff_Water_1			= "Ice and water spells mana cost is reduced by three.";
 const string NAME_Staff_Water_2			= "Ice and water spells reduce next spells cost by a quarter.";
 const string NAME_Staff_Typhoon_1		= "Simple thrown spells can be cast faster.";
 const string NAME_Staff_Typhoon_2		= "Simple thrown and charged spells can be cast faster.";

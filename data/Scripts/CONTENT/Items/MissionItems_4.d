@@ -17,16 +17,16 @@ const int Value_OrcEliteRing 	= 130;//Joly: nicht ändern
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
-	on_equip		=	Equip_ItAm_Mana_Angar;
-	on_unequip		=	UnEquip_ItAm_Mana_Angar;
+	on_equip		=	Equip_ItAm_Mana_01;
+	on_unequip		=	UnEquip_ItAm_Mana_01;
 
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Angar's Magic Amulet";
+	description		= "Angar's Amulet of Magic";
 	
 	TEXT[2]			= NAME_Bonus_Mana;
-	COUNT[2]		= 10;
+	COUNT[2]		= Am_Mana;
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
@@ -34,25 +34,6 @@ const int Value_OrcEliteRing 	= 130;//Joly: nicht ändern
 	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
 	
 };
-
-	FUNC VOID Equip_ItAm_Mana_Angar()
-	{
-		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + Am_Mana;
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + Am_Mana;
-	};
-
-	FUNC VOID UnEquip_ItAm_Mana_Angar ()
-	{
-		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - Am_Mana;
-		if (self.attribute[ATR_MANA] > (Am_Mana))
-		{
-			self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - Am_Mana;
-		}
-		else
-		{
-			self.attribute[ATR_MANA] = 0;
-		};	
-	}; 
 	
 //**************************************************************
 //	Ferros Schwert

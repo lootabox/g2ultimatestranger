@@ -113,6 +113,16 @@ INSTANCE Skeleton			(Mst_Default_Skeleton)
 	EquipItem (self, ItMw_1h_Misc_Axe);
 };
 
+INSTANCE Summoned_Skeleton_Evil	(Mst_Default_Skeleton)
+{
+	level							=	0; //30
+
+	B_SetVisuals_Skeleton();
+
+	//EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ItMw_1h_Misc_Axe);
+};
+
 //**************
 //	Skeleton    
 //**************

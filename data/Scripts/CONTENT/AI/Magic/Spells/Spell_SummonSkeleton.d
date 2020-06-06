@@ -21,5 +21,5 @@ func int Spell_Logic_SummonSkeleton(var int manaInvested)
 
 func void Spell_Cast_SummonSkeleton(var int spellLevel)
 {
-	Spell_Cast_Summon(self, spellLevel, Skeleton, Summoned_Lesser_Skeleton, Summoned_Skeleton);
+	Spell_Cast_Summon(self, spellLevel, Summoned_Skeleton_Evil, Summoned_Lesser_Skeleton, Summoned_Skeleton);
 };
