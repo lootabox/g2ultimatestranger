@@ -304,14 +304,14 @@ INSTANCE ItMW_Addon_Hacker_1h_01 (C_Item)
 	on_equip			=	Equip_1H_03;
 	on_unequip			=	UnEquip_1H_03;
 	
-	cond_atr[2]   		= 	ATR_DEXTERITY;  
+	cond_atr[2]   		= 	ATR_STRENGTH;  
 	cond_value[2]  		= 	Condition_Machete;
 	visual 				=	"ItMw_1H_Machete_02.3DS";
 
 	description			= name;
 	
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
-	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
+	TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_03;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -334,14 +334,14 @@ INSTANCE ItMW_Addon_Hacker_1h_02 (C_Item)
 	on_equip			=	Equip_1H_02;
 	on_unequip			=	UnEquip_1H_02;
 	
-	cond_atr[2]   		= 	ATR_DEXTERITY;  
+	cond_atr[2]   		= 	ATR_STRENGTH;  
 	cond_value[2]  		= 	Condition_AltMachete;
 	visual 				=	"ItMw_1H_Machete_01.3DS";
 
 	description			= name;
 	
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
-	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
+	TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_02;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -641,6 +641,9 @@ INSTANCE ItMw_Addon_PIR1hSword (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_PIR1hSword;		
 
+	on_equip			=	Equip_Dex_Weapon;
+	on_unequip			=	UnEquip_Dex_Weapon;
+
 	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_PIR1hSword;
 	visual 				=	"ItMw_030_1h_sword_03.3DS";
@@ -649,7 +652,7 @@ INSTANCE ItMw_Addon_PIR1hSword (C_Item)
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
-	TEXT[4] 			= NAME_OneHanded;
+	TEXT[4] 			= NAME_OneHanded_Dex;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -677,7 +680,6 @@ INSTANCE ItMw_Addon_BanditTrader (C_Item)
 
 	description			= name;
 
-	//TEXT[0]				= NAME_Rapier;
 	TEXT[0]				= 	"The letter 'F.' is scratched in the pommel.";
 
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
@@ -703,6 +705,9 @@ INSTANCE ItMw_Addon_Betty (C_Item)
 	damagetype 			=	DAM_EDGE;	
 	range    			=  	Range_ElBastardo;		
 
+	on_equip			=	Equip_Dex_Weapon;
+	on_unequip			=	UnEquip_Dex_Weapon;
+
 	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_ElBastardo;
 	visual 				=	"ItMw_065_1h_sword_bastard_03.3DS";
@@ -711,7 +716,7 @@ INSTANCE ItMw_Addon_Betty (C_Item)
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
-	TEXT[4] 			= NAME_OneHanded;
+	TEXT[4] 			= NAME_OneHanded_Dex;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 

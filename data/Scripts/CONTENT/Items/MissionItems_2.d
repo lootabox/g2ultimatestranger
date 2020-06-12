@@ -674,8 +674,8 @@ INSTANCE ItRi_Tengron(C_Item)
 
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
-	on_equip				=	Equip_ItRi_Tengron;
-	on_unequip				=	UnEquip_ItRi_Tengron;
+	on_equip				=	Equip_ItRi_Hp_01;
+	on_unequip				=	UnEquip_ItRi_Hp_01;
 
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
@@ -693,22 +693,3 @@ INSTANCE ItRi_Tengron(C_Item)
 	INV_ROTX				= INVCAM_X_RING_STANDARD;
 	
 };
-
-	FUNC VOID Equip_ItRi_Tengron()
-	{
-		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + Ri_Hp; 
-		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + Ri_Hp;
-	};
-
-	FUNC VOID UnEquip_ItRi_Tengron()
-	{
-		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] -Ri_Hp;
-		if self.attribute [ATR_HITPOINTS]> Ri_Hp+1
-		{
-			self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - Ri_Hp;
-		}
-		else
-		{
-			self.attribute[ATR_HITPOINTS] = 2;
-		};
-	};

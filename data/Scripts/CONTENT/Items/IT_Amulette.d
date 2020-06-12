@@ -375,21 +375,12 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	FUNC VOID Equip_ItAm_Hp_01()
 	{
 		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + Am_Hp;
-		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + Am_Hp;
 	};
 
 
 	FUNC VOID UnEquip_ItAm_Hp_01()
 	{
 		self.attribute [ATR_HITPOINTS_MAX] = self.attribute [ATR_HITPOINTS_MAX] -Am_Hp;
-		if (self.attribute[ATR_HITPOINTS] > (Am_Hp + 2))
-		{
-			self.attribute [ATR_HITPOINTS] = self.attribute [ATR_HITPOINTS] -Am_Hp;
-		}
-		else
-		{
-			self.attribute [ATR_HITPOINTS] = 2;
-		};
 	};
 
 /******************************************************************************************/
@@ -519,39 +510,15 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 
 	FUNC VOID Equip_ItAm_Hp_Mana_01 ()
 	{
-		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + Am_HpMana_Hp;
 		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + Am_HpMana_Hp;
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + Am_HpMana_Mana;
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + Am_HpMana_Mana;
-		
 	};
 
 
 	FUNC VOID UnEquip_ItAm_Hp_Mana_01 ()
 	{
-		
-		//self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - Am_HpMana_Mana;
-	
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - Am_HpMana_Mana;
 		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] - Am_HpMana_Hp;
-		
-		if (self.attribute[ATR_HITPOINTS] > Am_HpMana_Hp+1)
-		{
-			self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - Am_HpMana_Hp;
-		}
-		else
-		{
-			self.attribute [ATR_HITPOINTS] = 2;
-		};
-		
-		if (self.attribute[ATR_MANA] >= Am_HpMana_Mana)
-		{
-			self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - Am_HpMana_Mana;
-		}
-		else
-		{
-			self.attribute [ATR_MANA] = 0;
-		};
 	};
 
 /******************************************************************************************/

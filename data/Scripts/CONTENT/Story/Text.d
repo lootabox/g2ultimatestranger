@@ -808,6 +808,7 @@ const string NAME_Bonus_Dex		= "Dexterity bonus:";
 const string NAME_Bonus_Str		= "Strength bonus:";
 
 const string NAME_OneHanded		= "One-handed weapon";
+const string NAME_OneHanded_Dex	= "One-handed weapon (dexterity)";
 const string NAME_TwoHanded		= "Two-handed weapon";
 
 //const string NAME_HealingPerMana = "Healing per Mana:";

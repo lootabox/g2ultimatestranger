@@ -167,9 +167,9 @@ func int DIA_Engor_RSkaufen_Condition ()
 };
 func void DIA_Engor_RSkaufen_Info ()
 {
+	AI_Output (other, self, "DIA_Engor_RSkaufen_15_00"); //Give me the armor.
 	if (B_GiveInvItems (other, self, Itmi_Gold,2500))
 	{
-		AI_Output (other, self, "DIA_Engor_RSkaufen_15_00"); //Give me the armor.
 		AI_Output (self, other, "DIA_Engor_RSkaufen_13_01"); //Here you are, it'll protect you well - it's a damn good piece of work.
 		B_GiveInvItems (self,other, ITAR_MIL_M,1);
 		DIA_Engor_RSkaufen_perm = TRUE;

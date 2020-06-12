@@ -97,7 +97,6 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 		self.attribute[ATR_STRENGTH] 		+= STR_FRANCO;
 		self.attribute[ATR_DEXTERITY] 		+= DEX_FRANCO;
 		self.attribute[ATR_HITPOINTS_MAX] 	+= HP_ItAm_Addon_Franco;
-		self.attribute[ATR_HITPOINTS] 		+= HP_ItAm_Addon_Franco;
 	};
 
 
@@ -105,16 +104,7 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	{
 		self.attribute[ATR_STRENGTH] 		-= STR_FRANCO;
 		self.attribute[ATR_DEXTERITY] 		-= DEX_FRANCO;
-		self.attribute[ATR_HITPOINTS_MAX] 	-= HP_ItAm_Addon_Franco;	
-		
-		if (self.attribute[ATR_HITPOINTS] > (HP_ItAm_Addon_Franco + 2))
-		{
-			self.attribute [ATR_HITPOINTS] -= HP_ItAm_Addon_Franco;
-		}
-		else
-		{
-			self.attribute [ATR_HITPOINTS] = 2;
-		};
+		self.attribute[ATR_HITPOINTS_MAX] 	-= HP_ItAm_Addon_Franco;
 	};
 	
 //------------------------------------------------------------------------------------------

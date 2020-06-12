@@ -434,7 +434,7 @@ var int _DMG_DmgDesc;
 func void _DMG_OnDmg_Post() {
 	EDI = DMG_OnDmg(EBP, MEM_ReadInt(MEM_ReadInt(ESP+644)+8), EDI, _DMG_DmgDesc);
 };
-func void _DMG_OnDmg_Pre() {
+func void _DMG_OnDmg_Hit() {
 	_DMG_DmgDesc = ESI; // I'm preeeeetty sure it won't get moved in the meantime...
 	if (_DMG_DmgDesc)
 	{
@@ -445,6 +445,6 @@ func void InitCustomDamageHook() {
 	const int dmg = 0;
 	if (dmg) { return; };
 	HookEngineF(6736583/*0x66CAC7*/, 5, _DMG_OnDmg_Post);
-	HookEngineF(6710800/*0x666610*/, 7, _DMG_OnDmg_Pre);
+	HookEngineF(6710800/*0x666610*/, 7, _DMG_OnDmg_Hit);
 	dmg = 1;
 };

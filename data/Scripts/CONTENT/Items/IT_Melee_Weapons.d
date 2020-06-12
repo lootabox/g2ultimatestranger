@@ -304,13 +304,13 @@ INSTANCE ItMw_1H_Sword_L_03 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Wolfsklinge;		
 
-	cond_atr[2]   		=	ATR_DEXTERITY;
+	cond_atr[2]   		=	ATR_STRENGTH;
 	cond_value[2]  		=	Condition_Wolfsklinge;
 	visual 				=	"ItMw_012_1h_Knife_02.3DS";
 
 	description			= name;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
-	//TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
+	//TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_OneHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -390,11 +390,10 @@ INSTANCE ItMw_1h_Vlk_Sword (C_Item)
 	visual 				=	"ItMw_018_1h_SwordCane_01.3ds";
 
 	description			= name;
-	TEXT[0]				= NAME_Rapier;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
-	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_05;
+	TEXT[4]				= NAME_OneHanded_Dex;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 // *****************************************************
@@ -1229,6 +1228,9 @@ INSTANCE ItMw_Piratensaebel (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Piratensaebel;		
 
+	on_equip			=	Equip_Dex_Weapon;
+	on_unequip			=	UnEquip_Dex_Weapon;
+
 	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_Piratensaebel;
 	visual 				=	"ItMw_030_1h_sword_03.3DS";
@@ -1237,7 +1239,7 @@ INSTANCE ItMw_Piratensaebel (C_Item)
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
-	TEXT[4] 			= NAME_OneHanded;
+	TEXT[4] 			= NAME_OneHanded_Dex;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 /********************************************************************************/
@@ -1699,9 +1701,6 @@ INSTANCE ItMw_Rapier (C_Item)
 	damageTotal			= 	Damage_Rapier;
 	damagetype			=	DAM_EDGE;		
 	range    			=  	Range_Rapier;	
-
-	on_equip			=	Equip_1H_08;
-	on_unequip			=	UnEquip_1H_08;
 	
 	on_equip			=	Equip_Dex_Weapon;
 	on_unequip			=	UnEquip_Dex_Weapon;
@@ -1711,11 +1710,10 @@ INSTANCE ItMw_Rapier (C_Item)
 	visual 				=	"ItMw_050_1h_Sword_Rapier_01.3ds";
 
 	description			= name;
-	TEXT[0]				= NAME_Rapier;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
-	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_08;
+	TEXT[4]				= NAME_OneHanded_Dex;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 /********************************************************************************/
@@ -2098,11 +2096,11 @@ INSTANCE ItMw_Meisterdegen (C_Item)
 	visual 				=	"ItMw_065_1h_SwordCane_02.3ds";
 
 	description			= name;
-	TEXT[0]				= NAME_Rapier_Master;
+	TEXT[0]				= "Alternate true master stance.";
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
-	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_10;
+	TEXT[4]				= NAME_OneHanded_Dex;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 /********************************************************************************/

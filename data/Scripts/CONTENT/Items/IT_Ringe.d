@@ -642,21 +642,12 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 
 	FUNC VOID Equip_ItRi_Hp_01()
 	{
-		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + Ri_Hp; 
-		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + Ri_Hp;
+		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + Ri_Hp;
 	};
 
 	FUNC VOID UnEquip_ItRi_Hp_01()
 	{
 		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] -Ri_Hp;
-		if self.attribute [ATR_HITPOINTS]> Ri_Hp+1
-		{
-			self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - Ri_Hp;
-		}
-		else
-		{
-			self.attribute[ATR_HITPOINTS] = 2;
-		};
 	};
 	
 /******************************************************************************************/
@@ -695,21 +686,12 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 
 	FUNC VOID Equip_ItRi_Hp_02()
 	{
-		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + Ri_Hp02; 
-		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + Ri_Hp02;
+		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + Ri_Hp02;
 	};
 
 	FUNC VOID UnEquip_ItRi_Hp_02()
 	{
 		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX]- Ri_Hp02;
-		if self.attribute [ATR_HITPOINTS]> Ri_Hp02+1
-		{
-			self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - Ri_Hp02;
-		}
-		else
-		{
-			self.attribute[ATR_HITPOINTS] = 2;
-		};
 	};
 	
 /******************************************************************************************/

@@ -842,11 +842,14 @@ FUNC VOID DIA_Cassia_Belohnung_Info()
 	AI_Output (self, other, "DIA_Cassia_Belohnung_16_01");//What's your choice?
 	
 	Info_ClearChoices (DIA_Cassia_Belohnung);
+
+	var string ring;
+	ring = ConcatStrings("(", NAME_ADDON_CASSIASBELOHNUNGSRING);
+	ring = ConcatStrings(ring, ")");
 	
-	Info_AddChoice (DIA_Cassia_Belohnung,"400 pieces of gold.",DIA_Cassia_Belohnung_Gold);
-	Info_AddChoice (DIA_Cassia_Belohnung,"4 elixirs of healing",DIA_Cassia_Belohnung_Trank);
-	Info_AddChoice (DIA_Cassia_Belohnung, NAME_ADDON_CASSIASBELOHNUNGSRING ,DIA_Cassia_Belohnung_Ring);
-	
+	Info_AddChoice (DIA_Cassia_Belohnung,"Give me the gold. (400 gold)",DIA_Cassia_Belohnung_Gold);
+	Info_AddChoice (DIA_Cassia_Belohnung,"Give me the potions. (4 elixirs of healing)",DIA_Cassia_Belohnung_Trank);
+	Info_AddChoice (DIA_Cassia_Belohnung, ConcatStrings("Give me the ring. ", ring) ,DIA_Cassia_Belohnung_Ring);
 };
 FUNC VOID DIA_Cassia_Belohnung_Gold()
 {
