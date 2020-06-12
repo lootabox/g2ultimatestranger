@@ -637,20 +637,18 @@ func void Use_Rake()
 };
 
 /******************************************************************************************/
-INSTANCE ItRi_Addon_BanditTrader(C_Item)	//Händlergildenring
+INSTANCE ItRi_Addon_BanditTrader(ItRi_Prototype)	//Händlergildenring
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	flags 					=	ITEM_RING|ITEM_MISSION;
 
 	value 					=	5 ;
 
 //	visual 					=	"ItRi_Prot_Point_02.3ds";
 	visual 					=	"ItRi_Addon_BanditTrader.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
+	// Overridden for no visual
+	wear					= 	0;
+	effect					=	"";
 
 	description				= 	"Engraved ring";
 	
@@ -658,10 +656,6 @@ INSTANCE ItRi_Addon_BanditTrader(C_Item)	//Händlergildenring
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 //**********************************************************************************
@@ -787,23 +781,17 @@ INSTANCE ItWr_Vatras2Saturas_FindRaven_opened	(C_Item)
 //------------------------------------------------------------------------------------------
 // Amulett des suchenden Irrlichts
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItAm_Addon_WispDetector (C_Item)  
+	INSTANCE  ItAm_Addon_WispDetector (ItAm_Prototype)
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
+	//flags 			=	ITEM_AMULET;
 
 	value 			=	Value_Am_DexStrg;
 
 //	visual 			=	"ItAm_Mana_01.3ds";
 	visual 			=	"ItAm_Addon_WispDetector.3ds";
 
-	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_WEAKGLIMMER_BLUE"; 
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_WispDetector;
 	on_unequip		=	UnEquip_WispDetector;
 
@@ -811,9 +799,6 @@ INSTANCE ItWr_Vatras2Saturas_FindRaven_opened	(C_Item)
 
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 	var int Equip_WispDetector_OneTime;
 
@@ -876,38 +861,27 @@ INSTANCE ItFo_Addon_Krokofleisch_Mission (C_Item)
 
 };
 
-INSTANCE ItRi_Addon_MorgansRing_Mission (C_Item)
-{	
-	name 				=	NAME_Ring;
-
-	mainflag 			=	ITEM_KAT_MAGIC;
+INSTANCE ItRi_Addon_MorgansRing_Mission (ItRi_Prototype)
+{
 	flags 				=	ITEM_RING|ITEM_MISSION;
 	
 	value 				=	500;
 	
 //	visual 				=	"ItRi_Prot_Total_02.3DS";
 	visual 				=	"ItRi_Addon_MorgansRing.3DS";
-	material 			=	MAT_METAL;
 	
 	on_equip				=  	Equip_MorgansRing;
 	on_unequip				= 	UnEquip_MorgansRing;
 
-	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= "Morgan's ring";
-	
 	
 	TEXT[1]			= "The ring is decorated with many fine runes.";
 	TEXT[2]			= NAME_ADDON_BONUS_1H;
 	COUNT[2]		= 10;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-
 };
 
 FUNC VOID Equip_MorgansRing()

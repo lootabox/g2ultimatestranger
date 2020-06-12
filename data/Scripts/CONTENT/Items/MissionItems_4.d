@@ -4,24 +4,16 @@ const int Value_OrcEliteRing 	= 130;//Joly: nicht ändern
 /******************************************************************************************/
 // Angars Amulett
 /******************************************************************************************/
-	INSTANCE  ItAm_Mana_Angar_MIS(C_Item)
+	INSTANCE  ItAm_Mana_Angar_MIS(ItAm_Prototype)
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET|ITEM_MISSION;
 
 	value 			=	Value_Am_Mana;
 
 	visual 			=	"ItAm_Mana_01.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Mana_01;
 	on_unequip		=	UnEquip_ItAm_Mana_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= "Angar's Amulet of Magic";
 	
@@ -30,9 +22,6 @@ const int Value_OrcEliteRing 	= 130;//Joly: nicht ändern
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 	
 //**************************************************************
@@ -177,11 +166,8 @@ INSTANCE ItAt_DragonEgg_MIS	(C_ITEM)
 //	OrcEliteRing (für PAL only Ambient auftrag)
 //---------------------------------------------------------------------
 
-INSTANCE ItRi_OrcEliteRing(C_Item)
+INSTANCE ItRi_OrcEliteRing(ItRi_Prototype)
 {
-	name 					=	"Ring of the Orcish Warlords";
-
-	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_MISSION|ITEM_RING|ITEM_MULTI; //Joly: Muß so bleiben, sonst XP und Gold Exploit (Lord Hagen die Dinger bringen!)
 
 	value 					=	Value_OrcEliteRing;
@@ -189,23 +175,13 @@ INSTANCE ItRi_OrcEliteRing(C_Item)
 //	visual 					=	"ItRi_Str_02.3ds";
 	visual 					=	"ItRi_OrcEliteRing.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_OrcEliteRing;
 	on_unequip				=	UnEquip_OrcEliteRing;
 
-	description				= 	name;
+	description				= 	"Ring of the Orcish Warlords";
 
 	TEXT[0]					=	"The ring is rough and seems strangely cold.";
 	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_WEAKGLIMMER"; 
-
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_OrcEliteRing ()

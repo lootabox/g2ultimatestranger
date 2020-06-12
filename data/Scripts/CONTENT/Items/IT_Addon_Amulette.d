@@ -56,26 +56,15 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 //------------------------------------------------------------------------------------------
 // Franco's Amulett
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItAm_Addon_Franco(C_Item)  
+	INSTANCE  ItAm_Addon_Franco(ItAm_Prototype)
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_ItAm_Addon_Franco;
 
 //	visual 			=	"ItAm_Hp_01.3ds";
 	visual 			=	"ItAm_Addon_Franco.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Addon_Franco;
 	on_unequip		=	UnEquip_ItAm_Addon_Franco;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
-
 
 	description		=  "Franco's Amulet";
 
@@ -87,9 +76,6 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	COUNT[4]		= HP_ItAm_Addon_Franco;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_Addon_Franco()
@@ -98,7 +84,6 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 		self.attribute[ATR_DEXTERITY] 		+= DEX_FRANCO;
 		self.attribute[ATR_HITPOINTS_MAX] 	+= HP_ItAm_Addon_Franco;
 	};
-
 
 	FUNC VOID UnEquip_ItAm_Addon_Franco()
 	{
@@ -110,25 +95,15 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 //------------------------------------------------------------------------------------------
 // Kumulatives Lebensenergie Amulett (Maya) Health
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItAm_Addon_Health(C_Item)  //Balken Eingang zur Mine
+	INSTANCE  ItAm_Addon_Health(ItAm_Prototype)  //Balken Eingang zur Mine
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_ItAm_Addon_Health;
 
 //	visual 			=	"ItAm_Hp_01.3ds";
 	visual 			=	"ItAm_Addon_Health.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Addon_Health;
 	on_unequip		=	UnEquip_ItAm_Addon_Health;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		=  "Amulet of the Healers";
 
@@ -140,9 +115,6 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_Addon_Health()
@@ -176,20 +148,13 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 //------------------------------------------------------------------------------------------
 // Kumulativer Lebensenergie Ring (Maya) Health 
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItRi_Addon_Health_01 (C_Item)  //Entrance Ruine
+	INSTANCE  ItRi_Addon_Health_01 (ItRi_Prototype)  //Entrance Ruine
 {
-	name 			=	NAME_Ring;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_RING;
-
 	value 			=	Value_ItRi_Addon_Health_01;
 
 //	visual 			=	"ItRi_Prot_Total_01.3ds";
 	visual 			=	"ItRi_Addon_Health.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItRi_Addon_Health_01;
 	on_unequip		=	UnEquip_ItRi_Addon_Health_01;
 
@@ -206,11 +171,6 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Addon_Health_01()
@@ -242,25 +202,15 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 		//aktuelle Hitpoints werden nicht gesteigert. (Sonst Heilmaschine)
 	};
 //---------------------------------------------------------------------------------------------------------
-	INSTANCE  ItRi_Addon_Health_02 (C_Item)  //Höhle zum Canyon
+	INSTANCE  ItRi_Addon_Health_02 (ItRi_Prototype)  //Höhle zum Canyon
 {
-	name 			=	NAME_Ring;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_RING;
-
 	value 			=	Value_ItRi_Addon_Health_01;
 
 //	visual 			=	"ItRi_Prot_Total_01.3ds";
 	visual 			=	"ItRi_Addon_Health.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItRi_Addon_Health_02;
 	on_unequip		=	UnEquip_ItRi_Addon_Health_02;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		=  "Ring of the Healers";
 
@@ -272,11 +222,6 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Addon_Health_02()
@@ -311,25 +256,15 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 //------------------------------------------------------------------------------------------
 // Kumulatives Mana Amulett (Maya) MANA
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItAm_Addon_MANA(C_Item)  //Joly: verteilt RAKEPLACE[19]
+	INSTANCE  ItAm_Addon_MANA(ItAm_Prototype)  //Joly: verteilt RAKEPLACE[19]
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_ItAm_Addon_MANA;
 
 //	visual 			=	"ItAm_Hp_01.3ds";
 	visual 			=	"ItAm_Addon_Mana.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Addon_MANA;
 	on_unequip		=	UnEquip_ItAm_Addon_MANA;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		=  "Amulet of the Priests";
 
@@ -341,9 +276,6 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	 
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_Addon_MANA()
@@ -377,25 +309,15 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 //------------------------------------------------------------------------------------------
 // Kumulativer Mana Ring (Maya) 
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItRi_Addon_MANA_01 (C_Item)  //Bloodhound mine
+	INSTANCE  ItRi_Addon_MANA_01 (ItRi_Prototype)  //Bloodhound mine
 {
-	name 			=	NAME_Ring;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_RING;
-
 	value 			=	Value_ItRi_Addon_MANA_01;
 
 //	visual 			=	"ItRi_Prot_Total_01.3ds";
 	visual 			=	"ItRi_Addon_Mana.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItRi_Addon_MANA_01;
 	on_unequip		=	UnEquip_ItRi_Addon_MANA_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		=  "Ring of the Priests";
 
@@ -407,11 +329,6 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Addon_MANA_01()
@@ -443,25 +360,15 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 		
 	};
 //---------------------------------------------------------------------------------------------------------
-	INSTANCE  ItRi_Addon_MANA_02 (C_Item)  //Senat
+	INSTANCE  ItRi_Addon_MANA_02 (ItRi_Prototype)  //Senat
 {
-	name 			=	NAME_Ring;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_RING;
-
 	value 			=	Value_ItRi_Addon_Mana_01;
 
 //	visual 			=	"ItRi_Prot_Total_01.3ds";
 	visual 			=	"ItRi_Addon_Mana.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItRi_Addon_MANA_02;
 	on_unequip		=	UnEquip_ItRi_Addon_MANA_02;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		=  "Ring of the Priests";
 
@@ -473,11 +380,6 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Addon_Mana_02()
@@ -512,25 +414,15 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 //------------------------------------------------------------------------------------------
 // Kumulatives Stärke Amulett (Maya) 
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItAm_Addon_STR(C_Item)  //feuerwaranhöhle strand
+	INSTANCE  ItAm_Addon_STR(ItAm_Prototype)  //feuerwaranhöhle strand
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_ItAm_Addon_STR;
 
 //	visual 			=	"ItAm_Hp_01.3ds";
 	visual 			=	"ItAm_Addon_Str.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Addon_STR;
 	on_unequip		=	UnEquip_ItAm_Addon_STR;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		=  "Amulet of the Warriors";
 
@@ -542,9 +434,6 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	 
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_Addon_STR()
@@ -579,25 +468,15 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 //------------------------------------------------------------------------------------------
 // Kumulativer STR Ring (Maya) 
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItRi_Addon_STR_01 (C_Item)  //Geschenk von Greg
+	INSTANCE  ItRi_Addon_STR_01 (ItRi_Prototype)  //Geschenk von Greg
 {
-	name 			=	NAME_Ring;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_RING;
-
 	value 			=	Value_ItRi_Addon_STR_01;
 
 //	visual 			=	"ItRi_Prot_Total_02.3ds";
 	visual 			=	"ItRi_Addon_Str.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItRi_Addon_STR_01;
 	on_unequip		=	UnEquip_ItRi_Addon_STR_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		=  "Ring of the Warriors";
 
@@ -609,11 +488,6 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Addon_STR_01()
@@ -647,25 +521,15 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 		
 	};
 //---------------------------------------------------------------------------------------------------------
-	INSTANCE  ItRi_Addon_STR_02 (C_Item)  //in Quarhodrons grab
+	INSTANCE  ItRi_Addon_STR_02 (ItRi_Prototype)  //in Quarhodrons grab
 {
-	name 			=	NAME_Ring;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_RING;
-
 	value 			=	Value_ItRi_Addon_STR_01;
 
 //	visual 			=	"ItRi_Prot_Total_02.3ds";
 	visual 			=	"ItRi_Addon_Str.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItRi_Addon_STR_02;
 	on_unequip		=	UnEquip_ItRi_Addon_STR_02;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		=  "Ring of the Warriors";
 
@@ -677,11 +541,6 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Addon_STR_02()

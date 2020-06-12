@@ -574,34 +574,23 @@ INSTANCE ItPo_PotionOfDeath_02_Mis(C_Item)
 //	Amulett des Todes
 //************************************************
 
-INSTANCE  ItAm_AmulettOfDeath_Mis(C_Item)
+INSTANCE  ItAm_AmulettOfDeath_Mis(ItAm_Prototype)
 {
-	name 			=	"Divine Aura of Innos";
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
+	flags 			=	ITEM_AMULET|ITEM_MISSION;
 
 	value 			=	1000;
 
 //	visual 			=	"ItAm_Prot_Fire_01.3ds";
 	visual 			=	"ItAm_AmulettOfDeath_Mis.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_AmulettOfDeath_Mis;
 	on_unequip		=	UnEquip_ItAm_AmulettOfDeath_Mis;
 
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
-
-	description		= "The divine aura of Innos.";
+	description		= "Divine Aura of Innos";
 	
 	TEXT[2]			= "This amulet protects the bearer from all forms of damage.";
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_AmulettOfDeath_Mis()

@@ -24,24 +24,14 @@ const int Value_Am_HpMana 			= 1300;	const int Am_HpMana_Hp		= 30; // Mana + Hp 
 const int Value_Am_DexStrg 			= 1600;	const int Am_DexStrg_Dex	= 8; // Strg + Dex Amulett
 											const int Am_DexStrg_Strg	= 8;
 /******************************************************************************************/
-INSTANCE  ItAm_Prot_Fire_01(C_Item)
+INSTANCE  ItAm_Prot_Fire_01(ItAm_Prototype)
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_Am_ProtFire;
 
 	visual 			=	"ItAm_Prot_Fire_01.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Prot_Fire_01;
 	on_unequip		=	UnEquip_ItAm_Prot_Fire_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= "Amulet of Fire";
 	
@@ -49,9 +39,6 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	COUNT[2]		= Am_ProtFire;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_Prot_Fire_01()
@@ -59,31 +46,20 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	 	self.protection [PROT_FIRE] += Am_ProtFire;
 	};
 
-
 	FUNC VOID UnEquip_ItAm_Prot_Fire_01()
 	{
 		self.protection [PROT_FIRE] -= Am_ProtFire;
 	};
 
 /******************************************************************************************/
-	INSTANCE  ItAm_Prot_Edge_01(C_Item) // Waffen Schutz Amulett
+	INSTANCE  ItAm_Prot_Edge_01(ItAm_Prototype) // Waffen Schutz Amulett
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_Am_ProtEdge;
 
 	visual 			=	"ItAm_Prot_Edge_01.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Prot_Edge_01;
 	on_unequip		=	UnEquip_ItAm_Prot_Edge_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= "Harness Amulet";
 	
@@ -92,9 +68,6 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_Prot_Edge_01()
@@ -103,7 +76,6 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 		self.protection [PROT_BLUNT] += Am_ProtEdge;
 	};
 
-
 	FUNC VOID UnEquip_ItAm_Prot_Edge_01()
 	{
 		self.protection [PROT_EDGE] -= Am_ProtEdge;
@@ -111,24 +83,14 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	};
 
 /******************************************************************************************/
-	INSTANCE  ItAm_Prot_Point_01(C_ITEM) // Geschoss Schutz Amulett 
+	INSTANCE  ItAm_Prot_Point_01(ItAm_Prototype) // Geschoss Schutz Amulett 
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_Am_ProtPoint;
 
 	visual 			=	"ItAm_Prot_Point_01.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Prot_Point_01;
 	on_unequip		=	UnEquip_ItAm_Prot_Point_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= "Amulet of Oak Skin";
 	
@@ -137,9 +99,6 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-
 };
 
 	FUNC VOID Equip_ItAm_Prot_Point_01()
@@ -147,31 +106,20 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 		self.protection [PROT_POINT] += Am_ProtPoint;
 	};
 
-
 	FUNC VOID UnEquip_ItAm_Prot_Point_01()
 	{
 		self.protection [PROT_POINT] -= Am_ProtPoint;
 	};
 
 /******************************************************************************************/
-	INSTANCE  ItAm_Prot_Mage_01(C_ITEM) // Magie Schutz Amulett von Serpentes an KDF für alle Minenanteile (Mission -> MIS_Serpentes_MinenAnteil_KDF == LOG_SUCCESS)
+	INSTANCE  ItAm_Prot_Mage_01(ItAm_Prototype) // Magie Schutz Amulett von Serpentes an KDF für alle Minenanteile (Mission -> MIS_Serpentes_MinenAnteil_KDF == LOG_SUCCESS)
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_Am_ProtMage;
 
 	visual 			=	"ItAm_Prot_Mage_01.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Prot_Mage_01;
 	on_unequip		=	UnEquip_ItAm_Prot_Mage_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= "Amulet of Spiritual Power";
 	
@@ -180,9 +128,6 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_Prot_Mage_01()
@@ -197,25 +142,15 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 
 /******************************************************************************************/
 
-	INSTANCE  ItAm_Prot_Total_01(C_ITEM)//ItAm_AmulettOfDeath_Mis (alle + 30)  MAGIER_EXKLUSIV_AMULETT für den Endkampf des KDFs  (Kapitel 5)
+	INSTANCE  ItAm_Prot_Total_01(ItAm_Prototype)//ItAm_AmulettOfDeath_Mis (alle + 30)  MAGIER_EXKLUSIV_AMULETT für den Endkampf des KDFs  (Kapitel 5)
 
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_Am_ProtTotal;
 
 	visual 			=	"ItAm_Prot_Total_01.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_Value_Am_ProtTotal;
 	on_unequip		=	UnEquip_Value_Am_ProtTotal;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= "Amulet of Ore Skin";
 	
@@ -229,9 +164,6 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	COUNT[4]		= AM_TProtMage;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-
 };
 
 	FUNC VOID Equip_Value_Am_ProtTotal()
@@ -254,24 +186,14 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	};
 
 /******************************************************************************************/
-	INSTANCE  ItAm_Dex_01(C_Item)	//Joly: von Dar an KDF und DJG vergeben ab Kapitel 4 \ Xardas_Secret-area für PAL	(Kapitel 3)
+	INSTANCE  ItAm_Dex_01(ItAm_Prototype)	//Joly: von Dar an KDF und DJG vergeben ab Kapitel 4 \ Xardas_Secret-area für PAL	(Kapitel 3)
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_Am_Dex;
 
 	visual 			=	"ItAm_Dex_01.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Dex_01;
 	on_unequip		=	UnEquip_ItAm_Dex_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= "Amulet of Agility";
 	
@@ -280,16 +202,12 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_Dex_01()
 	{
 		Npc_ChangeAttribute(self,ATR_DEXTERITY,+ Am_Dex);
 	};
-
 
 	FUNC VOID UnEquip_ItAm_Dex_01()
 	{
@@ -298,24 +216,14 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 
 /******************************************************************************************/
 
-	INSTANCE  ItAm_Strg_01(C_Item) //in LOCkpick Truhe Fingers
+	INSTANCE  ItAm_Strg_01(ItAm_Prototype) //in LOCkpick Truhe Fingers
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_Am_Strg;
 
 	visual 			=	"ItAm_Strg_01.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Strg_01;
 	on_unequip		=	UnEquip_ItAm_Strg_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= "Amulet of Strength";
 	
@@ -324,9 +232,6 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_Strg_01()
@@ -341,24 +246,14 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 
 /******************************************************************************************/
 
-	INSTANCE  ItAm_Hp_01(C_Item)  //von Bennet dem Schmied an den PAL und dem KDF        (Kapitel 3)\Xardas_Secret-area für DJG	(Kapitel 3)
+	INSTANCE  ItAm_Hp_01(ItAm_Prototype)  //von Bennet dem Schmied an den PAL und dem KDF        (Kapitel 3)\Xardas_Secret-area für DJG	(Kapitel 3)
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_Am_Hp;
 
 	visual 			=	"ItAm_Hp_01.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Hp_01;
 	on_unequip		=	UnEquip_ItAm_Hp_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= "Amulet of Life";
 
@@ -367,9 +262,6 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_Hp_01()
@@ -377,32 +269,20 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + Am_Hp;
 	};
 
-
 	FUNC VOID UnEquip_ItAm_Hp_01()
 	{
 		self.attribute [ATR_HITPOINTS_MAX] = self.attribute [ATR_HITPOINTS_MAX] -Am_Hp;
 	};
 
 /******************************************************************************************/
-	INSTANCE  ItAm_Mana_01(C_Item) //in der OW von Angar an alle SC Gilden!  (Kapitel 4)
-
+	INSTANCE  ItAm_Mana_01(ItAm_Prototype) //in der OW von Angar an alle SC Gilden!  (Kapitel 4)
 {
-	name 			=	NAME_Amulett;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_Am_Mana;
 
 	visual 			=	"ItAm_Mana_01.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Mana_01;
 	on_unequip		=	UnEquip_ItAm_Mana_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= "Amulet of Magic";
 	
@@ -411,9 +291,6 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_Mana_01()
@@ -427,24 +304,14 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	};
 
 /******************************************************************************************/
-	INSTANCE  ItAm_Dex_Strg_01(C_Item)	// wird dem PAL von Ulthar überreicht für die Reinigung der Schreine Kapitel 3\
+	INSTANCE  ItAm_Dex_Strg_01(ItAm_Prototype)	// wird dem PAL von Ulthar überreicht für die Reinigung der Schreine Kapitel 3\
 {
-	name 			=	"Amulet of Power";
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_Am_DexStrg;
 
 	visual 			=	"ItAm_Dex_Strg_01.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Dex_Strg_01;
 	on_unequip		=	UnEquip_ItAm_Dex_Strg_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= "Amulet of Power";
 	
@@ -455,9 +322,6 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_Dex_Strg_01()
@@ -466,7 +330,6 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 		Npc_ChangeAttribute(self,ATR_STRENGTH,+ Am_DexStrg_Strg );
 	};
 
-
 	FUNC VOID UnEquip_ItAm_Dex_Strg_01 ()
 	{
 		Npc_ChangeAttribute(self,ATR_DEXTERITY,-Am_DexStrg_Dex );
@@ -474,24 +337,14 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	};
 
 /******************************************************************************************/
-	INSTANCE  ItAm_Hp_Mana_01 (C_Item)	//Xardas_Secret-area für KDF	(Kapitel 3)
+	INSTANCE  ItAm_Hp_Mana_01 (ItAm_Prototype)	//Xardas_Secret-area für KDF	(Kapitel 3)
 {
-	name 			=	"Amulet of Enlightenment";
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
-
 	value 			=	Value_Am_HpMana;
 
 	visual 			=	"ItAm_Hp_Mana_01.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItAm_Hp_Mana_01 ;
 	on_unequip		=	UnEquip_ItAm_Hp_Mana_01 ;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= "Amulet of Enlightenment";
 	
@@ -503,9 +356,6 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItAm_Hp_Mana_01 ()
@@ -514,7 +364,6 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + Am_HpMana_Mana;
 	};
 
-
 	FUNC VOID UnEquip_ItAm_Hp_Mana_01 ()
 	{
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - Am_HpMana_Mana;
@@ -522,15 +371,3 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	};
 
 /******************************************************************************************/
-
-
-
-
-
-
-
-
-
-
-
-	

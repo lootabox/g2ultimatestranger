@@ -43,24 +43,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 
 /******************************************************************************************/
 
-	instance ItRi_Prot_Fire_01(C_Item) //in einem von Halvors Fischen
+	instance ItRi_Prot_Fire_01(ItRi_Prototype) //in einem von Halvors Fischen
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_ProtFire;
 
 	visual 					=	"ItRi_Prot_Fire_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Prot_Fire_01;
 	on_unequip				=	UnEquip_ItRi_Prot_Fire_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Flame Protection Ring";
 	
@@ -69,11 +59,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Prot_Fire_01()
@@ -87,24 +72,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	instance ItRi_Prot_Fire_02(C_Item) //MayaTurm2 (Truhe)
+	instance ItRi_Prot_Fire_02(ItRi_Prototype) //MayaTurm2 (Truhe)
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_ProtFire02;
 
 	visual 					=	"ItRi_Prot_Fire_02.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Prot_Fire_02;
 	on_unequip				=	UnEquip_ItRi_Prot_Fire_02;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Fire Ring";
 	
@@ -113,11 +88,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Prot_Fire_02()
@@ -131,24 +101,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 
 /******************************************************************************************/
-	INSTANCE ItRi_Prot_Point_01(C_Item) //Constantinos Schutzring
+	INSTANCE ItRi_Prot_Point_01(ItRi_Prototype) //Constantinos Schutzring
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_ProtPoint ;
 
 	visual 					=	"ItRi_Prot_Point_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Prot_Point_01;
 	on_unequip				=	UnEquip_ItRi_Prot_Point_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Wooden Skin";
 	
@@ -157,11 +117,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Prot_Point_01()
@@ -175,24 +130,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	INSTANCE ItRi_Prot_Point_02(C_Item)	//  Beim Schwarzen Troll      / Auf Dacheninsel -> NONE_101_MARIO_DI in der Tasche
+	INSTANCE ItRi_Prot_Point_02(ItRi_Prototype)	//  Beim Schwarzen Troll      / Auf Dacheninsel -> NONE_101_MARIO_DI in der Tasche
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_ProtPoint02 ;
 
 	visual 					=	"ItRi_Prot_Point_02.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Prot_Point_02;
 	on_unequip				=	UnEquip_ItRi_Prot_Point_02;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Stone Skin";
 	
@@ -201,11 +146,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Prot_Point_02()
@@ -219,24 +159,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	INSTANCE ItRi_Prot_Edge_01(C_Item) //bei Cassia als Belohnung //Höhle OW//PassNW bei den Orks
+	INSTANCE ItRi_Prot_Edge_01(ItRi_Prototype) //bei Cassia als Belohnung //Höhle OW//PassNW bei den Orks
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_ProtEdge;
 
 	visual 					=	"ItRi_Prot_Edge_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Prot_Edge_01;
 	on_unequip				=	UnEquip_ItRi_Prot_Edge_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Iron Skin";
 
@@ -245,11 +175,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Prot_Edge_01()
@@ -265,24 +190,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	INSTANCE ItRi_Prot_Edge_02(C_Item) //Im Alten Lager
+	INSTANCE ItRi_Prot_Edge_02(ItRi_Prototype) //Im Alten Lager
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_ProtEdge02;
 
 	visual 					=	"ItRi_Prot_Edge_02.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Prot_Edge_02;
 	on_unequip				=	UnEquip_ItRi_Prot_Edge_02;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Ore Skin";
 	
@@ -291,11 +206,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Prot_Edge_02()
@@ -311,24 +221,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	INSTANCE ItRi_Prot_Mage_01(C_ITEM) //XARDAS RING 
+	INSTANCE ItRi_Prot_Mage_01(ItRi_Prototype) //XARDAS RING 
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_ProtMage;
 
 	visual 					=	"ItRi_Prot_Mage_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Prot_Mage_01;
 	on_unequip				=	UnEquip_ItRi_Prot_Mage_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Spirit";
 	
@@ -337,11 +237,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Prot_Mage_01()
@@ -356,24 +251,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	INSTANCE ItRi_Prot_Mage_02(C_ITEM)	//Joly: von Neoras, wenn SC ihm Drachenei bringt. (Nur PAL oder KDF) ab Kapitel 4	//ricelordhütte OW
+	INSTANCE ItRi_Prot_Mage_02(ItRi_Prototype)	//Joly: von Neoras, wenn SC ihm Drachenei bringt. (Nur PAL oder KDF) ab Kapitel 4	//ricelordhütte OW
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_ProtMage02;
 
 	visual 					=	"ItRi_Prot_Mage_02.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Prot_Mage_02;
 	on_unequip				=	UnEquip_ItRi_Prot_Mage_02;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Defense";
 	
@@ -382,11 +267,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Prot_Mage_02()
@@ -402,26 +282,16 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 /******************************************************************************************/
 
-	INSTANCE ItRi_Prot_Total_01(C_ITEM) //Bei Lutero
+	INSTANCE ItRi_Prot_Total_01(ItRi_Prototype) //Bei Lutero
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_ProtTotal;
 
 	visual 					=	"ItRi_Prot_Total_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=  	Equip_ItRi_Prot_Total_01;
 	on_unequip				= 	UnEquip_ItRi_Prot_Total_01;
 
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
-
-	description		= "Ring of Inconquerability";
+	description				= "Ring of Inconquerability";
 	
 	TEXT[1]			= NAME_Prot_Edge;
 	COUNT[1]		= Ri_TProtEdge;
@@ -433,11 +303,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	COUNT[4]		= Ri_TProtMage;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Prot_Total_01()
@@ -459,26 +324,16 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	INSTANCE ItRi_Prot_Total_02(C_ITEM) //bei Lutero ab Kapitel 4 zu kaufen
+	INSTANCE ItRi_Prot_Total_02(ItRi_Prototype) //bei Lutero ab Kapitel 4 zu kaufen
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_ProtTotal02;
 
 	visual 					=	"ItRi_Prot_Total_02.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=  	Equip_ItRi_Prot_Total_02;
 	on_unequip				= 	UnEquip_ItRi_Prot_Total_02;
 
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
-
-	description		= "Ring of Invincibility";
+	description				= "Ring of Invincibility";
 	
 	TEXT[1]			= NAME_Prot_Edge;
 	COUNT[1]		= Ri_TProtEdge02;
@@ -490,11 +345,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	COUNT[4]		= Ri_TProtMage02;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Prot_Total_02()
@@ -516,37 +366,22 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-		INSTANCE ItRi_Dex_01(C_Item) //bei Vatras Kap2. 
+		INSTANCE ItRi_Dex_01(ItRi_Prototype) //bei Vatras Kap2. 
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_Dex;
 
 	visual 					=	"ItRi_Dex_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Dex_01;
 	on_unequip				=	UnEquip_ItRi_Dex_01;
 
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
-
-	description		= "Ring of Skill";
+	description				= "Ring of Skill";
 	
 	TEXT[2]			= NAME_Bonus_Dex;
 	COUNT[2]		= Ri_Dex;
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Dex_01()
@@ -561,24 +396,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	INSTANCE ItRi_Dex_02(C_Item)//Joly:in OW Nähe Alter DT
+	INSTANCE ItRi_Dex_02(ItRi_Prototype)//Joly:in OW Nähe Alter DT
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_Dex02;
 
 	visual 					=	"ItRi_Dex_02.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Dex_02;
 	on_unequip				=	UnEquip_ItRi_Dex_02;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Dexterity";
 
@@ -587,11 +412,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Dex_02()
@@ -607,24 +427,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 
 
 /******************************************************************************************/
-		INSTANCE ItRi_Hp_01(C_Item)
+		INSTANCE ItRi_Hp_01(ItRi_Prototype)
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_Hp;
 
 	visual 					=	"ItRi_Hp_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Hp_01;
 	on_unequip				=	UnEquip_ItRi_Hp_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Life";
 	
@@ -633,11 +443,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Hp_01()
@@ -651,24 +456,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	INSTANCE ItRi_Hp_02(C_Item)
+	INSTANCE ItRi_Hp_02(ItRi_Prototype)
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_Hp02;
 
 	visual 					=	"ItRi_Hp_02.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Hp_02;
 	on_unequip				=	UnEquip_ItRi_Hp_02;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Liveliness";
 	
@@ -677,11 +472,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Hp_02()
@@ -695,24 +485,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	INSTANCE ItRi_Str_01(C_Item)
+	INSTANCE ItRi_Str_01(ItRi_Prototype)
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_Strg;
 
 	visual 					=	"ItRi_Str_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Str_01;
 	on_unequip				=	UnEquip_ItRi_Str_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Force";
 	
@@ -721,11 +501,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Str_01()
@@ -739,24 +514,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	INSTANCE ItRi_Str_02(C_Item)
+	INSTANCE ItRi_Str_02(ItRi_Prototype)
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_Strg02;
 
 	visual 					=	"ItRi_Str_02.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Str_02;
 	on_unequip				=	UnEquip_ItRi_Str_02;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Strength";
 	
@@ -765,11 +530,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Str_02()
@@ -783,24 +543,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 
 /******************************************************************************************/
-	INSTANCE ItRi_Mana_01(C_Item)
+	INSTANCE ItRi_Mana_01(ItRi_Prototype)
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_Mana;
 
 	visual 					=	"ItRi_Mana_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Mana_01;
 	on_unequip				=	UnEquip_ItRi_Mana_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Magic";
 	
@@ -809,11 +559,6 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Mana_01()
@@ -826,24 +571,14 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - Ri_Mana;
 	};
 /******************************************************************************************/
-INSTANCE ItRi_Mana_02(C_Item)
+INSTANCE ItRi_Mana_02(ItRi_Prototype)
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_Mana02;
 
 	visual 					=	"ItRi_Mana_02.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Mana_02;
 	on_unequip				=	UnEquip_ItRi_Mana_02;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Astral Power";
 	
@@ -852,11 +587,6 @@ INSTANCE ItRi_Mana_02(C_Item)
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Mana_02()
@@ -871,24 +601,14 @@ INSTANCE ItRi_Mana_02(C_Item)
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - Ri_Mana02;
 	};	
 /******************************************************************************************/
-		INSTANCE ItRi_Hp_Mana_01(C_Item)
+		INSTANCE ItRi_Hp_Mana_01(ItRi_Prototype)
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_HpMana;
 
 	visual 					=	"ItRi_Hp_Mana_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Hp_Mana_01;
 	on_unequip				=	UnEquip_ItRi_Hp_Mana_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Enlightenment";
 	
@@ -899,11 +619,6 @@ INSTANCE ItRi_Mana_02(C_Item)
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Hp_Mana_01()
@@ -921,24 +636,14 @@ INSTANCE ItRi_Mana_02(C_Item)
 	};
 		
 /******************************************************************************************/
-	INSTANCE ItRi_Dex_Strg_01(C_Item)
+	INSTANCE ItRi_Dex_Strg_01(ItRi_Prototype)
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
 	value 					=	Value_Ri_DexStrg;
 
 	visual 					=	"ItRi_Dex_Strg_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Dex_Strg_01;
 	on_unequip				=	UnEquip_ItRi_Dex_Strg_01;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Ring of Power";
 	
@@ -949,11 +654,6 @@ INSTANCE ItRi_Mana_02(C_Item)
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ItRi_Dex_Strg_01()
@@ -967,4 +667,3 @@ INSTANCE ItRi_Mana_02(C_Item)
 		Npc_ChangeAttribute(self,ATR_STRENGTH,- Ri_DexStrg_Strg);
 		Npc_ChangeAttribute(self,ATR_DEXTERITY, - Ri_DexStrg_Dex);
 	};
-		

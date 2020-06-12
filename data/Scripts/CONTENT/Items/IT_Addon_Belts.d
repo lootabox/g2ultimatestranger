@@ -71,19 +71,12 @@ const int BeltBonus_ProtTotal	= 7;
 //------------------------------------------------------------------------------------------
 // Lederguertel  
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItBE_Addon_Leather_01 (C_Item)  //Bosper(Kap1)/Hakon(1)/Khaled(1)/Orlan(1)
+	INSTANCE  ItBE_Addon_Leather_01 (ItBe_Prototype)  //Bosper(Kap1)/Hakon(1)/Khaled(1)/Orlan(1)
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
-
 	value 			=	Value_ItBE_Addon_Leather_01;
 
 	visual 			=	"ItMI_Belt_06.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBE_Addon_Leather_01;
 	on_unequip		=	UnEquip_ItBE_Addon_Leather_01;
 
@@ -97,10 +90,6 @@ const int BeltBonus_ProtTotal	= 7;
 	COUNT[3]		= 	BA_Bonus01;
 	TEXT[5]			=   NAME_Value;
 	COUNT[5]		=   value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
-	
 };
 FUNC VOID Equip_ItBE_Addon_Leather_01()
 {
@@ -145,19 +134,12 @@ FUNC VOID UnEquip_ItBE_Addon_Leather_01()
 //------------------------------------------------------------------------------------------
 // Fellgürtel (SLD) Zweihand
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItBE_Addon_SLD_01 (C_Item)  //Bennet(Kap1)
+	INSTANCE  ItBE_Addon_SLD_01 (ItBe_Prototype)  //Bennet(Kap1)
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
-
 	value 			=	Value_ItBE_Addon_SLD_01;
 
 	visual 			=	"ItMi_Belt_05.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBE_Addon_SLD_01;
 	on_unequip		=	UnEquip_ItBE_Addon_SLD_01;
 
@@ -173,9 +155,6 @@ FUNC VOID UnEquip_ItBE_Addon_Leather_01()
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
 };
 FUNC VOID Equip_ItBE_Addon_SLD_01()
 {
@@ -214,19 +193,14 @@ FUNC VOID UnEquip_ItBE_Addon_SLD_01()
 //------------------------------------------------------------------------------------------
 // Novizenschärpe (Zweihand)
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItBE_Addon_NOV_01 (C_Item)  //Gorax (Kap1)
+	INSTANCE  ItBE_Addon_NOV_01 (ItBe_Prototype)  //Gorax (Kap1)
 {
-	name 			=	NAME_Addon_BeltMage;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
+	name			=	NAME_Addon_BeltMage;
 
 	value 			=	Value_ItBE_Addon_NOV_01;
 
 	visual 			=	"ItMi_Belt_02.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBE_Addon_NOV_01;
 	on_unequip		=	UnEquip_ItBE_Addon_NOV_01;
 
@@ -241,9 +215,6 @@ FUNC VOID UnEquip_ItBE_Addon_SLD_01()
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
 };
 FUNC VOID Equip_ItBE_Addon_NOV_01()
 {
@@ -282,19 +253,12 @@ FUNC VOID UnEquip_ItBE_Addon_NOV_01()
 //------------------------------------------------------------------------------------------
 // Miliz  (Zweihand)
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItBE_Addon_MIL_01 (C_Item)  //Hakon(Kap1)
+	INSTANCE  ItBE_Addon_MIL_01 (ItBe_Prototype)  //Hakon(Kap1)
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
-
 	value 			=	Value_ItBE_Addon_MIL_01;
 
 	visual 			=	"ItMi_Belt_03.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBE_Addon_MIL_01;
 	on_unequip		=	UnEquip_ItBE_Addon_MIL_01;
 
@@ -309,10 +273,6 @@ FUNC VOID UnEquip_ItBE_Addon_NOV_01()
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
-	
 };
 FUNC VOID Equip_ItBE_Addon_MIL_01()
 {
@@ -351,19 +311,14 @@ FUNC VOID UnEquip_ItBE_Addon_MIL_01()
 //------------------------------------------------------------------------------------------
 // Feuermagier Mana 
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItBE_Addon_KDF_01 (C_Item)  //Gorax(Kap1)
+	INSTANCE  ItBE_Addon_KDF_01 (ItBe_Prototype)  //Gorax(Kap1)
 {
 	name 			=	NAME_Addon_BeltMage;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
 
 	value 			=	Value_ItBE_Addon_KDF_01;
 
 	visual 			=	"ItMi_Belt_02.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBE_Addon_KDF_01;
 	on_unequip		=	UnEquip_ItBE_Addon_KDF_01;
 
@@ -378,10 +333,6 @@ FUNC VOID UnEquip_ItBE_Addon_MIL_01()
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
-	
 };
 FUNC VOID Equip_ItBE_Addon_KDF_01()
 {
@@ -421,19 +372,12 @@ FUNC VOID UnEquip_ItBE_Addon_KDF_01()
 //------------------------------------------------------------------------------------------
 // Minecrawler Gürtel Zweihand
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItBE_Addon_MC (C_Item)  //Bennet(Kap3)
+	INSTANCE  ItBE_Addon_MC (ItBe_Prototype)  //Bennet(Kap3)
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
-
 	value 			=	Value_ItBE_Addon_MC;
 
 	visual 			=	"ItMi_Belt_08.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBE_Addon_MC;
 	on_unequip		=	UnEquip_ItBE_Addon_MC;
 
@@ -448,10 +392,6 @@ FUNC VOID UnEquip_ItBE_Addon_KDF_01()
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
-	
 };
 FUNC VOID Equip_ItBE_Addon_MC()
 {
@@ -495,19 +435,12 @@ FUNC VOID UnEquip_ItBE_Addon_MC()
 // -----------------------------------------------------
 // STR 5
 // -----------------------------------------------------
-INSTANCE  ItBe_Addon_STR_5 (C_Item)		//Spielstart Xardas(Kap1)  
+INSTANCE  ItBe_Addon_STR_5 (ItBe_Prototype)		//Spielstart Xardas(Kap1)  
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
-
 	value 			=	Value_ItBE_Addon_STR_5;
 
 	visual 			=	"ItMi_Belt_08.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBe_Addon_STR_5;
 	on_unequip		=	UnEquip_ItBe_Addon_STR_5;
 
@@ -518,10 +451,6 @@ INSTANCE  ItBe_Addon_STR_5 (C_Item)		//Spielstart Xardas(Kap1)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
-	
 };
 FUNC VOID Equip_ItBe_Addon_STR_5()
 {
@@ -535,19 +464,12 @@ FUNC VOID UnEquip_ItBe_Addon_STR_5()
 // -----------------------------------------------------
 // STR 10
 // -----------------------------------------------------
-INSTANCE  ItBe_Addon_STR_10 (C_Item)  	//Jora(Kap4)/Sengrath(4)
+INSTANCE  ItBe_Addon_STR_10 (ItBe_Prototype)  	//Jora(Kap4)/Sengrath(4)
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
-
 	value 			=	Value_ItBE_Addon_STR_10;
 
 	visual 			=	"ItMi_Belt_05.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBe_Addon_STR_10;
 	on_unequip		=	UnEquip_ItBe_Addon_STR_10;
 
@@ -558,10 +480,6 @@ INSTANCE  ItBe_Addon_STR_10 (C_Item)  	//Jora(Kap4)/Sengrath(4)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
-	
 };
 FUNC VOID Equip_ItBe_Addon_STR_10()
 {
@@ -575,19 +493,12 @@ FUNC VOID UnEquip_ItBe_Addon_STR_10()
 // -----------------------------------------------------
 // DEX 5
 // -----------------------------------------------------
-INSTANCE  ItBe_Addon_DEX_5 (C_Item)  //Bosper(Kap2)/Orlan(2)
+INSTANCE  ItBe_Addon_DEX_5 (ItBe_Prototype)  //Bosper(Kap2)/Orlan(2)
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
-
 	value 			=	Value_ItBE_Addon_DEX_5;
 
 	visual 			=	"ItMi_Belt_08.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBe_Addon_DEX_5;
 	on_unequip		=	UnEquip_ItBe_Addon_DEX_5;
 
@@ -598,10 +509,6 @@ INSTANCE  ItBe_Addon_DEX_5 (C_Item)  //Bosper(Kap2)/Orlan(2)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
-	
 };
 FUNC VOID Equip_ItBe_Addon_DEX_5()
 {
@@ -615,19 +522,12 @@ FUNC VOID UnEquip_ItBe_Addon_DEX_5()
 // -----------------------------------------------------
 // DEX 10
 // -----------------------------------------------------
-INSTANCE  ItBe_Addon_DEX_10 (C_Item)  //Bosper(Kap3)/Lutero(3)
+INSTANCE  ItBe_Addon_DEX_10 (ItBe_Prototype)  //Bosper(Kap3)/Lutero(3)
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
-
 	value 			=	Value_ItBE_Addon_DEX_10;
 
 	visual 			=	"ItMi_Belt_05.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBe_Addon_DEX_10;
 	on_unequip		=	UnEquip_ItBe_Addon_DEX_10;
 
@@ -638,10 +538,6 @@ INSTANCE  ItBe_Addon_DEX_10 (C_Item)  //Bosper(Kap3)/Lutero(3)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
-	
 };
 FUNC VOID Equip_ItBe_Addon_DEX_10()
 {
@@ -656,19 +552,12 @@ FUNC VOID UnEquip_ItBe_Addon_DEX_10()
 // -----------------------------------------------------
 // PROT EDGE
 // -----------------------------------------------------
-INSTANCE  ItBe_Addon_Prot_EDGE (C_Item)  //Hakon(Kap4)/Khaled(4)
+INSTANCE  ItBe_Addon_Prot_EDGE (ItBe_Prototype)  //Hakon(Kap4)/Khaled(4)
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
-
 	value 			=	Value_ItBE_Addon_Prot_EDGE;
 
 	visual 			=	"ItMi_Belt_02.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBe_Addon_Prot_EDGE;
 	on_unequip		=	UnEquip_ItBe_Addon_Prot_EDGE;
 
@@ -679,9 +568,6 @@ INSTANCE  ItBe_Addon_Prot_EDGE (C_Item)  //Hakon(Kap4)/Khaled(4)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
 };
 FUNC VOID Equip_ItBe_Addon_Prot_Edge()
 {
@@ -697,19 +583,12 @@ FUNC VOID UnEquip_ItBe_Addon_Prot_Edge()
 // -----------------------------------------------------
 // PROT POINT
 // -----------------------------------------------------
-INSTANCE  ItBe_Addon_Prot_Point (C_Item)  //Hakon(Kap3)/Khaled(3)
+INSTANCE  ItBe_Addon_Prot_Point (ItBe_Prototype)  //Hakon(Kap3)/Khaled(3)
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
-
 	value 			=	Value_ItBE_Addon_Prot_Point;
 
 	visual 			=	"ItMi_Belt_02.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBe_Addon_Prot_Point;
 	on_unequip		=	UnEquip_ItBe_Addon_Prot_Point;
 
@@ -720,9 +599,6 @@ INSTANCE  ItBe_Addon_Prot_Point (C_Item)  //Hakon(Kap3)/Khaled(3)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
 };
 FUNC VOID Equip_ItBe_Addon_Prot_Point()
 {
@@ -736,19 +612,12 @@ FUNC VOID UnEquip_ItBe_Addon_Prot_Point()
 // -----------------------------------------------------
 // PROT MAGIC
 // -----------------------------------------------------
-INSTANCE  ItBe_Addon_Prot_MAGIC (C_Item)  //Gorax(Kap3)/Zuris(3)
+INSTANCE  ItBe_Addon_Prot_MAGIC (ItBe_Prototype)  //Gorax(Kap3)/Zuris(3)
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
-
 	value 			=	Value_ItBE_Addon_Prot_MAGIC;
 
 	visual 			=	"ItMi_Belt_02.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBe_Addon_Prot_MAGIC;
 	on_unequip		=	UnEquip_ItBe_Addon_Prot_MAGIC;
 
@@ -759,9 +628,6 @@ INSTANCE  ItBe_Addon_Prot_MAGIC (C_Item)  //Gorax(Kap3)/Zuris(3)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
 };
 FUNC VOID Equip_ItBe_Addon_Prot_MAGIC()
 {
@@ -775,19 +641,12 @@ FUNC VOID UnEquip_ItBe_Addon_Prot_MAGIC()
 // -----------------------------------------------------
 // PROT FIRE
 // -----------------------------------------------------
-INSTANCE  ItBe_Addon_Prot_FIRE (C_Item)  //Constantino(Kap3)/Sengrath(4)
+INSTANCE  ItBe_Addon_Prot_FIRE (ItBe_Prototype)  //Constantino(Kap3)/Sengrath(4)
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
-
 	value 			=	Value_ItBE_Addon_Prot_FIRE;
 
 	visual 			=	"ItMi_Belt_02.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBe_Addon_Prot_FIRE;
 	on_unequip		=	UnEquip_ItBe_Addon_Prot_FIRE;
 
@@ -798,9 +657,6 @@ INSTANCE  ItBe_Addon_Prot_FIRE (C_Item)  //Constantino(Kap3)/Sengrath(4)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
 };
 FUNC VOID Equip_ItBe_Addon_Prot_FIRE()
 {
@@ -814,19 +670,14 @@ FUNC VOID UnEquip_ItBe_Addon_Prot_FIRE()
 // -----------------------------------------------------
 // PROT EdgPoi
 // -----------------------------------------------------
-INSTANCE  ItBe_Addon_Prot_EdgPoi (C_Item)  //Khaled(Kap4)/Orlan(3)	Missionbelohnung von Garett für Feuerwarane (Kap2)
+INSTANCE  ItBe_Addon_Prot_EdgPoi (ItBe_Prototype)  //Khaled(Kap4)/Orlan(3)	Missionbelohnung von Garett für Feuerwarane (Kap2)
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_BELT|ITEM_MISSION|ITEM_MULTI;
 
 	value 			=	Value_ItBE_Addon_Prot_EdgPoi;
 
 	visual 			=	"ItMi_Belt_02.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBe_Addon_Prot_EdgPoi;
 	on_unequip		=	UnEquip_ItBe_Addon_Prot_EdgPoi;
 
@@ -839,9 +690,6 @@ INSTANCE  ItBe_Addon_Prot_EdgPoi (C_Item)  //Khaled(Kap4)/Orlan(3)	Missionbelohn
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
 };
 FUNC VOID Equip_ItBe_Addon_Prot_EdgPoi()
 {
@@ -859,19 +707,12 @@ FUNC VOID UnEquip_ItBe_Addon_Prot_EdgPoi()
 // -----------------------------------------------------
 // PROT TOTAL
 // -----------------------------------------------------
-INSTANCE  ItBe_Addon_Prot_TOTAL (C_Item)  //Hakon(Kap4)
+INSTANCE  ItBe_Addon_Prot_TOTAL (ItBe_Prototype)  //Hakon(Kap4)
 {
-	name 			=	NAME_Addon_Belt;
-
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_BELT|ITEM_MULTI;
-
 	value 			=	Value_ItBE_Addon_Prot_TOTAL;
 
 	visual 			=	"ItMi_Belt_02.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
 	on_equip		=	Equip_ItBe_Addon_Prot_TOTAL;
 	on_unequip		=	UnEquip_ItBe_Addon_Prot_TOTAL;
 
@@ -888,9 +729,6 @@ INSTANCE  ItBe_Addon_Prot_TOTAL (C_Item)  //Hakon(Kap4)
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
-	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
-	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;
 };
 FUNC VOID Equip_ItBe_Addon_Prot_TOTAL()
 {

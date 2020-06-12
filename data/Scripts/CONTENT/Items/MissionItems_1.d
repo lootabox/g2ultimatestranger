@@ -178,24 +178,16 @@ instance ItMi_MariasGoldPlate (C_Item)
 //Valentinos Ring
 //*******************************
 
-INSTANCE ItRi_ValentinosRing(C_Item) //bei Cassia als Belohnung
+INSTANCE ItRi_ValentinosRing(ItRi_Prototype) //bei Cassia als Belohnung
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	flags 					=	ITEM_RING|ITEM_MISSION;
 
 	value 					=	Value_Ri_ProtEdge;
 
 	visual 					=	"ItRi_Prot_Edge_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ValentinosRing;
 	on_unequip				=	UnEquip_ValentinosRing;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description				= "Valentino's Ring";
 
@@ -204,11 +196,6 @@ INSTANCE ItRi_ValentinosRing(C_Item) //bei Cassia als Belohnung
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };
 
 	FUNC VOID Equip_ValentinosRing()
@@ -1183,37 +1170,24 @@ INSTANCE ItRw_Bow_L_03_MIS (C_Item)
 //				Constantinos Schutzring
 //			---------------------------------------------
 //****************************************************************************
-INSTANCE ItRi_Prot_Point_01_MIS(C_Item)
+INSTANCE ItRi_Prot_Point_01_MIS(ItRi_Prototype)
 {
-	name 					=	"Constantino's Ring";
-
-	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_RING|ITEM_MISSION;
 
 	value 					=	Value_Ri_ProtPoint ;
 
 	visual 					=	"ItRi_Prot_Point_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Prot_Point_01_MIS;
 	on_unequip				=	UnEquip_ItRi_Prot_Point_01_MIS;
 
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
-
-	description				=  "Wood Protection";
+	description				=  "Constantino's Ring";
 	
 	TEXT[2]					= NAME_Prot_Point;
 	COUNT[2]				= Ri_ProtPoint;
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-		
 };
 
 	FUNC VOID Equip_ItRi_Prot_Point_01_MIS()

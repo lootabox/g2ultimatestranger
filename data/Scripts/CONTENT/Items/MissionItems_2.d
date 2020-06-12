@@ -661,35 +661,22 @@ func void UseGilbertLetter ()
 		
 };
 
-INSTANCE ItRi_Tengron(C_Item)
+INSTANCE ItRi_Tengron(ItRi_Prototype)
 {
-	name 					=	NAME_Ring;
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	flags 					=	ITEM_RING|ITEM_MISSION;
 
 	value 					=	Value_Ri_Hp;
 
 	visual 					=	"ItRi_Hp_01.3ds";
 
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 	on_equip				=	Equip_ItRi_Hp_01;
 	on_unequip				=	UnEquip_ItRi_Hp_01;
 
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
-
 	description				= NAME_ADDON_TengronsRing;
-	
+
 	TEXT[2]					= NAME_Bonus_HP;
 	COUNT[2]				= Ri_Hp;
-	
+
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-	
 };

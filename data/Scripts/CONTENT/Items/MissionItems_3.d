@@ -1008,11 +1008,8 @@ func void Use_MinenAnteil_Mis ()
 //	Schutzamulett gegen den Schwarzen Blick
 //**********************************************************************************
 
-INSTANCE  ItAm_Prot_BlackEye_Mis (C_Item)
+INSTANCE  ItAm_Prot_BlackEye_Mis (ItAm_Prototype)
 {
-	name 			=	"Soul Summoning Amulet";
-
-	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET|ITEM_MISSION;
 
 	value 			=	Value_Am_HpMana;
@@ -1020,21 +1017,12 @@ INSTANCE  ItAm_Prot_BlackEye_Mis (C_Item)
 //	visual 			=	"ItAm_Hp_Mana_01.3ds";
 	visual 			=	"ItAm_Prot_BlackEye_Mis.3ds";
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
-
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
-
-	description		= 	name;
+	description		= 	"Soul Summoning Amulet";
 	
 	TEXT[3] 		= "Protection from the Black Look";
 	
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-		
 };
 //**********************************************************************************
 //	Gestein aus gesegneter Erde für das Schutzamulett gegen den Schwarzen Blick
