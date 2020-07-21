@@ -63,6 +63,7 @@ STORY\B_Content\B_SCUsesRake.d
 
 AI\MAGIC\B_MagicHurtNpc.d
 
+UltimateStranger\InsertAnything.d
 UltimateStranger\items.d
 UltimateStranger\misc.d
 UltimateStranger\buff.d

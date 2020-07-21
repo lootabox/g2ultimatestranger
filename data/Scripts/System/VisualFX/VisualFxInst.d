@@ -1247,11 +1247,10 @@ INSTANCE spellFX_Light_ACTIVE	(CFx_Base_Proto)
 		emtrjmode_s 		= "FOLLOW TARGET";
      	emtrjeasevel 		= 0.;
      	emTrjOriginNode 	= "BIP01 Head";
-     	emTrjTargetNode 	= "BIP01 Head";
 		emtrjloopmode_s 	= "HALT";
 		emtrjeasefunc_s 	= "LINEAR";
 		emtrjdynupdatedelay = 0.05;
-		emTrjTargetRange	= 0;//1.2;
+		emTrjTargetRange	= 1.2;
 		emTrjTargetElev 	= 89;
 		lightPresetname 	= "FIRESMALL";
 		
@@ -1310,11 +1309,10 @@ INSTANCE spellFX_PalLight_ACTIVE	(CFx_Base_Proto)
 		emtrjmode_s 		= "FOLLOW TARGET";
      	emtrjeasevel 		= 0.;
      	emTrjOriginNode 	= "BIP01 Head";
-     	emTrjTargetNode 	= "BIP01 Head";
 		emtrjloopmode_s 	= "HALT";
 		emtrjeasefunc_s 	= "LINEAR";
 		emtrjdynupdatedelay = 0.05;
-		emTrjTargetRange	= 0;//1.2;
+		emTrjTargetRange	= 1.2;
 		emTrjTargetElev 	= 89;
 		lightPresetname 	= "JUSTWHITE";
 

@@ -1,5 +1,50 @@
 
 //************************************************
+// Spawning light spells above hero
+// https://forum.worldofplayers.de/forum/threads/1559829-Licht-Zauber-nach-Laden-richtig-ausrichten
+//************************************************
+
+func void makeVobInvisible(var zCVob myVob)
+{
+	myVob.bitfield[0] = myVob.bitfield[0] & ~zCVob_bitfield0_castDynShadow; // schatten ausstellen
+	myVob.bitfield[0] = myVob.bitfield[0] & ~zCVob_bitfield0_showVisual; // visual ausstellen
+	myVob.bitfield[0] = myVob.bitfield[0] & ~zCVob_bitfield0_collDetectionDynamic; // dyn collision ausstellen
+};
+
+func void spawnFxAboveNpc(var c_npc npc, var string fx, var int height) {
+    if (!Hlp_IsValidNpc(npc)) {
+        MEM_Info("spawnFxAboveNpc: npc is invalid");
+        return;
+    };
+
+    var int npcPtr; npcPtr = _@(npc);
+    var zCVob vob; vob = _^(npcPtr);
+    var int pos[3];
+    var int dir[3];
+
+    pos[0] = vob.trafoObjToWorld[ 3]; dir[0] = vob.trafoObjToWorld[ 2];
+    pos[1] = vob.trafoObjToWorld[ 7]; dir[1] = vob.trafoObjToWorld[ 6];
+    pos[2] = vob.trafoObjToWorld[11]; dir[2] = vob.trafoObjToWorld[10];
+
+    var int LightParentPtr; LightParentPtr= MEM_SearchVobByName("LIGHTPARENT");
+    if (!LightParentPtr) {
+        LightParentPtr = InsertVobAsChildPos("LIGHTPARENT", "ItMi_DarkPearl.3ds", _@(pos), _@(dir), _@(npc));
+    } else {
+        AlignVobAt(LightParentPtr, _@(vob.trafoObjToWorld));
+    };
+
+    var zCVob Light_Vob; Light_Vob = _^(LightParentPtr);
+    makeVobInvisible(Light_Vob);
+
+    // Insert Fx
+    Wld_PlayEffect(fx, Light_Vob, Light_Vob, 0, 0, 0, FALSE);
+
+    // Update position
+    Light_Vob.trafoObjToWorld[7] = addf(Light_Vob.trafoObjToWorld[ 7], mkf(height)); // Set light-vob position
+    AlignVobAt(LightParentPtr, _@(Light_Vob.trafoObjToWorld)); // update light-vob position
+};
+
+//************************************************
 // Broadcasting methods
 // https://forum.worldofplayers.de/forum/threads/775333-Script-Broadcasts?p=25881558&viewfull=1#post25881558
 //************************************************

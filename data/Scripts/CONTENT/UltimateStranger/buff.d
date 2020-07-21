@@ -178,7 +178,7 @@ func void light_persister_reset(var c_npc npc) {
     var int bh; bh = Buff_Has(npc, light_persister);
     if (bh) {
         var lCBuff b; b = get(bh);
-        Wld_PlayEffect (b.name, npc, npc, 0, 0, 0, FALSE);
+        spawnFxAboveNpc(npc, b.name, 175);
     };
 };
 
