@@ -1,0 +1,924 @@
+
+------------------------------------------------------------------------------------- Spells / Magic
+
+----------- FBT / Typhoon
+
+	FBT
+
+Fire arrow
+Fireball
+Small lightning
+
+Ice arrow
+Ice lance
+lightning bolt
+
+make creatures NOT use FBT's
+
+----------- Overriding magic statuses
+
+magic cage > freeze > whirlwind > burn
+
+----------- New spells / refactors
+
+remake acid -> toxic rain
+holy missile remake ?
+unused bigass fireball rune texture -> explosion
+
+----------- Random issues
+
+Acid spell looks dumb and does not use buff system
+Explosion not AOE
+Explosion does not trigger on ground
+Explosion sound cuts off
+Extricate doesn't work
+Quake inconsistent and sound too loud
+TODO Dust Devil cast time--
+TODO inventory order of spells
+
+----------- Xardas
+
+xardas tower (5 books) -> holy missle~/destroy undead?, breath of death, wave of death
+
+----------- Level balance
+
+BALANCE SPELLS PER CIRCLE
+6	7	7	6	5	5
+destroy undead c3->c4
+new spell c3
+6	7	7	7	5	5
+
+----------- Paladin spells
+
+* = not done
+				mana cost		Base		Mana effect				other
+*def buff		60%				-			Magic block				
+*att buff		20%/hit			-			Weapon damage			
+*Holy Light		20%				Dur 180s	Duration				
+
+Harm Evil AOE
+Heal spell delay 3s and duration 4s
+
+----------- Beliar spells
+
+	Fire Arrow				Jharkendar X in swamp										Create Guardian
+	Heal light wounds		Jharkendar in canyon path									Steal Energy
+	Heal light wounds		Khorinis orc camp at pass									Insect Swarm
+	Summon goblin skeleton	Khorinis Sekob's chest										Create Zombie
+	Ice Arrow				Valley of Mines stonehenge crypt							Cry of the Dead
+	Fear					Valley of Mines In the cave under the orc shaman tents.		Root Snare
+S	Fear					Valley of Mines In Xardas' old tower.						Beliar's Wrath
+
+
+
+----------- Staves
+												dmg	mana	effect					Infusion			Chapter		Affects
+**Staff of Fire			ItMW_Addon_Stab01		25	25		damage+10				next damage +25%	2			fire
+Magic Staff				ItMW_Addon_Stab02		20	20		full recovery -50%		mana overflow		2			ALL
+**Staff of Water		ItMW_Addon_Stab03		35	30		mana cost -3			next cost -25%		3			ice/water
+Ulthar's Staff			ItMW_Addon_Stab04		30	40		combine two staves							3			???
+**Typhoon				ItMW_Addon_Stab05		40	35		rapid fire				30% faster charge	3+			low tier/charge
+Claw of Beliar									__	__		no life cost beliar							3+			beliar
+
+
+Upgrading steps
+1	rune	black_ore	sulfur (6)			pitch (6)			pray (innos)
+2	rune	black_ore	ore (12)			rock_crystal (3)	pray (innos)
+3	rune	black_ore	glacier_quartz (6)	aquamarine (3)		pray (innos)
+4	rune	black_ore	black_pearl (1)		holy_water (1)		pray (beliar)
+5	rune	black_ore	coal (12)			gold_nugget (24)	pray (innos)
+
+
+------------------------------------------------------------------------------------- Abandoned mine
+
+----------- Vobs stuff
+
+OW_MUSHROOM_V1
+OW_MUSHROOM_V2
+NW_CAVEWEBS_V201
+OW_LOB_WOODPLANKS_V1
+OW_LOB_WOODPLANKS_V2
+OW_LOB_WOODPLANKS_V4
+OW_LOB_WOODPLANKS_V5
+BEDHIGH_PC
+OW_PALISSADE
+OW_LOB_FENCE_V1
+OW_LOB_FENCE_V2
+OW_LOB_FENCE_V3
+
+----------- Swamp camp lights
+
+PC_CRYSTALLIGHT_02.3DS
+
+cdStatic:FALSE
+
+Fire
+	fireSlot:BIP01 FIRE
+	fireVobtreeName:FIRETREE_PSI_MEDIUM.ZEN
+
+----------- Vob stuff
+
+NW_NATURE_STONE_CULT_STAND_02.3DS
+MIN_LOB_COUPLESTONES.3DS
+MIN_LOB_STONE_V2_30.3DS
+MIN_LOB_STONE_V1_30.3DS
+MIN_MOB_STONE_V2_20.3DS
+
+OW_MUSHROOM_V2.3DS
+OC_DECOROOF_V1.3DS
+
+OC_LOB_GALGEN_V2.3DS
+
+----------- Minecrawler stuff?:
+
+zCVob
+CRDIVEINS.TGA
+CR_DI_OPENEGG.3DS
+NW_CAVEWEBS_V201.3DS
+NW_MISC_SPIDERWEBS_01.3DS
+
+
+----------- Monsters
+Minecrawlers (dead near zombies)
+Zombies
+Goblins
+
+
+------------------------------------------------------------------------------------- Amulet/Ring/Belt placement
+
+Unused:
+ITRI_FERNANDO
+ITRI_XARDAS
+
+Found in ZEN:
+
+Addon\AddonWorld.ZEN:                   ITRI_MANA_01
+Addon\AddonWorld.ZEN:                   ITRI_PROT_EDGE_01
+Addon\AddonWorld.ZEN:                   ITRI_DEX_01
+
+NewWorld\NEWWORLD.ZEN:                  ItRi_Prot_Point_01_MIS
+NewWorld\NEWWORLD.ZEN:                  ITRI_PROT_MAGE_01
+NewWorld\NEWWORLD.ZEN:                  ITRI_MANA_02
+NewWorld\NEWWORLD.ZEN:                  ITRI_STR_01
+NewWorld\NEWWORLD.ZEN:                  ITRI_PROT_EDGE_01
+NewWorld\NEWWORLD.ZEN:                  ItRi_Mana_01
+NewWorld\NEWWORLD.ZEN:                  ITRI_PROT_EDGE_01
+NewWorld\NEWWORLD.ZEN:                  ItRi_Prot_Fire_02
+NewWorld\NEWWORLD.ZEN:                  ITRI_PROT_POINT_02
+
+OldWorld\OldWorld.zen:                  ItRi_Prot_Edge_02
+OldWorld\OldWorld.zen:                  ITRI_DEX_02
+OldWorld\OldWorld.zen:                  ITRI_STR_01
+OldWorld\OldWorld.zen:                  ITRI_PROT_FIRE_02
+OldWorld\OldWorld.zen:                  ITRI_HP_01
+OldWorld\OldWorld.zen:                  ITRI_PROT_EDGE_01
+OldWorld\OldWorld.zen:                  ITRI_PROT_MAGE_02
+
+Addon\AddonWorld.ZEN:                   ItAm_Prot_Fire_01
+
+NewWorld\NEWWORLD.ZEN:                  ItAm_Strg_01
+
+OldWorld\ABANDONEDMINE.ZEN:             ITAM_PROT_EDGE_01
+
+OldWorld\FREEMINE.ZEN:                  ITAM_PROT_FIRE_01
+
+OldWorld\OldWorld.zen:                  ITAM_STRG_01
+
+OldWorld\ORCGRAVEYARD.ZEN:              ItAm_Prot_Fire_01
+OldWorld\ORCGRAVEYARD.ZEN:              ItAm_Prot_Mage_01
+
+------------------------------------------------------------------------------------- Stone of knowledge?
+// Stein Des Wissen (SDW)
+
+			ani			("t_SDW_Stand_2_S0"		1	"s_SDW_S0"	0.1	0.0	M.	"Hum_SteinDesWissens_A01.ASC"		F	0	5)
+			ani			("s_SDW_S0"				1	"s_SDW_S0"	0.0	0.0	M.	"Hum_SteinDesWissens_A01.asc"		F	5	5)
+			ani			("t_SDW_S0_2_Stand"		1	""			0.1	0.1	M.	"Hum_SteinDesWissens_A01.asc"		R	0	5)
+			ani			("t_SDW_S0_2_S1"		1	"s_SDW_S1"	0.0	0.0	M.	"Hum_SteinDesWissens_A01.asc"		F	5	20)
+
+			
+			ani			("t_SDW_S1_2_S0"		1	"s_SDW_S0"	0.1	0.1	M.	"Hum_SteinDesWissens_A01.asc"		R	5	20)
+			ani			("s_SDW_S1"				1	"s_SDW_S1"	0.0	0.0	M.	"Hum_SteinDesWissens_A01.asc"		F	20	100)
+			{
+				*eventSFX	(20	"mob_sdw"	R:1000	EMPTY_SLOT	)
+				*eventPFX		(20	1	"CS_FOKUS2"	"zs_Righthand"	ATTACH	)
+				*eventPFX		(21	2	"RESURRECTION"	"zs_Righthand"	ATTACH	)
+				*eventPFXStop	(98	2	)
+				*eventPFXStop	(99	1	)
+			}
+
+------------------------------------------------------------------------------------- Belts
+
+*paladin	metal
+	novice	cloth
+	light militia	leather
+*???	metal
+	light mercenary	leather
+	farmer's clothing	leather
+	*heavy bandit's	leather
+	medium bandit's	leather
+	*cor angar's	metal
+	*medium/heavy dragon hunter's	leather
+	*heavy militia's	leather
+
+*unused :O
+
+
+Belt of the Firewalker
+
+100	125	150	175	200
+0	25	25	25	25
+
+0	50	100	150	200
+0	50	50	50	50
+
+Ring of Flame Protection
+
+100	112	124	136	148	161	174	187	200
+0	12	12	12	12	13	13	13	13
+
+0	25	50	75	100	125	150	175	200
+0	25	25	25	25	25	25	25	25
+
+
+------------------------------------------------------------------------------------- Runemaking
+Gain per rune	+5%
+Circle	req
+1		0%
+2		20%
+3		40%
+4		60%
+5		80%
+6		100%
+
+------------------------------------------------------------------------------------- Alchemy
+Gain per recipe	+5%
+req	gain	Recipe
+0%	45%
+0%	5%		Essence of Healing
+0%	10%		Extract of Healing
+0%	5%		Mana Essence
+0%	10%		Mana Extract
+0%	5%		Essence of Healing -> Extract of Healing		NEW
+0%	5%		Mana Essence -> Mana Extract					NEW
+0%	5%		Speed Potion
+
+30%	45%
+30%	10%		Elixir of Healing
+30%	10%		Mana Elixir	
+30%	5%		Extract of Healing -> Elixir of Healing			NEW
+30%	5%		Mana Extract -> Mana Elixir						NEW
+30%	5%		Elixir of Mental Alteration						MECHANIC	mana regeneration rate -100%
+30%	10%		Antidote										NEW			Removes venom
+
+60%	40%
+60%	10%		Pure Life
+60%	10%		Pure Mana
+60%	5%		Elixir of Healing -> Pure Life					NEW
+60%	5%		Mana Elixir -> Pure Mana						NEW
+60%	10%		Potion of Haste 								NEW
+60%	5%		???												NEW
+
+90%	10%
+90%	10%		Elixir of Life
+90%	10%		Elixir of Spirit
+90%	10%		Elixir of Strength
+90%	10%		Elixir of Dexterity
+
+
+model swap: elixirs <-> pure
+model use: black fever -> ???
+model use: speed potion -> potion of haste
+model use: addiction -> speed potion
+model use: heal possession -> antidote, black fever, addiction
+model use: tear -> heal possession
+
+
+268 meadow knotweed
+25 king's sorrel
+					570	345	90	
+	Plants			PL1	PL2	PL3	Effect
+Essence of Healing	6			Heal 20%
+Extract of Healing	5	4		Heal 40%
+Elixir of Healing	4	3	2	Heal 60%
+Pure Life Energy	2p	1p		Heal 100%
+Elixir of Life		6	4	2	+20 HP
+
+					295	165	75	
+	Plants			PL1	PL2	PL3	Effect
+Mana Essence		6			Mana 20%
+Mana Extract		5	4		Mana 40%
+Mana Elixir			4	3	2	Mana 60%
+Pure Mana			2p	1p		Mana 100%
+Elixir of Spirit	6	4	2	+5 Mana
+
+------------------------------------------------------------------------------------- Smithing
+Gain per sword	+2%
+
+R = Rough
+N = Normal
+F = Fine
+F10 = Fine (+10%)
+O = Ore
+
+lp					0%		10%		20%		30%		40%		50%		60%		70%		80%		90%		100%	Dmg range
+2	Short Sword		R		N		F				F10														12-25
+4	Sword						R		N		F				F10											25-35
+6	Longsword								R		N		F				F10								30-45
+8	Broadsword											R		(N)		(F)				F10					???
+10	Bastard Sword													R		N		F				F10		45-65
+
+4	Ore Longsword									O														45
+6	Ore Broadsword													O										60
+8	Ore Battle Blade																O						75
+10	Ore Dragon Slayer																				O		90
+
+4	Ore Two-Hander									O														50
+6	Ore Large Two-Hander											O										70
+8	Ore Battle Blade																O						90
+10	Ore Dragon Slayer																				O		110
+
+
+
+------------------------------------------------------------------------------------- ZEN changes
+
+VoM			Torturer's Axe -> Orc Slayer
+Pyramid		Orc Slayer -> Rune Sword
+
+Remove lockpick from Ruperts table
+Remove lockpick and map from Matteos table
+Remove crossbows and blots from bosper
+Remove potions, scrolls and torches from baltram
+Remove lockpicks and potions from Sarah
+Change spiked cudgel to war cudgel on Sarah
+Remove bows from Sarah
+
+Move light orc axe behind bandits in the cave
+
+Trees behind orc wall
+fix two holes in orc fence
+make hole in orc wall
+fix slope near orc wall
+fix chests at xardas old old tower
+vino&grimbald beds
+disable beds in swamp camp
+block way at grimbald->canyon->stairs start->stairs middle->stairs bottom
+
+----------- Beds for save-by-sleep challenge
+
+onStateFunc SLEEPABIT
+focusName BED
+visual BEDHIGH_PC.ASC
+cdDyn: TRUE
+staticVob: TRUE
+vobFarclipZScale: 1
+showVisual TRUE
+oCMobDoor
+
+
+---------- music
+
+SURFACE_WL_STRIPPED
+	DEMONTOWER
+		oCZoneMusic
+			NEWCAMP_SNOW_NCI
+			NEWCAMP_SNOW_NCO
+
+SURFACE
+	SURFACE
+		oCZoneMusicDefault
+			OLDWORLDDEFAULT_OWD
+	DEMONTOWER
+		oCZoneMusic
+			NEWCAMP_SNOW_NCI	(same as above)
+			NEWCAMP_SNOW_NCO	(same as above)
+			DRAGONLOCATION_DLC	(fire)
+			DRAGONLOCATION_DLC	(stone)
+			DRAGONLOCATION_DLC	(swamp)
+			(ice?)
+
+PSICAMP
+	PSICAMP
+		oCZoneMusic
+			PSICAMP_DLC
+			PSICAMP_DLC
+			PSICAMP_DLC
+			(orc camp / alpha imprisoned)
+
+FREEMINE
+	FREEMINE
+		oCZoneMusicDefault
+			FREEMINE_BAN
+			(old mine / minecrawler)
+
+ORCGRAVEYARD
+	ORCGRAVEYARD
+		oCZoneMusicDefault
+			ORCGRAVEYARD_BAN
+			(orc temple)
+
+ABANDONEDMINE
+	ABANDONEDMINE
+		oCZoneMusicDefault
+			???
+
+
+Xardas old tower			Xardas tower
+Xardas old old tower		Crypt
+Abandoned mine				Bandits hideout
+Old camp					alpha old camp
+
+
+
+
+------------------------------------------------------------------------------------- Quest changes
+Brutus -> Den quest
+
+
+
+
+------------------------------------------------------------------------------------- Ini tweaks??
+
+1) zVidEnableAntiAliasing=0 and zTexAnisotropicFiltering=0:
+
+Can be set to 1 to enable AA and AF ingame, using its own technical settings of year 2003. It's strongly recommended to disable those settings here and enable them in your graphic card's driver software for better stability and performance.
+
+3) useQuickSaveKeys=0
+
+Set to 1 if you want to use quicksave (F5) and quickload (F9) keys. Don't listen to people saying it will corrupt your saves, as Union prevents that from happening.
+
+4) spawnRemoveNpcOnlyIfEmpty=0
+
+Set to 1 if you want corpses of slain creatures, monsters, and people stay in the world after their death, but only if they still have something in their inventory. This might make the game easier, so use it at your own educated decision.
+
+------------------------------------------------------------------------------------- Trader tweaks
+
+----------- WEAPON RESTRICTIONS
+
+Orc Slayer
+Dragon Slicer
+Stormbringer
+Storm Cudgel
+Wing Cudgel
+
+	Martin
+Paladin's Two-Hander
+Paladin's Sword
+Militia Short Sword
+
+	Pirates
+Plank breaker
+Heavy Pirate's Cutlass
+Pirate's Cutlass
+Boarding pike
+Boarding knife
+
+	Bandits
+Heavy Cutlass
+Giant machete
+Old giant machete
+Machete
+Old machete
+
+----------- Already removed items from G2 classic trade inventories
+
+c1
+Baltram			Amulet of Life
+Bennet			Mercenary's Belt
+Bosper			Leather Belt, Ring of Dexterity
+Canthar			Amulet of Spritual Power
+Constantino		Healing/Mana potion recipes
+Engor			Ring of Inconquerability, Amulet of Fire, Crossbows (L01, L02, H01)
+Gorax			Sash of Preparedness, Sash of Fire, Staff of Fire, Staff of Thunder, Ulthar's staff, Ring of Magic
+Hakon			Leather Belt, Militia Belt, Harness Amulet
+Ignaz			4 Pure Life/Mana, Scrolls (All transforms, 1 Sleep)
+Isgaroth		Ring of Enlightenment, Amulet of Magic
+Jora			Amulet of Oak Skin
+Karras			Ring of Inconquerability
+Khaled			Leather Belt
+Orlan			Leather Belt, Ring of Defense
+Sagitta			Pepper Bag, 3 Pure Life/Mana, Healing/Mana potion recipes
+Salandril		Scrolls (1 Firerain, 1 Storm), Amulet of Fire
+Sengrath		Fire Ring, Belt of Strength, Belt of Dexterity
+Tandor			Amulet of Ore Skin
+Zuris			Pepper Bag, 2 Pure Life/Mana
+
+Addon Garett	Amulet of Fire, Ring of Defense
+Addon Samuel	Fire Ring
+Addon Cronos	Staff of Water, Typhoon
+Addon Lucia		Ring of Dexterity
+Addon Huno		Ring of Strength
+Addon Erol		Ring of Iron Skin, Amulet of Strength
+Addon Martin	Ring of Magic
+
+
+c2
+Bosper			Belt of Skill
+Engor			Crossbows (M01)
+Gorax			Harness Amulet
+Ignaz			4 Pure Life/Mana
+Orlan			Belt of Skill
+Sagitta			3 Pure Life/Mana
+Zuris			2 Pure Life/Mana
+
+c3
+Bosper			Belt of Dexterity
+Engor			Crossbows (M02)
+Hakon			Belt of Defense
+Ignaz			4 Pure Life/Mana
+Khaled			Belt of Defense
+Lutero			Belt of Dexterity, Ring of Power
+Orlan			Belt of Protection (2)
+Zuris			3 Pure Life/Mana
+
+c4
+Engor			Crossbows (H02)
+Gorax			Scrolls (2 SumDemon, 2 Firerain)
+Hakon			Belt of Protection (1), Protector's Belt
+Ignaz			4 Pure Life/Mana
+Jora			Belt of Strength
+Khaled			Belt of Protection (1+2)
+Sagitta			3 Pure Life/Mana
+Zuris			2 Pure Life/Mana
+
+c5
+Zuris			5 Pure Life/Mana
+
+
+----------- ???
+weapon equip for civilians, traders
+
+
+------------------------------------------------------------------------------------- Trainer tweaks / stances
+
+Alrik		2	(K)		1h		
+Buster		2	(K)		1h		
+Cavalorn	0	(K)		1h		
+Cedric		0	(K)		1h		
+Babo		8	(K)		2h		
+Hagen		0	(K)		2h		
+Girion		8	(K)		2h		
+Lee			0	(K)		2h		
+Rod			0	(K)		2h		
+Cord		1~	(K)		1h/2h	
+Wulfgar		1~	(K)		1h/2h	
+
+Morgan		3	(J)		1h		
+Henry		4~	(J)		2h		
+Hokurn		1~	(J)		1h/2h	
+
+Keroloth	0	(VOM)	1h/2h	
+
+Girion		4	(DI)	1h/2h	
+Lares		2	(K)		1h		
+Gorn		2	(DI)	2h		
+Lee			4	(DI)	1h/2h	
+
+1h
+PAL	7+2 (Wulfgar, Cedric)
+DGH	7
+KDF	7+1 (Wulfgar)
+
+2h
+PAL	5+2 (Wulfgar, Girion, Lord Hagen)
+DGH	5+1 (Rod)
+KDF	5+2 (Wulfgar, Babo)
+
+bow
+PAL	5
+DGH	5
+KDF	5
+
+xbow
+PAL	3+1 (Ruga)
+DGH	3
+KDF	3+1 (Ruga)
+
+
+"You are demanding more than I can teach you"
+"I can't teach you anymore, you're too good"
+
+
+G1 trainers
+Lee			x2 2h						svm 08
+Scorpio		x2 xbow						svm 13
+Cavalorn	x2 bow	sneak				svm 12
+Wolf		x2 bow						svm 09
+Buster		acrobatics					svm 04
+Fingers		2x lock	2x pockets			svm 05
+Wedge		2x lock	2x pockets	sneak	svm 05
+Cord		2x 1h						svm 14
+GorNaToth	2x 1h						svm 11
+Scatty		2x 1h						svm 01
+CorAngar	2x 2h						svm 08
+Thorus		2x 2h						svm 09
+Corristo	circle 1-4					svm 14
+Saturas		circle 1-5					svm 14
+Torrez		spell book 1				svm 04
+Aidan		teeth,skin,claw,reptile		svm 13
+Drax		teeth,skin,claw,reptile		svm 06
+Templer1438	minecrawler mandibles		svm 13
+
+
+
+Combo counter
+Talent
+Stance
+
+
+
+stances from returning
+DRAGON (fixed sidestep?)
+HUMANS_1H_FLY (fighting skeleton mage?)
+HUMANS_1HST1 (slower fighter stance)
+HUMANS_1HST2 (same)
+HUMANS_1HST3 (broken shit)
+HUMANS_1HST1 (same)
+HUMANS_1HST2 (same)
+HUMANS_1HST3 (stupid shit)
+	HUMANS_AXEST1 (Axe, 5 combo slow)			SKELETON?
+HUMANS_AXEST2 (Axe, 4 combo fast)
+HUMANS_BOWT1 (sniper)
+HUMANS_BOWT2 (cool fast)
+HUMANS_CBOWT1 (same?)
+HUMANS_CBOWT2 (same?)
+HUMANS_FLEE (ok,cool,incomplete)
+	HUMANS_MAGESPRINT (same as _FLEE,complete)
+HUMANS_NEWTORCH (whatevs)
+HUMANS_O2HL2 (staff?? boss 2h stance)
+	HUMANS_PIRATE (stance for enemy)	LESSER SKELETON
+	HUMANS_RAPIER_ST1 (fast 4)			DEX
+	HUMANS_RAPIER_ST2 (very fast 5)		DEX
+	HUMANS_RAPIER_ST3 (fast 6)			DEX
+HUMANS_SPEER (spear, shit)
+HUMANS_SPST1 (spear, bad)
+HUMANS_SPST2 (spear, bad)
+HUMANS_STAFD (evil staff stance?)
+HUMANS_STAFDEMON (black smoke staff stance)
+HUMANS_STAFG (air staff stance)
+HUMANS_STAFW (water staff stance)
+HUMANS_STAFX (fire staff stance)
+HUMANS_WOUND (unusable, both)
+ORC_GLM_MAGE (tall undead orc shaman anim)
+GOBLIN (same)
+GOBLIN_BERSERK (different...)
+Keiler (bit different?)
+	SKELETON_WAIT (COOL!)
+TROLL (walk?run?charge attack?)
+ZOMBIE (same? charge attakc?)
+
+
+The Way of Battle (1h/2h)
+The Island (lore)
+The Law of the Island (lore)
+Hunt and Prey (animals)
+
+Double Blocks	Block	-> CC+1 for 3 attacks	(+5% 2h)
+Southern Defense Art	-> CC+1 for 3 attacks	(+5% 1h)
+
+
+------------------------------------------------------------------------------------- Guild walk animations
+
+Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_MAGE.MDS", Time_Speed);
+Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_MILITIA.MDS", Time_Speed);
+Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_RELAXED.MDS", Time_Speed);
+Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_TIRED.MDS", Time_Speed);
+
+------------------------------------------------------------------------------------- Portal strip
+
+----------- ignores
+Claw of Beliar
+Stone Tablets
+
+----------- Coordinates????????
+
+-1810.75708 274.021332 -13756.0254 -1783.75708 283.021332 -13729.0254 
+0000803f0000000000000000000000000000803f0000000000000000000000000000803f
+-1797.25708
+274.021332
+-13742.5254
+
+
+------------------------------------------------------------------------------------- Dragon Slicer
+
+Prevent pickup until guardians are dead /
+Disable item pickup during combat
+
+------------------------------------------------------------------------------------- Special weapons
+
+guild +10/+20	vs draconians/evil
+
+1h str
+Orc Slayer				+25 vs orcs
+Torturer's Axe			+15 vs humans
+Inquisitor				+15 vs evil
+Rune Sword				Block spell
+Paladin's Sword			+15 vs undead
+Wind cudgel				???
+
+1h dex
+Rapiers?				combo counter +1/+2
+Wolf weapons			+15 vs wolves
+
+2h
+Dragon slicer			+15 vs draconians
+Stormbringer			???
+Storm cudgel			???
+Rune Power				Adds 30% mana
+Krush Morok				+40 vs humans
+Paladin's Two-Hander	+15 vs undead
+Novice' / Ring of Water' Quarterstaff	+10/+5 mana
+
+
+Paladin weapon coating
+	+10		Holy water
+	+10%	Blank rune
+
+	Ruby blade only found
+
+------------------------------------------------------------------------------------- Cool sound effects?
+
+HOWLING_01
+LUTE (https://www.youtube.com/watch?v=L_Cf4BsiYhw https://www.youtube.com/watch?v=dh-vS62VfV0 )
+MAGIC_DEEP01/02
+MYSTERY_09 (B_Say_CrimsonBeliar)
+SFX_INNOSEYE
+SMOKE_JOINT
+VOB_WINDMILL
+WATERFALL_CAVE
+ZOMBIE_01
+
+------------------------------------------------------------------------------------- ARMOR
+	 -o+	Blunt	Edge	Point	Magic	Fire
+Citizen		-		-
+Leather		-		o		-
+Ring'o'w	-		o		-		-
+Crawler		o		+		+		-
+
+Mercenary	+		o		-		-
+Militia		o		o		o		-
+Novice		-		-				+
+
+DH			+		+		o		o		+
+Paladin		+		+		+		+		o
+Mage		o		o		o		+		o
+
+Pirate L	o		o		o		-
+Pirate M	o		o		o		-
+
+Bandit M	o		o		o
+Bandit H	o		o		o
+Raven		o		o		o
+
+BookstandAnimals	Info about animal damage types
+
+------------------------------------------------------------------------------------- BELIAR SHRINE
+
+Tier 1
+Rega, the farmer			50/160
+Alrik, the fighter			50/160
+Edda, the cook				50/160
+Fenia, the fish merchant	50/160	m
+Gritta, the snob			50/160
+Pepe, the shepherd			50/160
+Kati, the housewife			50/160
+Vanja, the whore			50/160
+Samuel, the brewer			50/160	m	J
+Draal, the prisoner			50/160		OW
+Engor, the quartermaster	50/160	M	OW
+Parlaf, the blacksmith		50/160		OW
+
+Tier 2
+Brian, the blacksmith		100/280	m
+Hakon, the merchant			100/280	m
+Lehmar, the moneylender		100/280
+Thorben, the carpenter		100/280	m
+Ruga, the crossbowman		100/280
+Rupert, the apprentice		100/280
+Rukhar, the drunkard		100/280
+Bodo, the farmer			100/280
+Maleth, the shepherd		100/280
+Owen, the woodcutter		100/280		J
+Fortuno, the novice			100/280		J
+Grimes, the convict			100/280		OW
+Fed, the convict			100/280		OW
+
+Tier 3
+Alwin, the shepherd			125/400
+Coragon, the inn keeper		125/400	m
+Brahim, the cartographer	125/400	m
+Pablo, the militia man		125/400
+Egill, the farmer			125/400
+Mortis, the blacksmith		125/400
+Boltan, the prison guard	125/400
+Bartok, the hunter			125/400
+Miguel, the bandit			125/400		J
+Paul, the blacksmith		125/400		J
+Cavalorn, the hunter		125/400
+Tandor, the paladin			125/400		OW
+
+Tier 4
+Garond, the paladin			150/520	(I)	OW
+Skip, the pirate			150/520		J
+Gorax, the magician			150/520
+Orlan, the innkeeper		150/520
+Onar, the farmer			150/520	(I)
+
+
+------------------------------------------------------------------------------------- ORC_BODYCOMMANDER
+
+------------------------------------------------------------------------------------- RANDOM
+
+Exploding fire arrows
+Restrict teachers
+More use for dragon scales/blood
+More use for hearts
+Paladin tier 3 runes put somewhere
+Maps more expensive, harder to find
+make swamp tree house only place for VoM full map
+Teacher limits
+Stone Sentinel immunity
+
+Orc slayer bullshit! FP_TROLLAREA_TEMPLE
+
+CAES_OC10 mud
+
+
+minimod holy sword effect
+minimod level 20 beliar weapon effect
+minimod transformation duration
+minimod summon nerf
+
+Armor of Raven's Guard can't be found anymore.
+harad buff
+bosper nerf
+constantino buff
+
+Move runesword to VoM monastery
+Create stone tablets to VoM
+Create permanent potions to VoM
+
+
+Cant hit someone right in front of you with spells/ranged.
+Sometimes when an NPC engages a conversation with the player, the player takes an extra step towards them, which may lead to a untimely death if the NPC is guarding a passage.
+
+------------------------------------------------------------------------------------- STRANGER
+
+He who is willing to renounce all depravity and wanders on the path of righteousness, shall know where the source of my power lies hidden. So that he might use it to break the chains of this world and prove worthy to receive Chromanin.
+
+The Wise One sees to having a general overview before he dedicates himself to his next mission.
+
+(I took a very strange tome from the Skeleton Mage in the Fog Tower. Chromanin! It seems to be a riddle a mysterious stranger set to this world)
+
+---
+
+Carried from the tides of time, Chromanin's visions have opened my eyes. No price could be high enough to ever renounce my faith in them, for it touched my heart too intensely.
+
+What is devided will be reunited, after being massively separated for a short time.
+
+---
+
+Oh, Ancient Gods. How can it be that a man like me, simple and unworthy, may receive such great a legacy. I feel great fear to lose all of it again by a slight faltering in word or deed.
+
+The wise fisherman occasionally tries to get lucky on the other side of the lake.
+
+---
+
+I dare not hope to be in the presence of Chromanin one day. Gone are the days of wasting and wailing. So easy it will be to acheive absolute perfection. I'm not far from it!
+
+Long forgotten are the deeds of those who once were aboard.
+
+---
+
+But I shall not walk this path alone. This honor is mine. I must accept to share the power within myself with the worthy ones who are to come and find me. I hope they're coming soon...
+
+You will find me where it all began.
+
+---
+
+(The mysterious stranger is dead. Those demons have killed him. There seemed to be some kind of bond between him an those creatures from hell. Otherwise, he wouldn't have come back to this place. He's taken the secret he apparently wanted tho share to the grave.)
+
+
+
+			The stranger fog tower		SPAWN_CAES_FOGTOWER 10 11 12
+	100xp	castle tower				STRANGER_CASTLE_1
+	200xp	volcano tower				STRANGER_VOLCANO_1
+	300xp	swamp entrance tree house	STRANGER_TREE_HOUSE_1
+	400xp	ice region border tower		STRANGER_TREE_HOUSE_2
+	500xp	monastery					STRANGER_MONASTERY_1
+	600xp	psi swamp					STRANGER_SWAMP_1
+	700xp	stonehenge tree house		STRANGER_TREE_HOUSE_3
+	800xp	bandit cave					STRANGER_BANDIT_1
+	900xp	volcano secret cave			STRANGER_VOLCANO_2
+	1000xp	fog tower					STRANGER_FINAL
+
+
+CAES_MAGICTOWER8 / SPAWN_CAES_MAGICTOWER_SKELETONMAGE1
+SPAWN_CAES_FOGTOWER
+
+
+------------------------------------------------------------------------------------- Hosh Pak quest
+
+Move hosh pak -> orc graveyard -> swamp temple
+Make Urshak go to swamp temple once hoshpak is dead (OW_HOSHPAK_04)
+
+PSI_TEMPLE_SITTING_PRIEST, PSI_TEMPLE_ROOMS _02, PSI_TEMPLE_IN_08
