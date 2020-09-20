@@ -27,7 +27,7 @@ PROTOTYPE Mst_Default_Wisp(C_Npc)
 	protection	[PROT_MAGIC]		=	0;
 	
 	//----- Damage Types ----	
-	damagetype 						=	DAM_EDGE;
+	damagetype 						=	DAM_MAGIC;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;

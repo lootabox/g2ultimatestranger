@@ -154,11 +154,12 @@ func int Handle_Melee_Dmg(var c_npc att, var c_npc vic)
 Print(ConcatStrings(ConcatStrings(att.name," - "),wpn.name));
 var string pristr; pristr = IntToString(dmg);
 
-	// Get protection
+	// Get protection (when attacked with a weapon humans always use PROT_POINT / weapon protection and non-humans go according to weapon damage type)
 	var int prot;
-	if 		wpn.damagetype == DAM_EDGE		{ prot = vic.protection[PROT_EDGE]; }
+	if 		vic.guild < GIL_SEPERATOR_HUM	{ prot = vic.protection[PROT_POINT]; }
 	else if wpn.damagetype == DAM_BLUNT		{ prot = vic.protection[PROT_BLUNT]; }
-	else if wpn.damagetype == DAM_POINT		{ prot = vic.protection[PROT_POINT]; };
+	else if wpn.damagetype == DAM_EDGE		{ prot = vic.protection[PROT_EDGE]; }
+	else /*if wpn.damagetype == DAM_POINT*/	{ prot = vic.protection[PROT_POINT]; };
 
 	// Check immunity
 	if (prot == IMMUNE) 	{ return 0; };
@@ -196,7 +197,7 @@ func int Handle_Fist_Dmg(var c_npc att, var c_npc vic)
 	// Bloodfly / Swampdrone venom
 	if (att.aivar[AIV_MM_REAL_ID] == ID_BLOODFLY || att.aivar[AIV_MM_REAL_ID] == ID_SWAMPDRONE)
 	{
-		dot_venom_apply(vic, att.damage[DAM_INDEX_POINT], att);
+		dot_venom_apply(vic, att.damage[DAM_INDEX_EDGE], att);
 	};
 	// Fire lizard / dragon breath
 	if (dmg > 1 && (att.aivar[AIV_MM_REAL_ID] == ID_FIREWARAN || att.guild == GIL_DRAGON))

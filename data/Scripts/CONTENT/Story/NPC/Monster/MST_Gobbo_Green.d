@@ -27,7 +27,7 @@ prototype Mst_Default_Gobbo_Green (C_NPC)
 	protection	[PROT_MAGIC]		=	0;
 
 	// ------ Damage Types ------						//entweder EIN damagetype oder mehrere damage[x], die dann addiert werden und getrennten Rüstungsabzug bekommen
-	damagetype 						=	DAM_EDGE;
+	damagetype 						=	DAM_POINT;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;

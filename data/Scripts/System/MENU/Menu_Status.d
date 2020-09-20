@@ -101,9 +101,12 @@ instance MENU_STATUS (C_MENU_DEF)
 
 	// CUSTOM
 
-	// --- Edge protection ------------------------------------------
-	items[58]	= "MENU_ITEM_ARMOR_5_TITLE";
-	items[59]	= "MENU_ITEM_ARMOR_5_SCRIPTED";
+	// --- Placeholders ------------------------------------------
+	items[58]	= "MENU_ITEM_ATTRIBUTE_5_TITLE";
+	items[59]	= "MENU_ITEM_ATTRIBUTE_5_SCRIPTED";
+
+	items[60]	= "MENU_ITEM_ATTRIBUTE_6_TITLE";
+	items[61]	= "MENU_ITEM_ATTRIBUTE_6_SCRIPTED";
 
 	// ------ Eigenschaften ------
 		
@@ -132,18 +135,18 @@ const int STAT_B_X4 = 7700; //Ende der B-Spalte (zum zentrieren der Headings)
 
 // ----- Zeilen / Blockanfang ------
 // 1. Spalte
-const int STAT_PLYHEAD_Y	= 1000;
-const int STAT_PLY_Y 		= 1450; //Gilde / Punkteblock (1000 + 300 Fonthöhe + 150 Abstand)
+const int STAT_PLYHEAD_Y	= 850;
+const int STAT_PLY_Y 		= 1300; //Gilde / Punkteblock (1000 + 300 Fonthöhe + 150 Abstand)
 
-const int STAT_ATRHEAD_Y  	= 3250; 
-const int STAT_ATR_Y 		= 3700; //Attributsblock
+const int STAT_ATRHEAD_Y  	= 3100; 
+const int STAT_ATR_Y 		= 3550; //Attributsblock
 
-const int STAT_ARMHEAD_Y	= 5200;
-const int STAT_ARM_Y 		= 5650; //Armorblock
+const int STAT_ARMHEAD_Y	= 5650;
+const int STAT_ARM_Y 		= 6100; //Armorblock
 
 // 2. Spalte
-const int STAT_TALHEAD_Y  	= 1000;
-const int STAT_TAL_Y  		= 1450; //2. Spalte - Talentblock
+const int STAT_TALHEAD_Y  	= 850;
+const int STAT_TAL_Y  		= 1300; //2. Spalte - Talentblock
 
 // ----- Zeilengrösse ------
 const int STAT_DY =  300;
@@ -339,6 +342,35 @@ INSTANCE MENU_ITEM_ATTRIBUTE_4(C_MENU_ITEM_DEF)
 	flags		= flags & ~IT_SELECTABLE;
 };
 
+INSTANCE MENU_ITEM_ATTRIBUTE_5_TITLE(C_MENU_ITEM_DEF)
+{
+	posx 		= STAT_A_X1;				posy = STAT_ATR_Y + STAT_DY*4;
+	text[0]		= "Placeholder";
+	fontName	= STAT_FONT_DEFAULT;
+	flags		= flags & ~IT_SELECTABLE;
+};
+
+INSTANCE MENU_ITEM_ATTRIBUTE_5_SCRIPTED(C_MENU_ITEM_DEF)
+{
+	posx 		= STAT_A_X2;				posy = STAT_ATR_Y + STAT_DY*4;
+	fontName	= STAT_FONT_DEFAULT;	
+	flags		= flags & ~IT_SELECTABLE;
+};
+
+INSTANCE MENU_ITEM_ATTRIBUTE_6_TITLE(C_MENU_ITEM_DEF)
+{
+	posx 		= STAT_A_X1;				posy = STAT_ATR_Y + STAT_DY*5;
+	text[0]		= "Placeholder";
+	fontName	= STAT_FONT_DEFAULT;
+	flags		= flags & ~IT_SELECTABLE;
+};
+
+INSTANCE MENU_ITEM_ATTRIBUTE_6_SCRIPTED(C_MENU_ITEM_DEF)
+{
+	posx 		= STAT_A_X2;				posy = STAT_ATR_Y + STAT_DY*5;
+	fontName	= STAT_FONT_DEFAULT;	
+	flags		= flags & ~IT_SELECTABLE;
+};
 
 // --------------
 // Rüstungsschutz
@@ -353,34 +385,34 @@ INSTANCE MENU_ITEM_ARMOR_HEADING(C_MENU_ITEM_DEF)
 	flags		= (flags & ~IT_SELECTABLE)|IT_TXT_CENTER;
 };
 
-// ------ Blunt ------
+// ------ Monster ------
 INSTANCE MENU_ITEM_ARMOR_1_TITLE(C_MENU_ITEM_DEF)
 {
-	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*0;
-	text[0]		= "Blunt";
+	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*1;
+	text[0]		= "Monster";
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_ARMOR_1(C_MENU_ITEM_DEF)
 {
-	posx 		= STAT_A_X3; 				posy = STAT_ARM_Y + STAT_DY*0;	
+	posx 		= STAT_A_X2; 				posy = STAT_ARM_Y + STAT_DY*1;	
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
 };
 
-// ------ Point ------
+// ------ Weapon ------
 instance MENU_ITEM_ARMOR_2_TITLE(C_MENU_ITEM_DEF)
 {
-	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*2;	
-	text[0]		= "Point";
+	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*0;	
+	text[0]		= "Weapon";
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
 };
 
 INSTANCE MENU_ITEM_ARMOR_2(C_MENU_ITEM_DEF)
 {
-	posx 		= STAT_A_X3; 				posy = STAT_ARM_Y + STAT_DY*2;	
+	posx 		= STAT_A_X2; 				posy = STAT_ARM_Y + STAT_DY*0;	
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
 };
@@ -388,7 +420,7 @@ INSTANCE MENU_ITEM_ARMOR_2(C_MENU_ITEM_DEF)
 // ------ Dragon fire ------
 INSTANCE MENU_ITEM_ARMOR_3_TITLE(C_MENU_ITEM_DEF)
 {
-	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*4;
+	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*3;
 	text[0]		= "Dragon fire";
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
@@ -396,7 +428,7 @@ INSTANCE MENU_ITEM_ARMOR_3_TITLE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_ARMOR_3(C_MENU_ITEM_DEF)
 {
-	posx 		= STAT_A_X3; 				posy = STAT_ARM_Y + STAT_DY*4;
+	posx 		= STAT_A_X2; 				posy = STAT_ARM_Y + STAT_DY*3;
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
 };
@@ -404,7 +436,7 @@ INSTANCE MENU_ITEM_ARMOR_3(C_MENU_ITEM_DEF)
 // ------ Magic ------
 INSTANCE MENU_ITEM_ARMOR_4_TITLE(C_MENU_ITEM_DEF)
 {
-	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*3;
+	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*2;
 	text[0]		= "Magic";
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
@@ -412,23 +444,7 @@ INSTANCE MENU_ITEM_ARMOR_4_TITLE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_ARMOR_4(C_MENU_ITEM_DEF)
 {
-	posx 		= STAT_A_X3; 				posy = STAT_ARM_Y + STAT_DY*3;
-	fontName 	= STAT_FONT_DEFAULT;
-	flags 		= flags & ~IT_SELECTABLE;
-};
-
-// ------ Edge ------
-INSTANCE MENU_ITEM_ARMOR_5_TITLE(C_MENU_ITEM_DEF)
-{
-	posx 		= STAT_A_X1; 				posy = STAT_ARM_Y + STAT_DY*1;
-	text[0]		= "Edge";
-	fontName 	= STAT_FONT_DEFAULT;
-	flags 		= flags & ~IT_SELECTABLE;
-};
-
-INSTANCE MENU_ITEM_ARMOR_5_SCRIPTED(C_MENU_ITEM_DEF)
-{
-	posx 		= STAT_A_X3; 				posy = STAT_ARM_Y + STAT_DY*1;
+	posx 		= STAT_A_X2; 				posy = STAT_ARM_Y + STAT_DY*2;
 	fontName 	= STAT_FONT_DEFAULT;
 	flags 		= flags & ~IT_SELECTABLE;
 };

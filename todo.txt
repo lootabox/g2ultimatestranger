@@ -769,7 +769,9 @@ Bandit M	o		o		o
 Bandit H	o		o		o
 Raven		o		o		o
 
-BookstandAnimals	Info about animal damage types
+BookstandAnimals	Info about damage types
+
+Remove armor of ravens guard from player
 
 ------------------------------------------------------------------------------------- BELIAR SHRINE
 

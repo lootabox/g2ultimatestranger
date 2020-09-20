@@ -27,10 +27,10 @@ PROTOTYPE Mst_Default_SwampDrone(C_Npc)
 	protection	[PROT_MAGIC]		= 0;
 	
 	//----- Damage Types ----	
-	damagetype 						=	DAM_POINT;
+	damagetype 						=	DAM_EDGE;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-	damage		[DAM_INDEX_POINT]	=	30; // venom percentage
+	damage		[DAM_INDEX_EDGE]	=	30; // venom percentage
+//	damage		[DAM_INDEX_POINT]	=	0;
 //	damage		[DAM_INDEX_FIRE]	=	0;
 //	damage		[DAM_INDEX_FLY]		=	0;
 //	damage		[DAM_INDEX_MAGIC]	=	0;

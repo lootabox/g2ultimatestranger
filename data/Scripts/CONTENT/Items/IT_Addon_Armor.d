@@ -33,15 +33,12 @@ INSTANCE ITAR_PIR_L_Addon (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -77,15 +74,12 @@ INSTANCE ITAR_PIR_M_Addon (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -121,15 +115,12 @@ INSTANCE ITAR_PIR_H_Addon (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -167,15 +158,12 @@ INSTANCE ITAR_Thorus_Addon (C_Item)
 	description				=	"Armor for Raven's guard";
 
 	TEXT[4]					= 	PRINT_Addon_BDTArmor;
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -211,15 +199,12 @@ INSTANCE ITAR_Raven_Addon (C_Item)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -255,15 +240,12 @@ INSTANCE ITAR_OreBaron_Addon (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -305,15 +287,12 @@ INSTANCE ITAR_RANGER_Addon (ITAR_RANGER_Prototype)
 	protection [PROT_POINT] = 	40;
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	15;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -331,15 +310,12 @@ INSTANCE ITAR_RANGER_Addon_Damaged (ITAR_RANGER_Prototype)
 	protection [PROT_MAGIC] = 	0;
 
 	TEXT[4]					=	"The armor was scorched by the portal.";
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -386,15 +362,12 @@ INSTANCE ITAR_KDW_L_Addon (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -430,15 +403,12 @@ INSTANCE ITAR_Bloodwyn_Addon (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -474,15 +444,12 @@ INSTANCE ITAR_MayaZombie_Addon (C_Item)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -526,15 +493,12 @@ instance ItAr_FireArmor_Addon (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];

@@ -1316,11 +1316,11 @@ INSTANCE ITAR_PAL_SKEL (C_Item)
 	TEXT[2]					=	NAME_Prot_Point;		
 	COUNT[2]				= 	protection	[PROT_POINT];
 	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[3]					=	NAME_Prot_Magic;		
+	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;

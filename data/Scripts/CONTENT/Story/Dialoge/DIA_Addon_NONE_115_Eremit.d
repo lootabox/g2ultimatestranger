@@ -216,15 +216,15 @@ func void DIA_Addon_Eremit_Klamotten_Info ()
 	Info_AddChoice (DIA_Addon_Eremit_Klamotten, DIALOG_BACK, DIA_Addon_Eremit_Klamotten_BACK);
 	if (Npc_HasItems (other, ITAR_PIR_L_Addon) > 0)
 	{
-		Info_AddChoice (DIA_Addon_Eremit_Klamotten, "Give light pirate armor", DIA_Addon_Eremit_Klamotten_PIR_L);
+		Info_AddChoice (DIA_Addon_Eremit_Klamotten, "Give pirate clothes", DIA_Addon_Eremit_Klamotten_PIR_L);
 	};
 	if (Npc_HasItems (other, ITAR_PIR_M_Addon) > 0)
 	{
-		Info_AddChoice (DIA_Addon_Eremit_Klamotten, "Give medium pirate armor", DIA_Addon_Eremit_Klamotten_PIR_M);
+		Info_AddChoice (DIA_Addon_Eremit_Klamotten, "Give pirate armor", DIA_Addon_Eremit_Klamotten_PIR_M);
 	};
 	if (Npc_HasItems (other, ITAR_PIR_H_Addon) > 0)
 	{
-		Info_AddChoice (DIA_Addon_Eremit_Klamotten, "Give pirate captain's armor", DIA_Addon_Eremit_Klamotten_PIR_H);
+		Info_AddChoice (DIA_Addon_Eremit_Klamotten, "Give captain's clothes", DIA_Addon_Eremit_Klamotten_PIR_H);
 	};
 	//if (Npc_HasItems (other, ITAR_Thorus_Addon) > 0)
 	//{

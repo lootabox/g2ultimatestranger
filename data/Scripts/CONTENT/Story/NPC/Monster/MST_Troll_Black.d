@@ -29,7 +29,7 @@ PROTOTYPE Mst_Default_Troll_Black(C_Npc)
 	protection	[PROT_MAGIC]		=	300;
 	
 	//------------------------------------------------------	
-	damagetype 						=	DAM_FLY;
+	damagetype 						=	DAM_EDGE|DAM_FLY;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;

@@ -376,17 +376,28 @@ func string getAttributeString(var int boosted, var int max, var int trained)
         s = ConcatStrings(s, "/");
         s = ConcatStrings(s, IntToString(max));
     };
-    s = ConcatStrings(s, " (");
-    s = ConcatStrings(s, IntToString(trained));
-    s = ConcatStrings(s, ")");
+    if (trained > 0)
+    {
+        s = ConcatStrings(s, " (");
+        s = ConcatStrings(s, IntToString(trained));
+        s = ConcatStrings(s, ")");
+    };
     return s;
 };
 
 func void Update_Character_Menu() {
-    //Replace edge protection with proper value
-    Update_Menu_Item("MENU_ITEM_ARMOR_5_SCRIPTED", IntToString(hero.protection[PROT_EDGE]));
 
-    //Replace Strength, Dexterity and Mana values
+    // Magic description
+    if (hero.guild == GIL_PAL)
+    {
+        Update_Menu_Item("MENU_ITEM_TALENT_7_CIRCLE", "Paladin");
+    }
+    else if (hero.guild != GIL_KDF)
+    {
+        Update_Menu_Item("MENU_ITEM_TALENT_7_CIRCLE", "Scrolls");
+    };
+
+    // Replace Strength, Dexterity and Mana values
     Update_Menu_Item("MENU_ITEM_ATTRIBUTE_1_SCRIPTED", GetAttributeString(hero.attribute[ATR_STRENGTH], -1, hero.aivar[REAL_STRENGTH]));
     Update_Menu_Item("MENU_ITEM_ATTRIBUTE_2_SCRIPTED", GetAttributeString(hero.attribute[ATR_DEXTERITY], -1, hero.aivar[REAL_DEXTERITY]));
     Update_Menu_Item("MENU_ITEM_ATTRIBUTE_3_SCRIPTED", GetAttributeString(hero.attribute[ATR_MANA], hero.attribute[ATR_MANA_MAX], hero.aivar[REAL_MANA_MAX]));

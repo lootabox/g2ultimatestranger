@@ -28,7 +28,7 @@ PROTOTYPE Mst_Default_Dragon_Fire(C_Npc)
 	protection	[PROT_MAGIC]		=	170;
 	
 	//------ Damage Types ----	
-	damagetype 						=	DAM_BLUNT|DAM_FLY; //DAM_FIRE is handled by damage script to bypass engine burn effect
+	damagetype 						=	DAM_EDGE|DAM_FLY; //DAM_FIRE is handled by damage script to bypass engine burn effect
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;

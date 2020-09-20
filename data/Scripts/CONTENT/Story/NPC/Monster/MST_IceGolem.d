@@ -29,7 +29,7 @@ PROTOTYPE Mst_Default_IceGolem(C_Npc)
 	protection	[PROT_MAGIC]		=	160;
 	
 	//----- Damage Types ----
-	damagetype 						=	DAM_BLUNT;
+	damagetype 						=	DAM_EDGE|DAM_FLY;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;

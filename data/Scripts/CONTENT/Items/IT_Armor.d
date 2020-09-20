@@ -85,15 +85,12 @@ INSTANCE ITAR_Governor (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -128,15 +125,12 @@ INSTANCE ITAR_JUDGE (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -171,15 +165,12 @@ INSTANCE ITAR_SMITH (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -214,15 +205,12 @@ INSTANCE ITAR_BARKEEPER (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -257,15 +245,12 @@ INSTANCE ITAR_VLK_L (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;		
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;		
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;	
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;	
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -300,15 +285,12 @@ INSTANCE ITAR_VLK_M (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -343,15 +325,12 @@ INSTANCE ITAR_VLK_H (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -386,15 +365,12 @@ instance ITAR_VlkBabe_L (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;		
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;		
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;	
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;	
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -429,15 +405,12 @@ INSTANCE ITAR_VlkBabe_M (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -472,15 +445,12 @@ INSTANCE ITAR_VlkBabe_H (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -518,15 +488,12 @@ INSTANCE ITAR_MIL_L (C_Item)
 	on_unequip				=	UnEquip_ITAR_MIL_L;
 	
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -596,15 +563,12 @@ INSTANCE ITAR_MIL_M (C_Item)
 	on_unequip				=	UnEquip_ITAR_MIL_M;
 	
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -658,8 +622,8 @@ INSTANCE ITAR_PAL_M (C_Item)
 	protection [PROT_EDGE]	=	80;
 	protection [PROT_BLUNT] = 	80;
 	protection [PROT_POINT] = 	80;
-	protection [PROT_FIRE] 	= 	25;
-	protection [PROT_MAGIC] = 	25;
+	protection [PROT_FIRE] 	= 	30;
+	protection [PROT_MAGIC] = 	30;
 	
 	value 					=	VALUE_ITAR_PAL_M;
 
@@ -671,15 +635,12 @@ INSTANCE ITAR_PAL_M (C_Item)
 	material 				=	MAT_METAL;
 
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -714,15 +675,12 @@ INSTANCE ITAR_PAL_H (C_Item)
 	material 				=	MAT_METAL;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -757,15 +715,12 @@ INSTANCE ITAR_BAU_L (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				=	 protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				=	 protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -800,15 +755,12 @@ INSTANCE ITAR_BAU_M (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -843,15 +795,12 @@ INSTANCE ITAR_BauBabe_L (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -886,15 +835,12 @@ INSTANCE ITAR_BauBabe_M (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -932,15 +878,12 @@ INSTANCE ITAR_SLD_L (C_Item)
 	on_unequip				=	UnEquip_ITAR_SLD_L;
 	
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;		
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;		
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;	
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;	
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1011,15 +954,12 @@ INSTANCE ITAR_SLD_M (C_Item)
 	on_unequip				=	UnEquip_ITAR_SLD_M;
 	
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1089,15 +1029,12 @@ INSTANCE ITAR_SLD_H (C_Item)
 	on_unequip				=	UnEquip_ITAR_SLD_H;
 	
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1167,15 +1104,12 @@ INSTANCE ITAR_DJG_Crawler (C_Item)
 	on_unequip				=	UnEquip_ITAR_DJG_Crawler;
 	
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1242,15 +1176,12 @@ INSTANCE ITAR_DJG_L (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1285,15 +1216,12 @@ INSTANCE ITAR_DJG_M (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;		
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;		
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1328,15 +1256,12 @@ INSTANCE ITAR_DJG_H (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1371,15 +1296,12 @@ INSTANCE ITAR_DJG_BABE (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1417,15 +1339,12 @@ INSTANCE ITAR_NOV_L (C_Item)
 	on_unequip				=	UnEquip_ITAR_NOV_L;
 	
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;		
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;		
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1496,15 +1415,12 @@ INSTANCE ITAR_KDF_L (C_Item)
 	on_unequip				=	UnEquip_ITAR_KDF_L;
 	
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1574,15 +1490,12 @@ INSTANCE ITAR_KDF_H (C_Item)
 	on_unequip				=	UnEquip_ITAR_KDF_H;
 	
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				=	 protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				=	 protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1652,15 +1565,12 @@ INSTANCE ITAR_Leather_L (C_Item)
 	on_unequip				=	UnEquip_ITAR_Leather_L;
 	
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1729,15 +1639,12 @@ INSTANCE ITAR_BDT_M (C_Item)
 	description				=	name;
 	
 	TEXT[4]					= 	PRINT_Addon_BDTArmor;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1774,15 +1681,12 @@ INSTANCE ITAR_BDT_H (C_Item)
 	description				=	name;
 
 	TEXT[4]					= 	PRINT_Addon_BDTArmor;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1817,15 +1721,12 @@ INSTANCE ITAR_XARDAS (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1860,15 +1761,12 @@ INSTANCE ITAR_LESTER (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1903,15 +1801,12 @@ INSTANCE ITAR_Diego (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1946,15 +1841,12 @@ INSTANCE ITAR_CorAngar (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
 	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -1989,15 +1881,12 @@ INSTANCE ITAR_Dementor (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -2032,15 +1921,12 @@ INSTANCE ITAR_KDW_H (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
@@ -2075,15 +1961,12 @@ instance ITAR_Prisoner (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
+		
+	TEXT[2]					=	NAME_Prot_Edge;			
+	COUNT[2]				= 	protection	[PROT_EDGE];
 	
-	TEXT[0]					=	NAME_Prot_Blunt;
-	COUNT[0]				=	protection	[PROT_BLUNT];
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[1]					=	NAME_Prot_Point;		
+	COUNT[1]				= 	protection	[PROT_POINT];
 	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];

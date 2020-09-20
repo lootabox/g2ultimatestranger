@@ -31,7 +31,7 @@ PROTOTYPE Mst_Default_Shadowbeast_Addon_Fire (C_Npc)
 	protection	[PROT_MAGIC]		= 75;
 
 	//----- Damage Types ----
-	damagetype 						=	DAM_EDGE;
+	damagetype 						=	DAM_MAGIC;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;

@@ -24,7 +24,7 @@ PROTOTYPE Mst_Skeleton_Lord	(C_NPC)
 	protection	[PROT_MAGIC]		=	0;	//so lassen!
 		
 	//----- Damage Types ----
-	damagetype 						=	DAM_EDGE;
+	damagetype 						=	DAM_POINT;
 
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;

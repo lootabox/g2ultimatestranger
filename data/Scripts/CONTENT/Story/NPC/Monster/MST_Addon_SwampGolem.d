@@ -27,7 +27,7 @@ PROTOTYPE Mst_Default_Addon_SwampGolem(C_Npc)
 	protection	[PROT_MAGIC]		= 125;
 	
 	//---- Damage Types ----
-	damagetype 						=	DAM_FLY;
+	damagetype 						=	DAM_EDGE|DAM_FLY;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;

@@ -34,7 +34,7 @@ PROTOTYPE Mst_Default_OrcWarrior(C_Npc)
 	HitChance	[NPC_TALENT_CROSSBOW]	= 60;
 	
 	//----- Damage Types ----	
-	damagetype 						=	DAM_EDGE;
+	damagetype 						=	DAM_POINT;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;

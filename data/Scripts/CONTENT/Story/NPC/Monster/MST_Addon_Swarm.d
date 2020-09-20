@@ -27,7 +27,7 @@ PROTOTYPE Mst_Default_Swarm(C_Npc)
 	protection	[PROT_MAGIC]		=	0;
 	
 	//----- Damage Types ----	
-	damagetype 						=	DAM_FLY;
+	damagetype 						=	DAM_EDGE;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;
