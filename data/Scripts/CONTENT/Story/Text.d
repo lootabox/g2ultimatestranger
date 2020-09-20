@@ -791,9 +791,8 @@ const string NAME_Staff_Ulthar_Water_Typhoon	= "Staff of water fused with the st
 //const string NAME_PerMana		= " (per mana)";
 const string NAME_DamagePerSec	= "Damage per second:";
 
-const string NAME_Prot_Blunt	= "Blunt protection:";
-const string NAME_Prot_Edge		= "Edge protection:";
-const string NAME_Prot_Point	= "Point protection:";
+const string NAME_Prot_Edge		= "Monster protection:";
+const string NAME_Prot_Point	= "Weapon protection:";
 const string NAME_Prot_Fire		= "Dragon fire protection:";
 const string NAME_Prot_Magic	= "Magic protection:";
 
