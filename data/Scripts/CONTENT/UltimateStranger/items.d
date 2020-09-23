@@ -1,9 +1,9 @@
 //************************************************
-//   Weapon copying
+//   Item copying
 // https://forum.worldofplayers.de/forum/threads/1203625-Creating-instances-dinamically/page2?p=20511013&viewfull=1#post20511013
 //************************************************
 
-func void B_CopyWeapon(var C_ITEM newObject, var int originalInstance)
+func void B_CopyItem(var C_ITEM newObject, var int originalInstance)
 {
     Wld_InsertItem(originalInstance, "TOT");
     item = MEM_CpyInst(originalInstance);
@@ -17,18 +17,30 @@ func void B_CopyWeapon(var C_ITEM newObject, var int originalInstance)
     newObject.flags = item.flags;
     newObject.weight = item.weight;
     newObject.value = item.value;
-    newObject.damagetype = item.damagetype;
+    newObject.damageType = item.damageType;
     newObject.damageTotal = item.damageTotal;
     newObject.wear = item.wear;
+    newObject.protection[0] = item.protection[0];
+    newObject.protection[1] = item.protection[1];
+    newObject.protection[2] = item.protection[2];
+    newObject.protection[3] = item.protection[3];
+    newObject.protection[4] = item.protection[4];
+    newObject.protection[5] = item.protection[5];
+    newObject.protection[6] = item.protection[6];
+    newObject.protection[7] = item.protection[7];
     newObject.nutrition = item.nutrition;
-    newObject.cond_atr[1] = item.cond_atr[1];
-    newObject.cond_value[1] = item.cond_value[1];
+    newObject.change_atr[0] = item.change_atr[0];
     newObject.change_atr[1] = item.change_atr[1];
-    newObject.change_value[1] = item.change_value[1];
-    newObject.cond_atr[2] = item.cond_atr[2];
-    newObject.cond_value[2] = item.cond_value[2];
     newObject.change_atr[2] = item.change_atr[2];
+    newObject.change_value[0] = item.change_value[0];
+    newObject.change_value[1] = item.change_value[1];
     newObject.change_value[2] = item.change_value[2];
+    newObject.cond_atr[0] = item.cond_atr[0];
+    newObject.cond_atr[1] = item.cond_atr[1];
+    newObject.cond_atr[2] = item.cond_atr[2];
+    newObject.cond_value[0] = item.cond_value[0];
+    newObject.cond_value[1] = item.cond_value[1];
+    newObject.cond_value[2] = item.cond_value[2];
     newObject.magic = item.magic;
     newObject.owner = item.owner;
     newObject.ownerGuild = item.ownerGuild;
@@ -59,12 +71,12 @@ func void B_CopyWeapon(var C_ITEM newObject, var int originalInstance)
     MEM_WriteStringArray(dst, 4, MEM_ReadStringArray(src, 4));
     MEM_WriteStringArray(dst, 5, MEM_ReadStringArray(src, 5));
 
-    newObject.count[0] = 0;
-    newObject.count[1] = newObject.damageTotal;
-    newObject.count[2] = newObject.cond_value[2];
-    newObject.count[3] = newObject.range*100/253;
-    newObject.count[4] = item.count[4];
-    newObject.count[5] = newObject.value;
+    newObject.count[0] = item.count[0]; //0;
+    newObject.count[1] = item.count[1]; //newObject.damageTotal;
+    newObject.count[2] = item.count[2]; //newObject.cond_value[2];
+    newObject.count[3] = item.count[3]; //newObject.range*100/253;
+    newObject.count[4] = item.count[4]; //item.count[4];
+    newObject.count[5] = item.count[5]; //newObject.value;
 
     var oCItem oc_original; oc_original = MEM_CpyInst(originalInstance);
     var oCItem oc_new;      oc_new = MEM_CpyInst(newObject);

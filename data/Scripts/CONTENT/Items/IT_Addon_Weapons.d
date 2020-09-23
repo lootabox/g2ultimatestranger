@@ -99,7 +99,7 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 };
 
 INSTANCE ItMW_Addon_Stab01_Infused (C_Item) {
-	B_CopyWeapon(ItMW_Addon_Stab01_Infused, ItMW_Addon_Stab01);
+	B_CopyItem(ItMW_Addon_Stab01_Infused, ItMW_Addon_Stab01);
 	description			= ConcatStrings(description, " (Infused)");
 	TEXT[0]				= NAME_Staff_Fire_2;
 };
@@ -134,7 +134,7 @@ INSTANCE ItMW_Addon_Stab02 (C_Item)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 INSTANCE ItMW_Addon_Stab02_Infused (C_Item) {
-	B_CopyWeapon(ItMW_Addon_Stab02_Infused, ItMW_Addon_Stab02);
+	B_CopyItem(ItMW_Addon_Stab02_Infused, ItMW_Addon_Stab02);
 	description			= ConcatStrings(description, " (Infused)");
 	TEXT[0]				= NAME_Staff_Magic_2;
 };
@@ -169,7 +169,7 @@ INSTANCE ItMW_Addon_Stab03 (C_Item)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 INSTANCE ItMW_Addon_Stab03_Infused (C_Item) {
-	B_CopyWeapon(ItMW_Addon_Stab03_Infused, ItMW_Addon_Stab03);
+	B_CopyItem(ItMW_Addon_Stab03_Infused, ItMW_Addon_Stab03);
 	description			= ConcatStrings(description, " (Infused)");
 	TEXT[0]				= NAME_Staff_Water_2;
 };
@@ -262,7 +262,7 @@ INSTANCE ItMW_Addon_Stab05 (C_Item)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 INSTANCE ItMW_Addon_Stab05_Infused (C_Item) {
-	B_CopyWeapon(ItMW_Addon_Stab05_Infused, ItMW_Addon_Stab05);
+	B_CopyItem(ItMW_Addon_Stab05_Infused, ItMW_Addon_Stab05);
 	description			= ConcatStrings(description, " (Infused)");
 	TEXT[0]				= NAME_Staff_Typhoon_2;			COUNT[0]	= 30;
 };
