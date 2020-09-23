@@ -301,30 +301,6 @@ INSTANCE ITAR_RANGER_Addon (ITAR_RANGER_Prototype)
 	COUNT[3]				= 	protection	[PROT_MAGIC];
 };
 
-INSTANCE ITAR_RANGER_Addon_Damaged (ITAR_RANGER_Prototype)
-{
-	protection [PROT_EDGE]	=	30;
-	protection [PROT_BLUNT] = 	30;
-	protection [PROT_POINT] = 	30;
-	protection [PROT_FIRE] 	= 	0;
-	protection [PROT_MAGIC] = 	0;
-
-	TEXT[4]					=	"The armor was scorched by the portal.";
-	
-	TEXT[2]					=	NAME_Prot_Edge;
-	COUNT[2]				= 	protection	[PROT_EDGE];
-	
-	TEXT[1]					=	NAME_Prot_Point;
-	COUNT[1]				= 	protection	[PROT_POINT];
-	/* 
-	TEXT[4] 				=	NAME_Prot_Fire;
-	COUNT[4]				= 	protection	[PROT_FIRE];
-	
-	TEXT[3]					=	NAME_Prot_Magic;
-	COUNT[3]				= 	protection	[PROT_MAGIC];
-	*/
-};
-
 // ******************************************************
 INSTANCE ITAR_RANGER_Addon_Broken (ITAR_RANGER_Prototype)
 {

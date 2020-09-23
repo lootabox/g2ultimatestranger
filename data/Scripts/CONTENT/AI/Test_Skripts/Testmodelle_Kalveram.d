@@ -260,7 +260,6 @@ instance Itemhoshi (Npc_Default)
 	CreateInvItems(self,ITAR_Raven_Addon,1);
 	CreateInvItems(self,ITAR_OreBaron_Addon,1);
 	CreateInvItems(self,ITAR_RANGER_Addon,1);
-	CreateInvItems(self,ITAR_RANGER_Addon_Damaged,1);
 	CreateInvItems(self,ITAR_RANGER_Addon_Broken,1);
 	CreateInvItems(self,ITAR_KDW_L_Addon,1);
 	CreateInvItems(self,ITAR_BLOODWYN_Addon,1);
