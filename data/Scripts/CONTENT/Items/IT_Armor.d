@@ -171,10 +171,10 @@ INSTANCE ITAR_SMITH (C_Item)
 	
 	TEXT[1]					=	NAME_Prot_Point;		
 	COUNT[1]				= 	protection	[PROT_POINT];
-	
+	/* 
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
-	/* 
+	
 	TEXT[3]					=	NAME_Prot_Magic;		
 	COUNT[3]				= 	protection	[PROT_MAGIC];
 	 */
@@ -469,11 +469,11 @@ INSTANCE ITAR_MIL_L (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	40;
-	protection [PROT_BLUNT] = 	40;
+	protection [PROT_EDGE]	=	30;
+	protection [PROT_BLUNT] = 	30;
 	protection [PROT_POINT] = 	40;
-	protection [PROT_FIRE] 	= 	5;
-	protection [PROT_MAGIC] = 	5;
+	protection [PROT_FIRE] 	= 	0;
+	protection [PROT_MAGIC] = 	0;
 
 	value 					=	VALUE_ITAR_MIL_L;
 
@@ -544,8 +544,8 @@ INSTANCE ITAR_MIL_M (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	60;
-	protection [PROT_BLUNT] = 	60;
+	protection [PROT_EDGE]	=	50;
+	protection [PROT_BLUNT] = 	50;
 	protection [PROT_POINT] = 	60;
 	protection [PROT_FIRE] 	= 	10;
 	protection [PROT_MAGIC] = 	10;
@@ -859,8 +859,8 @@ INSTANCE ITAR_SLD_L (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	30;
-	protection [PROT_BLUNT] = 	30;
+	protection [PROT_EDGE]	=	40;
+	protection [PROT_BLUNT] = 	40;
 	protection [PROT_POINT] = 	30;
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
@@ -935,11 +935,11 @@ INSTANCE ITAR_SLD_M (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	45;
-	protection [PROT_BLUNT] = 	45;
-	protection [PROT_POINT] = 	45;
+	protection [PROT_EDGE]	=	50;
+	protection [PROT_BLUNT] = 	50;
+	protection [PROT_POINT] = 	40;
 	protection [PROT_FIRE] 	= 	5;
-	protection [PROT_MAGIC] = 	0;
+	protection [PROT_MAGIC] = 	5;
 
 	value 					=	VALUE_ITAR_SLD_M;
 
@@ -960,10 +960,10 @@ INSTANCE ITAR_SLD_M (C_Item)
 
 	TEXT[1]					=	NAME_Prot_Point;		
 	COUNT[1]				= 	protection	[PROT_POINT];
-	/* 
+	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
-	 */
+	
 	TEXT[3]					=	NAME_Prot_Magic;		
 	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
@@ -1012,7 +1012,7 @@ INSTANCE ITAR_SLD_H (C_Item)
 
 	protection [PROT_EDGE]	=	60;
 	protection [PROT_BLUNT] = 	60;
-	protection [PROT_POINT] = 	60;
+	protection [PROT_POINT] = 	50;
 	protection [PROT_FIRE] 	= 	10;
 	protection [PROT_MAGIC] = 	10;
 
@@ -1087,7 +1087,7 @@ INSTANCE ITAR_DJG_Crawler (C_Item)
 
 	protection [PROT_EDGE]	=	55;
 	protection [PROT_BLUNT] = 	55;
-	protection [PROT_POINT] = 	50;
+	protection [PROT_POINT] = 	55;
 	protection [PROT_FIRE] 	= 	20;
 	protection [PROT_MAGIC] = 	15;
 
@@ -1113,10 +1113,10 @@ INSTANCE ITAR_DJG_Crawler (C_Item)
 	
 	TEXT[4] 				=	NAME_Prot_Fire;			
 	COUNT[4]				= 	protection	[PROT_FIRE];
-	/* 
+	
 	TEXT[3]					=	NAME_Prot_Magic;		
 	COUNT[3]				= 	protection	[PROT_MAGIC];
-	 */
+	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
@@ -1323,8 +1323,8 @@ INSTANCE ITAR_NOV_L (C_Item)
 	protection [PROT_EDGE]	=	25;
 	protection [PROT_BLUNT] = 	25;
 	protection [PROT_POINT] = 	25;
-	protection [PROT_FIRE] 	= 	5;
-	protection [PROT_MAGIC] = 	0;
+	protection [PROT_FIRE] 	= 	0;
+	protection [PROT_MAGIC] = 	10;
 
 	value 					=	VALUE_ITAR_NOV_L;
 
@@ -1396,10 +1396,10 @@ INSTANCE ITAR_KDF_L (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	40;
-	protection [PROT_BLUNT] = 	40;
-	protection [PROT_POINT] = 	40;
-	protection [PROT_FIRE] 	= 	20;
+	protection [PROT_EDGE]	=	20;
+	protection [PROT_BLUNT] = 	20;
+	protection [PROT_POINT] = 	20;
+	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	20;
 
 	value 					=	VALUE_ITAR_KDF_L;
@@ -1416,20 +1416,76 @@ INSTANCE ITAR_KDF_L (C_Item)
 	
 	description				=	name;
 	
+	TEXT[0]					=	"Protection is improved for each Circle known.";
+
 	TEXT[2]					=	NAME_Prot_Edge;			
 	COUNT[2]				= 	protection	[PROT_EDGE];
 	
 	TEXT[1]					=	NAME_Prot_Point;		
 	COUNT[1]				= 	protection	[PROT_POINT];
 	
-	TEXT[4] 				=	NAME_Prot_Fire;			
-	COUNT[4]				= 	protection	[PROT_FIRE];
+	//TEXT[4] 				=	NAME_Prot_Fire;			
+	//COUNT[4]				= 	protection	[PROT_FIRE];
 	
 	TEXT[3]					=	NAME_Prot_Magic;		
 	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
+};
+INSTANCE ITAR_KDF_L_1 (C_Item) {
+	B_CopyItem(ITAR_KDF_L_1, ITAR_KDF_L);
+	TEXT[4] 				=	NAME_Prot_Fire;
+	protection [PROT_EDGE]	=	30;			COUNT[2]				= 	protection	[PROT_EDGE];
+	protection [PROT_BLUNT] = 	30;
+	protection [PROT_POINT] = 	30;			COUNT[1]				= 	protection	[PROT_POINT];
+	protection [PROT_FIRE] 	= 	5;			COUNT[4]				= 	protection	[PROT_FIRE];
+	protection [PROT_MAGIC] = 	25;			COUNT[3]				= 	protection	[PROT_MAGIC];
+};
+INSTANCE ITAR_KDF_L_2 (C_Item) {
+	B_CopyItem(ITAR_KDF_L_2, ITAR_KDF_L);
+	TEXT[4] 				=	NAME_Prot_Fire;
+	protection [PROT_EDGE]	=	40;			COUNT[2]				= 	protection	[PROT_EDGE];
+	protection [PROT_BLUNT] = 	40;
+	protection [PROT_POINT] = 	40;			COUNT[1]				= 	protection	[PROT_POINT];
+	protection [PROT_FIRE] 	= 	10;			COUNT[4]				= 	protection	[PROT_FIRE];
+	protection [PROT_MAGIC] = 	30;			COUNT[3]				= 	protection	[PROT_MAGIC];
+};
+INSTANCE ITAR_KDF_L_3 (C_Item) {
+	B_CopyItem(ITAR_KDF_L_3, ITAR_KDF_L);
+	TEXT[4] 				=	NAME_Prot_Fire;
+	protection [PROT_EDGE]	=	50;			COUNT[2]				= 	protection	[PROT_EDGE];
+	protection [PROT_BLUNT] = 	50;
+	protection [PROT_POINT] = 	50;			COUNT[1]				= 	protection	[PROT_POINT];
+	protection [PROT_FIRE] 	= 	15;			COUNT[4]				= 	protection	[PROT_FIRE];
+	protection [PROT_MAGIC] = 	35;			COUNT[3]				= 	protection	[PROT_MAGIC];
+};
+INSTANCE ITAR_KDF_L_4 (C_Item) {
+	B_CopyItem(ITAR_KDF_L_4, ITAR_KDF_L);
+	TEXT[4] 				=	NAME_Prot_Fire;
+	protection [PROT_EDGE]	=	60;			COUNT[2]				= 	protection	[PROT_EDGE];
+	protection [PROT_BLUNT] = 	60;
+	protection [PROT_POINT] = 	60;			COUNT[1]				= 	protection	[PROT_POINT];
+	protection [PROT_FIRE] 	= 	20;			COUNT[4]				= 	protection	[PROT_FIRE];
+	protection [PROT_MAGIC] = 	40;			COUNT[3]				= 	protection	[PROT_MAGIC];
+};
+INSTANCE ITAR_KDF_L_5 (C_Item) {
+	B_CopyItem(ITAR_KDF_L_5, ITAR_KDF_L);
+	TEXT[4] 				=	NAME_Prot_Fire;
+	protection [PROT_EDGE]	=	70;			COUNT[2]				= 	protection	[PROT_EDGE];
+	protection [PROT_BLUNT] = 	70;
+	protection [PROT_POINT] = 	70;			COUNT[1]				= 	protection	[PROT_POINT];
+	protection [PROT_FIRE] 	= 	25;			COUNT[4]				= 	protection	[PROT_FIRE];
+	protection [PROT_MAGIC] = 	45;			COUNT[3]				= 	protection	[PROT_MAGIC];
+};
+INSTANCE ITAR_KDF_L_6 (C_Item) {
+	B_CopyItem(ITAR_KDF_L_6, ITAR_KDF_L);
+	TEXT[4] 				=	NAME_Prot_Fire;
+	protection [PROT_EDGE]	=	80;			COUNT[2]				= 	protection	[PROT_EDGE];
+	protection [PROT_BLUNT] = 	80;
+	protection [PROT_POINT] = 	80;			COUNT[1]				= 	protection	[PROT_POINT];
+	protection [PROT_FIRE] 	= 	30;			COUNT[4]				= 	protection	[PROT_FIRE];
+	protection [PROT_MAGIC] = 	50;			COUNT[3]				= 	protection	[PROT_MAGIC];
 };
 FUNC VOID Equip_ITAR_KDF_L()
 {
@@ -1475,7 +1531,7 @@ INSTANCE ITAR_KDF_H (C_Item)
 	protection [PROT_BLUNT] = 	80;
 	protection [PROT_POINT] = 	80;
 	protection [PROT_FIRE] 	= 	40;
-	protection [PROT_MAGIC] = 	40;
+	protection [PROT_MAGIC] = 	60;
 
 	value 					=	VALUE_ITAR_KDF_H;
 
@@ -1548,8 +1604,8 @@ INSTANCE ITAR_Leather_L (C_Item)
 
 	protection [PROT_EDGE]	=	25;
 	protection [PROT_BLUNT] = 	25;
-	protection [PROT_POINT] = 	20;
-	protection [PROT_FIRE] 	= 	 5;
+	protection [PROT_POINT] = 	25;
+	protection [PROT_FIRE] 	= 	 0;
 	protection [PROT_MAGIC] = 	 0;
 
 	value 					=	VALUE_ITAR_Leather_L;
