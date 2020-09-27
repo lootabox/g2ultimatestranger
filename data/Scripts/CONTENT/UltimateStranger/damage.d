@@ -142,12 +142,6 @@ func int Handle_Melee_Dmg(var c_npc att, var c_npc vic)
 		dmg += Value_Inquisitor_BonusDmg;
 	}; */
 
-	// Check for crit
-	var int skill; skill = 0;
-	if		(wpn.flags & ITEM_SWD 		|| wpn.flags & ITEM_AXE)		{ skill = att.hitChance[NPC_TALENT_1H]; }
-	else if	(wpn.flags & ITEM_2HD_SWD 	|| wpn.flags & ITEM_2HD_AXE)	{ skill = att.hitChance[NPC_TALENT_2H]; };
-	if (r_Max(99) < skill) { dmg *= 2; }; // crit doubles weapon damage
-
 	// Add stat
 	dmg += att.attribute[ATR_STRENGTH];
 
@@ -170,13 +164,19 @@ var string pristr; pristr = IntToString(dmg);
 	// Reduce protection
 	dmg -= prot;
 
-	// Handle combo
+	// Handle combo (10% + 10%/cc)
 	if (Npc_IsPlayer(att) && Npc_HasReadiedMeleeWeapon(att))
 	{
 		var oCNpc oCHer; oCHer = Hlp_GetNpc(hero);
 		var oCAniCtrl_Human modelState; modelState = _^(oCHer.anictrl);
-		dmg /= (10 - modelState.combonr); // 5 -> 2
+		dmg = dmg * (2 + modelState.combonr) / 10; // divide by 5 for combo counter, divide by 2 for crit
 	};
+
+	// Check for crit
+	var int skill; skill = 0;
+	if		(wpn.flags & ITEM_SWD 		|| wpn.flags & ITEM_AXE)		{ skill = att.hitChance[NPC_TALENT_1H]; }
+	else if	(wpn.flags & ITEM_2HD_SWD 	|| wpn.flags & ITEM_2HD_AXE)	{ skill = att.hitChance[NPC_TALENT_2H]; };
+	if (r_Max(99) < skill) { dmg *= 2; }; // crit doubles weapon damage
 
 Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 	return dmg;

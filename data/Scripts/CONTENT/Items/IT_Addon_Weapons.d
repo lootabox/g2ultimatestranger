@@ -51,18 +51,18 @@
 	damageTotal  		= 	Damage_Wolfsmesser;
 	damagetype 			=	DAM_EDGE;
 	range    			=  	Range_Wolfsmesser;		
+
+	on_equip			=	Equip_Dex_Weapon;
+	on_unequip			=	UnEquip_Dex_Weapon;
 	
-	on_equip			=	Equip_1H_03;
-	on_unequip			=	UnEquip_1H_03;
-	
-	cond_atr[2]   		=	ATR_STRENGTH;
+	cond_atr[2]   		=	ATR_DEXTERITY;
 	cond_value[2]  		=	Condition_Wolfsmesser;
 	visual 				=	"ItMw_012_1h_Knife_02.3DS";
 
 	description			=   name;
 	
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
-	//TEXT[2] 			= NAME_Str_needed;				COUNT[2]	= cond_value[2];
+	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_03;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -493,7 +493,7 @@ INSTANCE ItMw_FrancisDagger_Mis (C_Item)
 	description			= name;
 	
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
-	//TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
+	TEXT[2] 			= NAME_Dex_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_ADDON_BONUS_1H;			COUNT[4]	= Waffenbonus_30;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;

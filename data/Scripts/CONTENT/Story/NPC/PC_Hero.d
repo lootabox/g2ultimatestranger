@@ -18,8 +18,8 @@ instance PC_Hero (NPC_DEFAULT)
 	lp				= 0;
 	
 	// ------ Attribute ------
-	attribute[ATR_STRENGTH] 		= 0;
-	attribute[ATR_DEXTERITY] 		= 0;
+	attribute[ATR_STRENGTH] 		= 10;
+	attribute[ATR_DEXTERITY] 		= 10;
 	attribute[ATR_MANA_MAX] 		= 10;
 	attribute[ATR_MANA] 			= 10;
 	attribute[ATR_HITPOINTS_MAX]	= 40;
@@ -33,7 +33,7 @@ instance PC_Hero (NPC_DEFAULT)
 	Mdl_SetVisualBody (self, "hum_body_Naked0", 9,				0,			"Hum_Head_Pony", 	FACE_N_Player,	0, 			NO_ARMOR);
 	
 	// ------ Kampf-Talente ------
-	//B_SetFightSkills 	(self, 10); 
+	B_SetFightSkills 	(self, 10); 
 };
 
 

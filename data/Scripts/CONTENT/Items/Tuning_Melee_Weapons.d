@@ -20,18 +20,18 @@ const int Waffenbonus_10 = 10;
 const int Waffenbonus_30 = 30;
 // *****************************************************
 //Dolch - ItMw_1h_Vlk_Dagger
-const int Damage_VLKDolch				= 5; 
-const int Condition_VLKDolch			= 0; //5
+const int Damage_VLKDolch				= 10; 
+const int Condition_VLKDolch			= 10;
 const int Range_VLKDolch				= 50;
 const int Value_VLKDolch				= 5;  
 //Schürhaken - ItMw_1H_Mace_L_01    
-const int Damage_Schuerhaken 			= 5; 
-const int Condition_Schuerhaken			= 0; //5
+const int Damage_Schuerhaken 			= 10; // 5
+const int Condition_Schuerhaken			= 10; // 5
 const int Range_Schuerhaken				= 50;
 const int Value_Schuerhaken				= 5; 
 //Sichel - ItMw_1h_Bau_Axe    
 const int Damage_BauAxe					= 7; 
-const int Condition_BauAxe				= 0; //5
+const int Condition_BauAxe				= 5;
 const int Range_BauAxe					= 50;
 const int Value_BauAxe					= 10; 
 //Goldene Sichel - ItMw_1h_Bau_Axe    
@@ -41,17 +41,17 @@ const int Value_BauAxe					= 10;
 //const int Value_Sichel01				= 200; 
 //Gehstock - ItMw_1h_Vlk_Mace    
 const int Damage_VLKMace 				= 8; 
-const int Condition_VLKMace				= 0; //5
+const int Condition_VLKMace				= 5;
 const int Range_VLKMace					= 70;
 const int Value_VLKMace					= 10; 
 //Belegnagel - ItMw_1H_Mace_L_03    
 const int Damage_Belegnagel 			= 8; 
-const int Condition_Belegnagel			= 0; //10
+const int Condition_Belegnagel			= 10;
 const int Range_Belegnagel				= 70;
 const int Value_Belegnagel				= 5; 
 //schwerer Ast - ItMw_1h_Bau_Mace    
-const int Damage_BauMace				= 3; //3
-const int Condition_BauMace				= 0; //10
+const int Damage_BauMace				= 5; //10
+const int Condition_BauMace				= 5; //10
 const int Range_BauMace					= 70;
 const int Value_BauMace					= 1; 
 //Holzkeule - ItMw_1h_Bau_Mace //ADDON  
@@ -75,7 +75,7 @@ const int Condition_Schmiedehammer		= 10;
 const int Range_Schmiedehammer			= 30;
 const int Value_Schmiedehammer			= 200;
 //Kurzschwert der Miliz - MILIZ - NEUE INSTANZ
-const int Damage_ShortSword1 			= 16; 
+const int Damage_ShortSword1 			= 16; //10
 const int Condition_ShortSword1			= 10;
 const int Range_ShortSword1				= 50;
 const int Value_ShortSword1				= 500;
@@ -86,7 +86,7 @@ const int Range_Nagelknueppel			= 60;
 const int Value_Nagelknueppel			= 10;
 //Wolfsmesser - ItMw_1H_Sword_L_03 //ADDON
 /* const int Damage_Wolfsmesser 			= 12; 
-const int Condition_Wolfsmesser			= 0; //10
+const int Condition_Wolfsmesser			= 5;
 const int Range_Wolfsmesser				= 30;
 const int Value_Wolfsmesser				= 350; */
 //AlriksSword
@@ -96,11 +96,11 @@ const int Range_Alrik					= 70;
 const int Value_Alrik					= 50; //wegen Sprache 
 //Wolfsklinge - ItMw_1H_Sword_L_03
 const int Damage_Wolfsklinge 			= 12; 
-const int Condition_Wolfsklinge			= 0;
+const int Condition_Wolfsklinge			= 5;
 const int Range_Wolfsklinge				= 30;
-const int Value_Wolfsklinge				= 250;
+const int Value_Wolfsklinge				= 10;
 //grobes Kurzschwert - NEUE INSTANZ 
-const int Damage_ShortSword2 			= 12; 
+const int Damage_ShortSword2 			= 10; //12
 const int Condition_ShortSword2			= 10;
 const int Range_ShortSword2				= 50;
 const int Value_ShortSword2				= 250;
@@ -129,11 +129,11 @@ const int Range_Bau2hAxt				= 70;
 const int Value_Bau2hAxt				= 500; 
 //Spitzhacke (2h) - ItMw_2H_Axe_L_01
 const int Damage_Spitzhacke 			= 20;
-const int Condition_Spitzhacke			= 0;//25
+const int Condition_Spitzhacke			= 10;
 const int Range_Spitzhacke				= 60;
 const int Value_Spitzhacke				= 300;
 //rostiges Schwert - STANDARDOBJEKTIERUNG - ItMw_1h_MISC_Sword
-const int Damage_MiscSword				= 10; //10
+const int Damage_MiscSword				= 15;
 const int Condition_MiscSword			= 10;
 const int Range_MiscSword				= 70;
 const int Value_MiscSword				= 10; 
@@ -260,7 +260,7 @@ const int Value_Orkschwert_01		=  50;
 // Kapitel 1 - Händler
 // *******************
 //Kurzschwert - NEUE INSTANZ
-const int Damage_ShortSword3 		= 10; 
+const int Damage_ShortSword3 		= 12; 
 const int Condition_ShortSword3		= 10;
 const int Range_ShortSword3			= 50;
 const int Value_ShortSword3			= 250;
