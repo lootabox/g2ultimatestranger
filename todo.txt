@@ -6,12 +6,18 @@
 	FBT
 
 Fire arrow
-Fireball
+Ice arrow
 Small lightning
 
-Ice arrow
+Fireball
 Ice lance
-lightning bolt
+Lightning bolt
+
+Firestorm
+
+(Small Firestorm)
+(Waterfist)
+
 
 make creatures NOT use FBT's
 
@@ -24,6 +30,15 @@ magic cage > freeze > whirlwind > burn
 remake acid -> toxic rain
 holy missile remake ?
 unused bigass fireball rune texture -> explosion
+
+ice storm - 4x75 dmg
+fire arrow - no dot
+
+----------- Dragon rock paper scissors
+
+Ice spells < all dragon magic protection
+Ice spells > half fire dragon magic protection
+Water spell < rock dragon magic protection
 
 ----------- Random issues
 
@@ -72,21 +87,14 @@ S	Fear					Valley of Mines In Xardas' old tower.						Beliar's Wrath
 
 
 ----------- Staves
-												dmg	mana	effect					Infusion			Chapter		Affects
-**Staff of Fire			ItMW_Addon_Stab01		25	25		damage+10				next damage +25%	2			fire
-Magic Staff				ItMW_Addon_Stab02		20	20		full recovery -50%		mana overflow		2			ALL
-**Staff of Water		ItMW_Addon_Stab03		35	30		mana cost -3			next cost -25%		3			ice/water
-Ulthar's Staff			ItMW_Addon_Stab04		30	40		combine two staves							3			???
-**Typhoon				ItMW_Addon_Stab05		40	35		rapid fire				30% faster charge	3+			low tier/charge
-Claw of Beliar									__	__		no life cost beliar							3+			beliar
+name				id					location						upg1			upg2				upg3				upg4
+Staff of Fire		ItMW_Addon_Stab01	gorax (kdf)						black_ore		sulfur (6)			pitch (6)			pray (innos)
+Magic Staff		¨	ItMW_Addon_Stab02	monastery cellar (kdf)			black_ore		ore (12)			rock_crystal (3)	pray (innos)
+Staff of Water		ItMW_Addon_Stab03	cronos (kdf)					black_ore		glacier_quartz (6)	aquamarine (3)		pray (innos)
+Ulthar's Staff		ItMW_Addon_Stab04	monastery library (c5, kdf)		black_ore		black_pearl (1)		holy_water (1)		pray (beliar)
+Typhoon				ItMW_Addon_Stab05	?								black_ore		coal (12)			gold_nugget (24)	pray (innos)
 
 
-Upgrading steps
-1	rune	black_ore	sulfur (6)			pitch (6)			pray (innos)
-2	rune	black_ore	ore (12)			rock_crystal (3)	pray (innos)
-3	rune	black_ore	glacier_quartz (6)	aquamarine (3)		pray (innos)
-4	rune	black_ore	black_pearl (1)		holy_water (1)		pray (beliar)
-5	rune	black_ore	coal (12)			gold_nugget (24)	pray (innos)
 
 
 ------------------------------------------------------------------------------------- Abandoned mine
