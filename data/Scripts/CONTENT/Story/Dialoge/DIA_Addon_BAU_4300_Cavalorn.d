@@ -181,7 +181,7 @@ func void DIA_Addon_Cavalorn_HALLO_Stadt ()
 {
 	AI_Output	(other, self, "DIA_Addon_Cavalorn_HALLO_Stadt_15_00"); //To the city.
 	AI_Output	(self, other, "DIA_Addon_Cavalorn_HALLO_Stadt_08_01"); //(laughs) Well, well. To the city, eh.
-	AI_Output	(self, other, "DIA_Addon_Cavalorn_HALLO_Stadt_08_02"); //You may run into problems with the guards.They aren't letting just anyone in any more, since the area here is swarming with bandits.
+	AI_Output	(self, other, "DIA_Addon_Cavalorn_HALLO_Stadt_08_02"); //You may run into problems with the guards. They aren't letting just anyone in any more, since the area here is swarming with bandits.
 	AI_Output	(self, other, "DIA_Addon_Cavalorn_HALLO_Stadt_08_03"); //In the past few days, one of those former psionics from the Valley of Mines came by here. He said he constantly goes in and out of Khorinis.
 	AI_Output	(self, other, "DIA_Addon_Cavalorn_HALLO_Stadt_08_04"); //He went into the valley below the big tower. There must be a way in there somewhere near the waterfall.
 	AI_Output	(self, other, "DIA_Addon_Cavalorn_HALLO_Stadt_08_05"); //Maybe you should talk to the fellow.
