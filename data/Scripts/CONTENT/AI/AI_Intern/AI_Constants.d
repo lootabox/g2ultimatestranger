@@ -347,10 +347,11 @@ const int AIV_SpellLevel 					= 88;
 // CUSTOM AIVAR (min 89, max 99)
 // ***************************************************
 
-const int AIV_RapidSpellCombo				= 89;
-const int REAL_LEVEL						= 90;
-const int AIV_RageStateTime                 = 91;
-const int AIV_CageStateTime                 = 92;
+// 89 used by lego talents
+const int AIV_RapidSpellCombo				= 90;
+const int REAL_LEVEL						= 91;
+const int AIV_RageStateTime                 = 92;
+const int AIV_CageStateTime                 = 93;
 
 // ***************************************************
 // Globalvariablen für Petzen/Absolution/News - System
