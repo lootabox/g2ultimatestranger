@@ -80,6 +80,7 @@ func void B_MM_AssessEnemy ()
 	// ACHTUNG: NSCs haben noch Perm_Attitude zu verwandeltem Player, die Guild-Attitude overridet (d.h. sie sind i.d.R. neutral), weswegen AssessEnemy nicht greift
 	if (Npc_IsPlayer (other))
 	&& (other.guild > GIL_SEPERATOR_HUM) 
+	&& (!C_NpcIgnoresTransform(self))
 	{
 		if (Wld_GetGuildAttitude(self.guild, other.guild) != ATT_HOSTILE)
 		{
