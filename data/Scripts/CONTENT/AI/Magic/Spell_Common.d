@@ -347,7 +347,7 @@ func int Move_Aim_Waypoint(var C_NPC slf)
 func void Spell_Cast_Focus(var int spellID, var int spellDamage, var string spellFX)
 {
 	// Handle spell collision for npc
-	if (!Npc_IsPlayer(other))
+	if (!Npc_IsPlayer(self))
 	{
 		var C_NPC selfTemp; selfTemp = Hlp_GetNpc (self);
 		var C_NPC otherTemp; otherTemp = Hlp_GetNpc (other);
