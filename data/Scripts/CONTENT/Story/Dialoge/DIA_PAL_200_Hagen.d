@@ -376,7 +376,7 @@ func void DIA_Lord_Hagen_Armee_Info ()
 {
 	AI_Output (other, self, "DIA_Lord_Hagen_Armee_15_00"); //The hosts of evil are gathering very close to here. In the Valley of Mines.
 	AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_01"); //In the Valley of Mines? We have dispatched an expedition there. We are also aware of reports that say the pass there is occupied by orcs.
-	AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_02"); //But thus far, nothing has come to me of an army of Evil.
+	AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_02"); //But thus far, no news has reached me of an army of Evil.
 	if (Npc_KnowsInfo (other, DIA_Lord_Hagen_Frieden))
 	{
 		AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_03"); //Is this merely a trick to make me believe that it is necessary to form an alliance with the mercenaries?
