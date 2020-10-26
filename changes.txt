@@ -40,7 +40,6 @@ NPCs only take the weapon from NH if he was caught doing something violent or th
 
 Addon is only accessible in chapter 3. Xardas will give the addon introduction after returning from the Valley of Mines. Vatras will not give the letter for Saturas before this. Likewise, Lares will not mention Vatras if joining the ring before receiving the addon introduction from Xardas.
 Fire Mages are only promoted into the High Order of the Fire Magicians in chapter 5 instead of the end of chapter 3.
-Militia are only accepted into ranks of the Paladins after fixing the Eye of Innos and showing it to Hagen.
 
 
 	Quests

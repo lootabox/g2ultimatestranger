@@ -196,7 +196,7 @@ FUNC VOID DIA_Hagen_PETZMASTER_Info()
 			AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_03"); //Not to mention your other offenses.
 		};
 		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_04"); //The guards have orders to execute every murderer on the spot.
-		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_05"); //Murder is not acceptable in this city. But you can show your remorse by paying your penalty
+		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_05"); //Murder is not acceptable in this city. But you can show your remorse by paying your penalty.
 
 	};
 		
@@ -270,7 +270,7 @@ func void DIA_Hagen_PETZMASTER_PayNow()
 func void DIA_Hagen_PETZMASTER_PayLater()
 {
 	AI_Output (other, self, "DIA_Hagen_PETZMASTER_PayLater_15_00"); //I don't have enough gold!
-	AI_Output (self, other, "DIA_Hagen_PETZMASTER_PayLater_04_01"); //Then see to it that you acquire the gold as quickly as possible
+	AI_Output (self, other, "DIA_Hagen_PETZMASTER_PayLater_04_01"); //Then see to it that you acquire the gold as quickly as possible.
 	AI_Output (self, other, "DIA_Hagen_PETZMASTER_PayLater_04_02"); //And I'm warning you: if you add to your guilt, things will get worse for you.
 	
 	Hagen_LastPetzCounter 	= B_GetTotalPetzCounter(self);
@@ -754,7 +754,7 @@ FUNC VOID DIA_Lord_Hagen_Knight_Info ()
 {
 	AI_Output			(other, self, "DIA_Lord_Hagen_Knight_15_00"); //I want to take up service with the order.
 	
-	if (MIS_RescueBennet == LOG_SUCCESS) && (MIS_OLDWORLD == LOG_SUCCESS) && (Npc_KnowsInfo (other, DIA_Lord_Hagen_AugeAmStart))
+	if (MIS_RescueBennet == LOG_SUCCESS) && (MIS_OLDWORLD == LOG_SUCCESS))
 	{
 		AI_Output			(self, other, "DIA_Lord_Hagen_Knight_04_01"); //Good, you have proven that you have the courage, the skill and the knowledge to serve Innos.
 		AI_Output			(self ,other, "DIA_Lord_Hagen_Knight_04_02"); //Your deeds bear witness to a pure heart.
