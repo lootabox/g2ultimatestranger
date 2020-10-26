@@ -1010,6 +1010,11 @@ func void DIA_Lord_Hagen_BACKINTOWN_Info ()
 	
 	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_00"); //One more thing, before you go...
 	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_01"); //Take this rune as a token of my gratitude. It will take you safely back to the city whenever you want.
+
+	//AI_Output (self ,other, "DIA_Lord_Hagen_CUSTOM_04_01"); //Yes, of course. I stand by my word.
+	//AI_Output (self ,other, "DIA_Lord_Hagen_CUSTOM_04_02"); //However, I have much to do.
+	//AI_Output (self ,other, "DIA_Lord_Hagen_CUSTOM_04_03"); //I shall see to it as quickly as possible.
+
 	B_GiveInvItems (self, other, ItRu_TeleportSeaport, 1);
 	
 	CreateInvItems 		(self, ItWr_PermissionToWearInnosEye_MIS, 1);	
