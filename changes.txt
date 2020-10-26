@@ -320,6 +320,7 @@ Lehmar does not lend money to NH if he attacked him, unless Oblivion is cast on 
 Lobart will only give a discount for working clothes if NH has not already bought them or joined a guild.
 Lobart's quest for working clothes does not start if NH already has bought the clothes or has some other armor.
 Lothar can only be told about getting proof of dragons after talking to him about the dragons.
+Lothar can only be told about having proof about dragons after talking to him about the dragons.
 Lothar cannot be asked about the part of the metal ornament after already receiving it from Hagen.
 Lothar's dialog has 21 more previously unused dialogue lines.
 Lothar's few dialog options are not hidden after talking to Hagen.

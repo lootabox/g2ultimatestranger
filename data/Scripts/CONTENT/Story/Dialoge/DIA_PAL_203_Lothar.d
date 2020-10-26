@@ -828,6 +828,7 @@ func int DIA_Lothar_OWRunningBrief_Condition ()
 {	
 	if (MIS_OLDWORLD == LOG_RUNNING)
 	&& (Npc_HasItems (hero, ItWr_PaladinLetter_MIS) > 0)
+	&& (Npc_KnowsInfo (other, DIA_Lothar_Dragons))
 	{
 		return TRUE;
 	};
