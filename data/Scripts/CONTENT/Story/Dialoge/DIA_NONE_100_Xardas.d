@@ -769,7 +769,7 @@ func void DIA_Xardas_DMTSINDDA_Start_Addon ()
 {
 	PlayVideo ("Intro_ADDON");
 	AI_Output			(self, other, "DIA_Addon_Xardas_AddonIntro_Add_14_10"); //You must become their ally! That's the only way to stop Beliar.
-	AI_Output			(self, other, "DIA_Xardas_INNOSEYEBROKEN_wasnun_14_02_B"); //You should go to town and talk to Vatras the Water Mage.
+	AI_Output			(self, other, "DIA_Xardas_CUSTOM_14_01"); //You should go to town and talk to Vatras the Water Mage.
 	AI_Output			(self, other, "DIA_Addon_Xardas_Add_14_07"); //And once you have talked to him, you need to find the artifact of Beliar.
 	AI_Output			(self, other, "DIA_Addon_Xardas_Add_14_08"); //It is the counterpiece to the Eye of Innos. It must not fall into the hands of Evil.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_DMT_WhatToDo_14_04"); //Go now before it is too late. The enemy will also try to lay his hands on it.

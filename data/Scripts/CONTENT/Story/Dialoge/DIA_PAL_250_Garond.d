@@ -803,7 +803,7 @@ FUNC VOID DIA_Garond_Gorn_Info()
 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_05"); //Let me explain something to you. We're all together in the same trap here.
 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_02"); //Murder is just about the last thing I need here.
 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_03"); //I need every single one of my people - and now I'm left with one less again!
-		AI_Output (self, other, "DIA_Garond_Gorn_10_02_EXT"); //So, I can't help you.
+		AI_Output (self, other, "DIA_Garond_CUSTOM_10_01"); //So, I can't help you.
 		if (DIA_Garond_Gorn_Fail_Once == FALSE)
 		{
 			B_LogEntry (TOPIC_RescueGorn,"Garond won't let me buy Gorn's freedom. Perhaps he will change his mind if I gain his trust.");
