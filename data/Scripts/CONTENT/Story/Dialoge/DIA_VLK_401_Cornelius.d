@@ -208,7 +208,7 @@ FUNC VOID DIA_Cornelius_DontBelieveYou_KnowYourHome()
 	AI_Output (self ,other,"DIA_Cornelius_DontBelieveYou_KnowYourHome_13_01"); //(white as chalk) What is that supposed to mean?
 	AI_Output (other,self ,"DIA_Cornelius_DontBelieveYou_KnowYourHome_15_02"); //I bet they're dying to make your acquaintance. They are not very happy at all.
 	AI_Output (self ,other,"DIA_Cornelius_DontBelieveYou_KnowYourHome_13_03"); //You can't do that, they would kill me.
-	AI_Output (other,self ,"DIA_Cornelius_DontBelieveYou_KnowYourHome_15_04"); //That is very well possible.
+	AI_Output (other,self ,"DIA_Cornelius_DontBelieveYou_KnowYourHome_15_04"); //That is very possible.
 	AI_Output (self ,other,"DIA_Cornelius_DontBelieveYou_KnowYourHome_13_05"); //I'll say whatever you want, but you mustn't do that.
 	
 	Cornelius_TellTruth = TRUE;
