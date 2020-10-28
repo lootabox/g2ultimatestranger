@@ -78,7 +78,7 @@ func void B_AssessMagic ()
 	// ------ Blitz ------
 	if ((Npc_GetLastHitSpellID(self) == SPL_Zap)
 	|| (Npc_GetLastHitSpellID(self) == SPL_ChargeZap)
-	|| (Npc_GetLastHitSpellID(self) == SPL_LightningFlash) // Handled in spell_common
+	|| (Npc_GetLastHitSpellID(self) == SPL_LightningFlash)
 	|| (Npc_GetLastHitSpellID(self) == SPL_AdanosBall))
 	{
 		Npc_ClearAIQueue	(self);

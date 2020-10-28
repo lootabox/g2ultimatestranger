@@ -69,7 +69,7 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 					spellFxAniLetters[SPL_Zap] = "RP2";
 					slf.aivar[AIV_RapidSpellCombo] = 1;
 					// Set time window for next combo (is longer than usual!)
-					FF_ApplyExt(FF_RapidSpellCombo_Reset, 600, 1);
+					FF_ApplyExtGT(FF_RapidSpellCombo_Reset, 600, 1);
 				} else if (slf.aivar[AIV_RapidSpellCombo] == 1) {
 					// From the first rapid-fire combo (left) to the second (right)
 					spellFxAniLetters[SPL_AdanosBall] = "RP3";
@@ -80,7 +80,7 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 					spellFxAniLetters[SPL_Zap] = "RP3";
 					slf.aivar[AIV_RapidSpellCombo] = 2;
 					// Set timer for next combo
-					FF_ApplyExt(FF_RapidSpellCombo_Reset, 600, 1);
+					FF_ApplyExtGT(FF_RapidSpellCombo_Reset, 600, 1);
 				} else {
 					// From the second rapid-fire combo (right) to the first (left)
 					spellFxAniLetters[SPL_AdanosBall] = "RP2";
@@ -91,7 +91,7 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 					spellFxAniLetters[SPL_Zap] = "RP2";
 					slf.aivar[AIV_RapidSpellCombo] = 1;
 					// Set timer for next combo
-					FF_ApplyExt(FF_RapidSpellCombo_Reset, 600, 1);
+					FF_ApplyExtGT(FF_RapidSpellCombo_Reset, 600, 1);
 				};
 			};
 		};
@@ -343,51 +343,39 @@ func int Move_Aim_Waypoint(var C_NPC slf)
 	return TRUE;
 };
 
-// Spells using this have to handle their "B_AssesMagic" logic here
-func void Spell_Cast_Focus(var int spellID, var int spellDamage, var string spellFX)
+func void Spell_Cast_Focus(var C_NPC slf, var C_NPC oth, var int spellID, var int spellCat, var int spellDamage, var string spellFX)
 {
-	// Handle spell collision for npc
-	if (!Npc_IsPlayer(self))
+	// Backup self/other and reverse slf/oth in their place
+	var C_NPC selfTemp; selfTemp = Hlp_GetNpc (self);
+	var C_NPC otherTemp; otherTemp = Hlp_GetNpc (other);
+	self = Hlp_GetNpc(oth); other = Hlp_GetNpc(slf);
+
+	// Handle collision, if no collision restore backup self/other and return
+	var int coll; coll = C_CanNpcCollideWithSpell(spellID);
+	if (coll == COLL_DONOTHING)
 	{
-		var C_NPC selfTemp; selfTemp = Hlp_GetNpc (self);
-		var C_NPC otherTemp; otherTemp = Hlp_GetNpc (other);
-		self = Hlp_GetNpc(otherTemp); other = Hlp_GetNpc(selfTemp);
-		var int coll; coll = C_CanNpcCollideWithSpell(spellID);
 		self = Hlp_GetNpc(selfTemp); other = Hlp_GetNpc(otherTemp);
+		return;
 	};
 
-	// Calculate damage and play vfx
+	// Collided, set last hit spell and assess magic
+	var oCNpc selfOC; selfOC = Hlp_GetNpc(self);
+	Print(IntToString(selfOC.lastHitSpellID));
+	selfOC.lastHitSpellID = spellID;
+	selfOC.lastHitSpellCat = spellCat;
+	B_AssessMagic();
+
+	// Restore backup self/other, use slf/oth from now on
+	self = Hlp_GetNpc(selfTemp); other = Hlp_GetNpc(otherTemp);
+
+	// Calculate and apply damage
 	if (coll & COLL_APPLYDOUBLEDAMAGE)	{ spellDamage *= 2; };
 	if (coll & COLL_APPLYHALVEDAMAGE)	{ spellDamage /= 2; };
-	Wld_PlayEffect(spellFX, other, other, 0, 0, 0, FALSE);
+	var int dmg; dmg = Handle_Magic_Dmg(slf, oth, spellID, spellDamage);
+	if (dmg > 0) { B_MagicHurtNpc(slf, oth, dmg); };
 
-	// Make sure collision checks out, then handle and apply damage
-	if (coll > COLL_DONOTHING)
-	{
-		var int dmg; dmg = Handle_Magic_Dmg(self, other, spellID, spellDamage);
-		if (dmg > 0) { B_MagicHurtNpc(self, other, dmg); };
-
-		// Send percs depending on outcome
-		if (other.attribute[ATR_HITPOINTS] > 0)
-		{
-			Npc_SendSinglePerc(self, other, PERC_ASSESSDAMAGE);
-			NPC_SendPassivePerc(other, PERC_ASSESSFIGHTSOUND, other, self);
-
-			// Handle "B_AssessMagic"
-			if (coll & (COLL_DOEVERYTHING | COLL_APPLYVICTIMSTATE))
-			{
-				if (spellID == SPL_LightningFlash) {
-					Npc_ClearAIQueue	(self);
-					B_ClearPerceptions	(self);
-					AI_StartState(other, ZS_ShortZapped, 0, "");
-				};
-			};
-		}
-		else
-		{
-			Npc_SendPassivePerc (other, PERC_ASSESSMURDER, other, self);
-		};
-	};
+	// Play vfx
+	Wld_PlayEffect(spellFX, oth, oth, 0, 0, 0, FALSE);
 };
 
 func int Spell_Logic_Invest_Summon(var C_NPC slf, var int manaInvested, var int manaCost)

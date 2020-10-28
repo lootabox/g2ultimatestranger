@@ -22,6 +22,6 @@ func int Spell_Logic_LightningFlash (var int manaInvested) //Parameter wird hier
 
 func void Spell_Cast_LightningFlash()
 {
-	Spell_Cast_Focus(SPL_LightningFlash, SPL_Damage_LightningFlash, "spellFX_LightningFlash_HEAVENSRAGE");
+	Spell_Cast_Focus(self, other, SPL_LightningFlash, SPELL_BAD, SPL_Damage_LightningFlash, "spellFX_LightningFlash_HEAVENSRAGE");
 	Spell_Cast_Basic(self, SPL_Cost_LightningFlash);
 };

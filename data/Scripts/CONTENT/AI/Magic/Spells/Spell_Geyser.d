@@ -22,6 +22,6 @@ func int Spell_Logic_Geyser (var int manaInvested) //Parameter wird hier nicht g
 
 func void Spell_Cast_Geyser()
 {
-	Spell_Cast_Focus(SPL_Geyser, SPL_Damage_Geyser, "spellFX_Geyser_FOUNTAIN");
+	Spell_Cast_Focus(self, other, SPL_Geyser, SPELL_BAD, SPL_Damage_Geyser, "spellFX_Geyser_FOUNTAIN");
 	Spell_Cast_Basic(self, SPL_Cost_Geyser);
 };

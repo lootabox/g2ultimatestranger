@@ -103,5 +103,5 @@ func void Spell_Cast_SummonGolem(var int spellLevel)
 
 	BC_AwakenGolem_Closest = MEM_NullToInst();
 	BroadcastEx(self, BC_AwakenGolem, TRUE, TRUE, FALSE);
-	FF_ApplyExt(BC_AwakenGolem_Finish, 100, 1);
+	FF_ApplyExtGT(BC_AwakenGolem_Finish, 100, 1);
 };
