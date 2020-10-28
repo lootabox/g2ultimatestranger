@@ -2,7 +2,7 @@
 // SPL_Waterfist	/k4
 // *************
 
-const int SPL_Cost_Waterfist	= 25;
+const int SPL_Cost_Waterfist	= 20;
 const int SPL_Damage_Waterfist	= 100;
 
 

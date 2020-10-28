@@ -2,12 +2,12 @@
 // SPL_ChargeFireball
 // ******************
 
-const int SPL_Cost_ChargeFireball		= 20; //*4
+const int SPL_Cost_ChargeFireball		= 15; //*4
 const int SPL_Damage_ChargeFireball 	= 60;
 
 INSTANCE Spell_ChargeFireball (C_Spell_Proto)
 {
-	time_per_mana			= 40; // 800/cost
+	time_per_mana			= 53; // 800/cost
 	damage_per_level		= SPL_Damage_ChargeFireball;
 	damageType				= DAM_MAGIC;
 };
