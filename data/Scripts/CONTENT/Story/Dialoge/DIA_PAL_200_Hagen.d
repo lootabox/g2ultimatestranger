@@ -754,7 +754,7 @@ FUNC VOID DIA_Lord_Hagen_Knight_Info ()
 {
 	AI_Output			(other, self, "DIA_Lord_Hagen_Knight_15_00"); //I want to take up service with the order.
 	
-	if (MIS_RescueBennet == LOG_SUCCESS) && (MIS_OLDWORLD == LOG_SUCCESS))
+	if (MIS_RescueBennet == LOG_SUCCESS) && (MIS_OLDWORLD == LOG_SUCCESS)
 	{
 		AI_Output			(self, other, "DIA_Lord_Hagen_Knight_04_01"); //Good, you have proven that you have the courage, the skill and the knowledge to serve Innos.
 		AI_Output			(self ,other, "DIA_Lord_Hagen_Knight_04_02"); //Your deeds bear witness to a pure heart.
