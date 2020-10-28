@@ -146,6 +146,7 @@ Diego can teach strength in Khorinis.
 Grimbald does not teach NH for free without finishing the hunt.
 Logan teaches skinning reptiles instead of skinning off furs.
 Talbin will teach NH hunting once escorted to Khorinis.
+Torlof does not teach NH before he joins the mercenaries.
 
 
 	NPC Specific

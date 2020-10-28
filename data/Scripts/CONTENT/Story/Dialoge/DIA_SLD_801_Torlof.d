@@ -896,7 +896,7 @@ FUNC VOID DIA_Torlof_Teach_Info()
 	AI_Output (other,self ,"DIA_Torlof_Teach_15_00"); //I want to improve my abilities!
 	if (other.guild == GIL_SLD) 
 	|| (other.guild == GIL_DJG)
-	|| (other.guild == GIL_NONE)
+	//|| (other.guild == GIL_NONE)
 	{
 		Torlof_Merke_STR = other.attribute[ATR_STRENGTH];
 		Torlof_Merke_DEX = other.attribute[ATR_DEXTERITY];
