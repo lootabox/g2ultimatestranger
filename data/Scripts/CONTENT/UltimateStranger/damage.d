@@ -332,14 +332,7 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 		||	(spellID == SPL_WaterFist)
 	{
 		// Handle protection
-		if	(C_NpcIsWeakToWater(vic)) {
-			if (C_NpcIsLarge(vic)) {
-				dmg -= prot;
-			} else {
-				dmg -= prot / 2;
-			};
-		}
-		else if	(C_NpcIsLarge(vic))			{ dmg -= prot * 2; }
+		if		(C_NpcIsWeakToWater(vic)) 	{ dmg -= prot / 2; }
 		else								{ dmg -= prot; };
 	}
 	// DESTROY UNDEAD -----------------------------------------------------------------------
