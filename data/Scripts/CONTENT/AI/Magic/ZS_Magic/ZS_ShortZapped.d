@@ -41,12 +41,6 @@ func int ZS_ShortZapped_Loop ()
 	if (Npc_GetStateTime(self) != self.aivar[AIV_FreezeStateTime])
 	{
 		self.aivar[AIV_FreezeStateTime] = Npc_GetStateTime(self);
-
-		// Make sure to keep playing vfx
-		if	(Npc_GetStateTime(self) == SPL_TIME_SHORTZAPPED)
-		{
-			Wld_PlayEffect ("spellFX_Lightning_TARGET", self, self, 0, 0, 0, FALSE);
-		};
 	};
 	return LOOP_CONTINUE;
 };

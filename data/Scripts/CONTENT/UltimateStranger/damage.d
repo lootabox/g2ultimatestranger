@@ -326,17 +326,6 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 		// Handle protection
 		if		(C_NpcIsWeakToLightning(vic))	{ dmg -= prot / 2; }
 		else									{ dmg -= prot; };
-
-		// Lightning spell stagger at full hitpoints
-		if	(!C_NpcIsUndead(vic))
-		&&	(spellID != SPL_AdanosBall)
-		&&	(self.attribute[ATR_HITPOINTS] >= self.attribute[ATR_HITPOINTS_MAX])
-		{
-			if (!Npc_HasBodyFlag(vic, BS_FLAG_INTERRUPTABLE))
-			{
-				AI_PlayAni(vic, "T_STUMBLE");
-			};
-		};
 	}
 	// WATER SPELLS ---------------------------------------------------------------------------
 	else if	(spellID == SPL_Geyser)

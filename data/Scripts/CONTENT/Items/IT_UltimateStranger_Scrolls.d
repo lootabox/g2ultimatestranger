@@ -76,10 +76,8 @@ INSTANCE ItSc_AdanosBall (C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_Damage_AdanosBall;
 
-	TEXT	[3]			=	ConcatStrings(NAME_Zap, NAME_Sec_Duration);
+	TEXT	[3]			=	ConcatStrings(NAME_Zap_All, NAME_Sec_Duration);
 	COUNT	[3]			=	SPL_TIME_SHORTZAPPED;
-
-	TEXT	[4]			=	NAME_Stagger;
 
     TEXT    [5]         =   NAME_Value;
     COUNT   [5]         =   value;

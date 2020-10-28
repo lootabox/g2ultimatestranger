@@ -725,8 +725,8 @@ const string NAME_Ice_Freeze			= "Freezes targets while dealing damage over time
 const string NAME_Rage					= "Forces the target to attack the nearest creature. ";
 
 // MAX LENGTH							"------------------------------------------------------------";
-const string NAME_Zap					= "Shocks unharmed living targets. ";
-const string NAME_Stagger				= "Staggers living targets. ";
+const string NAME_Zap_Living			= "Shocks unharmed living targets. ";
+const string NAME_Zap_All				= "Shocks unharmed targets. ";
 const string NAME_Nonlethal				= "Non-lethal. ";
 const string NAME_Instant				= "Instant effect. ";
 const string NAME_ShortRange			= "Short range. ";
