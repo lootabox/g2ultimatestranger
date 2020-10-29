@@ -558,6 +558,14 @@ weapon equip for civilians, traders
 
 ------------------------------------------------------------------------------------- Trainer tweaks / stances
 
+
+DIEGO OW prevent teach strength
+DIEGO NW prevent teach strength
+LARES NW prevent teach strength
+CAVALORN NW prevent teach 1h
+
+
+
 Alrik		2	(K)		1h		
 Buster		2	(K)		1h		
 Cavalorn	0	(K)		1h		
