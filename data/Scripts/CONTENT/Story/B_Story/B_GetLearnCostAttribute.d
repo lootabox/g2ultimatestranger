@@ -31,10 +31,10 @@ func int B_GetLearnCostAttribute (var C_NPC oth, var int attribut)
 	// ------ Kosten für Mana MAX ------
 	if (attribut == ATR_MANA_MAX)
 	{		
-		if (oth.aivar[REAL_MANA_MAX] >= 80)		{	kosten = (5);	}
-		else if (oth.aivar[REAL_MANA_MAX] >= 60) 	{	kosten = (4);	}
-		else if (oth.aivar[REAL_MANA_MAX] >= 40) 	{	kosten = (3);	}
-		else if (oth.aivar[REAL_MANA_MAX] >= 20) 	{	kosten = (2);	}
+		if (oth.aivar[REAL_MANA_MAX] >= 120)		{	kosten = (5);	}
+		else if (oth.aivar[REAL_MANA_MAX] >= 90) 	{	kosten = (4);	}
+		else if (oth.aivar[REAL_MANA_MAX] >= 60) 	{	kosten = (3);	}
+		else if (oth.aivar[REAL_MANA_MAX] >= 30) 	{	kosten = (2);	}
 		else 										{	kosten = (1);	};
 	};
 	
