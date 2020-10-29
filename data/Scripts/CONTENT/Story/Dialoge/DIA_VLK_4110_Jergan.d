@@ -35,7 +35,10 @@ INSTANCE DIA_Jergan_Hallo   (C_INFO)
 
 FUNC INT DIA_Jergan_Hallo_Condition()
 {
-	return TRUE;
+	if(!Npc_KnowsInfo(other,DIA_Garond_NeedProof))
+	{
+		return TRUE;
+	};
 };
 
 FUNC VOID DIA_Jergan_Hallo_Info()
@@ -58,7 +61,7 @@ INSTANCE DIA_Jergan_Vermisste   (C_INFO)
 
 FUNC INT DIA_Jergan_Vermisste_Condition()
 {	
-	if Npc_KnowsInfo (other,DIA_Jergan_Hallo)
+	if (Npc_KnowsInfo (other,DIA_Jergan_Hallo) || Npc_KnowsInfo (other,DIA_Jergan_Mine))
 	{
 		return TRUE;
 	};
@@ -84,8 +87,7 @@ INSTANCE DIA_Jergan_Burg   (C_INFO)
 
 FUNC INT DIA_Jergan_Burg_Condition()
 {	
-	if Npc_KnowsInfo (other,DIA_Jergan_Hallo)
-	&& (Npc_GetDistToWP (self, "OW_STAND_JERGAN") <= 1000)
+	if (Npc_KnowsInfo (other,DIA_Jergan_Hallo) || Npc_KnowsInfo (other,DIA_Jergan_Mine))
 	{
 		return TRUE;
 	};
@@ -95,10 +97,13 @@ FUNC VOID DIA_Jergan_Burg_Info()
 	AI_Output (other, self,"DIA_Jergan_Burg_15_00");//Can you help me get into the castle?
 	AI_Output (self, other,"DIA_Jergan_Burg_13_01");//Sure, but you have to do me a favor.
 	AI_Output (self, other,"DIA_Jergan_Burg_13_02");//If you can make it to the castle, talk to the paladin Oric. Tell him that his brother bought it up there at the pass.
-	
-	Log_CreateTopic (Topic_OricBruder, LOG_MISSION);
-	Log_SetTopicStatus (Topic_OricBruder,LOG_RUNNING);
-	B_LogEntry (Topic_OricBruder,"When I'm in the castle, I'm to tell Oric that his brother fell up at the pass.");
+
+	if(!Npc_IsDead(Oric))
+	{
+		Log_CreateTopic (Topic_OricBruder, LOG_MISSION);
+		Log_SetTopicStatus (Topic_OricBruder,LOG_RUNNING);
+		B_LogEntry (Topic_OricBruder,"When I'm in the castle, I'm to tell Oric that his brother fell up at the pass.");
+	};
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Gegend
@@ -115,7 +120,7 @@ INSTANCE DIA_Jergan_Gegend   (C_INFO)
 
 FUNC INT DIA_Jergan_Gegend_Condition()
 {	
-	if Npc_KnowsInfo (other,DIA_Jergan_Hallo)
+	if (Npc_KnowsInfo (other,DIA_Jergan_Hallo) || Npc_KnowsInfo (other,DIA_Jergan_Mine))
 	{
 		return TRUE;
 	};
@@ -148,7 +153,6 @@ INSTANCE DIA_Jergan_Hilfe   (C_INFO)
 FUNC INT DIA_Jergan_Hilfe_Condition()
 {	
 	if Npc_KnowsInfo (other,DIA_Jergan_Burg)
-	&& (Npc_GetDistToWP (self, "OW_STAND_JERGAN") <= 1000)
 	{
 		return TRUE;
 	};
@@ -179,7 +183,7 @@ INSTANCE DIA_Jergan_Mine   (C_INFO)
 
 FUNC INT DIA_Jergan_Mine_Condition()
 {	
-	if( Npc_GetDistToWP (self, "OW_NEWMINE_04") < 1000)
+	if(Npc_KnowsInfo(other,DIA_Garond_NeedProof))
 	{	
 		return TRUE;
 	};	
@@ -187,6 +191,10 @@ FUNC INT DIA_Jergan_Mine_Condition()
 FUNC VOID DIA_Jergan_Mine_Info()
 {
 	AI_Output (other, self,"DIA_Jergan_Mine_15_00");//What are you doing here?
+	if(Npc_KnowsInfo(other,DIA_Jergan_Hallo) == FALSE)
+	{
+		AI_Output(self,other,"Dia_Jergan_Hallo_13_01");	//I come from the castle. They've sent me to look for those missing, and to check out the area.
+	};
 	AI_Output (self, other,"DIA_Jergan_Mine_13_01");//I'm a scout. I roam the country. But all those snappers haven't made it easy for me.
 	AI_Output (self, other,"DIA_Jergan_Mine_13_02");//It's a good time to land a few trophies - provided you know what you're doing.
 };
@@ -205,8 +213,7 @@ INSTANCE DIA_Jergan_Claw   (C_INFO)
 
 FUNC INT DIA_Jergan_Claw_Condition()
 {	
-	if (Npc_GetDistToWP (self, "OW_NEWMINE_04") < 1000)
-	&& Npc_KnowsInfo (other, DIA_Jergan_Mine)
+	if (Npc_KnowsInfo (other, DIA_Jergan_Mine))
 	&& (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Claws] == FALSE)
 	{	
 		return TRUE;
@@ -216,6 +223,8 @@ FUNC VOID DIA_Jergan_Claw_Info()
 {
 	AI_Output (other, self,"DIA_Jergan_Claw_15_00");//Can you teach me how to do that?
 	AI_Output (self, other,"DIA_Jergan_Claw_13_01");//I can show you how to pull the claws off those things once they're dead.
+	Log_CreateTopic(Topic_OutTeacher,LOG_NOTE);
+	B_LogEntry(Topic_OutTeacher,"Jergan can teach me how to pull claws off dead animals.");
 };
 ///////////////////////////////////////////////////////////////////////
 //	Klauen reissen lernen
@@ -231,8 +240,7 @@ INSTANCE DIA_Jergan_Teach   (C_INFO)
 };
 FUNC INT DIA_Jergan_Teach_Condition()
 {	
-	if (Npc_GetDistToWP (self, "OW_NEWMINE_04") < 1000)
-	&& Npc_KnowsInfo (other, DIA_Jergan_Claw)
+	if (Npc_KnowsInfo (other, DIA_Jergan_Claw))
 	&& (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Claws] == FALSE)
 	{	
 		return TRUE;
@@ -248,6 +256,28 @@ FUNC VOID DIA_Jergan_Teach_Info()
 		AI_Output (self, other,"DIA_Jergan_Teach_13_02");//You don't only pull the claws from snappers that way, but also from lizards and shadowbeasts.
 	};
 };
+INSTANCE DIA_Jergan_Bow   (C_INFO)
+{
+	npc         = VLK_4110_Jergan;
+	nr          = 9;
+	condition   = DIA_Jergan_Bow_Condition;
+	information = DIA_Jergan_Bow_Info;
+	permanent   = FALSE;
+	description = "I want to be able to handle a bow better!";
+};
+
+FUNC INT DIA_Jergan_Bow_Condition()
+{	
+	if (Npc_KnowsInfo (other, DIA_Jergan_Mine))
+	{	
+		return TRUE;
+	};	
+};
+FUNC VOID DIA_Jergan_Bow_Info()
+{
+	AI_Output (other, self, "DIA_Bartok_TeachBow_15_00"); //I want to be able to handle a bow better!
+	AI_Output (self, other, "DIA_Jergan_CUSTOM_13_01"); //Sure...
+};
 ///////////////////////////////////////////////////////////////////////
 //	Diego
 ///////////////////////////////////////////////////////////////////////
@@ -258,13 +288,12 @@ INSTANCE DIA_Jergan_Diego   (C_INFO)
 	condition   = DIA_Jergan_Diego_Condition;
 	information = DIA_Jergan_Diego_Info;
 	permanent   = FALSE;
-	description = "Do you know where Diego got to? ";
+	description = "Do you know where Diego got to?";
 };
 
 FUNC INT DIA_Jergan_Diego_Condition()
 {	
-	if (Npc_GetDistToWP (self, "OW_NEWMINE_04") < 1000)
-	&& (Npc_KnowsInfo (other, DIA_DiegoOw_Hallo) == FALSE)
+	if (Npc_KnowsInfo (other, DIA_DiegoOw_Hallo) == FALSE)
 	&& Npc_KnowsInfo (other,DIA_Parcival_Diego)
 	{	
 		return TRUE;
@@ -305,11 +334,15 @@ FUNC VOID DIA_Jergan_Leader_Info()
 {
 	AI_Output (self, other,"DIA_Jergan_Leader_13_00");//So you killed the leader of the pack. And - did you get the claws off that beast?
 	
-	if (Npc_HasItems (other, ItAt_ClawLeader) >= 1)
+	if (Npc_HasItems (other, ItAt_ClawLeader) >= 1) || (Lutero_Krallen == LOG_SUCCESS)
 	{
 		AI_Output (other, self,"DIA_Jergan_Leader_15_01");//Yes.
 		AI_Output (self, other,"DIA_Jergan_Leader_13_02");//They're certainly worth a lot. There are some fellows who collect this stuff.
 		AI_Output (self, other,"DIA_Jergan_Leader_13_03");//If you find the right buyer, you'll get a heap of gold for that.
+		if(Lutero_Krallen == LOG_SUCCESS)
+		{
+			AI_Output (other, self,"DIA_Thorben_ZUSTIMMUNG_15_04"); //Yes, I did.
+		};
 	}
 	else
 	{
@@ -318,6 +351,71 @@ FUNC VOID DIA_Jergan_Leader_Info()
 	};	
 };
 
+///////////////////////////////////////////////////////////////////////
+//	Teach bow
+///////////////////////////////////////////////////////////////////////
+INSTANCE DIA_Jergan_TeachBow   (C_INFO)
+{
+	npc         = VLK_4110_Jergan;
+	nr          = 9;
+	condition   = DIA_Jergan_TeachBow_Condition;
+	information = DIA_Jergan_TeachBow_Info;
+	permanent   = TRUE;
+	description = "Show me how to handle a bow.";
+};
+FUNC INT DIA_Jergan_TeachBow_Condition()
+{
+	if (Npc_KnowsInfo (other,DIA_Jergan_Bow))
+	{
+		return TRUE;
+	};	
+};
+FUNC VOID DIA_Jergan_TeachBow_Info()
+{
+	AI_Output (other,self ,"DIA_Niclas_Teach_15_00"); //Show me how to handle a bow.
+	
+	if (other.HitChance[NPC_TALENT_BOW] >= 60)
+	{
+		B_Say (self, other, "$NOLEARNOVERPERSONALMAX");
+	}
+	else
+	{
+		Info_ClearChoices (DIA_Jergan_TeachBow);
+		Info_AddChoice		(DIA_Jergan_TeachBow,DIALOG_BACK,DIA_Jergan_TeachBow_Back);
+		Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow1, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)),DIA_Jergan_TeachBow_BOW_1);
+		Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow5, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*5),DIA_Jergan_TeachBow_BOW_5);
+	};
+};			
+	
+FUNC VOID DIA_Jergan_TeachBow_Back()
+{
+	if (other.HitChance[NPC_TALENT_BOW] >= 60)
+	{
+		B_Say (self, other, "$NOLEARNYOUREBETTER");
+	};
+	
+	Info_ClearChoices (DIA_Jergan_TeachBow);
+};
+
+FUNC VOID DIA_Jergan_TeachBow_BOW_1()
+{
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_BOW, 1, 60);
+	
+	Info_ClearChoices (DIA_Jergan_TeachBow);
+	Info_AddChoice		(DIA_Jergan_TeachBow,DIALOG_BACK,DIA_Jergan_TeachBow_Back);
+	Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow1, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)),DIA_Jergan_TeachBow_BOW_1);
+	Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow5, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*5),DIA_Jergan_TeachBow_BOW_5);
+};
+
+FUNC VOID DIA_Jergan_TeachBow_BOW_5()
+{
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_BOW, 5, 60);
+	
+	Info_ClearChoices (DIA_Jergan_TeachBow);
+	Info_AddChoice		(DIA_Jergan_TeachBow,DIALOG_BACK,DIA_Jergan_TeachBow_Back);
+	Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow1, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)),DIA_Jergan_TeachBow_BOW_1);
+	Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow5, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*5),DIA_Jergan_TeachBow_BOW_5);
+};	
 
 
 // ************************************************************
