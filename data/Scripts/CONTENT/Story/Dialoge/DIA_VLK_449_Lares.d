@@ -2176,7 +2176,7 @@ func void DIA_Lares_DEX_Info ()
 	if(DIA_Kardif_Lernen_permanent == FALSE)
 	{
 		Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
-		B_LogEntry (Topic_CityTeacher,"Lares can help me become stronger and more dextrous.");
+		B_LogEntry (Topic_CityTeacher,"Lares can help me become stronger and more dexterous.");
 	};
 };
 // ------------------------------------------------------------
