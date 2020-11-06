@@ -861,7 +861,7 @@ INSTANCE ItFo_Schafswurst (C_Item)
 //	visual 				=	"ItFo_Sausage.3DS";
 	visual 				=	"ItFo_Schafswurst.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"FOOD";
+	scemeName			=	"FOODHUGE";
 	on_state[0]			=	Use_Schafswurst;
 
 	description			= 	name;
