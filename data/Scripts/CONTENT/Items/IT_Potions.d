@@ -363,7 +363,8 @@ INSTANCE ItPo_Speed(C_Item)
 
 	value 			=	Value_Speed;	
 
-	visual 			=	"ItPo_Speed.3ds";
+//	visual 			=	"ItPo_Speed.3ds";
+	visual 			=	"ItPo_HealRandolph.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseItPo_Speed;
 	scemeName		=	"POTIONFAST";
