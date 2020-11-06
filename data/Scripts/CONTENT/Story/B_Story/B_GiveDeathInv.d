@@ -140,7 +140,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	{
 		//Joly: die anderen Drachen bekommen ihren Stuff beim erlangen des Talentes TROPHY_DragonScale.
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(FireDragonIsland)){	CreateInvItems (slf, ItAt_DragonScale, 12);		};
-		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Undeaddragon))	{	CreateInvItems (slf, ItAt_DragonScale, 12);		};
+		//if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Undeaddragon))	{	CreateInvItems (slf, ItAt_DragonScale, 12);		};
 	};
  	
 	// ------ Drachen-Blut------
@@ -148,7 +148,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	{
 		//Joly: die anderen Drachen bekommen ihren Stuff beim erlangen des Talentes TROPHY_DragonBlood.
 		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(FireDragonIsland))	{	CreateInvItems (slf, ItAt_DragonBlood, 2);		};
-		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Undeaddragon))		{	CreateInvItems (slf, ItAt_DragonBlood, 2);		};
+		//if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Undeaddragon))		{	CreateInvItems (slf, ItAt_DragonBlood, 2);		};
 	};
  	
  	// ------ Verteilung von ANFANG AN ------
