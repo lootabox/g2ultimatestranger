@@ -471,9 +471,9 @@ FUNC VOID DIA_Neoras_BrewForMe_Info()
 {
 	Info_ClearChoices (DIA_Neoras_BrewForMe);
 	Info_AddChoice (DIA_Neoras_BrewForMe,DIALOG_BACK,DIA_Neoras_BrewForMe_Back);
-	Info_AddChoice (DIA_Neoras_BrewForMe,"a potion of speed.",DIA_Neoras_BrewForMe_Speed);
-	Info_AddChoice (DIA_Neoras_BrewForMe,"a mana extract.",DIA_Neoras_BrewForMe_Mana);
-	Info_AddChoice (DIA_Neoras_BrewForMe,"an extract of healing.",DIA_Neoras_BrewForMe_Health);
+	Info_AddChoice (DIA_Neoras_BrewForMe,"...a potion of great speed.",DIA_Neoras_BrewForMe_Speed);
+	Info_AddChoice (DIA_Neoras_BrewForMe,"...a mana extract.",DIA_Neoras_BrewForMe_Mana);
+	Info_AddChoice (DIA_Neoras_BrewForMe,"...an elixir of healing.",DIA_Neoras_BrewForMe_Health);
 };
 
 FUNC VOID DIA_Neoras_BrewForMe_Back ()
@@ -483,7 +483,7 @@ FUNC VOID DIA_Neoras_BrewForMe_Back ()
 
 FUNC VOID DIA_Neoras_BrewForMe_Speed ()
 {
-	AI_Output (other,self ,"DIA_Neoras_BrewForMe_Speed_15_00"); //Brew me a potion of speed.
+	AI_Output (other,self ,"DIA_Neoras_BrewForMe_Speed_15_00"); //Brew me a potion of great speed.
 	AI_Output (self ,other,"DIA_Neoras_BrewForMe_Speed_01_01"); //All right, do you have the ingredients and the gold?
 	
 	if (Npc_HasItems (other,ItPl_Speed_Herb_01) >= 1)
