@@ -103,7 +103,8 @@ INSTANCE ItPo_Mana_03(C_Item)
 
 	value 			=	Value_ManaElixier;	
 
-	visual 			=	"ItPo_Mana_03.3ds";
+//	visual 			=	"ItPo_Mana_03.3ds";
+	visual 			=	"ItPo_Mana_04.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseItPo_Mana_03;
 	scemeName		=	"POTIONFAST";
@@ -200,7 +201,8 @@ INSTANCE ItPo_Health_03(C_Item)
 
 	value 			=	Value_HpElixier;	
 
-	visual 			=	"ItPo_Health_03.3ds";
+//	visual 			=	"ItPo_Health_03.3ds";
+	visual 			=	"ItPo_Health_04.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseItPo_Health_03;
 	scemeName		=	"POTIONFAST";
