@@ -260,64 +260,94 @@ Circle	req
 
 ------------------------------------------------------------------------------------- Alchemy
 Gain per recipe	+5%
-req	gain	Recipe
-0%	45%
-0%	5%		Essence of Healing
-0%	10%		Extract of Healing
-0%	5%		Mana Essence
-0%	10%		Mana Extract
-0%	5%		Essence of Healing -> Extract of Healing		NEW
-0%	5%		Mana Essence -> Mana Extract					NEW
-0%	5%		Speed Potion
 
-30%	45%
-30%	10%		Elixir of Healing
-30%	10%		Mana Elixir	
-30%	5%		Extract of Healing -> Elixir of Healing			NEW
-30%	5%		Mana Extract -> Mana Elixir						NEW
-30%	5%		Elixir of Mental Alteration						MECHANIC	mana regeneration rate -100%
-30%	10%		Antidote										NEW			Removes venom
+CONSTANTINO
+Wing
+Rock crystal
+Goblin bone
+Skeleton bone
+Shadowbeast horn
 
-60%	40%
-60%	10%		Pure Life
-60%	10%		Pure Mana
-60%	5%		Elixir of Healing -> Pure Life					NEW
-60%	5%		Mana Elixir -> Pure Mana						NEW
-60%	10%		Potion of Haste 								NEW
-60%	5%		???												NEW
-
-90%	10%
-90%	10%		Elixir of Life
-90%	10%		Elixir of Spirit
-90%	10%		Elixir of Strength
-90%	10%		Elixir of Dexterity
+SAGITTA
+Sulfur
+Quarts
+Rock crystal
+Coal
+Aquamarine
+Swampherb
 
 
-model swap: elixirs <-> pure
-model use: black fever -> ???
-model use: speed potion -> potion of haste
-model use: addiction -> speed potion
-model use: heal possession -> antidote, black fever, addiction
-model use: tear -> heal possession
+req gain	cost	Recipe
+0%	10%		5		Essence of Healing						Heal 20%
+20%	10%		5		Extract of Healing						Heal 40%
+40%	10%		5		Elixir of Healing						Heal 60%
+60%	10%		10		Elixir of Life							Heal 80% + 20 HP (Constantino/Neoras only)
+80%	-		-		Pure Life								Heal 100% (Constantino only)
 
+20%	10%		5		Essence -> Extract of Healing	NEW (no Flask/Meadow Knotweed/PL1)	(Constantino only)
+40%	10%		5		Extract -> Elixir of Healing	NEW (no Flask/Meadow Knotweed/PL1/PL2)	(Constantino only)
+60%	10%		5		Elixir -> Elixir of Life		NEW (no Flask/PL1/PL2/PL3)	(Constantino only)
+
+0%	10%		5		Mana Essence							Mana 20%
+20%	10%		5		Mana Extract							Mana 40%
+40%	10%		5		Mana Elixir								Mana 60%
+60%	10%		10		Elixir of Spirit						Mana 80% + 5 Mana (Sagitta/Neoras only)
+80%	-		-		Pure Mana								Mana 100% (Sagitta only)
+
+20%	10%		5		Mana Essence -> Extract			NEW (no Flask/Meadow Knotweed/PL1)	(Sagitta only)
+40%	10%		5		Mana Extract -> Elixir			NEW (no Flask/Meadow Knotweed/PL1/PL2)	(Sagitta only)
+60%	10%		5		Mana Elixir -> Elixir of Spirit	NEW (no Flask/PL1/PL2/PL3)	(Sagitta only)
+
+20%	10%		5		Speed Potion							5 Minutes	(Ignaz/Neoras only)	{snapperweed}
+
+40%	-		-		Elixir of Mental Alteration				1000xp	(Miguel only)	{essence of healing, mana extract, 2 bloodfly stingers, red tear pepper}
+
+80%	10%		10		Elixir of Strength						+3 STR	(Constantino only)
+80%	10%		10		Elixir of Dexterity						+3 DEX	(Sagitta only)
 
 268 meadow knotweed
 25 king's sorrel
 					570	345	90	
-	Plants			PL1	PL2	PL3	Effect
-Essence of Healing	6			Heal 20%
-Extract of Healing	5	4		Heal 40%
-Elixir of Healing	4	3	2	Heal 60%
-Pure Life Energy	2p	1p		Heal 100%
-Elixir of Life		6	4	2	+20 HP
+	Plants			PL1	PL2	PL3	
+Essence of Healing	6			Meadow Knotweed
+Extract of Healing	4	4		Meadow Knotweed
+Elixir of Healing	2	2	2	Meadow Knotweed
+Elixir of Life		2	2	2	King's Sorrel
+Pure Life Energy	2p	1p		Meadow Knotweed
 
 					295	165	75	
-	Plants			PL1	PL2	PL3	Effect
-Mana Essence		6			Mana 20%
-Mana Extract		5	4		Mana 40%
-Mana Elixir			4	3	2	Mana 60%
-Pure Mana			2p	1p		Mana 100%
-Elixir of Spirit	6	4	2	+5 Mana
+	Plants			PL1	PL2	PL3	
+Mana Essence		4			Meadow Knotweed
+Mana Extract		3	3		Meadow Knotweed
+Mana Elixir			2	2	2	Meadow Knotweed
+Elixir of Spirit	2	2	2	King's Sorrel
+Pure Mana			2p	1p		Meadow Knotweed
+
+
+Constantino
+	+Pure life
+
+Sagitta
+	+Antidote
+	-Pure life
+
+Miguel
+	-Pure life
+
+Riordian
+	+Elixir of Healing
+	-Elixir of Spirit
+	-Elixir of Dexterity
+
+Neoras
+	+Speed Potion
+	+Great Speed Potion
+
+Ignaz
+	+Great Speed Potion
+
+
+
 
 ------------------------------------------------------------------------------------- Smithing
 Gain per sword	+2%
