@@ -123,9 +123,9 @@ Fixed wrong or inconsistent style of text for most dialogs.
 
 Removed Dragon Scales and Dragon Blood from the Undead Dragon.
 Removed Goblin Berries and Pepper bags from ambient inventories.
+Removed option to discuss Lehmar's book of debt before reading it or otherwise learning of the debt for Coragon, Hanna, Thorben.
 Removed option to discuss joining the mercenaries once part of any guild for Alvares, Raoul, Wolf.
 Removed option to discuss rent after completing related quest for Onar, Sekob.
-Removed option to discuss Lehmar's book of debt before reading it or otherwise learning of the debt for Coragon, Hanna, Thorben.
 Removed visual transforming to Seekers of possessed NPCs.
 
 
