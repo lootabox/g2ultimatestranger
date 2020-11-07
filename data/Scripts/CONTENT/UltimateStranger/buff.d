@@ -1,28 +1,49 @@
 
-
 //######################################################
-// Buff talents
+// Constants
 //######################################################
 
 var int TAL_DOT_VENOM_TOTAL;    // Percentage
 var int TAL_DOT_VENOM_SPEED;    // Percentage per second
 var int TAL_DOT_BURN_TOTAL;     // Damage
-var int TAL_DOT_BURN_TICKS;      // Tick number
-func void InitBuffTalents() {
+var int TAL_DOT_BURN_TICKS;     // Tick number
+
+const int BURN_DOT_VFX_DURATION_SEC = 4;
+const int VENOM_DEFAULT_SPEED_PERCENTAGE = 4;
+
+//######################################################
+// Buff system
+//######################################################
+
+func void BuffSystem_Reset()
+{
+    // Hero might not be ready at INIT_GLOBAL
+    if (Hlp_IsValidNpc(hero)) {
+        var int bh;
+        bh = Buff_Has(hero, light_persister);
+        if (bh) {
+            var lCBuff b; b = get(bh);
+            spawnLightAboveHero(b.name);
+        };
+
+        // Remove FF
+        if (FF_Active(BuffSystem_Reset)) {
+            FF_Remove(BuffSystem_Reset);
+        };
+    } else if (!FF_Active(BuffSystem_Reset)) {
+        // Apply FF
+        FF_ApplyExtGT(BuffSystem_Reset, 500, -1);
+    };
+};
+func void BuffSystem_Init() {
     if (!TAL_DOT_VENOM_TOTAL) {
         TAL_DOT_VENOM_TOTAL = TAL_CreateTalent();
         TAL_DOT_VENOM_SPEED = TAL_CreateTalent();
         TAL_DOT_BURN_TOTAL = TAL_CreateTalent();
         TAL_DOT_BURN_TICKS = TAL_CreateTalent();
     };
+    BuffSystem_Reset();
 };
-
-//######################################################
-// Buff constants
-//######################################################
-
-const int BURN_DOT_VFX_DURATION_SEC = 4;
-const int VENOM_DEFAULT_SPEED_PERCENTAGE = 4;
 
 //######################################################
 // DOT general methods and dot prototype
@@ -149,7 +170,6 @@ func void dot_burn_remove(var c_npc npc) {
     TAL_SetValue(npc, TAL_DOT_BURN_TICKS, 0);
     Wld_StopEffect_Ext("VOB_BURN", npc, npc, FALSE);
 };
-
 //######################################################
 // Light persister lCBuff
 //######################################################
@@ -166,19 +186,13 @@ instance light_persister(lCBuff) {
 };
 
 func void light_persister_apply(var c_npc npc, var string visualFX, var int durationSeconds) {
-    if (Buff_ApplyUnique(npc, light_persister, npc)) {
-        var int bh; bh = Buff_Has(npc, light_persister);
-        var lCBuff b; b = get(bh);
-        b.durationMs = durationSeconds * 1000;
-        b.name = visualFX;
-    };
-};
-
-func void light_persister_reset(var c_npc npc) {
-    var int bh; bh = Buff_Has(npc, light_persister);
-    if (bh) {
-        var lCBuff b; b = get(bh);
-        spawnFxAboveNpc(npc, b.name, 175);
+    if (Npc_IsPlayer(npc)) {
+        if (Buff_ApplyUnique(npc, light_persister, npc)) {
+            var int bh; bh = Buff_Has(npc, light_persister);
+            var lCBuff b; b = get(bh);
+            b.durationMs = durationSeconds * 1000;
+            b.name = visualFX;
+        };
     };
 };
 

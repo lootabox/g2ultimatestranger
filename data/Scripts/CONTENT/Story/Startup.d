@@ -35,7 +35,7 @@ func void INIT_GLOBAL()
 	GFA_Init(GFA_ALL & ~GFA_REUSE_PROJECTILES);
 
 	// Ultimate Stranger
-	InitBuffTalents();
+	BuffSystem_Init();
 	InitCustomDamageHook();
 	HookLootItems_Init();
 	HookChangeLevel_Init();
@@ -44,14 +44,6 @@ func void INIT_GLOBAL()
 	StrafePerception_Init();
 	JumpPerception_Init();
 	GoBackwardPerception_Init();
-
-	// Delay hero init
-	FF_ApplyExtGT(INIT_HERO, 3000, 1);
-};
-
-// Hero might not be ready at INIT_GLOBAL
-func void INIT_HERO() {
-	light_persister_reset(hero);
 };
 
 // *********
