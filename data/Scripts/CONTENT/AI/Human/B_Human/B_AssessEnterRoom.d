@@ -71,7 +71,12 @@ func int B_AssessEnterRoom ()
 	
 	// ------ wenn Spieler schleicht (falls ich ihn sehen kann, kommt Sneak-Reaktion) ------
 	if (C_BodyStateContains(other,BS_SNEAK))
-	|| (C_BodyStateContains(other,BS_STAND)) //in Schleichpose Stehen = BS_STAND
+	|| (
+		(C_BodyStateContains(other,BS_STAND)) //in Schleichpose Stehen = BS_STAND
+		&& !hero_strafing
+		&& !hero_jumping
+		&& !hero_gobackward
+	 )
 	{
 		if (!Npc_CanSeeNpc (self, other))
 		&& (!Npc_IsInState (self, ZS_ObservePlayer))

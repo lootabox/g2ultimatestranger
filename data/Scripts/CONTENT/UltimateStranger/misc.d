@@ -1,5 +1,98 @@
 
 //************************************************
+// Method for getting walkmode
+// https://forum.worldofplayers.de/forum/threads/1536360-S%C3%A4mtliche-schlafende-NPCs-und-Monster-ignorieren-den-Spieler-trotz-BS_RUN?p=26545844&viewfull=1#post26545844
+//************************************************
+
+FUNC int Npc_GetWalkMode (VAR C_NPC slf)
+{
+    var oCNpc oCNpc_slf;
+    oCNpc_slf = Hlp_GetNpc(slf);
+
+    var int wmode;
+    const int oCAniCtrl_Human_walkmode_offset            = 352; //0x0160
+    return MEM_ReadInt(oCNpc_slf.anictrl+oCAniCtrl_Human_walkmode_offset);
+};
+
+//************************************************
+// Send quiet sound perceptions for strafing/jumping/backing up
+// https://forum.worldofplayers.de/forum/threads/1536360-S%C3%A4mtliche-schlafende-NPCs-und-Monster-ignorieren-den-Spieler-trotz-BS_RUN/page2?p=26557935&viewfull=1#post26557935
+//************************************************
+
+var int hero_strafing;
+var int hero_jumping;
+var int hero_gobackward;
+
+func void StrafePerception_Init() {
+    const int oCNpc__EV_STRAFE_player_G1 = 7662588; //0x74EBFC
+    const int oCNpc__EV_STRAFE_player_G2 = 6834660; //0x6849E4
+    HookEngineF(MEMINT_SwitchG1G2(oCNpc__EV_STRAFE_player_G1, oCNpc__EV_STRAFE_player_G2), 7, StrafePerception);
+};
+func void StrafePerception() {
+    // exit function if player is in sneak mode
+    if (Npc_GetWalkMode(hero) == NPC_SNEAK)
+    {
+        return;
+    };
+
+    const int PERC_INVERVAL = 1000; // As in oCAIHuman::CreateFootStepSound
+    var int percTimer; percTimer += MEM_Timer.frameTime;
+    if (percTimer >= PERC_INVERVAL) {
+        percTimer -= PERC_INVERVAL;
+        hero_strafing = TRUE;
+        Npc_SendPassivePerc(hero, PERC_ASSESSQUIETSOUND, hero, hero);
+        hero_strafing = FALSE;
+    };
+};
+
+func void JumpPerception_Init() {
+    const int oCAniCtrl_Human__PC_JumpForward_G2 = 7020032; //0x6B1E00
+    HookEngineF(oCAniCtrl_Human__PC_JumpForward_G2, 5, JumpPerception);
+};
+func void JumpPerception() {
+    hero_jumping = TRUE;
+    Npc_SendPassivePerc(hero, PERC_ASSESSQUIETSOUND, hero, hero);
+    hero_jumping = FALSE;
+};
+
+func void GoBackwardPerception_Init() {
+    // thanks to mud-freak and Kirides:
+    // https://forum.worldofplayers.de/forum/threads/1536360-S%C3%A4mtliche-schlafende-NPCs-und-Monster-ignorieren-den-Spieler-trotz-BS_RUN?p=26545171&viewfull=1#post26545171
+    
+    // hooks in oCAniCtrl_Human::PC_GoBackward_G2
+    //const int oCAniCtrl_Human__PC_GoBackward_G2 = 7019968; //0x6B1DC0
+    //HookEngineF(oCAniCtrl_Human__PC_GoBackward_G2, 5, GoBackwardPerception); // causes bugs in collision with inclines
+    HookEngineF(7044586, 6, hook__backward); // ANI_WALKMODE_RUN
+    HookEngineF(7044556, 6, hook__backward); // ANI_WALKMODE_WALK
+    //HookEngineF(7044526, 6, GoBackwardPerception); // ANI_WALKMODE_SNEAK
+
+    // hooks in oCAIHuman::FightMelee
+    HookEngineF(6911940 /* 006977c4 */, 5, GoBackwardPerception); // Gothic 1 Control (?)
+    HookEngineF(6914029 /* 00697fed */, 5, GoBackwardPerception); // (?)
+    HookEngineF(6914536 /* 006981e8 */, 6, GoBackwardPerception); // Gothic 2 Control (?)
+};
+func void GoBackwardPerception() {
+    // exit function if player is in sneak mode
+    if Npc_GetWalkMode(hero) == NPC_SNEAK
+    {
+        return;
+    };
+    hero_gobackward = TRUE;
+    Npc_SendPassivePerc(hero, PERC_ASSESSQUIETSOUND, hero, hero);
+    hero_gobackward = FALSE;
+};
+func void hook__backward() {
+    const int npcPtr_offset = 300;
+    var int npcPtr; npcPtr = MEM_ReadInt(ESI + npcPtr_offset);
+    var c_npc npc; npc = _^(npcPtr);
+    if (Npc_IsPlayer(npc))
+    {
+        GoBackwardPerception();
+    };
+};
+
+
+//************************************************
 // Spawning light spells above hero
 // https://forum.worldofplayers.de/forum/threads/1559829-Licht-Zauber-nach-Laden-richtig-ausrichten
 //************************************************

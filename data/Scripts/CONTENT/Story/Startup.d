@@ -41,6 +41,9 @@ func void INIT_GLOBAL()
 	HookChangeLevel_Init();
 	FixEquipBestWeapons_Init();
 	Install_Character_Menu_Hook();
+	StrafePerception_Init();
+	JumpPerception_Init();
+	GoBackwardPerception_Init();
 
 	// Delay hero init
 	FF_ApplyExtGT(INIT_HERO, 3000, 1);
