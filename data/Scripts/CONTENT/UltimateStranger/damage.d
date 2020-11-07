@@ -1,7 +1,4 @@
 
-// Rather crude, but should be fine since there is only one fire mage staff in the game
-var int Staff_Fire_Charged;
-
 // https://forum.worldofplayers.de/forum/threads/1149697-Script-Eigene-Schadensberechnung
 
 class oSDamageDescriptor {
@@ -213,13 +210,6 @@ func int Handle_Magic_Dmg(var c_npc att, var c_npc vic, var int spellID, var int
 {
 var string pristr; pristr = IntToString(dmg);
 
-	// Infused fire mage staff effect
-	if (Staff_Fire_Charged == TRUE)
-	{
-		dmg = dmg * 5 / 4;
-		Staff_Fire_Charged = FALSE;
-	};
-
 	// Get protection amount
 	var int prot;
 	if (att.guild == GIL_DRAGON)	{ prot = vic.protection[PROT_FIRE]; }
@@ -228,6 +218,29 @@ var string pristr; pristr = IntToString(dmg);
 
 	// Get equipped staff
 	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(att);
+	
+	if (Hlp_IsValidItem(wpn))
+	{
+		// Fire staff ability
+		if (Hlp_IsItem(wpn, ItMW_Addon_Stab01))
+		{
+			if (Buff_Has(vic, dot_burn))
+			{
+				dmg += 10;
+			};
+		}
+		else if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_infused))
+			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Magic))
+			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Water))
+			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Typhoon))
+		{
+			if (Buff_Has(vic, dot_burn))
+			{
+				dmg = dmg * 125 / 100; // 25%
+			};
+		};
+	};
+
 	// FIRE SPELLS ---------------------------------------------------------------------------
 	if	(spellID == SPL_Firebolt)
 	||	(spellID == SPL_InstantFireball)
@@ -245,28 +258,6 @@ var string pristr; pristr = IntToString(dmg);
 		// Figure out burn dot
 		var int fireDot; fireDot = dmg / 2; dmg -= fireDot;
 
-		if (Hlp_IsValidItem(wpn))
-		{
-			// Fire staff non-infused effect and infused trigger
-			if (Hlp_IsItem(wpn, ItMW_Addon_Stab01))
-			{
-				if (Buff_Has(vic, dot_burn))
-				{
-					dmg += 5;
-					fireDot += 5;
-				};
-			}
-			else if	(fireDot > 0)
-			{
-				if	(Hlp_IsItem(wpn, ItMW_Addon_Stab01_Infused))
-				||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Magic))
-				||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Water))
-				||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Typhoon))
-				{
-					Staff_Fire_Charged = TRUE;
-				};
-			};
-		};
 		// Play burn FX on corpses for flavor in any case
 		if (dmg >= vic.attribute[ATR_HITPOINTS])
 		{

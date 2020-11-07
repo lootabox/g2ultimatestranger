@@ -770,14 +770,14 @@ const string NAME_PalMediumHeal_Info	= "Healing is equal to maximum mana (double
 const string NAME_PalFullHeal_Info		= "Healing is equal to maximum mana (tripled).";
 
 // MAX LENGTH							"------------------------------------------------------------";
-const string NAME_Staff_Fire_1			= "Fire spell damage against burning foes increased by ten.";
-const string NAME_Staff_Fire_2			= "Igniting a foe increases next spell damage by a quarter.";
 const string NAME_Staff_Magic_1			= "Mana can overflow its natural limit temporarily.";
 const string NAME_Staff_Magic_2			= "";
 const string NAME_Staff_Water_1			= "Ice and water spells mana cost is reduced by three.";
 const string NAME_Staff_Water_2			= "Ice and water spells reduce next spells cost by a quarter.";
 const string NAME_Staff_Typhoon_1		= "Simple thrown spells can be cast faster.";
 const string NAME_Staff_Typhoon_2		= "Simple thrown and charged spells can be cast faster.";
+const string NAME_Staff_Fire_1			= "Magic damage bonus against burning targets:";
+const string NAME_Staff_Fire_2			= "Magic damage bonus against burning targets (percentage):";
 const string NAME_Staff_Ulthar			= "Ulthar enchanted this staff for fusing two staves together.";
 const string NAME_Staff_Ulthar_Fire_Magic		= "Staff of fire fused with the staff of magic.";
 const string NAME_Staff_Ulthar_Fire_Water		= "Staff of fire fused with the staff of water.";
