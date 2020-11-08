@@ -190,7 +190,7 @@ func void light_persister_apply(var c_npc npc, var string visualFX, var int dura
         if (Buff_ApplyUnique(npc, light_persister, npc)) {
             var int bh; bh = Buff_Has(npc, light_persister);
             var lCBuff b; b = get(bh);
-            b.durationMs = durationSeconds * 1000;
+            b.durationMS = durationSeconds * 1000;
             b.name = visualFX;
         };
     };
