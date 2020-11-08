@@ -289,9 +289,6 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(fireDot)));
 		{
 			// Calculate freeze dot
 			var int freezeDot; freezeDot = SPL_FREEZE_DAMAGE;
-			if		(C_NpcIsFireBase(vic))	{ freezeDot *= 2; }
-			else if	(C_NpcIsIceBase(vic))	{ freezeDot /= 2; };
-
 			var int freezeDuration; freezeDuration = dmg / freezeDot;
 			if	(!C_NpcIsLarge(vic) && freezeDuration > 0)
 			{

@@ -55,12 +55,10 @@ func int ZS_MagicFreeze_Loop ()
 	if (Npc_GetStateTime(self) != self.aivar[AIV_FreezeStateTime])
 	{
 		self.aivar[AIV_FreezeStateTime] = Npc_GetStateTime(self);
-		if		(C_NpcIsFireBase(self))	{ B_MagicHurtNpc(other, self, SPL_FREEZE_DAMAGE * 2); }
-		else if	(C_NpcIsIceBase(self))	{ B_MagicHurtNpc(other, self, SPL_FREEZE_DAMAGE / 2); }
-		else							{ B_MagicHurtNpc(other, self, SPL_FREEZE_DAMAGE); };
+		B_MagicHurtNpc(other, self, SPL_FREEZE_DAMAGE);
 	};
-	
-	return				LOOP_CONTINUE;
+
+	return LOOP_CONTINUE;
 };
 
 
