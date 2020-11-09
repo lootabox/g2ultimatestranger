@@ -2,7 +2,7 @@
 // SPL_IceBolt
 // ***********
 
-const int SPL_Cost_IceBolt		= 7;
+const int SPL_Cost_IceBolt		= 8;
 const int SPL_Damage_IceBolt 	= 40;
 
 
