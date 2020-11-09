@@ -15,6 +15,10 @@ func int C_NpcIsWeakToFire(var C_Npc slf)
 	{
 		return TRUE;
 	}
+	else if (Buff_Has(slf, elemental_weakness))
+	{
+		return TRUE;
+	}
 	else
 	{
 		return FALSE;

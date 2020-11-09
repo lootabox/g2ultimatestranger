@@ -12,6 +12,10 @@ func int C_NpcIsWeakToWater(var C_Npc slf)
 	{
 		return TRUE;
 	}
+	else if (Buff_Has(slf, elemental_weakness))
+	{
+		return TRUE;
+	}
 	else
 	{
 		return FALSE;

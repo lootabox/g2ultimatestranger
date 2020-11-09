@@ -14,18 +14,19 @@ func int C_NpcIsWeakToLightning(var C_Npc slf)
 	{
 		return TRUE;
 	}
-	else
-	{
-		if (C_BodyStateContains(slf,BS_SWIM))
+	else if (C_BodyStateContains(slf,BS_SWIM))
 		|| (C_BodyStateContains(slf,BS_DIVE))
 		|| (GetWaterLevel(slf) == WATERLEVEL_WADE)
 		//|| (Wld_IsRaining() && (CurrentLevel == NEWWORLD_ZEN || CurrentLevel == OLDWORLD_ZEN || CurrentLevel == ADDONWORLD_ZEN))
-		{
-			return TRUE;
-		}
-		else
-		{
-			return FALSE;
-		};
+	{
+		return TRUE;
+	}
+	else if (Buff_Has(slf, elemental_weakness))
+	{
+		return TRUE;
+	}
+	else
+	{
+		return FALSE;
 	};
 };
