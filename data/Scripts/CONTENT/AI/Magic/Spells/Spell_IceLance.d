@@ -2,8 +2,8 @@
 // SPL_Icelance	/K2
 // *************
 
-const int SPL_Cost_Icelance		= 15;
-const int SPL_Damage_Icelance	= 75;
+const int SPL_Cost_Icelance		= 16;
+const int SPL_Damage_Icelance	= 80;
 
 
 INSTANCE Spell_Icelance		(C_Spell_Proto)
