@@ -219,28 +219,6 @@ var string pristr; pristr = IntToString(dmg);
 	// Get equipped staff
 	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(att);
 	
-	if (Hlp_IsValidItem(wpn))
-	{
-		// Fire staff ability
-		if (Hlp_IsItem(wpn, ItMW_Addon_Stab01))
-		{
-			if (Buff_Has(vic, dot_burn))
-			{
-				dmg += 10;
-			};
-		}
-		else if (Hlp_IsItem(wpn, ItMW_Addon_Stab01_infused))
-			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Magic))
-			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Water))
-			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Typhoon))
-		{
-			if (Buff_Has(vic, dot_burn))
-			{
-				dmg = dmg * 125 / 100; // 25%
-			};
-		};
-	};
-
 	// FIRE SPELLS ---------------------------------------------------------------------------
 	if	(spellID == SPL_Firebolt)
 	||	(spellID == SPL_InstantFireball)
@@ -250,6 +228,14 @@ var string pristr; pristr = IntToString(dmg);
 	||	(spellID == SPL_Firerain)
 	||	(spellID == SPL_Explosion)
 	{
+		// Check fire staff bonus
+		if (Hlp_IsValidItem(wpn))
+		{
+			if (!Buff_Has(vic, dot_burn)) {
+				dmg = dmg * (100 + Bonus_Stab01) / 100;
+			};
+		};
+
 		// Handle protection
 		if		(C_NpcIsWeakToFire(vic))	{ dmg -= prot / 2; }
 		else if	(C_NpcIsFireBase(vic))		{ dmg -= prot * 2; }

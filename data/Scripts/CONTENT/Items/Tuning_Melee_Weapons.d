@@ -342,26 +342,31 @@ const int Damage_Stab01				= 25;
 const int Condition_Stab01			= 25;
 const int Range_Stab01				= 120;
 const int Value_Stab01				= 900;
+const int Bonus_Stab01				= 25;
 //tatsächlicher Zauber Stab	- NEUE INSTANZ //ADDON
 const int Damage_Stab02				= 20; 
 const int Condition_Stab02			= 20;
 const int Range_Stab02				= 120;
 const int Value_Stab02				= 850;
+//const int Bonus_Stab02				= 0;
 //Wassermagier	- NEUE INSTANZ //ADDON
 const int Damage_Stab03				= 35; 
 const int Condition_Stab03			= 30;
 const int Range_Stab03				= 120;
 const int Value_Stab03				= 950;
+const int Bonus_Stab03				= 25;
 //Wassermagier	- NEUE INSTANZ //ADDON
 const int Damage_Stab04				= 30; 
 const int Condition_Stab04			= 40;
 const int Range_Stab04				= 120;
 const int Value_Stab04				= 1000;
+const int Bonus_Stab04				= 30;
 //Wassermagier	- NEUE INSTANZ //ADDON
 const int Damage_Stab05				= 40; 
 const int Condition_Stab05			= 35;
 const int Range_Stab05				= 120;
 const int Value_Stab05				= 1050;
+//const int Bonus_Stab05				= 0;
 //Stabkeule - NEUE INSTANZ
 const int Damage_Stabkeule 			= 32; 
 const int Condition_Stabkeule		= 20;

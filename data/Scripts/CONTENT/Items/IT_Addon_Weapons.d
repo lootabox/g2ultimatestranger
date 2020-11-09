@@ -90,18 +90,12 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 
 	description			= 	"Staff of the Fire Magicians";
 
-	TEXT[0]				= NAME_Staff_Fire_1;
+	TEXT[0]				= NAME_Bonus_Stab01;			COUNT[0]	= Bonus_Stab01;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-
-INSTANCE ItMW_Addon_Stab01_Infused (C_Item) {
-	B_CopyItem(ItMW_Addon_Stab01_Infused, ItMW_Addon_Stab01);
-	description			= ConcatStrings(description, " (Infused)");
-	TEXT[0]				= NAME_Staff_Fire_2;
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab02 (C_Item)
@@ -126,17 +120,12 @@ INSTANCE ItMW_Addon_Stab02 (C_Item)
 
 	description			= 	name;
 
-	TEXT[0]				= NAME_Staff_Magic_1;
+	TEXT[0]				= NAME_Bonus_Stab02;			//COUNT[0]	= Bonus_Stab02;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-INSTANCE ItMW_Addon_Stab02_Infused (C_Item) {
-	B_CopyItem(ItMW_Addon_Stab02_Infused, ItMW_Addon_Stab02);
-	description			= ConcatStrings(description, " (Infused)");
-	TEXT[0]				= NAME_Staff_Magic_2;
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab03 (C_Item)
@@ -161,20 +150,15 @@ INSTANCE ItMW_Addon_Stab03 (C_Item)
 
 	description			= 	"Staff of the Water Mages";
 
-	TEXT[0]				= NAME_Staff_Water_1;
+	TEXT[0]				= NAME_Bonus_Stab03;			COUNT[0]	= Bonus_Stab03;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
-INSTANCE ItMW_Addon_Stab03_Infused (C_Item) {
-	B_CopyItem(ItMW_Addon_Stab03_Infused, ItMW_Addon_Stab03);
-	description			= ConcatStrings(description, " (Infused)");
-	TEXT[0]				= NAME_Staff_Water_2;
-};
 // *****************************************************
-PROTOTYPE ItMW_Addon_Stab04_Proto (C_Item)
+INSTANCE ItMW_Addon_Stab04 (C_Item)
 {	
 	name 				=	"Ulthar's staff";  
 
@@ -196,38 +180,12 @@ PROTOTYPE ItMW_Addon_Stab04_Proto (C_Item)
 
 	description			= 	name;
 
+	TEXT[0]				= NAME_Bonus_Stab04;			COUNT[0]	= Bonus_Stab04;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-INSTANCE ItMW_Addon_Stab04 (ItMW_Addon_Stab04_Proto) {
-	TEXT[0]				= NAME_Staff_Ulthar;
-};
-INSTANCE ItMW_Addon_Stab04_Fire_Magic (ItMW_Addon_Stab04_Proto) {
-	TEXT[0]				= NAME_Staff_Ulthar_Fire_Magic;
-};
-INSTANCE ItMW_Addon_Stab04_Fire_Water (ItMW_Addon_Stab04_Proto) {
-	TEXT[0]				= NAME_Staff_Ulthar_Fire_Water;
-};
-INSTANCE ItMW_Addon_Stab04_Fire_Typhoon (ItMW_Addon_Stab04_Proto) {
-	TEXT[0]				= NAME_Staff_Ulthar_Fire_Typhoon;
-	on_equip			=	Equip_Addon_Stab05;
-	on_unequip			=	UnEquip_Addon_Stab05;
-};
-INSTANCE ItMW_Addon_Stab04_Magic_Water (ItMW_Addon_Stab04_Proto) {
-	TEXT[0]				= NAME_Staff_Ulthar_Magic_Water;
-};
-INSTANCE ItMW_Addon_Stab04_Magic_Typhoon (ItMW_Addon_Stab04_Proto) {
-	TEXT[0]				= NAME_Staff_Ulthar_Magic_Typhoon;
-	on_equip			=	Equip_Addon_Stab05;
-	on_unequip			=	UnEquip_Addon_Stab05;
-};
-INSTANCE ItMW_Addon_Stab04_Water_Typhoon (ItMW_Addon_Stab04_Proto) {
-	TEXT[0]				= NAME_Staff_Ulthar_Water_Typhoon;
-	on_equip			=	Equip_Addon_Stab05;
-	on_unequip			=	UnEquip_Addon_Stab05;
 };
 // *****************************************************
 INSTANCE ItMW_Addon_Stab05 (C_Item)
@@ -254,17 +212,12 @@ INSTANCE ItMW_Addon_Stab05 (C_Item)
 
 	description			= 	name;
 
-	TEXT[0]				= NAME_Staff_Typhoon_1;			COUNT[0]	= 30;
+	TEXT[0]				= NAME_Bonus_Stab05;			//COUNT[0]	= Bonus_Stab05;
 	TEXT[1]				= NAME_Dam_Edge;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-INSTANCE ItMW_Addon_Stab05_Infused (C_Item) {
-	B_CopyItem(ItMW_Addon_Stab05_Infused, ItMW_Addon_Stab05);
-	description			= ConcatStrings(description, " (Infused)");
-	TEXT[0]				= NAME_Staff_Typhoon_2;			COUNT[0]	= 30;
 };
 FUNC VOID Equip_Addon_Stab05() {
 	spellFxAniLetters[SPL_AdanosBall] = "RPF";

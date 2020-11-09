@@ -1,7 +1,4 @@
 
-// Rather crude, but should be fine since there is only one water mage staff in the game
-var int Staff_Water_Charged;
-
 // For timing out rapid spell combo animations
 func void FF_RapidSpellCombo_Reset() {
 	spellFxAniLetters[SPL_AdanosBall] = "RPF";
@@ -20,16 +17,10 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 		return SPL_SENDCAST;
 	};
 
-	// Staff of water mage effect
-	if (Staff_Water_Charged == TRUE)
-	{
-		manaCost = manaCost * 3 / 4;
-	};
-
 	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 	if (Hlp_IsValidItem(wpn))
 	{
-		// Staff of water mage non-infused effect
+		// Staff of water mage effect
 		if (Hlp_IsItem(wpn, ItMW_Addon_Stab03)) {
 			var int spellID; spellID = Npc_GetActiveSpell(self);
 			if	(spellID == SPL_Icebolt)
@@ -40,7 +31,7 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 			||	(spellID == SPL_WaterFist)
 			||	(spellID == SPL_Thunderstorm)
 			{
-				manaCost -= 3;
+				manaCost = manaCost * (100 - Bonus_Stab03) / 100;
 			};
 		};
 	};
@@ -48,12 +39,8 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 	if (slf.attribute[ATR_MANA] >= manaCost)
 	{
 		if (Hlp_IsValidItem(wpn)) {
-			// Typhoon non-infused effect
-			if	(Hlp_IsItem(wpn, ItMw_Addon_Stab05))
-			||	(Hlp_IsItem(wpn, ItMw_Addon_Stab05_Infused))
-			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Typhoon))
-			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Magic_Typhoon))
-			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Water_Typhoon)) {
+			// Typhoon staff effect
+			if	(Hlp_IsItem(wpn, ItMw_Addon_Stab05)) {
 				// Deactive timer if active
 				if (FF_Active(FF_RapidSpellCombo_Reset)) {
 					FF_Remove(FF_RapidSpellCombo_Reset);
@@ -111,17 +98,10 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 	}
 	else
 	{
-		// Staff of water mage effect
-		if (Staff_Water_Charged == TRUE)
-		{
-			manaCost = manaCost * 3 / 4;
-			Staff_Water_Charged = FALSE;
-		};
-
 		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 		if (Hlp_IsValidItem(wpn))
 		{
-			// Staff of water mage non-infused effect and infused trigger
+			// Staff of water mage effect
 			if (Hlp_IsItem(wpn, ItMW_Addon_Stab03))
 			{
 				var int spellID; spellID = Npc_GetActiveSpell(self);
@@ -133,23 +113,7 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 				||	(spellID == SPL_WaterFist)
 				||	(spellID == SPL_Thunderstorm)
 				{
-					manaCost -= 3;
-				};
-			}
-			else if (Hlp_IsItem(wpn, ItMW_Addon_Stab03_Infused))
-				||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Water))
-				||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Magic_Water))
-				||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Water_Typhoon))
-			{
-				if	(spellID == SPL_Icebolt)
-				||	(spellID == SPL_IceLance)
-				||	(spellID == SPL_IceCube)
-				||	(spellID == SPL_IceWave)
-				||	(spellID == SPL_Geyser)
-				||	(spellID == SPL_WaterFist)
-				||	(spellID == SPL_Thunderstorm)
-				{
-					Staff_Water_Charged = TRUE;
+					manaCost = manaCost * (100 - Bonus_Stab03) / 100;
 				};
 			};
 		};
@@ -195,23 +159,13 @@ func int Spell_Logic_Invest(var C_NPC slf, var int manaInvested, var int STEP_si
 	if (Npc_GetActiveSpellIsScroll(slf)) {STEP_cost = C_GetScrollCost(STEP_cost);}
 	else
 	{
-		// Staff of water mage effect
-		if (Staff_Water_Charged == TRUE)
-		&& (firstTierNoManaCost == FALSE)
-		{
-			STEP_cost = STEP_cost * 3 / 4;
-		};
-
 		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
 		if (Hlp_IsValidItem(wpn))
 		{
-			// Typhoon infused effect
-			if	(Hlp_IsItem(wpn, ItMW_Addon_Stab05_Infused))
-			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Fire_Typhoon))
-			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Magic_Typhoon))
-			||	(Hlp_IsItem(wpn, ItMW_Addon_Stab04_Water_Typhoon))
+			// Ulthar's staff effect
+			if (Hlp_IsItem(wpn, ItMW_Addon_Stab04))
 			{
-				STEP_size = STEP_size * 7 / 10;
+				STEP_size = STEP_size * (100 - Bonus_Stab04) / 100;
 			};
 		};
 	};
@@ -228,7 +182,6 @@ func int Spell_Logic_Invest(var C_NPC slf, var int manaInvested, var int STEP_si
 		if (tier == maxLevel)
 		|| (slf.attribute[ATR_MANA] < STEP_cost)
 		{
-			Staff_Water_Charged = FALSE; // no charged ice/water spells, so no need to check for turning flag TRUE
 			return SPL_SENDCAST; // fire latest at max level or if trying to advance without enough mana
 		};
 		slf.attribute[ATR_MANA] -= STEP_cost;
