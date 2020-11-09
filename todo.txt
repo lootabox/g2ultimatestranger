@@ -5,6 +5,8 @@
 
 	FBT
 
+make creatures NOT use FBT's
+
 Fire arrow
 Ice arrow
 Small lightning
@@ -18,12 +20,17 @@ Firestorm
 (Small Firestorm)
 (Waterfist)
 
-
-make creatures NOT use FBT's
-
 ----------- Overriding magic statuses
 
 magic cage > freeze > whirlwind > burn
+
+----------- Teachers
+
+Ice Storm -> Marduk/Milten(c6)
+Dust Devil -> Parlan
+
+xardas tower (5 books) -> holy missile~/destroy undead?, breath of death, wave of death
+Remove breath of death / wave of death from Milten(c6)
 
 ----------- New spells / refactors
 
@@ -31,8 +38,7 @@ remake acid -> toxic rain
 holy missile remake ?
 unused bigass fireball rune texture -> explosion
 
-ice storm - 4x75 dmg
-fire arrow - no dot
+ice storm - 4x80 dmg
 
 ----------- Dragon rock paper scissors
 
@@ -50,10 +56,6 @@ Extricate doesn't work
 Quake inconsistent and sound too loud
 TODO Dust Devil cast time--
 TODO inventory order of spells
-
------------ Xardas
-
-xardas tower (5 books) -> holy missle~/destroy undead?, breath of death, wave of death
 
 ----------- Level balance
 
@@ -87,12 +89,12 @@ S	Fear					Valley of Mines In Xardas' old tower.						Beliar's Wrath
 
 
 ----------- Staves
-name				id					location						upg1			upg2				upg3				upg4
-Staff of Fire		ItMW_Addon_Stab01	gorax (kdf)						black_ore		sulfur (6)			pitch (6)			pray (innos)
-Magic Staff		¨	ItMW_Addon_Stab02	monastery cellar (kdf)			black_ore		ore (12)			rock_crystal (3)	pray (innos)
-Staff of Water		ItMW_Addon_Stab03	cronos (kdf)					black_ore		glacier_quartz (6)	aquamarine (3)		pray (innos)
-Ulthar's Staff		ItMW_Addon_Stab04	monastery library (c5, kdf)		black_ore		black_pearl (1)		holy_water (1)		pray (beliar)
-Typhoon				ItMW_Addon_Stab05	?								black_ore		coal (12)			gold_nugget (24)	pray (innos)
+name				id					location
+Staff of Fire		ItMW_Addon_Stab01	gorax (kdf)
+Magic Staff		¨	ItMW_Addon_Stab02	monastery cellar (kdf)
+Staff of Water		ItMW_Addon_Stab03	cronos (kdf)
+Ulthar's Staff		ItMW_Addon_Stab04	monastery library (c5, kdf)
+Typhoon				ItMW_Addon_Stab05	?
 
 
 
