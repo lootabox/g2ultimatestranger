@@ -1014,6 +1014,7 @@ func void DIA_Lord_Hagen_BACKINTOWN_Info ()
 	//AI_Output (self ,other, "DIA_Lord_Hagen_CUSTOM_04_01"); //Yes, of course. I stand by my word.
 	//AI_Output (self ,other, "DIA_Lord_Hagen_CUSTOM_04_02"); //However, I have much to do.
 	//AI_Output (self ,other, "DIA_Lord_Hagen_CUSTOM_04_03"); //I shall see to it as quickly as possible.
+	//AI_Output (other,self,"DIA_Addon_Logan_EXIT_15_00");//I'll come back later...
 
 	B_GiveInvItems (self, other, ItRu_TeleportSeaport, 1);
 	
