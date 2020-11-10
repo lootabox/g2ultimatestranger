@@ -333,15 +333,10 @@ func int oCInfoManager_GetInfo (var int npcInstance, var int herInstance, var in
 //************************************************
 
 func void HookLootItems_Init() {
-    const int hooked = 0;
-    if (!hooked) {
-        const int oCItemContainer__RemoveItem_G2 = 7378144; // 0x7094E0
-        const int oCNpc__DoTakeVob_G2 = 7621056; // 0x7449C0
-        HookEngineF(oCItemContainer__RemoveItem_G2, 6, _HookRemoveItem);
-        HookEngineF(oCNpc__DoTakeVob_G2, 6, _HookDoTakeVob);
-
-        hooked = 1;
-    };
+    const int oCItemContainer__RemoveItem_G2 = 7378144; // 0x7094E0
+    const int oCNpc__DoTakeVob_G2 = 7621056; // 0x7449C0
+    HookEngineF(oCItemContainer__RemoveItem_G2, 6, _HookRemoveItem);
+    HookEngineF(oCNpc__DoTakeVob_G2, 6, _HookDoTakeVob);
 };
 
 func void _HookRemoveItem()
