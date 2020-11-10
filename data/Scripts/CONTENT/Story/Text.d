@@ -840,8 +840,6 @@ const string NAME_ADDON_PRAYIDOL_GIVEMANA				= "I will pray and offer 1 mana.";
 //CUSTOM
 // MAX LENGTH							"------------------------------------------------------------";
 const string NAME_Reach					= "Reach:";
-const string NAME_Rapier				= "Alternative Fighter and Master stances.";
-const string NAME_Rapier_Master			= "Alternative Fighter, Master and a true master stance.";
 
 // *************************************************************
 // NAMEN FÜR Produktionsitems
