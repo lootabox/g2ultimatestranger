@@ -770,10 +770,10 @@ const string NAME_PalMediumHeal_Info	= "Healing is equal to maximum mana (double
 const string NAME_PalFullHeal_Info		= "Healing is equal to maximum mana (tripled).";
 
 // MAX LENGTH						"------------------------------------------------------------";
-const string NAME_Bonus_Stab01		= "Fire spell damage bonus vs. non-burning targets (percentage):"; // 25%
+const string NAME_Bonus_Stab01		= "Fire spell damage bonus vs. non-burning targets (percentage):";
 const string NAME_Bonus_Stab02		= "";
-const string NAME_Bonus_Stab03		= "Ice and water spells mana cost reduction (percentage):"; // 25%
-const string NAME_Bonus_Stab04		= "Charged spells charge rate increase (percentage):"; // 30%
+const string NAME_Bonus_Stab03		= "Ice and water spells mana cost reduction (percentage):";
+const string NAME_Bonus_Stab04		= "Charged spells charge rate increase (percentage):";
 const string NAME_Bonus_Stab05		= "Simple projectile spells can be cast faster.";
 
 //const string NAME_Damage		= "Damage:";
