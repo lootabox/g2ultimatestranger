@@ -57,7 +57,7 @@ This does not include minor changes to quest related dialog or obvious fixes, su
 "Merchant raid"	Requires finding the bandits who took Erol's stone tablets, before returning any stone tablets.
 "Quest for Lucia"	Is now just about delivering her note to Elvrich, after that she is just another missing person.
 "Rescue Gorn"	Can only be finished after scouting at least one mining site.
-"The Claw of Beliar"	Requires talking to Saturas before praying to Beliar and the option to destroy is only presented once then.
+"The Claw of Beliar"	Requires talking to Saturas before praying to Beliar and the option to destroy it is only presented once.
 "The Seekers"	Can be finished by bringing all of the Almanacs to Pyrokar before leaving for Irdorath.
 "The man with the eyepatch"	Cancels if the first treasure is not given to him.
 "The simple way to the monastery"	Only reduces the gold offering required.
