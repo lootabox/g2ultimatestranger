@@ -633,14 +633,14 @@ const int SPL_SummonZombie			= 88;
 const int SPL_SummonMud				= 89;
 
 // ...
-const int SPL_Acid					= 90;
-const int SPL_AdanosBall			= 91;
-const int SPL_Explosion				= 92;
-const int SPL_Extricate				= 93;
-const int SPL_HealOther				= 94;
-const int SPL_MagicCage				= 95;
-const int SPL_Quake					= 96;
-const int SPL_Rage					= 97;
+const int SPL_Reserved_90			= 90;
+const int SPL_Reserved_91			= 91;
+const int SPL_Reserved_92			= 92;
+const int SPL_Reserved_93			= 93;
+const int SPL_Reserved_94			= 94;
+const int SPL_Reserved_95			= 95;
+const int SPL_Reserved_96			= 96;
+const int SPL_Reserved_97			= 97;
 const int SPL_Reserved_98			= 98;
 const int SPL_Reserved_99			= 99;
 
@@ -780,14 +780,14 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"SummonMud",			// 89	SPL_SummonMud
 
 	// ...
-	"Acid",					// 90	SPL_Acid
-	"AdanosBall",			// 91	SPL_AdanosBall
-	"Explosion",			// 92	SPL_Explosion
-	"Extricate",			// 93	SPL_Extricate
-	"HealOther",			// 94	SPL_HealOther
-	"MagicCage",			// 95	SPL_MagicCage
-	"Quake",				// 96	SPL_Quake
-	"Rage",					// 97	SPL_Rage
+	"Light",				// 90	SPL_Reserved_90
+	"Light",				// 91	SPL_Reserved_91
+	"Light",				// 92	SPL_Reserved_92
+	"Light",				// 93	SPL_Reserved_93
+	"Light",				// 94	SPL_Reserved_94
+	"Light",				// 95	SPL_Reserved_95
+	"Light",				// 96	SPL_Reserved_96
+	"Light",				// 97	SPL_Reserved_97
 	"Light",				// 98	SPL_Reserved_98
 	"Light"					// 99	SPL_Reserved_99
 };
@@ -926,14 +926,14 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"SUM",					// 89	SPL_SummonMud
 
 	// ...
-	"FRZ",  				// 90	SPL_Acid
-	"FBT",  				// 91	SPL_AdanosBall
-	"FRZ",  				// 92	SPL_Explosion
-	"EXP",  				// 93	SPL_Extricate
-	"SLE",  				// 94	SPL_HealOther
-	"FRZ",  				// 95	SPL_MagicCage
-	"FOT",  				// 96	SPL_Quake
-	"FEA",					// 97	SPL_Rage
+	"XXX",  				// 90	SPL_Reserved_90
+	"XXX",  				// 91	SPL_Reserved_91
+	"XXX",  				// 92	SPL_Reserved_92
+	"XXX",  				// 93	SPL_Reserved_93
+	"XXX",  				// 94	SPL_Reserved_94
+	"XXX",  				// 95	SPL_Reserved_95
+	"XXX",  				// 96	SPL_Reserved_96
+	"XXX",					// 97	SPL_Reserved_97
 	"XXX",					// 98	SPL_Reserved_98
 	"XXX"					// 99	SPL_Reserved_99
 };

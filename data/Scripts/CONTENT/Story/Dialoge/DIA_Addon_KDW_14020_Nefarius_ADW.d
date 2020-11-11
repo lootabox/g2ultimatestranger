@@ -313,11 +313,7 @@ FUNC VOID DIA_Addon_Nefarius_ADW_Runen_2()
 	if (PLAYER_TALENT_RUNES [SPL_ICELANCE] == FALSE) 
 	{
 		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_ICELANCE, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ICELANCE)) ,TeachPlayerTalentRunes_SPL_ICELANCE);
-	};	
-	if (PLAYER_TALENT_RUNES [SPL_AdanosBall] == FALSE) 
-	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_AdanosBall, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_AdanosBall)) ,TeachPlayerTalentRunes_SPL_AdanosBall);
-	};	
+	};
 	if	(PLAYER_TALENT_RUNES [SPL_SummonGoblinSkeleton] == FALSE) 
 	{
 		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_SummonGoblinSkeleton, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGoblinSkeleton)) ,TeachPlayerTalentRunes_SPL_SummonGoblinSkeleton);
@@ -329,10 +325,6 @@ FUNC VOID DIA_Addon_Nefarius_ADW_Runen_2()
 	if (PLAYER_TALENT_RUNES [SPL_Whirlwind] == FALSE) 
 	{
 		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Whirlwind, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Whirlwind)) ,TeachPlayerTalentRunes_SPL_Whirlwind);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_Acid] == FALSE) 
-	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Acid, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Acid)) ,TeachPlayerTalentRunes_SPL_Acid);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_WINDFIST] == FALSE) 
 	{
@@ -404,10 +396,6 @@ FUNC VOID DIA_Addon_Nefarius_ADW_Runen_4()
 	if (PLAYER_TALENT_RUNES [SPL_Waterfist] == FALSE) 
 	{
 		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_Waterfist, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Waterfist)) ,TeachPlayerTalentRunes_SPL_Waterfist);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_MagicCage] == FALSE) 
-	{
-		Info_AddChoice	(DIA_Addon_Nefarius_ADW_Runen, B_BuildLearnString (NAME_SPL_MagicCage, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MagicCage)) ,TeachPlayerTalentRunes_SPL_MagicCage);
 	};
 };
 

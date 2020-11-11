@@ -350,8 +350,6 @@ const int AIV_SpellLevel 					= 88;
 // 89 used by lego talents
 const int AIV_RapidSpellCombo				= 90;
 const int REAL_LEVEL						= 91;
-const int AIV_RageStateTime                 = 92;
-const int AIV_CageStateTime                 = 93;
 
 // ***************************************************
 // Globalvariablen für Petzen/Absolution/News - System

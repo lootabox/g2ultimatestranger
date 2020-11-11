@@ -1,7 +1,6 @@
 
 // For timing out rapid spell combo animations
 func void FF_RapidSpellCombo_Reset() {
-	spellFxAniLetters[SPL_AdanosBall] = "RPF";
 	spellFxAniLetters[SPL_Firebolt] = "RPF";
 	spellFxAniLetters[SPL_IceLance] = "RPF";
 	spellFxAniLetters[SPL_Icebolt] = "RPF";
@@ -48,7 +47,6 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 				// Set animation for next (!) Casting
 				if (slf.aivar[AIV_RapidSpellCombo] == 0) {
 					// From the cast animation to the first rapid-fire combo (left)
-					spellFxAniLetters[SPL_AdanosBall] = "RP2";
 					spellFxAniLetters[SPL_Firebolt] = "RP2";
 					spellFxAniLetters[SPL_IceLance] = "RP2";
 					spellFxAniLetters[SPL_Icebolt] = "RP2";
@@ -59,7 +57,6 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 					FF_ApplyExtGT(FF_RapidSpellCombo_Reset, 600, 1);
 				} else if (slf.aivar[AIV_RapidSpellCombo] == 1) {
 					// From the first rapid-fire combo (left) to the second (right)
-					spellFxAniLetters[SPL_AdanosBall] = "RP3";
 					spellFxAniLetters[SPL_Firebolt] = "RP3";
 					spellFxAniLetters[SPL_IceLance] = "RP3";
 					spellFxAniLetters[SPL_Icebolt] = "RP3";
@@ -70,7 +67,6 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 					FF_ApplyExtGT(FF_RapidSpellCombo_Reset, 600, 1);
 				} else {
 					// From the second rapid-fire combo (right) to the first (left)
-					spellFxAniLetters[SPL_AdanosBall] = "RP2";
 					spellFxAniLetters[SPL_Firebolt] = "RP2";
 					spellFxAniLetters[SPL_IceLance] = "RP2";
 					spellFxAniLetters[SPL_Icebolt] = "RP2";

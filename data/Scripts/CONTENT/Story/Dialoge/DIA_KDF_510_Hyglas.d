@@ -309,12 +309,6 @@ func void DIA_Hyglas_TEACH_Info ()
 		abletolearn = (abletolearn +1);
 	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 6) 
-	&& (PLAYER_TALENT_RUNES [SPL_Explosion] == FALSE)
-	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Explosion, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Explosion)) ,TeachPlayerTalentRunes_SPL_Explosion);
-		abletolearn = (abletolearn +1);
-	};
-	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 6) 
 	&& (PLAYER_TALENT_RUNES [SPL_Firerain] == FALSE)
 	{
 		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,TeachPlayerTalentRunes_SPL_Firerain);

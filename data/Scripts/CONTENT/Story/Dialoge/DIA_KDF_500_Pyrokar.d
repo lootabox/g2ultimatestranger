@@ -865,11 +865,6 @@ func void DIA_Pyrokar_SPELLS_Info ()
 		Info_AddChoice	(DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,TeachPlayerTalentRunes_SPL_Firerain);
 		abletolearn = (abletolearn +1);
 	};
-	if (PLAYER_TALENT_RUNES [SPL_Explosion] == FALSE)
-	{
-		Info_AddChoice	(DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_Explosion, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Explosion)) ,TeachPlayerTalentRunes_SPL_Explosion);
-		abletolearn = (abletolearn +1);
-	};
 	if (PLAYER_TALENT_RUNES [SPL_Shrink] == FALSE)
 	{
 		Info_AddChoice	(DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_Shrink, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Shrink)) ,TeachPlayerTalentRunes_SPL_Shrink);

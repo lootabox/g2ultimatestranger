@@ -97,7 +97,6 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	{
 		if (Npc_HasItems (slf, ItRu_Concussionbolt) == 0)	{	CreateInvItems (slf, ItRu_Concussionbolt, 1); };
 		if (Npc_HasItems (slf, ItRu_Deathbolt) == 0)		{	CreateInvItems (slf, ItRu_Deathbolt, 1); };
-		if (Npc_HasItems (slf, ItRu_Explosion) == 0)		{	CreateInvItems (slf, ItRu_Explosion, 1); };
 		if (Npc_HasItems (slf, ItRu_FullHeal) == 0)			{	CreateInvItems (slf, ItRu_FullHeal, 1); };
 
 		if (slf.attribute[ATR_HITPOINTS] < 100) 
@@ -107,14 +106,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 		}
 		else if (C_NpcHasAttackReasonToKill (slf))
 		{
-			if (slf.flags == NPC_FLAG_IMMORTAL)
-			{
-				B_ReadySpell (slf, SPL_Explosion, SPL_Cost_Explosion);
-			}
-			else
-			{
-				B_ReadySpell (slf, SPL_DeathBolt, SPL_Cost_DeathBolt);
-			};
+			B_ReadySpell (slf, SPL_DeathBolt, SPL_Cost_DeathBolt);
 			return TRUE;
 		}
 		else
@@ -175,10 +167,10 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Skelett Magier ------
 	if (slf.guild == GIL_SKELETON_MAGE)
 	{
-		if (Npc_HasItems (slf, ItRu_SumSkel) == 0)			{	CreateInvItems (slf, ItRu_SumSkel, 1); };
-		if (Npc_HasItems (slf, ItRu_MagicCage) == 0)		{	CreateInvItems (slf, ItRu_MagicCage, 1); };
-		if (Npc_HasItems (slf, ItRu_BreathOfDeath) == 0)	{	CreateInvItems (slf, ItRu_BreathOfDeath, 1); };
-		if (Npc_HasItems (slf, ItRu_Acid) == 0)				{	CreateInvItems (slf, ItRu_Acid, 1); };
+		if (Npc_HasItems (slf, ItRu_SumSkel) == 0)			{ CreateInvItems (slf, ItRu_SumSkel, 1); };
+		if (Npc_HasItems (slf, ItRu_IceCube) == 0)			{ CreateInvItems (slf, ItRu_IceCube, 1); };
+		if (Npc_HasItems (slf, ItRu_Icebolt) == 0)			{ CreateInvItems (slf, ItRu_Icebolt, 1); };
+		if (Npc_HasItems (slf, ItRu_BreathOfDeath) == 0)	{ CreateInvItems (slf, ItRu_BreathOfDeath, 1); };
 		
 			// ------ Spruchzyklus bei SUMMON beginnen ------
 			if (slf.aivar[AIV_SelectSpell] >= 6)
@@ -186,10 +178,10 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 				slf.aivar[AIV_SelectSpell] = 1;
 			};
 		
-		if (!Npc_IsInState (oth, ZS_MagicCage))
+		if (!Npc_IsInState (oth, ZS_MagicFreeze))
 		&& (slf.aivar[AIV_SelectSpell] == 0)
 		{
-			B_ReadySpell (slf, SPL_MagicCage,	SPL_Cost_MagicCage);
+			B_ReadySpell (slf, SPL_IceCube,	SPL_Cost_IceCube);
 			return TRUE;
 		}
 		else if (slf.aivar[AIV_SelectSpell] == 1)
@@ -204,7 +196,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 		}
 		else
 		{
-			B_ReadySpell (slf, SPL_Acid, SPL_Cost_Acid);
+			B_ReadySpell (slf, SPL_Icebolt, SPL_Cost_Icebolt);
 			return TRUE;
 		};
 	};

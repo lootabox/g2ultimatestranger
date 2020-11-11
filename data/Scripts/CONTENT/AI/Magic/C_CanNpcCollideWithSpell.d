@@ -237,7 +237,6 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	|| (spellType   == SPL_Pyrokinesis)
 	|| (spellType	== SPL_Deathbolt)
 	|| (spellType 	== SPL_Deathball)
-	|| (spellType	== SPL_Explosion)
 	{
 		if (C_NpcIsDown(self))
 		|| (C_BodyStateContains(self,BS_SWIM))
@@ -279,7 +278,6 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	if (spellType == SPL_Zap)
 	|| (spellType == SPL_ChargeZap)
 	|| (spellType == SPL_LightningFlash)
-	|| (spellType == SPL_AdanosBall)
 	|| (spellType == SPL_Concussionbolt)
 	{
 		if (C_NpcIsDown(self))
@@ -289,14 +287,13 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 		
 		// Check for APPLYVICTIMSTATE
 		var int applyState; applyState = COLL_DONOTHING;
-		if	((spellType == SPL_AdanosBall) || (!C_NpcIsUndead(self)))
+		if	(!C_NpcIsUndead(self))
 		&&	(self.attribute[ATR_HITPOINTS] >= self.attribute[ATR_HITPOINTS_MAX])
 		{
 			applyState = applyState | COLL_APPLYVICTIMSTATE;
 		};
 
 		if (spellType == SPL_LightningFlash)
-		|| (spellType == SPL_AdanosBall)
 		|| (C_BodyStateContains(self,BS_SWIM))
 		|| (C_BodyStateContains(self,BS_DIVE))
 		|| (GetWaterLevel(self) == WATERLEVEL_WADE)

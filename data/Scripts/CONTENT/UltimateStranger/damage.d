@@ -91,8 +91,6 @@ func int Check_Spell_Block(var c_npc vic, var int spellID)
 					if (spellID == SPL_BreathOfDeath)
 					|| (spellID == SPL_DestroyUndead)
 					|| (spellID == SPL_Earthquake)
-					|| (spellID == SPL_Explosion)
-					|| (spellID == SPL_Extricate)
 					|| (spellID == SPL_Firerain)
 					|| (spellID == SPL_Firestorm)
 					|| (spellID == SPL_Geyser)
@@ -100,7 +98,6 @@ func int Check_Spell_Block(var c_npc vic, var int spellID)
 					|| (spellID == SPL_LightningFlash)
 					|| (spellID == SPL_MassDeath)
 					|| (spellID == SPL_Pyrokinesis)
-					|| (spellID == SPL_Quake)
 					|| (spellID == SPL_Skull)
 					|| (spellID == SPL_Swarm)
 					|| (spellID == SPL_Thunderstorm)
@@ -226,7 +223,6 @@ var string pristr; pristr = IntToString(dmg);
 	||	(spellID == SPL_ChargeFireball)
 	||	(spellID == SPL_Pyrokinesis)
 	||	(spellID == SPL_Firerain)
-	||	(spellID == SPL_Explosion)
 	{
 		// Check fire staff bonus
 		if (Hlp_IsValidItem(wpn))
@@ -295,7 +291,6 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 	else if	(spellID == SPL_Zap)
 		||	(spellID == SPL_ChargeZap)
 		||	(spellID == SPL_LightningFlash)
-		||	(spellID == SPL_AdanosBall)
 	{
 		// Handle protection
 		if		(C_NpcIsWeakToLightning(vic))	{ dmg -= prot / 2; }

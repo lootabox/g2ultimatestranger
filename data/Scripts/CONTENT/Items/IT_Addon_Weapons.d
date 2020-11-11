@@ -220,7 +220,6 @@ INSTANCE ItMW_Addon_Stab05 (C_Item)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 FUNC VOID Equip_Addon_Stab05() {
-	spellFxAniLetters[SPL_AdanosBall] = "RPF";
 	spellFxAniLetters[SPL_Firebolt] = "RPF";
 	spellFxAniLetters[SPL_IceLance] = "RPF";
 	spellFxAniLetters[SPL_Icebolt] = "RPF";
@@ -232,7 +231,6 @@ FUNC VOID UnEquip_Addon_Stab05() {
 	if (FF_Active(FF_RapidSpellCombo_Reset)) {
 		FF_Remove(FF_RapidSpellCombo_Reset);
 	};
-	spellFxAniLetters[SPL_AdanosBall] = "FBT";
 	spellFxAniLetters[SPL_Firebolt] = "FBT";
 	spellFxAniLetters[SPL_IceLance] = "FBT";
 	spellFxAniLetters[SPL_Icebolt] = "FBT";

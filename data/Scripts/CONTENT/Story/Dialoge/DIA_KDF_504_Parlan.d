@@ -1018,11 +1018,6 @@ func void DIA_Parlan_TEACH_Info ()
 		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_WINDFIST, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_WINDFIST)) ,TeachPlayerTalentRunes_SPL_WindFist);
 		abletolearn = (abletolearn +1);
 	};
-	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
-	&& (PLAYER_TALENT_RUNES [SPL_Acid] == FALSE) 
-	{
-		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_Acid, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Acid)) ,TeachPlayerTalentRunes_SPL_Acid);
-	};
 	/* if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
 	&& (PLAYER_TALENT_RUNES [SPL_Sleep] == FALSE) 
 	{
@@ -1045,12 +1040,6 @@ func void DIA_Parlan_TEACH_Info ()
 	&& (PLAYER_TALENT_RUNES [SPL_DestroyUndead] == FALSE) 
 	{
 		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_DestroyUndead, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_DestroyUndead)) ,TeachPlayerTalentRunes_SPL_DestroyUndead);
-		abletolearn = (abletolearn +1);
-	};
-	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4)
-	&& (PLAYER_TALENT_RUNES [SPL_MagicCage] == FALSE) 
-	{
-		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_MagicCage, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MagicCage)) ,TeachPlayerTalentRunes_SPL_MagicCage);
 		abletolearn = (abletolearn +1);
 	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 5)

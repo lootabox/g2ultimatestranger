@@ -360,14 +360,14 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"Summon Mud",			// 89	SPL_SummonMud
 
 	// ...
-	"Acid",						// 90	SPL_Acid
-	"Lightning Bolt",			// 91	SPL_AdanosBall
-	"Explosion",				// 92	SPL_Explosion
-	"Extricate",				// 93	SPL_Extricate
-	"HealOther",				// 94	SPL_HealOther
-	"MagicCage",				// 95	SPL_MagicCage
-	"Quake",					// 96	SPL_Quake
-	"Rage",						// 97	SPL_Rage
+	"TXT_SPL_RESERVED_90",		// 90	SPL_Reserved_90
+	"TXT_SPL_RESERVED_91",		// 91	SPL_Reserved_91
+	"TXT_SPL_RESERVED_92",		// 92	SPL_Reserved_92
+	"TXT_SPL_RESERVED_93",		// 93	SPL_Reserved_93
+	"TXT_SPL_RESERVED_94",		// 94	SPL_Reserved_94
+	"TXT_SPL_RESERVED_95",		// 95	SPL_Reserved_95
+	"TXT_SPL_RESERVED_96",		// 96	SPL_Reserved_96
+	"TXT_SPL_RESERVED_97",		// 97	SPL_Reserved_97
 	"TXT_SPL_RESERVED_98",		// 98	SPL_Reserved_98
 	"TXT_SPL_RESERVED_99"		// 99	SPL_Reserved_99
 };
@@ -503,14 +503,14 @@ const string NAME_SPL_SummonZombie			= "Create Zombie";
 const string NAME_SPL_SummonMud				= "Summon Mud";
 
 // ...
-const string NAME_SPL_Acid					= "Acid";
-const string NAME_SPL_AdanosBall			= "Lightning Bolt";
-const string NAME_SPL_Explosion				= "Explosion";
-const string NAME_SPL_Extricate				= "Extricate";
-const string NAME_SPL_HealOther				= "HealOther";
-const string NAME_SPL_MagicCage				= "MagicCage";
-const string NAME_SPL_Quake					= "Quake";
-const string NAME_SPL_Rage					= "Rage";
+const string NAME_SPL_Reserved_90			= "NAME_SPL_RESERVED_90";
+const string NAME_SPL_Reserved_91			= "NAME_SPL_RESERVED_91";
+const string NAME_SPL_Reserved_92			= "NAME_SPL_RESERVED_92";
+const string NAME_SPL_Reserved_93			= "NAME_SPL_RESERVED_93";
+const string NAME_SPL_Reserved_94			= "NAME_SPL_RESERVED_94";
+const string NAME_SPL_Reserved_95			= "NAME_SPL_RESERVED_95";
+const string NAME_SPL_Reserved_96			= "NAME_SPL_RESERVED_96";
+const string NAME_SPL_Reserved_97			= "NAME_SPL_RESERVED_97";
 const string NAME_SPL_Reserved_98			= "NAME_SPL_RESERVED_98";
 const string NAME_SPL_Reserved_99			= "NAME_SPL_RESERVED_99";
 
@@ -722,11 +722,9 @@ const string NAME_Dam_Magic_Per	= "Magic damage per tier:";
 const string NAME_Dot_Half				= "Half damage dealt over time. ";
 const string NAME_Dot_Full				= "All damage dealt over time. ";
 const string NAME_Ice_Freeze			= "Freezes targets while dealing damage over time. ";
-const string NAME_Rage					= "Forces the target to attack the nearest creature. ";
 
 // MAX LENGTH							"------------------------------------------------------------";
 const string NAME_Zap_Living			= "Shocks unharmed living targets. ";
-const string NAME_Zap_All				= "Shocks unharmed targets. ";
 const string NAME_Nonlethal				= "Non-lethal. ";
 const string NAME_Instant				= "Instant effect. ";
 const string NAME_ShortRange			= "Short range. ";

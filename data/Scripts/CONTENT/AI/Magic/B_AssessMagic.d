@@ -45,7 +45,7 @@ func void B_AssessMagic ()
 		return;
 	};
 	// ---- GreenTentacle ----
-	if (Npc_GetLastHitSpellID(self) == SPL_Greententacle)	
+	if (Npc_GetLastHitSpellID(self) == SPL_Greententacle)
 	{
 		Npc_ClearAIQueue	(self);
 		B_ClearPerceptions	(self);
@@ -76,10 +76,9 @@ func void B_AssessMagic ()
 	};
 	
 	// ------ Blitz ------
-	if ((Npc_GetLastHitSpellID(self) == SPL_Zap)
+	if (Npc_GetLastHitSpellID(self) == SPL_Zap)
 	|| (Npc_GetLastHitSpellID(self) == SPL_ChargeZap)
 	|| (Npc_GetLastHitSpellID(self) == SPL_LightningFlash)
-	|| (Npc_GetLastHitSpellID(self) == SPL_AdanosBall))
 	{
 		Npc_ClearAIQueue	(self);
 		B_ClearPerceptions	(self);
@@ -123,10 +122,8 @@ func void B_AssessMagic ()
 		return;
 	};
 	
-	// ---- Extricate / Geyser / Waterfist / Windfist ----
-	// ---- Extricate ----
-	if (Npc_GetLastHitSpellID(self) == SPL_Extricate)
-	|| (Npc_GetLastHitSpellID(self) == SPL_Geyser)
+	// ---- Geyser / Waterfist / Windfist ----
+	if (Npc_GetLastHitSpellID(self) == SPL_Geyser)
 	|| (Npc_GetLastHitSpellID(self) == SPL_Waterfist)
 	|| (Npc_GetLastHitSpellID(self) == SPL_Windfist) {
 		// Protect from fall damage
@@ -135,14 +132,6 @@ func void B_AssessMagic ()
 		//Npc_ClearAIQueue (self);
 		//B_ClearPerceptions(self);
 		AI_StartState (self, ZS_MagicPush, 0, "");
-		return;
-	};
-
-	// ------ MagicCage ------
-	if (Npc_GetLastHitSpellID(self) == SPL_MagicCage) {
-		Npc_ClearAIQueue(self);
-		B_ClearPerceptions(self);
-		AI_StartState(self, ZS_MagicCage, 0, "");
 		return;
 	};
 };
