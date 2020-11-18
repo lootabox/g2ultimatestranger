@@ -1,4 +1,56 @@
 
+
+//************************************************
+// Transfer NPC inventory to a mob
+// https://forum.worldofplayers.de/forum/threads/1337194-Gothic-2-Script-that-transfers-NPCs-inventory-to-hero?p=22540061&viewfull=1#post22540061
+//************************************************
+
+FUNC void B_TransferInventoryToMob(var C_Npc npc, var string mobName)
+{
+    var int itemInstance;
+    var int slotNr;
+    var int count;
+
+    repeat(itemCategory, INV_CAT_MAX); var int itemCategory;
+        slotNr = 0;
+        count = Npc_GetInvItemBySlot(npc, itemCategory, slotNr);
+
+        while(count > 0);
+            itemInstance = Hlp_GetInstanceID(item);
+            // slotNr += 1;
+            Mob_CreateItems(mobName, itemInstance, count);
+            NPC_RemoveInvItems(npc, itemInstance, count);
+
+            // Get next item and count
+            count = Npc_GetInvItemBySlot(npc, itemCategory, slotNr);
+        end;
+    end;
+};
+
+//************************************************
+// Change level hook
+// 
+//************************************************
+
+func void HookChangeLevel_Init() {
+    HookEngineF(oCGame__ChangeLevel, 7, ChangeLevelHook);
+};
+
+func void ChangeLevelHook() {
+    var string str1; str1 = MEM_ReadString(MEM_ReadInt(ESP + 4));
+    var string str2; str2 = MEM_ReadString(MEM_ReadInt(ESP + 8));
+    Print(ConcatStrings(ConcatStrings(str1, " -> "), str2));
+
+    if (CurrentLevel == NEWWORLD_ZEN) && (Hlp_StrCmp(str1, "ADDON\ADDONWORLD.ZEN"))
+    {
+        B_TransferInventoryToMob(hero, "NEWWORLD_TO_ADDON_STORAGE");
+    }
+    else if (CurrentLevel == ADDONWORLD_ZEN) && (Hlp_StrCmp(str1, "NEWWORLD\NEWWORLD.ZEN"))
+    {
+        B_TransferInventoryToMob(hero, "ADDON_TO_NEWWORLD_STORAGE");
+    };
+};
+
 //************************************************
 // Method for getting walkmode
 // https://forum.worldofplayers.de/forum/threads/1536360-S%C3%A4mtliche-schlafende-NPCs-und-Monster-ignorieren-den-Spieler-trotz-BS_RUN?p=26545844&viewfull=1#post26545844
