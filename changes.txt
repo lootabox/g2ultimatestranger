@@ -68,13 +68,31 @@ This does not include minor changes to quest related dialog or obvious fixes, su
 
 	Random
 
+Added new teleport scroll to get out of the ruins behind broken bridge in Jharkendar.
+Black Ore effect ends on using transformation scrolls.
 Bloodfly poison is referred to as venom instead.
 Cannot level up when dead.
+Embarla Firgasto correctly depletes NH's mana.
+Experience gain is not printed out if receiving 0 xp.
 Gold cannot be dropped.
+Gold mining skill does not improve by mining empty veins.
+Herring is categorized as food.
 Increased limit for alpha vobs/polys.
+Keys no longer have any value.
 Main menu sounds are silenced after start a new game or loading one.
 Many items have their description now on one line instead of multiple lines.
+Nostalgia bonus properly awards levels to NH.
+Quarhodron summoning scroll visual changed from piece of paper into proper scroll.
+Quests from monastery for novices become obsolete after NH becomes a mage, not when they receive the key to the library.
+Quests to join mercenaries and the militia become obsolete already when joining the monastery as novice, not after becoming a mage.
+Rum drinking animations are slower.
+Sleep dialog has black overlay.
+Stone Sentinels will not awaken after Raven is dead.
+Stunt bonus can be received only after learning Malcom fell down the hole and there is no penalty for jumping more than once.
+Sun Aloe can't be eaten.
+Translated dialogs of CH, SH, SH_Oldworld and added addon skills to CH dialog.
 When NPC starts a dialog, NH stops moving.
+Zombie paladins are restored and replaces zombies in Irdorath.
 
 
 	Monster
@@ -85,6 +103,7 @@ Young Wolves at the pass are now regular Wolves.
 	NPCs General
 
 Added ambient inventory for most NPCs alive or dead.
+Added annotation for giving and taking back letters for Elvrich, Greg, Opolos, Saturas and giving back the Sacred Hammer for Seprentes.
 Added dialog involving multiple NPCs at Ring of Water welcoming ceremony, reversal ritual at the Circle of the Sun, gate to the Valley of Mines.
 Added logging for pickpocket failures and successes.
 Added pickpocketable items to NPCs inventories, except for traders.
@@ -102,6 +121,7 @@ Changed NPCs to wear farmer clothing and equip sickles after returning to Khorin
 Changed ambient NPCs to not engage in dialog if they are in the middle of something.
 Changed default weapon from Heavy Branch to something that makes sense for Akil, Cornelius, Judge, Larius, Onar, Sekob.
 Changed dialog option for trading to what NH will actually say with Fisk, Garett, Huno, Juan, Miguel, Scatty.
+Changed document visual for Esteban's Bodyguard, Pablo, Senyan, Skip, a thug in Khorinis for reading NH's wanted poster and Saturas for reading a map.
 Changed option to comment about fake mining shares to only appear after browsing wares for Bosper, Canthar, Elena, Hakon, Matteo, Orlan, Rosi, Zuris.
 Changed what drinks NPCs drink, depending on gender and class.
 
@@ -118,12 +138,14 @@ Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patr
 Fixed issue with dragon dialog restarting quest 'Dragon Eggs', if it was already completed.
 Fixed logical issues with dialogue of Baltram, Bennet, Diego, Fernando, Lobart, Lothar, Lucia, Pyrokar, Ramon, Ulf, Vatras, Xardas.
 Fixed mages to not loot the NH while in the city for Daron, Myxir and Vatras.
+Fixed novices to not create additional sausages when given one.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
 Fixed skipping of NH dialog line when talking to possessed NPCs for Bromor, Brutus, Engrom, Fernando, Malak, Sekob, Vino.
 Fixed wrong or inconsistent style of text for most dialogs.
 
 Removed Dragon Scales and Dragon Blood from the Undead Dragon.
 Removed Goblin Berries and Pepper bags from ambient inventories.
+Removed option to buy a sheep after escorting one to the monastery for Onar, Pepe.
 Removed option to discuss Lehmar's book of debt before reading it or otherwise learning of the debt for Coragon, Hanna, Thorben.
 Removed option to discuss joining the mercenaries once part of any guild for Alvares, Raoul, Wolf.
 Removed option to discuss rent after completing related quest for Onar, Sekob.
@@ -434,35 +456,6 @@ Wulfgar makes comments on training of weapon skills.
 Xardas' dialog has 3 more previously unused dialogue lines.
 Xardas' first few happy dialog lines are replaced with classic Gothic II lines.
 
-
-	Random
-
-Added new teleport scroll to get out of the ruins behind broken bridge in Jharkendar.
-Annotation added for giving and taking back letter to Elvrich, letter to Greg, recipe for Opolos, map to Saturas.
-Annotation added for giving the Sacred Hammer to Serpentes.
-Black Ore effect ends on using transformation scrolls.
-Document visual changed for Esteban's Bodyguard, Pablo, Senyan, Skip, a thug in Khorinis for reading NH's wanted poster and Saturas for reading a map.
-Embarla Firgasto correctly depletes NH's mana.
-Experience gain is not printed out if receiving 0 xp.
-Fixed Fire Rain scroll to list magic damage instead of fire damage.
-Gold mining skill does not improve by mining empty veins.
-Herring is categorized as food.
-Keys no longer have any value.
-Nostalgia bonus properly awards levels to NH.
-Novices do not create additional sausages when given one.
-Quarhodron summoning scroll changed from piece of paper into proper scroll.
-Quests from monastery for novices become obsolete after NH becomes a mage, not when they receive the key to the library.
-Quests to join mercenaries and the militia become obsolete already when joining the monastery as novice, not after becoming a mage.
-Rum drinking animations are slower.
-Sheep cannot be bought from Onar or Pepe after escorting one to the monastery.
-Sleep dialog has black overlay.
-Sleeping is not possible while afflicted by nightmares.
-Stone Sentinels will not awaken after Raven is dead.
-Stunt bonus can be received only after learning Malcom fell down the hole and there is no penalty for jumping more than once.
-Sun Aloe can't be eaten.
-Translated dialogs of CH, SH, SH_Oldworld dialogs and added addon skills to CH dialog.
-Weed has no price field and makes NH cough funnily.
-Zombie paladins are restored and replaces zombies in Irdorath.
 
 Following actions no longer cause unnecessary journal updates:
 * Reading Cornelius' Diary, Xardas' Letter, Lucia's farewell letter, almanac in the secret library, Black Magician's Scroll, Diary of the novice black magician, "Pure mana" and "Pure health".
