@@ -44,6 +44,7 @@ func void INIT_GLOBAL()
 	StrafePerception_Init();
 	JumpPerception_Init();
 	GoBackwardPerception_Init();
+	CanDropItem_Init();
 };
 
 // *********

@@ -1,4 +1,49 @@
 
+//************************************************
+// Block dropping items
+// https://forum.worldofplayers.de/forum/threads/1513039-Spieler-soll-Questitems-nicht-droppen-k%C3%B6nnen
+//************************************************
+
+func int CanDropItem(var C_Item itm) {
+    if (Hlp_GetInstanceID(itm) == ItMi_Gold) {
+        B_Say(hero, NULL, "$DONTKNOW"); //Hmm ... No ...
+        return FALSE;
+    };
+    return TRUE;
+};
+func void CanDropItem_Init() {
+    const int oCNpcInventory__HandleEvent_drop_G1 = 6743982; //0x66E7AE
+    const int oCNpcInventory__HandleEvent_drop_G2 = 7398710; //0x70E536
+
+    HookEngineF(+MEMINT_SwitchG1G2(oCNpcInventory__HandleEvent_drop_G1,
+                                   oCNpcInventory__HandleEvent_drop_G2), 5, _CanDropItem);
+};
+func void _CanDropItem() {
+    const int oCItemContainer__GetSelectedItem_G1 = 6721968; //0x6691B0
+    const int oCItemContainer__GetSelectedItem_G2 = 7377600; //0x7092C0
+
+    var int selectedItemPtr;
+    var int container; container = ECX; // oCNpcInventory*
+
+    // Get selected item from inventory
+    const int call = 0;
+    if (CALL_Begin(call)) {
+        CALL_PutRetValTo(_@(selectedItemPtr));
+        CALL__thiscall(_@(container), MEMINT_SwitchG1G2(oCItemContainer__GetSelectedItem_G1,
+                                                        oCItemContainer__GetSelectedItem_G2));
+        call = CALL_End();
+    };
+
+    // Check selection
+    if (selectedItemPtr) {
+        var C_Item itm; itm = _^(selectedItemPtr);
+        if (!CanDropItem(itm)) {
+            // The call to oCItemContainer::GetSelectedItem immediately returns zero, if oCItemContainer.contents == 0
+            const int contents = 0;
+            ECX = _@(contents)-4; // Offset of oCNpcInventory.contents is 0x04
+        };
+    };
+};
 
 //************************************************
 // Transfer NPC inventory to a mob
