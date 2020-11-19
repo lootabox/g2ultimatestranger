@@ -97,7 +97,7 @@ func void DIA_Lobart_STOLENCLOTHS_HereYouGo ()
 func void DIA_Lobart_STOLENCLOTHS_DontHaveIt ()
 {
 	AI_Output (other, self, "DIA_Lobart_STOLENCLOTHS_DontHaveIt_15_00"); //I don't have them any more.
-	AI_Output (self, other, "DIA_Lobart_STOLENCLOTHS_DontHaveIt_05_01"); //You already sold them, huh? (ranting) I'll teach you, laddie!
+	AI_Output (self, other, "DIA_Lobart_STOLENCLOTHS_DontHaveIt_05_01"); //You already sold them, huh? (ranting) I'll teach you, buddy!
 	
 	Lobart_Kleidung_gestohlen = TRUE;
 	AI_StopProcessInfos (self);	
@@ -107,7 +107,7 @@ func void DIA_Lobart_STOLENCLOTHS_DontHaveIt ()
 func void DIA_Lobart_STOLENCLOTHS_ForgetIt ()
 {
 	AI_Output (other, self, "DIA_Lobart_STOLENCLOTHS_ForgetIt_15_00"); //Forget it!
-	AI_Output (self, other, "DIA_Lobart_STOLENCLOTHS_ForgetIt_05_01"); //(ranting) I'll teach you, laddie!
+	AI_Output (self, other, "DIA_Lobart_STOLENCLOTHS_ForgetIt_05_01"); //(ranting) I'll teach you, buddy!
 	
 	Lobart_Kleidung_gestohlen = TRUE;
 	AI_StopProcessInfos (self);	
