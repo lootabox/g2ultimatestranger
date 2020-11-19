@@ -108,7 +108,7 @@ func void DIA_Mil_333_Stadtwache_FirstWarn_Info()
 		|| (Hlp_IsItem(itm, ItAr_Bau_M) == TRUE)
 		{
 			AI_Output (other, self,"DIA_Mil_333_Stadtwache_FirstWarn_15_07"); //Yes?
-			AI_Output (self, other,"DIA_Mil_333_Stadtwache_FirstWarn_06_08"); //You look like a poor blighter. In this town, we have no use for people without money.
+			AI_Output (self, other,"DIA_Mil_333_Stadtwache_FirstWarn_06_08"); //You look like a poor beggar. In this town, we have no use for people without money.
 			
 			if (Npc_HasItems(other, ItWr_Passierschein))
 			{
