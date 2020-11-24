@@ -173,7 +173,7 @@ func void DIA_Lehmar_WARUMGELD_Info ()
 	AI_Output (other, self, "DIA_Lehmar_WARUMGELD_15_00"); //Do you always throw your money at people like that?
 	AI_Output (self, other, "DIA_Lehmar_WARUMGELD_09_01"); //(amused) Don't worry. You'll be back. Otherwise I'll find you and kill you. It's that simple.
 	AI_Output (self, other, "DIA_Lehmar_WARUMGELD_09_02"); //You've got such a distinctive mug that it wouldn't take long for me to find you.
-	AI_Output (self, other, "DIA_Lehmar_WARUMGELD_09_03"); //So don't even think about mucking around with me.
+	AI_Output (self, other, "DIA_Lehmar_WARUMGELD_09_03"); //So don't even think about playing around with me.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info geldeintreiben
