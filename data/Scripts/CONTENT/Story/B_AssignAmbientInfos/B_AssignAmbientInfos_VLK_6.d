@@ -95,7 +95,7 @@ FUNC VOID DIA_VLK_6_LOCATION_Info()
 	AI_Output (other, self, "DIA_VLK_6_LOCATION_15_00"); //How do I go about orienting myself in this city?
 	AI_Output (self, other, "DIA_VLK_6_LOCATION_06_01"); //It's not that easy finding your way around here, is it? Even the signposts don't always help.
 	AI_Output (self, other, "DIA_VLK_6_LOCATION_06_02"); //If you have a bad sense of direction, you had better go down to the harbor - assuming you can find your way there - and look for the cartographer's house.
-	AI_Output (self, other, "DIA_VLK_6_LOCATION_06_03"); //It's right next to the pub, at the quay. Brahim will certainly have a map of the city for you.
+	AI_Output (self, other, "DIA_VLK_6_LOCATION_06_03"); //It's right next to the tavern, at the quay. Brahim will certainly have a map of the city for you.
 };
 
 // *************************************************************************
