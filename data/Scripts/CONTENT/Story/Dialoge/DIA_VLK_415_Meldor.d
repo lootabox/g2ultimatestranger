@@ -71,7 +71,7 @@ func int DIA_Meldor_Interessantes_Condition ()
 func void DIA_Meldor_Interessantes_Info ()
 {
 	AI_Output (other, self, "DIA_Meldor_Interessantes_15_00"); //What interesting things are there to see here?
-	AI_Output (self, other, "DIA_Meldor_Interessantes_07_01"); //There's a cathouse here, and a pub. The landlord's name is Kardif. If it's information you want, he'll be the right person to talk to.
+	AI_Output (self, other, "DIA_Meldor_Interessantes_07_01"); //There's a cathouse here, and a tavern. The landlord's name is Kardif. If it's information you want, he'll be the right person to talk to.
 	AI_Output (self, other, "DIA_Meldor_Interessantes_07_02"); //Do you need money, by the way?
 	
 	Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
