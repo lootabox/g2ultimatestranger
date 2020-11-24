@@ -230,7 +230,7 @@ func int DIA_Fenia_Interesting_Condition ()
 func void DIA_Fenia_Interesting_Info ()
 {
 	AI_Output (other, self, "DIA_Fenia_Infos_interessantes_15_00"); //What interesting things are there to see about the harbor?
-	AI_Output (self, other, "DIA_Fenia_Infos_interessantes_17_01"); //Well. If you're looking for some action, go on down to Kardif's pub at the quay. There's always something brewing there.
+	AI_Output (self, other, "DIA_Fenia_Infos_interessantes_17_01"); //Well. If you're looking for some action, go on down to Kardif's inn at the quay. There's always something brewing there.
 	AI_Output (self, other, "DIA_Fenia_Infos_interessantes_17_02"); //You can hardly miss it. The guy standing by the entrance there will certainly draw your attention to it.
 	AI_Output (self, other, "DIA_Fenia_Infos_interessantes_17_03"); //Besides that, there's the large ship of the paladins. The King's stately war galley. That one's really worth seeing.
 	AI_Output (self, other, "DIA_Fenia_Infos_interessantes_17_04"); //You'll find it if you keep left at the quay and then pass under the high rock face.
