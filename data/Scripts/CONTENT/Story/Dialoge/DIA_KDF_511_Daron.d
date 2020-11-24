@@ -106,7 +106,7 @@ FUNC INT DIA_Daron_Paladine_Condition()
 FUNC VOID DIA_Daron_Paladine_Info()
 {	
 	AI_Output (other, self,"DIA_Daron_Paladine_15_00");//I need to talk to the paladins. Can you help me get to them?
-	AI_Output (self, other,"DIA_Daron_Paladine_10_01");//Well, you need access to the upper end of town. However, this is allowed only to citizens and the city watch.
+	AI_Output (self, other,"DIA_Daron_Paladine_10_01");//Well, you need access to the upper end of town. However, this is allowed only to citizens and the city guard.
 	AI_Output (self, other,"DIA_Daron_Paladine_10_02");//And, of course, to us Magicians of Fire.
 	AI_Output (other, self,"DIA_Daron_Paladine_15_03");//How can I become a Fire Magician?
 	AI_Output (self, other,"DIA_Daron_Paladine_10_04");//You must join our order as a novice. When you have served for a time, perhaps you will be accepted into the ranks of the magicians.
@@ -172,7 +172,7 @@ FUNC INT DIA_Daron_Spenden_Condition()
 FUNC VOID DIA_Daron_Spenden_Info()
 {	
 	AI_Output (other, self,"DIA_Daron_Spenden_15_00");//So how much does a donation usually run to here?
-	AI_Output (self, other,"DIA_Daron_Spenden_10_01");//Well, that depends on what percentage you want to give. Let me see how much you brought.
+	AI_Output (self, other,"DIA_Daron_Spenden_10_01");//Well, that depends on what percentage you want to give, son. Let me see how much you brought.
 	AI_Output (self, other,"DIA_Daron_Spenden_10_02");//(looking in money pouch) Mmmmh hmmm...
 	
 	if (Npc_HasItems (other, ItMi_Gold) < 100)
@@ -280,7 +280,7 @@ FUNC VOID DIA_Daron_Kloster_Info()
 	AI_Output (other, self,"DIA_Daron_Kloster_15_00");//Tell me more about the monastery.
 	AI_Output (self, other,"DIA_Daron_Kloster_10_01");//We instruct our students in all forms of magic. But the arts of the Magicians of Fire consist of more than these alone.
 	AI_Output (self, other,"DIA_Daron_Kloster_10_02");//We are also well versed in the art of alchemy, and in the creation of powerful runes.
-	AI_Output (self, other,"DIA_Daron_Kloster_10_03");//We also make an excellent wine.
+	AI_Output (self, other,"DIA_Daron_Kloster_10_03");//We also make excellent wine.
 };
 
 // ************************************************************
