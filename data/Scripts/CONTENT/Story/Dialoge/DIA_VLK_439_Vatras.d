@@ -311,7 +311,7 @@ func void DIA_Addon_Vatras_Cavalorn_Cavalorn ()
 {
 	AI_Output (other, self, "DIA_Addon_Vatras_Cavalorn_Cavalorn_15_00"); //I got it from Cavalorn, the hunter.
 	AI_Output (self, other, "DIA_Addon_Vatras_Cavalorn_Cavalorn_05_01"); //(surprised) Cavalorn? Where is he?
-	AI_Output (other, self, "DIA_Addon_Vatras_Cavalorn_Cavalorn_15_02"); //He told me to tell you he couldn't make it and is headed for the meeting point. Whatever he means by that.
+	AI_Output (other, self, "DIA_Addon_Vatras_Cavalorn_Cavalorn_15_02"); //He told me to tell you he couldn't make it and is headed for the meeting point. Whatever he meant by that.
 	AI_Output (self, other, "DIA_Addon_Vatras_Cavalorn_Cavalorn_05_03"); //I see that you've gained Cavalorn's trust. That speaks in your favor.
 	
 	B_GivePlayerXP (XP_Addon_CavalornTrust);
