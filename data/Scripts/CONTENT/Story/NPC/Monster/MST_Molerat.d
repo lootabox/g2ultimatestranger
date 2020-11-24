@@ -71,5 +71,5 @@ INSTANCE Molerat	(Mst_Default_Molerat)
 {
 	B_SetVisuals_Molerat();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
+	CreateInvItems (self, ItFoMuttonRaw, 2);
 };
