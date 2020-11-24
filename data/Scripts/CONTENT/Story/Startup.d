@@ -45,6 +45,8 @@ func void INIT_GLOBAL()
 	JumpPerception_Init();
 	GoBackwardPerception_Init();
 	CanDropItem_Init();
+	OnTransferLeft_Init();
+	DrawItemInfo_Init();
 };
 
 // *********

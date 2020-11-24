@@ -516,7 +516,7 @@ INSTANCE ItMi_MalethsBanditGold(C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	0;
 
-	value 				=	0;
+	value 				=	300;
 
 	visual 				=	"ItMi_Pocket.3ds";
 	scemename			=	"MAPSEALED";	
@@ -787,7 +787,7 @@ INSTANCE ItSe_Golemchest_Mis	(C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI|ITEM_MISSION;
 
-	value 				=	0;
+	value 				=	50;
 
 	visual 				=	"ItMi_Pocket.3ds";
 	scemename			=	"MAPSEALED";	
@@ -906,7 +906,7 @@ INSTANCE ItSe_DiegosTreasure_Mis(C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MISSION;
 
-	value 				=	0;
+	value 				=	DiegosTreasure;
 
 	visual 				=	"ItMi_Pocket.3ds";
 	scemename			=	"MAPSEALED";	

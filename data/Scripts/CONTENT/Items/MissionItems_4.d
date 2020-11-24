@@ -61,7 +61,7 @@ INSTANCE ItMi_KerolothsGeldbeutel_MIS(C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MISSION;
 
-	value 				=	0;
+	value 				=	300;
 
 	visual 				=	"ItMi_Pocket.3ds";
 	scemename			=	"MAPSEALED";	

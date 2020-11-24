@@ -537,8 +537,7 @@ INSTANCE ItMi_Pocket(C_Item)//steht drin, weil auch in Welt verteilt!!
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UsePocket;
 	description			= 	name;
-	TEXT[2]				= 	"A narrow bag,";
-	TEXT[3]				=   "not very heavy.";
+	TEXT[2]				= 	"A narrow bag, not very heavy.";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 

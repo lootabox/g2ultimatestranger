@@ -79,6 +79,7 @@ Gold mining skill does not improve by mining empty veins.
 Herring is categorized as food.
 Increased limit for alpha vobs/polys.
 Keys no longer have any value.
+Leather Satchels filled with gold can be sold for their full gold value, including special satchels.
 Main menu sounds are silenced after start a new game or loading one.
 Many items have their description now on one line instead of multiple lines.
 Nostalgia bonus properly awards levels to NH.
@@ -244,6 +245,7 @@ Daron considers NH to be poor with less than 100 gold instead of 10.
 Daron can only be asked about paladins after he mentions them.
 Daron does not talk about donations when asked for a blessing if he has already given his blessing.
 Daron gives more learning points for donating, but only after donating all 1000 gold.
+Diego's gold can be returned to him after finding and selling the satchel.
 Diego cannot be led to Pedrakhan.
 Diego's dialog has 6 more previously unused dialogue lines and 9 more if NH never met him in Valley of Mines.
 Dragomir immediately equips his crossbow after receiving it.
@@ -362,6 +364,7 @@ Martin only hints at going to Vatras for the Wisp amulet, if NH does not already
 Mika can be asked whether all is quiet, even if the mercenaries left Akil's farm themselves.
 Mika properly evaluates NH's armor before commenting on it.
 Mika won't talk to NH if Lares is in the party.
+Milten cannot be asked about the south gate if Gorn's satchel was found and sold.
 Milten does not simultaneously return the letter from Hagen and the key to the monastery.
 Milten returns to the monastery in the beginning of the third chapter instead of after giving the report to Hagen.
 Milten will not say Gorn is in prison if he is already released.

@@ -1,5 +1,86 @@
 
 //************************************************
+// Change value of items to be sold
+// https://forum.worldofplayers.de/forum/threads/1524805-Mehrere-Fragen-zum-Handelsmen%C3%BC?p=25885412&viewfull=1#post25885412
+//************************************************
+
+func int IsItemSatchel(var int itemInstance) {
+    if (itemInstance == ItMi_Pocket)
+    || (itemInstance == ItSe_GoldPocket25)
+    || (itemInstance == ItSe_GoldPocket50)
+    || (itemInstance == ItSe_GoldPocket100)
+    || (itemInstance == ItMi_GornsTreasure_MIS)
+    || (itemInstance == ItSe_Olav)
+    || (itemInstance == ItMi_MalethsBanditGold)
+    || (itemInstance == ItSe_DiegosTreasure_Mis)
+    || (itemInstance == ItMi_KerolothsGeldbeutel_MIS)
+    || (itemInstance == ItSe_Golemchest_Mis) {
+        return TRUE;
+    };
+    return FALSE;
+};
+
+func int CalcRealItemPrice(var int origValue, var oCItem itm, var oCNpc trader)
+{
+    // Sell gold bags for full value
+    if (IsItemSatchel(Hlp_GetInstanceId(itm))) {
+        return itm.value;
+    };
+    return origValue;
+};
+func void OnTransferLeft_Init() {
+    const int oCViewDialogTrade__OnTransferLeftX = 6863312; //0x68B9D0
+    HookEngineF(oCViewDialogTrade__OnTransferLeftX, 6, OnTransferLeft_Hook);
+};
+func void DrawItemInfo_Init() {
+    const int oCItemContainer__DrawItemInfo = 7369937; //0x7074D1
+    HookEngineF(oCItemContainer__DrawItemInfo, 7, DrawItemInfo_Hook);
+};
+func void OnTransferLeft_Hook() {
+    var int value; value = MEM_ReadInt(ESP+20);
+    var oCItem itm; itm = _^(EBX);
+    var oCNpc npc; npc = _^(MEM_InformationMan.npc);
+
+    value = CalcRealItemPrice(value, itm, npc);
+    MEM_WriteInt(ESP+20, value);
+
+    // Handle gold bags
+    var int itemInstance; itemInstance = Hlp_GetInstanceId(itm);
+    if (IsItemSatchel(itemInstance)) {
+        Snd_Play ("Geldbeutel");
+        FF_ApplyExtDataGT(OnTransferLeft_RemoveItem, 0, 1, itemInstance);
+
+        // Handle special bags
+        if (itemInstance == ItSe_Golemchest_Mis) {
+            Print (PRINT_FoundRing);
+            CreateInvItems (hero, ItRi_Prot_Total_02,1);
+            B_Say_Overlay(hero, hero, "$HUI");
+        } else if (itemInstance == ItMi_GornsTreasure_MIS) {
+            Gorns_Beutel = TRUE;
+        } else if (itemInstance == ItSe_DiegosTreasure_Mis) {
+            OpenedDiegosBag = TRUE;
+        } else if (itemInstance == ItMi_KerolothsGeldbeutel_MIS) {
+            CreateInvItems (hero, ItMi_KerolothsGeldbeutelLeer_MIS, 1);
+        };
+    };
+};
+func void OnTransferLeft_RemoveItem(var int itemInstance) {
+    var oCNpc npc; npc = _^(MEM_InformationMan.npc);
+    if (Hlp_IsValidNpc(npc)) {
+        Npc_RemoveInvItem(npc, itemInstance);
+    };
+};
+func void DrawItemInfo_Hook() {
+    var int value; value = MEM_ReadInt(/*esp+144h-ach*/ ESP+152);
+    var oCItem itm; itm = _^(EBX);
+    var oCNpc npc; npc = _^(MEM_InformationMan.npc);
+
+    value = CalcRealItemPrice(value, itm, npc);
+
+    MEM_WriteInt(/*esp+144h-ach*/ ESP+152, value);
+};
+
+//************************************************
 // Block dropping items
 // https://forum.worldofplayers.de/forum/threads/1513039-Spieler-soll-Questitems-nicht-droppen-k%C3%B6nnen
 //************************************************
