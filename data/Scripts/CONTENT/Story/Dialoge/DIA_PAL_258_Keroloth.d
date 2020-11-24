@@ -107,7 +107,7 @@ INSTANCE DIA_Keroloth_Teacher(C_INFO)
 	condition	= DIA_Keroloth_Teacher_Condition;
 	information	= DIA_Keroloth_Teacher_Info;
 	permanent	= TRUE;
-	description = "(Learn one-handed combat)";
+	description = "I want to train!";
 };                       
 
 FUNC INT DIA_Keroloth_Teacher_Condition()
