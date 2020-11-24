@@ -341,7 +341,7 @@ func void DIA_Addon_Martin_Auftrag_Info ()
 	
 	if (Wld_IsTime (23,00,04,00))
 	{
-		AI_Output	(self, other, "DIA_Addon_Martin_Auftrag_07_02"); //Then I'll take off for Kardif's pub. And woe betide you if anything is missing when I get back.
+		AI_Output	(self, other, "DIA_Addon_Martin_Auftrag_07_02"); //Then I'll take off for Kardif's tavern. And woe betide you if anything is missing when I get back.
 	}
 	else
 	{
