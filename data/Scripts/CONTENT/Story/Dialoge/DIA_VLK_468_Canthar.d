@@ -418,7 +418,7 @@ func void DIA_Canthar_PAYPRICEINCITY_Info ()
 	
 	Info_ClearChoices (DIA_Canthar_PAYPRICEINCITY);
 	Info_AddChoice	(DIA_Canthar_PAYPRICEINCITY, "No, I want no part of this.", DIA_Canthar_PAYPRICEINCITY_Nein );
-	Info_AddChoice	(DIA_Canthar_PAYPRICEINCITY, "All right, I'll do it.", DIA_Canthar_PAYPRICEINCITY_Ok );
+	Info_AddChoice	(DIA_Canthar_PAYPRICEINCITY, "All right, looks like I've got no choice.", DIA_Canthar_PAYPRICEINCITY_Ok );
 	Info_AddChoice	(DIA_Canthar_PAYPRICEINCITY, "What will happen if I refuse to do that?", DIA_Canthar_PAYPRICEINCITY_If );
 };
 
