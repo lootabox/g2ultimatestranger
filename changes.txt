@@ -241,8 +241,8 @@ Cassia cannot be paid for learning to pickpocket if it's already learned.
 Cassias quests become obsolete if the paladins kill her.
 Cavalorn gives much less gold for buying the farmer's clothes.
 Cornelius' diary cannot be stolen before learning of him being a witness to the murder.
-Daron considers NH to be poor with less than 100 gold instead of 10.
 Daron can only be asked about paladins after he mentions them.
+Daron considers NH to be poor with less than 100 gold instead of 10.
 Daron does not talk about donations when asked for a blessing if he has already given his blessing.
 Daron gives more learning points for donating, but only after donating all 1000 gold.
 Diego's gold can be returned to him after finding and selling the satchel.
