@@ -159,7 +159,7 @@ FUNC VOID DIA_Alrik_Regeln_Info()
 	AI_Output (other,self ,"DIA_Alrik_Regeln_15_00"); //What are the rules for the fight?
 	AI_Output (self ,other,"DIA_Alrik_Regeln_09_01"); //Quite simple: All regular weapons are allowed. No bows or crossbows and NO magic!
 	AI_Output (self ,other,"DIA_Alrik_Regeln_09_02"); //We fight until one of us drops. And as soon as one of us is flat on his back, it's over, got it?
-	AI_Output (self ,other,"DIA_Alrik_Regeln_09_03"); //Whoever leaves the corner is out! So if you quit, I win!
+	AI_Output (self ,other,"DIA_Alrik_Regeln_09_03"); //Whoever leaves the ring is out! So if you quit, I win!
 	AI_Output (self ,other,"DIA_Alrik_Regeln_09_04"); //The stake is 50 gold coins. If you win, you get 100 back. If not - well - then your money is down the drain. (grins)
 	AI_Output (self ,other,"DIA_Alrik_Regeln_09_05"); //Got it?
 	AI_Output (other,self ,"DIA_Alrik_Regeln_15_06"); //Yep!
@@ -337,7 +337,7 @@ FUNC VOID DIA_Alrik_WannaFight_Info()
 	else
 	{
 		AI_Output (self ,other,"DIA_Alrik_WannaFight_09_08"); //I only fight from noon until evening.
-		AI_Output (self ,other,"DIA_Alrik_WannaFight_09_09"); //The fighting is only worth it if there are enough viewers to make bets!
+		AI_Output (self ,other,"DIA_Alrik_WannaFight_09_09"); //The fighting is only worth it if there are enough spectators who place bets!
 		if (Wld_IsTime(19,00,03,30))
 		{
 			AI_Output (self ,other,"DIA_Alrik_WannaFight_09_10"); //It's much too late now. Come back tomorrow at noon!
@@ -551,7 +551,7 @@ FUNC INT DIA_Alrik_DuWohnst_Condition()
 FUNC VOID DIA_Alrik_DuWohnst_Info()
 {
 	AI_Output (other,self ,"DIA_Alrik_DuWohnst_15_00"); //(surprised) You 'live' behind the warehouse?
-	AI_Output (self ,other,"DIA_Alrik_DuWohnst_09_01"); //It's only temporary. (grins) When you have as much gold as I do, you can afford a bit of luxury!
+	AI_Output (self ,other,"DIA_Alrik_DuWohnst_09_01"); //It's only temporary. (grins) When you have as much gold as I do, you can afford a little luxury!
 	AI_Output (self ,other,"DIA_Alrik_DuWohnst_09_02"); //I was a drill instructor in the army, but I left that bunch to seek my fortune in adventure.
 	AI_Output (self ,other,"DIA_Alrik_DuWohnst_09_03"); //Now I've wound up in this shithole. My last 100 gold pieces went to the guards at the city gate.
 	AI_Output (self ,other,"DIA_Alrik_DuWohnst_09_04"); //So, I'm seeing to it that I come into money again. I even had to sell my sword.

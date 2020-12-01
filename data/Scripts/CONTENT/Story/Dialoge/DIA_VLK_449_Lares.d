@@ -818,7 +818,7 @@ func void DIA_Addon_Lares_BaltramAbloese_Info ()
 		
 		if (Npc_KnowsInfo (other, DIA_Addon_Lares_WannaBeRanger))
 		{
-			AI_Output (self, other, "DIA_Addon_Lares_BaltramAbloese_09_03"); //(smiles) I assume it will come in handy for you.
+			AI_Output (self, other, "DIA_Addon_Lares_BaltramAbloese_09_03"); //(smiles) I assume it will come in handy for you. Until you get your own.
 		}
 		else
 		{

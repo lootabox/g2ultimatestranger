@@ -149,7 +149,7 @@ func int DIA_Ehnim_STREIT1_Condition ()
 func void DIA_Ehnim_STREIT1_Info ()
 {
 	AI_Output			(other, self, "DIA_Ehnim_STREIT1_15_00"); //Your brother told me the same.
-	AI_Output			(self, other, "DIA_Ehnim_STREIT1_12_01"); //What? That goldbricker? He always disappears just as soon as the beasts come onto our land.
+	AI_Output			(self, other, "DIA_Ehnim_STREIT1_12_01"); //What? That loafer? He always disappears just as soon as the beasts come onto our land.
 	AI_Output			(self, other, "DIA_Ehnim_STREIT1_12_02"); //He shouldn't be talking such nonsense.
 };
 

@@ -91,7 +91,7 @@ instance DIA_Addon_Riordian_Alter		(C_INFO)
 	nr			 = 	6;
 	condition	 = 	DIA_Addon_Riordian_Alter_Condition;
 	information	 = 	DIA_Addon_Riordian_Alter_Info;
-	description	 = 	"How old do you think the building here is?";
+	description	 = 	"How old do you think this place is?";
 };
 func int DIA_Addon_Riordian_Alter_Condition ()
 {
@@ -102,7 +102,7 @@ func int DIA_Addon_Riordian_Alter_Condition ()
 };
 func void DIA_Addon_Riordian_Alter_Info ()
 {
-	AI_Output	(other, self, "DIA_Addon_Riordian_Alter_15_00"); //How old do you think the building here is?
+	AI_Output	(other, self, "DIA_Addon_Riordian_Alter_15_00"); //How old do you think this place is?
 	AI_Output	(self, other, "DIA_Addon_Riordian_Alter_10_01"); //Well. I still can't say exactly, but it must be several hundred years old.
 };
 ///////////////////////////////////////////////////////////////////////

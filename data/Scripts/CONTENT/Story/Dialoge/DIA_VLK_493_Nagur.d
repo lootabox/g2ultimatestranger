@@ -230,7 +230,7 @@ FUNC VOID DIA_Nagur_Auftrag_Akil()
 FUNC VOID DIA_Nagur_Auftrag_Gewinn()
 {
 	AI_Output (other, self, "DIA_Nagur_Auftrag_Gewinn_15_00");//How high will the profit be?
-	AI_Output (self, other, "DIA_Nagur_Auftrag_Gewinn_08_01");//I can't say exactly. But I estimate about 400 gold pieces.
+	AI_Output (self, other, "DIA_Nagur_Auftrag_Gewinn_08_01");//I can't say exactly. But I estimate around 400 gold pieces.
 };
 FUNC VOID DIA_Nagur_Auftrag_Baltram()
 {
@@ -245,7 +245,7 @@ FUNC VOID DIA_Nagur_Auftrag_Wann()
 FUNC VOID DIA_Nagur_Auftrag_Okay()
 {
 	AI_Output (other, self, "DIA_Nagur_Auftrag_Okay_15_00");//Well then, I'm all set.
-	AI_Output (self, other, "DIA_Nagur_Auftrag_Okay_08_01");//Good, then get on your way - but if you try to cheat me, you'll soon be every bit as dead as the messenger! Don't forget it!
+	AI_Output (self, other, "DIA_Nagur_Auftrag_Okay_08_01");//Good, then get on your way - but if you try to cheat me, you'll soon be every bit as dead as the messenger! Don't forget!
 	MIS_Nagur_Bote = LOG_RUNNING;
 	
 	Log_CreateTopic (TOPIC_Nagur,LOG_MISSION);

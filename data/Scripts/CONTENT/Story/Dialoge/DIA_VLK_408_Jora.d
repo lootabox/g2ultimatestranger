@@ -227,7 +227,7 @@ func void DIA_Jora_HolDeinGold_DoIt()
 {
 	AI_Output (other, self, "DIA_Jora_HolDeinGold_DoIt_15_00"); //I'll see what I can do.
 	AI_Output (self, other, "DIA_Jora_HolDeinGold_DoIt_08_01"); //Be careful! If you just knock the bastard down, the city guard will get involved.
-	AI_Output (self, other, "DIA_Jora_HolDeinGold_DoIt_08_02"); //Lately, things have been getting really rough here. Since the paladins came to town, the guards have been cracking down harshly on brawlers.
+	AI_Output (self, other, "DIA_Jora_HolDeinGold_DoIt_08_02"); //Lately, things have been getting really tough here. Since the paladins came to town, the guards have been cracking down on brawlers.
 	AI_Output (self, other, "DIA_Jora_HolDeinGold_DoIt_08_03"); //So, think of something...
 	AI_Output (other, self, "DIA_Jora_HolDeinGold_DoIt_15_04"); //I shall.
 		
@@ -299,7 +299,7 @@ func void DIA_Jora_WegenDieb_Continue()
 func void DIA_Jora_WegenDieb_Entkommen()
 {
 	AI_Output (other, self, "DIA_Jora_WegenDieb_Entkommen_15_00"); //He got away from me.
-	AI_Output (self, other, "DIA_Jora_WegenDieb_Entkommen_08_01"); //And what about my gold? Did it get away with him?
+	AI_Output (self, other, "DIA_Jora_WegenDieb_Entkommen_08_01"); //And what about my gold? Did he get away with it?
 	Jora_Dieb = LOG_FAILED;
 	B_CheckLog();
 	Info_ClearChoices (DIA_Jora_WegenDieb);
@@ -436,7 +436,7 @@ func void DIA_Jora_Belohnung_Info ()
 	if (Jora_GhdgHinweis == TRUE)
 	{
 		AI_Output (self ,other,"DIA_Jora_Add_08_12"); //But I already gave you a valuable hint.
-		AI_Output (self ,other,"DIA_Jora_Add_08_13"); //That should suffice as a reward for you.
+		AI_Output (self ,other,"DIA_Jora_Add_08_13"); //That should suffice as reward for you.
 	};
 	AI_Output (self ,other,"DIA_Jora_Add_08_14"); //If it's gold you want, then hunt down the thieves and collect the bounty from Lord Andre.
 	

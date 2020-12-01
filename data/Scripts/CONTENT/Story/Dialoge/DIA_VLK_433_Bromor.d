@@ -120,7 +120,7 @@ func void DIA_Addon_Bromor_Lucia_Info ()
 	AI_Output	(self, other, "DIA_Addon_Bromor_Lucia_07_02"); //I assume she's run off with one of her suitors.
 	AI_Output	(self, other, "DIA_Addon_Bromor_Lucia_07_03"); //That bitch made off with part of my savings. A really valuable golden dish.
 	AI_Output	(self, other, "DIA_Addon_Bromor_Lucia_07_04"); //If I get hold of her, I'll give her what for.
-	AI_Output	(self, other, "DIA_Addon_Bromor_Lucia_07_05"); //So how's that any business of YOURS? Are you trying to make fun of me, or what?
+	AI_Output	(self, other, "DIA_Addon_Bromor_Lucia_07_05"); //So how's that any business of YOURS? Do you want to have fun or not?
 
 	Log_CreateTopic (TOPIC_Addon_BromorsGold, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Addon_BromorsGold, LOG_RUNNING);

@@ -167,7 +167,7 @@ FUNC VOID DIA_Jesper_Bezahlen_Info()
 	
 	if (MIS_ThiefGuild_sucked == FALSE)
 	{
-		AI_Output (self, other, "DIA_Jesper_Bezahlen_09_01");//Sure, I'll show you how to sneak - free of charge for you.
+		AI_Output (self, other, "DIA_Jesper_Bezahlen_09_01");//Sure, I'll show you how to sneak around - free of charge for you.
 		Jesper_TeachSneak = TRUE;
 		Info_ClearChoices (DIA_Jesper_Bezahlen);
 	}
@@ -224,13 +224,13 @@ FUNC INT DIA_Jesper_Schleichen_Condition()
 };
 FUNC VOID DIA_Jesper_Schleichen_Info()
 {
-	AI_Output (other, self, "DIA_Jesper_Schleichen_15_00");//Teach me the art of sneaking.
+	AI_Output (other, self, "DIA_Jesper_Schleichen_15_00");//Teach me the art of stealth.
 	
 	if B_TeachThiefTalent (self, other, NPC_TALENT_SNEAK)
 	{
 		AI_Output (self, other, "DIA_Jesper_Schleichen_09_01");//Sneaking is essential for every thief. Above all, when you're moving around in somebody else's house.
 		AI_Output (self, other, "DIA_Jesper_Schleichen_09_02");//Don't just tramp on in like that. Most people sleep very lightly.
-		AI_Output (self, other, "DIA_Jesper_Schleichen_09_03");//Only when you sneak will no one hear you - and you can work unhindered.
+		AI_Output (self, other, "DIA_Jesper_Schleichen_09_03");//Only when you sneak around will no one hear you - and you can work unhindered.
 	};
 };
 //////////////////////////////////////////////////////////////////////

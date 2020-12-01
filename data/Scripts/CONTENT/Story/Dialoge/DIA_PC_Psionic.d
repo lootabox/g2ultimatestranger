@@ -341,8 +341,8 @@ FUNC INT DIA_Lester_Sleep_Condition()
 FUNC VOID DIA_Lester_Sleep_Info()
 {	
 	AI_Output	(other, self,"DIA_Lester_Sleep_15_00");	//Are you still exhausted?
-	AI_Output	(self, other,"DIA_Lester_Sleep_13_01");	//And how. (yawns) I told Xardas everything. Now I'm going to sleep for a while. Like, a day or...
-	AI_Output	(self, other,"DIA_Lester_Sleep_13_02");	//... two... or longer.
+	AI_Output	(self, other,"DIA_Lester_Sleep_13_01");	//And how. (yawns) I told Xardas everything. Now I'm going to sleep for a while. Like, one or two...
+	AI_Output	(self, other,"DIA_Lester_Sleep_13_02");	//... days... or longer.
 	
 	AI_StopProcessInfos (self);
 };

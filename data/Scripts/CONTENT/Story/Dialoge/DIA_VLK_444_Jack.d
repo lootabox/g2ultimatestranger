@@ -115,10 +115,10 @@ func void DIA_Jack_Job_Info ()
 	AI_Output			(self, other, "DIA_Jack_Job_14_03"); //No big deal. Not at all. But that old tower came closest to what I would call a home.
 	AI_Output			(self, other, "DIA_Jack_Job_14_04"); //I haven't been up there in ages.
 	AI_Output			(other, self, "DIA_Jack_Job_15_05"); //Why not?
-	AI_Output			(self ,other, "DIA_Jack_Job_14_06"); //Ever since those scallywags took over my lighthouse, I haven't dared get closer to it than twenty feet. Really bad rabble, that.
+	AI_Output			(self ,other, "DIA_Jack_Job_14_06"); //Ever since those scallywags took over me lighthouse, I haven't dared get closer to it than twenty feet. Really bad rabble, that.
 	AI_Output			(self ,other, "DIA_Jack_Job_14_07"); //They're criminals from the Valley of Mines, you know.
 	AI_Output			(self ,other, "DIA_Jack_Job_14_08"); //There was this big bang on the other side of the mountains, and then they swarmed all over the land like flies. Now they're hiding out everywhere - even in my lighthouse.
-	AI_Output			(self ,other, "DIA_Jack_Job_14_09"); //I think they're on the lookout for a ship they can raid.
+	AI_Output			(self ,other, "DIA_Jack_Job_14_09"); //I think they're on the lookout for any ship they can raid.
 	AI_Output			(self ,other, "DIA_Jack_Job_14_10"); //Ha! Let them. Then at least they'd be out of my tower.
 	
 	Log_CreateTopic (TOPIC_KillLighthouseBandits, LOG_MISSION);
@@ -219,7 +219,7 @@ FUNC VOID DIA_Jack_Harbor_Leave ()
 	AI_Output (self ,other,"DIA_Jack_Harbor_Leave_14_01"); //Nobody would take an old sea dog like me on his ship these days.
 	AI_Output (self ,other,"DIA_Jack_Harbor_Leave_14_02"); //Most people think that Old Jack's got the gout in his rotten old bones.
 	AI_Output (other,self ,"DIA_Jack_Harbor_Leave_15_03"); //And? Are they right?
-	AI_Output (self ,other,"DIA_Jack_Harbor_Leave_14_04"); //Balderdash. Once I've got those planks below my feet again, I'll feel like a young whippersnapper.
+	AI_Output (self ,other,"DIA_Jack_Harbor_Leave_14_04"); //Balderdash. Once I've got those planks beneath me feet again, I'll feel like a young whippersnapper.
 };
 
 ///////////////////////////////////////////////////////////////////////

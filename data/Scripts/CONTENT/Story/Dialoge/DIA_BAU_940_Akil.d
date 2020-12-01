@@ -247,7 +247,7 @@ func void DIA_Addon_Akil_MissingPeople_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Akil_MissingPeople_15_00"); //Have you heard anything about missing citizens?
 	AI_Output	(self, other, "DIA_Addon_Akil_MissingPeople_13_01"); //Don't make me laugh. Heard of them? Some of my own people are missing.
-	AI_Output	(self, other, "DIA_Addon_Akil_MissingPeople_13_02"); //Tonak and Telbor used to work on my fields, until 3 days ago.
+	AI_Output	(self, other, "DIA_Addon_Akil_MissingPeople_13_02"); //Tonak and Telbor used to work on my fields, until three days ago.
 	AI_Output	(self, other, "DIA_Addon_Akil_MissingPeople_13_03"); //And I know exactly that they wouldn't up and leave the farm just like that.
 	AI_Output	(self, other, "DIA_Addon_Akil_MissingPeople_13_04"); //And yet, they've simply vanished and no-one can tell me where they went.
 	AI_Output	(self, other, "DIA_Addon_Akil_MissingPeople_13_05"); //If you happen to find out what's become of them, be sure to let me know, will you?

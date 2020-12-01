@@ -398,7 +398,7 @@ func int DIA_Baltram_AkilsHof_Condition ()
 func void DIA_Baltram_AkilsHof_Info ()
 {
 	AI_Output (other, self, "DIA_Baltram_AkilsHof_15_00"); //Where can I find Akil's farm?
-	AI_Output (self, other, "DIA_Baltram_AkilsHof_01_01"); //Just go straight out here through the east gate and follow the road to the southeast.
+	AI_Output (self, other, "DIA_Baltram_AkilsHof_01_01"); //Just go out here through the east gate and follow the path to the southeast.
 	AI_Output (self, other, "DIA_Baltram_AkilsHof_01_02"); //After a short while, you'll come to a stone stairway. Go up that and from there you'll already be able to see Akil's farm.
 	SC_KnowsAkilsHof = TRUE;
 };

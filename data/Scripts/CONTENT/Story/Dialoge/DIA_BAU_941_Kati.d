@@ -56,7 +56,7 @@ func void DIA_Kati_SLDNOCHDA_Info ()
 		AI_Output (self, other, "DIA_Kati_SLDNOCHDA_16_00"); //Those cutthroats are threatening my husband! We are citizens of the town, loyal to the king, and the mercenaries are planning to rob us!
 		Hilfe = TRUE;
 	};
-	AI_Output (self, other, "DIA_Kati_SLDNOCHDA_16_01"); //Now don't you just stand there. Do something then! Help us.
+	AI_Output (self, other, "DIA_Kati_SLDNOCHDA_16_01"); //Now don't you just stand there. Do something! Help us.
 	if (Akils_SLDStillthere == FALSE) {
 		Log_CreateTopic (TOPIC_AkilsSLDStillthere, LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_AkilsSLDStillthere, LOG_RUNNING);

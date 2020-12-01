@@ -497,7 +497,7 @@ func void DIA_Addon_Greg_NW_was_SLD ()
 	AI_Output			(other, self, "DIA_Addon_Greg_NW_was_SLD_15_00"); //Weapons? The mercenaries have weapons.
 	AI_Output			(self, other, "DIA_Addon_Greg_NW_was_SLD_01_01"); //Interesting. I heard that the fat farmer Onar had hired the boys.
 	AI_Output			(self, other, "DIA_Addon_Greg_NW_was_SLD_01_02"); //(laughs) Not too bad for a landlubber.
-	AI_Output			(self, other, "DIA_Addon_Greg_NW_was_SLD_01_03"); //Not a bad idea. Maybe I really should pay them a visit.
+	AI_Output			(self, other, "DIA_Addon_Greg_NW_was_SLD_01_03"); //Not a bad idea. But I really should pay them a visit.
 };
 func void DIA_Addon_Greg_NW_was_Orlan ()
 {
@@ -1169,7 +1169,7 @@ func void DIA_Addon_Greg_NW_WasWillstDu_da ()
 func void DIA_Addon_Greg_NW_WasWillstDu_Skip ()
 {
 	AI_Output			(other, self, "DIA_Addon_Greg_NW_WasWillstDu_Skip_15_00"); //I saw a pirate named Skip near the port.
-	AI_Output			(self, other, "DIA_Addon_Greg_NW_WasWillstDu_Skip_01_01"); //That moron. I waited there for 3 days. So why's he coming so late?
+	AI_Output			(self, other, "DIA_Addon_Greg_NW_WasWillstDu_Skip_01_01"); //That moron. I waited there for three days. So why's he coming so late?
 	AI_Output			(self, other, "DIA_Addon_Greg_NW_WasWillstDu_Skip_01_02"); //Once I get my strength back, I'll give him what for.
 	SC_KnowsConnectionSkipGreg = TRUE;
 	B_GivePlayerXP (XP_Ambient);

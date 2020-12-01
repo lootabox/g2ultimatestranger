@@ -222,7 +222,7 @@ FUNC VOID DIA_Isgaroth_Kloster_Info()
 	
 	if (other.guild == GIL_NONE)
 	{
-		AI_Output (self ,other,"DIA_Isgaroth_Kloster_01_02"); //And if you want to be accepted as a novice in the monastery, you must bring a sheep and...
+		AI_Output (self ,other,"DIA_Isgaroth_Kloster_01_02"); //If you want to be accepted as a novice in the monastery, you must bring a sheep and...
 		B_Say_Gold (self, other,Summe_Kloster);
 		if(SC_KnowsKlosterTribut == FALSE)
 		{

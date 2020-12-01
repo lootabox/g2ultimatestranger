@@ -216,7 +216,7 @@ func void DIA_Addon_Orlan_Ranger_Aqua()
 func void DIA_Addon_Orlan_Ranger_Idiot ()
 {
 	AI_Output (other, self, "DIA_Addon_Orlan_Ranger_Lares_15_00"); //Man! I belong to the 'Ring of Water'!
-	AI_Output (self, other, "DIA_Addon_Orlan_Ranger_Lares_05_01"); //Do you now? Hard to believe they would pick such a moron.
+	AI_Output (self, other, "DIA_Addon_Orlan_Ranger_Lares_05_01"); //Do you now? Hard to believe they'd pick such a moron.
 	AI_Output (self, other, "DIA_Addon_Orlan_Ranger_Lares_05_02"); //What do you want?
 	Info_ClearChoices	(DIA_Addon_Orlan_Ranger);	
 };

@@ -275,9 +275,9 @@ func int DIA_Pedro_Rules_Condition ()
 func void DIA_Pedro_Rules_Info ()
 {
 	AI_Output (other, self,"DIA_Pedro_Rules_15_00"); //What are the rules you live by?
-	AI_Output (self, other,"DIA_Pedro_Rules_09_01"); //Innos is the god of truth and law and thus we may NEVER lie or commit a crime.
+	AI_Output (self, other,"DIA_Pedro_Rules_09_01"); //Innos is the god of truth and justice and thus we may NEVER lie or commit a crime.
 	AI_Output (self, other,"DIA_Pedro_Rules_09_02"); //Should you transgress against a brother of the community or steal our property, you will pay a penalty for it.
-	AI_Output (self, other,"DIA_Pedro_Rules_09_03"); //Innos is also the god of rule and fire.
+	AI_Output (self, other,"DIA_Pedro_Rules_09_03"); //Innos is also the god of lore and fire.
 	AI_Output (self, other,"DIA_Pedro_Rules_09_04"); //As a novice you must show OBEDIENCE and RESPECT to all Magicians of Fire.
 	AI_Output (other,self ,"DIA_Pedro_Rules_15_05"); //I see.
 	AI_Output (self ,other,"DIA_Pedro_Rules_09_06"); //Furthermore, it is the DUTY of a novice to carry out all the work in the monastery for the good of the community.

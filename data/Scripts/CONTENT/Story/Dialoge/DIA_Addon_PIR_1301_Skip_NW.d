@@ -137,7 +137,7 @@ func int DIA_Addon_Skip_NW_Baltram_Condition ()
 func void DIA_Addon_Skip_NW_Baltram_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Skip_NW_Baltram_15_00"); //Baltram? You're waiting for a merchant?
-	AI_Output	(self, other, "DIA_Addon_Skip_NW_Baltram_08_01"); //Smart kid, are you?
+	AI_Output	(self, other, "DIA_Addon_Skip_NW_Baltram_08_01"); //Smart kid, aren't you?
 	if (C_BodyStateContains (self, BS_SIT))
 	{
 		AI_StandUp (self);
@@ -278,7 +278,7 @@ instance DIA_Addon_Skip_NW_MissingPeople		(C_INFO)
 	condition	 = 	DIA_Addon_Skip_NW_MissingPeople_Condition;
 	information	 = 	DIA_Addon_Skip_NW_MissingPeople_Info;
 
-	description	 = 	"Lots of citizens are missing.";
+	description	 = 	"A lot of citizens are missing.";
 };
 
 func int DIA_Addon_Skip_NW_MissingPeople_Condition ()
