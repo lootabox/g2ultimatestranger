@@ -2,7 +2,7 @@
 instance VLK_494_Attila (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Attile";
+	name 		= "Attila";
 	guild 		= GIL_VLK;
 	id 			= 494;
 	voice 		= 9;

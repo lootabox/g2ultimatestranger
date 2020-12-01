@@ -200,6 +200,7 @@ Andre only comments on allowing NH to join the militia after giving the letter o
 Andre only comments on not being able to use anyone without a clean record in the militia if NH is in the militia.
 Angar has same weapon everywhere as in the Valley of Mines.
 Attila will become a "tough guy" after handing out the key to NH, and will not automatically die if beaten.
+Attila's name corrected from Attile.
 Balthasar can only be asked about Bengar's farm if NH has not yet spoken with Bengar.
 Balthasar's sheep properly move to Bengar's farm with him, instead of being duplicated.
 Baltram can only be asked about Akils farm if NH does yet know how to find it.
