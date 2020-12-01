@@ -1,4 +1,15 @@
 
+------------------------------------------------------------------------------------- Startup mob spawns
+
+Addon wolf -> orcbiter
+
+Giant rats -> Desert rat
+Rename "Desert rat" to "Giant rat"
+
+Replace boars in VoM
+Reduce number of boars in Khorinis
+Rename to Giant boar
+
 ------------------------------------------------------------------------------------- Spells / Magic
 
 ----------- FBT / Typhoon
@@ -353,35 +364,6 @@ Ignaz
 
 
 
-
-------------------------------------------------------------------------------------- Smithing
-Gain per sword	+2%
-
-R = Rough
-N = Normal
-F = Fine
-F10 = Fine (+10%)
-O = Ore
-
-lp					0%		10%		20%		30%		40%		50%		60%		70%		80%		90%		100%	Dmg range
-2	Short Sword		R		N		F				F10														12-25
-4	Sword						R		N		F				F10											25-35
-6	Longsword								R		N		F				F10								30-45
-8	Broadsword											R		(N)		(F)				F10					???
-10	Bastard Sword													R		N		F				F10		45-65
-
-4	Ore Longsword									O														45
-6	Ore Broadsword													O										60
-8	Ore Battle Blade																O						75
-10	Ore Dragon Slayer																				O		90
-
-4	Ore Two-Hander									O														50
-6	Ore Large Two-Hander											O										70
-8	Ore Battle Blade																O						90
-10	Ore Dragon Slayer																				O		110
-
-
-
 ------------------------------------------------------------------------------------- ZEN changes
 
 VoM			Torturer's Axe -> Orc Slayer
@@ -471,10 +453,21 @@ Abandoned mine				Bandits hideout
 Old camp					alpha old camp
 
 
+------------------------------------------------------------------------------------- Story changes
 
+Lord Andre gives message to Pyrokar after addon
+
+Chapter 3 starts only after addon
+Paladin's at pass are killed by stone guardians
+Stone guardians appear in few places in Khorinis
+
+Ancient teleporters break after addon
+
+Stop earthquakes before returning from Valley of Mines
 
 ------------------------------------------------------------------------------------- Quest changes
 Brutus -> Den quest
+
 
 
 
@@ -756,35 +749,97 @@ Disable item pickup during combat
 
 ------------------------------------------------------------------------------------- Special weapons
 
-guild +10/+20	vs draconians/evil
+guild weapons			+20 vs undead/draconic
+Ore Dragon Slayer		dmg 80 (from 90)
+Large Ore Dragon Slayer	dmg 100 (from 110)
+
+Krush Morok				dmg 60 (from 50)
+Krush Morok				str 80 (from 70)
+
+Torturer's Axe			2h (from 1h)
+Torturer's Axe			dmg 50 (from 65)
+
+Rune Power				Remove from Jharkendar
+
+Ruby Blade				dmg 40 (from 50)
+Ruby Blade				Add to Valley of Mines swamp dragon cache
+
+Stormbringer			dmg 60 (from 75)
+
+Paladin's Two-Hander	Give for joining paladins instead if 2h > 1h
+
+Pirate's Cutlass		Move from harbor to Skip's bay
+Pirate's Cutlass		Replace in Khorinis with Boarding knife and Boarding axe
+
+Wind Cudgel				2h (from 1h)
+Wind Cudgel				Rename to Large Cudgel
+Wind Cudgel				make 1st 2h wpn
+
+Dragon Slicer			dmg 60 (from 80)
+
+Orc Slayer				dmg 50 (from 65)
+
 
 1h str
-Orc Slayer				+25 vs orcs
-Torturer's Axe			+15 vs humans
-Inquisitor				+15 vs evil
-Rune Sword				Block spell
-Paladin's Sword			+15 vs undead
-Wind cudgel				???
+?	Rune Sword				Block spell
+J/V	Ruby Blade				Critical hits deal magic fire damage.
+K	Paladin's Broadsword	+20 vs undead
+K	Orc Slayer				+20 vs orcs
+K	Wolf's Tooth			+20 vs wolf's prey (sheep, scavenger, rats, molerats)
+V	Inquisitor				+20 vs evil
+V	Raven's Beak			+20 vs armored	(dmg 50 from 58)
 
-1h dex
-Rapiers?				combo counter +1/+2
-Wolf weapons			+15 vs wolves
+1h dex					Fighter stance (+1 combo)
+V	Master Sword			True master stance (+2 combo)
+J	Pirate's Cutlass		Doubled critical hit chance.
 
 2h
-Dragon slicer			+15 vs draconians
-Stormbringer			???
-Storm cudgel			???
-Rune Power				Adds 30% mana
-Krush Morok				+40 vs humans
-Paladin's Two-Hander	+15 vs undead
-Novice' / Ring of Water' Quarterstaff	+10/+5 mana
+-	Krush Morok				+20 vs humans
+J	Storm Cudgel			+20 during rain
+J	Heavy Pirate's Cutlass	Doubled critical hit chance.
+J/K	Heavy Cutlass			Doubled critical hit chance.
+J/K	Novice' / Ring of Water' Quarterstaff	+10/+5 mana
+K	Paladin's Two-Hander	+20 vs undead
+K	Dragon slicer			+20 vs draconic
+K/V	Torturer's Axe			+20 vs non-evil
+V	Rune Power				Block spell
+V	Stormbringer			Critical hits deal magic lightning damage.
 
 
-Paladin weapon coating
-	+10		Holy water
-	+10%	Blank rune
+------------------------------------------------------------------------------------- Smithing
+Gain per sword learned +5%
+Gain per sword crafted +1%
+Gain per ore spent +1%
 
-	Ruby blade only found
+Rough Short Sword		dmg 15 from 10
+Short Sword				dmg 20 from 12
+Sword					dmg 20 from 25
+Rough Bastard Sword		dmg 50 from 45
+Bastard Sword			dmg 60 from 58
+
+R = Rough
+N = Normal
+F = Fine
+F10 = Fine (+10%)
+O = Ore
+
+lp					0%		10%		20%		30%		40%		50%		60%		70%		80%		90%		100%	Dmg range		New dmg?
+2	Short Sword		R		N		F		F5		F10														10-25			15-25
+4	Sword					R		N		F		F5		F10												25-35			20-35
+6	Longsword							R		N		F		F5		F10									30-45			30-45
+8	Broadsword										R		(N)		(F)		F5		F10						???				40-60
+10	Bastard Sword													R		N		F		F5		F10		45-65			50-66
+
+4	Ore Longsword						O																	45
+8	Ore Broadsword											O												60
+12	Ore Battle Blade															O							75
+16	Ore Dragon Slayer																				O		80(+20)
+
+4	Ore Two-Hander						O																	50
+8	Ore Large Two-Hander									O												70
+12	Ore Battle Blade															O							90
+16	Ore Dragon Slayer																				O		100(+20)
+
 
 ------------------------------------------------------------------------------------- Cool sound effects?
 
