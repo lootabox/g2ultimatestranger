@@ -183,7 +183,7 @@ FUNC VOID DIA_Fester_Together_Info()
 func void DIA_Fester_Together_Join()
 {
 	AI_Output (other, self, "DIA_Fester_Together_Join_15_00"); //I want to join you!
-	AI_Output (self, other, "DIA_Fester_Together_Join_08_01"); //Oh, so that's the way it is. You want to prove how good you are ..
+	AI_Output (self, other, "DIA_Fester_Together_Join_08_01"); //Oh, so that's the way it is. You want to prove how good you are...
 	AI_Output (self, other, "DIA_Fester_Together_Join_08_02"); //(cunningly) All right, let's attack the beasts together.
 	Fester_Choice = FC_Join;
 	Info_ClearChoices (DIA_Fester_Together);
@@ -195,7 +195,7 @@ func void DIA_Fester_Together_Gold()
 	AI_Output (other, self, "DIA_Fester_Together_Gold_15_00"); //I want to see some gold!
 	AI_Output (self, other, "DIA_Fester_Together_Gold_08_01"); //(laughs) You bastard! You want to take advantage of my situation, huh?
 	AI_Output (self, other, "DIA_Fester_Together_Gold_08_02"); //Either I pay you, or I bite the dust.
-	AI_Output (self, other, "DIA_Fester_Together_Gold_08_03"); //All right. I can pay you 50 gold pieces - that's all I have.
+	AI_Output (self, other, "DIA_Fester_Together_Gold_08_03"); //All right. I can pay you 50 gold pieces - that's all I got.
 	Fester_Choice = FC_Gold;
 	Info_ClearChoices (DIA_Fester_Together);
 };
@@ -419,7 +419,7 @@ FUNC VOID DIA_Fester_PERMPruegel_Info()
 	&& (Fester_FightVerarscht == FALSE)
 	{
 		AI_Output (other, self, "DIA_Fester_PERMPruegel_15_01"); //I don't like having my leg pulled.
-		AI_Output (self, other, "DIA_Fester_PERMPruegel_08_02"); //I'm shaking, I'm shaking.
+		AI_Output (self, other, "DIA_Fester_PERMPruegel_08_02"); //Don't make me cry...
 		Fester_FightVerarscht = TRUE;
 	}
 	else if (Npc_KnowsInfo (other, DIA_Jarvis_MissionKO))

@@ -111,7 +111,7 @@ func void DIA_Wolf_WannaBuy_Info ()
 	AI_Output (other, self, "DIA_Wolf_WannaBuy_15_00"); //Do you have anything to sell?
 	AI_Output (self, other, "DIA_Wolf_WannaBuy_08_01"); //Oh, don't ask.
 	AI_Output (self, other, "DIA_Wolf_WannaBuy_08_02"); //Bennet, one of the new guys, takes care of the weapons and armor now.
-	AI_Output (self, other, "DIA_Wolf_WannaBuy_08_03"); //In the colony I was responsible for Lee's entire weapons store, and then along comes a trained smith and 'pow', I'm out of a job.
+	AI_Output (self, other, "DIA_Wolf_WannaBuy_08_03"); //In the colony I was responsible for Lee's entire weapons store, and then along came a trained smith and 'pow', I'm out of a job.
 	AI_Output (self, other, "DIA_Wolf_WannaBuy_08_04"); //I desperately need a new job, even if I all I do is guard the farms out there.
 	AI_Output (self, other, "DIA_Wolf_WannaBuy_08_05"); //I don't care, just as long as I'm not twiddling my thumbs here any more.
 }; 

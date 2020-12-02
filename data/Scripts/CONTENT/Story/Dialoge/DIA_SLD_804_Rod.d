@@ -101,7 +101,7 @@ FUNC VOID DIA_Rod_WannaLearn_Info()
 	else
 	{
 		AI_Output (self, other, "DIA_Rod_WannaLearn_06_04"); //Listen, boy. It takes a lot of strength to wield a two-handed weapon.
-		AI_Output (self, other, "DIA_Rod_WannaLearn_06_05"); //Why don't you slink off to the pasture for a game of ring-around-a-rosy with the sheep?
+		AI_Output (self, other, "DIA_Rod_WannaLearn_06_05"); //Why don't you slink off to the pasture for a game of ring-around-the-rosy with the sheep?
 		Rod_SchwachGesagt = TRUE;
 	};
 };

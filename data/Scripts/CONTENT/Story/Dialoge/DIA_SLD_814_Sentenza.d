@@ -63,7 +63,7 @@ func void DIA_Sentenza_Hello_JustLooking()
 {
 	AI_Output (other, self,"DIA_Sentenza_Hello_JustLooking_15_00"); //I wanted to have a look around, that's all.
 	AI_Output (self ,other,"DIA_Sentenza_Hello_JustLooking_09_01"); //(laughs) There's a heap of trouble here for men like you! Are you telling me you just want to look around?
-	AI_Output (self ,other,"DIA_Sentenza_Hello_JustLooking_09_02"); //Ha! You're headed for the court! Why else would you have trudged all the way here, hm?
+	AI_Output (self ,other,"DIA_Sentenza_Hello_JustLooking_09_02"); //Ha! You're headed for the farm! Why else would you have trudged all the way here, hm?
 	AI_Output (self ,other,"DIA_Sentenza_Hello_JustLooking_09_03"); //So don't give me any of that bullshit and let me search you, and you can go on your way.
 	
 	Info_ClearChoices	(DIA_Sentenza_Hello);

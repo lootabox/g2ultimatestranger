@@ -34,7 +34,7 @@ instance DIA_Khaled_Hallo		(C_INFO)
 	condition	= DIA_Khaled_Hallo_Condition;
 	information	= DIA_Khaled_Hallo_Info;
 	permanent	= TRUE;
-	description	= "Everything all right with you?";
+	description	= "Everything fine with you?";
 };
 
 func int DIA_Khaled_Hallo_Condition ()
