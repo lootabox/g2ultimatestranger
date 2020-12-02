@@ -700,7 +700,7 @@ FUNC VOID DIA_Lee_KeinSld_Info()
 	if (other.guild == GIL_MIL) || (other.guild == GIL_PAL)
 	{
 		AI_Output (self, other, "DIA_Lee_KeinSld_04_00"); //I see you've placed yourself in the service of the paladins.
-	}
+	};
 	
 	if (other.guild == GIL_NOV) || (other.guild == GIL_KDF)
 	{

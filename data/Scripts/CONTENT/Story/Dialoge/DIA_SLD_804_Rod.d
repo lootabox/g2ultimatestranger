@@ -558,7 +558,7 @@ FUNC VOID DIA_Rod_PERM_Info()
 		{
 			AI_Output (self, other, "DIA_Rod_PERM_06_04"); //You don't belong here, you'd better go hang out somewhere else!
 		};
-	}
+	};
 
 	if (Kapitel >= 3)
 	{
