@@ -48,7 +48,7 @@ remake acid -> toxic rain
 holy missile remake ?
 unused bigass fireball rune texture -> explosion
 
-ice storm - 4x80 dmg
+ice storm - 4x80 dmg / 50%, 64 mana
 wind fist - only max charge
 ball lightning - shocks unharmed undead targets at full charge
 
@@ -103,13 +103,20 @@ S	Fear					Valley of Mines In Xardas' old tower.						Beliar's Wrath
 
 
 ----------- Staves
-name				id					location
-Staff of Fire		ItMW_Addon_Stab01	gorax (kdf)
-Magic Staff		¨	ItMW_Addon_Stab02	monastery cellar (kdf)
-Staff of Water		ItMW_Addon_Stab03	cronos (kdf)
-Ulthar's Staff		ItMW_Addon_Stab04	monastery library (c5, kdf)
-Typhoon				ItMW_Addon_Stab05	?
 
+done	visual						color	name					location		effect
+		ITMW_MAGESTAFF_BLADES_2H_01	YELLOW	Typhoon					addon garett	Edge damage vs. monsters weak to lightning: +30
+		ITMW_MAGESTAFF_BLADES_2H_02	BLUE	Blizzard				addon cronos	Edge damage vs. monsters weak to ice: +30
+		ITMW_MAGESTAFF_BLADES_2H_03	RED		Volcano					addon fisk		Edge damage vs. monsters weak to fire: +30
+X~		ITMW_MAGESTAFF_GOOD_2H_01	YELLOW	Ulthar's staff			c3 gorax		Projectile spells can be cast twice as quickly.
+X		ITMW_MAGESTAFF_GOOD_2H_02	BLUE	Staff of Water Mages	c3 gorax		Ice and water spells mana cost reduction (percentage): 25
+X		ITMW_MAGESTAFF_GOOD_2H_03	RED		Staff of Fire Magicians	c3 gorax		Fire spell damage bonus vs. unignited targets (percentage): 25
+~		ITMW_MAGESTAFF_NORMAL_2H_01	YELLOW	Magic staff				c1 gorax		Mana cost reduction on full mana (percentage): 50
+~		ITMW_MAGESTAFF_NORMAL_2H_02	BLUE	Staff of Water			c2 gorax		Ice and water spells mana cost reduction: 4
+~		ITMW_MAGESTAFF_NORMAL_2H_03	RED		Staff of Fire			c2 gorax		Fire spell damage bonus vs. unignited targets: 10
+
+
+Ulthar = Stab04 + Stab05
 
 
 
