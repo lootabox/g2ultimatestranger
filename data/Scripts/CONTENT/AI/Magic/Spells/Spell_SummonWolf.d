@@ -2,7 +2,7 @@
 // SPL_SummonWolf
 // **************
 
-const int SPL_Cost_SummonWolf			= 20;
+const int SPL_Cost_SummonWolf			= 10;
 
 
 INSTANCE Spell_SummonWolf (C_Spell_Proto)

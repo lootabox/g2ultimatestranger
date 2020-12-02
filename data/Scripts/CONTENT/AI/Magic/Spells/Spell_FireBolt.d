@@ -2,7 +2,7 @@
 // SPL_FireBolt
 // ************
 
-const int SPL_Cost_Firebolt			= 5;
+const int SPL_Cost_Firebolt			= 4;
 const int SPL_Damage_Firebolt 		= 30;
 
 

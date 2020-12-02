@@ -2,7 +2,7 @@
 // SPL_IceCube
 // ***********
 
-const int	SPL_Cost_IceCube			=	20;
+const int	SPL_Cost_IceCube			=	30;
 const int	SPL_Damage_IceCube			=	80;	// initial hit
 const int	SPL_FREEZE_DAMAGE		 	=	SPL_Damage_IceCube / 10; // if changed, also possibly need to modify ZS_MagicFreeze
 const int	SPL_FREEZE_TIME				=	SPL_Damage_IceCube / SPL_FREEZE_DAMAGE; // dont touch, only here so it doesnt need to be recalculated constantly

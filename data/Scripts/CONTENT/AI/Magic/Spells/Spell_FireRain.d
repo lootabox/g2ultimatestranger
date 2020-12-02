@@ -2,7 +2,7 @@
 // SPL_FireRain
 // ************
 
-const int SPL_Cost_FireRain			= 60;
+const int SPL_Cost_FireRain			= 120;
 const int SPL_Damage_FireRain 		= 240;
 
 
