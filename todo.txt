@@ -1,4 +1,8 @@
 
+
+fix dialog	DIA_ADDON_PYROKAR_MISSINGPEOPLE_11_01
+
+
 ------------------------------------------------------------------------------------- Startup mob spawns
 
 Addon wolf -> orcbiter

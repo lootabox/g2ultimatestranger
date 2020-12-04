@@ -185,7 +185,7 @@ var int Bengar_ToldAboutRangerBandits;
 func void DIA_Addon_Bengar_MissingPeople_Lager ()
 {
 	AI_Output			(other, self, "DIA_Addon_Bengar_MissingPeople_Lager_15_00"); //Where is this bandit camp?
-	AI_Output			(self, other, "DIA_Addon_Bengar_MissingPeople_Lager_10_01"); //At the far end of my fields, some stairs lead down to a small hollow. That's where they have made themselves at home.
+	AI_Output			(self, other, "DIA_Addon_Bengar_MissingPeople_Lager_10_01"); //At the far end of my fields, some steps lead down to a small hollow. That's where they have made themselves at home.
 	AI_Output			(self, other, "DIA_Addon_Bengar_MissingPeople_Lager_10_02"); //I'd like to go look for Pardos there, but there's no way I'm going up against those guys.
 	AI_Output			(self, other, "DIA_Addon_Bengar_MissingPeople_Lager_10_03"); //And you had better give them a wide berth, too. They're not known for their sense of humor.
 	Bengar_ToldAboutRangerBandits = TRUE;

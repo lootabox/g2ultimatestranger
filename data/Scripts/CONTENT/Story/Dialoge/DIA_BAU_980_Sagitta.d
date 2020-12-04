@@ -117,7 +117,7 @@ func void DIA_Sagitta_TeachAlchemyRequest_Info ()
 	if (DIA_Sagitta_TeachAlchemyRequest_OneTime ==FALSE)
 	{
 		AI_Output			(self, other, "DIA_Sagitta_TeachAlchemyRequest_17_01"); //How interesting. I don't get asked that very often.
-		AI_Output			(self, other, "DIA_Sagitta_TeachAlchemyRequest_17_02"); //So you want to be my student? Then you'll first have to prove that you're request is serious.
+		AI_Output			(self, other, "DIA_Sagitta_TeachAlchemyRequest_17_02"); //So you want to be my student? Then you'll first have to prove that your request is serious.
 		AI_Output			(self, other, "DIA_Sagitta_TeachAlchemyRequest_17_03"); //At the moment, I'm working on a very rare potion made from exquisite herbs and juices.
 		AI_Output			(self, other, "DIA_Sagitta_TeachAlchemyRequest_17_04"); //If you can get me one ingredient - a very rare herb which I don't have here - I shall train you.
 		DIA_Sagitta_TeachAlchemyRequest_OneTime = TRUE;
