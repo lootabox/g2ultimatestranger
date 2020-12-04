@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Minecrawler(C_Npc)
 	level							=	12;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	60;
-	attribute	[ATR_DEXTERITY]		=	60;
-	attribute	[ATR_HITPOINTS_MAX]	=	120;
-	attribute	[ATR_HITPOINTS]		=	120;
+	attribute	[ATR_STRENGTH]		=	40;
+	attribute	[ATR_DEXTERITY]		=	40;
+	attribute	[ATR_HITPOINTS_MAX]	=	80;
+	attribute	[ATR_HITPOINTS]		=	80;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	60;
-	protection	[PROT_EDGE]			=	60;
+	protection	[PROT_BLUNT]		=	30;
+	protection	[PROT_EDGE]			=	30;
 	protection	[PROT_POINT]		=	60;
-	protection	[PROT_FIRE]			=	60;
-	protection	[PROT_FLY]			=	60;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	30;
+	protection	[PROT_MAGIC]		=	60; //0
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;

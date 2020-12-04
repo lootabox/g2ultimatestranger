@@ -8,23 +8,23 @@ PROTOTYPE Mst_Default_DemonLord(C_Npc)
 	name							= "Demon Lord";
 	guild							= GIL_DEMON;
 	aivar[AIV_MM_REAL_ID]			= ID_DEMON_LORD;
-	level							= 60;
+	level							= 100;
 	
 	//------ Attribute ----	
-	attribute	[ATR_STRENGTH]		= 300;
-	attribute	[ATR_DEXTERITY]		= 300;
-	attribute	[ATR_HITPOINTS_MAX]	= 600;
-	attribute	[ATR_HITPOINTS]		= 600;
-	attribute	[ATR_MANA_MAX] 		= 200;
-	attribute	[ATR_MANA] 			= 200;
+	attribute	[ATR_STRENGTH]		= 240;
+	attribute	[ATR_DEXTERITY]		= 240;
+	attribute	[ATR_HITPOINTS_MAX]	= 472;
+	attribute	[ATR_HITPOINTS]		= 472;
+	attribute	[ATR_MANA_MAX] 		= 100;
+	attribute	[ATR_MANA] 			= 100;
 	
 	//------ Protections ----
-	protection	[PROT_BLUNT]		= 200;
-	protection	[PROT_EDGE]			= 200;
-	protection	[PROT_POINT]		= 200;
-	protection	[PROT_FIRE]			= 200;		
-	protection	[PROT_FLY]			= 200;	
-	protection	[PROT_MAGIC]		= 200;
+	protection	[PROT_BLUNT]		= 100;
+	protection	[PROT_EDGE]			= 100;
+	protection	[PROT_POINT]		= 100;
+	protection	[PROT_FIRE]			= 50;
+	protection	[PROT_FLY]			= 100;
+	protection	[PROT_MAGIC]		= 100; //50
 	
 	//----- Damage Types -----
 	damagetype 						=	DAM_EDGE;

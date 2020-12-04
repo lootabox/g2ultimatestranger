@@ -8,25 +8,25 @@ PROTOTYPE Mst_Default_StoneGolem(C_Npc)
 	name							=	"Stone Golem";
 	guild							=	GIL_STONEGOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_STONEGOLEM;
-	level							=	25;
+	level							=	18;
 	
 	bodyStateInterruptableOverride	=	TRUE;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	125;
-	attribute	[ATR_DEXTERITY]		=	125;
-	attribute	[ATR_HITPOINTS_MAX]	=	250;
-	attribute	[ATR_HITPOINTS]		=	250;
+	attribute	[ATR_STRENGTH]		=	120;
+	attribute	[ATR_DEXTERITY]		=	120;
+	attribute	[ATR_HITPOINTS_MAX]	=	256;
+	attribute	[ATR_HITPOINTS]		=	256;
 	attribute	[ATR_MANA_MAX] 		=	100;
 	attribute	[ATR_MANA] 			=	100;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	50;
-	protection	[PROT_EDGE]			=	100;
-	protection	[PROT_POINT]		=	150;
-	protection	[PROT_FIRE]			=	100;
-	protection	[PROT_FLY]			=	100;	
-	protection	[PROT_MAGIC]		=	100;
+	protection	[PROT_BLUNT]		=	45;
+	protection	[PROT_EDGE]			=	80;
+	protection	[PROT_POINT]		=	IMMUNE; //1000
+	protection	[PROT_FIRE]			=	60;
+	protection	[PROT_FLY]			=	IMMUNE; //1000
+	protection	[PROT_MAGIC]		=	60;
 	
 	//---- Damage Types ----
 	damagetype 						=	DAM_EDGE|DAM_FLY;

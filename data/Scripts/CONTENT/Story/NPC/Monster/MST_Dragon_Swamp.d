@@ -8,25 +8,25 @@ PROTOTYPE Mst_Default_Dragon_Swamp(C_Npc)
 	name							=	"Swamp Dragon";
 	guild							=	GIL_DRAGON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_DRAGON_SWAMP;
-	level							=	300;
+	level							=	350;
 	
 	bodyStateInterruptableOverride = TRUE;
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		= 200;
-	attribute	[ATR_DEXTERITY]		= 200;
-	attribute	[ATR_HITPOINTS_MAX]	= 1000;
-	attribute	[ATR_HITPOINTS]		= 1000;
+	attribute	[ATR_STRENGTH]		= 120;
+	attribute	[ATR_DEXTERITY]		= 120; //100
+	attribute	[ATR_HITPOINTS_MAX]	= 500;
+	attribute	[ATR_HITPOINTS]		= 500;
 	attribute	[ATR_MANA_MAX] 		= 1000;
 	attribute	[ATR_MANA] 			= 1000;
 	
 	//------ Protections ----	
-	protection	[PROT_BLUNT]		= 150;
-	protection	[PROT_EDGE]			= 150;
-	protection	[PROT_POINT]		= 150;	
-	protection	[PROT_FIRE]			= 150;
-	protection	[PROT_FLY]			= 150;
-	protection	[PROT_MAGIC]		= 150;
+	protection	[PROT_BLUNT]		= 90;
+	protection	[PROT_EDGE]			= 90;
+	protection	[PROT_POINT]		= 90;
+	protection	[PROT_FIRE]			= 60;
+	protection	[PROT_FLY]			= IMMUNE;
+	protection	[PROT_MAGIC]		= 90; //60
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE|DAM_FLY; //DAM_FIRE is handled by damage script to bypass engine burn effect

@@ -13,20 +13,20 @@ PROTOTYPE Mst_Default_Dragon_Rock(C_Npc)
 	bodyStateInterruptableOverride = TRUE;
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		= 200;
-	attribute	[ATR_DEXTERITY]		= 200;
-	attribute	[ATR_HITPOINTS_MAX]	= 1000;
-	attribute	[ATR_HITPOINTS]		= 1000;
+	attribute	[ATR_STRENGTH]		= 130;
+	attribute	[ATR_DEXTERITY]		= 130; //100
+	attribute	[ATR_HITPOINTS_MAX]	= 600;
+	attribute	[ATR_HITPOINTS]		= 600;
 	attribute	[ATR_MANA_MAX] 		= 1000;
 	attribute	[ATR_MANA] 			= 1000;
 	
 	//------ Protections ----	
-	protection	[PROT_BLUNT]		= 160;
-	protection	[PROT_EDGE]			= 160;
-	protection	[PROT_POINT]		= 160;	
-	protection	[PROT_FIRE]			= 160;
-	protection	[PROT_FLY]			= 160;	
-	protection	[PROT_MAGIC]		= 160;
+	protection	[PROT_BLUNT]		= 95;
+	protection	[PROT_EDGE]			= 95;
+	protection	[PROT_POINT]		= 95;
+	protection	[PROT_FIRE]			= 70;
+	protection	[PROT_FLY]			= IMMUNE;
+	protection	[PROT_MAGIC]		= 95; //70
 	
 	//----- Damage Types ----	
 	damagetype 						=	DAM_EDGE|DAM_FLY; //DAM_FIRE is handled by damage script to bypass engine burn effect

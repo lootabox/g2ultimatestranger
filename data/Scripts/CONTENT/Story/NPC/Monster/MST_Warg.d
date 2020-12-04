@@ -8,23 +8,23 @@ PROTOTYPE Mst_Default_Warg(C_Npc)
 	name							=	"Warg";
 	guild							=	GIL_WOLF;
 	aivar[AIV_MM_REAL_ID]			= 	ID_WARG;
-	level							=	30;		
+	level							=	15;
 	
 	//----- Attributes ----
-	attribute	[ATR_STRENGTH]		=	150;
-	attribute	[ATR_DEXTERITY]		=	150;
-	attribute	[ATR_HITPOINTS_MAX]	=	300;	
-	attribute	[ATR_HITPOINTS]		=	300;
+	attribute	[ATR_STRENGTH]		=	75;
+	attribute	[ATR_DEXTERITY]		=	75;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	125;
-	protection	[PROT_EDGE]			=	125;
-	protection	[PROT_POINT]		=	75;
-	protection	[PROT_FIRE]			=	125;
-	protection	[PROT_FLY]			=	125;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	30;
+	protection	[PROT_EDGE]			=	30;
+	protection	[PROT_POINT]		=	30;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	30;
+	protection	[PROT_MAGIC]		=	30; //0
 
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;

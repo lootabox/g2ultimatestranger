@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Swampshark(C_Npc)
 	level							=	24;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	120;
-	attribute	[ATR_DEXTERITY]		=	120;
-	attribute	[ATR_HITPOINTS_MAX]	=	240;
-	attribute	[ATR_HITPOINTS]		=	240;
+	attribute	[ATR_STRENGTH]		=	120; //160
+	attribute	[ATR_DEXTERITY]		=	120; //160
+	attribute	[ATR_HITPOINTS_MAX]	=	240; //328
+	attribute	[ATR_HITPOINTS]		=	240; //328
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	100;
-	protection	[PROT_EDGE]			=	100;
-	protection	[PROT_POINT]		=	100;
-	protection	[PROT_FIRE]			=	100;
-	protection	[PROT_FLY]			=	100;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	60; //80
+	protection	[PROT_EDGE]			=	60; //80
+	protection	[PROT_POINT]		=	60; //80
+	protection	[PROT_FIRE]			=	10;
+	protection	[PROT_FLY]			=	IMMUNE; //1000
+	protection	[PROT_MAGIC]		=	60; //10
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
@@ -80,56 +80,17 @@ INSTANCE Swampshark	(Mst_Default_Swampshark)
 *************************************************************************/
 INSTANCE MIS_Addon_Swampshark_01	(Mst_Default_Swampshark)
 {
-	/* 
-	level							=	20;
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	100;
-	attribute	[ATR_HITPOINTS_MAX]	=	200;
-	attribute	[ATR_HITPOINTS]		=	200;
-
-	
-	//----- Protections ----
-	protection	[PROT_BLUNT]		=	100;
-	protection	[PROT_EDGE]			=	100;
-	protection	[PROT_POINT]		=	100;
-	 */
 	B_SetVisuals_Swampshark();
 	Npc_SetToFistMode(self);
 	
 };
 INSTANCE MIS_Addon_Swampshark_02	(Mst_Default_Swampshark)
 {
-	/* 
-	level							=	20;
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	100;
-	attribute	[ATR_HITPOINTS_MAX]	=	200;
-	attribute	[ATR_HITPOINTS]		=	200;
-
-	
-	//----- Protections ----
-	protection	[PROT_BLUNT]		=	100;
-	protection	[PROT_EDGE]			=	100;
-	protection	[PROT_POINT]		=	100;
-	 */
 	B_SetVisuals_Swampshark();
 	Npc_SetToFistMode(self);
 };
 INSTANCE MIS_Addon_Swampshark_03	(Mst_Default_Swampshark)
 {
-	/* 
-	level							=	20;
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	100;
-	attribute	[ATR_HITPOINTS_MAX]	=	200;
-	attribute	[ATR_HITPOINTS]		=	200;
-
-	
-	//----- Protections ----
-	protection	[PROT_BLUNT]		=	100;
-	protection	[PROT_EDGE]			=	100;
-	protection	[PROT_POINT]		=	100;
-	 */
 	B_SetVisuals_Swampshark();
 	Npc_SetToFistMode(self);
 };

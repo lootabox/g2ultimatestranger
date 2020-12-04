@@ -8,23 +8,23 @@ PROTOTYPE Mst_Default_Skeleton_Mage(C_Npc)
 	name							=	"Skeleton Mage";
 	guild							=	GIL_SKELETON_MAGE;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETON_MAGE;
-	level							=	30;
+	level							=	24;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	150;
-	attribute	[ATR_DEXTERITY]		=	150;
-	attribute	[ATR_HITPOINTS_MAX]	=	300;
-	attribute	[ATR_HITPOINTS]		=	300;
-	attribute	[ATR_MANA_MAX] 		=	200;
-	attribute	[ATR_MANA] 			=	200;
+	attribute	[ATR_STRENGTH]		=	120;
+	attribute	[ATR_DEXTERITY]		=	120;
+	attribute	[ATR_HITPOINTS_MAX]	=	240;
+	attribute	[ATR_HITPOINTS]		=	240;
+	attribute	[ATR_MANA_MAX] 		=	100;
+	attribute	[ATR_MANA] 			=	100;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	125;
-	protection	[PROT_EDGE]			=	125;
-	protection	[PROT_POINT]		=	175;
-	protection	[PROT_FIRE]			=	125;
-	protection	[PROT_FLY]			=	125;
-	protection	[PROT_MAGIC]		=	50;		
+	protection	[PROT_BLUNT]		=	40;
+	protection	[PROT_EDGE]			=	40;
+	protection	[PROT_POINT]		=	IMMUNE; //40
+	protection	[PROT_FIRE]			=	40;
+	protection	[PROT_FLY]			=	40;
+	protection	[PROT_MAGIC]		=	40;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;

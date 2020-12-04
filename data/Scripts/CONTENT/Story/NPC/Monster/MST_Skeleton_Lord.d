@@ -8,20 +8,20 @@ PROTOTYPE Mst_Skeleton_Lord	(C_NPC)
 	level							=	40;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	105; //+ 105 Waffe
+	attribute	[ATR_STRENGTH]		=	100;
 	attribute	[ATR_DEXTERITY]		=	100;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
-	attribute	[ATR_MANA_MAX] 		=	200;
-	attribute	[ATR_MANA] 			=	200;
+	attribute	[ATR_HITPOINTS_MAX]	=	250;
+	attribute	[ATR_HITPOINTS]		=	250;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protection ----
-	protection	[PROT_BLUNT]		=	100; //hat RS!
-	protection	[PROT_EDGE]			=	100;
-	protection	[PROT_POINT]		=	100; 
-	protection	[PROT_FIRE]			=	100;
-	protection	[PROT_FLY]			=	100;
-	protection	[PROT_MAGIC]		=	0;	//so lassen!
+	protection	[PROT_BLUNT]		=	100; //0
+	protection	[PROT_EDGE]			=	100; //0
+	protection	[PROT_POINT]		=	IMMUNE; //1000
+	protection	[PROT_FIRE]			=	100; //0
+	protection	[PROT_FLY]			=	100; //0
+	protection	[PROT_MAGIC]		=	100; //0
 		
 	//----- Damage Types ----
 	damagetype 						=	DAM_POINT;
@@ -104,7 +104,7 @@ INSTANCE Skeleton_Lord_Archol	(Mst_Skeleton_Lord)
 	level			=	60;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	150; 
+	attribute	[ATR_STRENGTH]		=	150;
 	attribute	[ATR_DEXTERITY]		=	150;
 	attribute	[ATR_HITPOINTS_MAX]	=	400;
 	attribute	[ATR_HITPOINTS]		=	400;
@@ -114,10 +114,10 @@ INSTANCE Skeleton_Lord_Archol	(Mst_Skeleton_Lord)
 	//----- Protection ----
 /* 	protection	[PROT_BLUNT]		=	10;
 	protection	[PROT_EDGE]			=	20;
-	protection	[PROT_POINT]		=	1000; 
+	protection	[PROT_POINT]		=	1000;
 	protection	[PROT_FIRE]			=	10;
 	protection	[PROT_FLY]			=	10;
-	protection	[PROT_MAGIC]		=	10;	 */
+	protection	[PROT_MAGIC]		=	10; */
 
 	B_SetVisuals_Skeleton_Lord ();
 	

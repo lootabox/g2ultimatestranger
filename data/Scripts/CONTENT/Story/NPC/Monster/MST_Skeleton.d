@@ -8,23 +8,23 @@ PROTOTYPE Mst_Default_Skeleton(C_Npc)
 	name							=	"Skeleton";
 	guild							=	GIL_SKELETON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETON;
-	level							=	30;
+	level							=	22;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	100; //+25 Waffe
-	attribute	[ATR_DEXTERITY]		=	150;
-	attribute	[ATR_HITPOINTS_MAX]	=	150;
-	attribute	[ATR_HITPOINTS]		=	150;
+	attribute	[ATR_STRENGTH]		=	90;
+	attribute	[ATR_DEXTERITY]		=	90;
+	attribute	[ATR_HITPOINTS_MAX]	=	180;
+	attribute	[ATR_HITPOINTS]		=	180;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protection ----
-	protection	[PROT_BLUNT]		=	125;
-	protection	[PROT_EDGE]			=	125;
-	protection	[PROT_POINT]		=	175; 
-	protection	[PROT_FIRE]			=	125;
-	protection	[PROT_FLY]			=	125;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	30;
+	protection	[PROT_EDGE]			=	30;
+	protection	[PROT_POINT]		=	IMMUNE; //1000
+	protection	[PROT_FIRE]			=	30;
+	protection	[PROT_FLY]			=	30; //0
+	protection	[PROT_MAGIC]		=	30;
 		
 	//----- Damage Types ----
 	damagetype 						=	DAM_POINT;
@@ -115,7 +115,7 @@ INSTANCE Skeleton			(Mst_Default_Skeleton)
 
 INSTANCE Summoned_Skeleton_Evil	(Mst_Default_Skeleton)
 {
-	level							=	0; //30
+	level							=	0;
 
 	B_SetVisuals_Skeleton();
 
@@ -132,23 +132,7 @@ INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
 	name							=	"Summoned Skeleton";
 	guild							=	GIL_SUMMONED_SKELETON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_SKELETON;
-	level							=	0; //30
-
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	100; //+25 Waffe
-	attribute	[ATR_DEXTERITY]		=	150;
-	attribute	[ATR_HITPOINTS_MAX]	=	150;
-	attribute	[ATR_HITPOINTS]		=	150;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-
-	//----- Protection ----
-	protection	[PROT_BLUNT]		=	125;
-	protection	[PROT_EDGE]			=	125;
-	protection	[PROT_POINT]		=	175; 
-	protection	[PROT_FIRE]			=	125;
-	protection	[PROT_FLY]			=	125;
-	protection	[PROT_MAGIC]		=	0;
+	level							=	0;
 	
 	fight_tactic	=	FAI_HUMAN_NORMAL;
 	
@@ -173,22 +157,23 @@ INSTANCE Lesser_Skeleton	(Mst_Default_Skeleton)
 {
 	name							=	"Lesser Skeleton";
 	
-	level							=	15;
+	level							=	12;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	65; //+15 Waffe
-	attribute	[ATR_DEXTERITY]		=	75;
-	attribute	[ATR_HITPOINTS_MAX]	=	150;
-	attribute	[ATR_HITPOINTS]		=	150;
+	attribute	[ATR_STRENGTH]		=	60;
+	attribute	[ATR_DEXTERITY]		=	60;
+	attribute	[ATR_HITPOINTS_MAX]	=	120;
+	attribute	[ATR_HITPOINTS]		=	120;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protection ----
-	protection	[PROT_BLUNT]		=	80;
-	protection	[PROT_EDGE]			=	80;
-	protection	[PROT_POINT]		=	130; 
-	protection	[PROT_FIRE]			=	80;
-	protection	[PROT_FLY]			=	80;
+	protection	[PROT_BLUNT]		=	20;
+	protection	[PROT_EDGE]			=	20;
+	protection	[PROT_POINT]		=	IMMUNE; //1000
+	protection	[PROT_FIRE]			=	20; //0
+	protection	[PROT_FLY]			=	20; //0
+	protection	[PROT_MAGIC]		=	20;
 	
 	fight_tactic	=	FAI_HUMAN_NORMAL;
 	
@@ -206,22 +191,7 @@ INSTANCE Summoned_Lesser_Skeleton (Mst_Default_Skeleton)
 	name							=	"Summoned Lesser Skeleton";
 	guild							=	GIL_SUMMONED_SKELETON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_SKELETON;
-	level							=	0; //15
-
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	65; //+15 Waffe
-	attribute	[ATR_DEXTERITY]		=	75;
-	attribute	[ATR_HITPOINTS_MAX]	=	150;
-	attribute	[ATR_HITPOINTS]		=	150;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-
-	//----- Protection ----
-	protection	[PROT_BLUNT]		=	80;
-	protection	[PROT_EDGE]			=	80;
-	protection	[PROT_POINT]		=	130; 
-	protection	[PROT_FIRE]			=	80;
-	protection	[PROT_FLY]			=	80;
+	level							=	0;
 	
 	fight_tactic	=	FAI_HUMAN_NORMAL;
 	

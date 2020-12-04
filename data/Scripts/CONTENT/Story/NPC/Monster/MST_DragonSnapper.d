@@ -8,23 +8,23 @@ PROTOTYPE Mst_Default_DragonSnapper(C_Npc)
 	name							=	"Dragon Snapper";
 	guild							=	GIL_SNAPPER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_DRAGONSNAPPER;
-	level							=	40;
+	level							=	20;
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	200; 
-	attribute	[ATR_DEXTERITY]		=	200;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
+	attribute	[ATR_STRENGTH]		=	100;
+	attribute	[ATR_DEXTERITY]		=	100;
+	attribute	[ATR_HITPOINTS_MAX]	=	200;
+	attribute	[ATR_HITPOINTS]		=	200;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//------ Protections ----	
-	protection	[PROT_BLUNT]		=	150;
-	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	150;		
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	150;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	40;
+	protection	[PROT_EDGE]			=	40;
+	protection	[PROT_POINT]		=	40;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	40;
+	protection	[PROT_MAGIC]		=	40; //0
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;

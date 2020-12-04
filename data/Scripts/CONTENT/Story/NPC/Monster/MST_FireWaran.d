@@ -8,23 +8,23 @@ PROTOTYPE Mst_Default_FireWaran(C_Npc)
 	name							=	"Fire Lizard";
 	guild							=	GIL_WARAN;
 	aivar[AIV_MM_REAL_ID]			= 	ID_FIREWARAN;
-	level							=	30;
+	level							=	21;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	150;
-	attribute	[ATR_DEXTERITY]		=	150;
-	attribute	[ATR_HITPOINTS_MAX]	=	300;
-	attribute	[ATR_HITPOINTS]		=	300;
+	attribute	[ATR_STRENGTH]		=	80;
+	attribute	[ATR_DEXTERITY]		=	80; //100
+	attribute	[ATR_HITPOINTS_MAX]	=	210;
+	attribute	[ATR_HITPOINTS]		=	210;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	150;
-	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	150;
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	150;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	40;
+	protection	[PROT_EDGE]			=	40;
+	protection	[PROT_POINT]		=	40;
+	protection	[PROT_FIRE]			=	40;
+	protection	[PROT_FLY]			=	80;
+	protection	[PROT_MAGIC]		=	40; //0
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE; //DAM_FIRE is handled by damage script to bypass engine burn effect

@@ -8,25 +8,25 @@ PROTOTYPE Mst_Default_FireGolem(C_Npc)
 	name							=	"Fire Golem";
 	guild							=	GIL_FIREGOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_FIREGOLEM;
-	level							=	40;
+	level							=	30;
 	
 	bodyStateInterruptableOverride	=	TRUE;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	200;
-	attribute	[ATR_DEXTERITY]		=	200;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
+	attribute	[ATR_STRENGTH]		=	100;
+	attribute	[ATR_DEXTERITY]		=	100;
+	attribute	[ATR_HITPOINTS_MAX]	=	200;
+	attribute	[ATR_HITPOINTS]		=	200;
 	attribute	[ATR_MANA_MAX] 		=	100;
 	attribute	[ATR_MANA] 			=	100;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	100;
-	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	200;	
-	protection	[PROT_FIRE]			=	150;	
-	protection	[PROT_FLY]			=	150;
-	protection	[PROT_MAGIC]		=	150;
+	protection	[PROT_BLUNT]		=	70;
+	protection	[PROT_EDGE]			=	70;
+	protection	[PROT_POINT]		=	IMMUNE; //140
+	protection	[PROT_FIRE]			=	70;
+	protection	[PROT_FLY]			=	IMMUNE; //1000
+	protection	[PROT_MAGIC]		=	70;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE|DAM_FLY;

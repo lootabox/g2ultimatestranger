@@ -8,23 +8,23 @@ prototype Mst_Default_Gobbo_Green (C_NPC)
 	name							=	"Goblin";
 	guild							=	GIL_GOBBO;
 	aivar[AIV_MM_REAL_ID]			= 	ID_GOBBO_GREEN;
-	level							=	4;
+	level							=	5;
 	
 	// ------ Attribute ------
 	attribute	[ATR_STRENGTH]		=	20;
 	attribute	[ATR_DEXTERITY]		=	20;
-	attribute	[ATR_HITPOINTS_MAX]	=	20;
-	attribute	[ATR_HITPOINTS]		=	20;
+	attribute	[ATR_HITPOINTS_MAX]	=	40;
+	attribute	[ATR_HITPOINTS]		=	40;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	// ------ Protection ------
-	protection	[PROT_BLUNT]		=	20;
-	protection	[PROT_EDGE]			=	20;
-	protection	[PROT_POINT]		=	20;
-	protection	[PROT_FIRE]			=	20;
-	protection	[PROT_FLY]			=	20;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	10;
+	protection	[PROT_EDGE]			=	10;
+	protection	[PROT_POINT]		=	10;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	10;
+	protection	[PROT_MAGIC]		=	10; //0
 
 	// ------ Damage Types ------						//entweder EIN damagetype oder mehrere damage[x], die dann addiert werden und getrennten Rüstungsabzug bekommen
 	damagetype 						=	DAM_POINT;

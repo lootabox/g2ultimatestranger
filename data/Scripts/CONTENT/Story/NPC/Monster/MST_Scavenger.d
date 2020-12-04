@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Scavenger(C_Npc)
 	level							=	7;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	35;
-	attribute	[ATR_DEXTERITY]		=	35;
-	attribute	[ATR_HITPOINTS_MAX]	=	70;
-	attribute	[ATR_HITPOINTS]		=	70;
+	attribute	[ATR_STRENGTH]		=	20;
+	attribute	[ATR_DEXTERITY]		=	20;
+	attribute	[ATR_HITPOINTS_MAX]	=	40;
+	attribute	[ATR_HITPOINTS]		=	40;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	35;
-	protection	[PROT_EDGE]			=	35;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	35;
-	protection	[PROT_FLY]			=	35;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	10;
+	protection	[PROT_EDGE]			=	10;
+	protection	[PROT_POINT]		=	10;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	10;
+	protection	[PROT_MAGIC]		=	10; //0
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;

@@ -8,25 +8,25 @@ PROTOTYPE Mst_Default_UndeadOrcWarrior (C_Npc)
 	name							=	"Undead Orc";
 	guild							=	GIL_UNDEADORC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_UNDEADORCWARRIOR;
-	level							=	40;
+	level							=	30;
 	
 	bodyStateInterruptableOverride	=	TRUE;
 	
 	//----- Attribute -----	
-	attribute	[ATR_STRENGTH]		=	100; //+100 Waffe //MIN 120!
-	attribute	[ATR_DEXTERITY]		=	200; 
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
+	attribute	[ATR_STRENGTH]		=	150;
+	attribute	[ATR_DEXTERITY]		=	150;
+	attribute	[ATR_HITPOINTS_MAX]	=	300;
+	attribute	[ATR_HITPOINTS]		=	300;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	150;
-	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	150;
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	150;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	60;
+	protection	[PROT_EDGE]			=	60;
+	protection	[PROT_POINT]		=	120; //60
+	protection	[PROT_FIRE]			=	60;
+	protection	[PROT_FLY]			=	60;
+	protection	[PROT_MAGIC]		=	60;
 	
 	//----- HitChances -----
 	HitChance	[NPC_TALENT_1H]			= 80;

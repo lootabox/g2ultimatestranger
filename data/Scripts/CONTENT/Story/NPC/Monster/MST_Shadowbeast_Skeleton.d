@@ -8,25 +8,25 @@ PROTOTYPE Mst_Default_Shadowbeast_Skeleton(C_Npc)
 	name							=	"Shadowbeast Skeleton";
 	guild							=	GIL_SHADOWBEAST_SKELETON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SHADOWBEAST_SKELETON;
-	level							=	40;
+	level							=	30;
 	
 	bodyStateInterruptableOverride	=	TRUE;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	200;
-	attribute	[ATR_DEXTERITY]		=	200;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
+	attribute	[ATR_STRENGTH]		=	100;
+	attribute	[ATR_DEXTERITY]		=	100;
+	attribute	[ATR_HITPOINTS_MAX]	=	200;
+	attribute	[ATR_HITPOINTS]		=	200;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protection ----
-	protection	[PROT_BLUNT]		=	150;
-	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	200;
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	150;
-	protection	[PROT_MAGIC]		=	20;
+	protection	[PROT_BLUNT]		=	60;
+	protection	[PROT_EDGE]			=	60;
+	protection	[PROT_POINT]		=	IMMUNE; //1000
+	protection	[PROT_FIRE]			=	60;
+	protection	[PROT_FLY]			=	60;
+	protection	[PROT_MAGIC]		=	60;
 
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;

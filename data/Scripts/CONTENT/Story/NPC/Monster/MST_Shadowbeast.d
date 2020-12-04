@@ -8,25 +8,25 @@ PROTOTYPE Mst_Default_Shadowbeast(C_Npc)
 	name							=	"Shadowbeast";
 	guild							=	GIL_SHADOWBEAST;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SHADOWBEAST;
-	level							=	30;
+	level							=	20;
 	
 	bodyStateInterruptableOverride	=	TRUE;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	150;
-	attribute	[ATR_DEXTERITY]		=	150;
-	attribute	[ATR_HITPOINTS_MAX]	=	300;
-	attribute	[ATR_HITPOINTS]		=	300;
+	attribute	[ATR_STRENGTH]		=	100;
+	attribute	[ATR_DEXTERITY]		=	100;
+	attribute	[ATR_HITPOINTS_MAX]	=	200;
+	attribute	[ATR_HITPOINTS]		=	200;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	125;
-	protection	[PROT_EDGE]			=	125;
-	protection	[PROT_POINT]		=	75;
-	protection	[PROT_FIRE]			=	125;
-	protection	[PROT_FLY]			=	125;
-	protection	[PROT_MAGIC]		=	20;
+	protection	[PROT_BLUNT]		=	40;
+	protection	[PROT_EDGE]			=	40;
+	protection	[PROT_POINT]		=	40;
+	protection	[PROT_FIRE]			=	40;
+	protection	[PROT_FLY]			=	80;
+	protection	[PROT_MAGIC]		=	40;
 
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;

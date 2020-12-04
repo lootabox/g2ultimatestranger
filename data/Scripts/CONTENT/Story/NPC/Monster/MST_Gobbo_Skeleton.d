@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Gobbo_Skeleton(C_NPC)
 	level							=	15;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	75;
-	attribute	[ATR_DEXTERITY]		=	75;
-	attribute	[ATR_HITPOINTS_MAX]	=	75;
-	attribute	[ATR_HITPOINTS]		=	75;
+	attribute	[ATR_STRENGTH]		=	30;
+	attribute	[ATR_DEXTERITY]		=	30;
+	attribute	[ATR_HITPOINTS_MAX]	=	50;
+	attribute	[ATR_HITPOINTS]		=	50;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	75;
-	protection	[PROT_EDGE]			=	75;
-	protection	[PROT_POINT]		=	125;
-	protection	[PROT_FIRE]			=	75;
-	protection	[PROT_FLY]			=	75;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	20;
+	protection	[PROT_EDGE]			=	20;
+	protection	[PROT_POINT]		=	IMMUNE; //1000
+	protection	[PROT_FIRE]			=	20;
+	protection	[PROT_FLY]			=	20;
+	protection	[PROT_MAGIC]		=	20;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_POINT;

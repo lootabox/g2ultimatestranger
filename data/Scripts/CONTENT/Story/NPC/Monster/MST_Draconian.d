@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Draconian(C_Npc)
 	level							=	35;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	130;
-	attribute	[ATR_DEXTERITY]		=	130;
-	attribute	[ATR_HITPOINTS_MAX]	=	260;
-	attribute	[ATR_HITPOINTS]		=	260;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	attribute	[ATR_STRENGTH]		=	80;
+	attribute	[ATR_DEXTERITY]		=	80;
+	attribute	[ATR_HITPOINTS_MAX]	=	250;
+	attribute	[ATR_HITPOINTS]		=	250;
+	attribute	[ATR_MANA_MAX] 		=	100;
+	attribute	[ATR_MANA] 			=	100;
 
 	//----- Protection ----
-	protection	[PROT_BLUNT]		=	130;
-	protection	[PROT_EDGE]			=	130;
-	protection	[PROT_POINT]		=	130; 
-	protection	[PROT_FIRE]			=	130;
-	protection	[PROT_FLY]			=	130;
-	protection	[PROT_MAGIC]		=	65;	
+	protection	[PROT_BLUNT]		=	45;
+	protection	[PROT_EDGE]			=	45;
+	protection	[PROT_POINT]		=	45;
+	protection	[PROT_FIRE]			=	15;
+	protection	[PROT_FLY]			=	45;
+	protection	[PROT_MAGIC]		=	45; //15
 	
 	//----- HitChances -----
 	HitChance	[NPC_TALENT_1H]			= 80;

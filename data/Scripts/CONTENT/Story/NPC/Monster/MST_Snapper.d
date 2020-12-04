@@ -8,7 +8,7 @@ PROTOTYPE Mst_Default_Snapper(C_Npc)
 	name							=	"Snapper";
 	guild							=	GIL_SNAPPER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SNAPPER;
-	level							=	12;
+	level							=	18;
 
 	//----- Attribute ----	
 	attribute	[ATR_STRENGTH]		=	60;
@@ -19,12 +19,12 @@ PROTOTYPE Mst_Default_Snapper(C_Npc)
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	60;
-	protection	[PROT_EDGE]			=	60;
-	protection	[PROT_POINT]		=	60;		
-	protection	[PROT_FIRE]			=	60;
-	protection	[PROT_FLY]			=	60;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	30;
+	protection	[PROT_EDGE]			=	30;
+	protection	[PROT_POINT]		=	30;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	30;
+	protection	[PROT_MAGIC]		=	30; //0
 
 	//----- Damage Types ----	
 	damagetype 						=	DAM_EDGE;
@@ -149,10 +149,10 @@ INSTANCE NewMine_LeadSnapper	(Mst_Default_Snapper)	//OW NewMineMission Kill_Snap
 	//----- Protections ----	
 /* 	protection	[PROT_BLUNT]		=	30;
 	protection	[PROT_EDGE]			=	30;
-	protection	[PROT_POINT]		=	20;		
+	protection	[PROT_POINT]		=	30; //20
 	protection	[PROT_FIRE]			=	0;
 	protection	[PROT_FLY]			=	30;
-	protection	[PROT_MAGIC]		=	0; */
+	protection	[PROT_MAGIC]		=	30; //0 */
 	
 	CreateInvItems (self, ItAt_ClawLeader,1);
 };

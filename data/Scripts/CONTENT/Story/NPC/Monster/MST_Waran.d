@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Waran(C_Npc)
 	level							=	12;
 	
 	//----- Attributes ----
-	attribute	[ATR_STRENGTH]		=	60;
-	attribute	[ATR_DEXTERITY]		=	60;
-	attribute	[ATR_HITPOINTS_MAX]	=	120;
-	attribute	[ATR_HITPOINTS]		=	120;
+	attribute	[ATR_STRENGTH]		=	40;
+	attribute	[ATR_DEXTERITY]		=	40;
+	attribute	[ATR_HITPOINTS_MAX]	=	80;
+	attribute	[ATR_HITPOINTS]		=	80;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	100;
-	protection	[PROT_EDGE]			=	100;
-	protection	[PROT_POINT]		=	100;
-	protection	[PROT_FIRE]			=	100;
-	protection	[PROT_FLY]			=	100;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	20;
+	protection	[PROT_EDGE]			=	20;
+	protection	[PROT_POINT]		=	20;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	20;
+	protection	[PROT_MAGIC]		=	20; //0
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;

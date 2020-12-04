@@ -8,7 +8,7 @@ PROTOTYPE Mst_Default_Giant_Rat(C_Npc)
 	name							=	"Giant Rat";
 	guild							=	GIL_Giant_Rat;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Giant_Rat;
-	level							=	3;
+	level							=	4;
 
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	15;
@@ -19,12 +19,12 @@ PROTOTYPE Mst_Default_Giant_Rat(C_Npc)
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	15;
-	protection	[PROT_EDGE]			=	15;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	15;
-	protection	[PROT_FLY]			=	15;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	10;
+	protection	[PROT_EDGE]			=	10;
+	protection	[PROT_POINT]		=	10;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	10;
+	protection	[PROT_MAGIC]		=	10; //0
 	
 	//----- Damage TYpes ----
 	damagetype 						=	DAM_EDGE;
@@ -85,22 +85,22 @@ INSTANCE YGiant_Rat	(Mst_Default_Giant_Rat)
 {
 	//----- Monster ----
 	name							=	"Young Giant Rat";
-	level							=	3;
+	level							=	2;
 	
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	5;
 	attribute	[ATR_DEXTERITY]		=	5;
-	attribute	[ATR_HITPOINTS_MAX]	=	10;
-	attribute	[ATR_HITPOINTS]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	20;
+	attribute	[ATR_HITPOINTS]		=	20;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	5;
-	protection	[PROT_EDGE]			=	5;
-	protection	[PROT_POINT]		=	5;
-	protection	[PROT_FIRE]			=	5;
-	protection	[PROT_FLY]			=	5;
+	protection	[PROT_BLUNT]		=	0;
+	protection	[PROT_EDGE]			=	0;
+	protection	[PROT_POINT]		=	0;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	0;
 	protection	[PROT_MAGIC]		=	0;
 
 	//----- Kampf-Taktik ----

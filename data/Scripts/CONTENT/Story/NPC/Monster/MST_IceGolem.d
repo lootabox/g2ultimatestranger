@@ -8,25 +8,25 @@ PROTOTYPE Mst_Default_IceGolem(C_Npc)
 	name							=	"Ice Golem";
 	guild							=	GIL_ICEGOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ICEGOLEM;
-	level							=	45;
+	level							=	24;
 	
 	bodyStateInterruptableOverride	=	TRUE;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	225;
-	attribute	[ATR_DEXTERITY]		=	225;
-	attribute	[ATR_HITPOINTS_MAX]	=	450;
-	attribute	[ATR_HITPOINTS]		=	450;
+	attribute	[ATR_STRENGTH]		=	100;
+	attribute	[ATR_DEXTERITY]		=	100;
+	attribute	[ATR_HITPOINTS_MAX]	=	200;
+	attribute	[ATR_HITPOINTS]		=	200;
 	attribute	[ATR_MANA_MAX] 		=	100;
 	attribute	[ATR_MANA] 			=	100;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	110;
-	protection	[PROT_EDGE]			=	160;
-	protection	[PROT_POINT]		=	210;
-	protection	[PROT_FIRE]			=	160;
-	protection	[PROT_FLY]			=	160;
-	protection	[PROT_MAGIC]		=	160;
+	protection	[PROT_BLUNT]		=	70;
+	protection	[PROT_EDGE]			=	90;
+	protection	[PROT_POINT]		=	IMMUNE; //1000
+	protection	[PROT_FIRE]			=	80;
+	protection	[PROT_FLY]			=	IMMUNE; //1000
+	protection	[PROT_MAGIC]		=	60;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE|DAM_FLY;

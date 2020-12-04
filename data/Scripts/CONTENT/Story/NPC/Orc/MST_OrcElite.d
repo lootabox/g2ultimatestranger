@@ -9,23 +9,23 @@ PROTOTYPE Mst_Default_OrcElite(C_Npc)
 	guild							=	GIL_ORC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ORCELITE;
 	voice							=	18;
-	level							=	45;
+	level							=	35;
 	
 	//----- Attribute -----	
-	attribute	[ATR_STRENGTH]		=	125; //+100 Waffe //MIN 120!
-	attribute	[ATR_DEXTERITY]		=	225; 
-	attribute	[ATR_HITPOINTS_MAX]	=	450;
-	attribute	[ATR_HITPOINTS]		=	450;
+	attribute	[ATR_STRENGTH]		=	100;
+	attribute	[ATR_DEXTERITY]		=	100;
+	attribute	[ATR_HITPOINTS_MAX]	=	300;
+	attribute	[ATR_HITPOINTS]		=	300;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	160;
-	protection	[PROT_EDGE]			=	160;
-	protection	[PROT_POINT]		=	160;
-	protection	[PROT_FIRE]			=	160;
-	protection	[PROT_FLY]			=	160;
-	protection	[PROT_MAGIC]		=	100;
+	protection	[PROT_BLUNT]		=	80;
+	protection	[PROT_EDGE]			=	80;
+	protection	[PROT_POINT]		=	80;
+	protection	[PROT_FIRE]			=	40;
+	protection	[PROT_FLY]			=	80;
+	protection	[PROT_MAGIC]		=	80; //40
 	
 	//----- HitChances -----
 	HitChance	[NPC_TALENT_1H]			= 100;
@@ -121,6 +121,7 @@ INSTANCE OrcElite_Rest (Mst_Default_OrcElite)
 INSTANCE OrkElite_AntiPaladinOrkOberst (Mst_Default_OrcElite)
 {
 	name		=	"Orc Colonel";
+	level		=	50;
 	//----- Attribute -----	
 	attribute	[ATR_STRENGTH]		=	150;
 	attribute	[ATR_DEXTERITY]		=	150;
@@ -149,6 +150,12 @@ INSTANCE OrkElite_AntiPaladinOrkOberst (Mst_Default_OrcElite)
 INSTANCE OrcElite_AntiPaladin (Mst_Default_OrcElite)
 {
 	name		=	NAME_Antipaldin;
+	level		=	40;
+	//----- Attribute -----	
+	attribute	[ATR_STRENGTH]		=	120;
+	attribute	[ATR_DEXTERITY]		=	120;
+	attribute	[ATR_HITPOINTS_MAX]	=	350;
+	attribute	[ATR_HITPOINTS]		=	350;
 	// ------ visuals ------
 	B_SetVisuals_OrcElite();
 
@@ -175,6 +182,12 @@ INSTANCE OrcElite_AntiPaladin1 (Mst_Default_OrcElite)
 	voice 		=		18;
 	flags	 	=		0;
 	Npctype 	=		NPCTYPE_MAIN;
+	level		=		40;
+	//----- Attribute -----	
+	attribute	[ATR_STRENGTH]		=	120;
+	attribute	[ATR_DEXTERITY]		=	120;
+	attribute	[ATR_HITPOINTS_MAX]	=	350;
+	attribute	[ATR_HITPOINTS]		=	350;
 
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
@@ -200,6 +213,12 @@ INSTANCE OrcElite_AntiPaladin2 (Mst_Default_OrcElite)
 	name		=	NAME_Antipaldin;
 	id 			=	112;
 	guild		=	GIL_ORC;
+	level		=	40;
+	//----- Attribute -----	
+	attribute	[ATR_STRENGTH]		=	120;
+	attribute	[ATR_DEXTERITY]		=	120;
+	attribute	[ATR_HITPOINTS_MAX]	=	350;
+	attribute	[ATR_HITPOINTS]		=	350;
 
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
@@ -226,6 +245,12 @@ INSTANCE OrcElite_AntiPaladin3 (Mst_Default_OrcElite)
 	name		=	NAME_Antipaldin;
 	id 			=	113;
 	guild		=	GIL_ORC;
+	level		=	40;
+	//----- Attribute -----	
+	attribute	[ATR_STRENGTH]		=	120;
+	attribute	[ATR_DEXTERITY]		=	120;
+	attribute	[ATR_HITPOINTS_MAX]	=	350;
+	attribute	[ATR_HITPOINTS]		=	350;
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
 	// ------ visuals ------
@@ -248,6 +273,7 @@ INSTANCE OrcElite_AntiPaladin3 (Mst_Default_OrcElite)
 INSTANCE OrkElite_AntiPaladinOrkOberst_DI (Mst_Default_OrcElite)
 {
 	name		=	"Orc Colonel";
+	level		=	50;
 	//----- Attribute -----	
 	attribute	[ATR_STRENGTH]		=	150;
 	attribute	[ATR_DEXTERITY]		=	150;

@@ -7,25 +7,25 @@ PROTOTYPE Mst_Default_Dragon_Fire(C_Npc)
 	name							= "Fire Dragon";
 	guild							= GIL_DRAGON;
 	aivar[AIV_MM_REAL_ID]			= ID_DRAGON_FIRE;
-	level							= 500;
+	level							= 450;
 	
 	bodyStateInterruptableOverride = TRUE;
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	200;
-	attribute	[ATR_DEXTERITY]		=	200;
-	attribute	[ATR_HITPOINTS_MAX]	=	1000;
-	attribute	[ATR_HITPOINTS]		=	1000;
+	attribute	[ATR_STRENGTH]		=	140;
+	attribute	[ATR_DEXTERITY]		=	140; //100
+	attribute	[ATR_HITPOINTS_MAX]	=	700;
+	attribute	[ATR_HITPOINTS]		=	700;
 	attribute	[ATR_MANA_MAX] 		=	1000;
 	attribute	[ATR_MANA] 			=	1000;
 	
 	//------ Protections ----	
-	protection	[PROT_BLUNT]		=	170;
-	protection	[PROT_EDGE]			=	170;
-	protection	[PROT_POINT]		=	170;	
-	protection	[PROT_FIRE]			=	170;
-	protection	[PROT_FLY]			=	170;	
-	protection	[PROT_MAGIC]		=	170;
+	protection	[PROT_BLUNT]		=	100;
+	protection	[PROT_EDGE]			=	100;
+	protection	[PROT_POINT]		=	100;
+	protection	[PROT_FIRE]			=	50;
+	protection	[PROT_FLY]			=	IMMUNE;
+	protection	[PROT_MAGIC]		=	100; //50
 	
 	//------ Damage Types ----	
 	damagetype 						=	DAM_EDGE|DAM_FLY; //DAM_FIRE is handled by damage script to bypass engine burn effect
@@ -86,7 +86,7 @@ INSTANCE Dragon_Fire	(Mst_Default_Dragon_Fire)
 INSTANCE Dragon_Fire_Island	(Mst_Default_Dragon_Fire)
 {
 	name				=	"Feodaron";
-	flags				   			= 	NPC_FLAG_IMMORTAL;
+	flags				= 	NPC_FLAG_IMMORTAL;
 	B_SetVisuals_Dragon_Fire();
 	Npc_SetToFistMode(self);
 };

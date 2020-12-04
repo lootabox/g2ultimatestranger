@@ -8,25 +8,25 @@ PROTOTYPE Mst_Default_Dragon_Ice(C_Npc)
 	name							= "Ice Dragon";
 	guild							= GIL_DRAGON;
 	aivar[AIV_MM_REAL_ID]			= ID_DRAGON_ICE;
-	level							= 600;
+	level							= 500;
 	
 	bodyStateInterruptableOverride = TRUE;
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		= 200;
-	attribute	[ATR_DEXTERITY]		= 200;
-	attribute	[ATR_HITPOINTS_MAX]	= 1000;
-	attribute	[ATR_HITPOINTS]		= 1000;
+	attribute	[ATR_STRENGTH]		= 150;
+	attribute	[ATR_DEXTERITY]		= 150; //100
+	attribute	[ATR_HITPOINTS_MAX]	= 800;
+	attribute	[ATR_HITPOINTS]		= 800;
 	attribute	[ATR_MANA_MAX] 		= 1000;
 	attribute	[ATR_MANA] 			= 1000;
 	
 	//------ Protections ----	
-	protection	[PROT_BLUNT]		= 180;
-	protection	[PROT_EDGE]			= 180;
-	protection	[PROT_POINT]		= 180;	
-	protection	[PROT_FIRE]			= 180;
-	protection	[PROT_FLY]			= 180;	
-	protection	[PROT_MAGIC]		= 180;
+	protection	[PROT_BLUNT]		= 105;
+	protection	[PROT_EDGE]			= 105;
+	protection	[PROT_POINT]		= 105;
+	protection	[PROT_FIRE]			= 70;
+	protection	[PROT_FLY]			= IMMUNE;
+	protection	[PROT_MAGIC]		= 105; //70
 	
 	//----- Damage Types ----	
 	damagetype 						=	DAM_EDGE|DAM_FLY; //DAM_FIRE is handled by damage script to bypass engine burn effect

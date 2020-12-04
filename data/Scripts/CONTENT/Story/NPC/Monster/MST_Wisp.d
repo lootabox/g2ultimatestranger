@@ -8,12 +8,12 @@ PROTOTYPE Mst_Default_Wisp(C_Npc)
 	name							=	"Will-o'-the-wisp";
 	guild							=	GIL_BLOODFLY;
 	aivar[AIV_MM_REAL_ID]			= 	ID_WISP;
-	level							=	4;
+	level							=	6;
 	
 	//----- Attribute ----	
 	attribute	[ATR_STRENGTH]		=	20;
 	attribute	[ATR_DEXTERITY]		=	20;
-	attribute	[ATR_HITPOINTS_MAX]	=	40; 
+	attribute	[ATR_HITPOINTS_MAX]	=	40;
 	attribute	[ATR_HITPOINTS]		=	40;
 	attribute	[ATR_MANA_MAX] 		=	100;
 	attribute	[ATR_MANA] 			=	100;

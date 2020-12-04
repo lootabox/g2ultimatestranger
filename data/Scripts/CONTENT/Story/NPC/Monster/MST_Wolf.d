@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Wolf(C_Npc)
 	level							=	6;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	30;
-	attribute	[ATR_DEXTERITY]		=	30;
-	attribute	[ATR_HITPOINTS_MAX]	=	60;
-	attribute	[ATR_HITPOINTS]		=	60;
+	attribute	[ATR_STRENGTH]		=	20;
+	attribute	[ATR_DEXTERITY]		=	20;
+	attribute	[ATR_HITPOINTS_MAX]	=	40;
+	attribute	[ATR_HITPOINTS]		=	40;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	30;
-	protection	[PROT_EDGE]			=	30;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	30;
-	protection	[PROT_FLY]			=	30;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	10;
+	protection	[PROT_EDGE]			=	10;
+	protection	[PROT_POINT]		=	10;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	10;
+	protection	[PROT_MAGIC]		=	10; //0
 
 	//---- Damage Types ----
 	damagetype 						=	DAM_EDGE;
@@ -91,23 +91,23 @@ INSTANCE Wolf	(Mst_Default_Wolf)
 INSTANCE BlackWolf	(Mst_Default_Wolf)
 {
 	name							=	"Black Wolf";
-	level							=	 6;
+	level							=	 8; //6
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	30;
-	attribute	[ATR_DEXTERITY]		=	30;
+	attribute	[ATR_STRENGTH]		=	20; //15
+	attribute	[ATR_DEXTERITY]		=	20;
 	attribute	[ATR_HITPOINTS_MAX]	=	60;
 	attribute	[ATR_HITPOINTS]		=	60;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	30;
-	protection	[PROT_EDGE]			=	30;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	30;
-	protection	[PROT_FLY]			=	30;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	15; //12
+	protection	[PROT_EDGE]			=	15; //12
+	protection	[PROT_POINT]		=	15; //12
+	protection	[PROT_FIRE]			=	0; //12
+	protection	[PROT_FLY]			=	15; //12
+	protection	[PROT_MAGIC]		=	15; //12
 	
 	B_SetVisuals_BLACKWOLF();
 	Npc_SetToFistMode(self);
@@ -124,23 +124,7 @@ INSTANCE Summoned_Wolf	(Mst_Default_Wolf)
 	name							=	"Summoned Wolf";
 	guild							=	GIL_SUMMONED_WOLF;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_WOLF;
-	level							=	0; //10
-	
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	30;
-	attribute	[ATR_DEXTERITY]		=	30;
-	attribute	[ATR_HITPOINTS_MAX]	=	60;
-	attribute	[ATR_HITPOINTS]		=	60;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
-	//----- Protections ----
-	protection	[PROT_BLUNT]		=	30;
-	protection	[PROT_EDGE]			=	30;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	30;
-	protection	[PROT_FLY]			=	30;
-	protection	[PROT_MAGIC]		=	0;
+	level							=	0;
 	
 	aivar[AIV_PARTYMEMBER] = TRUE;
 	B_SetAttitude (self, ATT_FRIENDLY); 
@@ -157,23 +141,7 @@ INSTANCE Summoned_BlackWolf	(Mst_Default_Wolf)
 	name							=	"Summoned Black Wolf";
 	guild							=	GIL_SUMMONED_WOLF;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_WOLF;
-	level							=	0; //10
-	
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	30;
-	attribute	[ATR_DEXTERITY]		=	30;
-	attribute	[ATR_HITPOINTS_MAX]	=	60;
-	attribute	[ATR_HITPOINTS]		=	60;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
-	//----- Protections ----
-	protection	[PROT_BLUNT]		=	30;
-	protection	[PROT_EDGE]			=	30;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	30;
-	protection	[PROT_FLY]			=	30;
-	protection	[PROT_MAGIC]		=	0;
+	level							=	0;
 	
 	aivar[AIV_PARTYMEMBER] = TRUE;
 	B_SetAttitude (self, ATT_FRIENDLY); 
@@ -195,17 +163,18 @@ INSTANCE YWolf	(Mst_Default_Wolf)
 	level							=	3;
 	name							=	"Young Wolf";
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	10;
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	20;
-	attribute	[ATR_HITPOINTS]		=	20;
+	attribute	[ATR_STRENGTH]		=	10; //5
+	attribute	[ATR_DEXTERITY]		=	10; //5
+	attribute	[ATR_HITPOINTS_MAX]	=	20; //20
+	attribute	[ATR_HITPOINTS]		=	20; //20
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	10;
-	protection	[PROT_EDGE]			=	10;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	10;
-	protection	[PROT_FLY]			=	10;
+	protection	[PROT_BLUNT]		=	5; //0
+	protection	[PROT_EDGE]			=	5; //0
+	protection	[PROT_POINT]		=	5; //0
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	5; //0
+	protection	[PROT_MAGIC]		=	5; //0
 	
 	//----- Kampf-Taktik ----
 	fight_tactic					= FAI_MONSTER_COWARD;
@@ -229,17 +198,18 @@ INSTANCE PEPES_YWolf1	(Mst_Default_Wolf)
 	level							=	3;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	15;
-	attribute	[ATR_DEXTERITY]		=	15;
-	attribute	[ATR_HITPOINTS_MAX]	=	30;
-	attribute	[ATR_HITPOINTS]		=	30;
+	attribute	[ATR_STRENGTH]		=	10;
+	attribute	[ATR_DEXTERITY]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	20; //20
+	attribute	[ATR_HITPOINTS]		=	20; //20
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	15;
-	protection	[PROT_EDGE]			=	15;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	15;
-	protection	[PROT_FLY]			=	15;
+	protection	[PROT_BLUNT]		=	5;
+	protection	[PROT_EDGE]			=	5;
+	protection	[PROT_POINT]		=	5;
+	protection	[PROT_FIRE]			=	0; //5
+	protection	[PROT_FLY]			=	5; //0
+	protection	[PROT_MAGIC]		=	5; //0
 	
 	B_SetVisuals_Wolf();
 	Npc_SetToFistMode(self);
@@ -253,17 +223,18 @@ INSTANCE PEPES_YWolf2	(Mst_Default_Wolf)
 	level							=	3;
 	name							=	"Young Wolf";
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	15;
-	attribute	[ATR_DEXTERITY]		=	15;
-	attribute	[ATR_HITPOINTS_MAX]	=	30;
-	attribute	[ATR_HITPOINTS]		=	30;
+	attribute	[ATR_STRENGTH]		=	10;
+	attribute	[ATR_DEXTERITY]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	20; //20
+	attribute	[ATR_HITPOINTS]		=	20; //20
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	15;
-	protection	[PROT_EDGE]			=	15;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	15;
-	protection	[PROT_FLY]			=	15;
+	protection	[PROT_BLUNT]		=	5;
+	protection	[PROT_EDGE]			=	5;
+	protection	[PROT_POINT]		=	5;
+	protection	[PROT_FIRE]			=	0; //5
+	protection	[PROT_FLY]			=	5; //0
+	protection	[PROT_MAGIC]		=	5; //0
 	
 	B_SetVisuals_Wolf();
 	Npc_SetToFistMode(self);
@@ -277,17 +248,18 @@ INSTANCE PEPES_YWolf3	(Mst_Default_Wolf)
 	level							=	3;
 	name							=	"Young Wolf";
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	15;
-	attribute	[ATR_DEXTERITY]		=	15;
-	attribute	[ATR_HITPOINTS_MAX]	=	30;
-	attribute	[ATR_HITPOINTS]		=	30;
+	attribute	[ATR_STRENGTH]		=	10;
+	attribute	[ATR_DEXTERITY]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	20; //20
+	attribute	[ATR_HITPOINTS]		=	20; //20
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	15;
-	protection	[PROT_EDGE]			=	15;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	15;
-	protection	[PROT_FLY]			=	15;
+	protection	[PROT_BLUNT]		=	5;
+	protection	[PROT_EDGE]			=	5;
+	protection	[PROT_POINT]		=	5;
+	protection	[PROT_FIRE]			=	0; //5
+	protection	[PROT_FLY]			=	5; //0
+	protection	[PROT_MAGIC]		=	5; //0
 	
 	B_SetVisuals_Wolf();
 	Npc_SetToFistMode(self);
@@ -301,17 +273,18 @@ INSTANCE PEPES_YWolf4	(Mst_Default_Wolf)
 	level							=	3;
 	name							=	"Young Wolf";
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	15;
-	attribute	[ATR_DEXTERITY]		=	15;
-	attribute	[ATR_HITPOINTS_MAX]	=	30;
-	attribute	[ATR_HITPOINTS]		=	30;
+	attribute	[ATR_STRENGTH]		=	10;
+	attribute	[ATR_DEXTERITY]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	20; //20
+	attribute	[ATR_HITPOINTS]		=	20; //20
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	15;
-	protection	[PROT_EDGE]			=	15;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	15;
-	protection	[PROT_FLY]			=	15;
+	protection	[PROT_BLUNT]		=	5;
+	protection	[PROT_EDGE]			=	5;
+	protection	[PROT_POINT]		=	5;
+	protection	[PROT_FIRE]			=	0; //5
+	protection	[PROT_FLY]			=	5; //0
+	protection	[PROT_MAGIC]		=	5; //0
 	
 	B_SetVisuals_Wolf();
 	Npc_SetToFistMode(self);

@@ -9,23 +9,23 @@ PROTOTYPE Mst_Default_OrcShaman(C_Npc)
 	guild							=	GIL_ORC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ORCSHAMAN;
 	voice							=	18;
-	level							=	35;
+	level							=	30;
 	
 	//----- Attributes ----	
-	attribute	[ATR_STRENGTH]		=	100; //MIN 100! + ca. 70 Waffe
-	attribute	[ATR_DEXTERITY]		=	170;
-	attribute	[ATR_HITPOINTS_MAX]	=	350;
-	attribute	[ATR_HITPOINTS]		=	350;
+	attribute	[ATR_STRENGTH]		=	60;
+	attribute	[ATR_DEXTERITY]		=	60;
+	attribute	[ATR_HITPOINTS_MAX]	=	200;
+	attribute	[ATR_HITPOINTS]		=	200;
 	attribute	[ATR_MANA_MAX] 		=	100;
 	attribute	[ATR_MANA] 			=	100;
 	
 	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	130;
-	protection	[PROT_EDGE]			=	130;
-	protection	[PROT_POINT]		=	130;
-	protection	[PROT_FIRE]			=	130;
-	protection	[PROT_FLY]			=	130;
-	protection	[PROT_MAGIC]		=	65;
+	protection	[PROT_BLUNT]		=	30;
+	protection	[PROT_EDGE]			=	30;
+	protection	[PROT_POINT]		=	30;
+	protection	[PROT_FIRE]			=	30;
+	protection	[PROT_FLY]			=	30;
+	protection	[PROT_MAGIC]		=	60; //30
 	
 	//----- HitChances -----
 	HitChance	[NPC_TALENT_1H]			= 60;

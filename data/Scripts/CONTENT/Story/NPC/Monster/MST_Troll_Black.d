@@ -8,25 +8,25 @@ PROTOTYPE Mst_Default_Troll_Black(C_Npc)
 	name							=	"Black Troll";
 	guild							=	GIL_TROLL;
 	aivar[AIV_MM_REAL_ID]			= 	ID_TROLL_BLACK;
-	level							=	100; //40
+	level							=	100;
 	
 	bodyStateInterruptableOverride	=	TRUE;
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	200;
-	attribute	[ATR_DEXTERITY]		=	200;
+	attribute	[ATR_STRENGTH]		=	100;
+	attribute	[ATR_DEXTERITY]		=	100;
 	attribute	[ATR_HITPOINTS_MAX]	=	1000;
 	attribute	[ATR_HITPOINTS]		=	1000;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	150;
-	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	IMMUNE;	
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	IMMUNE;	
-	protection	[PROT_MAGIC]		=	300;
+	protection	[PROT_BLUNT]		=	75;
+	protection	[PROT_EDGE]			=	75;
+	protection	[PROT_POINT]		=	IMMUNE;
+	protection	[PROT_FIRE]			=	100;
+	protection	[PROT_FLY]			=	IMMUNE;
+	protection	[PROT_MAGIC]		=	100;
 	
 	//------------------------------------------------------	
 	damagetype 						=	DAM_EDGE|DAM_FLY;

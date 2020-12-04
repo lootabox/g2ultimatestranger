@@ -19,12 +19,12 @@ PROTOTYPE Mst_Default_Harpie(C_Npc)
 	attribute	[ATR_MANA] 			=	100;
 	
 	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	90;
-	protection	[PROT_EDGE]			=	90;
-	protection	[PROT_POINT]		=	40;
-	protection	[PROT_FIRE]			=	90;
-	protection	[PROT_FLY]			=	90;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	60; //30
+	protection	[PROT_EDGE]			=	60; //30
+	protection	[PROT_POINT]		=	30;
+	protection	[PROT_FIRE]			=	60; //30
+	protection	[PROT_FLY]			=	60; //30
+	protection	[PROT_MAGIC]		=	60; //30
 	
 	//----- Damage Types ----	
 	damagetype 						=	DAM_EDGE;

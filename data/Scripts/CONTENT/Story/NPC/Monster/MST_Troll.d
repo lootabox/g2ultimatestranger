@@ -8,25 +8,25 @@ PROTOTYPE Mst_Default_Troll(C_Npc)
 	name							=	"Troll";
 	guild							=	GIL_TROLL;
 	aivar[AIV_MM_REAL_ID]			= 	ID_TROLL;
-	level							=	50; //30
+	level							=	50;
 	
 	bodyStateInterruptableOverride	=	TRUE;
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	100;	//FlyDamage
-	attribute	[ATR_DEXTERITY]		=	100;
-	attribute	[ATR_HITPOINTS_MAX]	=	500;
-	attribute	[ATR_HITPOINTS]		=	500;
+	attribute	[ATR_STRENGTH]		=	50;
+	attribute	[ATR_DEXTERITY]		=	50;
+	attribute	[ATR_HITPOINTS_MAX]	=	500; //400
+	attribute	[ATR_HITPOINTS]		=	500; //400
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	125;
-	protection	[PROT_EDGE]			=	125;
-	protection	[PROT_POINT]		=	IMMUNE;	
-	protection	[PROT_FIRE]			=	125;
+	protection	[PROT_BLUNT]		=	50;
+	protection	[PROT_EDGE]			=	50;
+	protection	[PROT_POINT]		=	IMMUNE;
+	protection	[PROT_FIRE]			=	50;
 	protection	[PROT_FLY]			=	IMMUNE;
-	protection	[PROT_MAGIC]		=	250;
+	protection	[PROT_MAGIC]		=	50;
 	
 	//----- Damage Types ----	
 	damagetype 						=	DAM_EDGE|DAM_FLY;

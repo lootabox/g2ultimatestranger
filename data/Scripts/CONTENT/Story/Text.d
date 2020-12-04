@@ -618,7 +618,7 @@ const string NAME_Straefling	= "Convict";
 const string NAME_Waffenknecht	= "Man-at-Arms";
 const string NAME_Dementor		= "Seeker";
 const string NAME_ToterNovize	= "Dead Novice";
-const string NAME_Antipaldin	= "Orcish Warlord";
+const string NAME_Antipaldin	= "Orc Warlord";
 const string NAME_Schiffswache	= "Ship Guard";
 const string NAME_Fluechtling	= "Fugitive";
 

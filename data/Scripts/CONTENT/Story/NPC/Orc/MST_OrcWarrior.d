@@ -9,23 +9,23 @@ PROTOTYPE Mst_Default_OrcWarrior(C_Npc)
 	guild							=	GIL_ORC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ORCWARRIOR;
 	voice							=	18;
-	level							=	30;
+	level							=	25;
 	
 	//----- Attribute -----	
-	attribute	[ATR_STRENGTH]		=	100; //+ca. 50-80 Waffe //MIN 100 wg Equip!!!
-	attribute	[ATR_DEXTERITY]		=	150;
-	attribute	[ATR_HITPOINTS_MAX]	=	300;
-	attribute	[ATR_HITPOINTS]		=	300;
+	attribute	[ATR_STRENGTH]		=	60;
+	attribute	[ATR_DEXTERITY]		=	60;
+	attribute	[ATR_HITPOINTS_MAX]	=	200;
+	attribute	[ATR_HITPOINTS]		=	200;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	150;
-	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	150;
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	150;
-	protection	[PROT_MAGIC]		=	20;
+	protection	[PROT_BLUNT]		=	60;
+	protection	[PROT_EDGE]			=	60;
+	protection	[PROT_POINT]		=	60;
+	protection	[PROT_FIRE]			=	30; //0
+	protection	[PROT_FLY]			=	60;
+	protection	[PROT_MAGIC]		=	60; //0
 	
 	//----- HitChances -----
 	HitChance	[NPC_TALENT_1H]			= 60;
@@ -136,17 +136,18 @@ INSTANCE OrcWarrior_Harad (Mst_Default_OrcWarrior)
 	level							=	15;
 	
 	//----- Attribute -----	
-	attribute	[ATR_STRENGTH]		=	75; //MIN 70 wg Equip!!!
-	attribute	[ATR_DEXTERITY]		=	75;
-	attribute	[ATR_HITPOINTS_MAX]	=	150;
-	attribute	[ATR_HITPOINTS]		=	150;
+	attribute	[ATR_STRENGTH]		=	50; //60
+	attribute	[ATR_DEXTERITY]		=	50; //60
+	attribute	[ATR_HITPOINTS_MAX]	=	150; //200
+	attribute	[ATR_HITPOINTS]		=	150; //200
 	
 	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	75;
-	protection	[PROT_EDGE]			=	75;
-	protection	[PROT_POINT]		=	75;
-	protection	[PROT_FIRE]			=	75;
-	protection	[PROT_FLY]			=	75;
+	protection	[PROT_BLUNT]		=	30; //60
+	protection	[PROT_EDGE]			=	30; //60
+	protection	[PROT_POINT]		=	30; //60
+	protection	[PROT_FIRE]			=	30;
+	protection	[PROT_FLY]			=	30; //60
+	protection	[PROT_MAGIC]		=	30; //60
 	
 	//-------- visual --------
 	B_SetVisuals_OrcScout();

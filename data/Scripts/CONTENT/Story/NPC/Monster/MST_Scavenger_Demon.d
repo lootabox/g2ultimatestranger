@@ -19,12 +19,12 @@ PROTOTYPE Mst_Default_Scavenger_Demon(C_Npc)
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections -----
-	protection	[PROT_BLUNT]		=	60;
-	protection	[PROT_EDGE]			=	60;
-	protection	[PROT_POINT]		=	10;
-	protection	[PROT_FIRE]			=	60;
-	protection	[PROT_FLY]			=	60;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	20;
+	protection	[PROT_EDGE]			=	20;
+	protection	[PROT_POINT]		=	20;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	20;
+	protection	[PROT_MAGIC]		=	20; //0
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
