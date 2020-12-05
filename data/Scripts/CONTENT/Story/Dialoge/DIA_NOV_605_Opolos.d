@@ -45,7 +45,7 @@ FUNC INT DIA_Opolos_Hello_Condition()
 };
 FUNC VOID DIA_Opolos_Hello_Info()
 {
-	AI_Output (self ,other,"DIA_Opolos_Hello_12_00"); //Hello, you must be the new fellow.
+	AI_Output (self ,other,"DIA_Opolos_Hello_12_00"); //Hello, you must be the new guy.
 	AI_Output (self ,other,"DIA_Opolos_Hello_12_01"); //I'm Opolos. I take care of the sheep around here.
 };
 // *************************************************************************

@@ -1527,7 +1527,7 @@ instance DIA_Lares_GoNow (C_INFO)
 	condition	 = 	DIA_Lares_GoNow_Condition;
 	information	 = 	DIA_Lares_GoNow_Info;
 	permanent    =  TRUE;
-	description	 = 	"OK, let's go.";
+	description	 = 	"Okay, let's go.";
 };
 func int DIA_Lares_GoNow_Condition ()
 {	
