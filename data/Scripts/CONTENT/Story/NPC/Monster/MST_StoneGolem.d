@@ -13,20 +13,20 @@ PROTOTYPE Mst_Default_StoneGolem(C_Npc)
 	bodyStateInterruptableOverride	=	TRUE;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	120;
-	attribute	[ATR_DEXTERITY]		=	120;
+	attribute	[ATR_STRENGTH]		=	100; //120
+	attribute	[ATR_DEXTERITY]		=	100; //120
 	attribute	[ATR_HITPOINTS_MAX]	=	256;
 	attribute	[ATR_HITPOINTS]		=	256;
-	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 			=	100;
+	attribute	[ATR_MANA_MAX] 		=	0; //100
+	attribute	[ATR_MANA] 			=	0; //100
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	45;
+	protection	[PROT_BLUNT]		=	40; //45
 	protection	[PROT_EDGE]			=	80;
 	protection	[PROT_POINT]		=	IMMUNE; //1000
-	protection	[PROT_FIRE]			=	60;
+	protection	[PROT_FIRE]			=	80; //60
 	protection	[PROT_FLY]			=	IMMUNE; //1000
-	protection	[PROT_MAGIC]		=	60;
+	protection	[PROT_MAGIC]		=	80; //60
 	
 	//---- Damage Types ----
 	damagetype 						=	DAM_EDGE|DAM_FLY;

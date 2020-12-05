@@ -8,23 +8,23 @@ PROTOTYPE Mst_Default_Wisp(C_Npc)
 	name							=	"Will-o'-the-wisp";
 	guild							=	GIL_BLOODFLY;
 	aivar[AIV_MM_REAL_ID]			= 	ID_WISP;
-	level							=	6;
+	level							=	16;
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	20;
-	attribute	[ATR_DEXTERITY]		=	20;
-	attribute	[ATR_HITPOINTS_MAX]	=	40;
-	attribute	[ATR_HITPOINTS]		=	40;
-	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 			=	100;
+	attribute	[ATR_STRENGTH]		=	60; //20
+	attribute	[ATR_DEXTERITY]		=	60; //20
+	attribute	[ATR_HITPOINTS_MAX]	=	60; //40
+	attribute	[ATR_HITPOINTS]		=	60; //40
+	attribute	[ATR_MANA_MAX] 		=	0; //100
+	attribute	[ATR_MANA] 			=	0; //100
 	
 	//----- Ptotection ----
-	protection	[PROT_BLUNT]		=	0;
-	protection	[PROT_EDGE]			=	0;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	0;
-	protection	[PROT_FLY]			=	0;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	60; //0
+	protection	[PROT_EDGE]			=	60; //0
+	protection	[PROT_POINT]		=	60; //0
+	protection	[PROT_FIRE]			=	60; //0
+	protection	[PROT_FLY]			=	60; //0
+	protection	[PROT_MAGIC]		=	60; //0
 	
 	//----- Damage Types ----	
 	damagetype 						=	DAM_MAGIC;

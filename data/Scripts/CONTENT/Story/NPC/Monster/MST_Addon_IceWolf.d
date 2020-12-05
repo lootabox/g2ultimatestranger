@@ -8,23 +8,23 @@ PROTOTYPE Mst_Default_Icewolf(C_Npc)
 	name							=	"Ice Wolf";
 	guild							=	GIL_WOLF;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Icewolf;
-	level							=	15;		
+	level							=	18;
 	
 	//----- Attributes ----
-	attribute	[ATR_STRENGTH]		=	150;
-	attribute	[ATR_DEXTERITY]		=	150;
-	attribute	[ATR_HITPOINTS_MAX]	=	300;	
-	attribute	[ATR_HITPOINTS]		=	300;
+	attribute	[ATR_STRENGTH]		=	85;
+	attribute	[ATR_DEXTERITY]		=	85;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	150;
-	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	100;
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	150;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	40;
+	protection	[PROT_EDGE]			=	40;
+	protection	[PROT_POINT]		=	40;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	40;
+	protection	[PROT_MAGIC]		=	40;
 
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;

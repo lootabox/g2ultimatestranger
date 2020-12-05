@@ -21,12 +21,12 @@ PROTOTYPE Mst_Default_FireGolem(C_Npc)
 	attribute	[ATR_MANA] 			=	100;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	70;
-	protection	[PROT_EDGE]			=	70;
+	protection	[PROT_BLUNT]		=	80; //70
+	protection	[PROT_EDGE]			=	80; //70
 	protection	[PROT_POINT]		=	IMMUNE; //140
-	protection	[PROT_FIRE]			=	70;
+	protection	[PROT_FIRE]			=	80; //70
 	protection	[PROT_FLY]			=	IMMUNE; //1000
-	protection	[PROT_MAGIC]		=	70;
+	protection	[PROT_MAGIC]		=	80; //70
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE|DAM_FLY;

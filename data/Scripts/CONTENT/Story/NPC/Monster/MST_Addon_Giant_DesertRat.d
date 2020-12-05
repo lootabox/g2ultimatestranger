@@ -8,23 +8,23 @@ PROTOTYPE Mst_Default_Giant_DesertRat(C_Npc)
 	name							=	"Desert Rat";
 	guild							=	GIL_Giant_Rat;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Giant_Rat;
-	level							=	10;
+	level							=	8;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	75;
-	attribute	[ATR_DEXTERITY]		=	75;
-	attribute	[ATR_HITPOINTS_MAX]	=	75;
-	attribute	[ATR_HITPOINTS]		=	75;
+	attribute	[ATR_STRENGTH]		=	30;
+	attribute	[ATR_DEXTERITY]		=	30;
+	attribute	[ATR_HITPOINTS_MAX]	=	60;
+	attribute	[ATR_HITPOINTS]		=	60;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	75;
-	protection	[PROT_EDGE]			=	75;
-	protection	[PROT_POINT]		=	25;
-	protection	[PROT_FIRE]			=	75;
-	protection	[PROT_FLY]			=	75;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	20;
+	protection	[PROT_EDGE]			=	20;
+	protection	[PROT_POINT]		=	20;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	20;
+	protection	[PROT_MAGIC]		=	20;
 	
 	//----- Damage TYpes ----
 	damagetype 						=	DAM_EDGE;

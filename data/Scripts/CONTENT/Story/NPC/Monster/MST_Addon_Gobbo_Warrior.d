@@ -11,20 +11,20 @@ PROTOTYPE Mst_Default_Gobbo_Warrior (C_NPC)
 	level							=	15;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	75;
-	attribute	[ATR_DEXTERITY]		=	75;
-	attribute	[ATR_HITPOINTS_MAX]	=	75;
-	attribute	[ATR_HITPOINTS]		=	75;
+	attribute	[ATR_STRENGTH]		=	50;
+	attribute	[ATR_DEXTERITY]		=	50;
+	attribute	[ATR_HITPOINTS_MAX]	=	80;
+	attribute	[ATR_HITPOINTS]		=	80;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	75;
-	protection	[PROT_EDGE]			=	75;
-	protection	[PROT_POINT]		=	75;
-	protection	[PROT_FIRE]			=	75;
-	protection	[PROT_FLY]			=	75;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	40;
+	protection	[PROT_EDGE]			=	40;
+	protection	[PROT_POINT]		=	40;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	40;
+	protection	[PROT_MAGIC]		=	40;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_POINT;

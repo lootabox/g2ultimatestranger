@@ -7,7 +7,7 @@ PROTOTYPE Mst_Default_Bloodhound(C_Npc)
 	name							=	"Bloodhound";
 	guild							=	GIL_SHADOWBEAST;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Bloodhound;
-	level							=	22;
+	level							=	18;
 //----------------------------------------------------------------
 	attribute	[ATR_STRENGTH]		=	90;
 	attribute	[ATR_DEXTERITY]		=	90;
@@ -16,12 +16,12 @@ PROTOTYPE Mst_Default_Bloodhound(C_Npc)
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 //----------------------------------------------------------------
-	protection	[PROT_BLUNT]		=	90;
-	protection	[PROT_EDGE]			=	90;
-	protection	[PROT_POINT]		=	40;
-	protection	[PROT_FIRE]			=	90;
-	protection	[PROT_FLY]			=	90;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	30;
+	protection	[PROT_EDGE]			=	30;
+	protection	[PROT_POINT]		=	30;
+	protection	[PROT_FIRE]			=	30;
+	protection	[PROT_FLY]			=	60;
+	protection	[PROT_MAGIC]		=	30;
 //----------------------------------------------------------------
 	damagetype 						=	DAM_EDGE;
 //	damage		[DAM_INDEX_BLUNT]	=	0;

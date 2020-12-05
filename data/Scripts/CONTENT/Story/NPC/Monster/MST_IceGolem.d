@@ -21,12 +21,12 @@ PROTOTYPE Mst_Default_IceGolem(C_Npc)
 	attribute	[ATR_MANA] 			=	100;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	70;
-	protection	[PROT_EDGE]			=	90;
+	protection	[PROT_BLUNT]		=	80; //70
+	protection	[PROT_EDGE]			=	80; //90
 	protection	[PROT_POINT]		=	IMMUNE; //1000
 	protection	[PROT_FIRE]			=	80;
 	protection	[PROT_FLY]			=	IMMUNE; //1000
-	protection	[PROT_MAGIC]		=	60;
+	protection	[PROT_MAGIC]		=	80; //60
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE|DAM_FLY;

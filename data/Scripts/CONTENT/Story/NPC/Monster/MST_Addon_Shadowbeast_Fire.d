@@ -10,25 +10,25 @@ PROTOTYPE Mst_Default_Shadowbeast_Addon_Fire (C_Npc)
 	name							=	"Fire Devil";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
-	level							=	30;
+	level							=	20;
 	
 	bodyStateInterruptableOverride	=	TRUE;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		= 150;
-	attribute	[ATR_DEXTERITY]		= 150;
-	attribute	[ATR_HITPOINTS_MAX]	= 300;
-	attribute	[ATR_HITPOINTS]		= 300;
+	attribute	[ATR_STRENGTH]		= 80;
+	attribute	[ATR_DEXTERITY]		= 80;
+	attribute	[ATR_HITPOINTS_MAX]	= 80;
+	attribute	[ATR_HITPOINTS]		= 80;
 	attribute	[ATR_MANA_MAX] 		= 0;
 	attribute	[ATR_MANA] 			= 0;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		= 150;
-	protection	[PROT_EDGE]			= 150;
-	protection	[PROT_POINT]		= 200;
-	protection	[PROT_FIRE]			= 150;
-	protection	[PROT_FLY]			= 150;
-	protection	[PROT_MAGIC]		= 75;
+	protection	[PROT_BLUNT]		= 80;
+	protection	[PROT_EDGE]			= 80;
+	protection	[PROT_POINT]		= 80;
+	protection	[PROT_FIRE]			= 80;
+	protection	[PROT_FLY]			= 80;
+	protection	[PROT_MAGIC]		= 80;
 
 	//----- Damage Types ----
 	damagetype 						=	DAM_MAGIC;

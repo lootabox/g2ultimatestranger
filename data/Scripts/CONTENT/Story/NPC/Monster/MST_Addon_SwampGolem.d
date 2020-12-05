@@ -8,23 +8,23 @@ PROTOTYPE Mst_Default_Addon_SwampGolem(C_Npc)
 	name							=	"Swamp Golem";
 	guild							=	GIL_SWAMPGOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SWAMPGOLEM;
-	level							=	25;
+	level							=	16;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		= 125;
-	attribute	[ATR_DEXTERITY]		= 125;
-	attribute	[ATR_HITPOINTS_MAX]	= 250;
-	attribute	[ATR_HITPOINTS]		= 250;
+	attribute	[ATR_STRENGTH]		= 80;
+	attribute	[ATR_DEXTERITY]		= 80;
+	attribute	[ATR_HITPOINTS_MAX]	= 192;
+	attribute	[ATR_HITPOINTS]		= 192;
 	attribute	[ATR_MANA_MAX] 		= 0;
 	attribute	[ATR_MANA] 			= 0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		= 125;
-	protection	[PROT_EDGE]			= 125;
-	protection	[PROT_POINT]		= 250;
-	protection	[PROT_FIRE]			= 125;
-	protection	[PROT_FLY]			= 125;	
-	protection	[PROT_MAGIC]		= 125;
+	protection	[PROT_BLUNT]		= 60;
+	protection	[PROT_EDGE]			= 30;
+	protection	[PROT_POINT]		= IMMUNE;
+	protection	[PROT_FIRE]			= 60;
+	protection	[PROT_FLY]			= IMMUNE;
+	protection	[PROT_MAGIC]		= 60;
 	
 	//---- Damage Types ----
 	damagetype 						=	DAM_EDGE|DAM_FLY;
