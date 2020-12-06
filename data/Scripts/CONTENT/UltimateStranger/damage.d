@@ -44,37 +44,7 @@ class oSDamageDescriptor {
 	var int visualFX;			// zCVisualFX* 0x110
 };
 
-/*
-WD = Weapon Damage
-STR = Strength
-AP = Armor Protection of the enemy
-
-		GOTHIC 1
-Damage:
-Melee		WD   + STR - AP
-Melee Crit	WDx2 + STR - AP
-Range		WD         - AP
-Range Crit	WDx2       - AP (dex only influenced range)
-
-Chance for a Critical Hit:
-1H:		lvl1: 5%/10LP,	lvl2: 10%/20LP
-2H:		lvl1: 5%/30LP,	lvl2: 10%/40LP
-Bow:	lvl1: 15%/10LP,	lvl2: 30%/20LP
-X-Bow:	lvl1: 20%/10LP,	lvl2: 40%/20LP
-
-		GOTHIC 2 / NOTR
-Melee		(WD + STR - AP - 1) / 10		>= 5
-Melee Crit	 WD + STR - AP					>= 5
-Range		 WD + DEX - AP
-
-		ULTIMATE STRANGER
-Melee		WD   + STR - AP				>= 5 (npc only)
-Melee Crit	WDx2 + STR - AP				>= 5 (npc only)
-Range		WD   + DEX - AP
-*/
-
-func int Check_Spell_Block(var c_npc vic, var int spellID)
-{
+func int Check_Spell_Block(var c_npc vic, var int spellID) {
 	// Only player can block spells
 	if (Npc_IsPlayer(vic))
 	{
@@ -113,8 +83,7 @@ func int Check_Spell_Block(var c_npc vic, var int spellID)
 	return FALSE;
 };
 
-func int Handle_Melee_Dmg(var c_npc att, var c_npc vic)
-{
+func int Handle_Melee_Dmg(var c_npc att, var c_npc vic) {
 	// If melee weapon was used, it should be readied when dealing damage
 	var c_item wpn; wpn = Npc_GetReadiedWeapon(att);
 	
@@ -139,9 +108,6 @@ func int Handle_Melee_Dmg(var c_npc att, var c_npc vic)
 	// Add stat
 	dmg += att.attribute[ATR_STRENGTH];
 
-Print(ConcatStrings(ConcatStrings(att.name," - "),wpn.name));
-var string pristr; pristr = IntToString(dmg);
-
 	// Get protection (when attacked with a weapon humans always use PROT_POINT / weapon protection and non-humans go according to weapon damage type)
 	var int prot;
 	if 		vic.guild < GIL_SEPERATOR_HUM	{ prot = vic.protection[PROT_POINT]; }
@@ -158,26 +124,30 @@ var string pristr; pristr = IntToString(dmg);
 	// Reduce protection
 	dmg -= prot;
 
+Print(ConcatStrings(ConcatStrings(att.name," - "),wpn.name));
+var string pristr; pristr = IntToString(dmg);
+
 	// Handle combo (10% + 10%/cc)
-	if (Npc_IsPlayer(att) && Npc_HasReadiedMeleeWeapon(att))
+	if (Npc_IsPlayer(att))
 	{
 		var oCNpc oCHer; oCHer = Hlp_GetNpc(hero);
 		var oCAniCtrl_Human modelState; modelState = _^(oCHer.anictrl);
-		dmg = dmg * (2 + modelState.combonr) / 10; // divide by 5 for combo counter, divide by 2 for crit
+		dmg = dmg * (2 + modelState.combonr) / 10; // divide by 5*2 for combo counter and crit
+	} else {
+		dmg = dmg / 2; // divide by 2 for crit
 	};
 
 	// Check for crit
 	var int skill; skill = 0;
 	if		(wpn.flags & ITEM_SWD 		|| wpn.flags & ITEM_AXE)		{ skill = att.hitChance[NPC_TALENT_1H]; }
 	else if	(wpn.flags & ITEM_2HD_SWD 	|| wpn.flags & ITEM_2HD_AXE)	{ skill = att.hitChance[NPC_TALENT_2H]; };
-	if (r_Max(99) < skill) { dmg *= 2; }; // crit doubles weapon damage
+	if (r_Max(99) < skill) { dmg *= 2; }; // crit doubles damage
 
 Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 	return dmg;
 };
 
-func int Handle_Fist_Dmg(var c_npc att, var c_npc vic)
-{
+func int Handle_Fist_Dmg(var c_npc att, var c_npc vic) {
 	// Handle protection and calculate damage
 	var int dmg; dmg = att.attribute[ATR_STRENGTH];
 	if		(att.damage[DAM_INDEX_FIRE] > 0) ||
@@ -203,8 +173,7 @@ func int Handle_Fist_Dmg(var c_npc att, var c_npc vic)
 	return dmg;
 };
 
-func int Handle_Magic_Dmg(var c_npc att, var c_npc vic, var int spellID, var int dmg)
-{
+func int Handle_Magic_Dmg(var c_npc att, var c_npc vic, var int spellID, var int dmg) {
 var string pristr; pristr = IntToString(dmg);
 
 	// Get protection amount
