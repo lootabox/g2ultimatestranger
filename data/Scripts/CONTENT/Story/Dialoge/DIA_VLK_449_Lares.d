@@ -160,8 +160,8 @@ FUNC VOID DIA_Lares_HALLO_NO()
 	
 	Info_ClearChoices 	(DIA_Lares_HALLO);
 	
-	Info_AddChoice 		(DIA_Lares_HALLO,"Of course I remember Lee!",DIA_Lares_HALLO_LEE);
 	Info_AddChoice 		(DIA_Lares_HALLO,"Lee..?",DIA_Lares_HALLO_NOIDEA);
+	Info_AddChoice 		(DIA_Lares_HALLO,"Of course I remember Lee!",DIA_Lares_HALLO_LEE);
 };
 FUNC VOID DIA_Lares_HALLO_YES()
 {
@@ -171,8 +171,8 @@ FUNC VOID DIA_Lares_HALLO_YES()
 	
 	Info_ClearChoices 	(DIA_Lares_HALLO);
 	
-	Info_AddChoice 		(DIA_Lares_HALLO,"Of course I remember Lee!",DIA_Lares_HALLO_LEE);
 	Info_AddChoice 		(DIA_Lares_HALLO,"Lee..?",DIA_Lares_HALLO_NOIDEA);
+	Info_AddChoice 		(DIA_Lares_HALLO,"Of course I remember Lee!",DIA_Lares_HALLO_LEE);
 };
 
 // ------------------------------	
