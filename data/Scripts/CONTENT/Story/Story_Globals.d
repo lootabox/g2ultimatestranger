@@ -3,11 +3,11 @@
 // *************************
 
 // ------ Teacher MAX Werte ------
-const int T_MEGA = 300; //Pyrokar MANA
-const int T_MAX = 200;
-const int T_HIGH = 120;
-const int T_MED = 90;
-const int T_LOW = 60;
+const int T_MEGA = 150; //Pyrokar MANA
+const int T_MAX = 100;
+const int T_HIGH = 80;
+const int T_MED = 60;
+const int T_LOW = 40;
 
 //**************
 //	ADDON
