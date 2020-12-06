@@ -874,6 +874,7 @@ func void DIA_Bosper_SellFur_Info ()
 		{
 			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_Addon_KeilerFur) * Value_KeilerFur * 2 / 3) );
 			B_GiveInvItems(other, self, ItAt_Addon_KeilerFur, Npc_HasItems(other, ItAt_Addon_KeilerFur));
+			Npc_RemoveInvItems(self, ItAt_Addon_KeilerFur, Npc_HasItems(other, ItAt_Addon_KeilerFur));
 			B_Say(self,other,"$ABS_GOOD");
 		};
 		if (Npc_HasItems(other, ItAt_SheepFur) > 0)
@@ -882,6 +883,7 @@ func void DIA_Bosper_SellFur_Info ()
 			AI_Output (other, self, "DIA_Bosper_SellFur_15_02"); //I wouldn't dream of doing that...
 			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_SheepFur) * Value_SheepFur) );
 			B_GiveInvItems(other, self, ItAt_SheepFur, Npc_HasItems(other, ItAt_SheepFur));
+			Npc_RemoveInvItems(self, ItAt_SheepFur, Npc_HasItems(other, ItAt_SheepFur));
 				
 		};
 		if (Npc_HasItems(other, ItAt_WolfFur) > 0)
@@ -892,12 +894,14 @@ func void DIA_Bosper_SellFur_Info ()
 			{
 				B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_WolfFur) * Value_WolfFur / 2) );
 				B_GiveInvItems(other, self, ItAt_WolfFur, Npc_HasItems(other, ItAt_WolfFur));
+				Npc_RemoveInvItems(self, ItAt_WolfFur, Npc_HasItems(other, ItAt_WolfFur));
 			};
 			if(Npc_HasItems(other,ItAt_IceWolfFur))
 			{
 				B_Say(self,other,"$NOTBAD");
 				B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_IceWolfFur) * Value_IceWolfFur / 2) );
 				B_GiveInvItems(other, self, ItAt_IceWolfFur, Npc_HasItems(other, ItAt_IceWolfFur));
+				Npc_RemoveInvItems(self, ItAt_IceWolfFur, Npc_HasItems(other, ItAt_IceWolfFur));
 			};
 		};
 		
@@ -906,6 +910,7 @@ func void DIA_Bosper_SellFur_Info ()
 			AI_Output (self, other, "DIA_Bosper_SellFur_11_04"); //A warg skin? Those beasts are tough...
 			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_WargFur) * Value_WargFur * 3 / 5) );
 			B_GiveInvItems(other, self, ItAt_WargFur, Npc_HasItems(other, ItAt_WargFur));
+			Npc_RemoveInvItems(self, ItAt_WargFur, Npc_HasItems(other, ItAt_WargFur));
 		};
 		
 		if (Npc_HasItems(other, ItAt_ShadowFur) > 0)
@@ -913,6 +918,7 @@ func void DIA_Bosper_SellFur_Info ()
 			AI_Output (self, other, "DIA_Bosper_SellFur_11_05"); //Ah, even a shadowbeast skin - those are worth a lot.
 			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_ShadowFur) * Value_ShadowFur / 2) );
 			B_GiveInvItems(other, self, ItAt_ShadowFur, Npc_HasItems(other, ItAt_ShadowFur));
+			Npc_RemoveInvItems(self, ItAt_ShadowFur, Npc_HasItems(other, ItAt_ShadowFur));
 		};
 		
 		if (Npc_HasItems(other, ItAt_TrollFur) > 0)
@@ -935,6 +941,7 @@ func void DIA_Bosper_SellFur_Info ()
 			{
 				B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_TrollFur) * Value_TrollFur * 2 / 3) );
 				B_GiveInvItems(other, self, ItAt_TrollFur, Npc_HasItems(other, ItAt_TrollFur));
+				Npc_RemoveInvItems(self, ItAt_TrollFur, Npc_HasItems(other, ItAt_TrollFur));
 			};
 			if (Npc_HasItems(other, ItAt_TrollBlackFur) > 0)
 			{
