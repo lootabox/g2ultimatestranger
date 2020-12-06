@@ -177,7 +177,7 @@ func void DIA_Borka_BUYHERB_Info ()
 		AI_Output (self, other, "DIA_Borka_BUYHERB_11_02"); //Says who?
 	
 		Info_ClearChoices 	(DIA_Borka_BUYHERB);
-		Info_AddChoice		(DIA_Borka_BUYHERB,"That's not important.",DIA_Borka_BUYHERB_Egal);
+		Info_AddChoice		(DIA_Borka_BUYHERB,"That is besides the point.",DIA_Borka_BUYHERB_Egal);
 		Info_AddChoice		(DIA_Borka_BUYHERB,"Says Nadja.",DIA_Borka_BUYHERB_Nadja);
 	};
 };

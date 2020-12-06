@@ -70,7 +70,7 @@ FUNC VOID DIA_MiltenOW_Hello_NO()
 	AI_Output 	(self ,other,"DIA_MiltenOW_Hello_NO_03_02");//Do you remember Gorn, Diego and Lester?
 	
 	Info_ClearChoices (DIA_MiltenOW_Hello);
-	Info_AddChoice (DIA_MiltenOW_Hello,"So what is there to report?",DIA_MiltenOW_Hello_Friends);
+	Info_AddChoice (DIA_MiltenOW_Hello,"Of course I remember the boys.",DIA_MiltenOW_Hello_Friends);
 	Info_AddChoice (DIA_MiltenOW_Hello,"Those names don't ring a bell at all.",DIA_MiltenOW_Hello_Forget);
 };
 FUNC VOID DIA_MiltenOW_Hello_Friends()

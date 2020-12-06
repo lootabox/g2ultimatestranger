@@ -341,7 +341,7 @@ func void DIA_Lord_Hagen_Frieden_Info ()
 	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_01"); //(grumpily) Hm - show me!
 	B_UseFakeScroll ();
 	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_02"); //I know General Lee. I also know the circumstances under which he was condemned to forced labor in the colony.
-	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_03"); //I consider him to be an honorable man. I am prepared to grant him absolution - only him!
+	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_03"); //I consider him to be an honorable man. I am prepared to grant him absolution - only to him!
 	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_04"); //That does not apply to his men, however. Most of them are dishonorable cut-throats and have earned their punishment!
 	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_05"); //I shall certainly not offer them absolution. Report that to him.
 	Hagen_FriedenAbgelehnt = TRUE;

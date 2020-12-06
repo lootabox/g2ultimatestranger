@@ -1436,14 +1436,14 @@ func void DIA_Andre_FIRSTMISSION_Info ()
 	AI_Output (self, other, "DIA_Andre_FIRSTMISSION_08_04"); //Particularly now that there is the danger of a possible attack by orcs or mercenaries.
 	AI_Output (self, other, "DIA_Andre_FIRSTMISSION_08_05"); //I suspect that the mercenaries are behind it. I bet they are bringing the stuff into the city.
 	AI_Output (other, self, "DIA_Andre_FIRSTMISSION_15_06"); //What is there to do?
-	AI_Output (self, other, "DIA_Andre_FIRSTMISSION_08_07"); //Mortis, one of our men, heard in the harbor pub that a package of swampweed has arrived somewhere in the harbor district.
+	AI_Output (self, other, "DIA_Andre_FIRSTMISSION_08_07"); //Mortis, one of our men, heard in the harbor inn that a package of swampweed has arrived somewhere in the harbor district.
 	AI_Output (self, other, "DIA_Andre_FIRSTMISSION_08_08"); //Look around down there and bring me the package.
 	
 	MIS_ANDRE_WAREHOUSE = LOG_RUNNING;
 	
 	Log_CreateTopic (TOPIC_WAREHOUSE,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_WAREHOUSE,LOG_RUNNING);
-	B_LogEntry (TOPIC_WAREHOUSE,"A package of swampweed has arrived at the harbor. Mortis got wind of it in the pub there. I've got to find that package and take it to Lord Andre.");
+	B_LogEntry (TOPIC_WAREHOUSE,"A package of swampweed has arrived at the harbor. Mortis got wind of it in the inn there. I've got to find that package and take it to Lord Andre.");
 	
 	
 };
