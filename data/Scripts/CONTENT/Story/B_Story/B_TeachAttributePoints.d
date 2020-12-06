@@ -12,7 +12,7 @@ func int B_TeachAttributePoints (var C_NPC slf, var C_NPC oth, var int attrib, v
 	// ------ Kostenberechnung ------
 	var int kosten; 
 	
-	kosten = (B_GetLearnCostAttribute2(oth, attrib, points));
+	kosten = (B_GetLearnCostAttribute(oth, attrib, points));
 	
 	
 	//EXIT IF...

@@ -148,7 +148,17 @@ func void DIA_Addon_Saturas_ADWStart_wastun ()
 	AI_Output			(self, other, "DIA_Addon_Saturas_ADWStart_wastun_14_02"); //The old scripts of the builders conceal a great many secrets which we must reveal - if we want to understand what happened here back then.
 	AI_Output			(self, other, "DIA_Addon_Saturas_ADWStart_wastun_14_03"); //Meanwhile, YOU must do a few things for us...
 	
+	Info_AddChoice	(DIA_Addon_Saturas_ADWStart, "I need some equipment.", DIA_Addon_Saturas_ADWStart_equipment );
 	Info_AddChoice	(DIA_Addon_Saturas_ADWStart, "What should I do?", DIA_Addon_Saturas_ADWStart_wastun2 );
+};
+func void DIA_Addon_Saturas_ADWStart_equipment ()
+{
+	AI_Output (other,self ,"DIA_Garond_Equipment_15_00"); //I need some equipment.
+	AI_WaitTillEnd(self, other);
+	AI_PointAt (self, "ADDON_TO_NEWWORLD_STORAGE"); //"ADW_ENTRANCE_BUILDING2_03");
+	AI_Output (self, other, "DIA_Addon_Saturas_ADWStart_back_14_05"); //So, acquire some of the bandits' armor.
+	//AI_Output (self, other, "DIA_Addon_Saturas_CUSTOM_14_01"); //(pointing) Right, you should take a look around there.
+	AI_StopPointAt (self);
 };
 func void DIA_Addon_Saturas_ADWStart_wastun2 ()
 {

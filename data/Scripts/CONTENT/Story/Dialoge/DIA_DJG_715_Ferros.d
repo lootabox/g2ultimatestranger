@@ -374,10 +374,10 @@ FUNC VOID DIA_Ferros_Teach_Add_Options()
 {
 	Info_ClearChoices (DIA_Ferros_Teach);
 	Info_AddChoice	(DIA_Ferros_Teach, DIALOG_BACK, DIA_Ferros_Teach_Back);
-	Info_AddChoice	(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnSTR1, B_GetLearnCostAttribute(other, ATR_STRENGTH))	,DIA_Ferros_Teach_STR_1);
-	Info_AddChoice	(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnSTR5, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)	,DIA_Ferros_Teach_STR_5);
-	Info_AddChoice	(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnDEX1, B_GetLearnCostAttribute(other, ATR_DEXTERITY))	,DIA_Ferros_Teach_DEX_1);
-	Info_AddChoice	(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnDEX5, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)	,DIA_Ferros_Teach_DEX_5);
+	Info_AddChoice	(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnSTR1, B_GetLearnCostAttribute(other, ATR_STRENGTH, 1))	,DIA_Ferros_Teach_STR_1);
+	Info_AddChoice	(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnSTR5, B_GetLearnCostAttribute(other, ATR_STRENGTH, 5))	,DIA_Ferros_Teach_STR_5);
+	Info_AddChoice	(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnDEX1, B_GetLearnCostAttribute(other, ATR_DEXTERITY, 1))	,DIA_Ferros_Teach_DEX_1);
+	Info_AddChoice	(DIA_Ferros_Teach, B_BuildLearnString(PRINT_LearnDEX5, B_GetLearnCostAttribute(other, ATR_DEXTERITY, 5))	,DIA_Ferros_Teach_DEX_5);
 };
 
 FUNC VOID DIA_Ferros_Teach_Info()
