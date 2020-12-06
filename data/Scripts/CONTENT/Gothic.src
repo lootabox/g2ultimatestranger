@@ -328,6 +328,8 @@ STORY\B_Content\B_CaptainCallsAllOnBoard.d
 STORY\B_Content\C_ADDON_KNOWS_SCHNAPS.d
 STORY\B_Content\B_Addon_PiratesGoHome.d
 
+STORY\B_Story\B_AddInfoLearnCostAttribute.d
+
 STORY\DIALOGE\DIA*.d
 STORY\B_AssignAmbientInfos\B_*.d
 

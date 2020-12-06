@@ -1593,67 +1593,11 @@ FUNC INT DIA_CH_Strength_Condition()
 };
 FUNC VOID DIA_CH_Strength_Info()
 {
-	Info_ClearChoices (DIA_CH_Strength);
-	Info_AddChoice 	  (DIA_CH_Strength, DIALOG_BACK, DIA_CH_Strength_BACK);
-	
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 20"		, B_GetLearnCostAttribute(other, ATR_STRENGTH)*20)		,DIA_CH_Strength_20);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 10"		, B_GetLearnCostAttribute(other, ATR_STRENGTH)*10)		,DIA_CH_Strength_10);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 5"			, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)		,DIA_CH_Strength_5);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 1"			, B_GetLearnCostAttribute(other, ATR_STRENGTH))			,DIA_CH_Strength_1);
-	
-	
+	B_AddInfoLearnAttribute_STR(DIA_CH_Strength, T_MAX, DIA_CH_Strength_BACK);
 };
 FUNC VOID DIA_CH_Strength_BACK()
 {
 	Info_ClearChoices (DIA_CH_Strength);
-};
-FUNC VOID DIA_CH_Strength_1()
-{
-	B_TeachAttributePoints (self, other, ATR_STRENGTH, 1, T_MAX);
-	
-	Info_ClearChoices (DIA_CH_Strength);
-	Info_AddChoice 	  (DIA_CH_Strength, DIALOG_BACK, DIA_CH_Strength_BACK);
-	
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 20"		, B_GetLearnCostAttribute(other, ATR_STRENGTH)*20)		,DIA_CH_Strength_20);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 10"		, B_GetLearnCostAttribute(other, ATR_STRENGTH)*10)		,DIA_CH_Strength_10);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 5"			, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)		,DIA_CH_Strength_5);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 1"			, B_GetLearnCostAttribute(other, ATR_STRENGTH))			,DIA_CH_Strength_1);
-};
-FUNC VOID DIA_CH_Strength_5()
-{
-	B_TeachAttributePoints (self, other, ATR_STRENGTH, 5, T_MAX);
-	
-	Info_ClearChoices (DIA_CH_Strength);
-	Info_AddChoice 	  (DIA_CH_Strength, DIALOG_BACK, DIA_CH_Strength_BACK);
-	
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 20"		, B_GetLearnCostAttribute(other, ATR_STRENGTH)*20)		,DIA_CH_Strength_20);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 10"		, B_GetLearnCostAttribute(other, ATR_STRENGTH)*10)		,DIA_CH_Strength_10);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 5"			, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)		,DIA_CH_Strength_5);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 1"			, B_GetLearnCostAttribute(other, ATR_STRENGTH))			,DIA_CH_Strength_1);
-};
-FUNC VOID DIA_CH_Strength_10()
-{
-	B_TeachAttributePoints (self, other, ATR_STRENGTH, 10, T_MAX);
-	
-	Info_ClearChoices (DIA_CH_Strength);
-	Info_AddChoice 	  (DIA_CH_Strength, DIALOG_BACK, DIA_CH_Strength_BACK);
-	
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 20"		, B_GetLearnCostAttribute(other, ATR_STRENGTH)*20)		,DIA_CH_Strength_20);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 10"		, B_GetLearnCostAttribute(other, ATR_STRENGTH)*10)		,DIA_CH_Strength_10);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 5"			, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)		,DIA_CH_Strength_5);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 1"			, B_GetLearnCostAttribute(other, ATR_STRENGTH))			,DIA_CH_Strength_1);
-};
-FUNC VOID DIA_CH_Strength_20()
-{
-	B_TeachAttributePoints (self, other, ATR_STRENGTH, 20, T_MAX);
-	
-	Info_ClearChoices (DIA_CH_Strength);
-	Info_AddChoice 	  (DIA_CH_Strength, DIALOG_BACK, DIA_CH_Strength_BACK);
-	
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 20"		, B_GetLearnCostAttribute(other, ATR_STRENGTH)*20)		,DIA_CH_Strength_20);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 10"		, B_GetLearnCostAttribute(other, ATR_STRENGTH)*10)		,DIA_CH_Strength_10);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 5"			, B_GetLearnCostAttribute(other, ATR_STRENGTH)*5)		,DIA_CH_Strength_5);
-	Info_AddChoice	  (DIA_CH_Strength, B_BuildLearnString("Strength + 1"			, B_GetLearnCostAttribute(other, ATR_STRENGTH))			,DIA_CH_Strength_1);
 };
 //******************************************************************************************
 // Attribut Geschicklichkeit 
@@ -1677,71 +1621,11 @@ FUNC INT DIA_CH_Dex_Condition()
 };
 FUNC VOID DIA_CH_Dex_Info()
 {
-	Info_ClearChoices (DIA_CH_Dex);
-	Info_AddChoice 	  (DIA_CH_Dex, DIALOG_BACK, DIA_CH_Dex_BACK);
-	
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 20"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*20)		,DIA_CH_DEX_20);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 10"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*10)		,DIA_CH_DEX_10);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 5"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_CH_DEX_5);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 1"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_CH_DEX_1);
+	B_AddInfoLearnAttribute_DEX(DIA_CH_Dex, T_MAX, DIA_CH_Dex_BACK);
 };
 FUNC VOID DIA_CH_Dex_BACK()
 {
 	Info_ClearChoices (DIA_CH_Dex);
-};
-// ------ 1 Geschick ------
-func void DIA_CH_DEX_1()
-{
-	B_TeachAttributePoints (self, other, ATR_DEXTERITY, 1, T_MAX);
-	
-	Info_ClearChoices (DIA_CH_Dex);
-	Info_AddChoice (DIA_CH_Dex, DIALOG_BACK, DIA_CH_Dex_BACK);
-	
-	
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 20"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*20)		,DIA_CH_DEX_20);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 10"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*10)		,DIA_CH_DEX_10);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 5"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_CH_DEX_5);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 1"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_CH_DEX_1);
-};
-
-// ------ 5 Geschick ------
-func void DIA_CH_DEX_5()
-{
-	B_TeachAttributePoints (self, other, ATR_DEXTERITY, 5, T_MAX);
-	
-	Info_ClearChoices (DIA_CH_Dex);
-	Info_AddChoice (DIA_CH_Dex, DIALOG_BACK, DIA_CH_Dex_BACK);
-	
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 20"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*20)		,DIA_CH_DEX_20);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 10"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*10)		,DIA_CH_DEX_10);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 5"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_CH_DEX_5);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 1"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_CH_DEX_1);
-};
-// ------ 10 Geschick ------
-func void DIA_CH_DEX_10()
-{
-	B_TeachAttributePoints (self, other, ATR_DEXTERITY, 10, T_MAX);
-	
-	Info_ClearChoices (DIA_CH_Dex);
-	Info_AddChoice (DIA_CH_Dex, DIALOG_BACK, DIA_CH_Dex_BACK);
-	
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 20"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*20)		,DIA_CH_DEX_20);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 10"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*10)		,DIA_CH_DEX_10);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 5"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_CH_DEX_5);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 1"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_CH_DEX_1);
-};
-// ------ 20 Geschick ------
-func void DIA_CH_DEX_20()
-{
-	B_TeachAttributePoints (self, other, ATR_DEXTERITY, 20, T_MAX);
-	
-	Info_ClearChoices (DIA_CH_Dex);
-	Info_AddChoice (DIA_CH_Dex, DIALOG_BACK, DIA_CH_Dex_BACK);
-	
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 20"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*20)		,DIA_CH_DEX_20);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 10"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*10)		,DIA_CH_DEX_10);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 5"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_CH_DEX_5);
-	Info_AddChoice		(DIA_CH_Dex, B_BuildLearnString("Dexterity + 1"			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_CH_DEX_1);
 };
 
 //******************************************************************************************
@@ -1824,70 +1708,11 @@ FUNC INT DIA_CH_Mana_Condition()
 };
 FUNC VOID DIA_CH_Mana_Info()
 {
-	Info_ClearChoices (DIA_CH_Mana);
-
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 20"	, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*20)		,DIA_CH_MANA_20);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 10"	, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*10)		,DIA_CH_MANA_10);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 5"		, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*5)		,DIA_CH_MANA_5);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 1"		, B_GetLearnCostAttribute(other, ATR_MANA_MAX))			,DIA_CH_MANA_1);
-	
+	B_AddInfoLearnAttribute_MANA(DIA_CH_Mana, T_MEGA, DIA_CH_Mana_BACK);
 };
 FUNC VOID DIA_CH_Mana_BACK()
 {
 	Info_ClearChoices (DIA_CH_Mana);
-};
-// ------ 1 Mana ------
-func void DIA_CH_MANA_1()
-{
-	B_TeachAttributePoints (self, other, ATR_MANA_MAX, 1, T_MAX);
-
-	Info_ClearChoices (DIA_CH_Mana);
-	Info_AddChoice (DIA_CH_Mana, DIALOG_BACK, DIA_CH_Mana_BACK);
-	
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 20"	, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*20)		,DIA_CH_MANA_20);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 10"	, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*10)		,DIA_CH_MANA_10);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 5"		, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*5)		,DIA_CH_MANA_5);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 1"		, B_GetLearnCostAttribute(other, ATR_MANA_MAX))			,DIA_CH_MANA_1);
-};
-
-// ------ 5 Mana ------
-func void DIA_CH_MANA_5()
-{
-	B_TeachAttributePoints (self, other, ATR_MANA_MAX, 5, T_MAX);
-	
-	Info_ClearChoices (DIA_CH_Mana);
-	Info_AddChoice 	  (DIA_CH_Mana, DIALOG_BACK, DIA_CH_Mana_BACK);
-	
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 20"	, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*20)		,DIA_CH_MANA_20);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 10"	, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*10)		,DIA_CH_MANA_10);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 5"		, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*5)		,DIA_CH_MANA_5);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 1"		, B_GetLearnCostAttribute(other, ATR_MANA_MAX))			,DIA_CH_MANA_1);
-};
-// ------ 10 Mana ------
-func void DIA_CH_MANA_10()
-{
-	B_TeachAttributePoints (self, other, ATR_MANA_MAX, 10, T_MAX);
-	
-	Info_ClearChoices (DIA_CH_Mana);
-	Info_AddChoice (DIA_CH_Mana, DIALOG_BACK, DIA_CH_Mana_BACK);
-	
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 20"	, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*20)		,DIA_CH_MANA_20);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 10"	, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*10)		,DIA_CH_MANA_10);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 5"		, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*5)		,DIA_CH_MANA_5);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 1"		, B_GetLearnCostAttribute(other, ATR_MANA_MAX))			,DIA_CH_MANA_1);
-};
-// ------ 20 Mana ------
-func void DIA_CH_MANA_20()
-{
-	B_TeachAttributePoints (self, other, ATR_MANA_MAX, 20, T_MAX);
-	
-	Info_ClearChoices (DIA_CH_Mana);
-	Info_AddChoice (DIA_CH_Mana, DIALOG_BACK, DIA_CH_Mana_BACK);
-	
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 20"	, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*20)		,DIA_CH_MANA_20);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 10"	, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*10)		,DIA_CH_MANA_10);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 5"		, B_GetLearnCostAttribute(other, ATR_MANA_MAX)*5)		,DIA_CH_MANA_5);
-	Info_AddChoice		(DIA_CH_Mana, B_BuildLearnString("Mana + 1"		, B_GetLearnCostAttribute(other, ATR_MANA_MAX))			,DIA_CH_MANA_1);
 };
 //*********************************************
 // Kreise
