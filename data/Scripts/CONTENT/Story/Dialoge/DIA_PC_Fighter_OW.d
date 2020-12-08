@@ -51,7 +51,7 @@ FUNC VOID DIA_GornOW_Hello_Info()
 	AI_Output 	(self ,other,"DIA_GornOW_Hello_12_01"); //It's about time somebody got me out of here.
 	AI_Output	(self ,other,"DIA_GornOW_Hello_12_02");	//I certainly hadn't expected it to be you, though. It's damn good to see you.
 	AI_Output	(other,self ,"DIA_GornOW_Hello_15_03");	//(grins) Garond says you eat too much and he can no longer afford to feed you.
-	AI_Output	(self ,other,"DIA_GornOW_Hello_12_04");	//Now that you mention it, I could stand a couple of beers. Let's get out of here, I've seen enough of this cell.
+	AI_Output	(self ,other,"DIA_GornOW_Hello_12_04");	//Now that you mention it, I could kill a couple of beers. Let's get out of here, I've seen enough of this cell.
 	
 	if (other.guild == GIL_SLD)
 	{

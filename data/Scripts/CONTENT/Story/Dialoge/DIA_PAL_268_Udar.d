@@ -272,7 +272,7 @@ FUNC INT DIA_Udar_Ring_Condition()
 };
 FUNC VOID DIA_Udar_Ring_Info()
 {	
-	AI_Output	(other,self ,"DIA_Udar_Ring_15_00");	//Here, I bring you Tengron's ring. It's supposed to protect you. Tengron sys he'll come and get it once he's back.
+	AI_Output	(other,self ,"DIA_Udar_Ring_15_00");	//Here, I bring you Tengron's ring. It's supposed to protect you. Tengron says he'll come and get it once he's back.
 	AI_Output	(self ,other,"DIA_Udar_Ring_09_01");	//What? Do you know what ring that is? He got that ring as an award for his courage in battle.
 	AI_Output	(self ,other,"DIA_Udar_Ring_09_02");	//You say he wants to get it back? If it's the will of Innos, he is going to. If it's the will of Innos...
 	
