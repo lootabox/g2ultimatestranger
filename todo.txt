@@ -280,7 +280,13 @@ Ring of Flame Protection
 
 
 ------------------------------------------------------------------------------------- Runemaking
-Gain per rune	+5%
+Gain per spell learned	+5%
+Gain per rune crafted	+1%
+
+Monastery bookstands +1% (x5)
+fire, ice, lightning, summon, random
+Book of Water Spells +1% (x1)
+
 Circle	req
 1		0%
 2		20%
@@ -289,8 +295,17 @@ Circle	req
 5		80%
 6		100%
 
+12	Quests
+1	Lutero
+4+2	Gorax
+1-1	Cronos (Khorinis)
+5-1	Cronos (Jharkendar)
+1	Milten (Irdorath)
+
+
 ------------------------------------------------------------------------------------- Alchemy
 Gain per recipe	+5%
+Gain per potion +1% (max 5% per potion)
 
 CONSTANTINO
 Wing
@@ -308,33 +323,33 @@ Aquamarine
 Swampherb
 
 
-req gain	cost	Recipe
-0%	10%		5		Essence of Healing						Heal 20%
-20%	10%		5		Extract of Healing						Heal 40%
-40%	10%		5		Elixir of Healing						Heal 60%
-60%	10%		10		Elixir of Life							Heal 80% + 20 HP (Constantino/Neoras only)
-80%	-		-		Pure Life								Heal 100% (Constantino only)
+req	cost	Recipe
+0%	5		Essence of Healing						Heal 20%
+20%	5		Extract of Healing						Heal 40%
+40%	5		Elixir of Healing						Heal 60%
+60%	10		Elixir of Life							Heal 80% + 20 HP (Constantino/Neoras only)
+80%	-		Pure Life								Heal 100% (Constantino only)
 
-20%	10%		5		Essence -> Extract of Healing	NEW (no Flask/Meadow Knotweed/PL1)	(Constantino only)
-40%	10%		5		Extract -> Elixir of Healing	NEW (no Flask/Meadow Knotweed/PL1/PL2)	(Constantino only)
-60%	10%		5		Elixir -> Elixir of Life		NEW (no Flask/PL1/PL2/PL3)	(Constantino only)
+20%	5		Essence -> Extract of Healing	NEW (no Flask/Meadow Knotweed/PL1)	(Constantino only)
+40%	5		Extract -> Elixir of Healing	NEW (no Flask/Meadow Knotweed/PL1/PL2)	(Constantino only)
+60%	5		Elixir -> Elixir of Life		NEW (no Flask/PL1/PL2/PL3)	(Constantino only)
 
-0%	10%		5		Mana Essence							Mana 20%
-20%	10%		5		Mana Extract							Mana 40%
-40%	10%		5		Mana Elixir								Mana 60%
-60%	10%		10		Elixir of Spirit						Mana 80% + 5 Mana (Sagitta/Neoras only)
-80%	-		-		Pure Mana								Mana 100% (Sagitta only)
+0%	5		Mana Essence							Mana 20%
+20%	5		Mana Extract							Mana 40%
+40%	5		Mana Elixir								Mana 60%
+60%	10		Elixir of Spirit						Mana 80% + 5 Mana (Sagitta/Neoras only)
+80%	-		Pure Mana								Mana 100% (Sagitta only)
 
-20%	10%		5		Mana Essence -> Extract			NEW (no Flask/Meadow Knotweed/PL1)	(Sagitta only)
-40%	10%		5		Mana Extract -> Elixir			NEW (no Flask/Meadow Knotweed/PL1/PL2)	(Sagitta only)
-60%	10%		5		Mana Elixir -> Elixir of Spirit	NEW (no Flask/PL1/PL2/PL3)	(Sagitta only)
+20%	5		Mana Essence -> Extract			NEW (no Flask/Meadow Knotweed/PL1)	(Sagitta only)
+40%	5		Mana Extract -> Elixir			NEW (no Flask/Meadow Knotweed/PL1/PL2)	(Sagitta only)
+60%	5		Mana Elixir -> Elixir of Spirit	NEW (no Flask/PL1/PL2/PL3)	(Sagitta only)
 
-20%	10%		5		Speed Potion							5 Minutes	(Ignaz/Neoras only)	{snapperweed}
+20%	5		Speed Potion							5 Minutes	(Ignaz/Neoras only)	{snapperweed}
 
-40%	-		-		Elixir of Mental Alteration				1000xp	(Miguel only)	{essence of healing, mana extract, 2 bloodfly stingers, red tear pepper}
+40%	-		Elixir of Mental Alteration				1000xp	(Miguel only)	{essence of healing, mana extract, 2 bloodfly stingers, red tear pepper}
 
-80%	10%		10		Elixir of Strength						+3 STR	(Constantino only)
-80%	10%		10		Elixir of Dexterity						+3 DEX	(Sagitta only)
+80%	10		Elixir of Strength						+3 STR	(Constantino only)
+80%	10		Elixir of Dexterity						+3 DEX	(Sagitta only)
 
 268 meadow knotweed
 25 king's sorrel
@@ -823,7 +838,7 @@ V	Stormbringer			Critical hits deal magic lightning damage.
 
 ------------------------------------------------------------------------------------- Smithing
 Gain per sword learned +5%
-Gain per sword crafted +1%
+Gain per sword crafted +2%
 Gain per ore spent +1%
 
 Rough Short Sword		dmg 15 from 10
@@ -840,21 +855,24 @@ O = Ore
 
 lp					0%		10%		20%		30%		40%		50%		60%		70%		80%		90%		100%	Dmg range		New dmg?
 2	Short Sword		R		N		F		F5		F10														10-25			15-25
-4	Sword					R		N		F		F5		F10												25-35			20-35
-6	Longsword							R		N		F		F5		F10									30-45			30-45
-8	Broadsword										R		(N)		(F)		F5		F10						???				40-60
+4	Sword						R		N		F		F5		F10											25-35			20-35
+6	Longsword								R		N		F		F5		F10								30-45			30-45
+8	Broadsword											R		N		F		F5		F10					???				40-60
 10	Bastard Sword													R		N		F		F5		F10		45-65			50-66
 
-4	Ore Longsword						O																	45
-8	Ore Broadsword											O												60
-12	Ore Battle Blade															O							75
-16	Ore Dragon Slayer																				O		80(+20)
+Require Longsword
 
-4	Ore Two-Hander						O																	50
-8	Ore Large Two-Hander									O												70
-12	Ore Battle Blade															O							90
-16	Ore Dragon Slayer																				O		100(+20)
+4	Ore Longsword						O		O5		O10													45
+6	Ore Bastard Sword										O		O5		O10								60
+8	Ore Battle Blade															O		O5		O10			75
+10	Ore Dragon Slayer																				O10		80(+20)
 
+4	Ore Two-Hander						O		O5		O10													50
+6	Ore Large Two-Hander									O		O5		O10								70
+8	Ore Battle Blade															O		O5		O10			90
+10	Ore Dragon Slayer																				O10		100(+20)
+
+Add STR requirement
 
 ------------------------------------------------------------------------------------- Cool sound effects?
 
