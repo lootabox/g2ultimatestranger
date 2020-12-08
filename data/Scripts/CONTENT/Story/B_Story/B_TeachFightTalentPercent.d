@@ -24,10 +24,10 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 	
 	// ------ Lernen NICHT über teacherMax ------
 	var int realHitChance;
-	if 		(talent == NPC_TALENT_1H)		{	realHitChance = oth.HitChance[NPC_TALENT_1H];		}	// Umwandeln von const-Parameter in VAR für folgende If-Abfrage
-	else if (talent == NPC_TALENT_2H)		{	realHitChance = oth.HitChance[NPC_TALENT_2H];		}
-	else if (talent == NPC_TALENT_BOW)		{	realHitChance = oth.HitChance[NPC_TALENT_BOW];		}
-	else if (talent == NPC_TALENT_CROSSBOW) {	realHitChance = oth.HitChance[NPC_TALENT_CROSSBOW];	};
+	if 		(talent == NPC_TALENT_1H)		{	realHitChance = oth.aivar[REAL_TALENT_1H];		}	// Umwandeln von const-Parameter in VAR für folgende If-Abfrage
+	else if (talent == NPC_TALENT_2H)		{	realHitChance = oth.aivar[REAL_TALENT_2H];		}
+	else if (talent == NPC_TALENT_BOW)		{	realHitChance = oth.aivar[REAL_TALENT_BOW];		}
+	else if (talent == NPC_TALENT_CROSSBOW) {	realHitChance = oth.aivar[REAL_TALENT_CROSSBOW];	};
 	
 	if (realHitChance >= teacherMAX)
 	{
@@ -59,17 +59,19 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 		
 	// FUNC
 				
-	// ------ Lernpunkte abziehen ------			
+	// ------ Lernpunkte abziehen ------
 	oth.lp = oth.lp - kosten;
 	
 	// ------ 1H steigern ------
-	if (talent == NPC_TALENT_1H)			
+	if (talent == NPC_TALENT_1H)
 	{	
 		B_RaiseFightTalent (oth, NPC_TALENT_1H, percent);	//Einhand steigern
+		B_RaiseRealFightTalentPercent (oth, NPC_TALENT_1H, percent);
 		
 		if (oth.aivar[REAL_TALENT_1H] >= (oth.aivar[REAL_TALENT_2H] + 30))
 		{
 			B_RaiseFightTalent (oth, NPC_TALENT_2H, percent);	//Zweihand mit hochziehen
+			B_RaiseRealFightTalentPercent (oth, NPC_TALENT_2H, percent);
 			PrintScreen	(PRINT_Learn1H_and_2H, -1, -1, FONT_Screen, 2);
 		}
 		else
@@ -81,13 +83,15 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 	};
 	
 	// ------ 2H steigern ------
-	if (talent == NPC_TALENT_2H)			
+	if (talent == NPC_TALENT_2H)
 	{	
 		B_RaiseFightTalent (oth, NPC_TALENT_2H, percent);	//Zweihand steigern
+		B_RaiseRealFightTalentPercent (oth, NPC_TALENT_2H, percent);
 		
 		if (oth.aivar[REAL_TALENT_2H] >= (oth.aivar[REAL_TALENT_1H] + 30))
 		{
 			B_RaiseFightTalent (oth, NPC_TALENT_1H, percent);	//Einhand mit hochziehen
+			B_RaiseRealFightTalentPercent (oth, NPC_TALENT_1H, percent);
 			PrintScreen	(PRINT_Learn2H_and_1H, -1, -1, FONT_Screen, 2);
 		}
 		else
@@ -99,13 +103,15 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 	};
 		
 	// ------ Bogen steigern ------	
-	if (talent == NPC_TALENT_BOW)			
+	if (talent == NPC_TALENT_BOW)
 	{	
 		B_RaiseFightTalent (oth, NPC_TALENT_BOW, percent);	//Bogen steigern
+		B_RaiseRealFightTalentPercent (oth, NPC_TALENT_BOW, percent);
 		
 		if (oth.aivar[REAL_TALENT_BOW] >= (oth.aivar[REAL_TALENT_CROSSBOW] + 30))
 		{
 			B_RaiseFightTalent (oth, NPC_TALENT_CROSSBOW, percent);	//Crossbow mit hochziehen
+			B_RaiseRealFightTalentPercent (oth, NPC_TALENT_CROSSBOW, percent);
 			PrintScreen	(PRINT_LearnBow_and_Crossbow, -1, -1, FONT_Screen, 2);
 		}
 		else
@@ -117,13 +123,15 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 	};
 	
 	// ------ Crossbow steigern ------
-	if (talent == NPC_TALENT_CROSSBOW)			
+	if (talent == NPC_TALENT_CROSSBOW)
 	{	
 		B_RaiseFightTalent (oth, NPC_TALENT_CROSSBOW, percent);	//Crossbow steigern
+		B_RaiseRealFightTalentPercent (oth, NPC_TALENT_CROSSBOW, percent);
 		
 		if (oth.aivar[REAL_TALENT_CROSSBOW] >= (oth.aivar[REAL_TALENT_BOW] + 30))
 		{
 			B_RaiseFightTalent (oth, NPC_TALENT_BOW, percent);	//Bogen mit hochziehen
+			B_RaiseRealFightTalentPercent (oth, NPC_TALENT_BOW, percent);
 			PrintScreen	(PRINT_LearnCrossbow_and_Bow, -1, -1, FONT_Screen, 2);
 		}
 		else
@@ -134,13 +142,3 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 		return TRUE;
 	};
 };
-		
-		
-
-
-
-
-
-
-
-

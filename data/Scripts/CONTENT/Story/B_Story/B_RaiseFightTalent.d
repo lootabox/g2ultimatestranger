@@ -11,9 +11,9 @@ func void B_RaiseRealFightTalentPercent (var C_NPC oth, var int talent, var int 
 	else if (talent == NPC_TALENT_CROSSBOW)	{	oth.aivar[REAL_TALENT_CROSSBOW] = oth.aivar[REAL_TALENT_CROSSBOW] + percent;	};
 };
 
-// ------------------------------------
+// ------------------------------------ DOES NOT RAISE REAL TALENT COUNTERS ANYMORE!
 func void B_RaiseFightTalent (var C_NPC oth, var int talent, var int percent)
 {
-	B_RaiseRealFightTalentPercent (oth, talent, percent);
+	// B_RaiseRealFightTalentPercent (oth, talent, percent);
 	B_AddFightSkill (oth, talent, percent);
 };
