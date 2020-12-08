@@ -136,6 +136,8 @@ INSTANCE PC_Rockefeller(NPC_DEFAULT)
 	CreateInvItems (self, ItMw_1h_Misc_Axe,1);
 	CreateInvItems (self, ItMw_2H_Sword_M_01,1);
 	CreateInvItems (self, ItMw_1h_Mil_Sword,1);
+	CreateInvItems (self, ItMw_1h_Broadsword,1);
+	CreateInvItems (self, ItMw_1h_FineBroadsword,1);
 	CreateInvItems (self, ItMw_1h_Sld_Axe,1);
 	CreateInvItems (self, ItMw_1h_Sld_Sword,1);
 	CreateInvItems (self, ItMw_2h_Sld_Axe,1);

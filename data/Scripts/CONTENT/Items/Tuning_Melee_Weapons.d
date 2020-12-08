@@ -152,6 +152,16 @@ const int Damage_MilSchwert				= 25;
 const int Condition_MilSchwert			= 20;
 const int Range_MilSchwert				= 90;
 const int Value_MilSchwert				= 50; 
+//grobes Broadsword
+const int Damage_Broadsword				= 50;
+const int Condition_Broadsword			= 45;
+const int Range_Broadsword				= 90;
+const int Value_Broadsword				= 550;
+//grobes Fine Broadsword
+const int Damage_FineBroadsword			= 60;
+const int Condition_FineBroadsword		= 50;
+const int Range_FineBroadsword			= 90;
+const int Value_FineBroadsword			= 1000;
 //grobes Kriegsbeil - SÖLDNER - ItMw_1h_Sld_Axe
 const int Damage_Sld1hAxt 				= 25; 
 const int Condition_Sld1hAxt			= 20;
@@ -537,7 +547,7 @@ const int Value_Sturmknecht			= 1150;
 // selbstgeschmiedetes Bastardschwert - ItMw_1H_Special_02
 const int Damage_Special_1H_2		= 60; //+10%
 const int Condition_Special_1H_2	= 50;
-const int Range_Special_1H_2		= 90;
+const int Range_Special_1H_2		= 100;
 const int Value_Special_1H_2		= 1200; 
 //selbstgeschmiedeter Zweihänder II - ItMw_2H_Special_02
 const int Damage_Special_2H_2		= 70; //+10%

@@ -36,14 +36,14 @@ INSTANCE ItMW_1H_FerrosSword_Mis (C_Item)
 	flags 				=	ITEM_SWD|ITEM_MISSION;
 	material 			=	MAT_METAL;
 
-	value 				=	Value_Special_1H_2;
+	value 				=	Value_FineBroadsword;
 
-	damageTotal			= 	Damage_Special_1H_2;
+	damageTotal			= 	Damage_FineBroadsword;
 	damagetype			=	DAM_EDGE;
-	range    			=  	Range_Special_1H_2;	
+	range    			=  	Range_FineBroadsword;	
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	Condition_Special_1H_2;
+	cond_value[2]  		= 	Condition_FineBroadsword;
 	visual 				=	"ItMw_060_1h_Sword_smith_03.3DS";
 
 	description			= name;
