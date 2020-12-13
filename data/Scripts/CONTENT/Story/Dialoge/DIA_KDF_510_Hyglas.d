@@ -441,7 +441,7 @@ FUNC VOID DIA_Hyglas_BringBook_GetForIt()
 	AI_Output (other,self ,"DIA_Hyglas_BringBook_GetForIt_15_02"); //I'd like to know what you'll give me if I bring you the book.
 	AI_Output (self ,other,"DIA_Hyglas_BringBook_GetForIt_14_03"); //Nothing. What were you expecting to get? If you have time to run an errand in town for me, it is even your duty to help me.
 	
-	Info_ClearChoices (DIA_Hyglas_BringBook); 
+	// Info_ClearChoices (DIA_Hyglas_BringBook); 
 };
 
 FUNC VOID DIA_Hyglas_BringBook_Yes()
