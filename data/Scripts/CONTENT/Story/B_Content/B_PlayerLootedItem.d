@@ -127,6 +127,12 @@ func void B_PlayerLootedItem(var c_item itm)
 		PLI_flag = PLI_flag | (1 << 26);
 		B_LogEntry(TOPIC_Addon_Bandittrader, "I took a ring from one of the bandits with an engraving pointing to an overseas trading guild. This could be valuable evidence for Martin.");
 
+	} else if (MIS_SCKnowsInnosEyeIsBroken == FALSE) && (inst == ItMi_InnosEye_Broken_MIS) {
+		MIS_SCKnowsInnosEyeIsBroken = TRUE;
+		B_LogEntry (TOPIC_INNOSEYE, "Those sinister guys are getting on my nerves. They destroyed the Eye of Innos. I've no idea how I'm supposed to fix it.");
+ 		B_LogEntry (TOPIC_TraitorPedro, "I found the Eye of Innos. But there hasn't been a trace of Pedro anywhere so far. Those black magicians are in cahoots with him.");
+		B_GivePlayerXP (XP_SCKnowsInnosEyeIsBroken);
+
 	} else if (~PLI_flag & (1 << 27)) && (MIS_Harad_Orc == LOG_RUNNING)
 		&& (inst == ItMw_2H_OrcAxe_01	|| inst == ItMw_2H_OrcAxe_02	|| inst == ItMw_2H_OrcAxe_03	|| inst == ItMw_2H_OrcAxe_04
 		||	inst == ItMw_2H_OrcSword_01	|| inst == ItMw_2H_OrcSword_02	|| inst == ItMw_2H_OrcMace_01) {

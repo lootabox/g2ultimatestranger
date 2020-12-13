@@ -558,6 +558,7 @@ Following actions now create a log entry:
 * Finding ring and rapier for bandit trader quest.
 * Finding stone tablet for Franco.
 * Finding the Claw of Beliar.
+* Finding the Eye of Innos without talking to the seekers first.
 * Finding the Sun Aloe.
 * Finding the blank runestone for the Path of Believers quest.
 * Finding the recipe for Neoras.
