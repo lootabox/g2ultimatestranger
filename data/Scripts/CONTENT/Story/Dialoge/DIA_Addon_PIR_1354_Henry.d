@@ -101,6 +101,7 @@ instance DIA_Addon_Henry_Hello(C_INFO)
 	permanent	= TRUE;
 	important 	= TRUE;
 };                       
+var int DIA_Addon_Henry_PERMANENT;
 FUNC INT DIA_Addon_Henry_Hello_Condition()
 {
 	if (Npc_GetDistToWP(other, PIR_1354_Checkpoint) <= 700) //NICHT von hinten!
@@ -122,23 +123,25 @@ FUNC INT DIA_Addon_Henry_Hello_Condition()
 FUNC VOID DIA_Addon_Henry_Hello_Info()
 {	
 	AI_Output (self ,other,"DIA_Addon_Henry_Hello_04_00"); //HALT!
-	AI_Output (self ,other,"DIA_Addon_Henry_Hello_04_01"); //Friend or foe?
-	
-	Info_ClearChoices (DIA_Addon_Henry_Hello);
-	Info_AddChoice (DIA_Addon_Henry_Hello,"Foe!",DIA_Addon_Henry_Hello_Feind);
-	Info_AddChoice (DIA_Addon_Henry_Hello,"Friend!",DIA_Addon_Henry_Hello_Freund);
+
+	other.aivar[AIV_LastDistToWP] 		= Npc_GetDistToWP (other,Pir_1354_Checkpoint);
+	self.aivar[AIV_Guardpassage_Status]	= GP_FirstWarnGiven;
+
+	if (DIA_Addon_Henry_PERMANENT == FALSE)
+	{
+		DIA_Addon_Henry_PERMANENT = TRUE;
+		AI_Output (self ,other,"DIA_Addon_Henry_Hello_04_01"); //Friend or foe?
+		
+		Info_ClearChoices (DIA_Addon_Henry_Hello);
+		Info_AddChoice (DIA_Addon_Henry_Hello,"Foe!",DIA_Addon_Henry_Hello_Feind);
+		Info_AddChoice (DIA_Addon_Henry_Hello,"Friend!",DIA_Addon_Henry_Hello_Freund);
+	};
 };
-var int Henry_SC_Frech;
 FUNC VOID DIA_Addon_Henry_Hello_Feind()
 {
 	AI_Output (other,self ,"DIA_Addon_Henry_Hello_Feind_15_00"); //Foe!
 	AI_Output (self ,other,"DIA_Addon_Henry_Hello_Feind_04_01"); //Asking for a good spanking, you clown?
 	AI_Output (self ,other,"DIA_Addon_Henry_Hello_Feind_04_02"); //Tell me what you want here, or beat it, and fast.
-	
-	Henry_SC_Frech = TRUE;
-
-	other.aivar[AIV_LastDistToWP] 		= Npc_GetDistToWP (other,Pir_1354_Checkpoint);
-	self.aivar[AIV_Guardpassage_Status]	= GP_FirstWarnGiven;	
 	
 	Info_ClearChoices (DIA_Addon_Henry_Hello);
 };
@@ -147,9 +150,6 @@ FUNC VOID DIA_Addon_Henry_Hello_Freund()
 {
 	AI_Output (other,self ,"DIA_Addon_Henry_Hello_Freund_15_00"); //Friend!
 	AI_Output (self ,other,"DIA_Addon_Henry_Hello_Freund_04_01"); //Anyone can say that! I don't know you, what do you want here?
-	
-	other.aivar[AIV_LastDistToWP] 		= Npc_GetDistToWP (other,Pir_1354_Checkpoint);
-	self.aivar[AIV_Guardpassage_Status]	= GP_FirstWarnGiven;	
 	
 	Info_ClearChoices (DIA_Addon_Henry_Hello);
 };

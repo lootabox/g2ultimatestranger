@@ -308,6 +308,7 @@ Hanna will not take Lehmar's book of debts if NH ratted out on thieves' guild.
 Harad accepts any orc weapon for his quest.
 Harad will take the best orc weapon NH has and inspect it before commenting on it.
 Henry will consider all higher tier armor as luxurious and will comment appropriately.
+Henry will only ask NH "friend or foe" once.
 Highwayman hides if he sees NH coming with Lares.
 Highwayman is not a friendly to Seekers, he will be dead in chapter 3.
 Highwayman only appears after returning from the Valley of Mines.
