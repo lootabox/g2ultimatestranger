@@ -243,6 +243,7 @@ FUNC INT DIA_Cornelius_PayCornelius_Condition()
 {
 	if Cornelius_PayForProof == TRUE
 	&& (Npc_HasItems (other,ItMi_Gold) >= 2000)
+	&& Cornelius_TellTruth == FALSE
 	{
 		return TRUE;
 	};	
@@ -253,6 +254,7 @@ FUNC VOID DIA_Cornelius_PayCornelius_Info()
 	AI_Output (other,self ,"DIA_Cornelius_PayCornelius_15_00"); //Here's the gold.
 	
 	B_GiveInvItems (other,self ,ItMi_Gold,2000);
+	Npc_RemoveInvItems (self, ItMi_Gold, 2000);
 	
 	AI_Output (self ,other,"DIA_Cornelius_PayCornelius_13_01"); //It's better if I don't ask you where you got that.
 	AI_Output (self ,other,"DIA_Cornelius_PayCornelius_13_02"); //To be honest, I don't really care.

@@ -499,6 +499,7 @@ Following items can no longer be bought or looted from certain NPCs:
 * Bosper: Any skin or hide.
 * Buster: Shadowbeast Horns and Gold given for his hint about Sentenza.
 * Coragon: Lehmar's book of debts and Valentino's ring.
+* Cornelius: Gold given for bribing him.
 * Edda: Fish.
 * Engor: Map of the Valley of Mines.
 * Fisk: Package of lockpicks (instead dozen lockpicks appear in his trade inventory).
