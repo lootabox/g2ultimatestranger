@@ -332,7 +332,7 @@ func void DIA_Ulthar_SCHREINEVERGIFTET_Info ()
 		else
 		{
 			AI_Output			(self, other, "DIA_Ulthar_SCHREINEVERGIFTET_05_08"); //One more little thing. Stay away from the roadside shrines. We have heard that some of them have been desecrated.
-			AI_Output			(self, other, "DIA_Ulthar_SCHREINEVERGIFTET_05_09"); //No one can say what effect they now have.
+			AI_Output			(self, other, "DIA_Ulthar_SCHREINEVERGIFTET_05_09"); //No one can say what effect they have now.
 			AI_Output			(self, other, "DIA_Ulthar_SCHREINEVERGIFTET_05_10"); //It is not your task to solve this problem. The paladins will take care of this matter.
 			AI_StopProcessInfos (self);
 		};

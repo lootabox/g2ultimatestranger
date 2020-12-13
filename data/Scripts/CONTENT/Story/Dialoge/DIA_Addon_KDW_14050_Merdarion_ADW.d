@@ -97,7 +97,7 @@ func void DIA_Addon_Merdarion_ADWHello_was ()
 	AI_Output	(other, self, "DIA_Addon_Merdarion_ADWHello_was_15_00"); //What do you think needs to be done to activate them?
 	AI_Output	(self, other, "DIA_Addon_Merdarion_ADWHello_was_06_01"); //I have an idea about that. I just need proof for my suspicion.
 	AI_Output	(self, other, "DIA_Addon_Merdarion_ADWHello_was_06_02"); //I had a feeling days ago that I had seen this sort of construction somewhere before.
-	AI_Output	(self, other, "DIA_Addon_Merdarion_ADWHello_was_06_03"); //I suspect that we have to supply them with a damn large amount of magical energy to get them back in service.
+	AI_Output	(self, other, "DIA_Addon_Merdarion_ADWHello_was_06_03"); //I suspect that we have to supply them with a damn large amount of magical energy to get them back in to service.
 	
 	Info_AddChoice	(DIA_Addon_Merdarion_ADWHello, "Where have you seen these teleporter stones before?", DIA_Addon_Merdarion_ADWHello_wo );
 	Info_AddChoice	(DIA_Addon_Merdarion_ADWHello, "What could provide enough magical energy...", DIA_Addon_Merdarion_ADWHello_focus );

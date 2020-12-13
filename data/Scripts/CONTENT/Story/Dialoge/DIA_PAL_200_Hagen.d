@@ -966,7 +966,7 @@ FUNC INT DIA_Lord_Hagen_EyeBroken_Condition()
 };
 FUNC VOID DIA_Lord_Hagen_EyeBroken_Info()
 {	
-	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_07"); //I have the Eye - it is broken.
+	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_07"); //I have the Eye - it's broken.
 	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_08"); //WHAT? By Innos! What have you done? We need the Eye!
 	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_09"); //Speak to Pyrokar! There must be a way to put it back together.
 	Hagen_KnowsEyeKaputt = TRUE;
@@ -996,7 +996,7 @@ func int DIA_Lord_Hagen_BACKINTOWN_Condition ()
 };
 func void DIA_Lord_Hagen_BACKINTOWN_Info ()
 {
-	AI_Output	(other, self, "DIA_Lord_Hagen_BACKINTOWN_15_00"); //I bring you news from Garond. Here, he gave me these lines for you.
+	AI_Output	(other, self, "DIA_Lord_Hagen_BACKINTOWN_15_00"); //I bring you news from Garond. Here, he gave me this message for you.
 	B_GiveInvItems 	(other, self,ItWr_PaladinLetter_MIS,1);
 	B_UseFakeScroll 	();  
 	AI_Output (self, other, "DIA_Lord_Hagen_BACKINTOWN_04_01"); //Our situation is worse than I had feared. But report to me on the situation in the Valley of Mines.

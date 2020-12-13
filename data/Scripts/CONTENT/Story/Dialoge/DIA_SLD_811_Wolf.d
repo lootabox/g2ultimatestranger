@@ -311,7 +311,7 @@ FUNC INT DIA_Wolf_AboutCrawler_Condition()
 FUNC VOID DIA_Wolf_AboutCrawler_Info()
 {	
 	AI_Output (other, self, "DIA_Wolf_AboutCrawler_15_00"); //I heard you know how to make armor from crawler plates?
-	AI_Output (self, other, "DIA_Wolf_AboutCrawler_08_01"); //That's right. Who did you hear that from?
+	AI_Output (self, other, "DIA_Wolf_AboutCrawler_08_01"); //That's right. Who'd you hear that from?
 	AI_Output (other, self, "DIA_Wolf_AboutCrawler_15_02"); //A hunter by the name of Gestath told me.
 	AI_Output (other, self, "DIA_Wolf_AboutCrawler_15_03"); //Could you make me armor like that?
 	AI_Output (self, other, "DIA_Wolf_AboutCrawler_08_04"); //Sure. Bring me 10 crawler plates and I'll make you one.

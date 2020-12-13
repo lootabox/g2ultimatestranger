@@ -25,7 +25,7 @@ FUNC VOID DIA_Addon_AlligatorJack_Exit_Info()
 	
 		if (PIR_1354_Addon_Henry.aivar [AIV_TalkedToPlayer] == FALSE)
 		{
-			AI_Output (other ,self,"DIA_Addon_AlligatorJack_Exit_15_01"); //Palisade?
+			AI_Output (other ,self,"DIA_Addon_AlligatorJack_Exit_15_01"); //Palisades?
 			AI_Output (self ,other,"DIA_Addon_AlligatorJack_Exit_12_02"); //Just continue west from here and you'll see what I mean.
 		};
 		

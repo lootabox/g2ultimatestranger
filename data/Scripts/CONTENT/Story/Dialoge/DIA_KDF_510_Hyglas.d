@@ -414,7 +414,7 @@ FUNC VOID DIA_Hyglas_BringBook_Info()
 	AI_Output (self ,other,"DIA_Hyglas_BringBook_14_03"); //This brings us to the core of the matter. At the moment, we are observing a very rare constellation of stars.
 	AI_Output (self ,other,"DIA_Hyglas_BringBook_14_04"); //To be more exact, the sign of the Ox currently stands in direct correlation with the sign of the Warrior. I suppose that you know what that means.
 	AI_Output (other,self ,"DIA_Hyglas_BringBook_15_05"); //Hmm. Well, to be honest...
-	AI_Output (self ,other,"DIA_Hyglas_BringBook_14_06"); //Yes, right, I see. Well, I cannot explain the entire background to you now, but it definitely signifies great changes. And I do not like changes.
+	AI_Output (self ,other,"DIA_Hyglas_BringBook_14_06"); //Yes, I see. Well, I cannot explain the entire background to you now, but it definitely signifies great changes. And I do not like changes.
 	AI_Output (self ,other,"DIA_Hyglas_BringBook_14_07"); //Therefore, I want you to get me a book from town. It is called 'The divine power of the stars'. You may have to rummage around for it a bit, but I'm sure that you can find it.
 	
 	Info_ClearChoices (DIA_Hyglas_BringBook);

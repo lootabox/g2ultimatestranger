@@ -110,7 +110,7 @@ FUNC VOID DIA_DiegoNW_NeedHelp_Info()
 	
 	Info_AddChoice (DIA_DiegoNW_NeedHelp,"What kind of clothes are these?",DIA_DiegoNW_NeedHelp_Clothes);
 	Info_AddChoice (DIA_DiegoNW_NeedHelp,"What are you doing here?",DIA_DiegoNW_NeedHelp_Plan);
-	Info_AddChoice (DIA_DiegoNW_NeedHelp,"What's this about?",DIA_DiegoNW_NeedHelp_Problem);
+	Info_AddChoice (DIA_DiegoNW_NeedHelp,"What is this about?",DIA_DiegoNW_NeedHelp_Problem);
 };
 
 FUNC VOID DIA_DiegoNW_NeedHelp_Plan()
@@ -157,7 +157,7 @@ FUNC VOID DIA_DiegoNW_NeedHelp_Problem ()
 	Info_ClearChoices (DIA_DiegoNW_NeedHelp);
 	Info_AddChoice (DIA_DiegoNW_NeedHelp,"I've got no time for that.",DIA_DiegoNW_NeedHelp_Problem_NoTime);
 	Info_AddChoice (DIA_DiegoNW_NeedHelp,"What's in it for me?",DIA_DiegoNW_NeedHelp_Problem_Reward);
-	Info_AddChoice (DIA_DiegoNW_NeedHelp,"OK, I'll help you.",DIA_DiegoNW_NeedHelp_Problem_WillHelpYou);
+	Info_AddChoice (DIA_DiegoNW_NeedHelp,"Okay, I'll help you.",DIA_DiegoNW_NeedHelp_Problem_WillHelpYou);
 };
 
 FUNC VOID DIA_DiegoNW_NeedHelp_Problem_NoTime()
@@ -181,7 +181,7 @@ FUNC VOID DIA_DiegoNW_NeedHelp_Problem_Reward()
 
 FUNC VOID DIA_DiegoNW_NeedHelp_Problem_WillHelpYou()
 {
-	AI_Output (other,self ,"DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_15_00"); //OK, I'll help you.
+	AI_Output (other,self ,"DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_15_00"); //Okay, I'll help you.
 	AI_Output (self ,other,"DIA_Addon_DiegoNW_WillHelpYou_11_01"); //Well. Listen. Back when the Barrier was still in place, I hid a small treasure.
 	AI_Output (self ,other,"DIA_Addon_DiegoNW_WillHelpYou_11_02"); //It's been quite a while. That's why I forgot to take it with me.
 	AI_Output (self ,other,"DIA_Addon_DiegoNW_WillHelpYou_11_03"); //And I can't leave here at all at the moment.
@@ -262,7 +262,7 @@ INSTANCE DIA_DiegoNW_HelpYou(C_INFO)
 	condition	= DIA_DiegoNW_HelpYou_Condition;
 	information	= DIA_DiegoNW_HelpYou_Info;
 	permanent	= FALSE;
-	description	= "OK, I'll help you after all.";
+	description	= "Okay, I'll help you after all.";
 };                       
 FUNC INT DIA_DiegoNW_HelpYou_Condition()
 {
@@ -275,7 +275,7 @@ FUNC INT DIA_DiegoNW_HelpYou_Condition()
 };
 FUNC VOID DIA_DiegoNW_HelpYou_Info()
 {	
-	AI_Output (other,self ,"DIA_DiegoNW_HelpYou_15_00"); //OK, I'll help you after all.
+	AI_Output (other,self ,"DIA_DiegoNW_HelpYou_15_00"); //Okay, I'll help you after all.
 	AI_Output (self ,other,"DIA_DiegoNW_HelpYou_11_01"); //I knew it.
 	AI_Output (other,self ,"DIA_DiegoNW_HelpYou_15_02"); //OK, let's get straight down to business.
 	AI_Output (self ,other,"DIA_DiegoNW_HelpYou_11_03"); //All right. I have hidden a treasure in the Valley of Mines, and you are to go and get it for me.

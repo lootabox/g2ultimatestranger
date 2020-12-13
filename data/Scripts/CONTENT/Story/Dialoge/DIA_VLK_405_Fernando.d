@@ -285,7 +285,7 @@ func void DIA_Addon_Fernando_BanditTrader_Uptown ()
 {
 	AI_Output			(other, self, "DIA_Addon_Fernando_BanditTrader_Uptown_15_00"); //Don't make me weep. You're pretty repulsive for someone who lives in the upper quarter.
 	AI_Output			(other, self, "DIA_Addon_Fernando_BanditTrader_Uptown_15_01"); //You'd sell your soul for a fistful of gold pieces.
-	AI_Output			(self, other, "DIA_Addon_Fernando_BanditTrader_Uptown_14_02"); //I've got my expenses to cover. If I'm not liquid, they're going to feed me to the mob from the harbor district.
+	AI_Output			(self, other, "DIA_Addon_Fernando_BanditTrader_Uptown_14_02"); //I've got my expenses to cover. If I don't have cash, they're going to feed me to the mob from the harbor district.
 };
 func void DIA_Addon_Fernando_BanditTrader_mil ()
 {

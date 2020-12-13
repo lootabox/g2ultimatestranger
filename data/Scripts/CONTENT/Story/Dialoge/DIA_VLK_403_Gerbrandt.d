@@ -190,7 +190,7 @@ INSTANCE DIA_Gerbrandt_Perm(C_INFO)
 	condition	= DIA_Gerbrandt_Perm_Condition;
 	information	= DIA_Gerbrandt_Perm_Info;
 	permanent	= TRUE;
-	description	= "Any news?";
+	description	= "Anything new?";
 };                       
 
 FUNC INT DIA_Gerbrandt_Perm_Condition()

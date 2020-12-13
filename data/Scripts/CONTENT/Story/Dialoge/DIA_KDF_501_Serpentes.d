@@ -425,7 +425,7 @@ func void DIA_Serpentes_MinenAnteile_Info ()
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Serpentes_MinenAnteile_10_05"); //A mercenary for hire of your stripe could be of use to us in this matter.
+		AI_Output			(self, other, "DIA_Serpentes_MinenAnteile_10_05"); //A mercenary for hire of your kind could be of use to us in this matter.
 		
 		Info_ClearChoices	(DIA_Serpentes_MinenAnteile);
 		Info_AddChoice	(DIA_Serpentes_MinenAnteile, "I've got enough on my plate as it is. Go find somebody else.", DIA_Serpentes_MinenAnteile_nein );
@@ -435,7 +435,7 @@ func void DIA_Serpentes_MinenAnteile_Info ()
 func void DIA_Serpentes_MinenAnteile_miliz ()
 {
 	AI_Output			(other, self, "DIA_Serpentes_MinenAnteile_miliz_15_00"); //Isn't that the militia's business?
-	AI_Output			(self, other, "DIA_Serpentes_MinenAnteile_miliz_10_01"); //The militia is responsible for the city alone. This affair has farther-reaching consequences.
+	AI_Output			(self, other, "DIA_Serpentes_MinenAnteile_miliz_10_01"); //The militia is responsible for the city alone. This affair has far reaching consequences.
 
 };
 
@@ -452,7 +452,7 @@ func void DIA_Serpentes_MinenAnteile_was ()
 	AI_Output			(other, self, "DIA_Serpentes_MinenAnteile_was_15_00"); //What's this about?
 	AI_Output			(self, other, "DIA_Serpentes_MinenAnteile_was_10_01"); //There is someone in the city who has sold falsified shares in the ore mines of the former penal colony.
 	AI_Output			(self, other, "DIA_Serpentes_MinenAnteile_was_10_02"); //These papers are utterly worthless and of no importance, really. Still, they have the potential of stirring up trouble among the people, which we cannot afford to happen right now.
-	AI_Output			(self, other, "DIA_Serpentes_MinenAnteile_was_10_03"); //The swindler is supposed to have approached all the most reputable traders in the city and the country, and has evidently even managed to sell his counterfeit mining shares to some of them.
+	AI_Output			(self, other, "DIA_Serpentes_MinenAnteile_was_10_03"); //The swindler is supposed to have approached all the most reputable traders in the city and the country, and has evidently managed to sell his counterfeit mining shares to some of them.
 	AI_Output			(self, other, "DIA_Serpentes_MinenAnteile_was_10_04"); //Find this evildoer and bring him before this panel. In such hard times we must not suffer swindlers and plunderers.
 	AI_Output			(self, other, "DIA_Serpentes_MinenAnteile_was_10_05"); //We must make an example of him in order to deter the rest of the mob.
 	

@@ -45,7 +45,7 @@ func INT DIA_Addon_RoastPirate_GimmeGrog_Condition()
 };
 FUNC VOID DIA_Addon_RoastPirate_GimmeGrog_Info()
 {	
-	AI_Output (self ,other,"DIA_Addon_PIR_6_GimmeGrog_06_00"); //Ugh, this heat by the fire makes a body thirsty.
+	AI_Output (self ,other,"DIA_Addon_PIR_6_GimmeGrog_06_00"); //Ugh, this heat by the fire makes a bloody thirsty.
 	AI_Output (self ,other,"DIA_Addon_PIR_6_GimmeGrog_06_01"); //Say, have you got some grog for me?
 	
 	Log_CreateTopic (TOPIC_Addon_RoastGrog,LOG_MISSION);
