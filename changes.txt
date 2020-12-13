@@ -509,6 +509,7 @@ Following items can no longer be bought or looted from certain NPCs:
 * Hanna: A very old map.
 * Hanna: Lehmar's book of debts.
 * Huno: Steel package.
+* Igaraz: Gold given for Babo's documents.
 * Jan: Dragon Blood, Dragon Scales and Gold used to buy Medium Dragon Hunter's Armor.
 * Judge: Sacred Hammer.
 * Karras: Stone from Blessed Soil.

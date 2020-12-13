@@ -632,6 +632,7 @@ FUNC VOID DIA_Igaraz_BuyIt_Info()
 	AI_Output (self ,other,"DIA_Igaranz_BuyIt_13_01"); //Look, I can't leave here right now. I'll give you the key to my chest, there's nothing else in there anyway.
 	
 	B_GiveInvItems (other,self,ItMi_Gold,300);
+	Npc_RemoveInvItems (self, ItMi_Gold, 300);
 	B_GiveInvItems (self,other,ItKe_IgarazChest_mis,1);
 };
 
