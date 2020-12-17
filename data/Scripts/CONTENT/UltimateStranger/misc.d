@@ -1,5 +1,47 @@
 
 //************************************************
+// Turn to waypoint, "fixed" PointAt script
+// https://forum.worldofplayers.de/forum/threads/1569366-AI_PointAt-not-working-as-expected?p=26632482&viewfull=1#post26632482
+//************************************************
+
+func void AIQ_PointAt (var string waypoint) {
+    var C_NPC slf; slf = _^ (ECX);
+    AI_PointAt (slf, waypoint);
+};
+
+func void AIQ_StopPointAt () {
+    var C_NPC slf; slf = _^ (ECX);
+    AI_StopPointAt (slf);
+};
+
+func void AI_TurnToPos (var C_NPC slf, var int posPtr) {
+    if (!Hlp_IsValidNPC (slf)) { return; };
+
+    if (posPtr) {
+        var oCNPC oSlf; oSlf = Hlp_GetNPC (slf);
+
+        oSlf.soundPosition[0] = MEM_ReadIntArray(posPtr, 0);
+        oSlf.soundPosition[1] = MEM_ReadIntArray(posPtr, 1);
+        oSlf.soundPosition[2] = MEM_ReadIntArray(posPtr, 2);
+        
+        AI_TurnToSound (slf);
+    };
+};
+
+func void AI_TurnToWaypoint (var C_NPC slf, var string waypoint) {
+    if (!Hlp_IsValidNPC (slf)) { return; };
+
+    //SearchWaypointByName from Scriptbin (author: mud-freak)
+    //https://forum.worldofplayers.de/forum/threads/1495001-Scriptsammlung-ScriptBin/page2?p=25712257&viewfull=1#post25712257
+    var int wpPtr; wpPtr = SearchWaypointByName (waypoint);
+    
+    if (wpPtr) {
+        var zCWaypoint wp; wp = _^ (wpPtr);
+        AI_TurnToPos (slf, _@ (wp.pos));
+    };
+};
+
+//************************************************
 // Change value of items to be sold
 // https://forum.worldofplayers.de/forum/threads/1524805-Mehrere-Fragen-zum-Handelsmen%C3%BC?p=25885412&viewfull=1#post25885412
 //************************************************

@@ -416,6 +416,7 @@ Salandril will give you his fake mining shares before when leaving to the monast
 Samuel will actually drink Hasty Herrings with NH when he says so, but only once.
 Sarah can only be asked about Akils farm if NH does yet know how to find it.
 Sarah gives a Rough Longsword instead of Pirate's Cutlass as the gift for not framing her.
+Saturas can be asked for equipment in Jharkendar, in which case he will point towards the house the water mages have taken for themselves.
 Saturas properly completes "The power of the guardians of the dead" when he tells NH about the chambers of Adanos.
 Sekob can't be told Rosi is back if she is dead.
 Sekob dialog no longer has option to go to talk to Onar if NH already talked with him.

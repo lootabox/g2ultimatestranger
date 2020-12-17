@@ -154,11 +154,15 @@ func void DIA_Addon_Saturas_ADWStart_wastun ()
 func void DIA_Addon_Saturas_ADWStart_equipment ()
 {
 	AI_Output (other,self ,"DIA_Garond_Equipment_15_00"); //I need some equipment.
+
 	AI_WaitTillEnd(self, other);
-	AI_PointAt (self, "ADDON_TO_NEWWORLD_STORAGE"); //"ADW_ENTRANCE_BUILDING2_03");
-	AI_Output (self, other, "DIA_Addon_Saturas_ADWStart_back_14_05"); //So, acquire some of the bandits' armor.
-	//AI_Output (self, other, "DIA_Addon_Saturas_CUSTOM_14_01"); //(pointing) Right, you should take a look around there.
-	AI_StopPointAt (self);
+	AI_TurnToWaypoint (self, "ADW_ENTRANCE_BUILDING2_03");
+
+	AI_Function_S (self, AIQ_PointAt, "ADW_ENTRANCE_BUILDING2_03");
+	AI_Output (self, other, "DIA_Addon_Saturas_CUSTOM_14_01"); //(pointing) Right, you should take a look around there.
+	AI_Function (self, AIQ_StopPointAt);
+
+	AI_TurnToNpc (self, other);
 };
 func void DIA_Addon_Saturas_ADWStart_wastun2 ()
 {
