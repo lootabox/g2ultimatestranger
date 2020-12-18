@@ -23,7 +23,7 @@ func int C_GregsPiratesTooFar()
 
 	if (Npc_GetDistToWP (hero,"ADW_CANYON_MINE1_09") < 3000)
 	|| (Npc_GetDistToWP (hero,"ADW_CANYON_MINE2_04") < 2000)
-	|| (Npc_GetDistToWP (hero,"ADW_CANYON_LIBRARY_04") < 2000)
+	|| (Npc_GetDistToWP (hero,"ADW_CANYON_ORCS_10") < 6000) // ADW_CANYON_LIBRARY_04 < 2000
 	|| (Npc_GetDistToWP (hero,"ADW_CANYON_PATH_TO_BANDITS_25") < 6000)
 	|| (Npc_GetDistToWP (hero,"ADW_PIRATECAMP_WAY_16") < 8000)
 	{
