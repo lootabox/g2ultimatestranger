@@ -288,7 +288,7 @@ FUNC VOID DIA_Addon_Snaf_Abrechnung_Info()
 		AI_Output (self, other, "DIA_Addon_Snaf_Abrechnung_01_08"); //That means you probably told him something he didn't want to hear.
 		AI_Output (self, other, "DIA_Addon_Snaf_Abrechnung_01_09"); //That will please the man you are looking for...
 		AI_Output (self, other, "DIA_Addon_Snaf_Abrechnung_01_10"); //However, there is the danger that he will run to Esteban with it - (ironically) but you know that yourself...
-	}
+	};
 	if (Finn_TellAll == TRUE)
 	{
 		AI_Output (self, other, "DIA_Addon_Snaf_Abrechnung_01_11"); //They say you told Finn that you work for Esteban.
