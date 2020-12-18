@@ -80,6 +80,7 @@ Gold cannot be dropped.
 Gold mining skill does not improve by mining empty veins.
 Herring is categorized as food.
 Increased limit for alpha vobs/polys.
+Key from the orc shaman in the orc camp in the canyon no longer specifies what the temple near the orc camp is.
 Keys no longer have any value.
 Leather Satchels filled with gold can be sold for their full gold value, including special satchels.
 Main menu sounds are silenced after start a new game or loading one.

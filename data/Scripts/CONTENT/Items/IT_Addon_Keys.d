@@ -108,7 +108,7 @@ INSTANCE ITKE_CANYONLIBRARY_HIERARCHY_BOOKS_ADDON (C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"From the orc shaman in the orc camp in front of the Library of the Scholars.";
+	TEXT[2]				=	"From the orc shaman in the orc camp in the canyon.";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
