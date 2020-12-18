@@ -160,9 +160,9 @@ func void DIA_Addon_Saturas_ADWStart_equipment ()
 
 	AI_Function_S (self, AIQ_PointAt, "ADW_ENTRANCE_BUILDING2_03");
 	AI_Output (self, other, "DIA_Addon_Saturas_CUSTOM_14_01"); //(pointing) Right, you should take a look around there.
-	AI_Function (self, AIQ_StopPointAt);
 
 	AI_TurnToNpc (self, other);
+	AI_StopPointAt (self);
 };
 func void DIA_Addon_Saturas_ADWStart_wastun2 ()
 {
