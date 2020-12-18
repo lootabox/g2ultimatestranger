@@ -234,15 +234,11 @@ func void STARTUP_ADDON_PART_CANYON_01 ()
 	Wld_InsertNpc 	(Giant_DesertRat, 	"ADW_CANYON_TELEPORT_PATH_04");
 
 	Wld_InsertNpc 	(CanyonRazor01, 	"ADW_CANYON_MINE1_01");
-	
-
 	Wld_InsertNpc 	(CanyonRazor02, 	"ADW_CANYON_PATH_TO_LIBRARY_07A");
-	Wld_InsertNpc 	(CanyonRazor03, 	"ADW_CANYON_PATH_TO_LIBRARY_07A");
-	
-
-	Wld_InsertNpc 	(CanyonRazor04, 	"ADW_CANYON_PATH_TO_LIBRARY_36");
-	Wld_InsertNpc 	(CanyonRazor05, 	"ADW_CANYON_PATH_TO_LIBRARY_36");
-	
+	Wld_InsertNpc 	(CanyonRazor03, 	"ADW_CANYON_PATH_TO_LIBRARY_36"); // ADW_CANYON_PATH_TO_LIBRARY_07A
+	Wld_InsertNpc 	(CanyonRazor04, 	"ADW_CANYON_PATH_TO_LIBRARY_37"); // ADW_CANYON_PATH_TO_LIBRARY_36
+	Wld_InsertNpc 	(CanyonRazor05, 	"ADW_CANYON_PATH_TO_LIBRARY_12A"); // ADW_CANYON_PATH_TO_LIBRARY_36
+	Wld_InsertNpc 	(CanyonRazor06, 	"ADW_CANYON_PATH_TO_LIBRARY_12A"); // ADW_CANYON_PATH_TO_MINE2_04
 
 	Wld_InsertNpc 	(Giant_DesertRat, 	"ADW_CANYON_PATH_TO_LIBRARY_40");
 	Wld_InsertNpc 	(Giant_DesertRat, 	"ADW_CANYON_PATH_TO_LIBRARY_40");
@@ -253,9 +249,6 @@ func void STARTUP_ADDON_PART_CANYON_01 ()
 
 	Wld_InsertNpc 	(orcbiter, 	"ADW_CANYON_PATH_TO_BANDITS_52");
 	Wld_InsertNpc 	(orcbiter, 	"ADW_CANYON_PATH_TO_BANDITS_52");
-
-	Wld_InsertNpc 	(CanyonRazor06, 	"ADW_CANYON_PATH_TO_MINE2_04");
-	
 
 	Wld_InsertNpc 	(orcbiter, 	"ADW_CANYON_PATH_TO_LIBRARY_31A");
 	Wld_InsertNpc 	(orcbiter, 	"ADW_CANYON_PATH_TO_LIBRARY_31A");
@@ -275,12 +268,12 @@ func void STARTUP_ADDON_PART_CANYON_01 ()
 	Wld_InsertNpc 	(orcbiter, 	"ADW_CANYON_ORCS_09");
 
 
-	Wld_InsertNpc 	(Wolf, 	"ADW_CANYON_PATH_TO_LIBRARY_37");
-	Wld_InsertNpc 	(Wolf, 	"ADW_CANYON_PATH_TO_LIBRARY_37");
-	Wld_InsertNpc 	(Wolf, 	"ADW_CANYON_PATH_TO_LIBRARY_12A");
-	Wld_InsertNpc 	(Wolf, 	"ADW_CANYON_PATH_TO_LIBRARY_12A");
-	Wld_InsertNpc 	(Wolf, 	"ADW_CANYON_PATH_TO_LIBRARY_12A");
-	Wld_InsertNpc 	(Wolf, 	"ADW_CANYON_PATH_TO_LIBRARY_12A");
+	Wld_InsertNpc 	(Razor, 	"ADW_CANYON_PATH_TO_MINE2_04"); // ADW_CANYON_PATH_TO_LIBRARY_37
+	Wld_InsertNpc 	(Razor, 	"ADW_CANYON_PATH_TO_MINE2_04"); // ADW_CANYON_PATH_TO_LIBRARY_37
+	Wld_InsertNpc 	(Razor, 	"ADW_CANYON_PATH_TO_MINE2_04"); // ADW_CANYON_PATH_TO_LIBRARY_12A
+	Wld_InsertNpc 	(Razor, 	"ADW_CANYON_PATH_TO_MINE2_16"); // ADW_CANYON_PATH_TO_LIBRARY_12A
+	Wld_InsertNpc 	(Razor, 	"ADW_CANYON_PATH_TO_MINE2_16"); // ADW_CANYON_PATH_TO_LIBRARY_12A
+	Wld_InsertNpc 	(Razor, 	"ADW_CANYON_PATH_TO_MINE2_16"); // ADW_CANYON_PATH_TO_LIBRARY_12A
 
 	Wld_InsertNpc 	(OrcWarrior_Roam, 	"ADW_CANYON_ORCS_08");
 	Wld_InsertNpc 	(OrcWarrior_Roam, 	"ADW_CANYON_ORCS_08");

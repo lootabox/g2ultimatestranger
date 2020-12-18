@@ -56,6 +56,7 @@ This does not include minor changes to quest related dialog or obvious fixes, su
 "I gotta get out of here!"	Requires Talbin to be escorted through the pass and he doesn't spawn on Bengars farm right away.
 "Merchant raid"	Requires finding the bandits who took Erol's stone tablets, before returning any stone tablets.
 "Quest for Lucia"	Is now just about delivering her note to Elvrich, after that she is just another missing person.
+"Razor hunt"	The razors that should be hunted are closer to the camp and the pirates won't go all the way to the orc camp.
 "Rescue Gorn"	Can only be finished after scouting at least one mining site.
 "The Claw of Beliar"	Requires talking to Saturas before praying to Beliar and the option to destroy it is only presented once.
 "The Seekers"	Can be finished by bringing all of the Almanacs to Pyrokar before leaving for Irdorath.
@@ -72,6 +73,7 @@ Added new teleport scroll to get out of the ruins behind broken bridge in Jharke
 Black Ore effect ends on using transformation scrolls.
 Bloodfly poison is referred to as venom instead.
 Cannot level up when dead.
+Canyon has no wolves and deeper in more Razors can be found.
 Embarla Firgasto correctly depletes NH's mana.
 Experience gain is not printed out if receiving 0 xp.
 Gold cannot be dropped.
