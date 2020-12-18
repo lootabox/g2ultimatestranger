@@ -215,7 +215,7 @@ INSTANCE DIA_Addon_Francis_Buch (C_INFO)
 	condition	= DIA_Addon_Francis_Buch_Condition;
 	information	= DIA_Addon_Francis_Buch_Info;
 	permanent	= TRUE;
-	description = "I found your cache...";
+	description = "I found your hiding-place...";
 };                       
 FUNC INT DIA_Addon_Francis_Buch_Condition()
 {
@@ -226,10 +226,10 @@ FUNC INT DIA_Addon_Francis_Buch_Condition()
 };
 func VOID DIA_Addon_Francis_Buch_Info()
 {	
-	AI_Output (other,self ,"DIA_Addon_Francis_Key_Business_15_03"); //I found your hiding-place. Your treasure and your paybook. This is your book, isn't it?
+	AI_Output (other,self ,"DIA_Addon_Francis_Key_Business_15_03"); //I found your hiding-place, your treasure and your paybook. This is your book, isn't it?
 	AI_Output (self, other, "DIA_Addon_Francis_Buch_13_01"); //Er... I've never seen this book before.
 	AI_Output (self, other, "DIA_Addon_Francis_Buch_13_02"); //And... Er... even IF this were my book...
-	AI_Output (self, other, "DIA_Addon_Francis_Buch_13_03"); //You don't REALLY believe the lads will buy YOUR story based on a few yellowed pages, do you?
+	AI_Output (self, other, "DIA_Addon_Francis_Buch_13_03"); //You don't REALLY believe the boys will buy YOUR story based on a few yellowed pages, do you?
 	AI_Output (other,self ,"DIA_Addon_Francis_Key_Business_15_01"); //You cheated them all out of their shares.
 	AI_Output (self, other, "DIA_Addon_Francis_Buch_13_04"); //Er... wait a minute...
 	if (Npc_HasItems (self, ITKE_Greg_ADDON_MIS))
@@ -241,8 +241,6 @@ func VOID DIA_Addon_Francis_Buch_Info()
 		AI_Output (self, other, "DIA_Addon_Francis_Buch_13_06"); //I'll GIVE you the key to Greg's hut!
 		AI_Output (self, other, "DIA_Addon_Francis_Buch_13_07"); //There's plenty of valuable stuff in there...
 		AI_Output (self, other, "DIA_Addon_Francis_Buch_13_08"); //(nervously) But you'll give me the book and keep your trap shut, right?
-		B_GiveInvItems (other,self,ITWR_Addon_FrancisAbrechnung_Mis,1);
-		Npc_RemoveInvItems (self,ITWR_Addon_FrancisAbrechnung_Mis,1);
 		B_GiveInvItems (self ,other,ITKE_Greg_ADDON_MIS,1);
 	}
 	else
@@ -260,10 +258,11 @@ func VOID DIA_Addon_Francis_Buch_Info()
 			AI_Output (self, other, "DIA_Addon_Francis_Buch_13_12"); //Here's 500 gold pieces!
 			B_GiveInvItems (self, other, itmi_gold, 500);
 		};
-		AI_Output (self, other, "DIA_Addon_Francis_Buch_13_13"); //(hastily) And now give me that thing...
-		B_GiveInvItems (other,self,ITWR_Addon_FrancisAbrechnung_Mis,1);
-		Npc_RemoveInvItems (self,ITWR_Addon_FrancisAbrechnung_Mis,1);
 	};
+
+	AI_Output (self, other, "DIA_Addon_Francis_Buch_13_13"); //(hastily) And now give me that thing...
+	B_GiveInvItems (other,self,ITWR_Addon_FrancisAbrechnung_Mis,1);
+	Npc_RemoveInvItems (self,ITWR_Addon_FrancisAbrechnung_Mis,1);
 	AI_StopProcessInfos (self);
 };
 
@@ -326,8 +325,23 @@ func VOID DIA_Francis_Ausgeschissen_Info()
 	{
 		AI_Output (self, other, "DIA_Addon_Francis_Ausgeschissen_13_00"); //(furious) Thanks to you, Greg is making me saw planks now until there's no wood left on the island.
 	};
+
+	if (DIA_Addon_Francis_Buch_Condition())
+	{
+		Info_ClearChoices (DIA_Francis_Ausgeschissen);
+		Info_AddChoice (DIA_Francis_Ausgeschissen, DIALOG_ENDE, DIA_Francis_Ausgeschissen_End);
+		Info_AddChoice (DIA_Francis_Ausgeschissen, "I found your hiding-place...", DIA_Addon_Francis_Buch_Info);
+	}
+	else
+	{
+		AI_Output (self, other, "DIA_Addon_Francis_Ausgeschissen_13_01"); //Just leave me alone!
+		AI_StopProcessInfos (self);
+	};
+};
+
+func VOID DIA_Francis_Ausgeschissen_End()
+{
 	AI_Output (self, other, "DIA_Addon_Francis_Ausgeschissen_13_01"); //Just leave me alone!
 	AI_StopProcessInfos (self);
 };
-
 

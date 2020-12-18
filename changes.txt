@@ -272,6 +272,7 @@ Ferros can be offered alternative sword more than one time.
 Ferros dialog options are properly ordered when learning from him.
 Ferros no longer stops the dialogue if NH asks him what he would give for finding his sword.
 Ferros' learning log entry is added to correct category.
+Francis' log book can still be given to him for gold after Greg is back.
 Franco can be asked about whereabouts of Edgor only before talking to him.
 Franco can be provoked into a fight only if Ramon is alive.
 Gaan can only be asked about hunting training once NH learns he is a hunter.
