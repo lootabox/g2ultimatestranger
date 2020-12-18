@@ -304,6 +304,7 @@ Circle	req
 
 
 ------------------------------------------------------------------------------------- Alchemy
+Max per recipe 10%
 Gain per recipe	+5%
 Gain per potion +1% (max 5% per potion)
 
