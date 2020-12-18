@@ -241,7 +241,7 @@ var int DIA_Addon_Bones_WantArmor_Once;
 FUNC VOID DIA_Addon_Bones_WantArmor_Info()
 {	
 	AI_Output (other,self ,"DIA_Addon_Bones_WantArmor_15_00"); //Give me that bandit's armor.
-	AI_Output (self ,other,"DIA_Addon_Bones_WantArmor_01_01"); //I'm not that crazy. Greg will have my head.
+	AI_Output (self ,other,"DIA_Addon_Bones_WantArmor_01_01"); //I'm not that crazy. Greg would have my head.
 	AI_Output (self ,other,"DIA_Addon_Bones_WantArmor_01_02"); //He explicitly stated that no-one will get that armor unless he orders it.
 	if (GregIsBack == TRUE)
 	{
