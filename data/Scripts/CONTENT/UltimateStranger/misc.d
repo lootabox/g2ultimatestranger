@@ -9,11 +9,6 @@ func void AIQ_PointAt (var string waypoint) {
     AI_PointAt (slf, waypoint);
 };
 
-func void AIQ_StopPointAt () {
-    var C_NPC slf; slf = _^ (ECX);
-    AI_StopPointAt (slf);
-};
-
 func void AI_TurnToPos (var C_NPC slf, var int posPtr) {
     if (!Hlp_IsValidNPC (slf)) { return; };
 
