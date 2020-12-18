@@ -296,6 +296,7 @@ Girion does not count towards max ship crew.
 Gorax waits for NH at church gate to offer him the task to kill Pedro.
 Gorn leads the NH to the rock fortress instead of running ahead of him.
 Greg will comment in Jharkendar if the player did not finish his treasure hunt quest in Khorinis.
+Greg yelling at Francis makes Francis immediately get up, instead of at a later point in the dialog.
 Grimbald gives NH experience for killed snappers.
 Grimbald makes a remark once the hunt is over.
 Guard (1061) at Dexter's camp does not react to weapons or magic before talking to NH at least once.

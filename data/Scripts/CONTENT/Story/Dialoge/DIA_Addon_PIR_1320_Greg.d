@@ -93,6 +93,11 @@ FUNC VOID DIA_Addon_Greg_ImNew_Info()
 		{
 			AI_Output (self,other,"DIA_Addon_Greg_ImNew_01_06"); //(loudly) Get off of my bench at once!
 		};
+
+		AI_WaitTillEnd(Francis, self);
+		Npc_ExchangeRoutine  (Francis,"GREGISBACK");
+		AI_StartState (Francis, ZS_Saw, 1, "ADW_PIRATECAMP_BEACH_19"); //HACK - REDUNDANT!!!
+		Francis_ausgeschissen = TRUE;
 	};
 	
 	Npc_ExchangeRoutine	(self,"HOME");
@@ -130,13 +135,6 @@ func void B_UseRakeBilanz ()
 	else
 	{
 		AI_Output (self, other, "DIA_Addon_Greg_UseRakeBilanz_01_04"); //I'll teach you the true meaning of work.
-	};
-	
-	if (!Npc_IsDead (Francis))
-	{
-		Npc_ExchangeRoutine  (Francis,"GREGISBACK");
-		AI_StartState (Francis, ZS_Saw, 1, "ADW_PIRATECAMP_BEACH_19"); //HACK - REDUNDANT!!!
-		Francis_ausgeschissen = TRUE;
 	};
 	
 	Info_ClearChoices	(DIA_Addon_Greg_ImNew);
