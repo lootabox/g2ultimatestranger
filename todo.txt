@@ -109,15 +109,15 @@ S	Fear					Valley of Mines In Xardas' old tower.						Beliar's Wrath
 ----------- Staves
 
 done	visual						color	name					location		effect
-		ITMW_MAGESTAFF_BLADES_2H_01	YELLOW	Typhoon					addon cronos	Lightning spell damage, duration and mana cost increase (percentage): 50
-		ITMW_MAGESTAFF_BLADES_2H_02	BLUE	Tsunami					addon cronos	Water spell damage, duration and mana cost increase (percentage): 50
-		ITMW_MAGESTAFF_BLADES_2H_03	RED		Volcano					addon cronos	
-X~		ITMW_MAGESTAFF_GOOD_2H_01	YELLOW	Ulthar's staff			c3 gorax		Projectile spells can be cast twice as quickly.
+		ITMW_MAGESTAFF_BLADES_2H_01	YELLOW	Typhoon					addon cronos	Non-charged projectile spell cast speed is doubled.
+		ITMW_MAGESTAFF_BLADES_2H_02	BLUE	Tsunami					addon cronos	Water spells weaken targets against all elements.
+		ITMW_MAGESTAFF_BLADES_2H_03	RED		???						addon cronos	
+X~		ITMW_MAGESTAFF_GOOD_2H_01	YELLOW	Ulthar's staff			c3 gorax		Projectile spell cast speed is doubled.
 X		ITMW_MAGESTAFF_GOOD_2H_02	BLUE	Staff of Water Mages	c3 gorax		Ice and water spells mana cost reduction (percentage): 25
 X		ITMW_MAGESTAFF_GOOD_2H_03	RED		Staff of Fire Magicians	c3 gorax		Fire spell damage bonus vs. unignited targets (percentage): 25
-~		ITMW_MAGESTAFF_NORMAL_2H_01	YELLOW	Magic staff				c2 gorax		Mana cost reduction on full mana (percentage): 50
-~		ITMW_MAGESTAFF_NORMAL_2H_02	BLUE	Staff of Water			c2 gorax		Ice and water spells mana cost reduction: 4
-~		ITMW_MAGESTAFF_NORMAL_2H_03	RED		Staff of Fire			c2 gorax		Fire spell damage bonus vs. ignited targets: 10
+~		ITMW_MAGESTAFF_NORMAL_2H_01	YELLOW	???						c2 gorax		
+~		ITMW_MAGESTAFF_NORMAL_2H_02	BLUE	Magic Staff				c2 gorax		Mana cost reduction on full mana (percentage): 50
+~		ITMW_MAGESTAFF_NORMAL_2H_03	RED		Summoning Staff			c2 gorax		Summon degeneration is halved during combat.
 
 
 Water				Target is weakened for next lightning spell.
