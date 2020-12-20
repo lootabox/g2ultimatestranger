@@ -38,6 +38,13 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 	Log_CreateTopic (TOPIC_TalentMagicCircle,LOG_NOTE);
 	B_LogEntry (TOPIC_TalentMagicCircle,"The magic runes I have access to are divided into Circles. I can't use a spell that requires a higher Circle than the ones I've mastered."); 
 	
+
+	// Make sure armor bonus is calculated correctly
+	var C_Item itm;
+	itm = Npc_GetEquippedArmor(other);
+	AI_UnequipArmor (other);
+	AI_EquipArmor (other, itm);
+
 	// ------ 1. Kreis ------
 	if (circle == 1)
 	{

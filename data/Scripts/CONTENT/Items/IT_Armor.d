@@ -619,8 +619,8 @@ INSTANCE ITAR_PAL_M (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	80;
-	protection [PROT_BLUNT] = 	80;
+	protection [PROT_EDGE]	=	70;
+	protection [PROT_BLUNT] = 	70;
 	protection [PROT_POINT] = 	80;
 	protection [PROT_FIRE] 	= 	30;
 	protection [PROT_MAGIC] = 	30;
@@ -659,8 +659,8 @@ INSTANCE ITAR_PAL_H (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	100;
-	protection [PROT_BLUNT] = 	100;
+	protection [PROT_EDGE]	=	90;
+	protection [PROT_BLUNT] = 	90;
 	protection [PROT_POINT] = 	100;
 	protection [PROT_FIRE] 	= 	50;
 	protection [PROT_MAGIC] = 	50;
@@ -859,8 +859,8 @@ INSTANCE ITAR_SLD_L (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	40;
-	protection [PROT_BLUNT] = 	40;
+	protection [PROT_EDGE]	=	30;
+	protection [PROT_BLUNT] = 	30;
 	protection [PROT_POINT] = 	30;
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
@@ -935,8 +935,8 @@ INSTANCE ITAR_SLD_M (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	50;
-	protection [PROT_BLUNT] = 	50;
+	protection [PROT_EDGE]	=	45;
+	protection [PROT_BLUNT] = 	45;
 	protection [PROT_POINT] = 	40;
 	protection [PROT_FIRE] 	= 	5;
 	protection [PROT_MAGIC] = 	5;
@@ -1162,7 +1162,7 @@ INSTANCE ITAR_DJG_L (C_Item)
 
 	protection [PROT_EDGE]	=	70;
 	protection [PROT_BLUNT] = 	70;
-	protection [PROT_POINT] = 	70;
+	protection [PROT_POINT] = 	60;
 	protection [PROT_FIRE] 	= 	40;
 	protection [PROT_MAGIC] = 	20;
 
@@ -1202,7 +1202,7 @@ INSTANCE ITAR_DJG_M (C_Item)
 
 	protection [PROT_EDGE]	=	80;
 	protection [PROT_BLUNT]	= 	80;
-	protection [PROT_POINT] = 	80;
+	protection [PROT_POINT] = 	70;
 	protection [PROT_FIRE] 	= 	50;
 	protection [PROT_MAGIC] = 	30;
 
@@ -1242,7 +1242,7 @@ INSTANCE ITAR_DJG_H (C_Item)
 
 	protection [PROT_EDGE]	=	90;
 	protection [PROT_BLUNT] = 	90;
-	protection [PROT_POINT] = 	90;
+	protection [PROT_POINT] = 	80;
 	protection [PROT_FIRE] 	= 	60;
 	protection [PROT_MAGIC] = 	40;
 
@@ -1396,10 +1396,10 @@ INSTANCE ITAR_KDF_L (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	20;
-	protection [PROT_BLUNT] = 	20;
-	protection [PROT_POINT] = 	20;
-	protection [PROT_FIRE] 	= 	0;
+	protection [PROT_EDGE]	=	40;
+	protection [PROT_BLUNT] = 	40;
+	protection [PROT_POINT] = 	40;
+	protection [PROT_FIRE] 	= 	10;
 	protection [PROT_MAGIC] = 	20;
 
 	value 					=	VALUE_ITAR_KDF_L;
@@ -1416,7 +1416,8 @@ INSTANCE ITAR_KDF_L (C_Item)
 	
 	description				=	name;
 	
-	TEXT[0]					=	"Protection is improved for each Circle known.";
+	TEXT[0]					=	"Protection bonus upon reaching the fourth Circle:";
+	COUNT[0]				= 	20;
 
 	TEXT[2]					=	NAME_Prot_Edge;			
 	COUNT[2]				= 	protection	[PROT_EDGE];
@@ -1424,68 +1425,14 @@ INSTANCE ITAR_KDF_L (C_Item)
 	TEXT[1]					=	NAME_Prot_Point;		
 	COUNT[1]				= 	protection	[PROT_POINT];
 	
-	//TEXT[4] 				=	NAME_Prot_Fire;			
-	//COUNT[4]				= 	protection	[PROT_FIRE];
+	TEXT[4] 				=	NAME_Prot_Fire;			
+	COUNT[4]				= 	protection	[PROT_FIRE];
 	
 	TEXT[3]					=	NAME_Prot_Magic;		
 	COUNT[3]				= 	protection	[PROT_MAGIC];
 	
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
-};
-INSTANCE ITAR_KDF_L_1 (C_Item) {
-	B_CopyItem(ITAR_KDF_L_1, ITAR_KDF_L);
-	TEXT[4] 				=	NAME_Prot_Fire;
-	protection [PROT_EDGE]	=	30;			COUNT[2]				= 	protection	[PROT_EDGE];
-	protection [PROT_BLUNT] = 	30;
-	protection [PROT_POINT] = 	30;			COUNT[1]				= 	protection	[PROT_POINT];
-	protection [PROT_FIRE] 	= 	5;			COUNT[4]				= 	protection	[PROT_FIRE];
-	protection [PROT_MAGIC] = 	25;			COUNT[3]				= 	protection	[PROT_MAGIC];
-};
-INSTANCE ITAR_KDF_L_2 (C_Item) {
-	B_CopyItem(ITAR_KDF_L_2, ITAR_KDF_L);
-	TEXT[4] 				=	NAME_Prot_Fire;
-	protection [PROT_EDGE]	=	40;			COUNT[2]				= 	protection	[PROT_EDGE];
-	protection [PROT_BLUNT] = 	40;
-	protection [PROT_POINT] = 	40;			COUNT[1]				= 	protection	[PROT_POINT];
-	protection [PROT_FIRE] 	= 	10;			COUNT[4]				= 	protection	[PROT_FIRE];
-	protection [PROT_MAGIC] = 	30;			COUNT[3]				= 	protection	[PROT_MAGIC];
-};
-INSTANCE ITAR_KDF_L_3 (C_Item) {
-	B_CopyItem(ITAR_KDF_L_3, ITAR_KDF_L);
-	TEXT[4] 				=	NAME_Prot_Fire;
-	protection [PROT_EDGE]	=	50;			COUNT[2]				= 	protection	[PROT_EDGE];
-	protection [PROT_BLUNT] = 	50;
-	protection [PROT_POINT] = 	50;			COUNT[1]				= 	protection	[PROT_POINT];
-	protection [PROT_FIRE] 	= 	15;			COUNT[4]				= 	protection	[PROT_FIRE];
-	protection [PROT_MAGIC] = 	35;			COUNT[3]				= 	protection	[PROT_MAGIC];
-};
-INSTANCE ITAR_KDF_L_4 (C_Item) {
-	B_CopyItem(ITAR_KDF_L_4, ITAR_KDF_L);
-	TEXT[4] 				=	NAME_Prot_Fire;
-	protection [PROT_EDGE]	=	60;			COUNT[2]				= 	protection	[PROT_EDGE];
-	protection [PROT_BLUNT] = 	60;
-	protection [PROT_POINT] = 	60;			COUNT[1]				= 	protection	[PROT_POINT];
-	protection [PROT_FIRE] 	= 	20;			COUNT[4]				= 	protection	[PROT_FIRE];
-	protection [PROT_MAGIC] = 	40;			COUNT[3]				= 	protection	[PROT_MAGIC];
-};
-INSTANCE ITAR_KDF_L_5 (C_Item) {
-	B_CopyItem(ITAR_KDF_L_5, ITAR_KDF_L);
-	TEXT[4] 				=	NAME_Prot_Fire;
-	protection [PROT_EDGE]	=	70;			COUNT[2]				= 	protection	[PROT_EDGE];
-	protection [PROT_BLUNT] = 	70;
-	protection [PROT_POINT] = 	70;			COUNT[1]				= 	protection	[PROT_POINT];
-	protection [PROT_FIRE] 	= 	25;			COUNT[4]				= 	protection	[PROT_FIRE];
-	protection [PROT_MAGIC] = 	45;			COUNT[3]				= 	protection	[PROT_MAGIC];
-};
-INSTANCE ITAR_KDF_L_6 (C_Item) {
-	B_CopyItem(ITAR_KDF_L_6, ITAR_KDF_L);
-	TEXT[4] 				=	NAME_Prot_Fire;
-	protection [PROT_EDGE]	=	80;			COUNT[2]				= 	protection	[PROT_EDGE];
-	protection [PROT_BLUNT] = 	80;
-	protection [PROT_POINT] = 	80;			COUNT[1]				= 	protection	[PROT_POINT];
-	protection [PROT_FIRE] 	= 	30;			COUNT[4]				= 	protection	[PROT_FIRE];
-	protection [PROT_MAGIC] = 	50;			COUNT[3]				= 	protection	[PROT_MAGIC];
 };
 FUNC VOID Equip_ITAR_KDF_L()
 {
@@ -1501,6 +1448,14 @@ FUNC VOID Equip_ITAR_KDF_L()
 			self.protection[PROT_MAGIC] += BA_Bonus01;
 			self.protection[PROT_FIRE] 	+= BA_Bonus01;
 		};
+	};
+
+	if (Npc_GetTalentSkill(self, NPC_TALENT_MAGE) >= 4) {
+		self.protection[PROT_EDGE] 	+= BA_Bonus01;
+		self.protection[PROT_BLUNT] += BA_Bonus01;
+		self.protection[PROT_POINT] += BA_Bonus01;
+		self.protection[PROT_MAGIC] += BA_Bonus01;
+		self.protection[PROT_FIRE] 	+= BA_Bonus01;
 	};
 };
 FUNC VOID UnEquip_ITAR_KDF_L()
@@ -1518,6 +1473,14 @@ FUNC VOID UnEquip_ITAR_KDF_L()
 			self.protection[PROT_FIRE] 	-= BA_Bonus01;
 		};
 	};
+
+	if (Npc_GetTalentSkill(self, NPC_TALENT_MAGE) >= 4) {
+		self.protection[PROT_EDGE] 	-= BA_Bonus01;
+		self.protection[PROT_BLUNT] -= BA_Bonus01;
+		self.protection[PROT_POINT] -= BA_Bonus01;
+		self.protection[PROT_MAGIC] -= BA_Bonus01;
+		self.protection[PROT_FIRE] 	-= BA_Bonus01;
+	};
 };
 // ******************************************************
 INSTANCE ITAR_KDF_H (C_Item)
@@ -1527,11 +1490,11 @@ INSTANCE ITAR_KDF_H (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	80;
-	protection [PROT_BLUNT] = 	80;
-	protection [PROT_POINT] = 	80;
-	protection [PROT_FIRE] 	= 	40;
-	protection [PROT_MAGIC] = 	60;
+	protection [PROT_EDGE]	=	70;
+	protection [PROT_BLUNT] = 	70;
+	protection [PROT_POINT] = 	70;
+	protection [PROT_FIRE] 	= 	30;
+	protection [PROT_MAGIC] = 	50;
 
 	value 					=	VALUE_ITAR_KDF_H;
 
@@ -1547,6 +1510,9 @@ INSTANCE ITAR_KDF_H (C_Item)
 	
 	description				=	name;
 	
+	TEXT[0]					=	"Protection bonus upon reaching the sixth Circle:";
+	COUNT[0]				= 	10;
+
 	TEXT[2]					=	NAME_Prot_Edge;			
 	COUNT[2]				=	 protection	[PROT_EDGE];
 	
@@ -1577,6 +1543,14 @@ FUNC VOID Equip_ITAR_KDF_H()
 			self.protection[PROT_FIRE] 	+= BA_Bonus01;
 		};
 	};
+
+	if (Npc_GetTalentSkill(self, NPC_TALENT_MAGE) == 6) {
+		self.protection[PROT_EDGE] 	+= BA_Bonus01;
+		self.protection[PROT_BLUNT] += BA_Bonus01;
+		self.protection[PROT_POINT] += BA_Bonus01;
+		self.protection[PROT_MAGIC] += BA_Bonus01;
+		self.protection[PROT_FIRE] 	+= BA_Bonus01;
+	};
 };
 FUNC VOID UnEquip_ITAR_KDF_H()
 {
@@ -1592,6 +1566,14 @@ FUNC VOID UnEquip_ITAR_KDF_H()
 			self.protection[PROT_MAGIC] -= BA_Bonus01;
 			self.protection[PROT_FIRE] 	-= BA_Bonus01;
 		};
+	};
+
+	if (Npc_GetTalentSkill(self, NPC_TALENT_MAGE) == 6) {
+		self.protection[PROT_EDGE] 	-= BA_Bonus01;
+		self.protection[PROT_BLUNT] -= BA_Bonus01;
+		self.protection[PROT_POINT] -= BA_Bonus01;
+		self.protection[PROT_MAGIC] -= BA_Bonus01;
+		self.protection[PROT_FIRE] 	-= BA_Bonus01;
 	};
 };
 // ******************************************************
