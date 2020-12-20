@@ -142,15 +142,16 @@ func int DIA_Addon_Pyrokar_MissingPeople_Condition ()
 func void DIA_Addon_Pyrokar_MissingPeople_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Pyrokar_MissingPeople_15_00"); //Some citizens of Khorinis have mysteriously disappeared.
-	AI_Output	(self, other, "DIA_Addon_Pyrokar_MissingPeople_11_01"); //That fact is known to me, and very regrettable. But we have agreed with the Water Mages that they shall handle this matter.
-	AI_Output	(self, other, "DIA_Addon_Pyrokar_MissingPeople_11_02"); //The same is true for the investigation of the unusual earthquakes in the north-eastern regions of Khorinis.
+//	AI_Output	(self, other, "DIA_Addon_Pyrokar_MissingPeople_11_01"); //That fact is known to me, and very regrettable. But we have agreed with the Water Mages that they shall handle this matter.
 	AI_Output	(self, other, "DIA_Addon_Pyrokar_MissingPeople_11_03"); //So far, I have not received notice that our intervention would be required. Therefore, we are not going to take any steps in this matter.
+	AI_Output	(self, other, "DIA_Addon_Pyrokar_MissingPeople_11_02"); //The same is true for the investigation of the unusual earthquakes in the north-eastern regions of Khorinis.
 	AI_Output	(other, self, "DIA_Addon_Pyrokar_MissingPeople_15_04"); //Yes, but...
 	AI_Output	(self, other, "DIA_Addon_Pyrokar_MissingPeople_11_05"); //No buts! We shall proceed as we see fit, and I hope even YOU are going to respect that.
 
 	Log_CreateTopic (TOPIC_Addon_WhoStolePeople, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Addon_WhoStolePeople, LOG_RUNNING);
-	B_LogEntry (TOPIC_Addon_WhoStolePeople,"The Fire Magicians regret the loss of the citizens. However, they say that it is the task of the Water Mages. There's no help to be had here in the monastery."); 
+//	B_LogEntry (TOPIC_Addon_WhoStolePeople,"The Fire Magicians regret the loss of the citizens. However, they say that it is the task of the Water Mages. There's no help to be had here in the monastery."); 
+	B_LogEntry (TOPIC_Addon_WhoStolePeople,"The Fire Magicians are aware of the missing citizens. However, they also say they will not intervene in the investigation. There's no help to be had in the monastery."); 
 
 	if (other.guild  == GIL_NOV)
 	&& (KNOWS_FIRE_CONTEST == FALSE)
@@ -1468,6 +1469,20 @@ func void DIA_Pyrokar_AUGEGEHEILT_Info ()
 {
 	AI_Output			(other, self, "DIA_Pyrokar_AUGEGEHEILT_15_00"); //You did it. The Eye of Innos is healed.
 	AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_01"); //I would hardly have believed it possible.
+
+	
+	if (hero.guild == GIL_KDF)
+		{
+			AI_Output			(other, self, "DIA_Pyrokar_AUGEGEHEILT_15_02"); //Yes, Master.
+			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_03"); //You have proven many times over that you are ready for the High Order of the Fire Magicians.
+			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_04"); //As of today, you are a member of the Council and will represent our order in the world. You are now one of the high Fire Magicians.
+			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_05"); //Wear the high robe with dignity and bring the order honor and wealth, my brother.
+		
+			CreateInvItem	(hero, ITAR_KDF_H);
+			AI_EquipArmor	(hero, ITAR_KDF_H);	
+			
+			heroGIL_KDF2 = TRUE;
+		};	
 };
  */
 //////////////////////////////////////////////////////////////////////

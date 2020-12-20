@@ -398,6 +398,7 @@ Peck and Vanja are now properly caught with pants down.
 Pedro cannot be asked about life in the monastery if NH is magician.
 Pepe's dialog for buying a sheep is only available if NH knows he needs one and is not part of any guild yet.
 Pyrokar only gives one potion for healing possession, as he states in his dialog lines.
+Pyrokar will not say a line with a wrong voice over regarding the missing people, log entry for it is also updated accordingly.
 Ramirez shows two dialogue options only after he sees the thieves' signal.
 Randolph always drinks the medicine when it is given to him.
 Randolph drinks only beer during his drinking contest.

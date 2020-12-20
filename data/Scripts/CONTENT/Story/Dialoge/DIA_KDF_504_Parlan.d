@@ -345,7 +345,7 @@ func void B_DIA_Parlan_WELCOME_GoForTribute ()
 		//ADDON>
 		if (Pedro_NOV_Aufnahme_LostInnosStatue_Daron == TRUE)
 		{
-			//AI_Output (self, other, "DIA_Addon_Parlan_WELCOME_05_00"); //Take your tribute to Gorax at the monastery at once. He will handle it further.
+			//AI_Output (self, other, "DIA_Addon_Pyrokar_MissingPeople_11_01"); //Take your tribute to Gorax at the monastery at once. He will handle it further.
 			AI_Output (self, other, "DIA_Parlan_WELCOME_05_08"); //You can give your gold to Gorax, our steward. You will find him in the winery.
 		}
 		//ADDON<
