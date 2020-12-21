@@ -432,6 +432,7 @@ Senyan is told by NH that Esteban is dead, instead of giving him other news abou
 Sergio can only be asked about access to library if NH has not already achieved it.
 Serpentes will not give fake mining share quest if none of the involved NPCs is alive.
 Skinner can be asked about the attack on Esteban during the daytime without him getting angry.
+Skip does not use a bow, like the rest of the pirates.
 Skip quest cancels if he is killed.
 Snaf actually does something when preparing the fire strips.
 Snaf won't comment on information about Huno being free, if he already said the information will be free.

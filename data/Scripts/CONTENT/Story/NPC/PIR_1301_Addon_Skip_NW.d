@@ -16,7 +16,7 @@ INSTANCE PIR_1301_Addon_Skip_NW (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem (self, ItMw_ShortSword2);
-	EquipItem (self, ItRw_sld_bow); 
+	//EquipItem (self, ItRw_sld_bow); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv (self);
