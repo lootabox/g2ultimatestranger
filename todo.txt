@@ -117,7 +117,7 @@ X		ITMW_MAGESTAFF_GOOD_2H_02	BLUE	Staff of Water Mages	c3 gorax		Ice and water s
 X		ITMW_MAGESTAFF_GOOD_2H_03	RED		Staff of Fire Magicians	c3 gorax		Fire spell damage bonus vs. unignited targets (percentage): 25
 ~		ITMW_MAGESTAFF_NORMAL_2H_01	YELLOW	???						c2 gorax		
 ~		ITMW_MAGESTAFF_NORMAL_2H_02	BLUE	Magic Staff				c2 gorax		Mana cost reduction on full mana (percentage): 50
-~		ITMW_MAGESTAFF_NORMAL_2H_03	RED		Summoning Staff			c2 gorax		Summon degeneration is halved during combat.
+~		ITMW_MAGESTAFF_NORMAL_2H_03	RED		Summoning Staff			c2 gorax		Summon spell duration is doubled.
 
 
 Water				Target is weakened for next lightning spell.
