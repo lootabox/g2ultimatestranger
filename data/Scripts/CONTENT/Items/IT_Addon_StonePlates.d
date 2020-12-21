@@ -411,7 +411,7 @@ instance ItWr_HitPointStonePlate1_Addon (Prototype_StonePlate)//Joly:neue Instan
 {
 	description 		=	"Stone tablet of Life Energy I";
 	on_state[0]			=   Use_HitPointStonePlate1;
-	visual 				=	"ItMi_StonePlate_PowerUp_03.3DS";	 
+	visual 				=	"ItMi_StonePlate_PowerUp_06.3DS";	 
 };
 func void Use_HitPointStonePlate1 ()
 {
@@ -422,7 +422,7 @@ instance ItWr_HitPointStonePlate2_Addon (Prototype_StonePlate)//Joly:neue Instan
 {
 	description 		=	"Stone tablet of Life Energy II";
 	on_state[0]			=   Use_HitPointStonePlate2;
-	visual 				=	"ItMi_StonePlate_PowerUp_03.3DS";	 
+	visual 				=	"ItMi_StonePlate_PowerUp_06.3DS";	 
 };
 func void Use_HitPointStonePlate2 ()
 {
@@ -433,7 +433,7 @@ instance ItWr_HitPointStonePlate3_Addon (Prototype_StonePlate)//Joly:neue Instan
 {
 	description 		=	"Stone tablet of Life Energy III";
 	on_state[0]			=   Use_HitPointStonePlate3;
-	visual 				=	"ItMi_StonePlate_PowerUp_03.3DS";	 
+	visual 				=	"ItMi_StonePlate_PowerUp_06.3DS";	 
 };
 func void Use_HitPointStonePlate3 ()
 {
@@ -558,7 +558,7 @@ instance ItWr_BowStonePlate1_Addon (Prototype_StonePlate)//Joly:neue Instancen a
 {
 	description 		=	"Stone tablet of Archery I";
 	on_state[0]			=   Use_BowStonePlate1;
-	visual 				=	"ItMi_StonePlate_PowerUp_03.3DS";	 
+	visual 				=	"ItMi_StonePlate_PowerUp_04.3DS";	 
 };
 func void Use_BowStonePlate1 ()
 {
@@ -569,7 +569,7 @@ instance ItWr_BowStonePlate2_Addon (Prototype_StonePlate)//Joly:neue Instancen a
 {
 	description 		=	"Stone tablet of Archery II";
 	on_state[0]			=   Use_BowStonePlate2;
-	visual 				=	"ItMi_StonePlate_PowerUp_03.3DS";	 
+	visual 				=	"ItMi_StonePlate_PowerUp_04.3DS";	 
 };
 func void Use_BowStonePlate2 ()
 {
@@ -580,7 +580,7 @@ instance ItWr_BowStonePlate3_Addon (Prototype_StonePlate)//Joly:neue Instancen a
 {
 	description 		=	"Stone tablet of Archery III";
 	on_state[0]			=   Use_BowStonePlate3;
-	visual 				=	"ItMi_StonePlate_PowerUp_03.3DS";	 
+	visual 				=	"ItMi_StonePlate_PowerUp_04.3DS";	 
 };
 func void Use_BowStonePlate3 ()
 {
@@ -594,7 +594,7 @@ instance ItWr_CrsBowStonePlate1_Addon (Prototype_StonePlate)//Joly:neue Instance
 {
 	description 		=	"Stone tablet of Crossbow I";
 	on_state[0]			=   Use_CrsBowStonePlate1;
-	visual 				=	"ItMi_StonePlate_PowerUp_04.3DS";	 
+	visual 				=	"ItMi_StonePlate_PowerUp_05.3DS";	 
 };
 func void Use_CrsBowStonePlate1 ()
 {
@@ -605,7 +605,7 @@ instance ItWr_CrsBowStonePlate2_Addon (Prototype_StonePlate)//Joly:neue Instance
 {
 	description 		=	"Stone tablet of Crossbow II";
 	on_state[0]			=   Use_CrsBowStonePlate2;
-	visual 				=	"ItMi_StonePlate_PowerUp_04.3DS";	 
+	visual 				=	"ItMi_StonePlate_PowerUp_05.3DS";	 
 };
 func void Use_CrsBowStonePlate2 ()
 {
@@ -616,7 +616,7 @@ instance ItWr_CrsBowStonePlate3_Addon (Prototype_StonePlate)//Joly:neue Instance
 {
 	description 		=	"Stone tablet of Crossbow III";
 	on_state[0]			=   Use_CrsBowStonePlate3;
-	visual 				=	"ItMi_StonePlate_PowerUp_04.3DS";	 
+	visual 				=	"ItMi_StonePlate_PowerUp_05.3DS";	 
 };
 func void Use_CrsBowStonePlate3 ()
 {
