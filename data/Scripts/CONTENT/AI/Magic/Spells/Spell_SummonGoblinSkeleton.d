@@ -21,10 +21,5 @@ func int Spell_Logic_SummonGoblinSkeleton (var int manaInvested)
 
 func void Spell_Cast_SummonGoblinSkeleton(var int spellLevel)
 {
-	// Summon two if charged (bit hacky, but works)
-	if (spellLevel > 1)
-	{
-		Spell_Cast_Summon(self, spellLevel, GOBBO_SKELETON, SUMMONED_GOBBO_SKELETON, SUMMONED_GOBBO_SKELETON);
-	};
 	Spell_Cast_Summon(self, spellLevel, GOBBO_SKELETON, SUMMONED_GOBBO_SKELETON, SUMMONED_GOBBO_SKELETON);
 };

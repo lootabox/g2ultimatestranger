@@ -353,7 +353,12 @@ func void Spell_Cast_Summon(var C_NPC slf, var int spellLevel, var int npcSummon
 		{
 			if (spellLevel > 1)
 			{
-				Wld_InsertNpc(playerSummonInstance2, SPL_BLINK_WP);
+				if (playerSummonInstance == playerSummonInstance2) {
+					Wld_InsertNpc(playerSummonInstance2, SPL_BLINK_WP);
+					Wld_InsertNpc(playerSummonInstance2, SPL_BLINK_WP);
+				} else {
+					Wld_InsertNpc(playerSummonInstance2, SPL_BLINK_WP);
+				};
 			}
 			else
 			{
