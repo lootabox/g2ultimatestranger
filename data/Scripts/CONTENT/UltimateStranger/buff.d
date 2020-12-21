@@ -195,7 +195,7 @@ func void elemental_weakness_apply(var c_npc npc, var int count, var int seconds
 
 func void light_persister_removed(var int bh) {
     var int ptr; ptr = Buff_GetNpc(bh); if (!ptr) { return; }; var c_npc n; n = _^(ptr);
-	var lCBuff b; b = get(bh);
+    var lCBuff b; b = get(bh);
     Wld_StopEffect_Ext(b.name, 0, n, TRUE);
 };
 

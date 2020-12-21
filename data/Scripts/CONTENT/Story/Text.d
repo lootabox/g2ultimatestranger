@@ -744,10 +744,6 @@ const string NAME_Shrink_Info			= "Only affects living monsters. ";
 
 const string NAME_BeliarsRage_Info		= "Deals halved damage against evil targets. ";
 
-const string NAME_SummonDegen_Slow		= "Summon degenerates slowly. ";
-const string NAME_SummonDegen_Normal	= "Summon degenerates fast. ";
-const string NAME_SummonDegen_Fast		= "Summon degenerates very fast. ";
-
 const string NAME_SumGobSkel_Info		= "Summons a goblin skeleton, two if charged. ";
 const string NAME_SumWolf_Info			= "Summons a wolf, a black wolf if charged. ";
 const string NAME_SumSkel_Info			= "Summons a lesser skeleton, a skeleton if charged. ";

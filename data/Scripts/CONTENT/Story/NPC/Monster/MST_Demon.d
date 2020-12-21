@@ -88,6 +88,8 @@ INSTANCE Summoned_Demon_Hostile (Mst_Default_Demon)
 
 	B_SetVisuals_Demon();
 	Npc_SetToFistMode(self);
+
+	Wld_PlayEffect("spellFX_SummonCreature_ORIGIN", self, self, 0, 0, 0, FALSE);
 };
 
 INSTANCE Summoned_Demon (Mst_Default_Demon)
@@ -104,6 +106,8 @@ INSTANCE Summoned_Demon (Mst_Default_Demon)
 	
 	B_SetVisuals_Demon();
 	Npc_SetToFistMode(self);
+	
+	Wld_PlayEffect("spellFX_SummonCreature_ORIGIN", self, self, 0, 0, 0, FALSE);
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

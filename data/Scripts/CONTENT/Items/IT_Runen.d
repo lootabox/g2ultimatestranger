@@ -808,7 +808,8 @@ INSTANCE ItRu_SumGobSkel (C_Item)
 
 	TEXT	[2]			=	NAME_SumGobSkel_Info;
 
-	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Normal, NAME_ShortRange);
+	TEXT	[3]			=	ConcatStrings(NAME_ShortRange, NAME_Sec_Duration);
+	COUNT	[3]			=	SPL_Duration_SummonGoblinSkeleton;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -919,7 +920,8 @@ INSTANCE ItRu_SumWolf (C_Item)
 
 	TEXT	[2]			=	NAME_SumWolf_Info;
 
-	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Slow, NAME_ShortRange);
+	TEXT	[3]			=	ConcatStrings(NAME_ShortRange, NAME_Sec_Duration);
+	COUNT	[3]			=	SPL_Duration_SummonWolf;
 
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1142,7 +1144,8 @@ INSTANCE ItRu_SumSkel (C_Item)
 
 	TEXT	[2]			=	NAME_SumSkel_Info;
 
-	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Normal, NAME_ShortRange);
+	TEXT	[3]			=	ConcatStrings(NAME_ShortRange, NAME_Sec_Duration);
+	COUNT	[3]			=	SPL_Duration_SummonSkeleton;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -1493,7 +1496,8 @@ INSTANCE ItRu_SumDemon (C_Item)
 
 	TEXT	[2]			=	NAME_SumDemon_Info;
 
-	TEXT	[3]			=	ConcatStrings(NAME_SummonDegen_Fast, NAME_ShortRange);
+	TEXT	[3]			=	ConcatStrings(NAME_ShortRange, NAME_Sec_Duration);
+	COUNT	[3]			=	SPL_Duration_SummonDemon;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

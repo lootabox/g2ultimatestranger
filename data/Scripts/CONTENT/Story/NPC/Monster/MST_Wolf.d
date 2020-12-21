@@ -134,6 +134,8 @@ INSTANCE Summoned_Wolf	(Mst_Default_Wolf)
 	B_SetVisuals_Wolf();
 	Npc_SetToFistMode(self);
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
+	
+	Wld_PlayEffect("spellFX_SummonCreature_ORIGIN", self, self, 0, 0, 0, FALSE);
 };
 
 INSTANCE Summoned_BlackWolf	(Mst_Default_Wolf)
@@ -152,6 +154,8 @@ INSTANCE Summoned_BlackWolf	(Mst_Default_Wolf)
 	Npc_SetToFistMode(self);
 	//CreateInvItems (self, ItFoMuttonRaw, 1);
 	Mdl_SetModelScale(self, 1.1, 1.1, 1.1);
+	
+	Wld_PlayEffect("spellFX_SummonCreature_ORIGIN", self, self, 0, 0, 0, FALSE);
 };
 
 //************

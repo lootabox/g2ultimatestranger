@@ -3,6 +3,7 @@
 // **************
 
 const int SPL_Cost_SummonWolf			= 10;
+const int SPL_Duration_SummonWolf		= 10; // MONSTER_SUMMON_TIME
 
 
 INSTANCE Spell_SummonWolf (C_Spell_Proto)

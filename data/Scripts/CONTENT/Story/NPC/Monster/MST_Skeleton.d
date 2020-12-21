@@ -139,14 +139,17 @@ INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
 	// ------ visual ------
 	B_SetVisuals_Lesser_Skeleton();
 	
-	aivar[AIV_PARTYMEMBER] = TRUE;
-	B_SetAttitude (self, ATT_FRIENDLY); 
-	
-	start_aistate = ZS_MM_Rtn_Summoned;
-
+	// ------ Waffe ------
 	//EquipItem (self, ItMw_2H_Sword_M_01);
 	EquipItem (self, ItMw_1h_Misc_Axe);
 	//EquipItem (self, ItRw_Sld_Bow); //FIXME Carsten: Bogen schieﬂt beim Skelett in Zeitlupe...
+
+	aivar[AIV_PARTYMEMBER] = TRUE;
+	B_SetAttitude (self, ATT_FRIENDLY);
+	
+	start_aistate = ZS_MM_Rtn_Summoned;
+	
+	Wld_PlayEffect("spellFX_SummonCreature_ORIGIN", self, self, 0, 0, 0, FALSE);
 };
 
 //**************
@@ -221,6 +224,8 @@ INSTANCE Summoned_Lesser_Skeleton (Mst_Default_Skeleton)
 	B_SetAttitude (self, ATT_FRIENDLY); 
 	
 	start_aistate = ZS_MM_Rtn_Summoned;
+	
+	Wld_PlayEffect("spellFX_SummonCreature_ORIGIN", self, self, 0, 0, 0, FALSE);
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

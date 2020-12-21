@@ -3,6 +3,7 @@
 // ************************
 
 const int SPL_Cost_SummonGoblinSkeleton		= 20;
+const int SPL_Duration_SummonGoblinSkeleton	= 10; // MONSTER_SUMMON_TIME
 
 
 INSTANCE Spell_SummonGoblinSkeleton (C_Spell_Proto)	//ehem. Spell_Skeleton
