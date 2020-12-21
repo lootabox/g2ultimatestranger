@@ -86,8 +86,6 @@ INSTANCE Summoned_Demon_Hostile (Mst_Default_Demon)
 	aivar[AIV_MM_REAL_ID]			= ID_SUMMONED_DEMON;
 	level							= 0;
 
-	B_SetAttitude (self, ATT_HOSTILE); 
-
 	B_SetVisuals_Demon();
 	Npc_SetToFistMode(self);
 };
@@ -100,7 +98,7 @@ INSTANCE Summoned_Demon (Mst_Default_Demon)
 	level							= 0;
 	
 	aivar[AIV_PARTYMEMBER] = TRUE;
-	B_SetAttitude (self, ATT_FRIENDLY); 
+	B_SetAttitude (self, ATT_FRIENDLY);
 	
 	start_aistate = ZS_MM_Rtn_Summoned;
 	
