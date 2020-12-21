@@ -193,17 +193,34 @@ INSTANCE Summoned_Lesser_Skeleton (Mst_Default_Skeleton)
 	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_SKELETON;
 	level							=	0;
 	
+	//----- Attribute ----	
+	attribute	[ATR_STRENGTH]		=	60;
+	attribute	[ATR_DEXTERITY]		=	60;
+	attribute	[ATR_HITPOINTS_MAX]	=	120;
+	attribute	[ATR_HITPOINTS]		=	120;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	//----- Protection ----
+	protection	[PROT_BLUNT]		=	20;
+	protection	[PROT_EDGE]			=	20;
+	protection	[PROT_POINT]		=	IMMUNE; //1000
+	protection	[PROT_FIRE]			=	20; //0
+	protection	[PROT_FLY]			=	20; //0
+	protection	[PROT_MAGIC]		=	20;
+
 	fight_tactic	=	FAI_HUMAN_NORMAL;
 	
 	// ------ visual ------
 	B_SetVisuals_Lesser_Skeleton();
+
+	// ------ Waffe ------
+	EquipItem (self, ItMw_1h_MISC_Sword);
 	
 	aivar[AIV_PARTYMEMBER] = TRUE;
 	B_SetAttitude (self, ATT_FRIENDLY); 
 	
 	start_aistate = ZS_MM_Rtn_Summoned;
-
-	EquipItem (self, ItMw_1h_MISC_Sword);
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
