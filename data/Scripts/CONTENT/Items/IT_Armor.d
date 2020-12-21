@@ -1451,11 +1451,11 @@ FUNC VOID Equip_ITAR_KDF_L()
 	};
 
 	if (Npc_GetTalentSkill(self, NPC_TALENT_MAGE) >= 4) {
-		self.protection[PROT_EDGE] 	+= BA_Bonus01;
-		self.protection[PROT_BLUNT] += BA_Bonus01;
-		self.protection[PROT_POINT] += BA_Bonus01;
-		self.protection[PROT_MAGIC] += BA_Bonus01;
-		self.protection[PROT_FIRE] 	+= BA_Bonus01;
+		self.protection[PROT_EDGE] 	+= 20;
+		self.protection[PROT_BLUNT] += 20;
+		self.protection[PROT_POINT] += 20;
+		self.protection[PROT_MAGIC] += 20;
+		self.protection[PROT_FIRE] 	+= 20;
 	};
 };
 FUNC VOID UnEquip_ITAR_KDF_L()
@@ -1475,11 +1475,11 @@ FUNC VOID UnEquip_ITAR_KDF_L()
 	};
 
 	if (Npc_GetTalentSkill(self, NPC_TALENT_MAGE) >= 4) {
-		self.protection[PROT_EDGE] 	-= BA_Bonus01;
-		self.protection[PROT_BLUNT] -= BA_Bonus01;
-		self.protection[PROT_POINT] -= BA_Bonus01;
-		self.protection[PROT_MAGIC] -= BA_Bonus01;
-		self.protection[PROT_FIRE] 	-= BA_Bonus01;
+		self.protection[PROT_EDGE] 	-= 20;
+		self.protection[PROT_BLUNT] -= 20;
+		self.protection[PROT_POINT] -= 20;
+		self.protection[PROT_MAGIC] -= 20;
+		self.protection[PROT_FIRE] 	-= 20;
 	};
 };
 // ******************************************************
@@ -1545,11 +1545,11 @@ FUNC VOID Equip_ITAR_KDF_H()
 	};
 
 	if (Npc_GetTalentSkill(self, NPC_TALENT_MAGE) == 6) {
-		self.protection[PROT_EDGE] 	+= BA_Bonus01;
-		self.protection[PROT_BLUNT] += BA_Bonus01;
-		self.protection[PROT_POINT] += BA_Bonus01;
-		self.protection[PROT_MAGIC] += BA_Bonus01;
-		self.protection[PROT_FIRE] 	+= BA_Bonus01;
+		self.protection[PROT_EDGE] 	+= 10;
+		self.protection[PROT_BLUNT] += 10;
+		self.protection[PROT_POINT] += 10;
+		self.protection[PROT_MAGIC] += 10;
+		self.protection[PROT_FIRE] 	+= 10;
 	};
 };
 FUNC VOID UnEquip_ITAR_KDF_H()
@@ -1569,11 +1569,11 @@ FUNC VOID UnEquip_ITAR_KDF_H()
 	};
 
 	if (Npc_GetTalentSkill(self, NPC_TALENT_MAGE) == 6) {
-		self.protection[PROT_EDGE] 	-= BA_Bonus01;
-		self.protection[PROT_BLUNT] -= BA_Bonus01;
-		self.protection[PROT_POINT] -= BA_Bonus01;
-		self.protection[PROT_MAGIC] -= BA_Bonus01;
-		self.protection[PROT_FIRE] 	-= BA_Bonus01;
+		self.protection[PROT_EDGE] 	-= 10;
+		self.protection[PROT_BLUNT] -= 10;
+		self.protection[PROT_POINT] -= 10;
+		self.protection[PROT_MAGIC] -= 10;
+		self.protection[PROT_FIRE] 	-= 10;
 	};
 };
 // ******************************************************
