@@ -135,6 +135,7 @@ Fixed NPCs referring to Lord Andre when telling NH to go settle his crimes for  
 Fixed NPCs showing wrong pick pocket difficulty in Valley of Mines for Carlos, Sylvio.
 Fixed NPCs speaking out NH's dialog lines for Pardos, Peck.
 Fixed NPCs talking to NH when he is transformed into an animal.
+Fixed NPCs with bald head texture not to use a head mesh with pony tail for Torlof, Sylvio.
 Fixed XP award for pickpocketing Cavalorn, Dobar, Engor, Francis, Franco, Salandril, Valentino.
 Fixed XP award for recruiting Lares, Lester.
 Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
