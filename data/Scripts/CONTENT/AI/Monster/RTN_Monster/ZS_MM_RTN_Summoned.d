@@ -2,26 +2,6 @@
 // ZS_MM_Rtn_Summoned
 // ******************
 
-func void HandleSummonDegen(var c_npc summon, var int isInCombat)
-{
-	var int degen;
-	if		(summon.guild == GIL_SUMMONED_WOLF)				{ degen = 2 * summon.attribute[ATR_HITPOINTS_MAX]; }
-	else if	(summon.guild == GIL_SUMMONED_GOBBO_SKELETON)	{ degen = 4 * summon.attribute[ATR_HITPOINTS_MAX]; }
-	else if	(summon.guild == GIL_SUMMONED_SKELETON)			{ degen = 4 * summon.attribute[ATR_HITPOINTS_MAX]; }
-	else if	(summon.guild == GIL_SummonedGuardian)			{ degen = 4 * summon.attribute[ATR_HITPOINTS_MAX]; }
-	else if	(summon.guild == GIL_SUMMONED_DEMON)			{ degen = 8 * summon.attribute[ATR_HITPOINTS_MAX]; }
-	else if (summon.guild == GIL_SummonedZombie)			{ return; }
-	else if (summon.guild == GIL_SUMMONED_GOLEM)			{ return; };
-
-	if (!isInCombat) { degen /= 2; };
-
-	degen /= 100;
-
-	if (degen > 1)	{ Npc_ChangeAttribute(summon, ATR_HITPOINTS, -degen); }
-	else			{ Npc_ChangeAttribute(summon, ATR_HITPOINTS, -1); };
-};
-
-
 func void B_SummonedAssessTalk()
 {
 	Npc_ChangeAttribute (self, ATR_HITPOINTS, -self.attribute[ATR_HITPOINTS_MAX]);
@@ -75,7 +55,10 @@ func int ZS_MM_Rtn_Summoned_Loop()
 			
 			// ------ Summon Time -------
 			self.aivar[AIV_SummonTime] = (self.aivar[AIV_SummonTime] + 1); //weil AI_Goto länger dauern kann
-			HandleSummonDegen(self, FALSE);
+			if (self.aivar[AIV_SummonTime] >= MONSTER_SUMMON_TIME)
+			{
+				 Npc_ChangeAttribute (self, ATR_HITPOINTS, -self.attribute[ATR_HITPOINTS_MAX]);
+			};
 
 			Npc_SetStateTime (self, 0);
 
