@@ -479,12 +479,23 @@ func void DIA_Sekob_DMTWEG_Info ()
 		B_StartOtherRoutine (Rosi,"Start"); 
 		B_StartOtherRoutine (Till,"Start"); 
 	};
-	B_StartOtherRoutine (Balthasar,"Start"); 
+	if (!Npc_KnowsInfo(other, DIA_Balthasar_BENGARUEBERREDET))
+	|| (Npc_GetDistToNpc(self, Balthasar) < 8000)
+	{
+		B_StartOtherRoutine (Balthasar,"Start"); 
+	};
 	B_StartOtherRoutine (BAU_933_Rega,"Start"); 
 	B_StartOtherRoutine (BAU_934_Babera,"Start"); 
 	B_StartOtherRoutine (BAU_937_BAUER,"Start"); 
 	B_StartOtherRoutine (BAU_938_BAUER,"Start"); 
-	B_StartOtherRoutine(Bronko,"Start");
+	if(MIS_Sekob_Bronko_eingeschuechtert == LOG_SUCCESS)
+	{
+		B_StartOtherRoutine(Bronko,"Start");
+	}
+	else
+	{
+		B_StartOtherRoutine(Bronko,"PreStart");
+	};
 };
 
 ///////////////////////////////////////////////////////////////////////

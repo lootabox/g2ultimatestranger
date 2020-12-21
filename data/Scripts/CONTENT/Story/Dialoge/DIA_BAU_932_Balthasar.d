@@ -344,29 +344,30 @@ func void DIA_Balthasar_PERMKAP1_Info ()
 	
 	Npc_PerceiveAll(self);
 	if 	(
-				(
-					( Wld_DetectNpc(self,Balthasar_Sheep1,NOFUNC,-1) && (Npc_GetDistToNpc(self, other)<2000) )
-					||( Wld_DetectNpc(self,Balthasar_Sheep2,NOFUNC,-1) && (Npc_GetDistToNpc(self, other)<2000) )
-					||( Wld_DetectNpc(self,Balthasar_Sheep3,NOFUNC,-1) && (Npc_GetDistToNpc(self, other)<2000) )
-					||( Wld_DetectNpc(self,Sheep,NOFUNC,-1) && (Npc_GetDistToNpc(self, other)<2000) )
-					||( Wld_DetectNpc(self,Hammel,NOFUNC,-1) && (Npc_GetDistToNpc(self, other)<2000) )
-				)
-		)
-			
-				{
-					AI_Output			(self, hero, "DIA_Balthasar_PERMKAP1_05_01"); //I can't complain. Thanks for asking.
-					AI_StopProcessInfos (self);
-				}
+		//( Wld_DetectNpc(self,Balthasar_Sheep1,NOFUNC,-1) && (Npc_GetDistToNpc(self, other)<2000) )
+		//||( Wld_DetectNpc(self,Balthasar_Sheep2,NOFUNC,-1) && (Npc_GetDistToNpc(self, other)<2000) )
+		//||( Wld_DetectNpc(self,Balthasar_Sheep3,NOFUNC,-1) && (Npc_GetDistToNpc(self, other)<2000) )
+		(!Npc_IsDead(BalthasarSheep1) && !Npc_IsDead(BalthasarSheep2) && !Npc_IsDead(BalthasarSheep3))
+		||( Wld_DetectNpc(self,Sheep,NOFUNC,-1) && (Npc_GetDistToNpc(self, other)<2000) )
+		||( Wld_DetectNpc(self,Hammel,NOFUNC,-1) && (Npc_GetDistToNpc(self, other)<2000) )
+	)
+	{
+		AI_Output			(self, hero, "DIA_Balthasar_PERMKAP1_05_01"); //I can't complain. Thanks for asking.
+		AI_StopProcessInfos (self);
+	}
 	else
-			{
-				AI_Output			(self, hero, "DIA_Balthasar_PERMKAP1_05_02"); //These are bad times. I can't find my sheep!
-				if (Npc_IsDead(Sekob)== FALSE)
-				{
-					AI_Output			(self, hero, "DIA_Balthasar_PERMKAP1_05_03"); //I guess I'll have to fess up to Sekob.
-				};
-				AI_StopProcessInfos (self);
-				Npc_ExchangeRoutine	(self,"Start"); //Joly: falls er auf der 2. Weide bei Bengar ist.
-			};
+	{
+		AI_Output			(self, hero, "DIA_Balthasar_PERMKAP1_05_02"); //These are bad times. I can't find my sheep!
+		if (Npc_IsDead(Sekob)== FALSE)
+		{
+			AI_Output			(self, hero, "DIA_Balthasar_PERMKAP1_05_03"); //I guess I'll have to fess up to Sekob.
+		};
+		AI_StopProcessInfos (self);
+		if((Kapitel < 3) || (TOPIC_END_SekobDMT == TRUE))
+		{
+			Npc_ExchangeRoutine	(self,"Start"); //Joly: falls er auf der 2. Weide bei Bengar ist.
+		};
+	};
 };
 
 // ************************************************************

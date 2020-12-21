@@ -206,6 +206,7 @@ Angar has same weapon everywhere as in the Valley of Mines.
 Attila will become a "tough guy" after handing out the key to NH, and will not automatically die if beaten.
 Attila's name corrected from Attile.
 Balthasar can only be asked about Bengar's farm if NH has not yet spoken with Bengar.
+Balthasar won't think his sheep are missing unless some of them are actually dead, so he won't mention it when avoiding the seekers.
 Balthasar's sheep properly move to Bengar's farm with him, instead of being duplicated.
 Baltram can only be asked about Akils farm if NH does yet know how to find it.
 Bandit 10008 warns NH not to wake up Skinner only if he has not already done so.
@@ -237,6 +238,7 @@ Bosper will give the fake mining shares for free as he says.
 Bosper will take Ice Wolf Skin when delivering skins to him.
 Brandon quest cancels if he is killed.
 Bromor will take his dish back even after being possessed.
+Bronko will not return to work when mocked or threatened while the seekers are on the farm.
 Buster buys Shadowbeast Horns, even if NH does not know how to remove them.
 Buster gives reduced gold for each Shadowbeast Horn, though still more then regular merchants.
 Canthar properly sits on the chair when imprisoned.
@@ -426,7 +428,9 @@ Sarah gives a Rough Longsword instead of Pirate's Cutlass as the gift for not fr
 Saturas can be asked for equipment in Jharkendar, in which case he will point towards the house the water mages have taken for themselves.
 Saturas properly completes "The power of the guardians of the dead" when he tells NH about the chambers of Adanos.
 Sekob can't be told Rosi is back if she is dead.
-Sekob dialog no longer has option to go to talk to Onar if NH already talked with him.
+Sekob's dialog no longer has option to go to talk to Onar if NH already talked with him.
+Sekob's dialog no longer sends Balthasar back to his original spot after dealing with the seekers, unless he is on the farm.
+Sekob's dialog no longer sends Bronko to the field, unless NH already told him to go back to work.
 Sengrath will not have his trade inventory on his body once he's gone to the orc palisade.
 Sengrath will only start the dialog with NH after he has climbed up from the ramp.
 Senyan is told by NH that Esteban is dead, instead of giving him other news about Esteban.
@@ -446,6 +450,7 @@ Thekla now grants previously omitted XP bonus for defeating Bullco.
 Thorben does not immediately take Lehmar's book of debts, instead another dialog option is created just for giving the book.
 Thorus can be pickpocketed for his key.
 Thorus will move to intercept player even if the player does not talk to Garaz after killing Bloodwyn.
+Till won't move back to his usual spot when mocked while the seekers are on the farm.
 Torlof won't be asked about location of Bengar or Sekobs farm if NH already met them.
 Ulf does not randomly die in the beginning of chapter 3.
 Ulf smokes a joint as well instead of watching as NH smokes one.

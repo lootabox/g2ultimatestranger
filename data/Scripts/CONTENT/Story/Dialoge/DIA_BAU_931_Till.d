@@ -47,18 +47,17 @@ func void DIA_Till_HALLO_Info ()
 {
 	AI_Output			(other, self, "DIA_Till_HALLO_15_00"); //Well, kiddo?
 	AI_Output			(self, other, "DIA_Till_HALLO_03_01"); //That's no way for a farmhand to talk to me - just how often do I have to remind you?
-	B_StartOtherRoutine (Till,"Start"); 
 
 	Info_ClearChoices	(DIA_Till_HALLO);
-
-	if (Kapitel < 5)
+	Info_AddChoice	(DIA_Till_HALLO, "I'm not a field hand.", DIA_Till_HALLO_keinervoneuch );
+	if (Npc_IsDead(Sekob)== FALSE)
 	{
-		Info_AddChoice	(DIA_Till_HALLO, "I'm not a field hand.", DIA_Till_HALLO_keinervoneuch );
-	
-		if (Npc_IsDead(Sekob)== FALSE)
-		{
-			Info_AddChoice	(DIA_Till_HALLO, "Are you in charge here?", DIA_Till_HALLO_selber );
-		};
+		Info_AddChoice	(DIA_Till_HALLO, "Are you in charge here?", DIA_Till_HALLO_selber );
+	};
+
+	if((Kapitel < 3) || (TOPIC_END_SekobDMT == TRUE))
+	{
+		B_StartOtherRoutine (Till,"Start");
 	};
 };
 
