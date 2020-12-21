@@ -93,7 +93,7 @@ const string Cursor_Texture   = "CURSOR.TGA"; // Genutzte Textur, LeGo stellt ei
 //========================================
 // Buffs
 //========================================
-const int Buffs_DisplayForHero = 0;
+const int Buffs_DisplayForHero = 1;
 
 //========================================
 // Interface
@@ -130,5 +130,5 @@ const string DIAG_Suffix = "_";
 //========================================
 // Buffs
 //========================================
-const int Buff_FadeOut = 0; // Deactivate fade-out by setting this to 0
+const int Buff_FadeOut = 1; // Deactivate fade-out by setting this to 0
 
