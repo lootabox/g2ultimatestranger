@@ -550,8 +550,17 @@ func int oCInfoManager_GetInfo (var int npcInstance, var int herInstance, var in
 func void HookLootItems_Init() {
     const int oCItemContainer__RemoveItem_G2 = 7378144; // 0x7094E0
     const int oCNpc__DoTakeVob_G2 = 7621056; // 0x7449C0
-    HookEngineF(oCItemContainer__RemoveItem_G2, 6, _HookRemoveItem);
     HookEngineF(oCNpc__DoTakeVob_G2, 6, _HookDoTakeVob);
+    HookEngineF(oCItemContainer__RemoveItem_G2, 6, _HookRemoveItem);
+};
+
+func void _HookDoTakeVob()
+{
+    // Check for looted item(s)
+    var C_ITEM itm; itm = _^(MEM_ReadInt (ESP + 4));
+
+    // Update quest logs
+    B_PlayerLootedItem(itm);
 };
 
 func void _HookRemoveItem()
@@ -561,29 +570,19 @@ func void _HookRemoveItem()
     if(Hlp_Is_oCNpc(her.focus_vob)) {
         const int oCNpcInventory_inventory2_owner_offset_G2 = 160; // 0x0704 - 0x0668
         var C_NPC npc; npc = _^(MEM_ReadInt(ECX + oCNpcInventory_inventory2_owner_offset_G2));
-        Print(ConcatStrings("Took item from ", npc.name));
 
-        // check for steal
+        // Update quest logs
+        B_PlayerLootedNpc(npc);
+
+        // check for steal (npc)
     } else {
-        Print("Took item from container");
+        // check for steal (chest)
     };
 
-    // Check for looted item(s)
-    var C_ITEM itm; itm = _^(MEM_ReadInt (ESP + 4));
-    Print(ConcatStrings("Item: ", itm.name));
-
-    B_PlayerLootedItem(itm);
+    _HookDoTakeVob();
 
     // Close inventory (crashes)
     //CALL__thiscall(_@(npc), oCNpc__CloseInventory);
-};
-
-func void _HookDoTakeVob()
-{
-    // Check for looted item(s)
-    var C_ITEM itm; itm = _^(MEM_ReadInt (ESP + 4));
-    Print(ConcatStrings("Picked up ", itm.name));
-    B_PlayerLootedItem(itm);
 };
 
 

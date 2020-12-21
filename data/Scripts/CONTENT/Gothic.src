@@ -60,6 +60,7 @@ STORY\Log_Entries\B_Checklog.d
 STORY\B_Story\B_GivePlayerXP.d
 STORY\B_Content\B_SCUsesRake.d
 STORY\B_CONTENT\B_PlayerLootedItem.d
+STORY\B_CONTENT\B_PlayerLootedNpc.d
 
 AI\MAGIC\B_MagicHurtNpc.d
 
