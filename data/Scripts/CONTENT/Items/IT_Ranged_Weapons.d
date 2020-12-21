@@ -1,26 +1,3 @@
-// *************************
-// unbenutzte Item - Visuals
-// *************************
-
-//ItRw_Bow_War_04	// Dämonenbogen, Todbringer
-//ItRw_Bow_War_03	// Sturmbogen
-//ItRw_Bow_War_02	// Orkhetzer
-//ItRw_Bow_War_01	// Kriegsbogen
-//ItRw_Bow_Long_08	// Nimroder, Hornbogen
-//ItRw_Bow_Long_07	// Armeebogen
-//ItRw_Bow_Long_06	// Windbrecher
-//ItRw_Bow_Long_05	// Wolfsfetzer
-//ItRw_Bow_Long_04	// Eichenbogen
-//ItRw_Bow_Long_03	// Weidenbogen
-//ItRw_Bow_Long_02	// Heckenbogen
-//ItRw_Bow_Long_01	// Langbogen
-//ItRw_Bow_Small_05	// Knochenbogen
-//ItRw_Bow_Small_04	// Jagdbogen
-//ItRw_Bow_Small_03	// Feldbogen
-//ItRw_Bow_Small_02	// Reiterbogen
-//ItRw_Bow_Small_01	// Kurzbogen 
-
-
 
 //Munition
 
@@ -183,7 +160,7 @@ instance ItRw_Bow_L_03 (C_Item)
 
 	cond_atr[2]   		= 	ATR_DEXTERITY;
 	cond_value[2]  		= 	Condition_Jagdbogen;
-	visual 				=	"ItRw_Bow_M_01.mms";
+	visual 				=	"ItRw_Bow_L_03.mms";
 
 	description			= name;
 	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
@@ -207,7 +184,7 @@ instance ItRw_Bow_L_04 (C_Item)
 
 	cond_atr[2]   		= 	ATR_DEXTERITY;
 	cond_value[2]  		= 	Condition_Ulmenbogen;
-	visual 				=	"ItRw_Bow_M_02.mms";
+	visual 				=	"ItRw_Bow_L_04.mms";
 
 	description			= name;
 	TEXT[2]				= NAME_Dam_Point;				COUNT[2]	= damageTotal;
