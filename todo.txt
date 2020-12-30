@@ -780,22 +780,18 @@ Disable item pickup during combat
 
 ------------------------------------------------------------------------------------- Special weapons
 
-guild weapons			+20 vs undead/draconic
-Ore Dragon Slayer		dmg 80 (from 90)
-Large Ore Dragon Slayer	dmg 100 (from 110)
+Ore Dragon Slayer		dmg 90 [+10 vs dragonic]
+Wrath of Innos			dmg 80 [+20 vs evil]
+Blessed Ore Blade		dmg 70 [+10 vs evil]
+Magic Ore Blade (1h)	dmg 60
 
-Krush Morok				dmg 60 (from 50)
-Krush Morok				str 80 (from 70)
-
-Torturer's Axe			2h (from 1h)
-Torturer's Axe			dmg 50 (from 65)
+Large Ore Dragon Slayer	dmg 110 [+10 vs dragonic]
+Holy Executioner		dmg 100 [+20 vs evil]
+Sword of the Order		dmg 85 [+10 vs evil]
+Magic Ore Blade (2h)	dmg 70
 
 Rune Power				Remove from Jharkendar
-
-Ruby Blade				dmg 40 (from 50)
 Ruby Blade				Add to Valley of Mines swamp dragon cache
-
-Stormbringer			dmg 60 (from 75)
 
 Paladin's Two-Hander	Give for joining paladins instead if 2h > 1h
 
@@ -806,35 +802,31 @@ Wind Cudgel				2h (from 1h)
 Wind Cudgel				Rename to Large Cudgel
 Wind Cudgel				make 1st 2h wpn
 
-Dragon Slicer			dmg 60 (from 80)
-
-Orc Slayer				dmg 50 (from 65)
-
 
 1h str
 ?	Rune Sword				Block spell
-J/V	Ruby Blade				Critical hits deal magic fire damage.
-K	Paladin's Broadsword	+20 vs undead
-K	Orc Slayer				+20 vs orcs
-K	Wolf's Tooth			+20 vs wolf's prey (sheep, scavenger, rats, molerats)
-V	Inquisitor				+20 vs evil
-V	Raven's Beak			+20 vs armored	(dmg 50 from 58)
+J/V	Ruby Blade				Magic fire damage on critical hits: 50
+K	Paladin's Broadsword	+10 vs undead
+K	Orc Slayer				+10 vs orcs
+K	Wolf's Tooth			+10 vs wolf's prey (sheep, scavenger, rats, molerats)
+K	Skullsplitter			+10 vs humans
+V	Raven's Beak			+10 vs weak to lightning
+
 
 1h dex					Fighter stance (+1 combo)
 V	Master Sword			True master stance (+2 combo)
-J	Pirate's Cutlass		Doubled critical hit chance.
+K	Wolf Knife				+10 vs wolf (dmg 8)
 
 2h
--	Krush Morok				+20 vs humans
-J	Storm Cudgel			+20 during rain
-J	Heavy Pirate's Cutlass	Doubled critical hit chance.
-J/K	Heavy Cutlass			Doubled critical hit chance.
+-	Krush Morok				+10 vs humans (dmg 60 from 50, str 80 from 70)
+-	Old Battle Blade		+10 vs the living
+J	Storm Cudgel			+10 vs weak to lightning
 J/K	Novice' / Ring of Water' Quarterstaff	+10/+5 mana
-K	Paladin's Two-Hander	+20 vs undead
-K	Dragon slicer			+20 vs draconic
-K/V	Torturer's Axe			+20 vs non-evil
+K	Paladin's Two-Hander	+10 vs undead
+K	Dragon slicer			+10 vs draconic (dmg 70 from 80)
+K/V	Torturer's Axe			+10 vs non-evil
 V	Rune Power				Block spell
-V	Stormbringer			Critical hits deal magic lightning damage.
+V	Stormbringer			Magic lightning damage on critical hits: 75
 
 
 ------------------------------------------------------------------------------------- Smithing
