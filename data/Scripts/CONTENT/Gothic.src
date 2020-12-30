@@ -84,6 +84,7 @@ AI\HUMAN\C_Human\C_NpcIsWeakToWater.d
 AI\HUMAN\C_Human\C_NpcIsImmuneToMindSpells.d
 AI\HUMAN\C_Human\C_NpcIgnoresTransform.d
 
+UltimateStranger\oCVisualFX.d
 UltimateStranger\damage.d
 
 STORY\B_GiveTradeInv\B_ClearRuneInv.d
