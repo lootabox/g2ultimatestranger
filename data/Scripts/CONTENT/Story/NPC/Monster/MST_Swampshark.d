@@ -9,6 +9,8 @@ PROTOTYPE Mst_Default_Swampshark(C_Npc)
 	guild							=	GIL_SWAMPSHARK;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SWAMPSHARK;
 	level							=	24;
+	
+	bodyStateInterruptableOverride	=	TRUE;
 
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	120; //160
