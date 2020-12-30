@@ -320,7 +320,7 @@ func void Spell_Cast_Focus(var C_NPC slf, var C_NPC oth, var int spellID, var in
 	// Calculate and apply damage
 	if (coll & COLL_APPLYDOUBLEDAMAGE)	{ spellDamage *= 2; };
 	if (coll & COLL_APPLYHALVEDAMAGE)	{ spellDamage /= 2; };
-	var int dmg; dmg = Handle_Magic_Dmg(slf, oth, spellID, spellDamage);
+	var int dmg; dmg = DMG_Calculate_Magic(slf, oth, spellID, spellDamage);
 	if (dmg > 0) { B_MagicHurtNpc(slf, oth, dmg); };
 
 	// Play vfx

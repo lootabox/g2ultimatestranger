@@ -1,5 +1,5 @@
 
-// https://forum.worldofplayers.de/forum/threads/1149697-Script-Eigene-Schadensberechnung
+// https://forum.worldofplayers.de/forum/threads/1149697-Script-Eigene-Schadensberechnung?p=26611509&viewfull=1#post26611509
 
 class oSDamageDescriptor {
 	var int validFields; 		// zDWORD 0x00
@@ -44,7 +44,23 @@ class oSDamageDescriptor {
 	var int visualFX;			// zCVisualFX* 0x110
 };
 
-func int Check_Spell_Block(var c_npc vic, var int spellID) {
+func int DMG_Apply_Damage(var c_npc att, var c_npc vic, var int dmgBefore, var int dmgAfter) {
+	if (Npc_IsPlayer(att)) {
+		// Hero has no minimum damage
+		if (dmgAfter > 0)	{ return dmgAfter; }
+		else				{ return 0; };
+	} else {
+		// Calculate NPC minimum damage
+		var int dmgMin; dmgMin = dmgBefore * NPC_MINIMAL_PERCENT / 100;
+		if (dmgMin < NPC_MINIMAL_DAMAGE) { dmgMin = NPC_MINIMAL_DAMAGE; };
+
+		// Check whether to use minimum damage
+		if (dmgMin < dmgAfter)	{ return dmgAfter; }
+		else					{ return dmgMin; };
+	};
+};
+
+func int DMG_Check_Spell_Block(var c_npc vic, var int spellID) {
 	// Only player can block spells
 	if (Npc_IsPlayer(vic))
 	{
@@ -83,12 +99,9 @@ func int Check_Spell_Block(var c_npc vic, var int spellID) {
 	return FALSE;
 };
 
-func int Handle_Melee_Dmg(var c_npc att, var c_npc vic) {
-	// If melee weapon was used, it should be readied when dealing damage
-	var c_item wpn; wpn = Npc_GetReadiedWeapon(att);
-	
-	// Get base weapon damage
-	var int dmg; dmg = wpn.damageTotal;
+func int DMG_Calculate_Melee(var c_npc att, var c_npc vic, var c_item wpn, var int bHasHit) {
+	// Get base weapon damage + stat
+	var int dmg; dmg = wpn.damageTotal + att.attribute[ATR_STRENGTH];
 	
 	// Check for weapon specials
 	/* if ( 		wpn.weight == Value_Orkschlaechter_Weapon_ID && (vic.guild == GIL_ORC || vic.guild == GIL_UNDEADORC) ) {
@@ -105,9 +118,6 @@ func int Handle_Melee_Dmg(var c_npc att, var c_npc vic) {
 		dmg += Value_Inquisitor_BonusDmg;
 	}; */
 
-	// Add stat
-	dmg += att.attribute[ATR_STRENGTH];
-
 	// Get protection (when attacked with a weapon humans always use PROT_POINT / weapon protection and non-humans go according to weapon damage type)
 	var int prot;
 	if 		vic.guild < GIL_SEPERATOR_HUM	{ prot = vic.protection[PROT_POINT]; }
@@ -121,11 +131,12 @@ func int Handle_Melee_Dmg(var c_npc att, var c_npc vic) {
 	// Handle water protection
 	if (C_BodyStateContains(vic, BS_SWIM)) || (C_BodyStateContains(vic, BS_DIVE)) { prot *= 2; };
 
-	// Reduce protection
-	dmg -= prot;
-
-Print(ConcatStrings(ConcatStrings(att.name," - "),wpn.name));
 var string pristr; pristr = IntToString(dmg);
+
+	// Handle protection and minimum damage
+	dmg = DMG_Apply_Damage(att, vic, dmg, dmg - prot);
+
+pristr = ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg)));
 
 	// Handle combo (10% + 10%/cc)
 	if (Npc_IsPlayer(att))
@@ -137,26 +148,33 @@ var string pristr; pristr = IntToString(dmg);
 		dmg = dmg / 2; // divide by 2 for crit
 	};
 
+pristr = ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg)));
+
 	// Check for crit
-	var int skill; skill = 0;
-	if		(wpn.flags & ITEM_SWD 		|| wpn.flags & ITEM_AXE)		{ skill = att.hitChance[NPC_TALENT_1H]; }
-	else if	(wpn.flags & ITEM_2HD_SWD 	|| wpn.flags & ITEM_2HD_AXE)	{ skill = att.hitChance[NPC_TALENT_2H]; };
-	if (r_Max(99) < skill) { dmg *= 2; }; // crit doubles damage
+	if (bHasHit) { dmg *= 2; }; // crit doubles damage
 
 Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 	return dmg;
 };
 
-func int Handle_Fist_Dmg(var c_npc att, var c_npc vic) {
-	// Handle protection and calculate damage
+func int DMG_Calculate_Fist(var c_npc att, var c_npc vic) {
+	// Get damage and protection
 	var int dmg; dmg = att.attribute[ATR_STRENGTH];
+	var int prot;
 	if		(att.damage[DAM_INDEX_FIRE] > 0) ||
-			(att.damagetype & DAM_FIRE)		{ dmg -= vic.protection[PROT_FIRE]; }
-	else if	(att.damagetype & DAM_EDGE)		{ dmg -= vic.protection[PROT_EDGE]; }
-	else if	(att.damagetype & DAM_BLUNT)	{ dmg -= vic.protection[PROT_BLUNT]; }
-	else if	(att.damagetype & DAM_POINT)	{ dmg -= vic.protection[PROT_POINT]; }
-	else if	(att.damagetype & DAM_MAGIC)	{ dmg -= vic.protection[PROT_MAGIC]; }
-	else									{ dmg -= vic.protection[PROT_BLUNT]; }; // failsafe
+			(att.damagetype & DAM_FIRE)		{ prot = vic.protection[PROT_FIRE]; }
+	else if	(att.damagetype & DAM_EDGE)		{ prot = vic.protection[PROT_EDGE]; }
+	else if	(att.damagetype & DAM_BLUNT)	{ prot = vic.protection[PROT_BLUNT]; }
+	else if	(att.damagetype & DAM_POINT)	{ prot = vic.protection[PROT_POINT]; }
+	else if	(att.damagetype & DAM_MAGIC)	{ prot = vic.protection[PROT_MAGIC]; }
+	else									{ prot = vic.protection[PROT_BLUNT]; }; // failsafe
+
+var string pristr; pristr = IntToString(dmg);
+
+	// Handle protection and minimum damage
+	DMG_Apply_Damage(att, vic, dmg, dmg - prot);
+
+Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 
 	// Bloodfly / Swampdrone venom
 	if (att.aivar[AIV_MM_REAL_ID] == ID_BLOODFLY || att.aivar[AIV_MM_REAL_ID] == ID_SWAMPDRONE)
@@ -164,7 +182,7 @@ func int Handle_Fist_Dmg(var c_npc att, var c_npc vic) {
 		dot_venom_apply(vic, att.damage[DAM_INDEX_EDGE], att);
 	};
 	// Fire lizard / dragon breath
-	if (dmg > 1 && (att.aivar[AIV_MM_REAL_ID] == ID_FIREWARAN || att.guild == GIL_DRAGON))
+	if (dmg > 0 && (att.aivar[AIV_MM_REAL_ID] == ID_FIREWARAN || att.guild == GIL_DRAGON))
 	{
 		var int fireDot; fireDot = dmg;
 		dot_burn_apply(vic, fireDot, 4, att);
@@ -173,7 +191,7 @@ func int Handle_Fist_Dmg(var c_npc att, var c_npc vic) {
 	return dmg;
 };
 
-func int Handle_Magic_Dmg(var c_npc att, var c_npc vic, var int spellID, var int dmg) {
+func int DMG_Calculate_Magic(var c_npc att, var c_npc vic, var int spellID, var int dmg) {
 var string pristr; pristr = IntToString(dmg);
 
 	// Get protection amount
@@ -314,58 +332,88 @@ Print(ConcatStrings(pristr, ConcatStrings(" -> ", IntToString(dmg))));
 	return dmg;
 };
 
-func int DMG_OnDmg(var int victimPtr, var int attackerPtr, var int dmg, var int dmgDescriptorPtr) {
-	var c_npc vic; vic = _^(victimPtr);
-	var oSDamageDescriptor dmgDesc; dmgDesc = _^(dmgDescriptorPtr);
+func int DMG_Calculate(var c_npc att, var c_npc vic, var oSDamageDescriptor dmgDesc, var int bHasHit) {
+	/** Weapon modes:
+		None (0x01, for spells check spellId instead)
+		Fist (0x01)
+		Melee (0x02)
+		Ranged (0x04)
+	*/
+	if (dmgDesc.spellId > 0) {
+		if (DMG_Check_Spell_Block(vic, dmgDesc.spellID))
+		{
+			Wld_PlayEffect("spellFX_Block_Suck",vic,vic,0,0,0,FALSE);
+			return 0;
+		};
+		return DMG_Calculate_Magic(att, vic, dmgDesc.spellId, dmgDesc.dmgArray[DAM_INDEX_BARRIER] + dmgDesc.dmgArray[DAM_INDEX_FLY] + dmgDesc.dmgArray[DAM_INDEX_MAGIC]);
+	}
+	else if (dmgDesc.weaponMode == 1) {
+		return DMG_Calculate_Fist(att, vic);
+	}
+	else if (dmgDesc.weaponMode == 2) {
+		if (Hlp_Is_oCItem(dmgDesc.itemWeapon)) {
+			var c_item wpn; wpn = _^(dmgDesc.itemWeapon);
+			return DMG_Calculate_Melee(att, vic, wpn, bHasHit);
+		} else {
+			Print("ERROR: Could not find weapon for melee attack!");
+			return 0;
+		};
+	};
+	/* else if (dmgDesc.weaponMode == 4) {
+		if (Hlp_Is_oCItem(dmgDesc.itemWeapon)) {
+			var c_item projectile; projectile = _^(dmgDesc.itemWeapon);
+			if (Npc_HasReadiedRangedWeapon(att))		{ DMG_Calculate_Ranged(att, vic, Npc_GetReadiedWeapon(att)); }
+			else if (Npc_HasEquippedRangedWeapon(att))	{ DMG_Calculate_Ranged(att, vic, Npc_GetEquippedRangedWeapon(att)); }
+			else										{ Print("ERROR: Could not find weapon for ranged attack!"); };
+		};
+	}; */
 
-	// Damage calculations
+	Print("ERROR: Unknown damage calculation!");
+	return 0;
+};
+
+func int DMG_OnDmg(var int victimPtr, var int attackerPtr, var int dmg, var int dmgDescriptorPtr, var int bHasHit) {
+	if (!victimPtr) { return dmg; };
+	var oSDamageDescriptor dmgDesc; dmgDesc = _^(dmgDescriptorPtr);
+	if (dmgDesc.dmgMode == DAM_FALL) { return dmg; };
+
+	//Print (ConcatStrings ("weaponMode is: ", IntToString (dmgDesc.weaponMode)));
+	//Print (ConcatStrings ("damageMode is: ", IntToString (dmgDesc.dmgMode)));
+	//Print (ConcatStrings ("itemWeapon is: ", IntToString (dmgDesc.itemWeapon)));
+
+	// Check if damage came from a PFX
+	const int dmgIsPFX = FALSE;
+	if (dmgDesc.hitPfx && dmgDesc.spellId <= 0) {
+		Print("Heyo");
+		var oCVisualFX visFx; visFx = _^(dmgDesc.hitPfx);
+
+		// If we still have no attacker, try to take him from PFX inflictor (e.g. AoE spells)
+		if (!attackerPtr) {
+			Print("Heyo 2");
+			attackerPtr = visFx.inflictor;
+		};
+
+		dmgIsPFX = TRUE;
+	};
+
 	if (attackerPtr) {
 		var c_npc att; att = _^(attackerPtr);
+		var c_npc vic; vic = _^(victimPtr);
 
-		// Weapon was associated with attack -> was melee/ranged attack
-		if (dmgDesc.itemWeapon)
-		{
-			// var oCItem wpn; wpn = _^(dmgDesc.itemWeapon);
-			// if (wpn.mainflag == ITEM_KAT_MUN) { dmg = Handle_Ranged_Dmg(att, vic); };
-			if (Npc_HasReadiedMeleeWeapon(att))	{ dmg = Handle_Melee_Dmg(att, vic); };
-		}
-		// Magic
-		else if (dmgDesc.spellLevel > 0) //(dmgDesc.spellID >= 0)
-		{
-			if (Check_Spell_Block(vic, dmgDesc.spellID))
-			{
-				Wld_PlayEffect("spellFX_Block_Suck",vic,vic,0,0,0,FALSE);
-				return 0;
-			};
-			dmg = Handle_Magic_Dmg(att, vic, dmgDesc.spellID, dmgDesc.dmgArray[DAM_INDEX_BARRIER] + dmgDesc.dmgArray[DAM_INDEX_FLY] + dmgDesc.dmgArray[DAM_INDEX_MAGIC]);
-		}
-		// Fist responsibly
-		else if (Npc_IsInFightMode(att, FMODE_FIST))
-		{
-			dmg = Handle_Fist_Dmg(att, vic);
+		// Invoke custom damage calculation if not PFX
+		if (!dmgIsPFX) {
+			dmg = DMG_Calculate(att, vic, dmgDesc, bHasHit);
 		};
-		if (dmg < 0) { dmg = 0; };
 	};
 
 	return dmg;
 };
 
-
-var int _DMG_DmgDesc;
 func void _DMG_OnDmg_Post() {
-	EDI = DMG_OnDmg(EBP, MEM_ReadInt(MEM_ReadInt(ESP+644)+8), EDI, _DMG_DmgDesc);
-};
-func void _DMG_OnDmg_Hit() {
-	_DMG_DmgDesc = ESI; // I'm preeeeetty sure it won't get moved in the meantime...
-	if (_DMG_DmgDesc)
-	{
-		Var oSDamageDescriptor dmgDesc; dmgDesc = _^(_DMG_DmgDesc);
-	};
+	const int dmgDesc = 0;	dmgDesc = MEM_ReadInt((ESP + 640) + 4 /* &oSDamageDescriptor */); // oCNpc :: OnDamage_Hit ( oSDamageDescriptor& descDamage )
+	const int bHasHit = 0;	bHasHit = MEM_ReadInt((ESP + 640) - 356 /* zBOOL bHasHit */);
+	EDI = DMG_OnDmg(EBP, MEM_ReadInt(dmgDesc+8), EDI, dmgDesc, bHasHit);
 };
 func void InitCustomDamageHook() {
-	const int dmg = 0;
-	if (dmg) { return; };
 	HookEngineF(6736583/*0x66CAC7*/, 5, _DMG_OnDmg_Post);
-	HookEngineF(6710800/*0x666610*/, 7, _DMG_OnDmg_Hit);
-	dmg = 1;
 };
