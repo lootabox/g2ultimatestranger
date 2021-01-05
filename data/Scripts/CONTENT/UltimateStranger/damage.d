@@ -212,10 +212,11 @@ var string pristr; pristr = IntToString(dmg);
 	||	(spellID == SPL_Firerain)
 	{
 		// Check fire staff bonus
-		if (Hlp_IsValidItem(wpn))
-		{
-			if (!Buff_Has(vic, dot_burn)) {
-				dmg = dmg * (100 + Bonus_Stab01) / 100;
+		if (Hlp_IsValidItem(wpn)) {
+			if (Hlp_IsItem(wpn, ItMW_Addon_Stab01)) {
+				if (!Buff_Has(vic, dot_burn)) {
+					dmg = dmg * (100 + Bonus_Stab01) / 100;
+				};
 			};
 		};
 
@@ -228,14 +229,12 @@ var string pristr; pristr = IntToString(dmg);
 		var int fireDot; fireDot = dmg / 2; dmg -= fireDot;
 
 		// Play burn FX on corpses for flavor in any case
-		if (dmg >= vic.attribute[ATR_HITPOINTS])
-		{
+		if (dmg >= vic.attribute[ATR_HITPOINTS]) {
 			Wld_StopEffect_Ext("VOB_BURN", vic, vic, FALSE);
 			Wld_PlayEffect ("VOB_BURN", vic, vic, 0, 0, 0, FALSE);
 		}
 		// Create dot debuff
-		else if (fireDot > 0)
-		{
+		else if (fireDot > 0) {
 			dot_burn_apply(vic, fireDot, BURN_DOT_VFX_DURATION_SEC, att);
 pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(fireDot)));
 		};
@@ -259,15 +258,12 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(fireDot)));
 			// Calculate freeze dot
 			var int freezeDot; freezeDot = SPL_FREEZE_DAMAGE;
 			var int freezeDuration; freezeDuration = dmg / freezeDot;
-			if	(!C_NpcIsLarge(vic) && freezeDuration > 0)
-			{
+			if	(!C_NpcIsLarge(vic) && freezeDuration > 0) {
 				// Initialize freeze effect duration and reduce dot from dmg
 				vic.aivar[AIV_FreezeStateTime] = SPL_FREEZE_TIME - freezeDuration;
 				dmg -= freezeDot * freezeDuration;
 pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot * freezeDuration)));
-			}
-			else
-			{
+			} else {
 				// Bypass freeze effect
 				vic.aivar[AIV_FreezeStateTime] = SPL_FREEZE_TIME + 1;
 			};
@@ -381,29 +377,30 @@ func int DMG_OnDmg(var int victimPtr, var int attackerPtr, var int dmg, var int 
 	//Print (ConcatStrings ("damageMode is: ", IntToString (dmgDesc.dmgMode)));
 	//Print (ConcatStrings ("itemWeapon is: ", IntToString (dmgDesc.itemWeapon)));
 
-	// Check if damage came from a PFX
-	const int dmgIsPFX = FALSE;
+	// If there is hitPfx but no spellId, probably AoE spell _SPREAD hitting other NPCs after a direct hit on NPC with the original projectile
 	if (dmgDesc.hitPfx && dmgDesc.spellId <= 0) {
-		Print("Heyo");
-		var oCVisualFX visFx; visFx = _^(dmgDesc.hitPfx);
+		var oCVisualFX hitPfx; hitPfx = _^(dmgDesc.hitPfx);
+		Print (ConcatStrings ("hitPfx_fxName is:", hitPfx.fxName));
+		//Print (ConcatStrings ("oCVisualFX__GetLevel is: ", IntToString (oCVisualFX__GetLevel(_@(hitPfx.parent)))));
 
 		// If we still have no attacker, try to take him from PFX inflictor (e.g. AoE spells)
 		if (!attackerPtr) {
-			Print("Heyo 2");
-			attackerPtr = visFx.inflictor;
+			attackerPtr = hitPfx.inflictor;
 		};
 
-		dmgIsPFX = TRUE;
+		// Set lost spell ID for AoE spells, based on hitPfx.
+		if (Hlp_StrCmp(hitPfx.fxName, "spellFX_Firestorm_SPREAD")) {
+			dmgDesc.spellId = SPL_Firestorm;
+		} else if (Hlp_StrCmp(hitPfx.fxName, "spellFX_Pyrokinesis_SPREAD")) {
+			dmgDesc.spellId = SPL_Pyrokinesis;
+		};
 	};
 
 	if (attackerPtr) {
 		var c_npc att; att = _^(attackerPtr);
 		var c_npc vic; vic = _^(victimPtr);
 
-		// Invoke custom damage calculation if not PFX
-		if (!dmgIsPFX) {
-			dmg = DMG_Calculate(att, vic, dmgDesc, bHasHit);
-		};
+		return DMG_Calculate(att, vic, dmgDesc, bHasHit);
 	};
 
 	return dmg;
