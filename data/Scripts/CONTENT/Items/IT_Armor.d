@@ -1396,11 +1396,11 @@ INSTANCE ITAR_KDF_L (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	40;
-	protection [PROT_BLUNT] = 	40;
-	protection [PROT_POINT] = 	40;
-	protection [PROT_FIRE] 	= 	10;
-	protection [PROT_MAGIC] = 	20;
+	protection [PROT_EDGE]	=	30;
+	protection [PROT_BLUNT] = 	30;
+	protection [PROT_POINT] = 	30;
+	protection [PROT_FIRE] 	= 	0;
+	protection [PROT_MAGIC] = 	10;
 
 	value 					=	VALUE_ITAR_KDF_L;
 
@@ -1416,8 +1416,7 @@ INSTANCE ITAR_KDF_L (C_Item)
 	
 	description				=	name;
 	
-	TEXT[0]					=	"Protection bonus upon reaching the fourth Circle:";
-	COUNT[0]				= 	20;
+	TEXT[0]					=	"Protection is improved for each known Circle.";
 
 	TEXT[2]					=	NAME_Prot_Edge;			
 	COUNT[2]				= 	protection	[PROT_EDGE];
@@ -1425,8 +1424,8 @@ INSTANCE ITAR_KDF_L (C_Item)
 	TEXT[1]					=	NAME_Prot_Point;		
 	COUNT[1]				= 	protection	[PROT_POINT];
 	
-	TEXT[4] 				=	NAME_Prot_Fire;			
-	COUNT[4]				= 	protection	[PROT_FIRE];
+	//TEXT[4] 				=	NAME_Prot_Fire;			
+	//COUNT[4]				= 	protection	[PROT_FIRE];
 	
 	TEXT[3]					=	NAME_Prot_Magic;		
 	COUNT[3]				= 	protection	[PROT_MAGIC];
@@ -1434,52 +1433,59 @@ INSTANCE ITAR_KDF_L (C_Item)
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
-FUNC VOID Equip_ITAR_KDF_L()
-{
+FUNC INT Bonus_ITAR_KDF(var int tier) {
+	if		(tier == 1)	{ return 5; }	// +5
+	else if	(tier == 2)	{ return 10; }	// +5
+	else if	(tier == 3)	{ return 20; }	// +10
+	else if	(tier == 4)	{ return 30; }	// +10
+	else if	(tier == 5)	{ return 35; }	// +5
+	else if	(tier == 6)	{ return 40; }	// +5
+	else				{ return 0; };
+};
+FUNC VOID Equip_ITAR_KDF_L() {
+	var int circle; circle = Npc_GetTalentSkill(self, NPC_TALENT_MAGE);
+	var int bonus; bonus = Bonus_ITAR_KDF(circle);
+
+	self.protection[PROT_EDGE]  += bonus;
+	self.protection[PROT_BLUNT] += bonus;
+	self.protection[PROT_POINT] += bonus;
+	self.protection[PROT_MAGIC] += bonus;
+	if (bonus > 10) { self.protection[PROT_FIRE] += (bonus - 10); };
+
+	Npc_GetInvItem(self, ITAR_KDF_L);
+	item.COUNT[1] = item.protection[PROT_POINT] + bonus;
+	item.COUNT[2] = item.protection[PROT_EDGE] + bonus;
+	item.COUNT[3] = item.protection[PROT_MAGIC] + bonus;
+	if (bonus > 10) {
+		item.TEXT[4] = NAME_Prot_Fire;
+		item.COUNT[4] = item.protection[PROT_FIRE] + (bonus - 10);
+	};
+	
 	if Npc_IsPlayer (self)
 	{
-		KDFArmor_Equipped = TRUE;
-		
-		if (KDF01_Equipped == TRUE)
-		{
-			self.protection[PROT_EDGE] 	+= BA_Bonus01;
-			self.protection[PROT_BLUNT] += BA_Bonus01;
-			self.protection[PROT_POINT] += BA_Bonus01;
-			self.protection[PROT_MAGIC] += BA_Bonus01;
-			self.protection[PROT_FIRE] 	+= BA_Bonus01;
-		};
-	};
-
-	if (Npc_GetTalentSkill(self, NPC_TALENT_MAGE) >= 4) {
-		self.protection[PROT_EDGE] 	+= 20;
-		self.protection[PROT_BLUNT] += 20;
-		self.protection[PROT_POINT] += 20;
-		self.protection[PROT_MAGIC] += 20;
-		self.protection[PROT_FIRE] 	+= 20;
+		KDFArmor_Equipped = circle;
 	};
 };
-FUNC VOID UnEquip_ITAR_KDF_L()
-{
+FUNC VOID UnEquip_ITAR_KDF_L() {
+	var int circle; circle = KDFArmor_Equipped;
+	var int bonus; bonus = Bonus_ITAR_KDF(circle);
+
+	self.protection[PROT_EDGE]  -= bonus;
+	self.protection[PROT_BLUNT] -= bonus;
+	self.protection[PROT_POINT] -= bonus;
+	self.protection[PROT_MAGIC] -= bonus;
+	if (bonus > 10) { self.protection[PROT_FIRE] -= (bonus - 10); };
+	
+	Npc_GetInvItem(self, ITAR_KDF_L);
+	item.COUNT[1] = item.protection[PROT_POINT];
+	item.COUNT[2] = item.protection[PROT_EDGE];
+	item.COUNT[3] = item.protection[PROT_MAGIC];
+	item.COUNT[4] = item.protection[PROT_FIRE];
+	item.TEXT[4] = "";
+
 	if Npc_IsPlayer (self)
 	{
-		KDFArmor_Equipped = FALSE;
-	
-		if (KDF01_Equipped == TRUE)
-		{
-			self.protection[PROT_EDGE] 	-= BA_Bonus01;
-			self.protection[PROT_BLUNT] -= BA_Bonus01;
-			self.protection[PROT_POINT] -= BA_Bonus01;
-			self.protection[PROT_MAGIC] -= BA_Bonus01;
-			self.protection[PROT_FIRE] 	-= BA_Bonus01;
-		};
-	};
-
-	if (Npc_GetTalentSkill(self, NPC_TALENT_MAGE) >= 4) {
-		self.protection[PROT_EDGE] 	-= 20;
-		self.protection[PROT_BLUNT] -= 20;
-		self.protection[PROT_POINT] -= 20;
-		self.protection[PROT_MAGIC] -= 20;
-		self.protection[PROT_FIRE] 	-= 20;
+		KDFArmor_Equipped = 0;
 	};
 };
 // ******************************************************
@@ -1490,11 +1496,11 @@ INSTANCE ITAR_KDF_H (C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	70;
-	protection [PROT_BLUNT] = 	70;
-	protection [PROT_POINT] = 	70;
-	protection [PROT_FIRE] 	= 	30;
-	protection [PROT_MAGIC] = 	50;
+	protection [PROT_EDGE]	=	60;
+	protection [PROT_BLUNT] = 	60;
+	protection [PROT_POINT] = 	60;
+	protection [PROT_FIRE] 	= 	20;
+	protection [PROT_MAGIC] = 	40;
 
 	value 					=	VALUE_ITAR_KDF_H;
 
@@ -1510,8 +1516,7 @@ INSTANCE ITAR_KDF_H (C_Item)
 	
 	description				=	name;
 	
-	TEXT[0]					=	"Protection bonus upon reaching the sixth Circle:";
-	COUNT[0]				= 	10;
+	TEXT[0]					=	"Protection is improved for each known higher Circle.";
 
 	TEXT[2]					=	NAME_Prot_Edge;			
 	COUNT[2]				=	 protection	[PROT_EDGE];
@@ -1528,52 +1533,46 @@ INSTANCE ITAR_KDF_H (C_Item)
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
-FUNC VOID Equip_ITAR_KDF_H()
-{
+FUNC VOID Equip_ITAR_KDF_H() {
+	var int circle; circle = Npc_GetTalentSkill(self, NPC_TALENT_MAGE);
+	var int bonus; bonus = Bonus_ITAR_KDF(circle - 3);
+
+	self.protection[PROT_EDGE]  += bonus;
+	self.protection[PROT_BLUNT] += bonus;
+	self.protection[PROT_POINT] += bonus;
+	self.protection[PROT_MAGIC] += bonus;
+	self.protection[PROT_FIRE]  += bonus;
+
+	Npc_GetInvItem(self, ITAR_KDF_H);
+	item.COUNT[1] = item.protection[PROT_POINT] + bonus;
+	item.COUNT[2] = item.protection[PROT_EDGE] + bonus;
+	item.COUNT[3] = item.protection[PROT_MAGIC] + bonus;
+	item.COUNT[4] = item.protection[PROT_FIRE] + bonus;
+
 	if Npc_IsPlayer (self)
 	{
-		KDFArmor_Equipped = TRUE;
-		
-		if (KDF01_Equipped == TRUE)
-		{
-			self.protection[PROT_EDGE] 	+= BA_Bonus01;
-			self.protection[PROT_BLUNT] += BA_Bonus01;
-			self.protection[PROT_POINT] += BA_Bonus01;
-			self.protection[PROT_MAGIC] += BA_Bonus01;
-			self.protection[PROT_FIRE] 	+= BA_Bonus01;
-		};
-	};
-
-	if (Npc_GetTalentSkill(self, NPC_TALENT_MAGE) == 6) {
-		self.protection[PROT_EDGE] 	+= 10;
-		self.protection[PROT_BLUNT] += 10;
-		self.protection[PROT_POINT] += 10;
-		self.protection[PROT_MAGIC] += 10;
-		self.protection[PROT_FIRE] 	+= 10;
+		KDFArmor_Equipped = circle;
 	};
 };
-FUNC VOID UnEquip_ITAR_KDF_H()
-{
+FUNC VOID UnEquip_ITAR_KDF_H() {
+	var int circle; circle = KDFArmor_Equipped;
+	var int bonus; bonus = Bonus_ITAR_KDF(circle - 3);
+
+	self.protection[PROT_EDGE]  -= bonus;
+	self.protection[PROT_BLUNT] -= bonus;
+	self.protection[PROT_POINT] -= bonus;
+	self.protection[PROT_MAGIC] -= bonus;
+	self.protection[PROT_FIRE]  -= bonus;
+	
+	Npc_GetInvItem(self, ITAR_KDF_H);
+	item.COUNT[1] = item.protection[PROT_POINT];
+	item.COUNT[2] = item.protection[PROT_EDGE];
+	item.COUNT[3] = item.protection[PROT_MAGIC];
+	item.COUNT[4] = item.protection[PROT_FIRE];
+
 	if Npc_IsPlayer (self)
 	{
-		KDFArmor_Equipped = FALSE;
-		
-		if (KDF01_Equipped == TRUE)
-		{	
-			self.protection[PROT_EDGE] 	-= BA_Bonus01;
-			self.protection[PROT_BLUNT] -= BA_Bonus01;
-			self.protection[PROT_POINT] -= BA_Bonus01;
-			self.protection[PROT_MAGIC] -= BA_Bonus01;
-			self.protection[PROT_FIRE] 	-= BA_Bonus01;
-		};
-	};
-
-	if (Npc_GetTalentSkill(self, NPC_TALENT_MAGE) == 6) {
-		self.protection[PROT_EDGE] 	-= 10;
-		self.protection[PROT_BLUNT] -= 10;
-		self.protection[PROT_POINT] -= 10;
-		self.protection[PROT_MAGIC] -= 10;
-		self.protection[PROT_FIRE] 	-= 10;
+		KDFArmor_Equipped = 0;
 	};
 };
 // ******************************************************

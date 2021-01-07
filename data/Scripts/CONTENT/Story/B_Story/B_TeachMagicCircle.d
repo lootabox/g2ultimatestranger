@@ -40,10 +40,16 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 	
 
 	// Make sure armor bonus is calculated correctly
-	var C_Item itm;
-	itm = Npc_GetEquippedArmor(other);
-	AI_UnequipArmor (other);
-	AI_EquipArmor (other, itm);
+	var C_Item armor; armor = Npc_GetEquippedArmor(other);
+	var C_NPC slfTmp; slfTmp = Hlp_GetNpc(self); self = Hlp_GetNpc(other);
+	if (Hlp_IsItem(armor, ITAR_KDF_L)) {
+		UnEquip_ITAR_KDF_L();
+		Equip_ITAR_KDF_L();
+	} else if (Hlp_IsItem(armor, ITAR_KDF_H)) {
+		UnEquip_ITAR_KDF_H();
+		Equip_ITAR_KDF_H();
+	};
+	self = Hlp_GetNpc (slfTmp);
 
 	// ------ 1. Kreis ------
 	if (circle == 1)
