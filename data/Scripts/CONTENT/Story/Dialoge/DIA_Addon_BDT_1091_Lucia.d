@@ -210,7 +210,7 @@ FUNC VOID DIA_Addon_Lucia_Paladine_BACK()
 FUNC VOID DIA_Addon_Lucia_Paladine_WAHL()
 {
 	AI_Output (other, self, "DIA_Addon_Lucia_Paladine_WAHL_15_00");//The paladins don't only fight in his name. Innos chooses his warriors.
-	AI_Output (self, other, "DIA_Addon_Lucia_Paladine_WAHL_16_01");//So? I believe it's the people who choose themselves.
+	AI_Output (self, other, "DIA_Addon_Lucia_Paladine_WAHL_16_01");//So? I believe it's the people themselves who choose.
 	AI_Output (self, other, "DIA_Addon_Lucia_Paladine_WAHL_16_02");//Still, your words amaze me. You talk almost like you were one of them.
 	
 	Info_AddChoice (DIA_Addon_Lucia_Paladine,"Do you deny Innos then, wench?",DIA_Addon_Lucia_Paladine_WEIB);

@@ -2500,6 +2500,9 @@ func void DIA_Vatras_AUGEGEHEILT_Info ()
 
 	TRIA_Next(Pyrokar); DIA_Vatras_AUGEGEHEILT_PyrokarTalks();
 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_01"); //Do not waste your time on trivial things. Go and vanquish the dragons. Here, take the Eye.
+	
+	CreateInvItems (Pyrokar,ItMi_InnosEye_MIS,1);
+	B_GiveInvItems (Pyrokar, hero, ItMi_InnosEye_MIS,1);
 
 	TRIA_Next(Vatras); DIA_Vatras_AUGEGEHEILT_VatrasTalks();
 	AI_Output			(self, other, "DIA_Vatras_AUGEGEHEILT_05_01"); //Let Pyrokar explain to you how to use its power.
@@ -2513,9 +2516,6 @@ func void DIA_Vatras_AUGEGEHEILT_Info ()
 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_07"); //Only then can you dare face another dragon.
 	DIA_Vatras_AUGEGEHEILT_HeroTalks();
 	AI_Output			(other, self, "DIA_Pyrokar_KAP3_READY_15_08"); //Thanks. I'll remember that.
-	
-	CreateInvItems (Pyrokar,ItMi_InnosEye_MIS,1);
-	B_GiveInvItems (Pyrokar, hero, ItMi_InnosEye_MIS,1);
 	
 	TRIA_Next(Pyrokar); DIA_Vatras_AUGEGEHEILT_PyrokarTalks();
 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_09"); //You now have everything you need. Go, then. You do not have much time left.

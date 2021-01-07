@@ -8,7 +8,7 @@ INSTANCE DIA_Addon_Lennar_EXIT   (C_INFO)
 	condition   = DIA_Addon_Lennar_EXIT_Condition;
 	information = DIA_Addon_Lennar_EXIT_Info;
 	permanent   = TRUE;
-	description = "I've got to go...";
+	description = DIALOG_ENDE;
 };
 FUNC INT DIA_Addon_Lennar_EXIT_Condition()
 {	

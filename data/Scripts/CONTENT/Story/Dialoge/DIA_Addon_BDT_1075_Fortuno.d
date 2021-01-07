@@ -91,7 +91,7 @@ FUNC VOID DIA_Addon_Fortuno_Hi_Info()
 	AI_Output (self, other, "DIA_Addon_Fortuno_Hi_13_03");//Green... green novice... I cannot find it...
 	
 	Info_ClearChoices (DIA_Addon_Fortuno_Hi);
-	Info_AddChoice 	  (DIA_Addon_Fortuno_Hi,"I'll be back later... (THE END)",DIA_Addon_Fortuno_Hi_BACK);	
+	Info_AddChoice 	  (DIA_Addon_Fortuno_Hi,DIALOG_ENDE,DIA_Addon_Fortuno_Hi_BACK);	
 	
 	Info_AddChoice 	  (DIA_Addon_Fortuno_Hi,"How can I help you?",DIA_Addon_Fortuno_Hi_HILFE);
 	
@@ -168,7 +168,7 @@ FUNC VOID DIA_Addon_Fortuno_wer_Info()
 {
 	AI_Output (other, self, "DIA_Addon_Fortuno_wer_15_00");//So, tell me what is wrong with you.
 	AI_Output (self, other, "DIA_Addon_Fortuno_wer_13_01");//Once I belonged to the Brotherhood of the Sleeper. Everything was all right back then.
-	AI_Output (self, other, "DIA_Addon_Fortuno_wer_13_02");//Fine, we were all condemned crimials, but for us novices life was free from care...
+	AI_Output (self, other, "DIA_Addon_Fortuno_wer_13_02");//Fine, we were all condemned criminals, but for us novices life was free from care...
 	AI_Output (other, self, "DIA_Addon_Fortuno_wer_15_03");//Hey, I was a prisoner in the Valley of Mines myself. Tell me something new.
 	AI_Output (self, other, "DIA_Addon_Fortuno_wer_13_04");//I... I don't remember anything. Darkness lies across my mind...
 	AI_Output (other, self, "DIA_Addon_Fortuno_wer_15_05");//Come on, concentrate. What happened? When did you come back to your senses?
