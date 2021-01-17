@@ -719,9 +719,9 @@ const string NAME_Dam_Magic		= "Magic damage:";
 //const string NAME_Dam_Fly		= "Wind damage:";
 const string NAME_Dam_Magic_Per	= "Magic damage per tier:";
 
-const string NAME_Dot_Half				= "Half damage dealt over time. ";
-const string NAME_Dot_Full				= "All damage dealt over time. ";
-const string NAME_Ice_Freeze			= "Freezes targets while dealing damage over time. ";
+const string NAME_Dot_Half				= "Half of damage is dealt over time. ";
+const string NAME_Dot_Full				= "All damage is dealt over time. ";
+const string NAME_Ice_Freeze			= "Targets are frozen during effect. ";
 
 // MAX LENGTH							"------------------------------------------------------------";
 const string NAME_Zap_Living			= "Shocks unharmed living targets. ";
