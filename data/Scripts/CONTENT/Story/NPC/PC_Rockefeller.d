@@ -322,6 +322,12 @@ INSTANCE PC_Rockefeller(NPC_DEFAULT)
 	CreateInvItem(self,ItRu_MasterOfDisaster);
 	CreateInvItem(self,ItRu_ArmyOfDarkness);
 	CreateInvItem(self,ItRu_Shrink);
+
+	CreateInvItem(self,ItRu_Thunderstorm);
+	CreateInvItem(self,ItRu_Whirlwind);
+	CreateInvItem(self,ItRu_Geyser);
+	CreateInvItem(self,ItRu_Waterfist);
+	CreateInvItem(self,ItRu_Icelance);
 	
 	CreateInvItem(self,ItRu_BeliarsRage);
 	CreateInvItem(self,ItRu_SuckEnergy);
@@ -330,7 +336,7 @@ INSTANCE PC_Rockefeller(NPC_DEFAULT)
 	CreateInvItem(self,ItRu_Skull);
 	CreateInvItem(self,ItRu_SummonZombie);
 	CreateInvItem(self,ItRu_SummonGuardian);
-	
+
 //----------------------------------------
 //Alle neuen Scrolls
 //----------------------------------------
@@ -384,6 +390,12 @@ INSTANCE PC_Rockefeller(NPC_DEFAULT)
 	CreateInvItems(self,ItSc_TrfLurker,10);
 	CreateInvItems(self,ItSc_TrfShadowbeast,10);
 	CreateInvItems(self,ItSc_TrfDragonSnapper,10);
+
+	CreateInvItem(self,ItSc_Thunderstorm);
+	CreateInvItem(self,ItSc_Whirlwind);
+	CreateInvItem(self,ItSc_Geyser);
+	CreateInvItem(self,ItSc_Waterfist);
+	CreateInvItem(self,ItSc_Icelance);
 
 //**********************************************************************
 //	Alle neuen Food
