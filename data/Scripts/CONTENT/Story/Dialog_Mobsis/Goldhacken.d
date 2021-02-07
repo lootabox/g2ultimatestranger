@@ -163,60 +163,43 @@ FUNC INT PC_Goldhacken_Addon_Hour_Condition ()
 		return TRUE;
 	};
 };
-var int GoldCounter;
 FUNC VOID PC_Goldhacken_Addon_Hour_Info()
 {	
 	//----- EIGENTLICHES HACKEN -------------
 	var int CurrentChance;
 	CurrentChance = Hlp_Random (100);
 	
-	var int MultiNugget;
-	MultiNugget = Hlp_Random (10);
-		
 	if (B_GoldMob_Bestimmung() == TRUE)
 	{
 		if (CurrentChance <= Hero_HackChance)
+		&& (CurrentChance >= 33)
 		{
-			
 			//---------- Learning by doing  10 PKT---------
 			Learn_by_doing = (Learn_by_doing +1);
-			
-			if (Learn_by_doing == 10)
-			{
-				B_Upgrade_Hero_HackChance (2);
-			}
-			else if (Learn_by_doing == 15)
-			{
-				B_Upgrade_Hero_HackChance (3);
-			}	
-			else if (Learn_by_doing == 20)
-			{
-				B_Upgrade_Hero_HackChance (5);
-			};
+			if		(Learn_by_doing == 10) { B_Upgrade_Hero_HackChance (2); }
+			else if	(Learn_by_doing == 15) { B_Upgrade_Hero_HackChance (3); }
+			else if	(Learn_by_doing == 20) { B_Upgrade_Hero_HackChance (5); };
 
 			//----Gold verteilen-----------------------
-			if (GoldCounter >= 20)
-			&& (MultiNugget >= 8)
+			if (Hero_HackChance >= 95)
+			&& (CurrentChance >= 90)
 			{
-				CreateInvItems (hero, ItMi_GoldNugget_Addon, 3);	
-				PrintScreen ("3 gold nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
+				CreateInvItems (hero, ItMi_GoldNugget_Addon, 3);
+				PrintScreen ("3 gold nuggets mined!", -1, -1, FONT_ScreenSmall, 2);
 				Truemmer_Count = 0;
-				
 			}
-			else if (GoldCounter >= 7)
-			&& (MultiNugget >= 5)
+			else if (Hero_HackChance >= 80)
+			&& (CurrentChance >= 70)
 			{
-				CreateInvItems (hero, ItMi_GoldNugget_Addon, 2);	
-				PrintScreen ("2 gold nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
+				CreateInvItems (hero, ItMi_GoldNugget_Addon, 2);
+				PrintScreen ("2 gold nuggets mined!", -1, -1, FONT_ScreenSmall, 2);
 				Truemmer_Count = 0;
-				GoldCounter = (GoldCounter +1);
 			}
 			else
 			{
-				CreateInvItems (hero, ItMi_GoldNugget_Addon, 1);	
-				PrintScreen ("1 gold nugget mined!", -1, -1, FONT_ScreenSmall, 2);	
+				CreateInvItems (hero, ItMi_GoldNugget_Addon, 1);
+				PrintScreen ("1 gold nugget mined!", -1, -1, FONT_ScreenSmall, 2);
 				Truemmer_Count = 0;
-				GoldCounter = (GoldCounter +1);
 			};
 		}
 		else
@@ -257,39 +240,34 @@ FUNC VOID PC_Goldhacken_Addon_TSchlag_Info()
 {
 	var int TruemmerChance;
 	TruemmerChance = Hlp_Random (100);
-		
-	if (TruemmerChance < 5)
+
+	Snd_Play ("RAVENS_EARTHQUAKE3");
+	Wld_PlayEffect("FX_EarthQuake",  self, self, 0, 0, 0, FALSE );
+	
+	if (Hero_HackChance >= 90)
+	&& (TruemmerChance >= 90)
 	{
-			PrintScreen ("Nothing...", -1, -1, FONT_ScreenSmall, 2);	
+		//----Gold verteilen-----------------------
+		CreateInvItems (hero, ItMi_GoldNugget_Addon, 4);
+		PrintScreen ("4 gold nuggets mined!", -1, -1, FONT_ScreenSmall, 2);
+	}
+	else if (Hero_HackChance >= 60)
+	&& (TruemmerChance >= 70)
+	{
+		CreateInvItems (hero, ItMi_GoldNugget_Addon, 3);
+		PrintScreen ("3 gold nuggets mined!", -1, -1, FONT_ScreenSmall, 2);
+	}
+	else if (TruemmerChance >= 33)
+	{
+		CreateInvItems (hero, ItMi_GoldNugget_Addon, 2);
+		PrintScreen ("2 gold nugget mined!", -1, -1, FONT_ScreenSmall, 2);
 	}
 	else
 	{
-		Snd_Play ("RAVENS_EARTHQUAKE3");
-		Wld_PlayEffect("FX_EarthQuake",  self, self, 0, 0, 0, FALSE );
-		
-		
-		if (TruemmerChance >= 85)
-		{
-			//----Gold verteilen-----------------------
-			CreateInvItems (hero, ItMi_GoldNugget_Addon, 3);	
-			PrintScreen ("3 gold nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
-			
-		}
-		else if (TruemmerChance >= 50)
-		{
-			CreateInvItems (hero, ItMi_GoldNugget_Addon, 2);	
-			PrintScreen ("2 gold nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
-		
-		}
-		else 
-		{
-			CreateInvItems (hero, ItMi_GoldNugget_Addon, 1);	
-			PrintScreen ("1 gold nugget mined!", -1, -1, FONT_ScreenSmall, 2);	
-		};
+		CreateInvItems (hero, ItMi_GoldNugget_Addon, 1);
+		PrintScreen ("1 gold nugget mined!", -1, -1, FONT_ScreenSmall, 2);
 	};
 	Truemmer_Count = 0;
-	
-	
 };
 //*******************************************************
 //	Goldhacken Chance

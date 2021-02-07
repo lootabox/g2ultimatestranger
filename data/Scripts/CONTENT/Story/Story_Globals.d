@@ -421,19 +421,19 @@ const int 	GoldMob_06_AmounT_MAX =  9;
 const int 	GoldMob_07_AmounT_MAX =  9;
 
 //Minecrawler Hoehle (Addon Goldmine)
-const int 	GoldMob_08_AmounT_MAX = 15;
-const int 	GoldMob_09_AmounT_MAX = 15;
-const int 	GoldMob_10_AmounT_MAX = 18;
-const int 	GoldMob_11_AmounT_MAX = 18;
+const int 	GoldMob_08_AmounT_MAX = 5;
+const int 	GoldMob_09_AmounT_MAX = 5;
+const int 	GoldMob_10_AmounT_MAX = 8;
+const int 	GoldMob_11_AmounT_MAX = 8;
 //Else
-const int 	GoldMob_13_AmounT_MAX = 12;
-const int 	GoldMob_14_AmounT_MAX = 13;
-const int 	GoldMob_15_AmounT_MAX = 14;
-const int 	GoldMob_16_AmounT_MAX = 15;
-const int 	GoldMob_17_AmounT_MAX = 16;
-const int 	GoldMob_18_AmounT_MAX = 17;
-const int 	GoldMob_19_AmounT_MAX = 18;
-const int 	GoldMob_20_AmounT_MAX = 19;
+const int 	GoldMob_13_AmounT_MAX = 2;
+const int 	GoldMob_14_AmounT_MAX = 3;
+const int 	GoldMob_15_AmounT_MAX = 4;
+const int 	GoldMob_16_AmounT_MAX = 5;
+const int 	GoldMob_17_AmounT_MAX = 6;
+const int 	GoldMob_18_AmounT_MAX = 7;
+const int 	GoldMob_19_AmounT_MAX = 8;
+const int 	GoldMob_20_AmounT_MAX = 9;
 
 //----------------Piratenlager (Addonwelt) -------------------------------
 var int MIS_LookForMorgan;						// Suche Morgan
