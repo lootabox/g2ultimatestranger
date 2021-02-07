@@ -252,9 +252,9 @@ Daron can only be asked about paladins after he mentions them.
 Daron considers NH to be poor with less than 100 gold instead of 10.
 Daron does not talk about donations when asked for a blessing if he has already given his blessing.
 Daron gives more learning points for donating, but only after donating all 1000 gold.
-Diego's gold can be returned to him after finding and selling the satchel.
 Diego cannot be led to Pedrakhan.
 Diego's dialog has 6 more previously unused dialogue lines and 9 more if NH never met him in Valley of Mines.
+Diego's gold can be returned to him after finding and selling the satchel.
 Dragomir immediately equips his crossbow after receiving it.
 Edda does not have duplicate dialog option, moved dialog lines around appropriately.
 Edda gives her own fish soup instead of normal soup.
@@ -291,6 +291,7 @@ Garwig will always loot or pick up the Sacred Hammer from NH after beating him.
 Garwig will know NH took the Sacred Hammer if NH has it equipped.
 Garwig will not tell NH about the hammer, if NH has the hammer.
 Garwig will talk with NH even if he has been caught for a crime.
+Gate Guard (10019) dialog line for when NH asks what happened to the prisoners is changed to one with fitting inflection.
 Geppert does not create a runestone or a lump of ore in his inventory if Kervo dies.
 Gerbrandt will run from upper quarter after receiving Diego's letter.
 Gerold can be asked whether he ever sleeps only before receiving the order from Garond to free Gorn.

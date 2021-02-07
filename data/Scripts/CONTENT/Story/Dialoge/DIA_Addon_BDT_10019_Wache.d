@@ -44,7 +44,8 @@ FUNC VOID DIA_Addon_10019_Wache_Hi_Info()
 };
 FUNC VOID B_Say_Wache_kaputt()
 {
-	AI_Output (other, self, "DIA_Addon_BDT_10019_Wache_kaputt_15_00");//Why are they dead?
+	//AI_Output (other, self, "DIA_Addon_BDT_10019_Wache_kaputt_15_00");//Why are they dead?
+	AI_Output (other, self, "DIA_Sylvio_WASISTPASSIERT_15_00"); //What happened to them?
 	AI_Output (self, other, "DIA_Addon_BDT_10019_Wache_kaputt_06_01");//(laughs maliciously) They worked themselves to pieces.
 	
 	Info_ClearChoices (DIA_Addon_BDT_10019_Wache_Hi);
