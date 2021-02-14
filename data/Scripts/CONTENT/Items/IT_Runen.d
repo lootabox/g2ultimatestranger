@@ -884,6 +884,9 @@ INSTANCE ItRu_Icebolt (C_Item)
 	
 	TEXT	[2]			=	NAME_Dam_Magic;
 	COUNT	[2]			=	SPL_DAMAGE_Icebolt;
+
+	TEXT	[3]			=	NAME_Ice_Cull;
+	COUNT	[3]			=	SPL_CULL_THRESHOLD / 2;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

@@ -56,6 +56,9 @@ INSTANCE ItRu_Thunderstorm (C_Item)
 	
 	TEXT	[2]			=	NAME_Dam_Magic;			
 	COUNT	[2]			=	SPL_DAMAGE_Thunderstorm;
+
+	TEXT	[3]			=	NAME_Ice_Cull;
+	COUNT	[3]			=	SPL_CULL_THRESHOLD;
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
@@ -202,6 +205,9 @@ INSTANCE ItRu_Icelance	(C_Item)
 	TEXT	[2]			=	NAME_Dam_Magic;		
 	COUNT	[2]			=	SPL_DAMAGE_Icelance;
 	
+	TEXT	[3]			=	NAME_Ice_Cull;
+	COUNT	[3]			=	SPL_CULL_THRESHOLD;
+
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
