@@ -115,7 +115,7 @@ INSTANCE ItMW_Addon_Stab01 (C_Item)
 
 	description			= 	"Staff of the Fire Magicians";
 
-	TEXT[0]				= NAME_Bonus_Stab01;			COUNT[0]	= Bonus_Stab01;
+	TEXT[0]				= NAME_Bonus_Stab01;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
@@ -205,7 +205,7 @@ INSTANCE ItMW_Addon_Stab04 (C_Item)
 
 	description			= 	name;
 
-	TEXT[0]				= NAME_Bonus_Stab04;			COUNT[0]	= Bonus_Stab04;
+	TEXT[0]				= NAME_Bonus_Stab04;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;

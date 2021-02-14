@@ -161,7 +161,7 @@ func int Spell_Logic_Invest(var C_NPC slf, var int manaInvested, var int STEP_si
 			// Ulthar's staff effect
 			if (Hlp_IsItem(wpn, ItMW_Addon_Stab04))
 			{
-				STEP_size = STEP_size * (100 - Bonus_Stab04) / 100;
+				STEP_size = STEP_size * 70 / 100; // +30%
 			};
 		};
 	};

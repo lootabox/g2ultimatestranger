@@ -352,7 +352,6 @@ const int Damage_Stab01				= 25;
 const int Condition_Stab01			= 25;
 const int Range_Stab01				= 120;
 const int Value_Stab01				= 900;
-const int Bonus_Stab01				= 25;
 //tatsächlicher Zauber Stab	- NEUE INSTANZ //ADDON
 const int Damage_Stab02				= 20; 
 const int Condition_Stab02			= 20;
@@ -370,7 +369,6 @@ const int Damage_Stab04				= 30;
 const int Condition_Stab04			= 40;
 const int Range_Stab04				= 120;
 const int Value_Stab04				= 1000;
-const int Bonus_Stab04				= 30;
 //Wassermagier	- NEUE INSTANZ //ADDON
 const int Damage_Stab05				= 40; 
 const int Condition_Stab05			= 35;

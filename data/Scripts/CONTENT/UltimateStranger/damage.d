@@ -211,11 +211,14 @@ var string pristr; pristr = IntToString(dmg);
 	||	(spellID == SPL_Pyrokinesis)
 	||	(spellID == SPL_Firerain)
 	{
+		// Figure out burn dot
+		var int fireDot; fireDot = dmg / 2; dmg -= fireDot;
+
 		// Check fire staff bonus
 		if (Hlp_IsValidItem(wpn)) {
 			if (Hlp_IsItem(wpn, ItMW_Addon_Stab01)) {
 				if (!Buff_Has(vic, dot_burn)) {
-					dmg = dmg * (100 + Bonus_Stab01) / 100;
+					fireDot = fireDot * 150 / 100;
 				};
 			};
 		};
@@ -225,8 +228,8 @@ var string pristr; pristr = IntToString(dmg);
 		else if	(C_NpcIsFireBase(vic))		{ dmg -= prot * 2; }
 		else								{ dmg -= prot; };
 
-		// Figure out burn dot
-		var int fireDot; fireDot = dmg / 2; dmg -= fireDot;
+		// If protection exceeded direct dmg, reduce fireDot accordingly
+		if (dmg < 0) { fireDot += dmg; };
 
 		// Play burn FX on corpses for flavor in any case
 		if (dmg >= vic.attribute[ATR_HITPOINTS]) {
