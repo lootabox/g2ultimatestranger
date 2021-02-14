@@ -3,9 +3,9 @@
 // **********
 
 const int SPL_Cost_Shrink			= 100;
-const int SPL_Shrink_Penalty		= 20; // 30%
-const int SPL_Shrink_Size			= 25; // 30%
-const int SPL_Shrink_Duration		= 3; // 3s
+const int SPL_Shrink_Penalty		= 20; // %
+const int SPL_Shrink_Size			= 25; // %
+const int SPL_Shrink_Duration		= 3; // seconds
 
 INSTANCE Spell_Shrink (C_Spell_Proto)
 {
