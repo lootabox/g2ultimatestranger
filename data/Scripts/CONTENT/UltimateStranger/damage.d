@@ -314,7 +314,7 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 	// HARM EVIL -----------------------------------------------------------------------
 	else if	(spellID == SPL_PalRepelEvil)
 	{
-		if (self.attribute[ATR_HITPOINTS] >= self.attribute[ATR_HITPOINTS_MAX])
+		if (vic.attribute[ATR_HITPOINTS] >= vic.attribute[ATR_HITPOINTS_MAX])
 		{	dmg = att.attribute[ATR_MANA_MAX] * 2 - prot;	}
 		else
 		{	dmg = att.attribute[ATR_MANA_MAX]     - prot;	};
@@ -322,7 +322,7 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 	// DESTROY EVIL -----------------------------------------------------------------------
 	else if	(spellID == SPL_PalDestroyEvil)
 	{
-		if (self.attribute[ATR_HITPOINTS] + self.protection[PROT_MAGIC] <= other.attribute[ATR_MANA_MAX]*4)
+		if (vic.attribute[ATR_HITPOINTS] + vic.protection[PROT_MAGIC] <= att.attribute[ATR_MANA_MAX]*4)
 		{	dmg = att.attribute[ATR_MANA_MAX] * 4 - prot;	}
 		else
 		{	dmg = att.attribute[ATR_MANA_MAX] * 2 - prot;	};
