@@ -404,7 +404,7 @@ func void DIA_Addon_Finn_Attentat_KillEsteban()
 func void DIA_Addon_Finn_Attentat_HaveInfos()
 {
 	AI_Output (other, self, "DIA_Addon_Finn_HaveInfos_15_00"); //I have some interesting information for him!
-	AI_Output (self, other, "DIA_Addon_Finn_HaveInfos_07_01"); //You're in cahoots with the guy who ordered it, aren't you?
+	AI_Output (self, other, "DIA_Addon_Finn_HaveInfos_07_01"); //You're in cahoots with the guy who ordered the assassination, aren't you?
 	
 	Info_ClearChoices (DIA_Addon_Finn_Attentat);
 	Info_AddChoice (DIA_Addon_Finn_Attentat,"I want to bump off Esteban and I'm looking for an ally!",DIA_Addon_Finn_Attentat_KillEsteban);
