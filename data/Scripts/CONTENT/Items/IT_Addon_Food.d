@@ -322,9 +322,12 @@ INSTANCE ItFo_Addon_Meatsoup (C_Item)
 
 	FUNC VOID Use_MeatSoup()
 	{
-		B_RaiseAttribute (self,	ATR_STRENGTH, STR_XPStew);
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_XPStew);
-		Snd_Play	("LevelUp");
+		if (Npc_IsPlayer(self))
+		{
+			B_RaiseAttribute (self,	ATR_STRENGTH, STR_XPStew);
+			Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_XPStew);
+			Snd_Play	("LevelUp");
+		};
 	};
 	
 	

@@ -394,7 +394,8 @@ Orlan can be given the wine only after asking who he is.
 Orlan does not run to his counter while Lares is still giving a speech during the 'Ring of Water' meeting.
 Parcival can be asked about Diego only after asking about scrapers in general.
 Pardos can be given a potion of pure life energy for a greater reward.
-Pardos can be offered a potion or stew more than once.
+Pardos can be offered a potion or stew until one is given.
+Pardos drinking the meat soup won't create screen messages indicating NH attributes increased.
 Parlan eventually gives the key to mercenary/dragon hunter NH in his dialog, instead of spawning it in front of the library door.
 Parlan initiates dialog with non-monastery members for their first interaction.
 Parlan's dialog has 3 more previously unused dialogue lines for when NH keeps distracting novices.
