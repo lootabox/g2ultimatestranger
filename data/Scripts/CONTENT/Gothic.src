@@ -64,6 +64,7 @@ STORY\B_CONTENT\B_PlayerLootedNpc.d
 
 AI\MAGIC\B_MagicHurtNpc.d
 
+UltimateStranger\oCVisualFX.d
 UltimateStranger\InsertAnything.d
 UltimateStranger\items.d
 UltimateStranger\misc.d
@@ -84,7 +85,6 @@ AI\HUMAN\C_Human\C_NpcIsWeakToWater.d
 AI\HUMAN\C_Human\C_NpcIsImmuneToMindSpells.d
 AI\HUMAN\C_Human\C_NpcIgnoresTransform.d
 
-UltimateStranger\oCVisualFX.d
 UltimateStranger\damage.d
 
 STORY\B_GiveTradeInv\B_ClearRuneInv.d

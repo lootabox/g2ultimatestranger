@@ -1,5 +1,22 @@
+//const int oCVisualFX_bitfield_offset                      = 1372;
+//const int oCVisualFX_bitfield_collisionOccured            = ((1 << 1) - 1) <<  0;
+//const int oCVisualFX_bitfield_showVisual                  = ((1 << 1) - 1) <<  1;
+//const int oCVisualFX_bitfield_isChild                     = ((1 << 1) - 1) <<  2;
+//const int oCVisualFX_bitfield_isDeleted                   = ((1 << 1) - 1) <<  3;
+//const int oCVisualFX_bitfield_initialized                 = ((1 << 1) - 1) <<  4;
+//const int oCVisualFX_bitfield_shouldDelete                = ((1 << 1) - 1) <<  5;
+//const int oCVisualFX_bitfield_lightning                   = ((1 << 1) - 1) <<  6;
+//const int oCVisualFX_bitfield_fxInvestOriginInitialized   = ((1 << 1) - 1) <<  7;
 
-// https://forum.worldofplayers.de/forum/threads/1149697-Script-Eigene-Schadensberechnung?p=26502656&viewfull=1#post26502656
+//const int oCVisualFX_bitfield_fxInvestTargetInitialized   = ((1 << 1) - 1) <<  8;
+//const int oCVisualFX_bitfield_fxInvestStopped             = ((1 << 1) - 1) <<  9;
+//const int oCVisualFX_bitfield_timeScaled                  = ((1 << 1) - 1) << 10;
+//const int oCVisualFX_bitfield_fovMorph                    = ((1 << 2) - 1) << 11;
+
+const int oCVisualFX_bitfield_level                       = ((1 << 5) - 1) << 13;
+
+//const int oCVisualFX_bitfield_collisionCtr                = ((1 << 3) - 1) << 18;
+//const int oCVisualFX_bitfield_queueSetLevel               = ((1 << 5) - 1) << 21;
 
 class oCVisualFX
 {
@@ -9,7 +26,7 @@ class oCVisualFX
   var int    _zCObject_refCtr;
   var int    _zCObject_hashIndex;
   var int    _zCObject_hashNext;
-  var string _zCObject_objectName;
+  var string _zCObject_objectName; // zSTRING
   //}
   var int    _zCVob_globalVobTreeNode;
   var int    _zCVob_lastTimeDrawn;
@@ -51,57 +68,54 @@ class oCVisualFX
 //}
 
 // public:
-  var string	visName_S;
-  var string	visSize_S;
-  var int		  visAlpha;				// float
-  var string	visAlphaBlendFunc_S;
-  var int		  visTexAniFPS;			// float
-  var int		  visTexAniIsLooping;
-  var string	emTrjMode_S;
-  var string  emTrjOriginNode_S;
-  var string	emTrjTargetNode_S;
-  var int		  emTrjTargetRange;		// float
-  var int		  emTrjTargetAzi;		// float
-  var int		  emTrjTargetElev;		// float
+  var string	visName_S;                  // zSTRING
+  var string	visSize_S;                  // zSTRING
+  var int		  visAlpha;				            // float
+  var string	visAlphaBlendFunc_S;        // zSTRING
+  var int		  visTexAniFPS;			          // float
+  var int		  visTexAniIsLooping;         // int
+  var string	emTrjMode_S;                // zSTRING
+  var string  emTrjOriginNode_S;          // zSTRING
+  var string	emTrjTargetNode_S;          // zSTRING
+  var int		  emTrjTargetRange;		        // float
+  var int		  emTrjTargetAzi;		          // float
+  var int		  emTrjTargetElev;		        // float
   var int		  emTrjNumKeys;
   var int		  emTrjNumKeysVar;
-  var int		  emTrjAngleElevVar;	// float
-  var int		  emTrjAngleHeadVar;	// float
-  var int		  emTrjKeyDistVar;		// float
-  var string	emTrjLoopMode_S;
-  var string	emTrjEaseFunc_S;
-  var int		  emTrjEaseVel;			// float
-  var int		  emTrjDynUpdateDelay;	// float
+  var int		  emTrjAngleElevVar;	        // float
+  var int		  emTrjAngleHeadVar;	        // float
+  var int		  emTrjKeyDistVar;		        // float
+  var string	emTrjLoopMode_S;            // zSTRING
+  var string	emTrjEaseFunc_S;            // zSTRING
+  var int		  emTrjEaseVel;			          // float
+  var int		  emTrjDynUpdateDelay;	      // float
   var int		  emTrjDynUpdateTargetOnly;
-  var string	emFXCreate_S;
-  var string	emFXInvestOrigin_S;
-  var string	emFXInvestTarget_S;
-  var int		  emFXTriggerDelay;		// float
-  var int		  emFXCreatedOwnTrj;
-  var string	emActionCollDyn_S;			// CREATE, BOUNCE, COLLIDE
-  var string	emActionCollStat_S;			// CREATE, CREATEONCE, BOUNCE, COLLIDE, CREATEQUAD
-  var string	emFXCollStat_S;
-  var string	emFXCollDyn_S;
-  var string	emFXCollDynPerc_S;
-  var string	emFXCollStatAlign_S;			// TRAJECTORY, COLLISIONNORMAL
-  var string	emFXCollDynAlign_S;
-  var int		  emFXLifeSpan;			// float
+  var string	emFXCreate_S;               // zSTRING
+  var string	emFXInvestOrigin_S;         // zSTRING
+  var string	emFXInvestTarget_S;         // zSTRING
+  var int		  emFXTriggerDelay;		        // float
+  var int		  emFXCreatedOwnTrj;          // int
+  var string	emActionCollDyn_S;	        // zSTRING		// CREATE, BOUNCE, COLLIDE
+  var string	emActionCollStat_S;	        // zSTRING		// CREATE, CREATEONCE, BOUNCE, COLLIDE, CREATEQUAD
+  var string	emFXCollStat_S;             // zSTRING
+  var string	emFXCollDyn_S;              // zSTRING
+  var string	emFXCollDynPerc_S;          // zSTRING
+  var string	emFXCollStatAlign_S;        // zSTRING			// TRAJECTORY, COLLISIONNORMAL
+  var string	emFXCollDynAlign_S;         // zSTRING
+  var int		  emFXLifeSpan;			          // float
   var int		  emCheckCollision;
   var int		  emAdjustShpToOrigin;
-  var int		  emInvestNextKeyDuration;	// float
-  var int		  emFlyGravity;				// float
-  var string	emSelfRotVel_S;
-  var string	userString[5];
-
-  var string	lightPresetName;
-  var string	sfxID;
-  var int		  sfxIsAmbient;		// zBOOL
-  var int		  sendAssessMagic;
-  var int		  secsPerDamage;	// float
-
-  var int		  dScriptEnd;		// zBYTE
-
-  var int		  visSize[3];			// zVEC3
+  var int		  emInvestNextKeyDuration;	  // float
+  var int		  emFlyGravity;				        // float
+  var string	emSelfRotVel_S;             // zSTRING
+  var string	userString[5];              // zSTRING
+  var string	lightPresetName;            // zSTRING
+  var string	sfxID;                      // zSTRING
+  var int		  sfxIsAmbient;		            // zBOOL
+  var int		  sendAssessMagic;            // int
+  var int		  secsPerDamage;	            // float
+  var int		  dScriptEnd;		              // zBYTE
+  var int		  visSize[3];			            // zVEC3
   var int		  emTrjMode;
   var int		  emActionCollDyn;
   var int		  emActionCollStat;
@@ -192,7 +206,7 @@ class oCVisualFX
   var int sfx;              // zCSoundFX*
   var int sfxHnd;           // zTSoundHandle	
 
-  var string fxName;
+  var string fxName; // zSTRING
 
   var int fxBackup;   // oCEmitterKey*
   var int lastSetKey; // oCEmitterKey*
@@ -217,9 +231,10 @@ class oCVisualFX
   var int levelTime;        // float
   var int lifeSpanTimer;    // float
   var int fxStartTime;      // float
-  var int oldFovX, oldFovY; // float
+  var int oldFovX;          // float 
+  var int oldFovY;          // float - 0x0558
 
-// {
+// { - 0x055C
   // collisionOccured;           // zBOOL : 1
 	
   // showVisual;                 // zBOOL : 1
@@ -241,7 +256,7 @@ class oCVisualFX
 // }
 
 // protected:
-  var int damage;     // float
+  var int damage;     // float - 0x0560
 	var int damageType;
 
 // private:
@@ -268,10 +283,4 @@ class oCVisualFX
 	var int bPfxMeshSetByVisualFX;    // zBOOL
 	var int m_bAllowMovement;         // zBOOL
 	var int m_fSleepTimer;            // zREAL
-};
-
-func int oCVisualFX__GetLevel(var int _this) {
-  // 00493150 => oCVisualFX::GetLevel
-  CALL__thiscall(_this, 4796752);
-  return CALL_RetValAsInt();
 };

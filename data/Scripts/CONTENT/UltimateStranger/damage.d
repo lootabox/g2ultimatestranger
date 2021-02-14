@@ -392,19 +392,12 @@ func int DMG_OnDmg(var int victimPtr, var int attackerPtr, var int dmg, var int 
 	// If there is hitPfx but no spellId, probably AoE spell _SPREAD hitting other NPCs after a direct hit on NPC with the original projectile
 	if (dmgDesc.hitPfx && dmgDesc.spellId <= 0) {
 		var oCVisualFX hitPfx; hitPfx = _^(dmgDesc.hitPfx);
-		Print (ConcatStrings ("hitPfx_fxName is:", hitPfx.fxName));
-		//Print (ConcatStrings ("oCVisualFX__GetLevel is: ", IntToString (oCVisualFX__GetLevel(_@(hitPfx.parent)))));
+		//var int level; level = (hitPfx & oCVisualFX_bitfield_level) >> 13;
+		//Print (ConcatStrings ("hitPfx:", ConcatStrings(hitPfx.fxName,ConcatStrings(" level:",IntToString(level)))));
 
 		// If we still have no attacker, try to take him from PFX inflictor (e.g. AoE spells)
 		if (!attackerPtr) {
 			attackerPtr = hitPfx.inflictor;
-		};
-
-		// Set lost spell ID for AoE spells, based on hitPfx.
-		if (Hlp_StrCmp(hitPfx.fxName, "spellFX_Firestorm_SPREAD")) {
-			dmgDesc.spellId = SPL_Firestorm;
-		} else if (Hlp_StrCmp(hitPfx.fxName, "spellFX_Pyrokinesis_SPREAD")) {
-			dmgDesc.spellId = SPL_Pyrokinesis;
 		};
 	};
 

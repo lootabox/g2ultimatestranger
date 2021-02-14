@@ -1,5 +1,44 @@
 
 //************************************************
+// Fix spell information for "aoe" vfx (only works for dynamic collisions, hitting static/ground does not work!)
+// https://forum.worldofplayers.de/forum/threads/1570744-Large-Firestorm-AoE-fix?s=a8fe7d97fc0784a054afc50b8f597571&p=26650079&viewfull=1#post26650079
+//************************************************
+
+func void _Hook_oCVisualFX__CreateAndPlay_PostInit() {
+    const int stack_offset     = 172;
+    const int param_lvl_offset = 16;
+    
+    var int childPtr; childPtr = ESI;
+    var int level;    level    = MEM_ReadInt(ESP + stack_offset + param_lvl_offset);
+
+    var oCVisualFX _current; _current = _^(childPtr);
+
+    if (Hlp_StrCmp(_current.fxName, "spellFX_Firestorm_SPREAD")) {
+        _current.bitfield = _current.bitfield & ~oCVisualFX_bitfield_level;
+        _current.bitfield = _current.bitfield | (level << 13);
+        _current.spellType = SPL_Firestorm;
+    } else if (Hlp_StrCmp(_current.fxName, "spellFX_Pyrokinesis_SPREAD")) {
+        _current.bitfield = _current.bitfield & ~oCVisualFX_bitfield_level;
+        _current.bitfield = _current.bitfield | (level << 13);
+        _current.spellType = SPL_Pyrokinesis;
+    };
+};
+/* 
+func void _Hook_oCVisualFX__CreateAndCastFX_PostInit() {
+
+    var int childPtr; childPtr = ESI;
+
+    var oCVisualFX _current; _current = _^(childPtr);
+    var int level; level = (_current.bitfield & oCVisualFX_bitfield_level) >> 13;
+    Print (ConcatStrings ("_current:", ConcatStrings(_current.fxName,ConcatStrings(" level:",IntToString(level)))));
+};
+ */
+func void oCVisualFX_CreateAndPlay_Init() {
+    HookEngineF(4778368/*0048e980*/, 8, _Hook_oCVisualFX__CreateAndPlay_PostInit);
+    //HookEngineF(4781327/*0048f50f*/, 8, _Hook_oCVisualFX__CreateAndCastFX_PostInit);
+};
+
+//************************************************
 // Turn to waypoint, "fixed" PointAt script
 // https://forum.worldofplayers.de/forum/threads/1569366-AI_PointAt-not-working-as-expected?p=26632482&viewfull=1#post26632482
 //************************************************
