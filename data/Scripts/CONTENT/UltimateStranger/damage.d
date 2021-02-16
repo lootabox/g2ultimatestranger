@@ -250,8 +250,7 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(fireDot)));
 		||	(spellID == SPL_Thunderstorm)
 	{
 		// Handle protection
-		var int isVulnerable; isVulnerable = FALSE;
-		if		(C_NpcIsWeakToIce(vic))		{ dmg -= prot / 2; isVulnerable = TRUE; }
+		if		(C_NpcIsWeakToIce(vic))		{ dmg -= prot / 2; }
 		else if	(C_NpcIsIceBase(vic))		{ dmg -= prot * 2; }
 		else								{ dmg -= prot; };
 
@@ -274,12 +273,9 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 			//Print(ConcatStrings("Start: ", IntToString(vic.aivar[AIV_FreezeStateTime])));
 		}
 		// Check ice culling
-		else if (isVulnerable)
-		{
-			if	(spellID == SPL_Icebolt) &&	(att.attribute[ATR_HITPOINTS] - dmg <= SPL_CULL_THRESHOLD / 2)
-			||								(att.attribute[ATR_HITPOINTS] - dmg <= SPL_CULL_THRESHOLD) {
-				dmg = att.attribute[ATR_HITPOINTS];
-			};
+		else if	(att.attribute[ATR_HITPOINTS] - dmg <= SPL_CULL_THRESHOLD / 2) && (spellID == SPL_Icebolt)
+			||	(att.attribute[ATR_HITPOINTS] - dmg <= SPL_CULL_THRESHOLD) {
+			dmg = att.attribute[ATR_HITPOINTS];
 		};
 	}
 	// LIGHTNING SPELLS ---------------------------------------------------------------------------

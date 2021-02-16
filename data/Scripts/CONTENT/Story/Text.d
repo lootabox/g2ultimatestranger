@@ -724,7 +724,7 @@ const string NAME_Dot_Full				= "All damage is dealt over time. ";
 const string NAME_Ice_Freeze			= "Targets are frozen during effect. ";
 
 // MAX LENGTH							"------------------------------------------------------------";
-const string NAME_Ice_Cull				= "Lethal on vulnerable targets with hitpoints at or less:";
+const string NAME_Ice_Cull				= "Lethal on targets with hitpoints reduced to or under:";
 const string NAME_Zap_Living			= "Shocks unharmed living targets. ";
 const string NAME_Nonlethal				= "Non-lethal. ";
 const string NAME_Instant				= "Instant effect. ";
