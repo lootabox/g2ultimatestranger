@@ -86,7 +86,7 @@ Leather Satchels filled with gold can be sold for their full gold value, includi
 Main menu sounds are silenced after start a new game or loading one.
 Many items have their description now on one line instead of multiple lines.
 Nostalgia bonus properly awards levels to NH.
-Projectile AOE spells now have their spell type and charge level corrected for the AOE portion. In practice this means firestorm spells can make use of new fire spell mechanics and large firestorm deals appropriate damage with its AOE when charged up to higher tiers. However, this is only corrected for when the original projectile hits a dynamic target (e.g. NPC), hitting the ground still does not work.
+Projectile AOE spells now have their spell type and charge level corrected for the AOE portion. In practice this means firestorm spells can make use of new fire spell mechanics and large firestorm deals appropriate damage with its AOE when charged up to higher tiers.
 Quarhodron summoning scroll visual changed from piece of paper into proper scroll.
 Quests from monastery for novices become obsolete after NH becomes a mage, not when they receive the key to the library.
 Quests to join mercenaries and the militia become obsolete already when joining the monastery as novice, not after becoming a mage.

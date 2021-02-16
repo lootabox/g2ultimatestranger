@@ -4,38 +4,80 @@
 // https://forum.worldofplayers.de/forum/threads/1570744-Large-Firestorm-AoE-fix?s=a8fe7d97fc0784a054afc50b8f597571&p=26650079&viewfull=1#post26650079
 //************************************************
 
+/** Fix spell ID for AOE VFX resulting from dynamic collision.*/
 func void _Hook_oCVisualFX__CreateAndPlay_PostInit() {
-    const int stack_offset     = 172;
-    const int param_lvl_offset = 16;
-    
-    var int childPtr; childPtr = ESI;
-    var int level;    level    = MEM_ReadInt(ESP + stack_offset + param_lvl_offset);
+    //const int stack_offset     = 172;
+    //const int param_lvl_offset = 16;
+    //var int level;    level    = MEM_ReadInt(ESP + stack_offset + param_lvl_offset);
 
-    var oCVisualFX _current; _current = _^(childPtr);
-
+    var oCVisualFX _current; _current = _^(ESI);
     if (Hlp_StrCmp(_current.fxName, "spellFX_Firestorm_SPREAD")) {
-        _current.bitfield = _current.bitfield & ~oCVisualFX_bitfield_level;
-        _current.bitfield = _current.bitfield | (level << 13);
+        //_current.bitfield = _current.bitfield & ~oCVisualFX_bitfield_level;
+        //_current.bitfield = _current.bitfield | (level << 13);
         _current.spellType = SPL_Firestorm;
     } else if (Hlp_StrCmp(_current.fxName, "spellFX_Pyrokinesis_SPREAD")) {
-        _current.bitfield = _current.bitfield & ~oCVisualFX_bitfield_level;
-        _current.bitfield = _current.bitfield | (level << 13);
+        //_current.bitfield = _current.bitfield & ~oCVisualFX_bitfield_level;
+        //_current.bitfield = _current.bitfield | (level << 13);
         _current.spellType = SPL_Pyrokinesis;
     };
 };
-/* 
-func void _Hook_oCVisualFX__CreateAndCastFX_PostInit() {
 
-    var int childPtr; childPtr = ESI;
+/** Fix target of VFX when target is not the collision vob for VFX (only when origin is player). Taken from GFA and changed to be generic. */
+func void _Hook_Fix_oCVisualFX_SpellTarget_CollisionTarget() {
+    var int visualFX; visualFX = EBP;
+    const int oCVisualFX_targetVob_offset =     1200; //0x04B0
+    const int oCVisualFX_originVob_offset =     1192; //0x04A8
+    const int oCVisualFX__SetTarget       =  4788960; //0x4912E0
+    const int oCNpc__player               = 11216516; // 00ab2684
 
-    var oCVisualFX _current; _current = _^(childPtr);
-    var int level; level = (_current.bitfield & oCVisualFX_bitfield_level) >> 13;
-    Print (ConcatStrings ("_current:", ConcatStrings(_current.fxName,ConcatStrings(" level:",IntToString(level)))));
+    // Only if player is caster, to avoid NPCs attacking each other by accident
+    if (MEM_ReadInt(visualFX+oCVisualFX_originVob_offset) != MEM_ReadInt(oCNpc__player)) {
+        return;
+    };
+
+    // Get collision vob and target vob
+    var int collisionVob; collisionVob = MEM_ReadInt(MEM_ReadInt(ESP+360)); // esp+164h+4h
+    var int target;       target       = MEM_ReadInt(visualFX+oCVisualFX_targetVob_offset);
+
+    // Update target (increase/decrease reference counters properly)
+    if (Hlp_Is_oCNpc(collisionVob)) && (collisionVob != target) {
+        const int call = 0; var int zero;
+        if (CALL_Begin(call)) {
+            if (GOTHIC_BASE_VERSION == 2) {
+                CALL_IntParam(_@(zero)); // Do not re-calculate new trajectory
+            };
+            CALL_PtrParam(_@(collisionVob));
+            CALL__thiscall(_@(visualFX), oCVisualFX__SetTarget);
+            call = CALL_End();
+        };
+    };
 };
- */
-func void oCVisualFX_CreateAndPlay_Init() {
+
+func void _Override_oCVisualFX__Init() {
+    const int oCVisualFX__Init__Set_level_1      = 4793574; // 0x4924E6
+
+    // Override oCVisualFx::Init() -> "level = 1" with NOP
+    if (MEM_ReadInt(oCVisualFX__Init__Set_level_1 + 0) == 89949833) // 0x05 5c 86 89
+    && (MEM_ReadByte(oCVisualFX__Init__Set_level_1 +4) ==   0) // 0x00
+    && (MEM_ReadByte(oCVisualFX__Init__Set_level_1 +5) ==   0) // 0x00
+    {
+        // Override Memory protection
+        MemoryProtectionOverride(oCVisualFX__Init__Set_level_1, 6);
+
+        // Override MOV dword ptr [ESI + 0X55c], EAX | 89 86 5c 05 00 00
+        MEM_WriteInt(oCVisualFX__Init__Set_level_1, -1869574000); // NOPx4 | 0x90 90 90 90
+        MEM_WriteByte(oCVisualFX__Init__Set_level_1 +4, 144); // NOP | 0x90
+        MEM_WriteByte(oCVisualFX__Init__Set_level_1 +5, 144); // NOP | 0x90
+    };
+};
+
+func void FixSpellInfoForVFX_Init() {
+    _Override_oCVisualFX__Init();
     HookEngineF(4778368/*0048e980*/, 8, _Hook_oCVisualFX__CreateAndPlay_PostInit);
-    //HookEngineF(4781327/*0048f50f*/, 8, _Hook_oCVisualFX__CreateAndCastFX_PostInit);
+    if (GOTHIC_BASE_VERSION == 2) {
+        const int oCVisualFX__ProcessCollision_checkTarget   =  4807578; //0x495B9A // Hook len 6
+        HookEngineF(oCVisualFX__ProcessCollision_checkTarget, 6, _Hook_Fix_oCVisualFX_SpellTarget_CollisionTarget); // Match target with collision
+    };
 };
 
 //************************************************

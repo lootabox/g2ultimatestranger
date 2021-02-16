@@ -47,7 +47,7 @@ func void INIT_GLOBAL()
 	CanDropItem_Init();
 	OnTransferLeft_Init();
 	DrawItemInfo_Init();
-	oCVisualFX_CreateAndPlay_Init();
+	FixSpellInfoForVFX_Init();
 };
 
 // *********
