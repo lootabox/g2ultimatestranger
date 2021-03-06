@@ -986,7 +986,7 @@ func void Use_StonePlateCommon ()
 		Doc_PrintLine	( nDocID,  0, "");
 		Doc_PrintLines	( nDocID,  0, "We were powerless against it.");
 		Doc_PrintLine	( nDocID,  0, "");
-		Doc_PrintLines	( nDocID,  0, "ADANOS' wrath struck JHERENDAR!");	
+		Doc_PrintLines	( nDocID,  0, "ADANOS' wrath struck JHARKENDAR!");	
 	}
 	else //Spieler beherrscht Sprache nicht
 	{
