@@ -1,11 +1,11 @@
 
 //************************************************
 // Fix spell information for "aoe" vfx (only works for dynamic collisions, hitting static/ground does not work!)
-// https://forum.worldofplayers.de/forum/threads/1570744-Large-Firestorm-AoE-fix?s=a8fe7d97fc0784a054afc50b8f597571&p=26650079&viewfull=1#post26650079
+// https://forum.worldofplayers.de/forum/threads/1570744-Large-Firestorm-AoE-fix?s=a8fe7d97fc0784a054afc50b8f597571
 //************************************************
 
 /** Fix spell ID for AOE VFX resulting from dynamic collision.*/
-func void _Hook_oCVisualFX__CreateAndPlay_PostInit() {
+/* func void _Hook_oCVisualFX__CreateAndPlay_PostInit() {
     //const int stack_offset     = 172;
     //const int param_lvl_offset = 16;
     //var int level;    level    = MEM_ReadInt(ESP + stack_offset + param_lvl_offset);
@@ -20,64 +20,113 @@ func void _Hook_oCVisualFX__CreateAndPlay_PostInit() {
         //_current.bitfield = _current.bitfield | (level << 13);
         _current.spellType = SPL_Pyrokinesis;
     };
+}; */
+
+/** Replace: oCVisualFX::CreateAndPlay -> oCVisualFX::CreateAndCastFX */
+func void _Override_oCVisualFX__ProcessCollision__CreateVFX() {
+    const int oCVisualFX__ProcessCollision__CreateVFX_Start = 4807465; // 0x495B29
+    const int oCVisualFX__ProcessCollision__CreateVFX_End   = 4807525; // 0x495B65
+
+    // NOPs
+    repeat(i, oCVisualFX__ProcessCollision__CreateVFX_End - oCVisualFX__ProcessCollision__CreateVFX_Start); var int i;
+        MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_Start + i, 144); // NOP | 0x90
+    end;
+
+    // ecx = this
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End -  1, 205); // ... | 0xcd
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End -  2, 139); // ... | 0x8b
+
+    // zSTRING&
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End -  3,  82); // ... | 0x52
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End -  4,   0); // ... | 0x00
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End -  5,   0); // ... | 0x00
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End -  6,   2); // ... | 0x02
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End -  7, 120); // ... | 0x78
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End -  8, 149); // ... | 0x95
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End -  9, 141); // ... | 0x8d
+
+    // VobHit
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End - 10,  81); // ... | 0x51
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End - 11,  24); // ... | 0x18
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End - 12,  36); // ... | 0x24
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End - 13,  76); // ... | 0x4c
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End - 14, 139); // ... | 0x8b
+
+    // this->origin
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End - 15,  80); // ... | 0x50
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End - 16,   0); // ... | 0x00
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End - 17,   0); // ... | 0x00
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End - 18,   4); // ... | 0x04
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End - 19, 168); // ... | 0xa8
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End - 20, 133); // ... | 0x85
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_End - 21, 139); // ... | 0x8b
+
+    // CreateAndPlay -> CreateAndCastFX
+    var int orig_pos; orig_pos = MEM_ReadInt(oCVisualFX__ProcessCollision__CreateVFX_End + 1);
+    var int offset; offset = 1824; // (0x0048EE80 - 0x0048E760)
+    MEM_WriteInt(oCVisualFX__ProcessCollision__CreateVFX_End + 1, orig_pos+offset);
+
+    // __cdecl -> __thiscall: do not add esp
+    const int oCVisualFX__ProcessCollision__CreateVFX_Post = 4807532; // 0x495B6C
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_Post +0, 144); // NOP | 0x90
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_Post +1, 144); // NOP | 0x90
+    MEM_WriteByte(oCVisualFX__ProcessCollision__CreateVFX_Post +2, 144); // NOP | 0x90
 };
 
-/** Fix target of VFX when target is not the collision vob for VFX (only when origin is player). Taken from GFA and changed to be generic. */
-func void _Hook_Fix_oCVisualFX_SpellTarget_CollisionTarget() {
-    var int visualFX; visualFX = EBP;
-    const int oCVisualFX_targetVob_offset =     1200; //0x04B0
-    const int oCVisualFX_originVob_offset =     1192; //0x04A8
-    const int oCVisualFX__SetTarget       =  4788960; //0x4912E0
-    const int oCNpc__player               = 11216516; // 00ab2684
+/** Replace: C_CanCollideWith(focusNpc) -> C_CanCollideWith(npcHit) */
+func void _Override_oCVisualFX__ProcessCollision__CollideFix() {
+    const int oCVisualFX__ProcessCollision__CanCollideWith = 4807578; // 0x495B9A
 
-    // Only if player is caster, to avoid NPCs attacking each other by accident
-    if (MEM_ReadInt(visualFX+oCVisualFX_originVob_offset) != MEM_ReadInt(oCNpc__player)) {
-        return;
-    };
+    if (MEM_ReadByte(oCVisualFX__ProcessCollision__CanCollideWith +0) == 139) // 0x8b
+    && (MEM_ReadByte(oCVisualFX__ProcessCollision__CanCollideWith +1) == 181) // 0xb5
+    && (MEM_ReadByte(oCVisualFX__ProcessCollision__CanCollideWith +2) == 176) // 0xb0
+    && (MEM_ReadByte(oCVisualFX__ProcessCollision__CanCollideWith +3) ==   4) // 0x04
+    && (MEM_ReadByte(oCVisualFX__ProcessCollision__CanCollideWith +4) ==   0) // 0x00
+    && (MEM_ReadByte(oCVisualFX__ProcessCollision__CanCollideWith +5) ==   0) // 0x00
+    {
+        // Override Memory protection
+        MemoryProtectionOverride(oCVisualFX__ProcessCollision__CanCollideWith, 6);
 
-    // Get collision vob and target vob
-    var int collisionVob; collisionVob = MEM_ReadInt(MEM_ReadInt(ESP+360)); // esp+164h+4h
-    var int target;       target       = MEM_ReadInt(visualFX+oCVisualFX_targetVob_offset);
-
-    // Update target (increase/decrease reference counters properly)
-    if (Hlp_Is_oCNpc(collisionVob)) && (collisionVob != target) {
-        const int call = 0; var int zero;
-        if (CALL_Begin(call)) {
-            if (GOTHIC_BASE_VERSION == 2) {
-                CALL_IntParam(_@(zero)); // Do not re-calculate new trajectory
-            };
-            CALL_PtrParam(_@(collisionVob));
-            CALL__thiscall(_@(visualFX), oCVisualFX__SetTarget);
-            call = CALL_End();
-        };
+        // Override MOV ESI, [EBP + 0x4b0] | 8b b5 b0 04 00 00
+        MEM_WriteByte(oCVisualFX__ProcessCollision__CanCollideWith +0, 139); // ... | 0x8b
+        MEM_WriteByte(oCVisualFX__ProcessCollision__CanCollideWith +1, 116); // ... | 0x74
+        MEM_WriteByte(oCVisualFX__ProcessCollision__CanCollideWith +2,  36); // ... | 0x24
+        MEM_WriteByte(oCVisualFX__ProcessCollision__CanCollideWith +3,  20); // ... | 0x14
+        MEM_WriteByte(oCVisualFX__ProcessCollision__CanCollideWith +4, 144); // NOP | 0x90
+        MEM_WriteByte(oCVisualFX__ProcessCollision__CanCollideWith +5, 144); // NOP | 0x90
     };
 };
 
-func void _Override_oCVisualFX__Init() {
-    const int oCVisualFX__Init__Set_level_1      = 4793574; // 0x4924E6
+/** Disable 'level = 1' in oCVisualFX::Init */
+func void _Override_oCVisualFX__Init__LevelFix() {
+    const int oCVisualFX__Init__Set_level_1 = 4793574; // 0x4924E6
 
     // Override oCVisualFx::Init() -> "level = 1" with NOP
-    if (MEM_ReadInt(oCVisualFX__Init__Set_level_1 + 0) == 89949833) // 0x05 5c 86 89
+    if (MEM_ReadByte(oCVisualFX__Init__Set_level_1 +0) == 137) // 0x89
+    && (MEM_ReadByte(oCVisualFX__Init__Set_level_1 +1) == 134) // 0x86
+    && (MEM_ReadByte(oCVisualFX__Init__Set_level_1 +2) ==  92) // 0x5c
+    && (MEM_ReadByte(oCVisualFX__Init__Set_level_1 +3) ==   5) // 0x05
     && (MEM_ReadByte(oCVisualFX__Init__Set_level_1 +4) ==   0) // 0x00
     && (MEM_ReadByte(oCVisualFX__Init__Set_level_1 +5) ==   0) // 0x00
     {
         // Override Memory protection
         MemoryProtectionOverride(oCVisualFX__Init__Set_level_1, 6);
 
-        // Override MOV dword ptr [ESI + 0X55c], EAX | 89 86 5c 05 00 00
-        MEM_WriteInt(oCVisualFX__Init__Set_level_1, -1869574000); // NOPx4 | 0x90 90 90 90
+        // Override MOV [ESI + 0x55c], EAX | 89 86 5c 05 00 00
+        MEM_WriteByte(oCVisualFX__Init__Set_level_1 +0, 144); // NOP | 0x90
+        MEM_WriteByte(oCVisualFX__Init__Set_level_1 +1, 144); // NOP | 0x90
+        MEM_WriteByte(oCVisualFX__Init__Set_level_1 +2, 144); // NOP | 0x90
+        MEM_WriteByte(oCVisualFX__Init__Set_level_1 +3, 144); // NOP | 0x90
         MEM_WriteByte(oCVisualFX__Init__Set_level_1 +4, 144); // NOP | 0x90
         MEM_WriteByte(oCVisualFX__Init__Set_level_1 +5, 144); // NOP | 0x90
     };
 };
 
 func void FixSpellInfoForVFX_Init() {
-    _Override_oCVisualFX__Init();
-    HookEngineF(4778368/*0048e980*/, 8, _Hook_oCVisualFX__CreateAndPlay_PostInit);
-    if (GOTHIC_BASE_VERSION == 2) {
-        const int oCVisualFX__ProcessCollision_checkTarget   =  4807578; //0x495B9A // Hook len 6
-        HookEngineF(oCVisualFX__ProcessCollision_checkTarget, 6, _Hook_Fix_oCVisualFX_SpellTarget_CollisionTarget); // Match target with collision
-    };
+    _Override_oCVisualFX__Init__LevelFix();
+    _Override_oCVisualFX__ProcessCollision__CollideFix();
+    _Override_oCVisualFX__ProcessCollision__CreateVFX();
+    //HookEngineF(4778368/*0048e980*/, 8, _Hook_oCVisualFX__CreateAndPlay_PostInit);
 };
 
 //************************************************
