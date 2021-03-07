@@ -52,7 +52,7 @@ remake acid -> toxic rain
 holy missile remake ?
 unused bigass fireball rune texture -> explosion
 
-ice storm - 4x80 dmg / 50%, 64 mana
+ice storm - 4x80 dmg / 8s / 50%, 64 mana
 wind fist - only max charge
 ball lightning - shocks unharmed undead targets at full charge
 
@@ -109,20 +109,28 @@ S	Fear					Valley of Mines In Xardas' old tower.						Beliar's Wrath
 ----------- Staves
 
 done	visual						color	name					location		effect
-		ITMW_MAGESTAFF_BLADES_2H_01	YELLOW	Typhoon					addon cronos	Non-charged projectile spell cast speed is doubled.
-		ITMW_MAGESTAFF_BLADES_2H_02	BLUE	Tsunami					addon cronos	Water spells weaken targets against all elements.
-		ITMW_MAGESTAFF_BLADES_2H_03	RED		???						addon cronos	
-X~		ITMW_MAGESTAFF_GOOD_2H_01	YELLOW	Ulthar's staff			c3 gorax		Projectile spell cast speed is doubled.
-X		ITMW_MAGESTAFF_GOOD_2H_02	BLUE	Staff of Water Mages	c3 gorax		Ice and water spells mana cost reduction (percentage): 25
-X		ITMW_MAGESTAFF_GOOD_2H_03	RED		Staff of Fire Magicians	c3 gorax		Fire spell damage bonus vs. unignited targets (percentage): 25
-~		ITMW_MAGESTAFF_NORMAL_2H_01	YELLOW	???						c2 gorax		
-~		ITMW_MAGESTAFF_NORMAL_2H_02	BLUE	Magic Staff				c2 gorax		Mana cost reduction on full mana (percentage): 50
-~		ITMW_MAGESTAFF_NORMAL_2H_03	RED		Summoning Staff			c2 gorax		Summon spell duration is doubled.
+M~L		ITMW_MAGESTAFF_BLADES_2H_01	YELLOW	Typhoon					addon cronos	Projectile spell cast speed is doubled.
+ML		ITMW_MAGESTAFF_BLADES_2H_02	BLUE	Tsunami					addon cronos	Water spell damage and mana cost is doubled.
+L		ITMW_MAGESTAFF_BLADES_2H_03	RED		Tornado					addon cronos	Wind spell damage, area of effect and mana cost is doubled.
+		ITMW_MAGESTAFF_GOOD_2H_01	YELLOW	Ulthar's staff			c5 cellar		Combine powers of other staves (1+1/100mana)
+L		ITMW_MAGESTAFF_GOOD_2H_02	BLUE	Staff of Ice			c3 gorax		All living targets are vulnerable towards ice spells.
+LM		ITMW_MAGESTAFF_GOOD_2H_03	RED		Staff of Fire			c3 gorax		Burn damage is increased by half on non-burning targets.
+L		ITMW_MAGESTAFF_NORMAL_2H_01	YELLOW	Staff of Thunder		c2 isgaroth		Shock duration is doubled.
+LM		ITMW_MAGESTAFF_NORMAL_2H_02	BLUE	Magic staff				c1 gorax		Mana cost is halved on full mana.
+L		ITMW_MAGESTAFF_NORMAL_2H_03	RED		Summoning staff			c2 karras		Summon duration is doubled.
+
+Geyser		75dmg	20mc	upheave + aoe wet(4s)
+Waterfist	100dmg	30mc	wet(4s) + knockback
+
+Holy Arrow		evilorhalf		target protection is ignored up to half of maximum mana.
+Harm Evil		unharmedorhalf	reduces damage dealt by target. duration 8 seconds. protection reduction (percentage): 20
+Destroy Evil	fatalorhalf		
 
 
+Burn damage increased by half against non-burning targets.
+
+Lightning			Shock UNSHOCKED living targets. Deal damage 10 / sec
 Water				Target is weakened for next lightning spell.
-Ice					Target is weakened for next ice spell.
-Lightning/Shock		Target is weakened for next elemental spell.
 
 
 Ulthar = Stab04 + Stab05

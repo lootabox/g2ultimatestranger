@@ -216,7 +216,7 @@ var string pristr; pristr = IntToString(dmg);
 
 		// Check fire staff bonus
 		if (Hlp_IsValidItem(wpn)) {
-			if (Hlp_IsItem(wpn, ItMW_Addon_Stab01)) {
+			if (Hlp_IsItem(wpn, ItMw_MageStaff_Good_2H_03)) {
 				if (!Buff_Has(vic, dot_burn)) {
 					fireDot = fireDot * 150 / 100;
 				};
@@ -291,6 +291,13 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 	else if	(spellID == SPL_Geyser)
 		||	(spellID == SPL_WaterFist)
 	{
+		// Check tsunami bonus
+		if (Hlp_IsValidItem(wpn)) {
+			if (Hlp_IsItem(wpn, ItMw_MageStaff_Blades_2H_02)) {
+				dmg *= 2;
+			};
+		};
+
 		// Handle protection
 		if		(C_NpcIsWeakToWater(vic)) 	{ dmg -= prot / 2; }
 		else								{ dmg -= prot; };

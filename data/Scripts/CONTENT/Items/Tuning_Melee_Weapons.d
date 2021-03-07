@@ -347,7 +347,45 @@ const int Damage_RangerStaff		= 20;
 const int Condition_RangerStaff		= 15;
 const int Range_RangerStaff			= 130;
 const int Value_RangerStaff			= 900;
-//Magier Stab	- NEUE INSTANZ //ADDON
+//MageStaff - Shared
+const int RANGE_MageStaff				= 120;
+//MageStaff	- Typhoon
+const int Damage_MageStaff_Blades_2H_01		= 40;
+const int Condition_MageStaff_Blades_2H_01	= 60;
+const int Value_MageStaff_Blades_2H_01		= 800;
+//MageStaff	- Tsunami
+const int Damage_MageStaff_Blades_2H_02		= 40;
+const int Condition_MageStaff_Blades_2H_02	= 80;
+const int Value_MageStaff_Blades_2H_02		= 800;
+//MageStaff	- Tornado
+const int Damage_MageStaff_Blades_2H_03		= 40;
+const int Condition_MageStaff_Blades_2H_03	= 70;
+const int Value_MageStaff_Blades_2H_03		= 800;
+//MageStaff	- Ulthar's staff
+const int Damage_MageStaff_Good_2H_01		= 30;
+const int Condition_MageStaff_Good_2H_01	= 200;
+const int Value_MageStaff_Good_2H_01		= 800;
+//MageStaff	- Staff of Ice
+const int Damage_MageStaff_Good_2H_02		= 30;
+const int Condition_MageStaff_Good_2H_02	= 90;
+const int Value_MageStaff_Good_2H_02		= 800;
+//MageStaff	- Staff of Fire
+const int Damage_MageStaff_Good_2H_03		= 30;
+const int Condition_MageStaff_Good_2H_03	= 100;
+const int Value_MageStaff_Good_2H_03		= 800;
+//MageStaff	- Staff of Thunder
+const int Damage_MageStaff_Normal_2H_01		= 20;
+const int Condition_MageStaff_Normal_2H_01	= 40;
+const int Value_MageStaff_Normal_2H_01		= 800;
+//MageStaff	- Magic staff
+const int Damage_MageStaff_Normal_2H_02		= 20;
+const int Condition_MageStaff_Normal_2H_02	= 30;
+const int Value_MageStaff_Normal_2H_02		= 800;
+//MageStaff	- Summoning staff
+const int Damage_MageStaff_Normal_2H_03		= 20;
+const int Condition_MageStaff_Normal_2H_03	= 50;
+const int Value_MageStaff_Normal_2H_03		= 800;
+/*
 const int Damage_Stab01				= 25; 
 const int Condition_Stab01			= 25;
 const int Range_Stab01				= 120;
@@ -375,6 +413,7 @@ const int Condition_Stab05			= 35;
 const int Range_Stab05				= 120;
 const int Value_Stab05				= 1050;
 //const int Bonus_Stab05				= 0;
+*/
 //Stabkeule - NEUE INSTANZ
 const int Damage_Stabkeule 			= 32; 
 const int Condition_Stabkeule		= 20;

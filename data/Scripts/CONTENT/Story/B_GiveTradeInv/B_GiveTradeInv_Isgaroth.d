@@ -35,6 +35,10 @@ FUNC VOID B_GiveTradeInv_Isgaroth (var C_NPC slf)
 		CreateInvItems(slf,ItSc_Windfist,4);
 		CreateInvItems(slf,ItSc_Sleep,2);
 		CreateInvItems(slf,ItSc_Icebolt,5);
+		if((hero.guild == GIL_NOV) || (hero.guild == GIL_KDF))
+		{
+			CreateInvItems(slf,ItMw_MageStaff_Normal_2H_01,1);
+		};
 		Isgaroth_ItemsGiven_Chapter_2 = TRUE;
 	};
 	if((Kapitel >= 3) && (Isgaroth_ItemsGiven_Chapter_3 == FALSE))

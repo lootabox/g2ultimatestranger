@@ -16,21 +16,22 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 		return SPL_SENDCAST;
 	};
 
-	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
+	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(slf);
 	if (Hlp_IsValidItem(wpn))
 	{
-		// Staff of water mage effect
-		if (Hlp_IsItem(wpn, ItMW_Addon_Stab03)) {
-			var int spellID; spellID = Npc_GetActiveSpell(self);
-			if	(spellID == SPL_Icebolt)
-			||	(spellID == SPL_IceLance)
-			||	(spellID == SPL_IceCube)
-			||	(spellID == SPL_IceWave)
-			||	(spellID == SPL_Geyser)
-			||	(spellID == SPL_WaterFist)
-			||	(spellID == SPL_Thunderstorm)
-			{
-				manaCost = manaCost * (100 - Bonus_Stab03) / 100;
+		// Magic staff effect
+		if (Hlp_IsItem(wpn, ItMw_MageStaff_Normal_2H_02)) {
+			if	(slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) {
+				manaCost /= 2;
+			};
+		};
+
+		// Tsunami effect
+		if (Hlp_IsItem(wpn, ItMw_MageStaff_Blades_2H_02)) {
+			var int spellID; spellID = Npc_GetActiveSpell(slf);
+			if	(spellID == SPL_Geyser)
+			||	(spellID == SPL_WaterFist) {
+				manaCost *= 2;
 			};
 		};
 	};
@@ -39,7 +40,7 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 	{
 		if (Hlp_IsValidItem(wpn)) {
 			// Typhoon staff effect
-			if	(Hlp_IsItem(wpn, ItMw_Addon_Stab05)) {
+			if	(Hlp_IsItem(wpn, ItMw_MageStaff_Blades_2H_01)) {
 				// Deactive timer if active
 				if (FF_Active(FF_RapidSpellCombo_Reset)) {
 					FF_Remove(FF_RapidSpellCombo_Reset);
@@ -94,22 +95,21 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 	}
 	else
 	{
-		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
-		if (Hlp_IsValidItem(wpn))
-		{
+		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(slf);
+		if (Hlp_IsValidItem(wpn)) {
 			// Staff of water mage effect
-			if (Hlp_IsItem(wpn, ItMW_Addon_Stab03))
-			{
-				var int spellID; spellID = Npc_GetActiveSpell(self);
-				if	(spellID == SPL_Icebolt)
-				||	(spellID == SPL_IceLance)
-				||	(spellID == SPL_IceCube)
-				||	(spellID == SPL_IceWave)
-				||	(spellID == SPL_Geyser)
-				||	(spellID == SPL_WaterFist)
-				||	(spellID == SPL_Thunderstorm)
-				{
-					manaCost = manaCost * (100 - Bonus_Stab03) / 100;
+			if (Hlp_IsItem(wpn, ItMw_MageStaff_Normal_2H_02)) {
+				if	(slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) {
+					manaCost /= 2;
+				};
+			};
+
+			// Tsunami effect
+			if (Hlp_IsItem(wpn, ItMw_MageStaff_Blades_2H_02)) {
+				var int spellID; spellID = Npc_GetActiveSpell(slf);
+				if	(spellID == SPL_Geyser)
+				||	(spellID == SPL_WaterFist) {
+					manaCost *= 2;
 				};
 			};
 		};
@@ -155,13 +155,11 @@ func int Spell_Logic_Invest(var C_NPC slf, var int manaInvested, var int STEP_si
 	if (Npc_GetActiveSpellIsScroll(slf)) {STEP_cost = C_GetScrollCost(STEP_cost);}
 	else
 	{
-		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(self);
-		if (Hlp_IsValidItem(wpn))
-		{
-			// Ulthar's staff effect
-			if (Hlp_IsItem(wpn, ItMW_Addon_Stab04))
-			{
-				STEP_size = STEP_size * 70 / 100; // +30%
+		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(slf);
+		if (Hlp_IsValidItem(wpn)) {
+			// Typhoon staff effect
+			if (Hlp_IsItem(wpn, ItMw_MageStaff_Blades_2H_01)) {
+				STEP_size /= 2;
 			};
 		};
 	};

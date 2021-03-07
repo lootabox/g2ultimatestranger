@@ -24,7 +24,7 @@ FUNC VOID B_GiveTradeInv_Karras (var C_NPC slf)
 		CreateInvItems(slf,ItSc_SumWolf,1);
 		if((hero.guild == GIL_NOV) || (hero.guild == GIL_KDF))
 		{
-			CreateInvItems(slf,ItMw_Addon_Stab02,1);
+			CreateInvItems(slf,ItMw_MageStaff_Normal_2H_03,1);
 		};
 		Karras_ItemsGiven_Chapter_2 = TRUE;
 	};

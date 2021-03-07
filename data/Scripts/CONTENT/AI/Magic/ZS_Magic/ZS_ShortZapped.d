@@ -24,7 +24,12 @@ func int ZS_ShortZapped()
 	{
 		AI_StandUpQuick (self);
 	};
-	AI_PlayAni			(self, "T_STAND_2_LIGHTNING_VICTIM" );
+	
+	if (!C_BodyStateContains(self, BS_UNCONSCIOUS)) 
+	{
+		AI_PlayAniBS (self, "T_STAND_2_LIGHTNING_VICTIM", BS_UNCONSCIOUS);
+	};
+	B_ClearRuneInv(self);
 
 	Wld_PlayEffect ("spellFX_Lightning_TARGET", self, self, 0, 0, 0, FALSE);
 	self.aivar[AIV_FreezeStateTime] = 0;
@@ -41,6 +46,7 @@ func int ZS_ShortZapped_Loop ()
 	if (Npc_GetStateTime(self) != self.aivar[AIV_FreezeStateTime])
 	{
 		self.aivar[AIV_FreezeStateTime] = Npc_GetStateTime(self);
+		B_MagicHurtNpc(other, self, SPL_ZAPPED_DAMAGE_PER_SEC);
 	};
 	return LOOP_CONTINUE;
 };

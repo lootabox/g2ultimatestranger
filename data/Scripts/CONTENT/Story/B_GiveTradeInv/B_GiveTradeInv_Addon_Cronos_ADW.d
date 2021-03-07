@@ -10,10 +10,6 @@ FUNC VOID B_GiveTradeInv_Addon_Cronos_ADW (var C_NPC slf)
 	if ((Kapitel >= 2)
 	&& (Cronos_ADW_ItemsGiven_Chapter_2 == FALSE))
 	{
-		
-		//CreateInvItems   (slf, ItMW_Addon_Stab03, 	1);
-		//CreateInvItems   (slf, ItMW_Addon_Stab05, 	1);
-		
 		//CreateInvItems   (slf, ItMi_Sulfur, 	2);
 		CreateInvItems   (slf, ItMi_Quartz, 	2);
 		//CreateInvItems   (slf, ItMi_Pitch, 	    1);
@@ -49,8 +45,9 @@ FUNC VOID B_GiveTradeInv_Addon_Cronos_ADW (var C_NPC slf)
 		if((hero.guild == GIL_NOV) || (hero.guild == GIL_KDF))
 		{
 			CreateInvItems(slf,ItMi_RuneBlank,2);
-			CreateInvItems(slf,ItMw_Addon_Stab03,1);
-			CreateInvItems(slf,ItMw_Addon_Stab05,1);
+			CreateInvItems(slf,ItMw_MageStaff_Blades_2H_01,1);
+			CreateInvItems(slf,ItMw_MageStaff_Blades_2H_02,1);
+			CreateInvItems(slf,ItMw_MageStaff_Blades_2H_03,1);
 		};
 		//***********************************
 		

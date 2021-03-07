@@ -22,6 +22,10 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems(slf,ItWr_Map_NewWorld,1);
 		CreateInvItems(slf,ItSc_Zap,5);
 		CreateInvItems(slf,ItFo_Wine,3);
+		if((hero.guild == GIL_NOV) || (hero.guild == GIL_KDF))
+		{
+			//CreateInvItems(slf,ItMw_MageStaff_Normal_2H_02,1);
+		};
 		Gorax_ItemsGiven_Chapter_1 = TRUE;
 	};
 	if((Kapitel >= 2) && (Gorax_ItemsGiven_Chapter_2 == FALSE))
@@ -41,7 +45,6 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		if((hero.guild == GIL_NOV) || (hero.guild == GIL_KDF))
 		{
 			CreateInvItems(slf,ItMi_RuneBlank,2);
-			CreateInvItems(slf,ItMw_Addon_Stab01,1);
 		};
 		if((hero.guild == GIL_PAL) || (hero.guild == GIL_MIL))
 		{
@@ -70,6 +73,8 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		if((hero.guild == GIL_NOV) || (hero.guild == GIL_KDF))
 		{
 			CreateInvItems(slf,ItMi_RuneBlank,1);
+			CreateInvItems(slf,ItMw_MageStaff_Good_2H_02,1);
+			CreateInvItems(slf,ItMw_MageStaff_Good_2H_03,1);
 		};
 		CreateInvItems(slf,ItSc_TrfGiantBug,1);
 		CreateInvItems(slf,ItSc_TrfWolf,1);

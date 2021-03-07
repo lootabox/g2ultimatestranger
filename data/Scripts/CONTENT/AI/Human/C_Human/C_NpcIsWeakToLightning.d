@@ -21,7 +21,7 @@ func int C_NpcIsWeakToLightning(var C_Npc slf)
 	{
 		return TRUE;
 	}
-	else if (Buff_Has(slf, elemental_weakness))
+	else if (Buff_Has(slf, magic_wet))
 	{
 		return TRUE;
 	}

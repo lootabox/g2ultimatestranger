@@ -5,7 +5,7 @@
 // aus ZS_Zapped aufgerufen
 // **************************************
 
-const int SPL_ZAPPED_DAMAGE_PER_SEC = 2;
+const int SPL_ZAPPED_DAMAGE_PER_SEC = 10;
 
 func void B_StopZapped ()
 {	

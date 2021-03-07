@@ -724,7 +724,7 @@ const string NAME_Dot_Full				= "All damage is dealt over time. ";
 const string NAME_Ice_Freeze			= "Targets are frozen during effect. ";
 
 // MAX LENGTH							"------------------------------------------------------------";
-const string NAME_Ice_Cull				= "Lethal on targets with hitpoints reduced to or under:";
+const string NAME_Ice_Cull				= "Bonus damage if it would be fatal:";
 const string NAME_Zap_Living			= "Shocks unharmed living targets. ";
 const string NAME_Nonlethal				= "Non-lethal. ";
 const string NAME_Instant				= "Instant effect. ";
@@ -764,12 +764,17 @@ const string NAME_PalLightHeal_Info		= "Healing is equal to maximum mana.";
 const string NAME_PalMediumHeal_Info	= "Healing is equal to maximum mana (doubled).";
 const string NAME_PalFullHeal_Info		= "Healing is equal to maximum mana (tripled).";
 
-// MAX LENGTH						"------------------------------------------------------------";
-const string NAME_Bonus_Stab01		= "Burn damage is increased by half on non-burning targets.";
-const string NAME_Bonus_Stab02		= "";
-const string NAME_Bonus_Stab03		= "Ice and water spells mana cost reduction (percentage):";
-const string NAME_Bonus_Stab04		= "Charged spells charge rate increase (percentage):";
-const string NAME_Bonus_Stab05		= "Simple projectile spells can be cast faster.";
+// MAX LENGTH									"------------------------------------------------------------";
+const string NAME_Bonus_MageStaff_Blades_2H_01	= "Projectile spell cast speed is doubled.";
+const string NAME_Bonus_MageStaff_Blades_2H_02	= "Water spell damage and mana cost is doubled.";
+const string NAME_Bonus_MageStaff_Blades_2H_03	= "";
+const string NAME_Bonus_MageStaff_Good_2H_01	= "";
+const string NAME_Bonus_MageStaff_Good_2H_02	= "";
+const string NAME_Bonus_MageStaff_Good_2H_03	= "Burn damage is increased by half on non-burning targets.";
+const string NAME_Bonus_MageStaff_Normal_2H_01	= "";
+const string NAME_Bonus_MageStaff_Normal_2H_02	= "Mana cost is halved on full mana.";
+const string NAME_Bonus_MageStaff_Normal_2H_03	= "";
+
 
 //const string NAME_Damage		= "Damage:";
 //const string NAME_Damage_Max	= "Maximum damage:";

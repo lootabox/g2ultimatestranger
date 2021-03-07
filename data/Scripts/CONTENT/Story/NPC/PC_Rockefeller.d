@@ -210,6 +210,16 @@ INSTANCE PC_Rockefeller(NPC_DEFAULT)
 	CreateInvItems (self, ItMw_2H_Blessed_02,1);
 	CreateInvItems (self, ItMw_2H_Blessed_03,1);
 
+	CreateInvItems (self, ItMw_MageStaff_Blades_2H_01, 1);
+	CreateInvItems (self, ItMw_MageStaff_Blades_2H_02, 1);
+	CreateInvItems (self, ItMw_MageStaff_Blades_2H_03, 1);
+	CreateInvItems (self, ItMw_MageStaff_Good_2H_01, 1);
+	CreateInvItems (self, ItMw_MageStaff_Good_2H_02, 1);
+	CreateInvItems (self, ItMw_MageStaff_Good_2H_03, 1);
+	CreateInvItems (self, ItMw_MageStaff_Normal_2H_01, 1);
+	CreateInvItems (self, ItMw_MageStaff_Normal_2H_02, 1);
+	CreateInvItems (self, ItMw_MageStaff_Normal_2H_03, 1);
+
 //----------------------------------------
 //Armor.d
 //----------------------------------------

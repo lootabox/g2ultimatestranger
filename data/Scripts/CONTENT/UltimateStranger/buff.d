@@ -171,19 +171,19 @@ func void dot_burn_remove(var c_npc npc) {
     Wld_StopEffect_Ext("VOB_BURN", npc, npc, FALSE);
 };
 //######################################################
-// Elemental weakness lCBuff (used in damage calculation)
+// Magic wetness lCBuff (used in damage calculation)
 //######################################################
 
-instance elemental_weakness(lCBuff) {
+instance magic_wet(lCBuff) {
     durationMS = 5000; // placeholder, replaced on apply
 };
 //######################################################
-// Elemental weakness apply / remove methods
+// Magic wetness apply / remove methods
 //######################################################
 
-func void elemental_weakness_apply(var c_npc npc, var int count, var int seconds) {
+func void magic_wet_apply(var c_npc npc, var int count, var int seconds) {
     repeat(i, count); var int i;
-        var int bh; bh = Buff_Apply(npc, elemental_weakness, npc);
+        var int bh; bh = Buff_Apply(npc, magic_wet, npc);
         var lCBuff b; b = get(bh);
         b.durationMS = seconds * 1000;
     end;
