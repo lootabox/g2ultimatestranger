@@ -14,6 +14,7 @@ func int C_NpcIsWeakToIce(var C_Npc slf)
 	|| (slf.guild == GIL_SCAVENGER) // scavengers, orc biters
 	|| (slf.guild == GIL_SNAPPER) // snappers, razors, dragon snappers
 	|| (slf.guild == GIL_WARAN) // lizards, fire lizards
+	|| (MageStaff_Good_2H_02_Equipped)
 	{
 		return TRUE;
 	}

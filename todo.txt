@@ -113,7 +113,7 @@ M~L		ITMW_MAGESTAFF_BLADES_2H_01	YELLOW	Typhoon					addon cronos	Projectile spel
 ML		ITMW_MAGESTAFF_BLADES_2H_02	BLUE	Tsunami					addon cronos	Water spell damage and mana cost is doubled.
 L		ITMW_MAGESTAFF_BLADES_2H_03	RED		Tornado					addon cronos	Wind spell damage, area of effect and mana cost is doubled.
 		ITMW_MAGESTAFF_GOOD_2H_01	YELLOW	Ulthar's staff			c5 cellar		Combine powers of other staves (1+1/100mana)
-L		ITMW_MAGESTAFF_GOOD_2H_02	BLUE	Staff of Ice			c3 gorax		All living targets are vulnerable towards ice spells.
+LM		ITMW_MAGESTAFF_GOOD_2H_02	BLUE	Staff of Ice			c3 gorax		All living targets are vulnerable towards ice spells.
 LM		ITMW_MAGESTAFF_GOOD_2H_03	RED		Staff of Fire			c3 gorax		Burn damage is increased by half on non-burning targets.
 LM		ITMW_MAGESTAFF_NORMAL_2H_01	YELLOW	Staff of Thunder		c2 isgaroth		Shock duration is doubled.
 LM		ITMW_MAGESTAFF_NORMAL_2H_02	BLUE	Magic staff				c1 gorax		Mana cost is halved on full mana.
