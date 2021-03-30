@@ -25,6 +25,7 @@ func void PC_Sleep (var int t)
 	else
 	{
 		Wld_StopEffect("SLEEP_BLEND");
+		Mdl_RemoveOverlayMDS(hero, "HUMANS_MAGESPRINT");
 		AI_Wait(hero, 1);
 		if	(Wld_IsTime(00,00,t,00))
 		{
