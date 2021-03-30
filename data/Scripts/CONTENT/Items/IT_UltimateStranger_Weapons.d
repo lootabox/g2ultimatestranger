@@ -117,6 +117,7 @@ INSTANCE ItMw_MageStaff_Blades_2H_01 (ItMw_MageStaff_Prototype)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 FUNC VOID Equip_MageStaff_Blades_2H_01() {
+	MageStaff_Blades_2H_01_Equipped = TRUE;
 	spellFxAniLetters[SPL_Firebolt] = "RPF";
 	spellFxAniLetters[SPL_IceLance] = "RPF";
 	spellFxAniLetters[SPL_Icebolt] = "RPF";
@@ -124,6 +125,7 @@ FUNC VOID Equip_MageStaff_Blades_2H_01() {
 	spellFxAniLetters[SPL_Zap] = "RPF";
 };
 FUNC VOID UnEquip_MageStaff_Blades_2H_01() {
+	MageStaff_Blades_2H_01_Equipped = FALSE;
 	// Deactive timer if active
 	if (FF_Active(FF_RapidSpellCombo_Reset)) {
 		FF_Remove(FF_RapidSpellCombo_Reset);
@@ -146,12 +148,21 @@ INSTANCE ItMw_MageStaff_Blades_2H_02 (ItMw_MageStaff_Prototype)
 	visual 				=	"ItMW_MageStaff_Blades_2H_02.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF1";
 
+	on_equip			=	Equip_MageStaff_Blades_2H_02;
+	on_unequip			=	UnEquip_MageStaff_Blades_2H_02;
+
 	TEXT[0]				= NAME_Bonus_MageStaff_Blades_2H_02;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+FUNC VOID Equip_MageStaff_Blades_2H_02() {
+	MageStaff_Blades_2H_02_Equipped = TRUE;
+};
+FUNC VOID UnEquip_MageStaff_Blades_2H_02() {
+	MageStaff_Blades_2H_02_Equipped = FALSE;
 };
 // *****************************************************
 INSTANCE ItMw_MageStaff_Blades_2H_03 (ItMw_MageStaff_Prototype)
@@ -165,12 +176,21 @@ INSTANCE ItMw_MageStaff_Blades_2H_03 (ItMw_MageStaff_Prototype)
 	visual 				=	"ItMW_MageStaff_Blades_2H_03.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF1";
 
+	on_equip			=	Equip_MageStaff_Blades_2H_03;
+	on_unequip			=	UnEquip_MageStaff_Blades_2H_03;
+
 	TEXT[0]				= NAME_Bonus_MageStaff_Blades_2H_03;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+FUNC VOID Equip_MageStaff_Blades_2H_03() {
+	MageStaff_Blades_2H_03_Equipped = TRUE;
+};
+FUNC VOID UnEquip_MageStaff_Blades_2H_03() {
+	MageStaff_Blades_2H_03_Equipped = FALSE;
 };
 // *****************************************************
 INSTANCE ItMw_MageStaff_Good_2H_01 (ItMw_MageStaff_Prototype)
@@ -183,6 +203,8 @@ INSTANCE ItMw_MageStaff_Good_2H_01 (ItMw_MageStaff_Prototype)
 	//mag_circle			=	5;
 	visual 				=	"ItMW_MageStaff_Good_2H_01.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF1";
+	on_equip			=	Equip_MageStaff_Good_2H_01;
+	on_unequip			=	UnEquip_MageStaff_Good_2H_01;
 
 	TEXT[0]				= NAME_Bonus_MageStaff_Good_2H_01;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
@@ -190,6 +212,12 @@ INSTANCE ItMw_MageStaff_Good_2H_01 (ItMw_MageStaff_Prototype)
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+FUNC VOID Equip_MageStaff_Good_2H_01() {
+	MageStaff_Good_2H_01_Equipped = TRUE;
+};
+FUNC VOID UnEquip_MageStaff_Good_2H_01() {
+	MageStaff_Good_2H_01_Equipped = FALSE;
 };
 // *****************************************************
 INSTANCE ItMw_MageStaff_Good_2H_02 (ItMw_MageStaff_Prototype)
@@ -203,12 +231,21 @@ INSTANCE ItMw_MageStaff_Good_2H_02 (ItMw_MageStaff_Prototype)
 	visual 				=	"ItMW_MageStaff_Good_2H_02.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF1";
 
+	on_equip			=	Equip_MageStaff_Good_2H_02;
+	on_unequip			=	UnEquip_MageStaff_Good_2H_02;
+
 	TEXT[0]				= NAME_Bonus_MageStaff_Good_2H_02;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
 	TEXT[2] 			= NAME_Mana_needed;				COUNT[2]	= cond_value[2];
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+FUNC VOID Equip_MageStaff_Good_2H_02() {
+	MageStaff_Good_2H_02_Equipped = TRUE;
+};
+FUNC VOID UnEquip_MageStaff_Good_2H_02() {
+	MageStaff_Good_2H_02_Equipped = FALSE;
 };
 // *****************************************************
 INSTANCE ItMw_MageStaff_Good_2H_03 (ItMw_MageStaff_Prototype)
@@ -221,6 +258,9 @@ INSTANCE ItMw_MageStaff_Good_2H_03 (ItMw_MageStaff_Prototype)
 	//mag_circle			=	3;
 	visual 				=	"ItMW_MageStaff_Good_2H_03.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF1";
+	
+	on_equip			=	Equip_MageStaff_Good_2H_03;
+	on_unequip			=	UnEquip_MageStaff_Good_2H_03;
 
 	TEXT[0]				= NAME_Bonus_MageStaff_Good_2H_03;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
@@ -228,6 +268,12 @@ INSTANCE ItMw_MageStaff_Good_2H_03 (ItMw_MageStaff_Prototype)
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+FUNC VOID Equip_MageStaff_Good_2H_03() {
+	MageStaff_Good_2H_03_Equipped = TRUE;
+};
+FUNC VOID UnEquip_MageStaff_Good_2H_03() {
+	MageStaff_Good_2H_03_Equipped = FALSE;
 };
 // *****************************************************
 INSTANCE ItMw_MageStaff_Normal_2H_01 (ItMw_MageStaff_Prototype)
@@ -252,10 +298,10 @@ INSTANCE ItMw_MageStaff_Normal_2H_01 (ItMw_MageStaff_Prototype)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 FUNC VOID Equip_MageStaff_Normal_2H_01() {
-	//SPL_TIME_SHORTZAPPED = 4;
+	MageStaff_Normal_2H_01_Equipped = TRUE;
 };
 FUNC VOID UnEquip_MageStaff_Normal_2H_01() {
-	//SPL_TIME_SHORTZAPPED = 2;
+	MageStaff_Normal_2H_01_Equipped = FALSE;
 };
 // *****************************************************
 INSTANCE ItMw_MageStaff_Normal_2H_02 (ItMw_MageStaff_Prototype)
@@ -268,6 +314,9 @@ INSTANCE ItMw_MageStaff_Normal_2H_02 (ItMw_MageStaff_Prototype)
 	//mag_circle			=	1;
 	visual 				=	"ItMW_MageStaff_Normal_2H_02.3DS"; 
 	effect				=	"SPELLFX_MAGESTAFF1";
+	
+	on_equip			=	Equip_MageStaff_Normal_2H_02;
+	on_unequip			=	UnEquip_MageStaff_Normal_2H_02;
 
 	TEXT[0]				= NAME_Bonus_MageStaff_Normal_2H_02;
 	TEXT[1]				= NAME_Dam_Blunt;				COUNT[1]	= damageTotal;
@@ -275,6 +324,12 @@ INSTANCE ItMw_MageStaff_Normal_2H_02 (ItMw_MageStaff_Prototype)
 	TEXT[3]				= NAME_Reach;					COUNT[3]	= range*100/253;
 	TEXT[4]				= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+FUNC VOID Equip_MageStaff_Normal_2H_02() {
+	MageStaff_Normal_2H_02_Equipped = TRUE;
+};
+FUNC VOID UnEquip_MageStaff_Normal_2H_02() {
+	MageStaff_Normal_2H_02_Equipped = FALSE;
 };
 // *****************************************************
 INSTANCE ItMw_MageStaff_Normal_2H_03 (ItMw_MageStaff_Prototype)
@@ -299,9 +354,9 @@ INSTANCE ItMw_MageStaff_Normal_2H_03 (ItMw_MageStaff_Prototype)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 FUNC VOID Equip_MageStaff_Normal_2H_03() {
-	//SUMMON_TIME = 20;
+	MageStaff_Normal_2H_03_Equipped = TRUE;
 };
 FUNC VOID UnEquip_MageStaff_Normal_2H_03() {
-	//SUMMON_TIME = 10;
+	MageStaff_Normal_2H_03_Equipped = FALSE;
 };
 // *****************************************************

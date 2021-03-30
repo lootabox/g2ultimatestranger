@@ -72,24 +72,36 @@ var int MCArmor_Equipped;
 	Gürtel der Heilung (1. Rezept heiltrank oder alle...)
 */
 var int KDF01_Equipped;
-var int KDF02_Equipped;
-var int KDF03_Equipped;
+//var int KDF02_Equipped;
+//var int KDF03_Equipped;
 
 var int MIL01_Equipped;
-var int MIL02_Equipped;
-var int MIL03_Equipped;
+//var int MIL02_Equipped;
+//var int MIL03_Equipped;
 
 var int NOV01_Equipped;
 
 var int SLD01_Equipped;
-var int SLD02_Equipped;
-var int SLD03_Equipped;
+//var int SLD02_Equipped;
+//var int SLD03_Equipped;
 
 var int Leather01_Equipped;
-var int Leather02_Equipped;
+//var int Leather02_Equipped;
 
-var int Rhobar_Equipped;
+//var int Rhobar_Equipped;
 var int MC_Equipped;
+//----------------------Staves-------------------------
+
+var int MageStaff_Blades_2H_01_Equipped;
+var int MageStaff_Blades_2H_02_Equipped;
+var int MageStaff_Blades_2H_03_Equipped;
+var int MageStaff_Good_2H_01_Equipped;
+var int MageStaff_Good_2H_02_Equipped;
+var int MageStaff_Good_2H_03_Equipped;
+var int MageStaff_Normal_2H_01_Equipped;
+var int MageStaff_Normal_2H_02_Equipped;
+var int MageStaff_Normal_2H_03_Equipped;
+
 //-----------------------------------------------------
 
 var INT WISPSKILL_LEVEL;

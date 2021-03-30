@@ -200,9 +200,6 @@ var string pristr; pristr = IntToString(dmg);
 	else							{ prot = vic.protection[PROT_MAGIC]; };
 	if (prot == IMMUNE)				{ return 0; };
 
-	// Get equipped staff
-	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(att);
-	
 	// FIRE SPELLS ---------------------------------------------------------------------------
 	if	(spellID == SPL_Firebolt)
 	||	(spellID == SPL_InstantFireball)
@@ -215,11 +212,9 @@ var string pristr; pristr = IntToString(dmg);
 		var int fireDot; fireDot = dmg / 2; dmg -= fireDot;
 
 		// Check fire staff bonus
-		if (Hlp_IsValidItem(wpn)) {
-			if (Hlp_IsItem(wpn, ItMw_MageStaff_Good_2H_03)) {
-				if (!Buff_Has(vic, dot_burn)) {
-					fireDot = fireDot * 150 / 100;
-				};
+		if (MageStaff_Good_2H_03_Equipped) {
+			if (!Buff_Has(vic, dot_burn)) {
+				fireDot = fireDot * 150 / 100;
 			};
 		};
 
@@ -292,10 +287,8 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 		||	(spellID == SPL_WaterFist)
 	{
 		// Check tsunami bonus
-		if (Hlp_IsValidItem(wpn)) {
-			if (Hlp_IsItem(wpn, ItMw_MageStaff_Blades_2H_02)) {
-				dmg *= 2;
-			};
+		if (MageStaff_Blades_2H_02_Equipped) {
+			dmg *= 2;
 		};
 
 		// Handle protection

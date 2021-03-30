@@ -16,67 +16,61 @@ func int Spell_Logic_Basic (var c_npc slf, var int manaCost)
 		return SPL_SENDCAST;
 	};
 
-	var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(slf);
-	if (Hlp_IsValidItem(wpn))
-	{
-		// Magic staff effect
-		if (Hlp_IsItem(wpn, ItMw_MageStaff_Normal_2H_02)) {
-			if	(slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) {
-				manaCost /= 2;
-			};
+	// Magic staff effect
+	if (MageStaff_Normal_2H_02_Equipped) {
+		if	(slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) {
+			manaCost /= 2;
 		};
+	};
 
-		// Tsunami effect
-		if (Hlp_IsItem(wpn, ItMw_MageStaff_Blades_2H_02)) {
-			var int spellID; spellID = Npc_GetActiveSpell(slf);
-			if	(spellID == SPL_Geyser)
-			||	(spellID == SPL_WaterFist) {
-				manaCost *= 2;
-			};
+	// Tsunami effect
+	if (MageStaff_Blades_2H_02_Equipped) {
+		var int spellID; spellID = Npc_GetActiveSpell(slf);
+		if	(spellID == SPL_Geyser)
+		||	(spellID == SPL_WaterFist) {
+			manaCost *= 2;
 		};
 	};
 
 	if (slf.attribute[ATR_MANA] >= manaCost)
 	{
-		if (Hlp_IsValidItem(wpn)) {
-			// Typhoon staff effect
-			if	(Hlp_IsItem(wpn, ItMw_MageStaff_Blades_2H_01)) {
-				// Deactive timer if active
-				if (FF_Active(FF_RapidSpellCombo_Reset)) {
-					FF_Remove(FF_RapidSpellCombo_Reset);
-				};
-				// Set animation for next (!) Casting
-				if (slf.aivar[AIV_RapidSpellCombo] == 0) {
-					// From the cast animation to the first rapid-fire combo (left)
-					spellFxAniLetters[SPL_Firebolt] = "RP2";
-					spellFxAniLetters[SPL_IceLance] = "RP2";
-					spellFxAniLetters[SPL_Icebolt] = "RP2";
-					spellFxAniLetters[SPL_InstantFireball] = "RP2";
-					spellFxAniLetters[SPL_Zap] = "RP2";
-					slf.aivar[AIV_RapidSpellCombo] = 1;
-					// Set time window for next combo (is longer than usual!)
-					FF_ApplyExtGT(FF_RapidSpellCombo_Reset, 600, 1);
-				} else if (slf.aivar[AIV_RapidSpellCombo] == 1) {
-					// From the first rapid-fire combo (left) to the second (right)
-					spellFxAniLetters[SPL_Firebolt] = "RP3";
-					spellFxAniLetters[SPL_IceLance] = "RP3";
-					spellFxAniLetters[SPL_Icebolt] = "RP3";
-					spellFxAniLetters[SPL_InstantFireball] = "RP3";
-					spellFxAniLetters[SPL_Zap] = "RP3";
-					slf.aivar[AIV_RapidSpellCombo] = 2;
-					// Set timer for next combo
-					FF_ApplyExtGT(FF_RapidSpellCombo_Reset, 600, 1);
-				} else {
-					// From the second rapid-fire combo (right) to the first (left)
-					spellFxAniLetters[SPL_Firebolt] = "RP2";
-					spellFxAniLetters[SPL_IceLance] = "RP2";
-					spellFxAniLetters[SPL_Icebolt] = "RP2";
-					spellFxAniLetters[SPL_InstantFireball] = "RP2";
-					spellFxAniLetters[SPL_Zap] = "RP2";
-					slf.aivar[AIV_RapidSpellCombo] = 1;
-					// Set timer for next combo
-					FF_ApplyExtGT(FF_RapidSpellCombo_Reset, 600, 1);
-				};
+		// Typhoon staff effect
+		if	(MageStaff_Blades_2H_01_Equipped) {
+			// Deactive timer if active
+			if (FF_Active(FF_RapidSpellCombo_Reset)) {
+				FF_Remove(FF_RapidSpellCombo_Reset);
+			};
+			// Set animation for next (!) Casting
+			if (slf.aivar[AIV_RapidSpellCombo] == 0) {
+				// From the cast animation to the first rapid-fire combo (left)
+				spellFxAniLetters[SPL_Firebolt] = "RP2";
+				spellFxAniLetters[SPL_IceLance] = "RP2";
+				spellFxAniLetters[SPL_Icebolt] = "RP2";
+				spellFxAniLetters[SPL_InstantFireball] = "RP2";
+				spellFxAniLetters[SPL_Zap] = "RP2";
+				slf.aivar[AIV_RapidSpellCombo] = 1;
+				// Set time window for next combo (is longer than usual!)
+				FF_ApplyExtGT(FF_RapidSpellCombo_Reset, 600, 1);
+			} else if (slf.aivar[AIV_RapidSpellCombo] == 1) {
+				// From the first rapid-fire combo (left) to the second (right)
+				spellFxAniLetters[SPL_Firebolt] = "RP3";
+				spellFxAniLetters[SPL_IceLance] = "RP3";
+				spellFxAniLetters[SPL_Icebolt] = "RP3";
+				spellFxAniLetters[SPL_InstantFireball] = "RP3";
+				spellFxAniLetters[SPL_Zap] = "RP3";
+				slf.aivar[AIV_RapidSpellCombo] = 2;
+				// Set timer for next combo
+				FF_ApplyExtGT(FF_RapidSpellCombo_Reset, 600, 1);
+			} else {
+				// From the second rapid-fire combo (right) to the first (left)
+				spellFxAniLetters[SPL_Firebolt] = "RP2";
+				spellFxAniLetters[SPL_IceLance] = "RP2";
+				spellFxAniLetters[SPL_Icebolt] = "RP2";
+				spellFxAniLetters[SPL_InstantFireball] = "RP2";
+				spellFxAniLetters[SPL_Zap] = "RP2";
+				slf.aivar[AIV_RapidSpellCombo] = 1;
+				// Set timer for next combo
+				FF_ApplyExtGT(FF_RapidSpellCombo_Reset, 600, 1);
 			};
 		};
 		return SPL_SENDCAST;
@@ -95,22 +89,19 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 	}
 	else
 	{
-		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(slf);
-		if (Hlp_IsValidItem(wpn)) {
-			// Staff of water mage effect
-			if (Hlp_IsItem(wpn, ItMw_MageStaff_Normal_2H_02)) {
-				if	(slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) {
-					manaCost /= 2;
-				};
+		// Staff of water mage effect
+		if (MageStaff_Normal_2H_02_Equipped) {
+			if	(slf.attribute[ATR_MANA] >= slf.attribute[ATR_MANA_MAX]) {
+				manaCost /= 2;
 			};
+		};
 
-			// Tsunami effect
-			if (Hlp_IsItem(wpn, ItMw_MageStaff_Blades_2H_02)) {
-				var int spellID; spellID = Npc_GetActiveSpell(slf);
-				if	(spellID == SPL_Geyser)
-				||	(spellID == SPL_WaterFist) {
-					manaCost *= 2;
-				};
+		// Tsunami effect
+		if (MageStaff_Blades_2H_02_Equipped) {
+			var int spellID; spellID = Npc_GetActiveSpell(slf);
+			if	(spellID == SPL_Geyser)
+			||	(spellID == SPL_WaterFist) {
+				manaCost *= 2;
 			};
 		};
 
@@ -155,12 +146,9 @@ func int Spell_Logic_Invest(var C_NPC slf, var int manaInvested, var int STEP_si
 	if (Npc_GetActiveSpellIsScroll(slf)) {STEP_cost = C_GetScrollCost(STEP_cost);}
 	else
 	{
-		var c_item wpn; wpn = Npc_GetEquippedMeleeWeapon(slf);
-		if (Hlp_IsValidItem(wpn)) {
-			// Typhoon staff effect
-			if (Hlp_IsItem(wpn, ItMw_MageStaff_Blades_2H_01)) {
-				STEP_size /= 2;
-			};
+		// Typhoon staff effect
+		if (MageStaff_Blades_2H_01_Equipped) {
+			STEP_size /= 2;
 		};
 	};
 
