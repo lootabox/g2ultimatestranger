@@ -771,7 +771,7 @@ const string NAME_Bonus_MageStaff_Blades_2H_03	= "";
 const string NAME_Bonus_MageStaff_Good_2H_01	= "";
 const string NAME_Bonus_MageStaff_Good_2H_02	= "";
 const string NAME_Bonus_MageStaff_Good_2H_03	= "Burn damage is increased by half on non-burning targets.";
-const string NAME_Bonus_MageStaff_Normal_2H_01	= "";
+const string NAME_Bonus_MageStaff_Normal_2H_01	= "Shock duration is doubled.";
 const string NAME_Bonus_MageStaff_Normal_2H_02	= "Mana cost is halved on full mana.";
 const string NAME_Bonus_MageStaff_Normal_2H_03	= "";
 

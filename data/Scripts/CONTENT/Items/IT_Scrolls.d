@@ -765,7 +765,7 @@ INSTANCE ItSc_LightningFlash (C_Item)
 	COUNT	[2]			=	SPL_Damage_LightningFlash;
 
 	TEXT	[3]			=	ConcatStrings(NAME_Zap_Living, NAME_Sec_Duration);
-	COUNT	[3]			=	SPL_TIME_SHORTZAPPED;
+	COUNT	[3]			=	SPL_TIME_ZAPPED;
 
 	TEXT	[4]			=	NAME_Instant;
 	
@@ -948,7 +948,7 @@ INSTANCE ItSc_ThunderBall (C_Item)
 	count 	[2]			=   SPL_Damage_ChargeZap;
 
 	TEXT	[3]			=	ConcatStrings(NAME_Zap_Living, NAME_Sec_Duration);
-	COUNT	[3]			=	SPL_TIME_SHORTZAPPED;
+	COUNT	[3]			=	SPL_TIME_ZAPPED;
 
 	TEXT	[4]			=	NAME_Nonlethal;
 	

@@ -5,7 +5,7 @@
 // aus ZS_Zapped aufgerufen
 // **************************************
 
-const int SPL_TIME_SHORTZAPPED = 2;
+const int SPL_TIME_SHORTZAPPED = 1;
 
 // **********************************
 // ZS_ShortZapped
@@ -38,7 +38,9 @@ func int ZS_ShortZapped()
 
 func int ZS_ShortZapped_Loop ()
 {	
-	if	(Npc_GetStateTime(self) >= SPL_TIME_SHORTZAPPED)
+	if	(!MageStaff_Normal_2H_01_Equipped)
+	&&	(Npc_GetStateTime(self) >= SPL_TIME_SHORTZAPPED)
+	||	(Npc_GetStateTime(self) >= SPL_TIME_SHORTZAPPED*2)
 	{
 		return LOOP_END;
 	};

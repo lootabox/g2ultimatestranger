@@ -115,7 +115,7 @@ L		ITMW_MAGESTAFF_BLADES_2H_03	RED		Tornado					addon cronos	Wind spell damage, 
 		ITMW_MAGESTAFF_GOOD_2H_01	YELLOW	Ulthar's staff			c5 cellar		Combine powers of other staves (1+1/100mana)
 L		ITMW_MAGESTAFF_GOOD_2H_02	BLUE	Staff of Ice			c3 gorax		All living targets are vulnerable towards ice spells.
 LM		ITMW_MAGESTAFF_GOOD_2H_03	RED		Staff of Fire			c3 gorax		Burn damage is increased by half on non-burning targets.
-L		ITMW_MAGESTAFF_NORMAL_2H_01	YELLOW	Staff of Thunder		c2 isgaroth		Shock duration is doubled.
+LM		ITMW_MAGESTAFF_NORMAL_2H_01	YELLOW	Staff of Thunder		c2 isgaroth		Shock duration is doubled.
 LM		ITMW_MAGESTAFF_NORMAL_2H_02	BLUE	Magic staff				c1 gorax		Mana cost is halved on full mana.
 L		ITMW_MAGESTAFF_NORMAL_2H_03	RED		Summoning staff			c2 karras		Summon duration is doubled.
 
@@ -1042,16 +1042,16 @@ You will find me where it all began.
 
 
 			The stranger fog tower		SPAWN_CAES_FOGTOWER 10 11 12
-	100xp	castle tower				STRANGER_CASTLE_1
-	200xp	volcano tower				STRANGER_VOLCANO_1
-	300xp	swamp entrance tree house	STRANGER_TREE_HOUSE_1
-	400xp	ice region border tower		STRANGER_TREE_HOUSE_2
-	500xp	monastery					STRANGER_MONASTERY_1
-	600xp	psi swamp					STRANGER_SWAMP_1
-	700xp	stonehenge tree house		STRANGER_TREE_HOUSE_3
-	800xp	bandit cave					STRANGER_BANDIT_1
-	900xp	volcano secret cave			STRANGER_VOLCANO_2
-	1000xp	fog tower					STRANGER_FINAL
+	50xp	castle tower				STRANGER_CASTLE_1
+	100xp	volcano tower				STRANGER_VOLCANO_1
+	150xp	swamp entrance tree house	STRANGER_TREE_HOUSE_1
+	200xp	ice region border tower		STRANGER_TREE_HOUSE_2
+	250xp	monastery					STRANGER_MONASTERY_1
+	300xp	psi swamp					STRANGER_SWAMP_1
+	350xp	stonehenge tree house		STRANGER_TREE_HOUSE_3
+	400xp	bandit cave					STRANGER_BANDIT_1
+	450xp	volcano secret cave			STRANGER_VOLCANO_2
+	500xp	fog tower					STRANGER_FINAL
 
 
 CAES_MAGICTOWER8 / SPAWN_CAES_MAGICTOWER_SKELETONMAGE1
