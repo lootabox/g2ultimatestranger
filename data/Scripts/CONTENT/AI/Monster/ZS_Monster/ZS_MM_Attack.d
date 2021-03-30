@@ -222,7 +222,9 @@ func int ZS_MM_Attack_Loop ()
 		if (Npc_GetStateTime (self) > self.aivar[AIV_StateTime])
 		{
 			self.aivar[AIV_SummonTime] = (self.aivar[AIV_SummonTime] + 1);
-			if (self.aivar[AIV_SummonTime] >= MONSTER_SUMMON_TIME)
+			if	(!MageStaff_Normal_2H_03_Equipped)
+			&&	(self.aivar[AIV_SummonTime] >= MONSTER_SUMMON_TIME)
+			||	(self.aivar[AIV_SummonTime] >= MONSTER_SUMMON_TIME*2)
 			{
 				Npc_ChangeAttribute (self, ATR_HITPOINTS, -self.attribute[ATR_HITPOINTS_MAX]);
 			};
