@@ -26,9 +26,17 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	// ------ Lernpunkte abziehen ------			
 	oth.lp = oth.lp - kosten;
 	
-	Log_CreateTopic (TOPIC_TalentRunes,LOG_NOTE);
-	B_LogEntry (TOPIC_TalentRunes,"To create a rune I need the scroll for the spell and certain ingredients for each rune. Using those ingredients and a blank runestone I can create the desired rune at a rune table.");
-	
+	if (oth.guild == GIL_KDF) {
+		Log_CreateTopic (TOPIC_TalentRunes,LOG_NOTE);
+		B_LogEntry (TOPIC_TalentRunes,"To create a rune I need the scroll for the spell and certain ingredients for each rune. Using those ingredients and a blank runestone I can create the desired rune at a rune table.");
+
+		// Scrolls und Runen-Joker fehlen
+		PrintScreen			(PRINT_LearnRunes, -1, -1, FONT_Screen, 2);
+		
+		// ------ bei jeder Rune: Runen-Talent lernen (programmvariable, wird nur zur Ausgabe in StatusScreen benutzt) ------
+		Npc_SetTalentSkill 	(oth, NPC_TALENT_RUNES, 1);
+	};
+
 	var C_NPC ScrollTrader;
 	
 	if	(Npc_IsDead(Gorax)== FALSE)
@@ -53,22 +61,15 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	};
 	
 	// ------ Rune lernen ------
-	if (spell == SPL_PalLight)				{ PLAYER_TALENT_RUNES[SPL_PalLight] = TRUE;
-		CreateInvItems(slf,ItRu_PalLight,1);	B_GiveInvItems(slf,oth,ItRu_PalLight,1); };
-	if (spell == SPL_PalLightHeal)			{ PLAYER_TALENT_RUNES[SPL_PalLightHeal] = TRUE;
-		CreateInvItems(slf,ItRu_PalLightHeal,1);	B_GiveInvItems(slf,oth,ItRu_PalLightHeal,1); };
-	if (spell == SPL_PalHolyBolt)			{ PLAYER_TALENT_RUNES[SPL_PalHolyBolt] = TRUE;
-		CreateInvItems(slf,ItRu_PalHolyBolt,1);	B_GiveInvItems(slf,oth,ItRu_PalHolyBolt,1); };
-	if (spell == SPL_PalMediumHeal)			{ PLAYER_TALENT_RUNES[SPL_PalMediumHeal] = TRUE;
-		CreateInvItems(slf,ItRu_PalMediumHeal,1);	B_GiveInvItems(slf,oth,ItRu_PalMediumHeal,1); };
-	if (spell == SPL_PalRepelEvil)			{ PLAYER_TALENT_RUNES[SPL_PalRepelEvil] = TRUE;
-		CreateInvItems(slf,ItRu_PalRepelEvil,1);	B_GiveInvItems(slf,oth,ItRu_PalRepelEvil,1); };
-	if (spell == SPL_PalFullHeal)			{ PLAYER_TALENT_RUNES[SPL_PalFullHeal] = TRUE;
-		CreateInvItems(slf,ItRu_PalFullHeal,1);	B_GiveInvItems(slf,oth,ItRu_PalFullHeal,1); };
-	if (spell == SPL_PalDestroyEvil)		{ PLAYER_TALENT_RUNES[SPL_PalDestroyEvil] = TRUE;
-		CreateInvItems(slf,ItRu_PalDestroyEvil,1);	B_GiveInvItems(slf,oth,ItRu_PalDestroyEvil,1); };
-	if (spell == SPL_PalTeleportSecret)		{ PLAYER_TALENT_RUNES[SPL_PalTeleportSecret] = TRUE;
-		CreateInvItems(slf,ItRu_PalTeleportSecret,1);	B_GiveInvItems(slf,oth,ItRu_PalTeleportSecret,1); };
+	if (spell == SPL_PalLight)				{	PLAYER_TALENT_RUNES[SPL_PalLight] 				= TRUE;	B_GiveInvItems(slf,oth,ItRu_PalLight,1); };
+	if (spell == SPL_PalLightHeal)			{	PLAYER_TALENT_RUNES[SPL_PalLightHeal] 			= TRUE;	B_GiveInvItems(slf,oth,ItRu_PalLightHeal,1); };
+	if (spell == SPL_PalHolyBolt)			{	PLAYER_TALENT_RUNES[SPL_PalHolyBolt] 			= TRUE;	B_GiveInvItems(slf,oth,ItRu_PalHolyBolt,1); };
+	if (spell == SPL_PalMediumHeal)			{	PLAYER_TALENT_RUNES[SPL_PalMediumHeal] 			= TRUE;	B_GiveInvItems(slf,oth,ItRu_PalMediumHeal,1); };
+	if (spell == SPL_PalRepelEvil)			{	PLAYER_TALENT_RUNES[SPL_PalRepelEvil] 			= TRUE;	B_GiveInvItems(slf,oth,ItRu_PalRepelEvil,1); };
+	if (spell == SPL_PalFullHeal)			{	PLAYER_TALENT_RUNES[SPL_PalFullHeal] 			= TRUE;	B_GiveInvItems(slf,oth,ItRu_PalFullHeal,1); };
+	if (spell == SPL_PalDestroyEvil)		{	PLAYER_TALENT_RUNES[SPL_PalDestroyEvil] 		= TRUE;	B_GiveInvItems(slf,oth,ItRu_PalDestroyEvil,1); };
+	if (spell == SPL_PalTeleportSecret)		{	PLAYER_TALENT_RUNES[SPL_PalTeleportSecret] 		= TRUE;	B_GiveInvItems(slf,oth,ItRu_PalTeleportSecret,1); };
+
 	if (spell == SPL_TeleportSeaport)		{	PLAYER_TALENT_RUNES[SPL_TeleportSeaport] 		= TRUE;	};		
 	if (spell == SPL_TeleportMonastery)		{	PLAYER_TALENT_RUNES[SPL_TeleportMonastery] 		= TRUE;	};		
 	if (spell == SPL_TeleportFarm)			{	PLAYER_TALENT_RUNES[SPL_TeleportFarm] 			= TRUE;	};		
@@ -76,6 +77,7 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	if (spell == SPL_TeleportPassNW)		{	PLAYER_TALENT_RUNES[SPL_TeleportPassNW] 		= TRUE;	};		
 	if (spell == SPL_TeleportPassOW)		{	PLAYER_TALENT_RUNES[SPL_TeleportPassOW] 		= TRUE;	};		
 	if (spell == SPL_TeleportOC)			{	PLAYER_TALENT_RUNES[SPL_TeleportOC] 			= TRUE;	};		
+
 	// Teleport-Joker fehlen
 	if (spell == SPL_LIGHT)					{	PLAYER_TALENT_RUNES[SPL_LIGHT] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_LIGHT, 1);					
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Light': 1 gold piece.");	};		
@@ -149,12 +151,6 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	if (spell == SPL_Thunderstorm)			{	PLAYER_TALENT_RUNES[SPL_Thunderstorm]			= TRUE; CreateInvItems (ScrollTrader, ItSc_Thunderstorm, 1);			
 	B_LogEntry (TOPIC_TalentRunes,Log_Text_Addon_TalentRune_Thunderstorm);	};
 	
-	// Scrolls und Runen-Joker fehlen
-							
-	PrintScreen			(PRINT_LearnRunes, -1, -1, FONT_Screen, 2);
-	
-	// ------ bei jeder Rune: Runen-Talent lernen (programmvariable, wird nur zur Ausgabe in StatusScreen benutzt) ------
-	Npc_SetTalentSkill 	(oth, NPC_TALENT_RUNES, 1);
 	return TRUE;
 };
 

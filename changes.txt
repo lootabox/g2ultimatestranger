@@ -191,6 +191,7 @@ Akil initiates the dialog for returning the sheep, as NH has no good dialog open
 Akil's sheep always returns to the bandit cave if NH gets too far from her.
 Akil's sheep dialog has options to tell the sheep to wait and "END".
 Akil's sheep stays at his farm once brought there, instead of going back to the bandit cave.
+Albrecht's dialog does not include options for receiving runes for paths which are completed.
 Alligator Jack gives previously unused item Swamprat meat for his delivery quest.
 Alligator Jack only takes meat from Swamprats.
 Alrik can only be challenged twice per chapter, instead of three times.

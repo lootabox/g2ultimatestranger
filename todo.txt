@@ -94,6 +94,10 @@ waterfist c4->c3
 Harm Evil AOE
 Heal spell delay 3s and duration 4s
 
+Holy Arrow		evilorhalf		target protection is ignored up to half of maximum mana.
+Harm Evil		unharmedorhalf	reduces damage dealt by target. duration 8 seconds. protection reduction (percentage): 20
+Destroy Evil	fatalorhalf		
+
 ----------- Beliar spells
 
 	Fire Arrow				Jharkendar X in swamp										Create Guardian
@@ -121,10 +125,6 @@ LM		ITMW_MAGESTAFF_NORMAL_2H_03	RED		Summoning staff			c2 karras		Summon duratio
 
 Geyser		75dmg	20mc	upheave + aoe wet(4s)
 Waterfist	100dmg	30mc	wet(4s) + knockback
-
-Holy Arrow		evilorhalf		target protection is ignored up to half of maximum mana.
-Harm Evil		unharmedorhalf	reduces damage dealt by target. duration 8 seconds. protection reduction (percentage): 20
-Destroy Evil	fatalorhalf		
 
 
 Burn damage increased by half against non-burning targets.

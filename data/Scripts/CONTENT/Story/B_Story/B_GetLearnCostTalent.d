@@ -166,11 +166,11 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 	if (talent == NPC_TALENT_RUNES)
 	{
 		// PAL
-		if 		(skill == SPL_PalLight			) 	{	kosten = (1);	}
-		else if (skill == SPL_PalLightHeal		) 	{	kosten = (3);	}
-		else if (skill == SPL_PalHolyBolt	    ) 	{	kosten = (3);	}
-		else if (skill == SPL_PalMediumHeal		) 	{	kosten = (5);	}
-		else if (skill == SPL_PalRepelEvil		) 	{	kosten = (5);	}
+		if 		(skill == SPL_PalLight			) 	{	kosten = (0);	} // 1 (difficult to show cost in dialog)
+		else if (skill == SPL_PalLightHeal		) 	{	kosten = (4);	} // 3
+		else if (skill == SPL_PalHolyBolt	    ) 	{	kosten = (4);	} // 3
+		else if (skill == SPL_PalMediumHeal		) 	{	kosten = (6);	} // 5
+		else if (skill == SPL_PalRepelEvil		) 	{	kosten = (6);	} // 5
 		else if (skill == SPL_PalFullHeal	    ) 	{	kosten = (10);	}
 		else if (skill == SPL_PalDestroyEvil  	) 	{	kosten = (10);	}
 		else if (skill == SPL_PalTeleportSecret ) 	{	kosten = (5);	}

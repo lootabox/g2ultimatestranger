@@ -121,6 +121,7 @@ instance DIA_Albrecht_TEACHPalRunes		(C_INFO)
 func int DIA_Albrecht_TEACHPalRunes_Condition ()
 {	
 	if (Albrecht_TeachMANA == TRUE)
+	&& ((PLAYER_TALENT_RUNES [SPL_PalFullHeal] == FALSE) || (PLAYER_TALENT_RUNES [SPL_PalDestroyEvil] == FALSE))
 	{
 		return TRUE;
 	};
@@ -131,15 +132,11 @@ func void DIA_Albrecht_TEACHPalRunes_Info ()
 	
 	if (PLAYER_TALENT_RUNES [SPL_PalLight] == FALSE)
 	{
-		
-		AI_Output (self,other, "DIA_Albrecht_TEACHPalRunes_03_01"); //As a sign of your rank, I bestow upon you the Rune of Light. It is the symbol of truth and justice.
-		AI_Output (self,other, "DIA_Albrecht_TEACHPalRunes_03_02"); //Light the way for all those who walk the path of Innos.
-		AI_Output (self,other, "DIA_Albrecht_TEACHPalRunes_03_03"); //You must earn all other runes. Come again when you think you have proven yourself worthy.
-	
-		PLAYER_TALENT_RUNES [SPL_PalLight] = TRUE;
-	
-		CreateInvItems (self,ItRu_PalLight,1);
-		B_GiveInvItems (self,other,ItRu_PalLight,1);
+		if (TeachPlayerTalentRunes_SPL_PalLight()) {
+			AI_Output (self,other, "DIA_Albrecht_TEACHPalRunes_03_01"); //As a sign of your rank, I bestow upon you the Rune of Light. It is the symbol of truth and justice.
+			AI_Output (self,other, "DIA_Albrecht_TEACHPalRunes_03_02"); //Light the way for all those who walk the path of Innos.
+			AI_Output (self,other, "DIA_Albrecht_TEACHPalRunes_03_03"); //You must earn all other runes. Come again when you think you have proven yourself worthy.
+		};
 	}
 	else
 	{
@@ -148,8 +145,12 @@ func void DIA_Albrecht_TEACHPalRunes_Info ()
 		
 		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
 		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
-		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,"I choose the path of healing.",DIA_Albrecht_TEACHPalRunes_Heal);
-		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,"I choose the path of combat.",DIA_Albrecht_TEACHPalRunes_Combat);
+		if (PLAYER_TALENT_RUNES [SPL_PalFullHeal] == FALSE) {
+			Info_AddChoice (DIA_Albrecht_TEACHPalRunes,"I choose the path of healing.",DIA_Albrecht_TEACHPalRunes_Heal);
+		};
+		if (PLAYER_TALENT_RUNES [SPL_PalDestroyEvil] == FALSE) {
+			Info_AddChoice (DIA_Albrecht_TEACHPalRunes,"I choose the path of combat.",DIA_Albrecht_TEACHPalRunes_Combat);
+		};
 	};	
 };
 
@@ -166,19 +167,23 @@ FUNC VOID B_Albrecht_YouAreNotWorthy ()
 FUNC VOID DIA_Albrecht_TEACHPalRunes_Heal()
 {
 	AI_Output (other,self ,"DIA_Albrecht_TEACHPalRunes_Heal_15_00"); //I choose the path of healing.
-	if  (PLAYER_TALENT_RUNES [SPL_PalLightHeal] == FALSE)
-	&&	(MIS_ReadyforChapter4 == TRUE)
+	if	(PLAYER_TALENT_RUNES [SPL_PalLightHeal] == FALSE)
 	{
 		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
 		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
 		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalLightHeal,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalLightHeal)) ,TeachPlayerTalentRunes_SPL_PalLightHeal);
 	}
-	else if 	(PLAYER_TALENT_RUNES [SPL_PalMediumHeal] == FALSE)
-	&&	(Kapitel >= 5)
+	else if	(PLAYER_TALENT_RUNES [SPL_PalMediumHeal] == FALSE) && (MIS_ReadyforChapter4 == TRUE)
 	{
 		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
 		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
 		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalMediumHeal,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalMediumHeal)) ,TeachPlayerTalentRunes_SPL_PalMediumHeal);
+	}
+	else if	(PLAYER_TALENT_RUNES [SPL_PalFullHeal] == FALSE) && (Kapitel >= 5)
+	{
+		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
+		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
+		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalFullHeal,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalFullHeal)) ,TeachPlayerTalentRunes_SPL_PalFullHeal);
 	}
 	else
 	{
@@ -191,18 +196,22 @@ FUNC VOID DIA_Albrecht_TEACHPalRunes_Combat()
 	AI_Output (other,self ,"DIA_Albrecht_TEACHPalRunes_Combat_15_00"); //I choose the path of combat.
 	
 	if	(PLAYER_TALENT_RUNES [SPL_PalHolyBolt] == FALSE)
-	&&	(MIS_ReadyforChapter4 == TRUE)
 	{
 		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
 		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
 		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalHolyBolt,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalHolyBolt)) ,TeachPlayerTalentRunes_SPL_PalHolyBolt);
 	}
-	else if (PLAYER_TALENT_RUNES [SPL_PalRepelEvil] == FALSE)
-	&&	(Kapitel >= 5)
+	else if (PLAYER_TALENT_RUNES [SPL_PalRepelEvil] == FALSE) && (MIS_ReadyforChapter4 == TRUE)
 	{
 		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
 		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
 		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalRepelEvil,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalRepelEvil)) ,TeachPlayerTalentRunes_SPL_PalRepelEvil);
+	}
+	else if (PLAYER_TALENT_RUNES [SPL_PalDestroyEvil] == FALSE) && (Kapitel >= 5)
+	{
+		Info_ClearChoices   (DIA_Albrecht_TEACHPalRunes);
+		Info_AddChoice (DIA_Albrecht_TEACHPalRunes,DIALOG_BACK,DIA_Albrecht_TEACHPalRunes_BACK);
+		Info_AddChoice	(DIA_Albrecht_TEACHPalRunes, B_BuildLearnString (NAME_SPL_PalDestroyEvil,B_GetLearnCostTalent(other,NPC_TALENT_RUNES,SPL_PalDestroyEvil)) ,TeachPlayerTalentRunes_SPL_PalDestroyEvil);
 	}
 	else
 	{
