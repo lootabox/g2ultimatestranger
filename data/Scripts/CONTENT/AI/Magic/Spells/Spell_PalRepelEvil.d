@@ -3,13 +3,13 @@
 // ****************
 
 const int SPL_Cost_PalRepelEvil 	= 40;
-//const int SPL_Damage_PalRepelEvil 	= 300;
+const int SPL_Damage_PalRepelEvil 	= 150;
 
 
 INSTANCE Spell_PalRepelEvil (C_Spell_Proto)
 {
 	time_per_mana			= 0;
-//	damage_per_level 		= SPL_DAMAGE_PalRepelEvil;
+	damage_per_level 		= SPL_DAMAGE_PalRepelEvil;
 	damageType				= DAM_MAGIC;
 	spelltype				= SPELL_NEUTRAL;
 };

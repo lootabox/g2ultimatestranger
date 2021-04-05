@@ -112,11 +112,6 @@ func void Spell_Cast_Basic (var c_npc slf, var int manaCost)
 
 func int Spell_Logic_Pal (var c_npc slf, var int manaCost)
 {
-	if (Npc_GetActiveSpellIsScroll(slf) && (slf.attribute[ATR_MANA] * 100 / slf.attribute[ATR_MANA_MAX] >= C_GetScrollCost(manaCost)))
-	{
-		return SPL_SENDCAST;
-	};
-
 	if (slf.attribute[ATR_MANA] * 100 / slf.attribute[ATR_MANA_MAX] >= manaCost)
 	{
 		return SPL_SENDCAST;
@@ -129,14 +124,7 @@ func int Spell_Logic_Pal (var c_npc slf, var int manaCost)
 
 func void Spell_Cast_Pal (var c_npc slf, var int manaCost)
 {
-	if (Npc_GetActiveSpellIsScroll(slf))
-	{
-		slf.attribute[ATR_MANA] -= (slf.attribute[ATR_MANA_MAX] * C_GetScrollCost(manaCost) / 100);
-	}
-	else
-	{
-		slf.attribute[ATR_MANA] -= (slf.attribute[ATR_MANA_MAX] * manaCost / 100);
-	};
+	slf.attribute[ATR_MANA] -= (slf.attribute[ATR_MANA_MAX] * manaCost / 100);
 	slf.aivar[AIV_SelectSpell] += 1;
 };
 

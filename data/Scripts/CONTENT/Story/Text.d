@@ -756,13 +756,11 @@ const string NAME_SummonIngredient_Info	= "Required spell component: ";
 const string NAME_Manakosten_Pal		= "Mana cost (percentage):";
 const string NAME_PalLight_Info			= "Duration is increased by maximum mana. ";
 
-const string NAME_PalHolyBolt_Info		= "Magic damage is equal to maximum mana.";
-const string NAME_PalRepelEvil_Info		= "Magic damage is equal to maximum mana (doubled).";
-const string NAME_PalDestroyEvil_Info	= "Magic damage is equal to maximum mana (quadrupled).";
+const string NAME_PalHolyBolt_Info		= "Mana cost is added to damage.";
+const string NAME_PalRepelEvil_Info		= "Mana cost is added to damage.";
+const string NAME_PalDestroyEvil_Info	= "Mana cost is added to damage twice.";
 
-const string NAME_PalLightHeal_Info		= "Healing is equal to maximum mana.";
-const string NAME_PalMediumHeal_Info	= "Healing is equal to maximum mana (doubled).";
-const string NAME_PalFullHeal_Info		= "Healing is equal to maximum mana (tripled).";
+const string NAME_PalHeal_Info			= "Mana cost is added to healing.";
 
 // MAX LENGTH									"------------------------------------------------------------";
 const string NAME_Bonus_MageStaff_Blades_2H_01	= "Projectile spell cast speed is doubled.";

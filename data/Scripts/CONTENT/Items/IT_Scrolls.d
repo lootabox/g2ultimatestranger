@@ -78,7 +78,7 @@ INSTANCE ItSc_PalLight (C_Item)
 
 	spell				= 	SPL_PalLight;
 	cond_atr[2]   			= 	ATR_MANA_MAX;
-	cond_value[2]  			= 	C_GetScrollCost(SPL_Cost_PalLight);
+	cond_value[2]  			= 	SPL_Cost_PalLight;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -88,7 +88,7 @@ INSTANCE ItSc_PalLight (C_Item)
 	TEXT	[0]			=	Name_PaladinScroll	;
 	
 	//TEXT	[1]			=	NAME_Manakosten;
-	//COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalLight);
+	//COUNT	[1]			=	SPL_Cost_PalLight;
 	
 	TEXT	[2]			=	NAME_Duration_Per;
 	COUNT	[2]			=	SPL_Duration_PalLIGHT;
@@ -111,7 +111,7 @@ INSTANCE ItSc_PalLightHeal (C_Item)
 
 	spell				= 	SPL_PalLightHeal;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_PalLightHeal);
+	cond_value[2]  		= 	SPL_Cost_PalLightHeal;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -122,11 +122,12 @@ INSTANCE ItSc_PalLightHeal (C_Item)
 	
 //	TEXT	[1]			=	NAME_Manakosten;
 	TEXT	[1]			=	NAME_Manakosten_Pal;
-	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalLightHeal);
+	COUNT	[1]			=	SPL_Cost_PalLightHeal;
 	
-	TEXT	[2]			=	NAME_PalLightHeal_Info;
-//	TEXT	[2]			=	NAME_HealingPerCast;
-//	COUNT	[2]			=	SPL_Heal_PalLightHeal;
+	TEXT	[2]			=	NAME_HealingPerCast;
+	COUNT	[2]			=	SPL_Heal_PalLightHeal;
+
+	TEXT	[3]			=	NAME_PalHeal_Info;
 
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -146,7 +147,7 @@ INSTANCE ItSc_PalHolyBolt (C_Item)
 
 	spell				= 	SPL_PalHolyBolt;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_PalHolyBolt);
+	cond_value[2]  		= 	SPL_Cost_PalHolyBolt;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -158,13 +159,14 @@ INSTANCE ItSc_PalHolyBolt (C_Item)
 	
 //	TEXT	[1]			=	NAME_Manakosten;
 	TEXT	[1]			=	NAME_Manakosten_Pal;
-	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalHolyBolt);
-	
-	TEXT	[2]			=	NAME_PalHolyBolt_Info;
-//	TEXT	[2]			=	NAME_Dam_Magic;
-//	COUNT	[2]			=	SPL_Damage_PalHolyBolt;
-	
-	TEXT	[3]			=	NAME_EvilOrHalf;
+	COUNT	[1]			=	SPL_Cost_PalHolyBolt;
+
+	TEXT	[2]			=	NAME_Dam_Magic;
+	COUNT	[2]			=	SPL_Damage_PalHolyBolt;
+
+	TEXT	[3]			=	NAME_PalHolyBolt_Info;
+
+	TEXT	[4]			=	NAME_EvilOrHalf;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -184,7 +186,7 @@ INSTANCE ItSc_PalMediumHeal (C_Item)
 
 	spell				= 	SPL_PalMediumHeal;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_PalMediumHeal);
+	cond_value[2]  		= 	SPL_Cost_PalMediumHeal;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -195,11 +197,12 @@ INSTANCE ItSc_PalMediumHeal (C_Item)
 	
 //	TEXT	[1]			=	NAME_Manakosten;
 	TEXT	[1]			=	NAME_Manakosten_Pal;
-	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalMediumHeal);
+	COUNT	[1]			=	SPL_Cost_PalMediumHeal;
 	
-	TEXT	[2]			=	NAME_PalMediumHeal_Info;
-//	TEXT	[2]			=	NAME_HealingPerCast;
-//	COUNT	[2]			=	SPL_Heal_PalMediumHeal;
+	TEXT	[2]			=	NAME_HealingPerCast;
+	COUNT	[2]			=	SPL_Heal_PalMediumHeal;
+
+	TEXT	[3]			=	NAME_PalHeal_Info;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -219,7 +222,7 @@ INSTANCE ItSc_PalRepelEvil (C_Item)
 
 	spell				= 	SPL_PalRepelEvil;
 	cond_atr[2]   		=	ATR_MANA_MAX;
-	cond_value[2]  		=	C_GetScrollCost(SPL_Cost_PalRepelEvil);
+	cond_value[2]  		=	SPL_Cost_PalRepelEvil;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -229,15 +232,14 @@ INSTANCE ItSc_PalRepelEvil (C_Item)
 	
 //	TEXT	[1]			=	NAME_Manakosten;
 	TEXT	[1]			=	NAME_Manakosten_Pal;
-	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalRepelEvil);
-	
-	TEXT	[2]			=	NAME_PalRepelEvil_Info;
-//	TEXT	[2]			=	NAME_Dam_Magic;
-//	COUNT	[2]			=	SPL_Damage_PalRepelEvil;
+	COUNT	[1]			=	SPL_Cost_PalRepelEvil;
 
-	TEXT	[3]			=	NAME_UninjuredOrHalf;
+	TEXT	[2]			=	NAME_Dam_Magic;
+	COUNT	[2]			=	SPL_Damage_PalRepelEvil;
 
-	TEXT	[4]			=	NAME_MustBeEvil;
+	TEXT	[3]			=	NAME_PalRepelEvil_Info;
+
+	TEXT	[4]			=	ConcatStrings(NAME_UninjuredOrHalf, NAME_MustBeEvil);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -257,7 +259,7 @@ INSTANCE ItSc_PalFullHeal (C_Item)
 
 	spell				= 	SPL_PalFullHeal;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	C_GetScrollCost(SPL_Cost_PalFullHeal);
+	cond_value[2]  		= 	SPL_Cost_PalFullHeal;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -267,11 +269,12 @@ INSTANCE ItSc_PalFullHeal (C_Item)
 	
 //	TEXT	[1]			=	NAME_Manakosten;
 	TEXT	[1]			=	NAME_Manakosten_Pal;
-	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalFullHeal);
+	COUNT	[1]			=	SPL_Cost_PalFullHeal;
 	
-	TEXT	[2]			=	NAME_PalFullHeal_Info;
-//	TEXT	[2]			=	NAME_HealingPerCast;
-//	COUNT	[2]			=	SPL_Heal_PalFullHeal;
+	TEXT	[2]			=	NAME_HealingPerCast;
+	COUNT	[2]			=	SPL_Heal_PalFullHeal;
+
+	TEXT	[3]			=	NAME_PalHeal_Info;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -291,7 +294,7 @@ INSTANCE ItSc_PalDestroyEvil (C_Item)
 
 	spell				= 	SPL_PalDestroyEvil;
 	cond_atr[2]   			=	ATR_MANA_MAX;
-	cond_value[2]  			=	C_GetScrollCost(SPL_Cost_PalDestroyEvil);
+	cond_value[2]  			=	SPL_Cost_PalDestroyEvil;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -301,15 +304,14 @@ INSTANCE ItSc_PalDestroyEvil (C_Item)
 	
 //	TEXT	[1]			=	NAME_Manakosten;
 	TEXT	[1]			=	NAME_Manakosten_Pal;
-	COUNT	[1]			=	C_GetScrollCost(SPL_Cost_PalDestroyEvil);
-	
-	TEXT	[2]			=	NAME_PalDestroyEvil_Info;
-//	TEXT	[2]			=	NAME_Dam_Magic;
-//	COUNT	[2]			=	SPL_Damage_PalDestroyEvil;
+	COUNT	[1]			=	SPL_Cost_PalDestroyEvil;
 
-	TEXT	[3]			=	NAME_FatalOrHalf;
+	TEXT	[2]			=	NAME_Dam_Magic;
+	COUNT	[2]			=	SPL_Damage_PalDestroyEvil;
 
-	TEXT	[4]			=	ConcatStrings(NAME_MustBeEvil, NAME_Instant);
+	TEXT	[3]			=	NAME_PalDestroyEvil_Info;
+
+	TEXT	[4]			=	ConcatStrings(NAME_FatalOrHalf, ConcatStrings(NAME_MustBeEvil, NAME_Instant));
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

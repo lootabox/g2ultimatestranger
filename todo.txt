@@ -56,6 +56,8 @@ ice storm - 4x80 dmg / 8s / 50%, 64 mana
 wind fist - only max charge
 ball lightning - shocks unharmed undead targets at full charge
 
+fear - protected by life
+
 ----------- Dragon rock paper scissors
 
 Ice spells < all dragon magic protection
@@ -91,12 +93,9 @@ waterfist c4->c3
 
 ----------- Paladin spells
 
-Harm Evil AOE
-Heal spell delay 3s and duration 4s
+Heal spell delay 2s and duration 4s
 
-Holy Arrow		evilorhalf		target protection is ignored up to half of maximum mana.
-Harm Evil		unharmedorhalf	reduces damage dealt by target. duration 8 seconds. protection reduction (percentage): 20
-Destroy Evil	fatalorhalf		
+Harm evil AOE, fear protected by life
 
 ----------- Beliar spells
 

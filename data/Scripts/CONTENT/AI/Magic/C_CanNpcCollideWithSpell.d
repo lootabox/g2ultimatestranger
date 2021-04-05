@@ -398,7 +398,7 @@ func int C_CanNpcCollideWithSpell(var int spellType)
 	{
 		if (C_NpcIsEvil(self))
 		{
-			if (self.attribute[ATR_HITPOINTS] + self.protection[PROT_MAGIC] <= other.attribute[ATR_MANA_MAX]*4)
+			if (self.attribute[ATR_HITPOINTS] + self.protection[PROT_MAGIC] <= SPL_Damage_PalDestroyEvil + other.attribute[ATR_MANA_MAX]*SPL_Cost_PalDestroyEvil*2/100)
 			{
 				return COLL_DOEVERYTHING;
 			};

@@ -305,26 +305,29 @@ pristr = ConcatStrings(pristr, ConcatStrings(" -> dot ", IntToString(freezeDot *
 	// HOLY ARROW -----------------------------------------------------------------------
 	else if	(spellID == SPL_PalHolyBolt)
 	{
-		if (C_NpcIsEvil(vic))
-		{	dmg = att.attribute[ATR_MANA_MAX]     - prot;	}
-		else
-		{	dmg = att.attribute[ATR_MANA_MAX] / 2 - prot;	};
+		// little hacky, but need to check here if damage was halved in collision
+		var int bonusDmg1; bonusDmg1 = att.attribute[ATR_MANA_MAX] * SPL_Cost_PalHolyBolt / 100;
+		if (dmg < SPL_Damage_PalHolyBolt)	{ bonusDmg1 /= 2; };
+	
+		dmg = dmg + bonusDmg1 - prot;
 	}
 	// HARM EVIL -----------------------------------------------------------------------
 	else if	(spellID == SPL_PalRepelEvil)
 	{
-		if (vic.attribute[ATR_HITPOINTS] >= vic.attribute[ATR_HITPOINTS_MAX])
-		{	dmg = att.attribute[ATR_MANA_MAX] * 2 - prot;	}
-		else
-		{	dmg = att.attribute[ATR_MANA_MAX]     - prot;	};
+		// little hacky, but need to check here if damage was halved in collision
+		var int bonusDmg2; bonusDmg2 = att.attribute[ATR_MANA_MAX] * SPL_Cost_PalRepelEvil / 100;
+		if (dmg < SPL_Damage_PalRepelEvil)	{ bonusDmg2 /= 2; };
+
+		dmg = dmg + bonusDmg2 - prot;
 	}
 	// DESTROY EVIL -----------------------------------------------------------------------
 	else if	(spellID == SPL_PalDestroyEvil)
 	{
-		if (vic.attribute[ATR_HITPOINTS] + vic.protection[PROT_MAGIC] <= att.attribute[ATR_MANA_MAX]*4)
-		{	dmg = att.attribute[ATR_MANA_MAX] * 4 - prot;	}
-		else
-		{	dmg = att.attribute[ATR_MANA_MAX] * 2 - prot;	};
+		// little hacky, but need to check here if damage was halved in collision
+		var int bonusDmg3; bonusDmg3 = att.attribute[ATR_MANA_MAX] * SPL_Cost_PalDestroyEvil * 2 / 100;
+		if (dmg < SPL_Damage_PalDestroyEvil)	{ bonusDmg3 /= 2; };
+
+		dmg = dmg + bonusDmg3 - prot;
 	}
 	// OTHER SPELLS -----------------------------------------------------------------------
 	else

@@ -129,10 +129,11 @@ INSTANCE ItRu_PalLightHeal (C_Item)
 	TEXT	[1]			=	NAME_Manakosten_Pal;
 	COUNT	[1]			=	SPL_Cost_PalLightHeal;
 	
-	TEXT	[2]			=	NAME_PalLightHeal_Info;
-//	TEXT	[2]			=	NAME_HealingPerCast;
-//	COUNT	[2]			=	SPL_Heal_PalLightHeal;
-	
+	TEXT	[2]			=	NAME_HealingPerCast;
+	COUNT	[2]			=	SPL_Heal_PalLightHeal;
+
+	TEXT	[3]			=	NAME_PalHeal_Info;
+
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
@@ -164,10 +165,11 @@ INSTANCE ItRu_PalMediumHeal (C_Item)
 	TEXT	[1]			=	NAME_Manakosten_Pal;
 	COUNT	[1]			=	SPL_Cost_PalMediumHeal;
 	
-	TEXT	[2]			=	NAME_PalMediumHeal_Info;
-//	TEXT	[2]			=	NAME_HealingPerCast;
-//	COUNT	[2]			=	SPL_Heal_PalMediumHeal;
-	
+	TEXT	[2]			=	NAME_HealingPerCast;
+	COUNT	[2]			=	SPL_Heal_PalMediumHeal;
+
+	TEXT	[3]			=	NAME_PalHeal_Info;
+
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
@@ -199,9 +201,10 @@ INSTANCE ItRu_PalFullHeal (C_Item)
 	TEXT	[1]			=	NAME_Manakosten_Pal;
 	COUNT	[1]			=	SPL_Cost_PalFullHeal;
 	
-	TEXT	[2]			=	NAME_PalFullHeal_Info;
-//	TEXT	[2]			=	NAME_HealingPerCast;
-//	COUNT	[2]			=	SPL_Heal_PalFullHeal;
+	TEXT	[2]			=	NAME_HealingPerCast;
+	COUNT	[2]			=	SPL_Heal_PalFullHeal;
+
+	TEXT	[3]			=	NAME_PalHeal_Info;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -233,12 +236,13 @@ INSTANCE ItRu_PalHolyBolt (C_Item)
 //	TEXT	[1]			=	NAME_Manakosten;
 	TEXT	[1]			=	NAME_Manakosten_Pal;
 	COUNT	[1]			=	SPL_Cost_PalHolyBolt;
-	
-	TEXT	[2]			=	NAME_PalHolyBolt_Info;
-//	TEXT	[2]			=	NAME_Dam_Magic;
-//	COUNT	[2]			=	SPL_Damage_PalHolyBolt;
 
-	TEXT	[3]			=	NAME_EvilOrHalf;
+	TEXT	[2]			=	NAME_Dam_Magic;
+	COUNT	[2]			=	SPL_Damage_PalHolyBolt;
+
+	TEXT	[3]			=	NAME_PalHolyBolt_Info;
+
+	TEXT	[4]			=	NAME_EvilOrHalf;
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
@@ -271,15 +275,14 @@ INSTANCE ItRu_PalRepelEvil (C_Item)
 //	TEXT	[1]			=	NAME_Manakosten;
 	TEXT	[1]			=	NAME_Manakosten_Pal;
 	COUNT	[1]			=	SPL_Cost_PalRepelEvil;
-	
-	TEXT	[2]			=	NAME_PalRepelEvil_Info;
-//	TEXT	[2]			=	NAME_Dam_Magic;
-//	COUNT	[2]			=	SPL_Damage_PalRepelEvil;
 
-	TEXT	[3]			=	NAME_UninjuredOrHalf;
+	TEXT	[2]			=	NAME_Dam_Magic;
+	COUNT	[2]			=	SPL_Damage_PalRepelEvil;
 
-	TEXT	[4]			=	NAME_MustBeEvil;
-	
+	TEXT	[3]			=	NAME_PalRepelEvil_Info;
+
+	TEXT	[4]			=	ConcatStrings(NAME_UninjuredOrHalf, NAME_MustBeEvil);
+
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
 };
@@ -310,14 +313,13 @@ INSTANCE ItRu_PalDestroyEvil (C_Item)
 //	TEXT	[1]			=	NAME_Manakosten;
 	TEXT	[1]			=	NAME_Manakosten_Pal;
 	COUNT	[1]			=	SPL_Cost_PalDestroyEvil;
-	
-	TEXT	[2]			=	NAME_PalDestroyEvil_Info;
-//	TEXT	[2]			=	NAME_Dam_Magic;
-//	COUNT	[2]			=	SPL_Damage_PalDestroyEvil;
 
-	TEXT	[3]			=	NAME_FatalOrHalf;
+	TEXT	[2]			=	NAME_Dam_Magic;
+	COUNT	[2]			=	SPL_Damage_PalDestroyEvil;
 
-	TEXT	[4]			=	ConcatStrings(NAME_MustBeEvil, NAME_Instant);
+	TEXT	[3]			=	NAME_PalDestroyEvil_Info;
+
+	TEXT	[4]			=	ConcatStrings(NAME_FatalOrHalf, ConcatStrings(NAME_MustBeEvil, NAME_Instant));
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;
