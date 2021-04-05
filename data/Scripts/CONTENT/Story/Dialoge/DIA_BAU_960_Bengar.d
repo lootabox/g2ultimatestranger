@@ -565,7 +565,7 @@ func int DIA_Bengar_BALTHASAR_Condition ()
 func void DIA_Bengar_BALTHASAR_Info ()
 {
 	AI_Output			(other, self, "DIA_Bengar_BALTHASAR_15_00"); //Balthasar the shepherd isn't allowed on your pasture?
-	AI_Output			(self, other, "DIA_Bengar_BALTHASAR_10_01"); //Oh, yes. The story. I told him Sekob should pay me money if he wanted to lead the sheep to my pasture.
+	AI_Output			(self, other, "DIA_Bengar_BALTHASAR_10_01"); //Oh, yeah. That story. I told him Sekob should pay me money if he wanted to lead the sheep into my pasture.
 	AI_Output			(self, other, "DIA_Bengar_BALTHASAR_10_02"); //To tell the truth, that's only harassment. I just can't stand Balthasar.
 	B_LogEntry (TOPIC_BalthasarsSchafe,"If I want to persuade Bengar to let Balthasar back on his pastures, I'm going to have to do him a favor. I'm sure an opportunity will present itself."); 
 	B_GivePlayerXP (XP_Ambient);
@@ -683,7 +683,7 @@ instance DIA_Bengar_ALLEIN		(C_INFO)
 	condition	 = 	DIA_Bengar_ALLEIN_Condition;
 	information	 = 	DIA_Bengar_ALLEIN_Info;
 
-	description	 = 	"How are things?";
+	description	 = 	"How is the situation?";
 };
 
 func int DIA_Bengar_ALLEIN_Condition ()
@@ -696,7 +696,7 @@ func int DIA_Bengar_ALLEIN_Condition ()
 
 func void DIA_Bengar_ALLEIN_Info ()
 {
-	AI_Output			(other, self, "DIA_Bengar_ALLEIN_15_00"); //How are things?
+	AI_Output			(other, self, "DIA_Bengar_ALLEIN_15_00"); //How is the situation?
 
 	if ((Malak_isAlive_Kap3 == TRUE) && ((Npc_GetDistToWP(Malak,"FARM3")<3000)== FALSE))
 	{
@@ -776,8 +776,8 @@ func void DIA_Bengar_SLDDA_Info ()
 	AI_Output			(other, self, "DIA_Bengar_SLDDA_15_00"); //I found you the mercenary you wanted.
 	AI_Output			(self, other, "DIA_Bengar_SLDDA_10_01"); //I've never seen anyone like that on my farm. I can only hope it will work out.
 	AI_Output			(self, other, "DIA_Bengar_SLDDA_10_02"); //Here, take this. I think you'll find it useful.
-	CreateInvItems (self, ItMi_Gold, 400);									
-	B_GiveInvItems (self, other, ItMi_Gold, 400);
+	CreateInvItems (self, ItMi_Gold, 200);
+	B_GiveInvItems (self, other, ItMi_Gold, 200);
 	B_GivePlayerXP (XP_BengarsHelpingSLDArrived);
 					
 };

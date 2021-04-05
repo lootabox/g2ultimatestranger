@@ -521,7 +521,7 @@ func void DIA_Wolf_BENGAR_Info ()
 	if (DIA_Wolf_BENGAR_oneTime == FALSE)
 	{
 	AI_Output			(self, other, "DIA_Wolf_BENGAR_08_01"); //Let's hear it.
-	AI_Output			(other, self, "DIA_Wolf_BENGAR_15_02"); //The pass to the Valley of Mines comes out directly at Bengar's farm. He's got problems with all the beasts who squeeze themselves through the pass.
+	AI_Output			(other, self, "DIA_Wolf_BENGAR_15_02"); //The pass to the Valley of Mines comes out directly at Bengar's farm. He's got problems with all the beasts who squeeze through the pass.
 	AI_Output			(other, self, "DIA_Wolf_BENGAR_15_03"); //Someone needs to defend Bengar's farm.
 	AI_Output			(self, other, "DIA_Wolf_BENGAR_08_04"); //That would be something. Then at least I'd be away from the farm here and wouldn't have to stare at the smithy.
 	DIA_Wolf_BENGAR_oneTime = TRUE;

@@ -48,6 +48,7 @@ Quest changes which significantly affect specific quests requirements or rewards
 This does not include minor changes to quest related dialog or obvious fixes, such as closing quests that can no longer be completed, etc.
 
 "A Brazen Thief"	Rengaru runs much further when confronted and if not caught will return to his regular spot.
+"Alone and Helpless"	Bengar gives half as much gold for hiring Wolf to guard the farm.
 "Bottoms up"	Contest is only won by Randolph if Rukhar does not notice someone has been to his chest.
 "Cavalorn's old hut"	Only begins once NH finds the bag of ore, since before that the NH does not really have a task that he knows about.
 "Finding Joe"	No longer has its own logged quest, since for all NH knows, he is just another missing person.
