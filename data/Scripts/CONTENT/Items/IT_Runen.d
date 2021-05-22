@@ -1187,7 +1187,9 @@ INSTANCE ItRu_Fear (C_Item)
 	TEXT	[2]			=	NAME_Sec_Duration;
 	COUNT	[2]			=	SPL_TIME_Fear;
 
-	TEXT	[3]			=	ConcatStrings(NAME_AreaOfEffect_Default, NAME_Instant);
+	TEXT	[3]			=	NAME_Fear_Info;
+
+	TEXT	[4]			=	ConcatStrings(NAME_AreaOfEffect_Default, NAME_MustBeLiving);
 	
 	TEXT	[5]			=	NAME_Value;
 	COUNT	[5]			=	value;

@@ -740,6 +740,8 @@ const string NAME_AreaOfEffect_Small	= "Small area of effect. ";
 const string NAME_AreaOfEffect_Default	= "Area of effect. ";
 const string NAME_AreaOfEffect_Large	= "Large area of effect. ";
 
+const string NAME_Fear_Info				= "Duration is doubled on injured targets. ";
+
 const string NAME_Shrink_Penalty		= "Attribute and protection reduction (percentage):";
 const string NAME_Shrink_Info			= "Only affects living monsters. ";
 

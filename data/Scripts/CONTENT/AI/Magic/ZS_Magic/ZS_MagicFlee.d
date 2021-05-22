@@ -48,14 +48,14 @@ func void ZS_MagicFlee ()
 
 	if(self.guild > GIL_SEPERATOR_HUM)
 	{
-		if((self.guild != GIL_DRAGON) && (self.guild != GIL_TROLL) && !C_NpcIsGolem(self) && !C_NpcIsUndead(self))
-		{
-			AI_StartState(self,ZS_MM_Flee,0,"");
-		}
-		else
+		if(C_NpcIsLarge(self) || C_NpcIsGolem(self) || C_NpcIsUndead(self))
 		{
 			AI_ContinueRoutine(self);
 			return;
+		}
+		else
+		{
+			AI_StartState(self,ZS_MM_Flee,0,"");
 		};
 	};
 	if (C_NpcIsImmuneToMindSpells(other))
@@ -112,7 +112,8 @@ func void ZS_MagicFlee ()
 
 func int ZS_MagicFlee_Loop ()
 {	
-	if (Npc_GetStateTime(self) > SPL_Time_Fear)
+	if (Npc_GetStateTime(self) > SPL_Time_Fear) && (self.attribute[ATR_HITPOINTS] >= self.attribute[ATR_HITPOINTS_MAX])
+	|| (Npc_GetStateTime(self) > SPL_Time_Fear * 2)
 	{
 		Npc_ClearAIQueue(self);
 		B_StopMagicFlee();
