@@ -73,7 +73,7 @@ FUNC VOID DIA_Godar_ComeFrom_Info()
 	
 	Info_ClearChoices (DIA_Godar_ComeFrom);
 	Info_AddChoice (DIA_Godar_ComeFrom,"You're bandits!",DIA_Godar_ComeFrom_Bandits);
-	Info_AddChoice (DIA_Godar_ComeFrom,"Why have I never seen you in town before?",DIA_Godar_ComeFrom_NotCity);
+	Info_AddChoice (DIA_Godar_ComeFrom,"I never saw you in town before.",DIA_Godar_ComeFrom_NotCity);
 	Info_AddChoice (DIA_Godar_ComeFrom,"I see. From the city, then.",DIA_Godar_ComeFrom_Understand);
 };
 

@@ -260,7 +260,7 @@ FUNC INT DIA_Jan_JanIsSmith_Condition()
 FUNC VOID DIA_Jan_JanIsSmith_Info()
 {		
 		AI_Output (other,self ,"DIA_Jan_JanIsSmith_15_00"); //Go get your hammer, there's work for you.
-		AI_Output (self ,other,"DIA_Jan_JanIsSmith_10_01"); //You did it? How did you manage that?
+		AI_Output (self ,other,"DIA_Jan_JanIsSmith_10_01"); //You did it? How'd you manage that?
 		AI_Output (other,self ,"DIA_Jan_JanIsSmith_15_02"); //I had to vouch for you, so don't disappoint me.
 		AI_Output (self ,other,"DIA_Jan_JanIsSmith_10_03"); //Don't worry. I'm glad that I can work at all.
 

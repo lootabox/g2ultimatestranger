@@ -52,7 +52,7 @@ FUNC VOID DIA_Lester_Hello_Info()
 
 	Info_ClearChoices	(DIA_Lester_Hello);
 
-	Info_AddChoice		(DIA_Lester_Hello, "Do I know you?" 					,DIA_Lester_Hello_YouKnowMe);
+	Info_AddChoice		(DIA_Lester_Hello, "Am I supposed to know you?" 					,DIA_Lester_Hello_YouKnowMe);
 	Info_AddChoice		(DIA_Lester_Hello, "Lester! How did you get here?"		,DIA_Lester_Hello_Lester);
 };
 FUNC VOID DIA_Lester_Hello_Lester()

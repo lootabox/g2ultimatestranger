@@ -81,7 +81,7 @@ func int DIA_Biff_HALLO_Condition ()
 func void DIA_Biff_HALLO_Info ()
 {
 	AI_Output			(other, self, "DIA_Biff_HALLO_15_00"); //What are you doing here?
-	AI_Output			(self, other, "DIA_Biff_HALLO_07_01"); //That is truly the stupidest question I have heard in a long time. What does it look like?
+	AI_Output			(self, other, "DIA_Biff_HALLO_07_01"); //That is truly the stupidest question I've heard in a long time.
 
 	Info_AddChoice	(DIA_Biff_HALLO, "I can't tell anything from that idiotic face you're making.", DIA_Biff_HALLO_spott );
 	Info_AddChoice	(DIA_Biff_HALLO, "I haven't a clue.", DIA_Biff_HALLO_keineAhnung );

@@ -49,7 +49,7 @@ FUNC INT DIA_Keroloth_HELLO_Condition()
 FUNC VOID DIA_Keroloth_HELLO_Info()
 {	
 	AI_Output	(other ,self,"DIA_Keroloth_HELLO_15_00"); //You train people?
-	AI_Output	(self ,other,"DIA_Keroloth_HELLO_07_01"); //Yes. Once those orcs or, even worse, the dragons attack again, every single hand will be needed.
+	AI_Output	(self ,other,"DIA_Keroloth_HELLO_07_01"); //Yeah. Once those orcs or, even worse, the dragons attack again, every single hand will be needed.
 };
 //***********************************************
 //	Kannst DU mir was beibringen

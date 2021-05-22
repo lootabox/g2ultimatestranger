@@ -366,7 +366,7 @@ func void DIA_Addon_Baltram_SkipsRum_Info ()
 	AI_Output	(other, self, "DIA_Addon_Baltram_SkipsRum_15_00"); //I got the rum from Skip. But he gave me no more than 2 bottles.
 	AI_Output	(self, other, "DIA_Addon_Baltram_SkipsRum_01_01"); //(angrily) Damn expensive, that. Who does he think he is? Well, give it here then.
 	B_GiveInvItems (other, self, ItFo_Addon_Rum,2); 
-	AI_Output	(self, other, "DIA_Addon_Baltram_SkipsRum_01_02"); //I can't give you much for it now. This here must be enough.
+	AI_Output	(self, other, "DIA_Addon_Baltram_SkipsRum_01_02"); //I can't give you much for it now. This here's got to be enough.
 	CreateInvItems (self, ItMi_Gold, 10);									
 	B_GiveInvItems (self, other, ItMi_Gold, 10);		
 

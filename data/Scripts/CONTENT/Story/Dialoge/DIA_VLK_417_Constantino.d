@@ -268,7 +268,7 @@ FUNC VOID DIA_Constantino_ZUSTIMMUNG_Info()
 	}
 	else
 	{
-		AI_Output (self, other,"DIA_Constantino_ZUSTIMMUNG_10_03"); //Well, you're not going to get it! The things I've heard about you do not speak for you.
+		AI_Output (self, other,"DIA_Constantino_ZUSTIMMUNG_10_03"); //Well, you're not going to get it! The things I've heard about you do not speak well for you.
 		AI_Output (self, other,"DIA_Constantino_ZUSTIMMUNG_10_04"); //I shall not vote for a criminal such as yourself to attain an honorable position in our town.
 		AI_Output (self, other,"DIA_Constantino_ZUSTIMMUNG_10_05"); //Until you have settled this matter with the commander of the city guard, my answer shall be no!
 		
