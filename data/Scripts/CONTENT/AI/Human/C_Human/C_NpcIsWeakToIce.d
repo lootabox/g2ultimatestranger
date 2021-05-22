@@ -8,7 +8,6 @@ func int C_NpcIsWeakToIce(var C_Npc slf)
 	|| (slf.aivar[AIV_MM_REAL_ID] == ID_WARAN)
 	|| (slf.guild == GIL_DRACONIAN)
 	|| (slf.guild == GIL_FIREGOLEM)
-	|| (slf.guild == GIL_GIANT_RAT) && (slf.level >= 5) // desert rat
 	|| (slf.guild == GIL_GOBBO) && (slf.level < 15) // goblins, black goblins
 	|| (slf.guild == GIL_Gargoyle) // Fire devil
 	|| (slf.guild == GIL_SCAVENGER) // scavengers, orc biters
