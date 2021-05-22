@@ -173,6 +173,7 @@ func void DIA_Addon_Bromor_LuciaGold_einfachgeben ()
 {
 	AI_Output			(other, self, "DIA_Addon_Bromor_LuciaGold_einfachgeben_15_00"); //Here's your dish.
 	B_GiveInvItems (other, self, ItMi_BromorsGeld_Addon,1);
+	Npc_RemoveInvItem(self,ItMi_BromorsGeld_Addon);
 	AI_Output			(self, other, "DIA_Addon_Bromor_LuciaGold_einfachgeben_07_01"); //Thanks. That's very generous of you. Anything else?
 	MIS_Bromor_LuciaStoleGold = LOG_SUCCESS;
 	Bromor_Hausverbot = FALSE;

@@ -518,6 +518,7 @@ Following items can no longer be bought or looted from certain NPCs:
 * Anyone: Steel Blanks and Lab Water Bottles.
 * Bennet: Dragon Scales.
 * Bosper: Any skin or hide.
+* Bromor: His golden dish.
 * Buster: Shadowbeast Horns and Gold given for his hint about Sentenza.
 * Coragon: Lehmar's book of debts and Valentino's ring.
 * Cornelius: Gold given for bribing him.
