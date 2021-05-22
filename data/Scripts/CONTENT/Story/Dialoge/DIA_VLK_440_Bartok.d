@@ -583,9 +583,6 @@ FUNC INT DIA_Bartok_Angekommen_Condition()
 };
 FUNC VOID DIA_Bartok_Angekommen_Info()
 {	
-	AI_Output (self ,other,"DIA_Bartok_Angekommen_04_00"); //That's it! I think I'm going back to the city.
-	AI_Output (self ,other,"DIA_Bartok_Angekommen_04_01"); //It's just too dangerous out here for me - even with two of us.
-	
 	if (Bartok_OrkStillThere == TRUE)
 	//&& (Npc_IsDead (CityOrc))
 	{
@@ -593,6 +590,9 @@ FUNC VOID DIA_Bartok_Angekommen_Info()
 		
 		Bartok_OrkGesagt = TRUE;
 	};
+
+	AI_Output (self ,other,"DIA_Bartok_Angekommen_04_00"); //That's it! I think I'm going back to the city.
+	AI_Output (self ,other,"DIA_Bartok_Angekommen_04_01"); //It's just too dangerous out here for me - even with two of us.
 	
 	AI_Output (self ,other,"DIA_Bartok_Angekommen_04_03"); //So, see you!
 	AI_Output (self ,other,"DIA_Bartok_Angekommen_04_04"); //You can sell the skins to Bosper.

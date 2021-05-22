@@ -133,7 +133,7 @@ Changed what drinks NPCs drink, depending on gender and class.
 
 Fixed NPCs not always equipping correct armor after Ring of Water meeting for Cavalorn, Cord, Gaan, Lares, Martin, Orlan.
 Fixed NPCs not considering Heavy Militia armor as militia armor for Borka, Kardif, Meldor, Nagur, Nadja.
-Fixed NPCs referring to Lord Andre when telling NH to go settle his crimes for  Fajeth, Tengron, Knight 263.
+Fixed NPCs referring to Lord Andre when telling NH to go settle his crimes for Fajeth, Tengron, Knight 263.
 Fixed NPCs showing wrong pick pocket difficulty in Valley of Mines for Carlos, Sylvio.
 Fixed NPCs speaking out NH's dialog lines for Pardos, Peck.
 Fixed NPCs talking to NH when he is transformed into an animal.
@@ -143,7 +143,7 @@ Fixed XP award for recruiting Lares, Lester.
 Fixed failed quests not immediately updating in journal for Alvin, Babo, Gorax, Greg, Dyrian, Opolos, Sekob, Hanna and the crew members.
 Fixed freed slaves leaving their corpses in a cave near the bandit camp for Patrick, Monty, Tonak, Telbor, Pardos.
 Fixed issue with dragon dialog restarting quest 'Dragon Eggs', if it was already completed.
-Fixed logical issues with dialogue of Baltram, Bennet, Diego, Fernando, Lobart, Lothar, Lucia, Pyrokar, Ramon, Ulf, Vatras, Xardas.
+Fixed logical issues with dialogue of Baltram, Bartok, Bennet, Diego, Fernando, Lobart, Lothar, Lucia, Pyrokar, Ramon, Ulf, Vatras, Xardas.
 Fixed mages to not loot the NH while in the city for Daron, Myxir and Vatras.
 Fixed novices to not create additional sausages when given one.
 Fixed seekers, magicians, ghosts and prisoners receiving Heavy Branch as weapon after spawning in.
