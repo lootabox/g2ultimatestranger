@@ -334,6 +334,8 @@ Huno only makes a vague comment about high price of his armor once Esteban is de
 Huno will sell armor even if NH asks about it without having enough gold and will not offer the option once the armor is bought.
 Hyglas will not end the dialog when asked what's in it for the NH for fetching a book for him.
 Igaraz can be asked about the living rock, even after moving north from the tavern.
+Ignaz' dialog does not include lines without voice acting.
+Ignaz' dialog does not create illogical log entry related to his spell. 
 Isgaroth can be asked for a blessing after he tells who he is.
 Isgaroth can be traded with as a mage, even if he was never spoken to before.
 Jergan can be asked about the area and how to get to the castle at Fajeth's mine, even if he was never spoken to before.
