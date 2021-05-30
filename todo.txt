@@ -95,7 +95,15 @@ waterfist c4->c3
 
 Heal spell delay 2s and duration 4s
 
-Harm evil AOE, fear protected by life
+Harm evil, fear
+50 base dmg?
+20 dps?
+
+----------- Fire spells
+
+tick 500ms
+burn 50% after prot
+
 
 ----------- Beliar spells
 
@@ -107,6 +115,30 @@ Harm evil AOE, fear protected by life
 	Fear					Valley of Mines In the cave under the orc shaman tents.		Root Snare
 S	Fear					Valley of Mines In Xardas' old tower.						Beliar's Wrath
 
+
+Fear
+Cry of the Dead
+- aoe fear, damage interrupt
+- remove after flee
+- undead only
+
+Root Snare
+- stun, damage interrupt
+
+Insect swarm
+- dot
+- living only
+
+Steal energy
+- stun pois
+- damage -> mana
+
+Create Guardian
+- reagent: old sotne tablet
+
+
+ALL
+Mana + life cost
 
 
 ----------- Staves
@@ -416,6 +448,8 @@ Change spiked cudgel to war cudgel on Sarah
 Remove bows from Sarah
 
 Move light orc axe behind bandits in the cave
+
+move Fero's sword spawn to tent (random?)
 
 Trees behind orc wall
 fix two holes in orc fence
@@ -785,16 +819,30 @@ Stone Tablets
 Prevent pickup until guardians are dead /
 Disable item pickup during combat
 
+------------------------------------------------------------------------------------- Weapon requirements
+
+Bow (L)			Dex
+Bow (M/H)		Dex+Talent
+Crossbow (L)	Str
+Crossbow (M/H)	Str+Talent
+
+1h sword (dex)	Dex+Talent
+1h sword		Str+Talent
+1h axe			Str
+
+2h sword		Str+Talent
+2h axe			Str
+
 ------------------------------------------------------------------------------------- Special weapons
 
-Ore Dragon Slayer		dmg 90 [+10 vs dragonic]
-Wrath of Innos			dmg 80 [+20 vs evil]
-Blessed Ore Blade		dmg 70 [+10 vs evil]
+Ore Dragon Slayer		dmg 90	[+10 vs dragonic]
+Wrath of Innos			dmg 80	[+20 vs evil]
+Blessed Ore Blade		dmg 70	[+10 vs evil]
 Magic Ore Blade (1h)	dmg 60
 
-Large Ore Dragon Slayer	dmg 110 [+10 vs dragonic]
-Holy Executioner		dmg 100 [+20 vs evil]
-Sword of the Order		dmg 85 [+10 vs evil]
+Large Ore Dragon Slayer	dmg 110	[+10 vs dragonic]
+Holy Executioner		dmg 100	[+20 vs evil]
+Sword of the Order		dmg 85	[+10 vs evil]
 Magic Ore Blade (2h)	dmg 70
 
 Rune Power				Remove from Jharkendar
