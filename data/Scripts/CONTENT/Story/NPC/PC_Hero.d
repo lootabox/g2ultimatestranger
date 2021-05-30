@@ -24,6 +24,10 @@ instance PC_Hero (NPC_DEFAULT)
 	attribute[ATR_MANA] 			= 10;
 	attribute[ATR_HITPOINTS_MAX]	= 40;
 	attribute[ATR_HITPOINTS] 		= 40;
+
+	aivar[REAL_STRENGTH]			= 10;
+	aivar[REAL_DEXTERITY]			= 10;
+	aivar[REAL_MANA_MAX]			= 10;
 	
 	// ------ visuals ------
 	//B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", FACE_N_Player, BodyTex_N, NO_ARMOR);
@@ -33,7 +37,11 @@ instance PC_Hero (NPC_DEFAULT)
 	Mdl_SetVisualBody (self, "hum_body_Naked0", 9,				0,			"Hum_Head_Pony", 	FACE_N_Player,	0, 			NO_ARMOR);
 	
 	// ------ Kampf-Talente ------
-	B_SetFightSkills 	(self, 10); 
+	B_SetFightSkills 	(self, 10);
+	aivar[REAL_TALENT_1H]			= 10;
+	aivar[REAL_TALENT_2H]			= 10;
+	aivar[REAL_TALENT_BOW]			= 10;
+	aivar[REAL_TALENT_CROSSBOW]		= 10;
 };
 
 
