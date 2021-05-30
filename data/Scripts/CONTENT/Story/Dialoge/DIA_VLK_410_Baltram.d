@@ -255,7 +255,7 @@ instance DIA_Addon_Baltram_Skip		(C_INFO)
 	condition	 = 	DIA_Addon_Baltram_Skip_Condition;
 	information	 = 	DIA_Addon_Baltram_Skip_Info;
 
-	description	 = 	"You're trading with pirates?";
+	description	 = 	"You're doing business with pirates?";
 };
 
 func int DIA_Addon_Baltram_Skip_Condition ()
