@@ -366,7 +366,7 @@ FUNC VOID DIA_Jergan_TeachBow_Info()
 		Info_ClearChoices (DIA_Jergan_TeachBow);
 		Info_AddChoice		(DIA_Jergan_TeachBow,DIALOG_BACK,DIA_Jergan_TeachBow_Back);
 		Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow1, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)),DIA_Jergan_TeachBow_BOW_1);
-		Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow5, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*5),DIA_Jergan_TeachBow_BOW_5);
+		Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow5, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 5)),DIA_Jergan_TeachBow_BOW_5);
 	};
 };			
 	
@@ -387,7 +387,7 @@ FUNC VOID DIA_Jergan_TeachBow_BOW_1()
 	Info_ClearChoices (DIA_Jergan_TeachBow);
 	Info_AddChoice		(DIA_Jergan_TeachBow,DIALOG_BACK,DIA_Jergan_TeachBow_Back);
 	Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow1, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)),DIA_Jergan_TeachBow_BOW_1);
-	Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow5, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*5),DIA_Jergan_TeachBow_BOW_5);
+	Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow5, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 5)),DIA_Jergan_TeachBow_BOW_5);
 };
 
 FUNC VOID DIA_Jergan_TeachBow_BOW_5()
@@ -397,7 +397,7 @@ FUNC VOID DIA_Jergan_TeachBow_BOW_5()
 	Info_ClearChoices (DIA_Jergan_TeachBow);
 	Info_AddChoice		(DIA_Jergan_TeachBow,DIALOG_BACK,DIA_Jergan_TeachBow_Back);
 	Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow1, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)),DIA_Jergan_TeachBow_BOW_1);
-	Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow5, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*5),DIA_Jergan_TeachBow_BOW_5);
+	Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow5, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 5)),DIA_Jergan_TeachBow_BOW_5);
 };	
 
 

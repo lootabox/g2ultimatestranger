@@ -2299,9 +2299,9 @@ FUNC VOID DIA_CH_Kampf_Einhand_Info()
 	Info_ClearChoices (DIA_CH_Kampf_Einhand);
 	Info_AddChoice	  (DIA_CH_Kampf_Einhand, DIALOG_BACK, DIA_CH_Kampf_Einhand_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*20)		,CH_Training_Combat_1H_20);
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*10)		,CH_Training_Combat_1H_10);
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*5)		,CH_Training_Combat_1H_5);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 20))		,CH_Training_Combat_1H_20);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 10))		,CH_Training_Combat_1H_10);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 5))		,CH_Training_Combat_1H_5);
 	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 1"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1))		,CH_Training_Combat_1H_1);
 };
 FUNC VOID DIA_CH_Kampf_Einhand_BACK()
@@ -2316,9 +2316,9 @@ func void CH_Training_Combat_1H_1()
 	Info_ClearChoices	(DIA_CH_Kampf_Einhand);
 	Info_AddChoice	    (DIA_CH_Kampf_Einhand, DIALOG_BACK, DIA_CH_Kampf_Einhand_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*20)		,CH_Training_Combat_1H_20);
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*10)		,CH_Training_Combat_1H_10);
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*5)		,CH_Training_Combat_1H_5);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 20))		,CH_Training_Combat_1H_20);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 10))		,CH_Training_Combat_1H_10);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 5))		,CH_Training_Combat_1H_5);
 	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 1"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1))		,CH_Training_Combat_1H_1);
 };
 
@@ -2330,9 +2330,9 @@ func void CH_Training_Combat_1H_5()
 	Info_ClearChoices	(DIA_CH_Kampf_Einhand);
 	Info_AddChoice	    (DIA_CH_Kampf_Einhand, DIALOG_BACK, DIA_CH_Kampf_Einhand_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*20)		,CH_Training_Combat_1H_20);
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*10)		,CH_Training_Combat_1H_10);
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*5)			,CH_Training_Combat_1H_5);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 20))		,CH_Training_Combat_1H_20);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 10))		,CH_Training_Combat_1H_10);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 5))			,CH_Training_Combat_1H_5);
 	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 1"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1))			,CH_Training_Combat_1H_1);
 };
 
@@ -2344,9 +2344,9 @@ func void CH_Training_Combat_1H_10()
 	Info_ClearChoices	(DIA_CH_Kampf_Einhand);
 	Info_AddChoice	    (DIA_CH_Kampf_Einhand, DIALOG_BACK, DIA_CH_Kampf_Einhand_BACK);
 
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*20)		,CH_Training_Combat_1H_20);
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*10)		,CH_Training_Combat_1H_10);
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*5)			,CH_Training_Combat_1H_5);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 20))		,CH_Training_Combat_1H_20);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 10))		,CH_Training_Combat_1H_10);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 5))			,CH_Training_Combat_1H_5);
 	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 1"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1))			,CH_Training_Combat_1H_1);
 };
 
@@ -2358,9 +2358,9 @@ func void CH_Training_Combat_1H_20()
 	Info_ClearChoices	(DIA_CH_Kampf_Einhand);
 	Info_AddChoice	    (DIA_CH_Kampf_Einhand, DIALOG_BACK, DIA_CH_Kampf_Einhand_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*20)		,CH_Training_Combat_1H_20);
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*10)		,CH_Training_Combat_1H_10);
-	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1)*5)			,CH_Training_Combat_1H_5);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 20))		,CH_Training_Combat_1H_20);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 10))		,CH_Training_Combat_1H_10);
+	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 5))			,CH_Training_Combat_1H_5);
 	Info_AddChoice		(DIA_CH_Kampf_Einhand, B_BuildLearnString("One-handed weapons + 1"	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 1))			,CH_Training_Combat_1H_1);
 };
 //******************************************************************************************
@@ -2388,9 +2388,9 @@ FUNC VOID DIA_CH_Kampf_Zweihand_Info()
 	Info_ClearChoices (DIA_CH_Kampf_Zweihand );
 	Info_AddChoice	  (DIA_CH_Kampf_Zweihand , DIALOG_BACK, DIA_CH_Kampf_Zweihand_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*20)			,CH_Training_Combat_2H_20);
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*10)			,CH_Training_Combat_2H_10);
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*5)				,CH_Training_Combat_2H_5);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 20))			,CH_Training_Combat_2H_20);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 10))			,CH_Training_Combat_2H_10);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 5))				,CH_Training_Combat_2H_5);
 	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 1"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1))				,CH_Training_Combat_2H_1);
 };
 FUNC VOID DIA_CH_Kampf_Zweihand_BACK()
@@ -2405,9 +2405,9 @@ func void CH_Training_Combat_2H_1()
 	Info_ClearChoices (DIA_CH_Kampf_Zweihand );
 	Info_AddChoice	  (DIA_CH_Kampf_Zweihand , DIALOG_BACK, DIA_CH_Kampf_Zweihand_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*20)			,CH_Training_Combat_2H_20);
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*10)			,CH_Training_Combat_2H_10);
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*5)				,CH_Training_Combat_2H_5);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 20))			,CH_Training_Combat_2H_20);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 10))			,CH_Training_Combat_2H_10);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 5))				,CH_Training_Combat_2H_5);
 	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 1"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1))				,CH_Training_Combat_2H_1);
 };
 
@@ -2419,9 +2419,9 @@ func void CH_Training_Combat_2H_5()
 	Info_ClearChoices (DIA_CH_Kampf_Zweihand );
 	Info_AddChoice	  (DIA_CH_Kampf_Zweihand , DIALOG_BACK, DIA_CH_Kampf_Zweihand_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*20)			,CH_Training_Combat_2H_20);
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*10)			,CH_Training_Combat_2H_10);
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*5)				,CH_Training_Combat_2H_5);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 20))			,CH_Training_Combat_2H_20);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 10))			,CH_Training_Combat_2H_10);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 5))				,CH_Training_Combat_2H_5);
 	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 1"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1))				,CH_Training_Combat_2H_1);
 };
 
@@ -2433,9 +2433,9 @@ func void CH_Training_Combat_2H_10()
 	Info_ClearChoices (DIA_CH_Kampf_Zweihand );
 	Info_AddChoice	  (DIA_CH_Kampf_Zweihand , DIALOG_BACK, DIA_CH_Kampf_Zweihand_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*20)			,CH_Training_Combat_2H_20);
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*10)			,CH_Training_Combat_2H_10);
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*5)				,CH_Training_Combat_2H_5);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 20))			,CH_Training_Combat_2H_20);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 10))			,CH_Training_Combat_2H_10);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 5))				,CH_Training_Combat_2H_5);
 	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 1"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1))				,CH_Training_Combat_2H_1);
 };
 
@@ -2447,9 +2447,9 @@ func void CH_Training_Combat_2H_20()
 	Info_ClearChoices (DIA_CH_Kampf_Zweihand );
 	Info_AddChoice	  (DIA_CH_Kampf_Zweihand , DIALOG_BACK, DIA_CH_Kampf_Zweihand_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*20)			,CH_Training_Combat_2H_20);
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*10)			,CH_Training_Combat_2H_10);
-	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1)*5)				,CH_Training_Combat_2H_5);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 20"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 20))			,CH_Training_Combat_2H_20);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 10"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 10))			,CH_Training_Combat_2H_10);
+	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 5"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 5))				,CH_Training_Combat_2H_5);
 	Info_AddChoice		(DIA_CH_Kampf_Zweihand, B_BuildLearnString("Two-handed weapons + 1"	, B_GetLearnCostTalent(other, NPC_TALENT_2H, 1))				,CH_Training_Combat_2H_1);
 };
 //***************************************************************************************************************************************
@@ -2482,9 +2482,9 @@ FUNC VOID DIA_CH_Kampf_Bogen_Info()
 	Info_ClearChoices (DIA_CH_Kampf_Bogen );
 	Info_AddChoice	  (DIA_CH_Kampf_Bogen , DIALOG_BACK, DIA_CH_Kampf_Bogen_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*20)			,CH_Training_Combat_BOW_20);
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*10)			,CH_Training_Combat_BOW_10);
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*5)			,CH_Training_Combat_BOW_5);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 20))			,CH_Training_Combat_BOW_20);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 10))			,CH_Training_Combat_BOW_10);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 5))			,CH_Training_Combat_BOW_5);
 	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 1"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1))			,CH_Training_Combat_BOW_1);
 	
 };
@@ -2501,9 +2501,9 @@ func void CH_Training_Combat_BOW_1()
 	Info_ClearChoices (DIA_CH_Kampf_Bogen );
 	Info_AddChoice	  (DIA_CH_Kampf_Bogen , DIALOG_BACK, DIA_CH_Kampf_Bogen_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*20)			,CH_Training_Combat_BOW_20);
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*10)			,CH_Training_Combat_BOW_10);
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*5)			,CH_Training_Combat_BOW_5);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 20))			,CH_Training_Combat_BOW_20);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 10))			,CH_Training_Combat_BOW_10);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 5))			,CH_Training_Combat_BOW_5);
 	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 1"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1))			,CH_Training_Combat_BOW_1);
 };
 
@@ -2515,9 +2515,9 @@ func void CH_Training_Combat_BOW_5()
 	Info_ClearChoices (DIA_CH_Kampf_Bogen );
 	Info_AddChoice	  (DIA_CH_Kampf_Bogen , DIALOG_BACK, DIA_CH_Kampf_Bogen_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*20)			,CH_Training_Combat_BOW_20);
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*10)			,CH_Training_Combat_BOW_10);
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*5)			,CH_Training_Combat_BOW_5);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 20))			,CH_Training_Combat_BOW_20);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 10))			,CH_Training_Combat_BOW_10);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 5))			,CH_Training_Combat_BOW_5);
 	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 1"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1))			,CH_Training_Combat_BOW_1);
 };
 
@@ -2529,9 +2529,9 @@ func void CH_Training_Combat_BOW_10()
 	Info_ClearChoices (DIA_CH_Kampf_Bogen );
 	Info_AddChoice	  (DIA_CH_Kampf_Bogen , DIALOG_BACK, DIA_CH_Kampf_Bogen_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*20)			,CH_Training_Combat_BOW_20);
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*10)			,CH_Training_Combat_BOW_10);
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*5)			,CH_Training_Combat_BOW_5);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 20))			,CH_Training_Combat_BOW_20);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 10))			,CH_Training_Combat_BOW_10);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 5))			,CH_Training_Combat_BOW_5);
 	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 1"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1))			,CH_Training_Combat_BOW_1);
 };
 
@@ -2543,9 +2543,9 @@ func void CH_Training_Combat_BOW_20()
 	Info_ClearChoices (DIA_CH_Kampf_Bogen );
 	Info_AddChoice	  (DIA_CH_Kampf_Bogen , DIALOG_BACK, DIA_CH_Kampf_Bogen_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*20)			,CH_Training_Combat_BOW_20);
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*10)			,CH_Training_Combat_BOW_10);
-	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)*5)			,CH_Training_Combat_BOW_5);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 20))			,CH_Training_Combat_BOW_20);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 10))			,CH_Training_Combat_BOW_10);
+	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 5))			,CH_Training_Combat_BOW_5);
 	Info_AddChoice		(DIA_CH_Kampf_Bogen, B_BuildLearnString("Bows + 1"	, 			B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1))			,CH_Training_Combat_BOW_1);
 };
 
@@ -2574,9 +2574,9 @@ FUNC VOID DIA_CH_Kampf_Armbrust_Info()
 	Info_ClearChoices (DIA_CH_Kampf_Armbrust );
 	Info_AddChoice	  (DIA_CH_Kampf_Armbrust , DIALOG_BACK, DIA_CH_Kampf_Armbrust_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*20)			,CH_Training_Combat_CROSSBOW_20);
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*10)			,CH_Training_Combat_CROSSBOW_10);
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*5)			,CH_Training_Combat_CROSSBOW_5);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 20))			,CH_Training_Combat_CROSSBOW_20);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 10))			,CH_Training_Combat_CROSSBOW_10);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 5))			,CH_Training_Combat_CROSSBOW_5);
 	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 1"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1))				,CH_Training_Combat_CROSSBOW_1);
 };
 FUNC VOID DIA_CH_Kampf_Armbrust_BACK()
@@ -2592,9 +2592,9 @@ func void CH_Training_Combat_CROSSBOW_1()
 	Info_ClearChoices (DIA_CH_Kampf_Armbrust );
 	Info_AddChoice	  (DIA_CH_Kampf_Armbrust , DIALOG_BACK, DIA_CH_Kampf_Armbrust_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*20)			,CH_Training_Combat_CROSSBOW_20);
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*10)			,CH_Training_Combat_CROSSBOW_10);
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*5)			,CH_Training_Combat_CROSSBOW_5);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 20))			,CH_Training_Combat_CROSSBOW_20);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 10))			,CH_Training_Combat_CROSSBOW_10);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 5))			,CH_Training_Combat_CROSSBOW_5);
 	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 1"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1))				,CH_Training_Combat_CROSSBOW_1);
 };
 
@@ -2606,9 +2606,9 @@ func void CH_Training_Combat_CROSSBOW_5()
 	Info_ClearChoices (DIA_CH_Kampf_Armbrust );
 	Info_AddChoice	  (DIA_CH_Kampf_Armbrust , DIALOG_BACK, DIA_CH_Kampf_Armbrust_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*20)			,CH_Training_Combat_CROSSBOW_20);
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*10)			,CH_Training_Combat_CROSSBOW_10);
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*5)			,CH_Training_Combat_CROSSBOW_5);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 20))			,CH_Training_Combat_CROSSBOW_20);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 10))			,CH_Training_Combat_CROSSBOW_10);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 5))			,CH_Training_Combat_CROSSBOW_5);
 	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 1"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1))				,CH_Training_Combat_CROSSBOW_1);
 };
 
@@ -2620,9 +2620,9 @@ func void CH_Training_Combat_CROSSBOW_10()
 	Info_ClearChoices (DIA_CH_Kampf_Armbrust );
 	Info_AddChoice	  (DIA_CH_Kampf_Armbrust , DIALOG_BACK, DIA_CH_Kampf_Armbrust_BACK);
 	
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*20)			,CH_Training_Combat_CROSSBOW_20);
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*10)			,CH_Training_Combat_CROSSBOW_10);
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*5)			,CH_Training_Combat_CROSSBOW_5);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 20))			,CH_Training_Combat_CROSSBOW_20);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 10))			,CH_Training_Combat_CROSSBOW_10);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 5))			,CH_Training_Combat_CROSSBOW_5);
 	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 1"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1))				,CH_Training_Combat_CROSSBOW_1);
 };
 
@@ -2633,10 +2633,10 @@ func void CH_Training_Combat_CROSSBOW_20()
 	
 	Info_ClearChoices	(DIA_CH_Kampf_Armbrust);
 	Info_AddChoice	    (DIA_CH_Kampf_Armbrust, DIALOG_BACK, DIA_CH_Kampf_Armbrust_BACK);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 20))			,CH_Training_Combat_CROSSBOW_20);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 10))			,CH_Training_Combat_CROSSBOW_10);
+	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 5))			,CH_Training_Combat_CROSSBOW_5);
 	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 1"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1))				,CH_Training_Combat_CROSSBOW_1);
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 5"	, 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*5)			,CH_Training_Combat_CROSSBOW_5);
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 10", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*10)			,CH_Training_Combat_CROSSBOW_10);
-	Info_AddChoice		(DIA_CH_Kampf_Armbrust, B_BuildLearnString("Crossbows + 20", 			B_GetLearnCostTalent(other, NPC_TALENT_CROSSBOW, 1)*20)			,CH_Training_Combat_CROSSBOW_20);
 };
 
 //*********************************************

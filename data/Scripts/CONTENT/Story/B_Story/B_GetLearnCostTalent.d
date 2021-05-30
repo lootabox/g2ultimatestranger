@@ -25,54 +25,30 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 		};
 	};
 	
-	// ------ Kosten für Einhand % ------
+	// ------ Combat talents ------
 	if (talent == NPC_TALENT_1H)
-	{	
-		if (oth.aivar[REAL_TALENT_1H] >= 80)		{	kosten = (5);	}
-		else if (oth.aivar[REAL_TALENT_1H] >= 60)	{	kosten = (4);	}
-		else if (oth.aivar[REAL_TALENT_1H] >= 40)	{	kosten = (3);	}
-		else if (oth.aivar[REAL_TALENT_1H] >= 20)	{	kosten = (2);	}
-		else 										{	kosten = (1);	};
-		
-		kosten = (kosten * skill);
+	|| (talent == NPC_TALENT_2H)
+	|| (talent == NPC_TALENT_BOW)
+	|| (talent == NPC_TALENT_CROSSBOW)
+	{
+		// Get current talent value, without bonuses
+		var int current;
+			 if (talent == NPC_TALENT_1H)		{ current = oth.aivar[REAL_TALENT_1H]; }
+		else if (talent == NPC_TALENT_2H)		{ current = oth.aivar[REAL_TALENT_2H]; }
+		else if (talent == NPC_TALENT_BOW)		{ current = oth.aivar[REAL_TALENT_BOW]; }
+		else if (talent == NPC_TALENT_CROSSBOW)	{ current = oth.aivar[REAL_TALENT_CROSSBOW]; };
+
+		// Combat talents have same interval for LP cost increases
+		const int interval = 20;
+
+		// Base cost (x amount) based on current attribute value
+		kosten = skill + skill * (current/interval);
+
+		// Extra value may be added near interval threshold to prevent exploiting
+		var int extra; extra = (current - interval * (current/interval)) + (skill - interval);
+		if (extra > 0) { kosten += extra; };
 	};
-	
-	// ------ Kosten für Zweihand % ------
-	if (talent == NPC_TALENT_2H)
-	{	
-		if (oth.aivar[REAL_TALENT_2H] >= 80)		{	kosten = (5);	}
-		else if (oth.aivar[REAL_TALENT_2H] >= 60)	{	kosten = (4);	}
-		else if (oth.aivar[REAL_TALENT_2H] >= 40)	{	kosten = (3);	}
-		else if (oth.aivar[REAL_TALENT_2H] >= 20)	{	kosten = (2);	}
-		else 										{	kosten = (1);	};
-		
-		kosten = (kosten * skill);
-	};
-	
-		// ------ Kosten für Bogen % ------
-	if (talent == NPC_TALENT_BOW)
-	{	
-		if (oth.aivar[REAL_TALENT_BOW] >= 80)		{	kosten = (5);	}
-		else if (oth.aivar[REAL_TALENT_BOW] >= 60)	{	kosten = (4);	}
-		else if (oth.aivar[REAL_TALENT_BOW] >= 40)	{	kosten = (3);	}
-		else if (oth.aivar[REAL_TALENT_BOW] >= 20)	{	kosten = (2);	}
-		else 										{	kosten = (1);	};
-		
-		kosten = (kosten * skill);
-	};
-	
-	// ------ Kosten für Crossbow % ------
-	if (talent == NPC_TALENT_CROSSBOW)
-	{	
-		if (oth.aivar[REAL_TALENT_CROSSBOW] >= 80)		{	kosten = (5);	}
-		else if (oth.aivar[REAL_TALENT_CROSSBOW] >= 60)	{	kosten = (4);	}
-		else if (oth.aivar[REAL_TALENT_CROSSBOW] >= 40)	{	kosten = (3);	}
-		else if (oth.aivar[REAL_TALENT_CROSSBOW] >= 20)	{	kosten = (2);	}
-		else 											{	kosten = (1);	};
-		
-		kosten = (kosten * skill);
-	};
-	
+
 	// ------ Kosten für Diebestalente ------
 	if (talent == NPC_TALENT_SNEAK)
 	|| (talent == NPC_TALENT_ACROBAT)

@@ -11,7 +11,7 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 	
 	// ------ Kostenberechnung ------
 	var int kosten; 
-	kosten = (B_GetLearnCostTalent(oth, talent, 1) * percent);
+	kosten = B_GetLearnCostTalent(oth, talent, percent);
 	
 	//EXIT IF...
 	
@@ -68,7 +68,7 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 		B_RaiseFightTalent (oth, NPC_TALENT_1H, percent);	//Einhand steigern
 		B_RaiseRealFightTalentPercent (oth, NPC_TALENT_1H, percent);
 		
-		if (oth.aivar[REAL_TALENT_1H] >= (oth.aivar[REAL_TALENT_2H] + 30))
+		if (oth.aivar[REAL_TALENT_1H] > (oth.aivar[REAL_TALENT_2H] * 2))
 		{
 			B_RaiseFightTalent (oth, NPC_TALENT_2H, percent);	//Zweihand mit hochziehen
 			B_RaiseRealFightTalentPercent (oth, NPC_TALENT_2H, percent);
@@ -88,7 +88,7 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 		B_RaiseFightTalent (oth, NPC_TALENT_2H, percent);	//Zweihand steigern
 		B_RaiseRealFightTalentPercent (oth, NPC_TALENT_2H, percent);
 		
-		if (oth.aivar[REAL_TALENT_2H] >= (oth.aivar[REAL_TALENT_1H] + 30))
+		if (oth.aivar[REAL_TALENT_2H] > (oth.aivar[REAL_TALENT_1H] * 2))
 		{
 			B_RaiseFightTalent (oth, NPC_TALENT_1H, percent);	//Einhand mit hochziehen
 			B_RaiseRealFightTalentPercent (oth, NPC_TALENT_1H, percent);
@@ -108,7 +108,7 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 		B_RaiseFightTalent (oth, NPC_TALENT_BOW, percent);	//Bogen steigern
 		B_RaiseRealFightTalentPercent (oth, NPC_TALENT_BOW, percent);
 		
-		if (oth.aivar[REAL_TALENT_BOW] >= (oth.aivar[REAL_TALENT_CROSSBOW] + 30))
+		if (oth.aivar[REAL_TALENT_BOW] > (oth.aivar[REAL_TALENT_CROSSBOW] * 2))
 		{
 			B_RaiseFightTalent (oth, NPC_TALENT_CROSSBOW, percent);	//Crossbow mit hochziehen
 			B_RaiseRealFightTalentPercent (oth, NPC_TALENT_CROSSBOW, percent);
@@ -128,7 +128,7 @@ func int B_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var int talent
 		B_RaiseFightTalent (oth, NPC_TALENT_CROSSBOW, percent);	//Crossbow steigern
 		B_RaiseRealFightTalentPercent (oth, NPC_TALENT_CROSSBOW, percent);
 		
-		if (oth.aivar[REAL_TALENT_CROSSBOW] >= (oth.aivar[REAL_TALENT_BOW] + 30))
+		if (oth.aivar[REAL_TALENT_CROSSBOW] > (oth.aivar[REAL_TALENT_BOW] * 2))
 		{
 			B_RaiseFightTalent (oth, NPC_TALENT_BOW, percent);	//Bogen mit hochziehen
 			B_RaiseRealFightTalentPercent (oth, NPC_TALENT_BOW, percent);
