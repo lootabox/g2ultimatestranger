@@ -224,7 +224,7 @@ FUNC VOID DIA_Jergan_Claw_Info()
 	AI_Output (other, self,"DIA_Jergan_Claw_15_00");//Can you teach me how to do that?
 	AI_Output (self, other,"DIA_Jergan_Claw_13_01");//I can show you how to pull the claws off those things once they're dead.
 	Log_CreateTopic(Topic_OutTeacher,LOG_NOTE);
-	B_LogEntry(Topic_OutTeacher,"Jergan can teach me how to pull claws off dead animals.");
+	B_LogEntry(Topic_OutTeacher,"Jergan can teach me how to pull claws off dead animals and how to handle a bow.");
 };
 ///////////////////////////////////////////////////////////////////////
 //	Klauen reissen lernen
@@ -255,28 +255,6 @@ FUNC VOID DIA_Jergan_Teach_Info()
 		AI_Output (self, other,"DIA_Jergan_Teach_13_01");//The important thing is to remove the claws with a jerk. Don't be too hesitant, and don't go poking with a blade.
 		AI_Output (self, other,"DIA_Jergan_Teach_13_02");//You don't only pull the claws from snappers that way, but also from lizards and shadowbeasts.
 	};
-};
-INSTANCE DIA_Jergan_Bow   (C_INFO)
-{
-	npc         = VLK_4110_Jergan;
-	nr          = 9;
-	condition   = DIA_Jergan_Bow_Condition;
-	information = DIA_Jergan_Bow_Info;
-	permanent   = FALSE;
-	description = "I want to be able to handle a bow better!";
-};
-
-FUNC INT DIA_Jergan_Bow_Condition()
-{	
-	if (Npc_KnowsInfo (other, DIA_Jergan_Mine))
-	{	
-		return TRUE;
-	};	
-};
-FUNC VOID DIA_Jergan_Bow_Info()
-{
-	AI_Output (other, self, "DIA_Bartok_TeachBow_15_00"); //I want to be able to handle a bow better!
-	AI_Output (self, other, "DIA_Jergan_CUSTOM_13_01"); //Sure...
 };
 ///////////////////////////////////////////////////////////////////////
 //	Diego
@@ -354,6 +332,7 @@ FUNC VOID DIA_Jergan_Leader_Info()
 ///////////////////////////////////////////////////////////////////////
 //	Teach bow
 ///////////////////////////////////////////////////////////////////////
+var int DIA_Jergan_TeachBow_Comment_Once;
 INSTANCE DIA_Jergan_TeachBow   (C_INFO)
 {
 	npc         = VLK_4110_Jergan;
@@ -365,7 +344,7 @@ INSTANCE DIA_Jergan_TeachBow   (C_INFO)
 };
 FUNC INT DIA_Jergan_TeachBow_Condition()
 {
-	if (Npc_KnowsInfo (other,DIA_Jergan_Bow))
+	if (Npc_KnowsInfo (other,DIA_Jergan_Claw))
 	{
 		return TRUE;
 	};	
@@ -380,6 +359,10 @@ FUNC VOID DIA_Jergan_TeachBow_Info()
 	}
 	else
 	{
+		if (DIA_Jergan_TeachBow_Comment_Once == FALSE) {
+			DIA_Jergan_TeachBow_Comment_Once = TRUE;
+			AI_Output (self, other, "DIA_Jergan_CUSTOM_13_01"); //Sure...
+		};
 		Info_ClearChoices (DIA_Jergan_TeachBow);
 		Info_AddChoice		(DIA_Jergan_TeachBow,DIALOG_BACK,DIA_Jergan_TeachBow_Back);
 		Info_AddChoice		(DIA_Jergan_TeachBow, B_BuildLearnString(PRINT_LearnBow1, 	B_GetLearnCostTalent(other, NPC_TALENT_BOW, 1)),DIA_Jergan_TeachBow_BOW_1);
