@@ -131,9 +131,9 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 	// ------ Kosten für Sprache der Erbauer ------
 	if (talent == NPC_TALENT_FOREIGNLANGUAGE) 	//ADDON
 	{
-		if 		(skill == LANGUAGE_1			) 	{	kosten = (20);	}
-		else if (skill == LANGUAGE_2			) 	{	kosten = (20);	}
-		else if (skill == LANGUAGE_3			) 	{	kosten = (20);	};
+		if 		(skill == LANGUAGE_1			) 	{	kosten = (10);	}
+		else if (skill == LANGUAGE_2			) 	{	kosten = (10);	}
+		else if (skill == LANGUAGE_3			) 	{	kosten = (10);	};
 	};
 
 	if (talent == NPC_TALENT_WISPDETECTOR) 	//ADDON
