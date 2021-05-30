@@ -22,7 +22,6 @@ func int B_GetLearnCostAttribute (var C_NPC oth, var int attribute, var int amou
 
 	// Extra value may be added near interval threshold to prevent exploiting
 	var int extra; extra = (current - interval * (current/interval)) + (amount - interval);
-		 if (extra > 5) { cost += 5; }
-	else if (extra > 0) { cost += extra; };
+	if (extra > 0) { cost += extra; };
 	return cost;
 };
