@@ -31,22 +31,31 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 	|| (talent == NPC_TALENT_BOW)
 	|| (talent == NPC_TALENT_CROSSBOW)
 	{
-		// Get current talent value, without bonuses
-		var int current;
-			 if (talent == NPC_TALENT_1H)		{ current = oth.aivar[REAL_TALENT_1H]; }
-		else if (talent == NPC_TALENT_2H)		{ current = oth.aivar[REAL_TALENT_2H]; }
-		else if (talent == NPC_TALENT_BOW)		{ current = oth.aivar[REAL_TALENT_BOW]; }
-		else if (talent == NPC_TALENT_CROSSBOW)	{ current = oth.aivar[REAL_TALENT_CROSSBOW]; };
+		// Get current and related talent value, without bonuses
+		var int currentReal; var int relatedReal; var int relatedTalent;
+			 if (talent == NPC_TALENT_1H)		{ currentReal = oth.aivar[REAL_TALENT_1H];			relatedReal = oth.aivar[REAL_TALENT_2H];		relatedTalent = NPC_TALENT_2H; }
+		else if (talent == NPC_TALENT_2H)		{ currentReal = oth.aivar[REAL_TALENT_2H];			relatedReal = oth.aivar[REAL_TALENT_1H];		relatedTalent = NPC_TALENT_1H; }
+		else if (talent == NPC_TALENT_BOW)		{ currentReal = oth.aivar[REAL_TALENT_BOW];			relatedReal = oth.aivar[REAL_TALENT_CROSSBOW];	relatedTalent = NPC_TALENT_CROSSBOW; }
+		else if (talent == NPC_TALENT_CROSSBOW)	{ currentReal = oth.aivar[REAL_TALENT_CROSSBOW];	relatedReal = oth.aivar[REAL_TALENT_BOW];		relatedTalent = NPC_TALENT_BOW; };
 
 		// Combat talents have same interval for LP cost increases
-		const int interval = 20;
+		const int interval = 30;
 
-		// Base cost (x amount) based on current attribute value
-		kosten = skill + skill * (current/interval);
+		// Base cost (x amount (skill variable = amount)) based on current attribute value
+		kosten = skill + skill * (currentReal/interval);
 
 		// Extra value may be added near interval threshold to prevent exploiting
-		var int extra; extra = (current - interval * (current/interval)) + (skill - interval);
+		var int extra; extra = (currentReal - interval * (currentReal/interval)) + (skill - interval);
 		if (extra > 0) { kosten += extra; };
+
+		// If related talent is less than half of new current talent value, it is raised accordingly
+		skill = (currentReal + skill) / 2 - (relatedReal);
+		if (skill > 0) {
+			// Same calculation for related base cost and related extra
+			kosten += (skill + skill * (relatedReal/interval));
+			extra = (relatedReal - interval * (relatedReal/interval)) + (skill - interval);
+			if (extra > 0) { kosten += extra; };
+		};
 	};
 
 	// ------ Kosten für Diebestalente ------
